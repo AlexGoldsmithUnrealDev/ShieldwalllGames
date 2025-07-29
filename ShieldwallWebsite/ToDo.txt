@@ -1,0 +1,85 @@
+Draw inspiratrion from this website: https://dribbble.com/shots/24661830-The-Wake-Royal-Battle-Game-Website
+What I like about this is you can make sure that each section on the index page fills the screen, when the user tries to scroll it insteads moves them to the next section but with a fade transition.
+You can add the video to the background for the top of the idex page use this for now: https://youtu.be/oVU9LW4a2pQ
+You have small underscores between the socials, if you can try and remove these.
+I will provide you with our logo to replace the shield emoji currently in the navbar.
+I like the careers page but could you replace the current list with Character artist, Unreal Engine expert, Keep Environmental Artist, Game Programmer (Multiplayer), Community Manager, Payroll Clerk ... More than anything I am curious to see if we get any interest and if we do what their portfolios look like. The text above the job listings can you add a caveat that we are not currently hiring but will in future look to fill the following roles. get chat gpt to write a description for each job title and add a subtitle below the job title that says remote/south east england.
+You will also need to add a ReCAPTURE to the contact us page to prevent robots from messaging us. Additionally can you add a drop down that says "Who are you?" and has options for Influencer, Journalist, Fan, Job applicant, Other.
+Remove Emily from the Meet out Team, until she wants to be a part of the project I dont want her name out in public unless it has to be.
+The Games section should have a section for Ashborn: Fire and Blood with a CTA that takes them to the Ashborn website arrun is making. Under that rather than have a second game try making a timeline with future games this should be nothing more than a list of 8 circular imageseach with a title underneath and each with a line between them showing the order the games will release in. When we make more games we will expand these secions for now that will be enought to spark interest.
+Under the game timeline we should have a kickstarter section that shows a count down to kickstarter and a progress bar for current funding. Speak to Arrun about this as I have already asked him to make this and he may have finished the code by the time you get to this and you may be able to copy and paste. 
+The actual index page is largely up to you but it should give the user an overview of who we are as a company. I will provide you with some taglines to use below. Ours is a rags to riches story, 4 developers with no formal trainging, nothing more than hobbiests with and over ambitious bossy friend who has a passion for story telling, together we made a thing. You can talk about how the narrative for the world was informed by an ongoing D&D campaign and how we have a clear narrative plan that spans two triologies and two establishing games which total 8 games. This is your chance to sell us as a company essentially. Dont focus too much on a single game instead talk about our main USP being the world. Talk about what we have discussed many times that we want to be a company that never has a publisher that we put nature and employees first in all we do so we commit to no crunch and once we have an office being totally green. etc etc
+
+Some taglines for you to consider:
+Games by gamers, for gamers.
+Our shieldwall is made of stories.
+No suits. No nonsense. Just games.
+We’re building a future, one story at a time.
+People over profits. Always.
+Dreamers welcome. Suits need not apply.
+If you're not excited to work here, we failed.
+Flexible, friendly, fiercely indie.
+Future-proof fun. Planet-friendly development.
+Myths matter. So does the history behind them.
+We research. We respect. We reimagine.
+History isn't a theme. It's a foundation.
+History lives through our legends.
+One vision. Eight games. A thousand stories.
+This is only the beginning.
+We're building a world. Want in?
+We’re small, by choice.
+Founders, not bosses. Teammates, not staff.
+You bring the spark. We’ll light the fire.
+We answer to players, not profits.
+We made this game because we needed it to exist.
+A company with a spine. And a soul.
+We’re not for sale.
+We don’t monetize players. We respect them.
+We're the weird ones who never gave up.
+We’re just four friends making the world we want to see.
+Everything we make has a piece of us in it.
+
+
+Some copy you may want to use:
+
+Shieldwall Games Ltd – Our Story
+Shieldwall Games was not born in a boardroom. There were no investors, no publishers, no venture capital. There was no office, no staff, no formal training. Just four friends — tired of waiting for someone else to make the kind of game we wanted to play — and one burning idea in the mind of a storyteller named Alex.
+
+At the beginning, we were outsiders. None of us had a game dev degree. None of us worked at a major studio. We didn’t have pipelines or production schedules — just notebooks full of lore, nights filled with dreams, and a stubborn belief that we could teach ourselves how to build the worlds we saw in our heads. Some people call it naive. We call it necessary.
+The story of Shieldwall Games is a story of rebellion — against an industry that too often puts profit above passion, that demands crunch instead of creativity, and where real gamers are too often locked out of decision-making. We knew we couldn’t change that system from within. So we built something outside it.
+We started with Ashborn: Fire & Blood, our first game and the opening chapter of a much larger saga — one that spans centuries, continents, and mythologies across eight planned titles. We aren’t just building games; we’re crafting an epic. Each entry is part of a connected world, carefully plotted from the start, with choices and events that echo across generations. Our players won’t just experience a story — they’ll become part of a legacy.
+But where we are today? We’re still small. Still indie. Still unfunded. Everything we’ve made so far has been built from scratch, powered by learning, iteration, and sheer stubborn determination. Our prototype is self-made in Unreal Engine 5.6 — not because someone paid us to do it, but because it had to be real. It had to exist. We are still learning. Every day. Every system. Every animation and AI behavior is a brick in the foundation of something far greater.
+We work late. We work weird hours. But we work joyfully. Because this isn’t just a project — it’s the culmination of years of imagination, forged into code by people who care more about narrative, history, and heart than shareholders. We’ve turned our garages and bedrooms into development caves. We've laughed through bugs, cried through crashes, and built something real with no safety net.
+
+Our Dream
+Shieldwall Games isn’t just a studio. It’s a philosophy — that games should be made by people who live and breathe them. That developers should be treated with respect and dignity. That studios can thrive without selling their soul to the highest bidder.
+We’re building toward a future where we can operate from a self-sustaining, eco-conscious studio. Solar-powered. Carbon-offsetting. A creative space filled with plants, sunlight, and peace — where Employee Morale Officers like dogs and cats roam freely, not just because we love animals, but because we believe work should feel human.
+We want to make the kind of company where nobody dreads Mondays. Where flexible hours aren’t a perk — they’re the baseline. Where if you’re passionate, kind, and a true gamer at heart, you belong. We don’t believe in expanding fast or hiring en masse. Every person who joins Shieldwall is handpicked — not just for skill, but for soul. We want our team to feel like family. And families don’t burn out. They grow.
+One day, we hope to be able to pay people generously, give them flexibility to live their lives, and provide creative freedom to tell the stories burning inside them. Our office won’t just be a workplace. It will be a home for storytellers, game designers, artists, writers, and tinkerers who believe in something better.
+
+Our Values
+No Publishers. Ever.
+No marketing executive will ever override our story. No investor will tell us to cut a character because she doesn’t “test well.” We believe that only gamers should guide game development — and we are gamers, first and always.
+
+Nature Comes First.
+As we grow, we are committed to running our studio sustainably. We want to lead by example — proving that even digital worlds can be built without damaging the real one. Our goal is a zero-footprint HQ that gives back more than it takes.
+
+History Matters.
+Though our worlds are fictional, our inspirations are not. We draw from real cultures, ancient traditions, and forgotten peoples. We commit to honoring those histories, not appropriating them. Our fantasy is built on respect and research.
+
+Work Should Feel Worthwhile.
+We will never crunch our team. We will never put deadlines above dignity. We don’t believe in sacrificing health for hype. Our success won’t be measured in quarterly reports — it’ll be measured in joy, community, and creative fulfillment.
+
+How We Get There
+We are working in stages. First, completing our vertical slice for Ashborn: Fire & Blood — a playable prototype that proves our systems, vision, and artistic direction. This will fuel our community outreach, early funding efforts, and — when we’re ready — a possible Kickstarter campaign. Not because we need validation. But because we want to invite people into the saga.
+From there, we’ll launch Ashes as our flagship title. If it succeeds, we reinvest — not into buildings or bloat, but into tools, time, and talent. We grow slowly. Intentionally. Sustainably.
+With each game, we tell more of our world’s story. And through it all, we stay independent. We never chase trends. We never compromise our world for monetization. No loot boxes. No NFTs. No battle passes that drain rather than delight. Just immersive, brutal, story-rich worlds that gamers can truly lose themselves in.
+
+Shieldwall Games: What We Are
+We’re the players who stayed up too late modding medieval games.
+We’re the writers who filled notebooks with timelines, languages, and lineages.
+We’re the history nerds who debate theories about Dark Age Britian for fun.
+We’re the friends who never stopped believing this could be real.
+And now, we’re making it real.
+
+This is just the beginning. Join us — and help us build something worth remembering.

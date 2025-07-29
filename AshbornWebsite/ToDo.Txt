@@ -1,0 +1,150 @@
+Make nav bar translucent when at the top of the page.
+index page top image with video: https://youtu.be/oVU9LW4a2pQ     (In time this will be replaced with game trailer when one is ready)
+Make nave bar buttons right aligned with game title and logo on the left (Chris can provide place holder game logo for now, make chris aware it should be a png with clear background)
+Remove the home button from nav bar, If you place the logo and game title on a button they will work as a home button returning the user to the index page.
+Make kickstarter page with a count down to kickstarter and a total funded progress bar (We will have to update this manually unless we can figure out a way to get the JS to check the amount raised on kickstarter for us at midnight each day but dont worry about this for now)
+Kickstarter page should also include all of our kickstarter tiers costs and rewards. 
+Media should start with an image like the index page does currently but with arrows on left and right, this will cycle through the images on a carousel. If you need png files for the arrows use: https://www.flaticon.com/search?word=right%20arrow
+Below the image carousel on the media page should be a grid layout of the images on the carousel with the current one highlighted, users should be able to click on any image and move the caraousel to this position.
+The rest of the media page I will leave up to you...
+Also if you have any additonal ideas for Kickstarter page then feel free to include them
+Devlog needs to have a navbar on the left which will have all the devlogs to date with the most recent at the top and the oldest at the bottom. The navbar needs to work like a contents page with each button moving the user smoothly to the select devlog. You will also need to layout the structure of the Devlogs, I suggest creating a devlog card which has a title (Used for the button in the nav bar), body of text, image/s and video links, if you add a hidden tag to it then when we need to add a new devlog we can copy and paste, edit as needed and remove the hidden tag.
+Change "About" to "Shieldwall" This button should open the shieldwall website in a sepperate tag and add a cookie to confirm they came from the ashborn website.
+The Game page I will leave entirely up to you just remember: Avoid ever writing more than 3 sentences in a body of text, before trying to write it ask yourself could this be said better with an image, inforgraphic or numbers.
+
+Some tag lines you may want to use:
+Write your saga in Fire and Blood.
+Your warband. Your legend.
+Unite. Raid. Rise.
+From farmhand to Sea King.
+Level up your warband—or bury them.
+Raid together or Die alone.
+Trust the shield beside you.
+A Viking raid simulator like no other.
+Combat isn't just fast. It’s unforgiving.
+Squad-based tactical melee. Reimagined.
+The horn calls. Will you answer?
+What walks through fire comes out changed.
+
+Some copy you may want to use: 
+
+ASHBORN: FIRE & BLOOD
+Rise from ash. Drown the world in flame.
+You were born among the Hornfolke — a fractured people carved from snow and salt, shaped by a land so merciless that even the gods look away. You had nothing. You earned everything. Until one day, the fire came.
+Vikingr — raiders from your own blood, twisted by greed — burned your home, slaughtered your kin, and left you to die in the snow.
+But death denied you.
+As the sun rose, so did you — naked, blood-drenched, and screaming vengeance into the wind. This is where your story begins.
+
+CARVE YOUR LEGEND IN STEEL
+Welcome to Ashborn: Fire & Blood, a brutal, squad-based Viking raid simulator forged by players, not publishers. Built in Unreal Engine 5.6, this is real-time, tactical melee combat where you don’t just swing a sword — you lead a warband. Every formation, every blow, every decision matters.
+Lead from the front with animation-driven combat that rewards timing, positioning, and ruthless efficiency.
+Command your companions with Shieldwall, Wedge, Circle, or Loose formations. Your warband is your weapon.
+Cut through dynamic raids across living, myth-warped battlefields. Defend. Advance. Extract. Survive.
+
+FROM ASH TO SEA KING
+Take command of a warship. Sail to distant coasts. Plunder, pillage, and build your legend one raid at a time.
+Recruit heroes with rich backstories, unique roles, and devastating battlefield abilities.
+Customize your warriors, upgrade their gear, and invest in morale-boosting feasts, training arenas, and sacred shrines.
+Manage your camp — a growing stronghold that evolves with your choices, becomes a reflection of your legend, and prepares you for the battles ahead.
+Each raid earns you silver, supplies, and Reputation, the lifeblood of your myth. And with it, the gods begin to take notice…
+
+FATE IS WRITTEN IN BLOOD
+At the height of your power, you hunt the Sea King who slaughtered your family — and you end him.
+But your tale doesn’t stop there. A vision descends from the Allfather himself: You are more than vengeance. You are destined to rival Haakon Hoarfrost, the greatest Sea King in mortal memory.
+Conquer escalating challenges in a world that adapts to your tactics and strength.
+Face mythic enemies — Revenants, Draugr, Frost-Bound Warriors, and arcane foes who remember when men bowed to them as gods.
+Duel The All-Father in a final trial that will shake the roots of Yggdrasil itself.
+In the glacier-hidden city of the far north, your warband finds the treasure that may one day save the world from Ragnarok — if your bloodline proves worthy.
+
+A WORLD BEYOND THE FLAMES
+Ashborn is only the beginning.
+In Haakon Hoarfrost, reclaim the lost saga of the Sea King who changed the world — and uncover the legacy you must now live up to.
+In Shadow in the Northern Wastes, explore what wakes beyond the ice, and why Odin’s trial was only the first.
+
+NOT A GAME. A LEGACY.
+Ashborn: Fire & Blood is the debut title from Shieldwall Games, a fiercely independent studio of lifelong gamers and history lovers. We answer to no publisher. We build for players, not markets. We make the kind of games we want to play — and this is our saga.
+If you're tired of the safe, the soulless, the polished-but-pointless — come with us. Lead. Raid. Rise. Write your legend in blood.
+
+
+ASHBORN: FIRE & BLOOD
+Brutal. Tactical. Relentless. This is Viking combat redefined.
+
+Ashborn: Fire & Blood is a squad-based, PvE action game that drops you into the heart of real-time melee warfare. Built in Unreal Engine 5.6, it’s a tactical raid experience where you don’t just fight — you lead. Every raid is a high-stakes operation demanding formation mastery, precision execution, and ruthless decision-making.
+
+KEY FEATURES
+1. Squad-Based Tactical Combat
+Command a warband of AI-controlled companions in tight, formation-based combat.
+
+Issue instant commands for Shieldwall, Wedge, Loose, or Circle formations with seamless input.
+
+Your warband isn't decoration — they’re your survival strategy.
+
+2. Real-Time Melee with Weight and Consequence
+Perform animation-driven light and heavy attacks, dodges, parries, and executions.
+
+Combat uses collision and trace-based hit detection with feedback-heavy reactions and stagger systems.
+
+Manage positioning, attack angles, and enemy threat levels for maximum efficiency.
+
+3. Adaptive AI Enemies
+Enemies react to your formations, break your lines, and flank your position.
+
+AI Leaders boost nearby troops and respond dynamically to player aggression.
+
+Expect counters, not cannon fodder — every enemy is a puzzle, not a punching bag.
+
+4. Raid. Extract. Evolve.
+Missions are multi-objective tactical raids: clear enemies, hold objectives, retrieve loot, and extract alive.
+
+Choose your approach: coordinated, defensive progression or aggressive high-risk pushes.
+
+Failing to extract means losing resources. Survive to grow stronger.
+
+5. No Inventory Mid-Raid – All About Momentum
+Loot and rewards are earned post-match. No in-match inventory micromanagement.
+
+Focus on tactics, positioning, and combat — not spreadsheets.
+
+6. Progression-Driven Camp System
+Upgrade your base with supplies and silver from successful raids.
+
+Unlock training grounds, feasting halls, smithies, shrines, and more.
+
+Every structure boosts combat performance, morale, or long-term progression.
+
+7. Companions with Purpose
+Recruit and level AI heroes with unique traits, weapon styles, and tactical roles.
+
+Heroes participate in formations, deal damage, hold lines, and even respond to morale systems.
+
+No filler characters — every companion brings strategic depth.
+
+8. Modular Loadouts and Unlock Systems
+Mix and match weapons, armor, and abilities for your warlord and heroes.
+
+Unlock higher tiers of gear by upgrading infrastructure — or by daring harder raids.
+
+Specialize your builds to suit your raiding style: tank, damage dealer, disruptor, support.
+
+9. Scalable Co-op Multiplayer
+Designed for 1–4 player co-op with host-controlled session structure.
+
+Vacant slots are filled with your leveled companions — every raid is full-scale, always.
+
+Commands, progression, and formation behavior work seamlessly across multiplayer.
+
+10. Endless Replayability
+Procedural objectives and escalating enemy difficulty keep raids fresh.
+
+Unlock and activate Boasts: high-risk, high-reward challenges that offer silver, supplies, and rare upgrades.
+
+Modifiers and difficulty tiers push elite players to their limits.
+
+WHY ASHBORN STANDS APART
+No button-mashing. No passive AI. No corridor brawls.
+
+This is strategic melee combat — every second matters, every decision has weight.
+
+Designed for players who want control, challenge, and real progression.
+
+Ashborn: Fire & Blood is not about grinding or gimmicks. It’s about tactical excellence, warband mastery, and the relentless pursuit of combat perfection.
