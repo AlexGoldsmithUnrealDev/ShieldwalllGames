@@ -11,30 +11,47 @@
 <body>
   <header>
     <div class="header-inner">
-        <h1>Ashborn: Fire and Blood</h1>
-        <!-- Hamburger Icon -->
-        <button class="hamburger" aria-label="Toggle navigation">
-            ☰
-        </button>
+      <div class="nav-left">
+        <a href="index.html" class="brand-link">
+          <!-- Logo image -->
+          <img src="images/bgimage.jpg" alt="Ashborn Logo" class="logo">
+          <h1><span class="shimmer-text" data-text="Ashborn: Fire and Blood">Ashborn: Fire and Blood</span></h1>
+        </a>
+      </div>
+        
+      <!-- Hamburger Icon -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        ☰
+      </button>
 
-        <!-- Navigation Menu -->
-         <nav class="nav-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Game</a></li>
-                <li><a href="#">Kickstarter</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">Devlog</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-         </nav>
+      <!-- Navigation Menu -->
+        <nav class="nav-right">
+          <ul>
+              <li><a href="#">Game</a></li>
+              <li><a href="kickstarter.html">Kickstarter</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Devlog</a></li>
+             <li><a href="#">About</a></li>
+          </ul>
+        </nav>
     </div>
   </header>
 
   <main>
     <section class="hero" data-aos="fade-in">
-      <h2>Enter the World of Jorth</h2>
-      <p>Lead your warriors into brutal raids and forge your legend in this dark Viking fantasy.</p>
+      <div class="video-background">
+        <iframe
+          src="https://www.youtube.com/embed/oVU9LW4a2pQ?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&playlist=oVU9LW4a2pQ&modestbranding=1"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="hero-content">
+          <h2>Enter the World of Jorth</h2>
+          <p>Lead your warriors into brutal raids and forge your legend in this dark Viking fantasy.</p>
+      </div>
     </section>
 
     <section id="trailer" class="trailer" data-aos="zoom-in">

@@ -1,7 +1,7 @@
-Make nav bar translucent when at the top of the page.
-index page top image with video: https://youtu.be/oVU9LW4a2pQ     (In time this will be replaced with game trailer when one is ready)
-Make nave bar buttons right aligned with game title and logo on the left (Chris can provide place holder game logo for now, make chris aware it should be a png with clear background)
-Remove the home button from nav bar, If you place the logo and game title on a button they will work as a home button returning the user to the index page.
+Make nav bar translucent when at the top of the page. (DONE)
+index page top image with video: https://youtu.be/oVU9LW4a2pQ     (In time this will be replaced with game trailer when one is ready) (DONE)
+Make nave bar buttons right aligned with game title and logo on the left (Chris can provide place holder game logo for now, make chris aware it should be a png with clear background) (Awaiting placeholder logo from Chris, everything else is done)
+Remove the home button from nav bar, If you place the logo and game title on a button they will work as a home button returning the user to the index page. (DONE)
 Make kickstarter page with a count down to kickstarter and a total funded progress bar (We will have to update this manually unless we can figure out a way to get the JS to check the amount raised on kickstarter for us at midnight each day but dont worry about this for now)
 Kickstarter page should also include all of our kickstarter tiers costs and rewards. 
 Media should start with an image like the index page does currently but with arrows on left and right, this will cycle through the images on a carousel. If you need png files for the arrows use: https://www.flaticon.com/search?word=right%20arrow
