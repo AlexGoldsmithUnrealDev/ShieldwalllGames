@@ -210,7 +210,7 @@ h2:hover, h3:hover {
   justify-content: center;
   text-align: center;
   color: #fff;
-  margin-top: -160px; /* adjust this to match navbar height */
+  margin-top: -80px; /* adjust this to match navbar height */
   padding-top: 80px;  /* same value to offset content inside */
 }
 
@@ -422,4 +422,37 @@ html {
   text-align: center;
   }
 
+.kickstarter-content {
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
+.countdown-timer .time {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: monospace;
+}
+
+.funding-section {
+  margin: 40px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #05ce78, #38ffb3);
+  width: 0%;
+  transition: width 0.5s ease;
+}
