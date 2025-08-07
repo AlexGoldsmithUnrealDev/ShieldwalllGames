@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page Title -->
+  <title>Ashborn: Kickstarter</title>
+
+  <!-- Cinzel font for thematic styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Fixed: Link to main stylesheet (from /pages/ to /assets/css/) -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- AOS (Animate on Scroll) library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER injected via header.js -->
+
+  <!-- MAIN KICKSTARTER PAGE WRAPPER -->
+  <main class="kickstarter-page">
+    <section class="kickstarter-content">
+
+      <h2>Support Ashborn on Kickstarter</h2>
+
+      <!-- COUNTDOWN TIMER -->
+      <div id="countdown" class="countdown-timer">
+        <p>Launching In:</p>
+        <div class="time">
+          <span id="days">--</span>d :
+          <span id="hours">--</span>h :
+          <span id="minutes">--</span>m :
+          <span id="seconds">--</span>s
+        </div>
+      </div>
+
+      <!-- FUNDING PROGRESS BAR -->
+      <div class="funding-section">
+        <p><strong>Funding Progress:</strong></p>
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <p id="funding-amount">$0 of $100,000 goal</p>
+      </div>
+
+      <!-- External Kickstarter Link -->
+      <a 
+        class="kickstarter-button" 
+        href="https://www.kickstarter.com/YOUR_CAMPAIGN_LINK" 
+        target="_blank">
+        Visit Our Kickstarter Campaign
+      </a>
+
+    </section>
+  </main>
+
+  <!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Initialize scroll animations
+</script>
+
+<!-- JS Modules -->
+<script src="../assets/js/header.js"></script>
+<script src="../assets/js/kickstarter.js"></script>
+</body>
+</html>

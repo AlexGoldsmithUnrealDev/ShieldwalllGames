@@ -1,0 +1,320 @@
+/* ========== GLOBAL STYLES ========== */
+
+/* Apply default box-sizing and remove default margin/padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set base styles for html and body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif; /* Custom serif font for thematic feel */
+  background-color: #0b0b0b;    /* Dark background for overall mood */
+  color: #eee;                  /* Light text for contrast */
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add hover effect to all h2 and h3 headers */
+h2:hover, h3:hover {
+  color: #fff;
+  text-shadow: 0 0 10px crimson; /* Glowing red effect on hover */
+  transition: all 0.3s ease;
+}
+
+
+/* ========== HERO SECTION ========== */
+
+/* Main hero section with background video and centered text */
+.hero {
+  position: relative;
+  height: 100vh;                 /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-top: -80px;            /* Adjust if a navbar was previously used */
+  padding-top: 80px;            /* Counteracts the negative margin for layout balance */
+}
+
+/* Soft fade at the bottom of the hero section */
+.hero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5vh; /* Bottom 5% of screen height */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #0b0b0b 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Container for the fullscreen background video */
+.video-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Places video behind content */
+}
+
+/* Responsive fullscreen YouTube video */
+.video-background iframe {
+  width: 100vw;
+  height: 56.25vw;               /* 16:9 aspect ratio */
+  min-height: 100vh;
+  min-width: 177.77vh;           /* Ensures full coverage on different screens */
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;          /* Prevents clicking on the video */
+}
+
+/* Foreground content within the hero section */
+.hero-content {
+  z-index: 1;
+  padding: 0 20px;
+  text-shadow: 0 0 10px #000;    /* Subtle shadow for readability */
+}
+
+/* Optional animation for zoom effect (currently unused) */
+@keyframes zoomHero {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
+/* Hero section title styling */
+.hero h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero section paragraph styling */
+.hero p {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+
+/* ========== ABOUT SECTION ========== */
+
+/* Section with description about the game */
+.about {
+  background: linear-gradient(180deg, #1a1a1a 0%, #111 100%); /* Dark gradient background */
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: crimson; /* Thematic accent color */
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* ========== TRAILER SECTION ========== */
+
+/* Trailer section layout and background */
+.trailer {
+  background-color: #111;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+/* Trailer section title styling */
+.trailer h3 {
+  font-size: 2.5rem;
+  color: crimson;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Responsive video container (16:9) */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  border: 2px solid crimson;
+  border-radius: 8px;
+}
+
+/* Make the video inside fill the container */
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ========== KICKSTARTER BUTTON ========== */
+
+/* Shared button style for all .kickstarter-button elements */
+.kickstarter-button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  background-color: #05ce78; /* Kickstarter green */
+  color: #fff;
+  box-shadow: 0 0 15px rgba(5, 206, 120, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for .kickstarter-button */
+.kickstarter-button:hover {
+  background-color: #03b96a;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(5, 206, 120, 0.8);
+}
+
+
+/* ========== KICKSTARTER PAGE ========== */
+
+/* Full background and layout for the Kickstarter landing page */
+.kickstarter-page {
+  background: url('images/bgimage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Container for the content within the Kickstarter page */
+.kickstarter-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* ========== COUNTDOWN & FUNDING ========== */
+
+/* Styling for countdown timer numbers */
+.countdown-timer .time {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: monospace; /* Tech-style font */
+}
+
+/* Container for funding progress block */
+.funding-section {
+  margin: 40px 0;
+}
+
+/* Outer bar for funding progress */
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+  box-shadow: inset 0 0 5px #000;
+}
+
+/* Inner bar that fills to show funding percentage */
+.progress-fill {
+  height: 100%;
+  width: 0%; /* Updated dynamically via JS */
+  background: linear-gradient(90deg, #05ce78, #38ffb3);
+  transition: width 0.5s ease;
+}
+
+
+/* ========== FOOTER ========== */
+
+/* Simple footer at bottom of each page */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  border-top: 2px solid #444;
+}
+
+
+/* ========== HEADER ========== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.4s ease;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  height: 80px;
+  background: transparent;
+}
+
+/* Logo on the left */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Buttons on the right, with padding from edge */
+.nav-items {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding-right: 20px; /* adds spacing from the right edge */
+}
+
+.nav-items a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 5px #000;
+}
+
+.nav-items a:hover {
+  color: crimson;
+}
+
+/* Adds black → transparent gradient when not over video */
+.site-header.scrolled {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+}
