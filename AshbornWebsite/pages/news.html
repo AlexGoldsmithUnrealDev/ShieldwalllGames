@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page Title -->
+  <title>Ashborn: News</title>
+
+  <!-- Cinzel font for thematic styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Fixed: Link to main stylesheet (from /pages/ to /assets/css/) -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- AOS (Animate on Scroll) library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER injected via header.js -->
+
+<main class="news-page">
+
+  <!-- Featured Updates -->
+  <section class="featured-updates">
+    <div class="update-card" data-id="1">
+      <img src="../assets/images/tier1.jpg" alt="Update 1">
+      <div class="update-overlay">
+        <h2>🔥 Combat System Overhaul</h2>
+        <p>Read about the major changes to Ashborn's battle mechanics.</p>
+      </div>
+    </div>
+
+    <div class="update-card" data-id="2">
+      <img src="../assets/images/tier2.jpg" alt="Update 2">
+      <div class="update-overlay">
+        <h2>🏰 New Stronghold Area</h2>
+        <p>Explore the new fortress hub area coming in our next update.</p>
+      </div>
+    </div>
+
+    <div class="update-card" data-id="3">
+      <img src="../assets/images/tier3.jpg" alt="Update 3">
+      <div class="update-overlay">
+        <h2>🐉 Enemy Dragon Preview</h2>
+        <p>Get a first look at one of Ashborn's deadliest bosses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scrollbox for Older Updates -->
+  <section class="older-updates">
+    <h3>Previous Updates</h3>
+    <div class="scrollbox">
+      <div class="older-update">
+        <h4>Patch 0.3 – Map Expansion</h4>
+        <p>The Ashborn world grows with new zones to explore.</p>
+      </div>
+      <div class="older-update">
+        <h4>Patch 0.2 – Early Alpha Feedback</h4>
+        <p>What we learned from the first player tests.</p>
+      </div>
+      <div class="older-update">
+        <h4>Patch 0.1 – First Look</h4>
+        <p>Our first playable build and what it means for development.</p>
+      </div>
+      <div class="older-update">
+        <h4>Patch 0.1 – First Look</h4>
+        <p>Our first playable build and what it means for development.</p>
+      </div>
+      <div class="older-update">
+        <h4>Patch 0.1 – First Look</h4>
+        <p>Our first playable build and what it means for development.</p>
+      </div>
+      <div class="older-update">
+        <h4>Patch 0.1 – First Look</h4>
+        <p>Our first playable build and what it means for development.</p>
+      </div>
+      <div class="older-update">
+        <h4>Patch 0.1 – First Look</h4>
+        <p>Our first playable build and what it means for development.</p>
+      </div>
+      <!-- Add more older updates here -->
+    </div>
+  </section>
+
+</main>
+
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Initialize scroll animations
+</script>
+
+<!-- JS Modules -->
+<script src="../assets/js/header.js"></script>
+<script src="../assets/js/news.js"></script>
+</body>
+</html>
