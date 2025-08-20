@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     body {
       background-color: #1a1a1a;
@@ -121,17 +122,30 @@
 
   <section class="contact-form-container">
     <form class="contact-form" action="mailto:contact@shieldwall.com" method="POST" enctype="text/plain">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="name" required>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+  <label for="role">I am a...</label>
+  <select id="role" name="role" required>
+    <option value="" disabled selected>Select one</option>
+    <option value="Influencer">Influencer</option>
+    <option value="Journalist">Journalist</option>
+    <option value="Fan">Fan</option>
+    <option value="Job Applicant">Job Applicant</option>
+    <option value="Other">Other</option>
+  </select>
 
-      <button type="submit">Send Message</button>
-    </form>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <!-- reCAPTCHA widget -->
+  <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+  <button type="submit">Send Message</button>
+</form>
   </section>
 
   <div class="contact-footer">
