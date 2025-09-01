@@ -1,0 +1,126 @@
+// ============================================================================
+// _maps.scss (namespaced + simple)
+// Bootstrap color & utilities maps wired to our variables
+// ============================================================================
+
+@use "sass:map";
+@use "variables" as v;
+
+// 1) Bootstrap theme colors (used by buttons, alerts, etc.)
+$theme-colors: (
+  "primary":   v.$primary,
+  "secondary": v.$secondary,
+  "success":   v.$success,
+  "info":      v.$info,
+  "warning":   v.$warning,
+  "danger":    v.$danger,
+  "light":     v.$light,
+  "dark":      v.$dark
+) !default;
+
+// 2) Optional extended colors bucket (Bootstrap’s $colors map)
+$colors: (
+  "ember-100":  v.$ember-100,
+  "ember-300":  v.$ember-300,
+  "ember-500":  v.$ember-500,
+  "ember-700":  v.$ember-700,
+  "ember-900":  v.$ember-900,
+
+  "fjord-100":  v.$fjord-100,
+  "fjord-300":  v.$fjord-300,
+  "fjord-500":  v.$fjord-500,
+  "fjord-700":  v.$fjord-700,
+  "fjord-900":  v.$fjord-900,
+
+  "mead-100":   v.$mead-100,
+  "mead-300":   v.$mead-300,
+  "mead-500":   v.$mead-500,
+  "mead-700":   v.$mead-700,
+  "mead-900":   v.$mead-900,
+
+  "iron-100":   v.$iron-100,
+  "iron-300":   v.$iron-300,
+  "iron-500":   v.$iron-500,
+  "iron-700":   v.$iron-700,
+  "iron-900":   v.$iron-900
+) !default;
+
+// 3) Utilities API color maps (text/bg/border)
+// Using CSS variables is fine; Bootstrap will output as-is.
+$utilities-text-colors: (
+  "body":       var(--text),
+  "muted":      var(--muted),
+
+  "ember-100":  var(--ember-100),
+  "ember-300":  var(--ember-300),
+  "ember-500":  var(--ember-500),
+  "ember-700":  var(--ember-700),
+  "ember-900":  var(--ember-900),
+
+  "fjord-100":  var(--fjord-100),
+  "fjord-300":  var(--fjord-300),
+  "fjord-500":  var(--fjord-500),
+  "fjord-700":  var(--fjord-700),
+  "fjord-900":  var(--fjord-900),
+
+  "mead-100":   var(--mead-100),
+  "mead-300":   var(--mead-300),
+  "mead-500":   var(--mead-500),
+  "mead-700":   var(--mead-700),
+  "mead-900":   var(--mead-900),
+
+  "iron-100":   var(--iron-100),
+  "iron-300":   var(--iron-300),
+  "iron-500":   var(--iron-500),
+  "iron-700":   var(--iron-700),
+  "iron-900":   var(--iron-900)
+) !default;
+
+$utilities-bg-colors: (
+  "body":       var(--bg),
+  "elev":       var(--bg-elev),
+
+  "ember-100":  var(--ember-100),
+  "ember-300":  var(--ember-300),
+  "ember-500":  var(--ember-500),
+  "ember-700":  var(--ember-700),
+  "ember-900":  var(--ember-900),
+
+  "fjord-100":  var(--fjord-100),
+  "fjord-300":  var(--fjord-300),
+  "fjord-500":  var(--fjord-500),
+  "fjord-700":  var(--fjord-700),
+  "fjord-900":  var(--fjord-900),
+
+  "mead-100":   var(--mead-100),
+  "mead-300":   var(--mead-300),
+  "mead-500":   var(--mead-500),
+  "mead-700":   var(--mead-700),
+  "mead-900":   var(--mead-900),
+
+  "iron-100":   var(--iron-100),
+  "iron-300":   var(--iron-300),
+  "iron-500":   var(--iron-500),
+  "iron-700":   var(--iron-700),
+  "iron-900":   var(--iron-900)
+) !default;
+
+$utilities-border-colors: (
+  "default":    var(--border),
+
+  "ember-300":  var(--ember-300),
+  "ember-500":  var(--ember-500),
+  "ember-700":  var(--ember-700),
+
+  "fjord-300":  var(--fjord-300),
+  "fjord-500":  var(--fjord-500),
+  "fjord-700":  var(--fjord-700),
+
+  "mead-300":   var(--mead-300),
+  "mead-500":   var(--mead-500),
+  "mead-700":   var(--mead-700),
+
+  "iron-300":   var(--iron-300),
+  "iron-500":   var(--iron-500),
+  "iron-700":   var(--iron-700)
+) !default;

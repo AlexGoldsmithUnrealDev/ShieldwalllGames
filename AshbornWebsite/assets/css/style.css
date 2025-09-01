@@ -84,8 +84,13 @@ h2:hover, h3:hover {
 .hero-content {
   z-index: 1;
   padding: 0 20px;
-  text-shadow: 0 0 10px #000;    /* Subtle shadow for readability */
+  text-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* Optional animation for zoom effect (currently unused) */
 @keyframes zoomHero {

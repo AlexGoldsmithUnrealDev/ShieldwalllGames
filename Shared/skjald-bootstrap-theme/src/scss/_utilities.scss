@@ -1,0 +1,128 @@
+// ============================================================================
+// _utilities.scss
+// Custom utility classes and extensions for Skjald Bootstrap Theme
+// This file runs before bootstrap/scss/utilities/api in theme.scss
+// ============================================================================
+
+@use "sass:map";
+@use "sass:meta";
+
+// ------------------------------
+// 1) Utility overrides / extensions
+// ------------------------------
+
+// Add our custom color scales (defined in _maps.scss) into utilities
+$utilities: () !default;
+
+// Text colors
+$utilities: map.merge(
+  $utilities,
+  (
+    "text": (
+      property: color,
+      class: text,
+      values: $utilities-text-colors
+    )
+  )
+);
+
+// Background colors
+$utilities: map.merge(
+  $utilities,
+  (
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: $utilities-bg-colors
+    )
+  )
+);
+
+// Border colors
+$utilities: map.merge(
+  $utilities,
+  (
+    "border-color": (
+      property: border-color,
+      class: border,
+      values: $utilities-border-colors
+    )
+  )
+);
+
+// ------------------------------
+// 2) Custom helpers
+// ------------------------------
+
+// Scroll snapping (Wake-game style vertical flow)
+.snap-y {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
+
+// Chipped edges (uses mixin)
+.chip-t {
+  @include chipped-edge(top, var(--bg));
+}
+.chip-b {
+  @include chipped-edge(bottom, var(--bg));
+}
+
+// Rune divider utility
+.rune-divider {
+  @include rune-divider(24px, var(--primary));
+  margin: var(--space-4) auto;
+}
+
+// Section padding overrides
+.section-sm {
+  --section-py: var(--space-3);
+  --section-px: var(--space-2);
+}
+.section-lg {
+  --section-py: var(--space-5);
+  --section-px: var(--space-4);
+}
+
+// Elevation
+.shadow-sm { box-shadow: var(--shadow-sm) !important; }
+.shadow    { box-shadow: var(--shadow) !important; }
+.shadow-lg { box-shadow: var(--shadow-lg) !important; }
+
+// Motion-safe helpers (respect reduced motion)
+.motion-safe {
+  @include motion-safe { @content; }
+}
+.motion-reduce {
+  @include motion-reduce { @content; }
+}
+
+// ------------------------------
+// 3) Typography utilities
+// ------------------------------
+
+// Serif and sans toggle
+.font-serif { font-family: var(--font-serif) !important; }
+.font-sans  { font-family: var(--font-sans) !important; }
+
+// Fluid type helpers
+.text-display-1 {
+  @include fluid-type(2rem, 4rem, 320px, 1200px);
+  font-family: var(--font-serif);
+}
+.text-display-2 {
+  @include fluid-type(1.5rem, 3rem, 320px, 1200px);
+  font-family: var(--font-serif);
+}
+.text-display-3 {
+  @include fluid-type(1.25rem, 2.5rem, 320px, 1200px);
+  font-family: var(--font-serif);
+}
+
+// ============================================================================
+// END _utilities.scss
+// ============================================================================

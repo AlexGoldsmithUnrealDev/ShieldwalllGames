@@ -1,0 +1,99 @@
+// ============================================================================
+// SKJALD BOOTSTRAP THEME - MASTER SCSS ENTRY (classic override order)
+// ============================================================================
+
+@use "sass:map";
+
+// Load our tokens & maps under a namespace
+@use "variables" as v;
+@use "maps" as m;
+
+// ---------------------------------------------------------------------------
+// 1) Set Bootstrap override variables BEFORE importing Bootstrap
+//    (these are GLOBAL assignments on purpose)
+// ---------------------------------------------------------------------------
+
+// Core theme palette
+$primary:   v.$primary;
+$secondary: v.$secondary;
+$success:   v.$success;
+$info:      v.$info;
+$warning:   v.$warning;
+$danger:    v.$danger;
+$light:     v.$light;
+$dark:      v.$dark;
+
+// Body + links
+$body-bg:       v.$body-bg;
+$body-color:    v.$body-color;
+$link-color:    v.$link-color;
+// $link-hover-color: v.$link-hover-color; // optional; Bootstrap can compute
+
+// Typography
+$font-family-sans-serif: v.$font-family-sans-serif;
+$font-family-base:       v.$font-family-base;
+$font-family-serif:      v.$font-family-serif; // make it globally visible for our partials
+// Bootstrap doesn’t expose $font-family-serif;
+// use this to give headings the serif family instead:
+$headings-font-family:   v.$font-family-serif;
+
+$font-size-base: v.$font-size-base;
+$font-size-sm:   v.$font-size-sm;
+$font-size-lg:   v.$font-size-lg;
+
+// Radii & shadows
+$border-radius:      v.$border-radius;
+$border-radius-sm:   v.$border-radius-sm;
+$border-radius-lg:   v.$border-radius-lg;
+$border-radius-pill: v.$border-radius-pill;
+
+$box-shadow-sm: v.$box-shadow-sm;
+$box-shadow:    v.$box-shadow;
+$box-shadow-lg: v.$box-shadow-lg;
+
+// Spacing & transitions
+$spacer:              v.$spacer;
+$spacers:             v.$spacers;
+$transition-base:     v.$transition-base;
+$transition-fade:     v.$transition-fade;
+$transition-collapse: v.$transition-collapse;
+
+// Z-index
+$zindex-dropdown:           v.$zindex-dropdown;
+$zindex-sticky:             v.$zindex-sticky;
+$zindex-fixed:              v.$zindex-fixed;
+$zindex-offcanvas-backdrop: v.$zindex-offcanvas-backdrop;
+$zindex-modal-backdrop:     v.$zindex-modal-backdrop;
+$zindex-modal:              v.$zindex-modal;
+$zindex-popover:            v.$zindex-popover;
+$zindex-tooltip:            v.$zindex-tooltip;
+
+// Bootstrap color & utility maps
+$theme-colors:            m.$theme-colors;
+$colors:                  m.$colors;
+$utilities-text-colors:   m.$utilities-text-colors;
+$utilities-bg-colors:     m.$utilities-bg-colors;
+$utilities-border-colors: m.$utilities-border-colors;
+
+// ---------------------------------------------------------------------------
+// 2) Import Bootstrap (it reads the overrides above)
+// ---------------------------------------------------------------------------
+@import "bootstrap/scss/bootstrap";
+
+// ---------------------------------------------------------------------------
+// 3) Skjald custom layers (AFTER Bootstrap) — use @import here, NOT @use
+// ---------------------------------------------------------------------------
+@import "root";
+@import "utilities";
+@import "typography";
+@import "buttons";
+@import "navbar";
+@import "forms";
+@import "cards";
+@import "badges";
+@import "chips";
+@import "decor";
+@import "sections";
+@import "animations";
+
+// (Do NOT @use "bootstrap/scss/utilities/api" again; Bootstrap already ran it.)

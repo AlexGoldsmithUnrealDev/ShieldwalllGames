@@ -1,0 +1,209 @@
+// ============================================================================
+// _chips.scss
+// Chipped edges & corners for the Skjald Bootstrap Theme
+// Depends on: _mixins.scss (chipped-edge mixin), _root.scss (CSS vars)
+// ============================================================================
+
+@use "mixins" as *;
+
+// ------------------------------
+// 1) Config
+// ------------------------------
+:root {
+  --chip-size: 18px;   /* default height of the chipped edge */
+  --chip-alpha: 1;     /* opacity multiplier for decorative pseudo elements */
+}
+
+/* Size variants (apply to a container that uses any chip helper) */
+.chip-sm { --chip-size: 12px; }
+.chip-md { --chip-size: 18px; } /* default */
+.chip-lg { --chip-size: 26px; }
+
+// ------------------------------
+// 2) Edge chips (top/bottom/left/right)
+//    These create jagged, broken edges using the mixin.
+//    NOTE: .chip-t / .chip-b were also introduced in _utilities.scss for quick use.
+//    Here we provide the full set + mirrored directions.
+// ------------------------------
+.chip-t { @include chipped-edge(top, var(--bg));    &::after { height: var(--chip-size); } }
+.chip-b { @include chipped-edge(bottom, var(--bg)); &::after { height: var(--chip-size); } }
+
+/* Left/right variants (use a rotated approach) */
+.chip-l {
+  position: relative; overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute; inset-block: 0; inset-inline-start: 0;
+    width: var(--chip-size);
+    background: var(--bg);
+    /* Fallback polygon for a vertical jagged look */
+    clip-path: polygon(
+      50% 0%, 65% 10%, 35% 20%, 60% 30%, 30% 40%, 55% 50%,
+      35% 60%, 62% 70%, 40% 80%, 70% 90%, 50% 100%, 0% 100%, 0% 0%
+    );
+    /* Upgrade to SVG mask when available */
+    mask-image: url('../assets/svg/chip-mask.svg');
+    -webkit-mask-image: url('../assets/svg/chip-mask.svg');
+    mask-repeat: repeat-y; -webkit-mask-repeat: repeat-y;
+    mask-position: center; -webkit-mask-position: center;
+    transform: rotate(90deg);
+    opacity: var(--chip-alpha);
+  }
+}
+
+.chip-r {
+  position: relative; overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute; inset-block: 0; inset-inline-end: 0;
+    width: var(--chip-size);
+    background: var(--bg);
+    clip-path: polygon(
+      50% 0%, 65% 10%, 35% 20%, 60% 30%, 30% 40%, 55% 50%,
+      35% 60%, 62% 70%, 40% 80%, 70% 90%, 50% 100%, 100% 100%, 100% 0%
+    );
+    mask-image: url('../assets/svg/chip-mask.svg');
+    -webkit-mask-image: url('../assets/svg/chip-mask.svg');
+    mask-repeat: repeat-y; -webkit-mask-repeat: repeat-y;
+    mask-position: center; -webkit-mask-position: center;
+    transform: rotate(-90deg);
+    opacity: var(--chip-alpha);
+  }
+}
+
+/* Combine edges quickly */
+.chip-tb { @extend .chip-t; @extend .chip-b; }
+.chip-lr { @extend .chip-l; @extend .chip-r; }
+.chip-all { @extend .chip-t; @extend .chip-b; @extend .chip-l; @extend .chip-r; }
+
+// ------------------------------
+// 3) Corner chips (TL / TR / BR / BL)
+//    Subtle broken corners using pseudo-elements.
+//    Upgrades to rune-corner.svg when available.
+// ------------------------------
+%corner-base {
+  content: "";
+  position: absolute;
+  width: calc(var(--chip-size) * 1.2);
+  height: calc(var(--chip-size) * 1.2);
+  background: var(--bg);
+  opacity: var(--chip-alpha);
+  /* Default polygon fallback (ragged notch) */
+  clip-path: polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+  /* Upgrade to SVG mask when available */
+  mask-image: url('../assets/svg/rune-corner.svg');
+  -webkit-mask-image: url('../assets/svg/rune-corner.svg');
+  mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat;
+  mask-size: cover; -webkit-mask-size: cover;
+}
+
+.chip-corner {
+  position: relative; overflow: hidden;
+
+  &::before { @extend %corner-base; }
+  &::after  { @extend %corner-base; }
+}
+
+/* Individual corners (apply to container) */
+.chip-tl, .chip-tr, .chip-br, .chip-bl { position: relative; overflow: hidden; }
+
+.chip-tl::before { @extend %corner-base; inset: 0 auto auto 0; transform: rotate(0deg); }
+.chip-tr::before { @extend %corner-base; inset: 0 0 auto auto; transform: rotate(90deg); }
+.chip-br::before { @extend %corner-base; inset: auto 0 0 auto; transform: rotate(180deg); }
+.chip-bl::before { @extend %corner-base; inset: auto auto 0 0; transform: rotate(270deg); }
+
+/* All four corners at once */
+.chip-corners {
+  position: relative; overflow: hidden;
+  &::before, &::after { content: none; } /* disable inherited pseudo if nested */
+
+  /* TL */
+  &::part(tl), & > .chip-tl-corner {
+    @extend %corner-base; position: absolute; inset: 0 auto auto 0; transform: rotate(0deg);
+  }
+  /* TR */
+  &::part(tr), & > .chip-tr-corner {
+    @extend %corner-base; position: absolute; inset: 0 0 auto auto; transform: rotate(90deg);
+  }
+  /* BR */
+  &::part(br), & > .chip-br-corner {
+    @extend %corner-base; position: absolute; inset: auto 0 0 auto; transform: rotate(180deg);
+  }
+  /* BL */
+  &::part(bl), & > .chip-bl-corner {
+    @extend %corner-base; position: absolute; inset: auto auto 0 0; transform: rotate(270deg);
+  }
+}
+
+// ------------------------------
+// 4) Chip panel helper
+//    A ready-made panel with chipped bottom edge and themed border.
+// ------------------------------
+.chip-panel {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in oklab, var(--bg) 98%, transparent);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+
+  @include chipped-edge(bottom, var(--bg));
+  &::after { height: var(--chip-size); }
+
+  &.chip-iron {
+    background: color-mix(in oklab, var(--iron-800) 20%, var(--bg));
+    border-color: var(--iron-700);
+  }
+  &.chip-ember {
+    background: color-mix(in oklab, var(--ember-900) 12%, var(--bg));
+    border-color: var(--ember-700);
+  }
+  &.chip-fjord {
+    background: color-mix(in oklab, var(--fjord-900) 12%, var(--bg));
+    border-color: var(--fjord-700);
+  }
+  &.chip-mead {
+    background: color-mix(in oklab, var(--mead-900) 12%, var(--bg));
+    border-color: var(--mead-700);
+  }
+}
+
+// ------------------------------
+// 5) Masks on images/media (decorative bite out of an edge)
+//    Apply to an <img> or media container.
+// ------------------------------
+.chip-media-b {
+  display: block;
+  position: relative;
+  mask-image: url('../assets/svg/chip-mask.svg');
+  -webkit-mask-image: url('../assets/svg/chip-mask.svg');
+  mask-repeat: repeat-x; -webkit-mask-repeat: repeat-x;
+  mask-position: bottom; -webkit-mask-position: bottom;
+  mask-size: auto var(--chip-size); -webkit-mask-size: auto var(--chip-size);
+}
+.chip-media-t {
+  display: block;
+  position: relative;
+  mask-image: url('../assets/svg/chip-mask.svg');
+  -webkit-mask-image: url('../assets/svg/chip-mask.svg');
+  mask-repeat: repeat-x; -webkit-mask-repeat: repeat-x;
+  mask-position: top; -webkit-mask-position: top;
+  mask-size: auto var(--chip-size); -webkit-mask-size: auto var(--chip-size);
+}
+
+// ------------------------------
+// 6) Accessibility / reduced motion
+// ------------------------------
+html.reduced-motion .chip-panel,
+html.reduced-motion .chip-t,
+html.reduced-motion .chip-b,
+html.reduced-motion .chip-l,
+html.reduced-motion .chip-r,
+html.reduced-motion .chip-corner,
+html.reduced-motion .chip-corners {
+  transition: none !important;
+}
+
+// ============================================================================
+// END _chips.scss
+// ============================================================================

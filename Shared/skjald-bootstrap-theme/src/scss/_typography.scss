@@ -1,0 +1,270 @@
+// ============================================================================
+// _typography.scss
+// Headings, paragraphs, lists, blockquotes, code, and decorative title helpers
+// ============================================================================
+
+@use "sass:color";
+@use "mixins" as *;
+
+// ------------------------------
+// 1) Base text + paragraphs
+// ------------------------------
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin-bottom: var(--space-3);
+  color: var(--text);
+}
+
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+// Eyebrow (small label above headings)
+.eyebrow {
+  display: inline-block;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--mead-500);
+  margin-bottom: 0.5rem;
+}
+
+// ------------------------------
+// 2) Headings
+// ------------------------------
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+  color: var(--text);
+  text-wrap: balance;
+}
+
+h1 { @include fluid-type(2rem, 3.25rem, 320px, 1200px); }
+h2 { @include fluid-type(1.75rem, 2.5rem, 320px, 1200px); }
+h3 { @include fluid-type(1.5rem, 2rem, 320px, 1200px); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+h1, h2 { color: var(--ember-300); }
+h3     { color: var(--ember-500); }
+
+// Title with divider (Viking-flavored)
+.title-with-rune {
+  text-align: center;
+  margin-bottom: var(--space-4);
+
+  .title {
+    margin-bottom: var(--space-2);
+  }
+
+  .divider {
+    @include rune-divider(24px, var(--primary));
+    justify-content: center;
+  }
+}
+
+// ------------------------------
+// 3) Links inside headings / paragraphs
+// ------------------------------
+:where(h1, h2, h3, h4, h5, h6) a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid color.change(#000, $alpha: 0);
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--link);
+    border-bottom-color: var(--link);
+  }
+}
+
+p a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+// ------------------------------
+// 4) Lists
+// ------------------------------
+ul, ol {
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-3);
+}
+
+ul li + li,
+ol li + li {
+  margin-top: 0.25rem;
+}
+
+.list-compact {
+  li + li { margin-top: 0; }
+}
+
+// Optional rune-style bullets (fallback to disc if SVG missing)
+.list-rune {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.4em;
+      width: 0.75rem;
+      height: 0.75rem;
+      background: var(--primary);
+      clip-path: polygon(50% 0%, 64% 22%, 100% 25%, 75% 50%, 100% 75%, 64% 78%, 50% 100%, 36% 78%, 0% 75%, 25% 50%, 0% 25%, 36% 22%);
+      // Upgrade to SVG rune when available:
+      // mask-image: url('../assets/svg/rune-divider.svg');
+      // -webkit-mask-image: url('../assets/svg/rune-divider.svg');
+      // background: currentColor;
+    }
+  }
+}
+
+// ------------------------------
+// 5) Horizontal rules
+// ------------------------------
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  margin: var(--space-4) 0;
+}
+
+.hr-rune {
+  position: relative;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  margin: var(--space-4) 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    clip-path: polygon(50% 0%, 64% 22%, 100% 25%, 75% 50%, 100% 75%, 64% 78%, 50% 100%, 36% 78%, 0% 75%, 25% 50%, 0% 25%, 36% 22%);
+    border-radius: 2px;
+    box-shadow: 0 0 0 2px var(--bg);
+    // Upgrade to SVG when assets land:
+    // background: url('../assets/svg/rune-divider.svg') no-repeat center / cover;
+  }
+}
+
+// ------------------------------
+// 6) Blockquotes
+// ------------------------------
+blockquote {
+  position: relative;
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  color: var(--muted);
+  background-color: color.change(#000, $alpha: 0.08);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+
+  p:last-child { margin-bottom: 0; }
+
+  cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--iron-400);
+
+    &::before { content: "— "; }
+  }
+}
+
+// ------------------------------
+// 7) Code and preformatted
+// ------------------------------
+code, kbd, samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+  background: color.change(#000, $alpha: 0.07);
+  border: 1px solid color.change(#fff, $alpha: 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.1em 0.35em;
+}
+
+pre {
+  display: block;
+  padding: var(--space-3);
+  margin: var(--space-3) 0;
+  overflow: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: color.change(#000, $alpha: 0.12);
+  border: 1px solid color.change(#fff, $alpha: 0.08);
+  border-radius: var(--radius);
+}
+
+pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+// ------------------------------
+// 8) Small text, muted, caps
+// ------------------------------
+small, .text-small { font-size: 0.875em; }
+.text-muted       { color: var(--muted) !important; }
+.text-caps        { text-transform: uppercase; letter-spacing: 0.06em; }
+
+// ------------------------------
+// 9) Title blocks (hero/section intros)
+// ------------------------------
+.title-block {
+  text-align: center;
+  margin-bottom: var(--space-5);
+
+  .eyebrow { color: var(--mead-500); }
+
+  .headline {
+    @include fluid-type(1.75rem, 3rem, 320px, 1200px);
+    font-family: var(--font-serif);
+    color: var(--ember-300);
+    margin-bottom: var(--space-2);
+  }
+
+  .subhead {
+    color: var(--muted);
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  .divider {
+    @include rune-divider(28px, var(--primary));
+    justify-content: center;
+    margin-top: var(--space-3);
+  }
+}
+
+// ============================================================================
+// END _typography.scss
+// ============================================================================

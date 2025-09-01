@@ -1,0 +1,32 @@
+{
+  "name": "skjald-bootstrap-theme",
+  "version": "1.0.0",
+  "description": "Shared Viking-themed Bootstrap 5 theme for Ashborn and Shieldwall websites.",
+  "main": "dist/js/skjald.bundle.min.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "bootstrap",
+    "theme",
+    "scss",
+    "vite",
+    "viking",
+    "ashborn",
+    "shieldwall"
+  ],
+  "author": "Shieldwall Games",
+  "license": "MIT",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.20",
+    "bootstrap": "^5.3.3",
+    "postcss": "^8.4.39",
+    "rimraf": "^5.0.10",
+    "sass": "^1.77.6",
+    "vite": "^5.4.2"
+  }
+}

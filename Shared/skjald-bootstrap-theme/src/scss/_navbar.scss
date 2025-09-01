@@ -1,0 +1,278 @@
+// ============================================================================
+// _navbar.scss
+// Sticky, translucent navbar with Viking flavor
+// ============================================================================
+
+@use "mixins" as *;
+
+.navbar-skjald {
+  --nav-height: 64px;
+  --nav-bg: color-mix(in oklab, var(--bg) 75%, transparent);
+  --nav-border: var(--border);
+  --nav-link: var(--text);
+  --nav-link-active: var(--primary);
+  --nav-link-hover: var(--ember-300);
+  --nav-shadow: var(--shadow);
+
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  height: var(--nav-height);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 2px 12px color-mix(in oklab, var(--raven-900) 20%, transparent);
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+
+  // Optional chipped bottom edge
+  &.chip-b {
+    @include chipped-edge(bottom, var(--bg));
+  }
+
+  .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--nav-link);
+    text-decoration: none;
+    transition: color .2s ease;
+
+    img, .brand-logo {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    &:hover, &:focus {
+      color: var(--nav-link-hover);
+    }
+  }
+
+  .navbar-toggler {
+    border: 1px solid var(--nav-border);
+    border-radius: var(--radius);
+    padding: .375rem .5rem;
+    color: var(--nav-link);
+    background: color-mix(in oklab, var(--bg) 60%, transparent);
+    transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+
+    &:focus {
+      box-shadow: 0 0 0 .25rem var(--focus-ring);
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--nav-link-hover);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+    }
+  }
+
+  .navbar-nav {
+    align-items: center;
+    gap: .25rem;
+
+    .nav-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: .375rem .75rem;
+      color: var(--nav-link);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      text-decoration: none;
+      transition: color .2s ease;
+
+      // Underline indicator on hover
+      &::after {
+        content: "";
+        position: absolute;
+        left: .5rem;
+        right: .5rem;
+        bottom: .15rem;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform .2s ease;
+        opacity: .7;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--nav-link-hover);
+
+        &::after { transform: scaleX(1); }
+      }
+
+      &.active,
+      &[aria-current="page"] {
+        color: var(--nav-link-active);
+
+        &::after {
+          transform: scaleX(1);
+          background: var(--nav-link-active);
+          opacity: 1;
+        }
+      }
+
+      &.disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
+    }
+
+    // Optional small badge next to links (e.g., NEW)
+    .nav-badge {
+      margin-left: .35rem;
+      padding: .1rem .35rem;
+      border-radius: var(--radius-sm);
+      font-size: .65rem;
+      line-height: 1;
+      background: color-mix(in oklab, var(--primary) 20%, transparent);
+      color: var(--primary);
+      border: 1px solid color-mix(in oklab, var(--primary) 40%, transparent);
+    }
+  }
+
+  // Container padding alignment
+  .container,
+  .container-fluid {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  // When page is at top (more translucent) vs scrolled (more solid)
+  &.is-top {
+    background-color: color-mix(in oklab, var(--bg) 60%, transparent);
+    box-shadow: 0 2px 10px color-mix(in oklab, var(--raven-900) 10%, transparent);
+  }
+  &.is-scrolled {
+    background-color: color-mix(in oklab, var(--bg) 92%, transparent);
+    box-shadow: var(--nav-shadow);
+  }
+
+  // Auto-hide behavior (JS toggles .is-hidden on scroll down)
+  &.auto-hide {
+    will-change: transform;
+    &.is-hidden {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Offcanvas / collapse styling
+// ---------------------------------------------------------------------------
+
+.navbar-skjald {
+  .navbar-collapse {
+    transition: height .25s ease;
+  }
+
+  // Offcanvas variant (Bootstrap .offcanvas)
+  .offcanvas {
+    background: color-mix(in oklab, var(--bg) 96%, transparent);
+    border-left: 1px solid var(--border);
+
+    .offcanvas-header {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .offcanvas-title {
+      font-family: var(--font-serif);
+      color: var(--text);
+    }
+
+    .offcanvas-body .navbar-nav .nav-link {
+      padding: .5rem 0;
+      font-size: 1rem;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Nav indicator bullets (for scroll-snap pages) — optional
+// Use with JS IntersectionObserver to toggle .is-active
+// ---------------------------------------------------------------------------
+
+.nav-indicator {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  translate: 0 -50%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  z-index: 1025;
+  pointer-events: none;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--text) 35%, transparent);
+    border: 1px solid color-mix(in oklab, var(--text) 45%, transparent);
+    pointer-events: auto;
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+
+    &.is-active {
+      background: var(--primary);
+      border-color: var(--primary);
+      transform: scale(1.15);
+      box-shadow: 0 0 0 .25rem var(--focus-ring);
+    }
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Size variants
+// ---------------------------------------------------------------------------
+
+.navbar-compact {
+  --nav-height: 56px;
+
+  .navbar-nav .nav-link {
+    padding: .25rem .5rem;
+    font-size: .9rem;
+  }
+}
+
+.navbar-spacious {
+  --nav-height: 72px;
+
+  .navbar-nav .nav-link {
+    padding: .5rem .9rem;
+    font-size: 1rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Color variants (quick helpers)
+// ---------------------------------------------------------------------------
+
+.navbar-iron {
+  --nav-bg: color-mix(in oklab, var(--iron-800) 85%, transparent);
+  --nav-link: var(--ash-100);
+  --nav-link-hover: var(--ember-300);
+  --nav-link-active: var(--ember-500);
+  --nav-border: var(--iron-700);
+}
+
+.navbar-glass {
+  // extra translucent version for hero-overlap pages
+  --nav-bg: color-mix(in oklab, var(--bg) 50%, transparent);
+  box-shadow: 0 8px 20px color-mix(in oklab, var(--raven-900) 25%, transparent);
+}
+
+// ============================================================================
+// END _navbar.scss
+// ============================================================================

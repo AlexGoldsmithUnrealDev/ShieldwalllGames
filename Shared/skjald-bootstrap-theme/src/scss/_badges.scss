@@ -1,0 +1,191 @@
+// ============================================================================
+// _badges.scss
+// Badges & label chips for the Skjald Bootstrap Theme
+// ============================================================================
+
+@use "sass:color";
+
+// ------------------------------
+// Base badge
+// ------------------------------
+.badge {
+  --badge-bg: var(--border);
+  --badge-color: var(--text);
+  --badge-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .25rem .5rem;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--badge-color);
+  background-color: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  vertical-align: middle;
+  user-select: none;
+}
+
+// Size variants
+.badge-sm {
+  padding: .2rem .4rem;
+  font-size: .675rem;
+}
+.badge-lg {
+  padding: .35rem .65rem;
+  font-size: .825rem;
+  border-radius: var(--radius);
+}
+
+// Pill variant
+.badge-pill {
+  border-radius: var(--radius-pill);
+}
+
+// Soft (tinted) helper — use with color vars below
+.badge-soft {
+  --badge-color: currentColor !important;
+  border-color: color-mix(in oklab, currentColor 25%, transparent);
+  background-color: color-mix(in oklab, currentColor 15%, transparent);
+}
+
+// Outline variant
+.badge-outline {
+  --badge-bg: transparent !important;
+  --badge-color: currentColor !important;
+  border-color: currentColor !important;
+  background-color: transparent !important;
+}
+
+// Light-on-dark (inverted)
+.badge-invert {
+  --badge-color: #fff !important;
+  --badge-bg: color-mix(in oklab, currentColor 85%, black) !important;
+  border-color: color-mix(in oklab, currentColor 92%, black) !important;
+}
+
+// ------------------------------
+// Color utilities (tie to theme palette)
+// Use: <span class="badge badge-primary">New</span>
+// ------------------------------
+.badge-primary   { --badge-bg: var(--primary);   --badge-color: var(--primary-contrast);   --badge-border: var(--primary); }
+.badge-secondary { --badge-bg: var(--secondary); --badge-color: var(--secondary-contrast); --badge-border: var(--secondary); }
+.badge-success   { --badge-bg: var(--success);   --badge-color: #000;                      --badge-border: var(--success); }
+.badge-warning   { --badge-bg: var(--warning);   --badge-color: #000;                      --badge-border: var(--warning); }
+.badge-danger    { --badge-bg: var(--danger);    --badge-color: #fff;                      --badge-border: var(--danger); }
+.badge-info      { --badge-bg: var(--info);      --badge-color: #073b3a;                   --badge-border: var(--info); }
+.badge-light     { --badge-bg: var(--light);     --badge-color: #000;                      --badge-border: var(--light); }
+.badge-dark      { --badge-bg: var(--dark);      --badge-color: #fff;                      --badge-border: var(--dark); }
+
+// Extended Viking hues
+.badge-ember-100 { color: var(--ember-100); }
+.badge-ember-300 { color: var(--ember-300); }
+.badge-ember-500 { color: var(--ember-500); }
+.badge-ember-700 { color: var(--ember-700); }
+.badge-ember-900 { color: var(--ember-900); }
+
+.badge-fjord-100 { color: var(--fjord-100); }
+.badge-fjord-300 { color: var(--fjord-300); }
+.badge-fjord-500 { color: var(--fjord-500); }
+.badge-fjord-700 { color: var(--fjord-700); }
+.badge-fjord-900 { color: var(--fjord-900); }
+
+.badge-mead-100 { color: var(--mead-100); }
+.badge-mead-300 { color: var(--mead-300); }
+.badge-mead-500 { color: var(--mead-500); }
+.badge-mead-700 { color: var(--mead-700); }
+.badge-mead-900 { color: var(--mead-900); }
+
+.badge-iron-100 { color: var(--iron-100); }
+.badge-iron-300 { color: var(--iron-300); }
+.badge-iron-500 { color: var(--iron-500); }
+.badge-iron-700 { color: var(--iron-700); }
+.badge-iron-900 { color: var(--iron-900); }
+
+// Soft + color combo helpers, e.g. <span class="badge badge-soft text-ember-500">
+.text-ember-500.badge-soft,
+.badge-soft.text-ember-500 { color: var(--ember-500) !important; }
+.text-fjord-500.badge-soft,
+.badge-soft.text-fjord-500 { color: var(--fjord-500) !important; }
+.text-mead-500.badge-soft,
+.badge-soft.text-mead-500  { color: var(--mead-500) !important; }
+.text-iron-500.badge-soft,
+.badge-soft.text-iron-500  { color: var(--iron-500) !important; }
+
+// ------------------------------
+// Icon + badge alignment
+// ------------------------------
+.badge .icon {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  line-height: 1;
+}
+
+// ------------------------------
+// Counter badge (positioned)
+// Usage:
+// <button class="btn position-relative">Inbox
+//   <span class="badge badge-primary badge-counter">3</span>
+// </button>
+// ------------------------------
+.badge-counter {
+  position: absolute;
+  top: -0.35rem;
+  inset-inline-end: -0.35rem;
+  transform: translate(50%, -50%);
+  padding: .25rem .4rem;
+  font-size: .65rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 0 0 .15rem var(--bg);
+}
+
+// ------------------------------
+// Ribbon badge (corner)
+// Wrap a relatively positioned container and add .badge-ribbon
+// ------------------------------
+.badge-ribbon {
+  position: absolute;
+  top: .5rem;
+  inset-inline-start: -.25rem;
+  padding: .25rem .5rem .25rem .75rem;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  border-top-right-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px color-mix(in oklab, var(--raven-900) 25%, transparent);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    inset-inline-start: 0;
+    border: 4px solid transparent;
+    border-top-color: color-mix(in oklab, var(--primary) 80%, black);
+  }
+}
+
+// ------------------------------
+// Gradient variant (subtle, for CTAs)
+// ------------------------------
+.badge-gradient-ember {
+  --badge-color: #fff;
+  background: linear-gradient(90deg, var(--ember-700), var(--ember-500));
+  border: 1px solid var(--ember-700);
+}
+.badge-gradient-fjord {
+  --badge-color: #fff;
+  background: linear-gradient(90deg, var(--fjord-700), var(--fjord-500));
+  border: 1px solid var(--fjord-700);
+}
+
+// ============================================================================
+// END _badges.scss
+// ============================================================================
