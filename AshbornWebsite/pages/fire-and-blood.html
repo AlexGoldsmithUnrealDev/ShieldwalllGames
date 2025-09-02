@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page Title -->
+  <title>Ashborn: Fire and Blood</title>
+
+  <!-- Cinzel font for thematic styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Fixed: Link to main stylesheet (from /pages/ to /assets/css/) -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- AOS (Animate on Scroll) library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="fire-blood-page">
+
+        <section class="carousel-container">
+        <!-- Left arrow -->
+        <button class="carousel-btn left" id="prev">&#10094;</button>
+
+        <!-- Images -->
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="../assets/images/fireandblood1.jpg" alt="Screenshot 1">
+                <div class="caption">Early Concept Art</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="../assets/images/fireandblood2.jpg" alt="Screenshot 2">
+                <div class="caption">Early Concept Art</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="../assets/images/fireandblood3.jpg" alt="Screenshot 3">
+                <div class="caption">Early Concept Art</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="../assets/images/fireandblood4.jpg" alt="Screenshot 4">
+                <div class="caption">Early Concept Art</div>
+            </div>
+            <div class="carousel-slide">
+                <img src="../assets/images/fireandblood5.jpg" alt="Screenshot 5">
+                <div class="caption">Early Concept Art</div>
+            </div>
+        </div>
+
+        <!-- Right arrow -->
+        <button class="carousel-btn right" id="next">&#10095;</button>
+        </section>
+
+    </main>
+
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Initialize scroll animations
+</script>
+
+<!-- JS Modules -->
+<script src="../assets/js/header.js"></script>
+<script src="../assets/js/fire-and-blood.js"></script>
+</body>
+</html>
