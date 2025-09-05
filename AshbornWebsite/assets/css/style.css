@@ -431,6 +431,173 @@ h2:hover, h3:hover {
 
 /* ========== FIRE & BLOOD PAGE ========== */
 
+/* Hero section at the top of the page */
+.hero-wishlist {
+  position: relative;
+  height: 80vh;           /* adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;    /* space before wishlist panels */
+}
+
+/* Video behind hero content */
+.hero-wishlist .video-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero-wishlist .video-background iframe {
+  width: 100vw;
+  height: 56.25vw;       /* 16:9 ratio */
+  min-height: 100%;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-wishlist .hero-content {
+  z-index: 1;
+  padding: 0 20px;
+  text-shadow: 0 0 15px #000;
+}
+
+.hero-wishlist h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+}
+
+.hero-wishlist p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* ========== FULL-WIDTH WISHLIST CONTAINER ========== */
+.full-width-wishlist {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* ensures responsiveness */
+}
+
+/* ========== PANEL WRAPPER (handles full glow) ========== */
+.wishlist-panel-wrapper {
+  position: relative;
+  flex: 1 1 45%; /* slightly smaller than 50% to allow spacing */
+  overflow: visible; /* lets glow extend beyond panel */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* ========== PANEL ========== */
+.wishlist-panel {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden; /* keeps content inside panel */
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Dark overlay inside panel */
+.wishlist-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.35);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+/* Background images */
+.wishlist-panel.steam { background-image: url('../images/steam-bg.jpg'); }
+.wishlist-panel.epic { background-image: url('../images/epic-bg.jpg'); }
+
+/* Wishlist button inside panel */
+.wishlist-button {
+  padding: 25px 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.6);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 2; /* above overlay */
+}
+
+/* Panel hover effects */
+.wishlist-panel:hover::before { 
+  background-color: rgba(0,0,0,0.25);
+}
+
+.wishlist-panel:hover {
+  transform: scale(1.02);
+}
+
+.wishlist-panel:hover .wishlist-button {
+  transform: scale(1.05);
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  text-shadow: 0 0 12px #fff;
+}
+
+/* ========== GLOW ON WRAPPER ========== */
+.wishlist-panel-wrapper.steam:hover {
+  box-shadow: 0 0 50px 15px rgba(0,162,255,0.7); /* full panel glow */
+}
+
+.wishlist-panel-wrapper.steam:hover .wishlist-button {
+  text-shadow: 0 0 12px #00a2ff, 0 0 20px #00a2ff;
+}
+
+.wishlist-panel-wrapper.epic:hover {
+  box-shadow: 0 0 50px 15px rgba(170,0,255,0.7); /* full panel glow */
+}
+
+.wishlist-panel-wrapper.epic:hover .wishlist-button {
+  text-shadow: 0 0 12px #aa00ff, 0 0 20px #aa00ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .full-width-wishlist {
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 10px;
+  }
+  .wishlist-panel {
+    height: 350px;
+  }
+  .wishlist-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+}
+
+/* Image Carousel */
 /* Outer container (centers on page, responsive width) */
 .carousel-container {
   position: relative;
@@ -439,15 +606,14 @@ h2:hover, h3:hover {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 100, 0, 0.6);
   overflow: hidden; /* keeps rounded corners on fades */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Inner wrapper whose height we animate */
 .carousel {
   position: relative;
   width: 100%;
-  height: 50vh;              /* initial fallback height */
-  max-height: 80vh;          /* never exceed viewport */
-  transition: height 0.45s ease; /* smooth BOTH grow + shrink */
+  height: 60vh;       /* Choose the size you want */
+  max-height: 700px;  /* Optional cap */
 }
 
 /* Slides are stacked; we fade them, not display:none */
@@ -464,21 +630,33 @@ h2:hover, h3:hover {
   pointer-events: auto;
 }
 
-/* Image fills the animated height; no cropping */
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;        /* show whole image */
-  display: block;
-  border-radius: 12px;
-  /* subtle scale to soften perceived width jump between aspects */
-  transform: scale(0.985);
-  transition: transform 0.45s ease;
+  object-fit: contain;
 }
 
 .carousel-slide.active img {
   transform: scale(1);
 }
+
+/* Hover effect to indicate paused carousel */
+.carousel-container.paused {
+  transform: scale(1.015); /* slightly enlarge the whole container */
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.8); /* deeper red glow */
+}
+
+/* Smooth transition for slides themselves */
+.carousel-slide img {
+  transition: transform 0.3s ease;
+}
+
+/* Optional: slightly scale up active image too */
+.carousel-container.paused .carousel-slide.active img {
+  transform: scale(1.015);
+  transition: transform 0.5s ease; /* smooth image scaling */ 
+}
+
 
 /* Caption overlays bottom; doesn’t affect height */
 .caption {
