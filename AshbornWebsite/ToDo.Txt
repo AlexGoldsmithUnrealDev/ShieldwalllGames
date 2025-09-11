@@ -9,7 +9,7 @@
 (DONE) Devlog needs to have a navbar on the left which will have all the devlogs to date with the most recent at the top and the oldest at the bottom. The navbar needs to work like a contents page with each button moving the user smoothly to the select devlog. You will also need to layout the structure of the Devlogs, I suggest creating a devlog card which has a title (Used for the button in the nav bar), body of text, image/s and video links, if you add a hidden tag to it then when we need to add a new devlog we can copy and paste, edit as needed and remove the hidden tag.
 (DONE) Change "About" to "Shieldwall" This button should open the shieldwall website in a sepperate tag and add a cookie to confirm they came from the ashborn website.
 (DONE) The Game page I will leave entirely up to you just remember: Avoid ever writing more than 3 sentences in a body of text, before trying to write it ask yourself could this be said better with an image, inforgraphic or numbers.
-Need to fix keyboard (and touch) navigation on Fire and Blood page
+(DONE)Need to fix keyboard (and touch) navigation on Fire and Blood page
 
 Some tag lines you may want to use:
 Write your saga in Fire and Blood.

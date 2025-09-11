@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags for responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page Title -->
+  <title>Ashborn: Community</title>
+
+  <!-- Cinzel font for thematic styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Fixed: Link to main stylesheet (from /pages/ to /assets/css/) -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- AOS (Animate on Scroll) library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<!-- HEADER injected via header.js -->
+
+<body>
+
+  <div class="community-page">
+
+  <!-- Hero / Welcome -->
+  <section class="community-hero">
+    <h2>Welcome to the Ashborn: Fire and Blood Community</h2>
+    <p>A place to connect, share, and create with fellow fans.</p>
+    <div class="cta-buttons">
+        <a href="https://discord.gg/yourinvite" class="btn discord" target="_blank">
+            <img src="../assets/logos/discord.png" alt="Discord logo">
+            Join Discord
+        </a>
+        <a href="/community/share" class="btn story">
+            Share Your Story
+        </a>
+        <a href="/subscribe" class="btn subscribe">
+            Subscribe
+        </a>
+    </div>
+  </section>
+
+  <!-- Quick Links Hub -->
+    <section class="community-links">
+        <a href="https://discord.com" class="discord">
+            <img src="../assets/logos/discord.png" alt="Discord Logo">
+            Discord
+        </a>
+        <a href="https://reddit.com" class="reddit">
+            <img src="../assets/logos/reddit.png" alt="Reddit Logo">
+            Reddit
+        </a>
+        <a href="https://instagram.com" class="instagram">
+            <img src="../assets/logos/instagram.png" alt="Instagram Logo">
+            Instagram
+        </a>
+        <a href="https://x.com" class="x">
+            <img src="../assets/logos/x.png" alt="X Logo">
+            X
+        </a>
+        <a href="https://youtube.com" class="youtube">
+            <img src="../assets/logos/youtube.png" alt="YouTube Logo">
+            YouTube
+        </a>
+        <a href="/wiki" class="wiki">
+            <img src="../assets/logos/wiki.png" alt="Fan Wiki Logo">
+            Fan Wiki
+        </a>
+        <a href="/guidelines" class="guidelines">
+            <img src="../assets/logos/guidelines.png" alt="Guidelines Logo">
+            Community Guidelines
+        </a>
+    </section>
+
+  <!-- Events & Announcements -->
+  <section class="community-events">
+    <h3>Events & Announcements</h3>
+    <div class="event-list">
+      <div class="event-item">Sept 25 — Lore Q&A Livestream</div>
+      <div class="event-item">Oct 10 — Online Art Jam</div>
+      <div class="event-item">Past Event: Fan Theory Contest Winners</div>
+    </div>
+  </section>
+
+  <!-- Showcase & Highlights -->
+  <section class="community-showcase">
+    <h3>Community Showcase</h3>
+    <div class="fan-art-carousel">
+      <img src="images/fanart1.jpg" alt="Fan Art 1">
+      <img src="images/fanart2.jpg" alt="Fan Art 2">
+      <img src="images/fanart3.jpg" alt="Fan Art 3">
+    </div>
+  </section>
+  
+  <!-- Interaction Area -->
+  <section class="community-interaction">
+
+    <!-- Forum Preview -->
+    <div class="forum-preview">
+      <h3>Discussion Board</h3>
+      <div class="forum-thread">What do you think about the new lore drop?</div>
+      <div class="forum-thread">Share your favorite character theories!</div>
+      <div class="forum-thread">Fan art challenge: September edition</div>
+      <a href="#">View All Discussions →</a>
+    </div>
+
+    <!-- Fan Submission Form -->
+    <div class="submission-form">
+      <h3>Share Your Contribution</h3>
+      <input type="text" placeholder="Your Name">
+      <textarea rows="4" placeholder="Your Story, Theory, or Idea..."></textarea>
+      <button type="submit">Submit</button>
+    </div>
+
+  </section>
+
+  <!-- Guidelines -->
+  <section class="community-guidelines">
+    <h3>Community Guidelines</h3>
+    <div class="guideline">Be respectful of others.</div>
+    <div class="guideline">Keep spoilers tagged.</div>
+    <div class="guideline">No spam or self-promo outside designated areas.</div>
+  </section>
+
+</div>
+
+
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Initialize scroll animations
+</script>
+
+<!-- JS Modules -->
+<script src="../assets/js/header.js"></script>
+<script src="../assets/js/community.js"></script>
+
+</body>
+</html>
