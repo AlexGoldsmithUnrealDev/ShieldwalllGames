@@ -434,7 +434,7 @@ h2:hover, h3:hover {
 /* Hero section at the top of the page */
 .hero-wishlist {
   position: relative;
-  height: 80vh;           /* adjust height as needed */
+  height: 110vh;           /* adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,6 +483,82 @@ h2:hover, h3:hover {
   margin: 0 auto;
 }
 
+.sub-hero {
+  background: #111; /* dark backdrop to contrast carousel */
+  color: #f5f5f5;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.sub-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sub-hero h2 {
+  font-family: 'Cinzel', serif;
+  color: crimson;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sub-hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.75rem;
+  color: crimson;
+  font-family: 'Cinzel', serif;
+}
+
+.sub-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.split-hero {
+  background: #111; /* backdrop color */
+  color: #f5f5f5;
+  padding: 6rem 2rem;
+}
+
+.split-hero-inner {
+  display: flex;
+  flex-wrap: wrap; /* responsive */
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.split-text {
+  flex: 1 1 500px;
+}
+
+.split-text h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.split-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.split-image {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.split-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
 
 /* FULL-WIDTH WISHLIST CONTAINER */
 .full-width-wishlist {
@@ -915,6 +991,71 @@ h2:hover, h3:hover {
   padding: 10px;
   border-left: 4px solid crimson;
   background: #1a1a1a;
+}
+
+/* ========== ASHBORN SERIES PAGE (GAMES) ========== */
+
+/* Games Page Hero */
+.games-page .games-hero {
+  text-align: center;
+  padding: 80px 20px 50px;
+  background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+  color: #fff;
+}
+
+.games-page .games-hero h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.games-page .games-hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Games Grid */
+.games-page .games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+/* Game Card */
+.games-page .game-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 400px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.games-page .game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+/* Overlay with Title */
+.games-page .game-card .overlay {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+  text-align: center;
+}
+
+.games-page .game-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0;
 }
 
 /* ========== FOOTER ========== */
