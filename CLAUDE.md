@@ -81,6 +81,16 @@ Every design decision should honour this principle:
 
 ---
 
+## Deployment
+
+- **Platform**: GitHub Pages
+- **Trigger**: Auto-deploys on push to `main` branch via `.github/workflows/deploy.yml`
+- **Source**: Repository root — no build step
+- **Live URL**: TBC — update when domain is confirmed
+- **Custom domain**: Not yet configured — see GitHub Pages settings when ready
+
+---
+
 ## Current Status
 
 - [x] Project scaffolded
@@ -91,6 +101,10 @@ Every design decision should honour this principle:
 - [x] Footer component
 - [x] Favicon (SVG — PNG fallback needed before launch)
 - [x] Meta tags and OG tags (URLs and OG image needed before launch)
+- [x] .gitignore
+- [x] GitHub Actions deployment workflow
+- [x] Custom 404 page
+- [x] README.md
 - [ ] Real fonts (client to supply)
 - [ ] Real imagery / artwork
 - [ ] Email form backend
@@ -98,7 +112,8 @@ Every design decision should honour this principle:
 - [ ] OG images created (1200×630px per page)
 - [ ] PNG favicon generated from SVG
 - [ ] Domain confirmed and URLs updated
-- [ ] Deployment
+- [ ] Custom domain configured
+- [ ] Site live and tested on GitHub Pages
 
 ---
 
