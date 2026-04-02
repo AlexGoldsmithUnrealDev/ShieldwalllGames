@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shieldwall Games — a historical games company building deep, grounded experiences rooted in the stories of the ancient world.">
+    <meta name="description" content="Shieldwall Games is an independent games studio creating historically grounded tabletop wargames. Our debut title, Ashborn: Halls of Saga, is in development now.">
     <meta name="author" content="Shieldwall Games">
+    <meta name="theme-color" content="#1a1714">
 
-    <!-- Open Graph (stubbed — populate when live) -->
-    <meta property="og:title" content="Shieldwall Games — We Make Games Worth Fighting For">
-    <meta property="og:description" content="A historical games company building deep, grounded experiences rooted in the stories of the ancient world.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shieldwall Games">
+    <meta property="og:description" content="Shieldwall Games is an independent games studio creating historically grounded tabletop wargames. Our debut title, Ashborn: Halls of Saga, is in development now.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
+    <!-- TODO: update with live URL -->
+    <meta property="og:url" content="https://shieldwallgames.com">
+    <!-- TODO: add OG image 1200x630px before launch -->
     <meta property="og:image" content="">
 
-    <!-- Favicon (stubbed — replace with real favicon) -->
-    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shieldwall Games">
+    <meta name="twitter:description" content="Shieldwall Games is an independent games studio creating historically grounded tabletop wargames. Our debut title, Ashborn: Halls of Saga, is in development now.">
 
-    <title>Shieldwall Games — We Make Games Worth Fighting For</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <!-- TODO: generate a .png fallback from the SVG before launch -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
+    <title>Shieldwall Games — Historical Games Worth Fighting For</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -88,7 +98,7 @@
                 </p>
 
                 <article class="card game-card reveal">
-                    <div class="card-image placeholder-image placeholder-image--16x9" aria-label="Ashborn: Halls of Saga artwork — image coming soon">
+                    <div class="card-image placeholder-image placeholder-image--16x9" role="img" aria-label="Ashborn: Halls of Saga artwork — image coming soon">
                         Image Coming Soon
                     </div>
                     <div class="card-body">
@@ -101,7 +111,7 @@
                             research, tactical depth, and the belief that the Viking Age deserves better
                             than myth alone.
                         </p>
-                        <a href="#" class="card-link">Discover Ashborn &rarr;</a>
+                        <a href="ashborn.html" class="card-link">Discover Ashborn &rarr;</a>
                     </div>
                 </article>
 
@@ -136,7 +146,7 @@
                         <a href="pages/about.html" class="btn btn-secondary">Our Story</a>
                     </div>
                     <div class="about-grid__image-wrapper reveal">
-                        <div class="placeholder-image placeholder-image--4x5" aria-label="Shieldwall Games studio image — image coming soon">
+                        <div class="placeholder-image placeholder-image--4x5" role="img" aria-label="Shieldwall Games studio image — image coming soon">
                             Image Coming Soon
                         </div>
                     </div>
@@ -195,22 +205,24 @@
                 <!-- Column 3: Social -->
                 <div class="footer-social-col">
                     <p class="footer-social__heading">Follow Us</p>
-                    <!-- Social icon links — replace with real SVG icons and URLs later -->
                     <div class="footer-social">
-                        <a href="#" class="footer-social__link" aria-label="Twitter / X">
+                        <!-- TODO: confirm handle -->
+                        <a href="https://x.com/shieldwallgames" class="footer-social__link" aria-label="Shieldwall Games on Twitter / X" target="_blank" rel="noopener noreferrer">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M4 4l11.733 16H20L8.267 4z"/>
                                 <path d="M4 20l6.768-6.768M20 4l-6.768 6.768"/>
                             </svg>
                         </a>
-                        <a href="#" class="footer-social__link" aria-label="Instagram">
+                        <!-- TODO: confirm handle -->
+                        <a href="https://instagram.com/shieldwallgames" class="footer-social__link" aria-label="Shieldwall Games on Instagram" target="_blank" rel="noopener noreferrer">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <rect x="2" y="2" width="20" height="20" rx="5"/>
                                 <circle cx="12" cy="12" r="5"/>
                                 <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
                             </svg>
                         </a>
-                        <a href="#" class="footer-social__link" aria-label="Facebook">
+                        <!-- TODO: confirm handle -->
+                        <a href="https://facebook.com/shieldwallgames" class="footer-social__link" aria-label="Shieldwall Games on Facebook" target="_blank" rel="noopener noreferrer">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
@@ -227,6 +239,6 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

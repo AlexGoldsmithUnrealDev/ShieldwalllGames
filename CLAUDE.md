@@ -83,12 +83,22 @@ Every design decision should honour this principle:
 
 ## Current Status
 
-- [ ] Project scaffolded
-- [ ] Global design system (CSS variables, typography, reset) — IN PROGRESS
-- [ ] Shieldwall Games homepage
-- [ ] Ashborn: Halls of Saga landing page
-- [ ] Navigation component
-- [ ] Footer component
+- [x] Project scaffolded
+- [x] Global design system (CSS variables, typography, reset)
+- [x] Shieldwall Games homepage
+- [x] Ashborn: Halls of Saga landing page
+- [x] Navigation component
+- [x] Footer component
+- [x] Favicon (SVG — PNG fallback needed before launch)
+- [x] Meta tags and OG tags (URLs and OG image needed before launch)
+- [ ] Real fonts (client to supply)
+- [ ] Real imagery / artwork
+- [ ] Email form backend
+- [ ] Social media handles confirmed
+- [ ] OG images created (1200×630px per page)
+- [ ] PNG favicon generated from SVG
+- [ ] Domain confirmed and URLs updated
+- [ ] Deployment
 
 ---
 

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Shieldwall Games favicon — minimal shield in aged gold on near-black -->
+  <rect width="32" height="32" fill="#1a1714"/>
+  <path d="M16 3C12 3 7 5 7 5s-1 9 0 14c.8 4 4.5 7 9 10 4.5-3 8.2-6 9-10 1-5 0-14 0-14S20 3 16 3z" fill="none" stroke="#b8960c" stroke-width="1.5"/>
+  <line x1="16" y1="5" x2="16" y2="27" stroke="#b8960c" stroke-width="1"/>
+  <line x1="7.5" y1="12" x2="24.5" y2="12" stroke="#b8960c" stroke-width="1"/>
+</svg>

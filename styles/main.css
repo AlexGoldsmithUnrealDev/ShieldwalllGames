@@ -25,6 +25,14 @@
     --color-iron-grey:       #6b6b6b;  /* Secondary text, borders */
     --color-deep-red:        #8b2500;  /* Accent — CTAs, highlights */
     --color-deep-red-dark:   #6e1d00;  /* Deep red hover state */
+    /*
+     * CONTRAST NOTE: --color-aged-gold (#b8960c) on --color-parchment (#f4edd3)
+     * yields ~2.85:1 contrast ratio — fails WCAG AA for normal text (needs 4.5:1)
+     * and narrowly fails for large text (needs 3:1). This colour is currently used
+     * for .section-label and .hero__eyebrow on light backgrounds. Consider darkening
+     * to ~#8a7209 (~4.5:1) if used for body-sized text on parchment. On dark
+     * backgrounds (near-black), the ratio is ~4.95:1 which passes AA.
+     */
     --color-aged-gold:       #b8960c;  /* Secondary accent — headings, ornamental */
     --color-aged-gold-light: #d4af37;  /* Gold hover state */
     --color-near-black:      #1a1714;  /* Footer, dark sections */
