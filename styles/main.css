@@ -1,112 +1,745 @@
 /* ==========================================================================
-   Main CSS — Global styles, variables, typography, and resets
+   Main CSS — Global design system, reset, typography, and layout
+   Shieldwall Games Web Project
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   CSS Custom Properties — Design tokens for the entire project
+   Google Fonts Import
+   - Display/Heading: "Cinzel" — Roman-inscriptional capitals with a carved,
+     monumental feel. Perfect for a historical brand.
+   - Body: "Crimson Text" — an old-style serif inspired by Renaissance type.
+     Highly readable with genuine character.
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties — Full design token system
    -------------------------------------------------------------------------- */
 :root {
-    /* Colours */
-    --color-parchment: #f4edd3;
-    --color-parchment-dark: #e8dfc4;
-    --color-charcoal: #2c2c2c;
-    --color-iron-grey: #5a5a5a;
-    --color-deep-red: #8b2500;
-    --color-aged-gold: #b8960c;
-    --color-dark-leather: #3e2c1c;
-    --color-stone: #a09484;
-    --color-ink: #1a1a1a;
+    /* --- Colour palette --- */
+    --color-parchment:       #f4edd3;
+    --color-parchment-light: #faf6e9;
+    --color-parchment-dark:  #e8dfc4;
+    --color-charcoal:        #2c2c2c;
+    --color-charcoal-light:  #3d3d3d;
+    --color-iron-grey:       #5a5a5a;
+    --color-iron-grey-light: #7a7a7a;
+    --color-deep-red:        #8b2500;
+    --color-deep-red-dark:   #6e1d00;
+    --color-aged-gold:       #b8960c;
+    --color-aged-gold-light: #d4af37;
+    --color-dark-leather:    #3e2c1c;
+    --color-stone:           #a09484;
+    --color-stone-light:     #c4b8a8;
+    --color-ink:             #1a1a1a;
+    --color-white:           #fefefe;
 
-    /* Typography */
-    --font-body: Georgia, 'Times New Roman', serif;
-    --font-heading: Georgia, 'Times New Roman', serif;
+    /* --- Typography — Modular scale (1.25 ratio, base 1rem = 16px) --- */
+    --font-display: 'Cinzel', Georgia, 'Times New Roman', serif;
+    --font-body:    'Crimson Text', Georgia, 'Times New Roman', serif;
 
-    /* Spacing scale */
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
+    --text-xs:   0.64rem;   /* 10.24px */
+    --text-sm:   0.8rem;    /* 12.8px  */
+    --text-base: 1rem;      /* 16px    */
+    --text-md:   1.25rem;   /* 20px    */
+    --text-lg:   1.563rem;  /* 25px    */
+    --text-xl:   1.953rem;  /* 31.25px */
+    --text-2xl:  2.441rem;  /* 39.06px */
+    --text-3xl:  3.052rem;  /* 48.83px */
+    --text-4xl:  3.815rem;  /* 61.04px */
 
-    /* Layout */
-    --max-width: 60rem;
+    --leading-tight:  1.2;
+    --leading-normal: 1.6;
+    --leading-loose:  1.8;
+
+    /* --- Spacing scale --- */
+    --space-3xs: 0.125rem;  /* 2px  */
+    --space-2xs: 0.25rem;   /* 4px  */
+    --space-xs:  0.5rem;    /* 8px  */
+    --space-sm:  0.75rem;   /* 12px */
+    --space-md:  1rem;      /* 16px */
+    --space-lg:  1.5rem;    /* 24px */
+    --space-xl:  2rem;      /* 32px */
+    --space-2xl: 3rem;      /* 48px */
+    --space-3xl: 4rem;      /* 64px */
+    --space-4xl: 6rem;      /* 96px */
+
+    /* --- Border radius — minimal for a historical brand --- */
+    --radius-sm:   2px;
+    --radius-md:   4px;
+    --radius-lg:   6px;
+
+    /* --- Transitions --- */
+    --speed-fast:   120ms;
+    --speed-normal: 250ms;
+    --speed-slow:   400ms;
+    --ease-default: ease;
+
+    /* --- Layout --- */
+    --max-width:    64rem;    /* 1024px */
+    --max-width-sm: 40rem;    /* 640px  */
+    --max-width-lg: 80rem;    /* 1280px */
 }
 
 /* --------------------------------------------------------------------------
-   Reset — Minimal, modern CSS reset
+   Modern CSS Reset
+   Based on Andy Bell's modern reset — clean, minimal, respectful of defaults
    -------------------------------------------------------------------------- */
+
+/* Use border-box everywhere */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
     margin: 0;
     padding: 0;
 }
 
+/* Prevent font-size inflation on mobile */
 html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
     font-size: 100%;
-    -webkit-text-size-adjust: 100%;
 }
 
+/* Smooth scrolling for anchors, respecting user preferences */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Set core body defaults */
 body {
     font-family: var(--font-body);
+    font-size: var(--text-base);
     color: var(--color-charcoal);
     background-color: var(--color-parchment);
-    line-height: 1.6;
+    line-height: var(--leading-normal);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Remove list styles on ul, ol elements with a list role */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Sensible defaults for images and media */
 img,
-svg {
+picture,
+svg,
+video {
     display: block;
     max-width: 100%;
 }
 
-/* --------------------------------------------------------------------------
-   Typography — Base heading and paragraph styles
-   -------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--color-ink);
-    line-height: 1.2;
-    margin-bottom: var(--space-sm);
+/* Inherit fonts for form elements */
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+/* Remove all animations and transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 
+/* Prevent textarea from being resized horizontally */
+textarea {
+    resize: vertical;
+}
+
+/* Anchor elements without a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Remove default table spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Base Typography
+   -------------------------------------------------------------------------- */
+
+/* Headings — display font, tight leading */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    line-height: var(--leading-tight);
+    text-wrap: balance;
+    margin-bottom: var(--space-xs);
+}
+
+h1 { font-size: var(--text-4xl); font-weight: 700; }
+h2 { font-size: var(--text-2xl); font-weight: 700; }
+h3 { font-size: var(--text-xl);  font-weight: 600; }
+h4 { font-size: var(--text-lg);  font-weight: 600; }
+h5 { font-size: var(--text-md);  font-weight: 600; }
+h6 { font-size: var(--text-base); font-weight: 600; }
+
+/* Paragraphs */
 p {
     margin-bottom: var(--space-md);
+    max-width: 65ch;
 }
 
+/* Links */
 a {
     color: var(--color-deep-red);
     text-decoration: underline;
-    transition: color 0.2s ease;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color var(--speed-normal) var(--ease-default);
 }
 
 a:hover,
-a:focus {
+a:focus-visible {
+    color: var(--color-aged-gold);
+}
+
+/* Lists */
+ul,
+ol {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+
+li {
+    margin-bottom: var(--space-2xs);
+}
+
+li::marker {
+    color: var(--color-deep-red);
+}
+
+/* Blockquote — styled like an aged manuscript pull-quote */
+blockquote {
+    border-left: 3px solid var(--color-aged-gold);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-xl) 0;
+    background-color: var(--color-parchment-dark);
+    font-style: italic;
+    font-size: var(--text-md);
+    color: var(--color-charcoal-light);
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Horizontal rule — decorative separator */
+hr {
+    border: none;
+    border-top: 1px solid var(--color-stone-light);
+    margin: var(--space-2xl) 0;
+}
+
+/* Strong and emphasis */
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Utility — .container
+   Centred, max-width wrapper for page content
+   -------------------------------------------------------------------------- */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Utility — .visually-hidden
+   Hides content visually but keeps it accessible to screen readers
+   -------------------------------------------------------------------------- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Site Header
+   -------------------------------------------------------------------------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--color-dark-leather);
+    padding: var(--space-md) 0;
+    transition: background-color var(--speed-normal) var(--ease-default),
+                box-shadow var(--speed-normal) var(--ease-default);
+}
+
+/* Header gains a shadow and deeper colour when scrolled */
+.site-header.scrolled {
+    background-color: var(--color-ink);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   Logo
+   -------------------------------------------------------------------------- */
+.site-logo {
+    font-family: var(--font-display);
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--color-parchment);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color var(--speed-normal) var(--ease-default);
+}
+
+.site-logo:hover,
+.site-logo:focus-visible {
     color: var(--color-aged-gold);
 }
 
 /* --------------------------------------------------------------------------
-   Layout — Page-level structure
+   Navigation
    -------------------------------------------------------------------------- */
-header {
-    padding: var(--space-md) var(--space-lg);
+
+/* Mobile-first: navigation is a vertical overlay */
+.site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(75vw, 20rem);
+    background-color: var(--color-dark-leather);
+    padding: var(--space-3xl) var(--space-xl);
+    transform: translateX(100%);
+    transition: transform var(--speed-slow) var(--ease-default);
+    z-index: 200;
 }
 
-main {
-    max-width: var(--max-width);
+/* When nav is open */
+.site-nav.is-open {
+    transform: translateX(0);
+}
+
+.site-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.site-nav__link {
+    font-family: var(--font-display);
+    font-size: var(--text-md);
+    color: var(--color-parchment);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color var(--speed-normal) var(--ease-default);
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+    color: var(--color-aged-gold);
+}
+
+/* Overlay behind the nav when open */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 150;
+}
+
+.nav-overlay.is-visible {
+    display: block;
+}
+
+/* Hamburger button */
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    z-index: 300;
+}
+
+.nav-toggle__bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-parchment);
+    transition: transform var(--speed-normal) var(--ease-default),
+                opacity var(--speed-normal) var(--ease-default);
+}
+
+/* Hamburger to X transformation when open */
+.nav-toggle.is-active .nav-toggle__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-active .nav-toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-active .nav-toggle__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   Navigation — Desktop (768px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 48rem) {
+    .site-nav {
+        position: static;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        transform: none;
+        transition: none;
+    }
+
+    .site-nav__list {
+        flex-direction: row;
+        gap: var(--space-xl);
+    }
+
+    .site-nav__link {
+        font-size: var(--text-sm);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-overlay {
+        display: none !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero {
+    padding: var(--space-4xl) 0 var(--space-3xl);
+    text-align: center;
+    background-color: var(--color-dark-leather);
+    color: var(--color-parchment);
+    /* Offset for fixed header */
+    margin-top: 0;
+}
+
+.hero__title {
+    font-size: var(--text-3xl);
+    color: var(--color-parchment);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.04em;
+}
+
+.hero__subtitle {
+    font-size: var(--text-md);
+    color: var(--color-stone-light);
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-xl);
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-xl);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color var(--speed-normal) var(--ease-default),
+                color var(--speed-normal) var(--ease-default),
+                border-color var(--speed-normal) var(--ease-default);
+}
+
+/* Primary button — aged gold on dark */
+.btn--primary {
+    background-color: var(--color-aged-gold);
+    color: var(--color-ink);
+    border-color: var(--color-aged-gold);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+    background-color: var(--color-aged-gold-light);
+    border-color: var(--color-aged-gold-light);
+    color: var(--color-ink);
+}
+
+/* Secondary button — outlined */
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-parchment);
+    border-color: var(--color-parchment);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+    background-color: var(--color-parchment);
+    color: var(--color-dark-leather);
+}
+
+/* --------------------------------------------------------------------------
+   Section — shared styles for main content sections
+   -------------------------------------------------------------------------- */
+.section {
+    padding: var(--space-3xl) 0;
+}
+
+.section__title {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.section__subtitle {
+    text-align: center;
+    color: var(--color-iron-grey);
+    font-size: var(--text-md);
+    font-style: italic;
+    max-width: 55ch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-2xl);
+}
+
+/* --------------------------------------------------------------------------
+   Game Card
+   -------------------------------------------------------------------------- */
+.game-card {
+    background-color: var(--color-parchment-dark);
+    border: 1px solid var(--color-stone-light);
+    max-width: 36rem;
     margin: 0 auto;
+    overflow: hidden;
+    transition: box-shadow var(--speed-normal) var(--ease-default);
+}
+
+.game-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Placeholder for the game image */
+.game-card__image {
+    width: 100%;
+    height: 14rem;
+    background-color: var(--color-stone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-parchment);
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.game-card__body {
     padding: var(--space-lg);
 }
 
-footer {
-    padding: var(--space-md) var(--space-lg);
-    text-align: center;
+.game-card__title {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.game-card__text {
     color: var(--color-iron-grey);
-    font-size: 0.875rem;
+    margin-bottom: var(--space-lg);
+}
+
+.game-card__link {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* --------------------------------------------------------------------------
+   About Section — Two-column layout
+   -------------------------------------------------------------------------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+@media (min-width: 48rem) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-grid__text p {
+    color: var(--color-iron-grey);
+    font-size: var(--text-md);
+    line-height: var(--leading-loose);
+}
+
+/* Placeholder for the about image */
+.about-grid__image {
+    width: 100%;
+    height: 18rem;
+    background-color: var(--color-stone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-parchment);
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Site Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+    background-color: var(--color-dark-leather);
+    color: var(--color-stone-light);
+    padding: var(--space-2xl) 0;
+    font-size: var(--text-sm);
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    text-align: center;
+}
+
+@media (min-width: 48rem) {
+    .site-footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* Footer navigation */
+.footer-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.footer-nav__link {
+    color: var(--color-stone-light);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color var(--speed-normal) var(--ease-default);
+}
+
+.footer-nav__link:hover,
+.footer-nav__link:focus-visible {
+    color: var(--color-aged-gold);
+}
+
+/* Footer social icons */
+.footer-social {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.footer-social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-stone-light);
+    text-decoration: none;
+    border: 1px solid var(--color-stone);
+    border-radius: var(--radius-sm);
+    transition: color var(--speed-normal) var(--ease-default),
+                border-color var(--speed-normal) var(--ease-default);
+}
+
+.footer-social__link:hover,
+.footer-social__link:focus-visible {
+    color: var(--color-aged-gold);
+    border-color: var(--color-aged-gold);
+}
+
+/* Copyright */
+.footer-copyright {
+    color: var(--color-iron-grey);
+    font-size: var(--text-xs);
+}
+
+/* --------------------------------------------------------------------------
+   Spacer utility — offsets content below the fixed header
+   -------------------------------------------------------------------------- */
+.header-spacer {
+    height: 3.5rem;
 }

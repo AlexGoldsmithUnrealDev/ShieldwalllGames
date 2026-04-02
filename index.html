@@ -3,23 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shieldwall Games</title>
+    <meta name="description" content="Shieldwall Games — a historical games company crafting deep, grounded experiences inspired by the ancient world.">
+    <meta name="author" content="Shieldwall Games">
+
+    <!-- Open Graph (stubbed) -->
+    <meta property="og:title" content="Shieldwall Games — History. Strategy. Legend.">
+    <meta property="og:description" content="A historical games company crafting deep, grounded experiences inspired by the ancient world.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Favicon (stubbed) -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+    <title>Shieldwall Games — History. Strategy. Legend.</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Shieldwall Games</a>
-        </nav>
+
+    <!-- ============================================================
+         Site Header — Fixed, with logo and navigation
+         ============================================================ -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="site-logo">Shieldwall Games</a>
+
+            <!-- Mobile nav toggle (hamburger) -->
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <ul class="site-nav__list" role="list">
+                    <li><a href="index.html" class="site-nav__link">Home</a></li>
+                    <li><a href="pages/games.html" class="site-nav__link">Games</a></li>
+                    <li><a href="pages/about.html" class="site-nav__link">About</a></li>
+                    <li><a href="pages/contact.html" class="site-nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Spacer to offset content below the fixed header -->
+    <div class="header-spacer" aria-hidden="true"></div>
+
+    <!-- Overlay for mobile nav -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+
     <main>
-        <h1>Shieldwall Games</h1>
-        <p>A historical games company.</p>
+
+        <!-- ============================================================
+             Hero Section
+             ============================================================ -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Forging Games from History</h1>
+                <p class="hero__subtitle">
+                    We build strategy games rooted in real history — where every decision carries the weight of ages and every battle tells a story worth remembering.
+                </p>
+                <a href="pages/games.html" class="btn btn--primary">Explore Our Games</a>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             Our Games Section
+             ============================================================ -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">Our Games</h2>
+                <p class="section__subtitle">
+                    Titles forged in the fires of research, shaped by a love of the past.
+                </p>
+
+                <article class="game-card">
+                    <div class="game-card__image" aria-label="Ashborn: Halls of Saga artwork placeholder">
+                        Game Artwork
+                    </div>
+                    <div class="game-card__body">
+                        <h3 class="game-card__title">Ashborn: Halls of Saga</h3>
+                        <p class="game-card__text">
+                            Step into the Viking Age. Lead your warband through the frozen fjords and burning halls of a world shaped by iron, oath, and saga. Every choice you make will echo through the generations.
+                        </p>
+                        <a href="pages/games.html" class="game-card__link">Learn More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             About Shieldwall Section — Two-column layout
+             ============================================================ -->
+        <section class="section" style="background-color: var(--color-parchment-dark);">
+            <div class="container">
+                <h2 class="section__title">About Shieldwall Games</h2>
+                <p class="section__subtitle">
+                    A studio built on a single belief: history is the greatest story ever told.
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-grid__text">
+                        <p>
+                            Shieldwall Games was founded by people who spent their childhoods reading sagas, studying battlefields, and wondering what it truly felt like to stand in a shield wall.
+                        </p>
+                        <p>
+                            We believe the best games don't invent worlds — they reveal them. Our mission is to craft experiences that honour the complexity, brutality, and beauty of real history, brought to life with modern design and deep, rewarding gameplay.
+                        </p>
+                    </div>
+                    <div class="about-grid__image" aria-label="About Shieldwall Games image placeholder">
+                        Studio Image
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Shieldwall Games</p>
+    <!-- ============================================================
+         Site Footer
+         ============================================================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-copyright">&copy; 2026 Shieldwall Games. All rights reserved.</p>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul class="footer-nav__list" role="list">
+                    <li><a href="index.html" class="footer-nav__link">Home</a></li>
+                    <li><a href="pages/games.html" class="footer-nav__link">Games</a></li>
+                    <li><a href="pages/about.html" class="footer-nav__link">About</a></li>
+                    <li><a href="pages/contact.html" class="footer-nav__link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social icons — placeholder SVGs -->
+            <div class="footer-social">
+                <a href="#" class="footer-social__link" aria-label="Twitter / X">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 4l11.733 16H20L8.267 4z"/>
+                        <path d="M4 20l6.768-6.768M20 4l-6.768 6.768"/>
+                    </svg>
+                </a>
+                <a href="#" class="footer-social__link" aria-label="YouTube">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="4"/>
+                        <polygon points="10,8 16,12 10,16"/>
+                    </svg>
+                </a>
+                <a href="#" class="footer-social__link" aria-label="Discord">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                        <path d="M14.5 14.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                        <path d="M8 20s-3-2-4-5c0 0-1-4 0-8 0 0 2-3 6-4l1 2"/>
+                        <path d="M16 20s3-2 4-5c0 0 1-4 0-8 0 0-2-3-6-4l-1 2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="scripts/main.js"></script>
