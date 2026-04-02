@@ -1,0 +1,500 @@
+/* ==========================================================================
+   Ashborn: Halls of Saga — Page-specific overrides and additions
+   This file extends the shared design system in main.css.
+   It does NOT duplicate any base styles — only overrides and new components.
+   ========================================================================== */
+
+/* ==========================================================================
+   Theme Overrides — Dark, atmospheric palette for the Ashborn page
+   Scoped to body.ashborn so these only apply on this page
+   ========================================================================== */
+body.ashborn {
+    background-color: var(--color-near-black);
+    color: var(--color-parchment);
+}
+
+/* Headings shift to parchment on dark backgrounds */
+body.ashborn h1,
+body.ashborn h2,
+body.ashborn h3,
+body.ashborn h4,
+body.ashborn h5,
+body.ashborn h6 {
+    color: var(--color-parchment);
+}
+
+/* Paragraphs use stone-light for readability on dark */
+body.ashborn p {
+    color: var(--color-stone-light);
+}
+
+/* Links use aged gold as primary colour on dark backgrounds */
+body.ashborn a {
+    color: var(--color-aged-gold);
+}
+
+body.ashborn a:hover,
+body.ashborn a:focus-visible {
+    color: var(--color-aged-gold-light);
+}
+
+/* Increased letter-spacing on h1 and h2 for monumental feel */
+body.ashborn h1 {
+    letter-spacing: 0.06em;
+}
+
+body.ashborn h2 {
+    letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Warm Grain Texture Overlay
+   Applied to the entire page via body::before for aged vellum in firelight
+   ========================================================================== */
+body.ashborn::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure all content sits above the grain overlay */
+body.ashborn > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   Top Bar — Thin bar above the hero with back-link to Shieldwall Games
+   Not sticky — scrolls away with content
+   ========================================================================== */
+.top-bar {
+    background-color: var(--color-near-black);
+    border-bottom: 1px solid var(--color-aged-gold);
+    padding: var(--space-1) 0;
+}
+
+.top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    color: var(--color-stone-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color var(--transition-base);
+}
+
+.top-bar__link:hover,
+.top-bar__link:focus-visible {
+    color: var(--color-aged-gold);
+}
+
+/* ==========================================================================
+   Ashborn Hero — Darker, more atmospheric than the Shieldwall hero
+   Firelight radial gradient from below-centre
+   ========================================================================== */
+.hero--ashborn {
+    background-color: var(--color-near-black);
+}
+
+/* Override the gradient to suggest firelight from below */
+.hero--ashborn::after {
+    background: radial-gradient(
+        ellipse at 50% 85%,
+        rgba(139, 37, 0, 0.15) 0%,
+        rgba(46, 33, 24, 0.3) 40%,
+        rgba(26, 23, 20, 0.7) 100%
+    );
+}
+
+/* Product subtitle — not italic, more structured */
+.hero__product-subtitle {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-stone-light);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: var(--space-3);
+}
+
+/* Atmospheric tagline — italic, body font */
+.hero__tagline {
+    font-family: var(--font-body);
+    font-size: var(--text-xl);
+    color: var(--color-stone-light);
+    font-style: italic;
+    max-width: 45ch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-5);
+    line-height: var(--leading-loose);
+}
+
+/* Divider at the bottom of hero */
+.hero--ashborn .divider-ornamental {
+    margin-top: var(--space-6);
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Ashborn Section Backgrounds
+   Sections alternate between near-black and dark-leather
+   ========================================================================== */
+.section--leather {
+    background-color: var(--color-dark-leather);
+}
+
+/* ==========================================================================
+   Two-Column Content Grid (reused across multiple Ashborn sections)
+   ========================================================================== */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    align-items: start;
+}
+
+@media (min-width: 48rem) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.content-grid__text .section-label {
+    color: var(--color-aged-gold);
+}
+
+.content-grid__text h2 {
+    text-align: left;
+    margin-bottom: var(--space-3);
+}
+
+.content-grid__text p {
+    font-size: var(--text-lg);
+    line-height: var(--leading-loose);
+}
+
+/* ==========================================================================
+   Manuscript Panel — Framed image placeholder for Ashborn
+   Border, inner shadow, aged effect via CSS
+   ========================================================================== */
+.manuscript-panel {
+    position: relative;
+    border: 2px solid var(--color-aged-gold);
+    box-shadow: inset 0 0 20px rgba(26, 23, 20, 0.5);
+}
+
+.manuscript-panel .placeholder-image {
+    background-color: var(--color-dark-leather);
+    color: var(--color-stone);
+}
+
+/* 3:4 aspect ratio for portrait panels */
+.placeholder-image--3x4 {
+    aspect-ratio: 3 / 4;
+}
+
+/* 16:5 cinematic/panoramic aspect ratio */
+.placeholder-image--16x5 {
+    aspect-ratio: 16 / 5;
+}
+
+/* ==========================================================================
+   Feature Tiles — 2x2 grid on desktop, 1 column on mobile
+   No card background — tiles sit on the section background
+   Aged gold top border as the only decoration per tile
+   ========================================================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+}
+
+@media (min-width: 48rem) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.feature-tile {
+    border-top: 2px solid var(--color-aged-gold);
+    padding-top: var(--space-3);
+}
+
+/* Feature icon — aged gold, sized consistently */
+.feature-tile__icon {
+    color: var(--color-aged-gold);
+    margin-bottom: var(--space-2);
+}
+
+.feature-tile__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.feature-tile__text {
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+}
+
+/* ==========================================================================
+   The World Section — Wide panoramic image with two-column text below
+   ========================================================================== */
+.world-image {
+    margin-bottom: var(--space-5);
+    border: 1px solid var(--color-stone);
+}
+
+.world-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+    .world-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.world-columns p {
+    font-size: var(--text-lg);
+    line-height: var(--leading-loose);
+}
+
+/* ==========================================================================
+   Development Timeline — Historical, carved-in-stone feel
+   4 stages connected by a horizontal line on desktop, vertical on mobile
+   ========================================================================== */
+.dev-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 50rem;
+    margin: var(--space-5) auto 0;
+    position: relative;
+}
+
+/* Vertical connecting line on mobile */
+.dev-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 14px;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--color-stone);
+}
+
+/* Individual timeline stage */
+.timeline-stage {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    position: relative;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* When animated in via JS */
+.timeline-stage.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stage marker — the dot/circle */
+.timeline-stage__marker {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--color-stone);
+    background-color: var(--color-near-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Completed stage — filled with aged gold */
+.timeline-stage--complete .timeline-stage__marker {
+    border-color: var(--color-aged-gold);
+    background-color: var(--color-aged-gold);
+}
+
+/* Active/in-progress stage — aged gold border with pulsing inner dot */
+.timeline-stage--active .timeline-stage__marker {
+    border-color: var(--color-aged-gold);
+}
+
+.timeline-stage--active .timeline-stage__marker::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-aged-gold);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Upcoming stage — iron grey, unfilled */
+.timeline-stage--upcoming .timeline-stage__marker {
+    border-color: var(--color-stone);
+}
+
+/* Stage content */
+.timeline-stage__content {
+    padding-top: 2px;
+}
+
+.timeline-stage__title {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-stone);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0;
+}
+
+/* Completed stage title colour */
+.timeline-stage--complete .timeline-stage__title {
+    color: var(--color-aged-gold);
+}
+
+/* Active stage title colour */
+.timeline-stage--active .timeline-stage__title {
+    color: var(--color-parchment);
+}
+
+/* Status label beneath the title */
+.timeline-stage__status {
+    font-size: var(--text-sm);
+    color: var(--color-stone);
+    font-style: italic;
+}
+
+.timeline-stage--active .timeline-stage__status {
+    color: var(--color-aged-gold);
+}
+
+/* Pulse glow animation for the active stage marker */
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(184, 150, 12, 0.4);
+    }
+    50% {
+        opacity: 0.7;
+        box-shadow: 0 0 8px 4px rgba(184, 150, 12, 0.2);
+    }
+}
+
+/* Desktop timeline — horizontal layout */
+@media (min-width: 48rem) {
+    .dev-timeline {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    /* Horizontal connecting line on desktop */
+    .dev-timeline::before {
+        top: 14px;
+        left: 14px;
+        right: 14px;
+        bottom: auto;
+        height: 1px;
+        width: auto;
+    }
+
+    .timeline-stage {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1;
+        gap: var(--space-2);
+    }
+}
+
+/* ==========================================================================
+   CTA Form — Email signup for Ashborn updates
+   Styled to match the historical design system
+   ========================================================================== */
+.cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: 28rem;
+    margin: 0 auto var(--space-3);
+}
+
+@media (min-width: 30rem) {
+    .cta-form {
+        flex-direction: row;
+    }
+}
+
+/* Email input — parchment bg, charcoal text, iron grey border */
+.cta-form__input {
+    flex: 1;
+    padding: 0.85em 1.2em;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-charcoal);
+    background-color: var(--color-parchment);
+    border: 1px solid var(--color-iron-grey);
+    transition: border-color var(--transition-base),
+                box-shadow var(--transition-base);
+}
+
+/* Gold focus ring on the input */
+.cta-form__input:focus {
+    outline: none;
+    border-color: var(--color-aged-gold);
+    box-shadow: 0 0 0 2px rgba(184, 150, 12, 0.3);
+}
+
+.cta-form__input::placeholder {
+    color: var(--color-stone);
+    font-style: italic;
+}
+
+/* Small disclaimer text beneath the form */
+.cta-disclaimer {
+    font-size: var(--text-sm);
+    color: var(--color-stone);
+    font-style: italic;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Section Title/Subtitle overrides for dark Ashborn sections
+   ========================================================================== */
+body.ashborn .section__title {
+    color: var(--color-parchment);
+}
+
+body.ashborn .section__subtitle {
+    color: var(--color-stone-light);
+}
+
+/* Section-label is already gold — no override needed */
