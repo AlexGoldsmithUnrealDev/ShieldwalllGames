@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Main CSS — Global styles, variables, typography, and resets
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties — Design tokens for the entire project
+   -------------------------------------------------------------------------- */
+:root {
+    /* Colours */
+    --color-parchment: #f4edd3;
+    --color-parchment-dark: #e8dfc4;
+    --color-charcoal: #2c2c2c;
+    --color-iron-grey: #5a5a5a;
+    --color-deep-red: #8b2500;
+    --color-aged-gold: #b8960c;
+    --color-dark-leather: #3e2c1c;
+    --color-stone: #a09484;
+    --color-ink: #1a1a1a;
+
+    /* Typography */
+    --font-body: Georgia, 'Times New Roman', serif;
+    --font-heading: Georgia, 'Times New Roman', serif;
+
+    /* Spacing scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+
+    /* Layout */
+    --max-width: 60rem;
+}
+
+/* --------------------------------------------------------------------------
+   Reset — Minimal, modern CSS reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-charcoal);
+    background-color: var(--color-parchment);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Typography — Base heading and paragraph styles
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-ink);
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+a {
+    color: var(--color-deep-red);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-aged-gold);
+}
+
+/* --------------------------------------------------------------------------
+   Layout — Page-level structure
+   -------------------------------------------------------------------------- */
+header {
+    padding: var(--space-md) var(--space-lg);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+footer {
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+    color: var(--color-iron-grey);
+    font-size: 0.875rem;
+}

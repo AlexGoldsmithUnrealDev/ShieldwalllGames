@@ -1,263 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Shieldwall</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    /* ✅ Scroll snap setup */
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .scroll-container {
-      height: 100vh;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-    }
-
-    .scroll-container>section {
-      height: 100vh;
-      scroll-snap-align: start;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    /* ✅ Story section alternating layout */
-    .story-section .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .story-section.alt .container {
-      flex-direction: row-reverse; /* flip layout on alternate sections */
-    }
-
-    .story-section .text {
-      flex: 1;
-    }
-
-    .story-section .image {
-      flex: 1;
-    }
-
-    .story-section .image img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Footer */
-    footer {
-      background-color: #111;
-      padding: 40px 20px;
-      color: #ccc;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    footer a {
-      color: #00bcd4;
-      margin: 0 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shieldwall Games</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="logo-section">
-      <h1 class="logo">
-        <a href="index.html" style="color: inherit; text-decoration: none;">🛡️ Shieldwall</a>
-      </h1>
-      <div class="social-icons">
-        <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://discord.gg/yourserver" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
-      </div>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="games.html">Games</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="scroll-container">
-
-    <div class="youtube-bg">
-      <iframe src="https://www.youtube.com/embed/oVU9LW4a2pQ?autoplay=1&mute=1&controls=0&loop=1&playlist=oVU9LW4a2pQ&modestbranding=1&showinfo=0"
-        frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Background video"></iframe>
-    </div>
-
-    <header class="hero">
-      <div class="hero-content">
-        <h2>Forging Legends, One Saga at a Time</h2>
-        <p class="mission">At Shieldwall, we craft Viking-inspired games that echo with the thunder of ancient battles and the spirit of the North.</p>
-        <button onclick="learnMore()">Explore Our Games</button>
-      </div>
-      <div class="scroll-down" onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+    <header>
+        <nav>
+            <a href="index.html">Shieldwall Games</a>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <h3>Who We Are</h3>
-        <p>Shieldwall is an independent game studio devoted to bringing Norse myth and Viking history to life through immersive gameplay and rich storytelling. Founded by passionate developers and historians, we believe in building games that inspire awe, strategy, and bravery.</p>
-      </div>
-    </section>
+    <main>
+        <h1>Shieldwall Games</h1>
+        <p>A historical games company.</p>
+    </main>
 
-    <!-- Story Sections with alternating layout -->
-    <section class="story-section" id="our-story">
-      <div class="container">
-        <div class="text">
-          <h2>Shieldwall Games Ltd – Our Story</h2>
-          <p>Shieldwall Games was not born in a boardroom. There were no investors, no publishers, no venture capital. There was no office, no staff, no formal training. Just four friends — tired of waiting for someone else to make the kind of game we wanted to play — and one burning idea in the mind of a storyteller named Alex.</p>
-          <p>At the beginning, we were outsiders. None of us had a game dev degree. None of us worked at a major studio... Some people call it naive. We call it necessary.</p>
-        </div>
-        <div class="image">
-          <img src="ShieldwallWebsite\images\Viking.jpg" alt="Our Story">
-        </div>
-      </div>
-    </section>
+    <footer>
+        <p>&copy; 2026 Shieldwall Games</p>
+    </footer>
 
-    <section class="story-section alt" id="rebellion">
-      <div class="container">
-        <div class="text">
-          <h2>A Story of Rebellion</h2>
-          <p>The story of Shieldwall Games is a story of rebellion — against an industry that too often puts profit above passion, that demands crunch instead of creativity... So we built something outside it.</p>
-          <p>We started with <strong>Ashborn: Fire & Blood</strong>, our first game and the opening chapter of a much larger saga — one that spans centuries, continents, and mythologies...</p>
-        </div>
-        <div class="image">
-          <img src="images/story2.jpg" alt="Rebellion">
-        </div>
-      </div>
-    </section>
-
-    <section class="story-section" id="our-dream">
-      <div class="container">
-        <div class="text">
-          <h2>Our Dream</h2>
-          <p>Shieldwall Games isn’t just a studio. It’s a philosophy — that games should be made by people who live and breathe them...</p>
-          <p>We’re building toward a future where we can operate from a self-sustaining, eco-conscious studio...</p>
-        </div>
-        <div class="image">
-          <img src="images/story3.jpg" alt="Our Dream">
-        </div>
-      </div>
-    </section>
-
-    <section class="story-section alt" id="values">
-      <div class="container">
-        <div class="text">
-          <h2>Our Values</h2>
-          <ul>
-            <li><strong>No Publishers. Ever.</strong> No marketing executive will ever override our story...</li>
-            <li><strong>Nature Comes First.</strong> We are committed to running our studio sustainably...</li>
-            <li><strong>History Matters.</strong> Our fantasy is built on respect and research...</li>
-            <li><strong>Work Should Feel Worthwhile.</strong> We will never crunch our team...</li>
-          </ul>
-        </div>
-        <div class="image">
-          <img src="images/story4.jpg" alt="Our Values">
-        </div>
-      </div>
-    </section>
-
-    <section class="story-section" id="future">
-      <div class="container">
-        <div class="text">
-          <h2>How We Get There</h2>
-          <p>We are working in stages. First, completing our vertical slice for <em>Ashborn: Fire & Blood</em>... From there, we’ll launch Ashes as our flagship title...</p>
-        </div>
-        <div class="image">
-          <img src="images/story5.jpg" alt="Our Future">
-        </div>
-      </div>
-    </section>
-
-    <section class="story-section alt" id="identity">
-      <div class="container">
-        <div class="text">
-          <h2>Shieldwall Games: What We Are</h2>
-          <p>We’re the players who stayed up too late modding medieval games. We’re the writers who filled notebooks with timelines, languages, and lineages. We’re the history nerds who debate theories about Dark Age Britain for fun. We’re the friends who never stopped believing this could be real.</p>
-          <p style="text-align:center; font-weight: bold;">This is just the beginning. Join us — and help us build something worth remembering.</p>
-        </div>
-        <div class="image">
-          <img src="images/story6.jpg" alt="Identity">
-        </div>
-      </div>
-    </section>
-
-  </div> <!-- closes scroll-container -->
-
-  <!-- Footer outside scroll-container -->
-  <footer>
-    <div style="max-width: 1000px; margin: auto;">
-      <p style="margin-bottom: 10px;">
-        &copy; 2025 Shieldwall Studios Ltd. All rights reserved.<br>
-        Registered in England and Wales, Company No. 12345678
-      </p>
-      <div style="margin-bottom: 15px;">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="cookies.html">Cookie Policy</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="sitemap.xml">Sitemap</a>
-      </div>
-      <div style="font-size: 0.8rem; color: #777;">
-        <p>Shieldwall Studios Ltd is committed to data protection. Registered with the <a href="https://ico.org.uk" target="_blank">Information Commissioner’s Office</a>.</p>
-        <p>View our <a href="https://find-and-update.company-information.service.gov.uk/" target="_blank">Companies House profile</a>.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    function learnMore() {
-      window.location.href = 'games.html';
-    }
-  </script>
-
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-consent" class="cookie-consent">
-    <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="privacy.html" target="_blank">Learn more</a>.</p>
-    <div class="cookie-buttons">
-      <button id="accept-cookies">Accept</button>
-      <button id="reject-cookies">Reject</button>
-    </div>
-  </div>
-
-  <script>
-    if (!localStorage.getItem('cookieConsent')) {
-      document.getElementById('cookie-consent').style.display = 'flex';
-    }
-    document.getElementById('accept-cookies').onclick = function () {
-      localStorage.setItem('cookieConsent', 'accepted');
-      document.getElementById('cookie-consent').style.display = 'none';
-    };
-    document.getElementById('reject-cookies').onclick = function () {
-      localStorage.setItem('cookieConsent', 'rejected');
-      document.getElementById('cookie-consent').style.display = 'none';
-    };
-  </script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
