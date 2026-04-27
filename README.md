@@ -76,15 +76,39 @@ To enable GitHub Pages on a new repository:
 
 ## Before Launch Checklist
 
-- [ ] Supply and integrate custom fonts (replace placeholder Google Fonts)
-- [ ] Add real artwork and imagery to `/assets/images/`
-- [ ] Confirm and update social media handles in footer on both pages
-- [ ] Create OG images (1200×630px) for both pages
-- [ ] Generate PNG favicon from `assets/icons/favicon.svg`
-- [ ] Update OG URLs to live domain when confirmed
-- [ ] Wire up email form submission on `ashborn.html`
-- [ ] Confirm copyright year on both pages
-- [ ] Review aged gold on parchment contrast (flagged in `main.css:28–35`) — consider darkening if needed
+### Content
+- [ ] Supply and integrate custom fonts (replace placeholder Google Fonts in main.css)
+- [ ] Add character art illustrations to mimir/assets/images/ (5 images)
+- [ ] Add app screenshots to mimir/assets/images/
+- [ ] Add Ask Mimir well-with-wisp illustration to mimir/assets/images/
+- [ ] Add Ashborn CCG card artwork to ashborn/assets/images/
+- [ ] Add Ashborn world panoramic art to ashborn/assets/images/
+- [ ] Create OG images — 1200×630px for each page
+
+### Email
+- [ ] Create Buttondown account at buttondown.com
+- [ ] Create two lists: Mimir Beta, Ashborn Release
+- [ ] Enable double opt-in on both lists
+- [ ] Configure custom sending domain (shieldwallgames.co.uk) via DNS
+- [ ] Replace ACTION_URL placeholder in index.html, mimir/index.html, ashborn/index.html, components/email-mimir.html, components/email-ashborn.html
+
+### Brand
+- [ ] Confirm social media platforms and update URLs in footer (all three pages)
+- [ ] Confirm copyright year (currently 2025)
+- [ ] Generate PNG favicon from assets/icons/favicon.svg
+
+### DNS & Domains
+- [ ] Confirm primary domain (shieldwallgames.co.uk)
+- [ ] Configure shieldwallgames.com → 301 → shieldwallgames.co.uk (via registrar)
+- [ ] Configure ashbornsaga.com → 301 → shieldwallgames.co.uk/ashborn/ (via registrar)
+- [ ] Configure ashbornsaga.co.uk → 301 → shieldwallgames.co.uk/ashborn/ (via registrar)
+- [ ] Update all og:url and canonical tags to live domain
+
+### GitHub Pages
+- [ ] Go to repo Settings → Pages → set Source to GitHub Actions
+- [ ] Push to main — workflow deploys automatically
+- [ ] Verify live URL in Settings → Pages
+- [ ] (Optional) Add custom domain in Settings → Pages → Custom domain
 
 ## Working with Claude Code
 

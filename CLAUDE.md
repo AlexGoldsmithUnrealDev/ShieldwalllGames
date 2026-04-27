@@ -225,31 +225,45 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [x] Project scaffolded
 - [x] GitHub Actions deployment workflow
 - [x] .gitignore
-- [x] 404 page (shell)
-- [x] README.md
 - [x] CLAUDE.md updated to current brief
-- [ ] CSS token architecture — NEXT
-- [ ] Theme switching JS
-- [ ] mimir.css
-- [ ] Shared nav component
-- [ ] Shared footer component
-- [ ] Email components (Buttondown)
-- [ ] Homepage
-- [ ] Mimir product page
-- [ ] Ashborn coming-soon page
-- [ ] Real fonts
-- [ ] Character art / imagery
-- [ ] App screenshots / mockups
-- [ ] Ask Mimir well-with-wisp illustration
-- [ ] Animated Mimir blob (deferred — V1.1)
-- [ ] Buttondown account + double opt-in configured
-- [ ] Custom sending domain (DNS)
-- [ ] Social handles confirmed
-- [ ] OG images (1200×630px)
-- [ ] PNG favicon from SVG
-- [ ] Live domain and URLs updated
-- [ ] Redirects live (shieldwallgames.com, ashbornsaga domains)
+- [x] README.md
+- [x] CSS token architecture (dual-theme, dual-mode)
+- [x] Theme switching JS and toggle button
+- [x] mimir.css — Mimir component styles
+- [x] Shared studio navigation (styles + JS)
+- [x] Shared footer (studio and Mimir variants)
+- [x] Buttondown email components
+- [x] Homepage (index.html)
+- [x] Mimir product page (mimir/index.html)
+- [x] Ashborn coming-soon page (ashborn/index.html)
+- [x] Custom 404 page
+- [x] Scroll reveal and smooth scroll
+- [x] Accessibility audit completed
+- [x] Skip links on all pages
+- [x] Meta tags, OG tags, canonical links
+- [ ] Real fonts (client to supply — replace placeholder Google Fonts)
+- [ ] Character art — 5 illustrations (hero, engine, schemas, ask-mimir, translator)
+- [ ] App screenshots / mockups (engine integration, schemas)
+- [ ] Ask Mimir well-with-wisp illustration (replace placeholder)
+- [ ] Animated Mimir blob entity (deferred — V1.1)
+- [ ] Ashborn CCG card artwork
+- [ ] Ashborn world panoramic art
+- [ ] Buttondown account created
+- [ ] Buttondown double opt-in enabled on both lists
+- [ ] Custom sending domain configured (shieldwallgames.co.uk DNS)
+- [ ] ACTION_URL replaced with real Buttondown endpoints on all three pages
+- [ ] Social media handles confirmed and URLs updated
+- [ ] OG images created (1200×630px — one per page)
+- [ ] PNG favicon generated from assets/icons/favicon.svg
+- [ ] Copyright year confirmed (currently 2025)
+- [ ] Live domain confirmed — update og:url and canonical tags
+- [ ] shieldwallgames.com redirect configured (DNS)
+- [ ] ashbornsaga.com redirect configured (DNS)
+- [ ] ashbornsaga.co.uk redirect configured (DNS)
+- [ ] GitHub Pages enabled in repo settings (Source: GitHub Actions)
+- [ ] Site tested live on GitHub Pages URL
+- [ ] Custom domain configured in GitHub Pages settings
 
 ---
 
-*Last updated: Phase 0. Human owner: Shieldwall Games Ltd.*
+*Last updated: V1 build complete. Human owner: Shieldwall Games Ltd.*
