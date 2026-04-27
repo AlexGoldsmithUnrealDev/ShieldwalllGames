@@ -143,6 +143,132 @@
 
   </section>
 
+  <!-- ============================================================
+       STUDIO IDENTITY SECTION
+       Transition from Mimir dark zone into studio parchment zone.
+       ============================================================ -->
+  <section
+    id="about-studio"
+    class="section section--studio-intro reveal"
+    aria-label="About Shieldwall Games"
+  >
+    <div class="container">
+      <div class="studio-intro__grid">
+
+        <div class="studio-intro__text">
+          <span class="section-label">The Studio</span>
+          <h2 class="section-heading">Built by makers,<br />for makers.</h2>
+          <p>
+            Shieldwall Games is a small independent studio. We build the tools
+            we needed and couldn't find — then we share them. Mimir came from
+            years of worldbuilding work on our own games. Now it's yours too.
+          </p>
+          <p>
+            Our games come from the same place: things we wanted to make,
+            built with care, sold honestly. No hype. No filler. Just craft.
+          </p>
+          <a href="/ashborn/" class="btn btn-secondary">
+            See what we're making
+          </a>
+        </div>
+
+        <div class="studio-intro__aside">
+          <!-- Placeholder — replace with studio photo or illustration -->
+          <div
+            class="placeholder-image placeholder-image--4x5"
+            role="img"
+            aria-label="Studio image coming soon"
+          >
+            Image Coming Soon
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ASHBORN COMING SOON SECTION
+       Preview of the Ashborn game line with release notification CTA.
+       ============================================================ -->
+  <section
+    class="section section--alt ashborn-preview reveal"
+    aria-label="Ashborn — coming soon"
+  >
+    <div class="container">
+
+      <div class="ashborn-preview__header">
+        <span class="section-label">Coming Soon</span>
+        <h2 class="section-heading">Ashborn</h2>
+        <p class="section-subtext">
+          A Viking Age card game. One shared world. Launching after Mimir —
+          because we're building it with Mimir.
+        </p>
+      </div>
+
+      <div class="ashborn-preview__card">
+        <!-- Placeholder — replace with Ashborn key art -->
+        <div
+          class="placeholder-image placeholder-image--16x9"
+          role="img"
+          aria-label="Ashborn CCG artwork coming soon"
+        >
+          Artwork Coming Soon
+        </div>
+
+        <div class="ashborn-preview__card-body">
+          <p class="ashborn-preview__tag">Ashborn CCG &nbsp;·&nbsp; Collectible Card Game &nbsp;·&nbsp; ~£30 at launch</p>
+          <h3>Ashborn CCG</h3>
+          <p>
+            The first game in the Ashborn line. A historically grounded
+            collectible card game set in the Viking Age. Details are being
+            forged — sign up to be first to know when it's ready.
+          </p>
+
+          <div class="ashborn-preview__form-wrap">
+            <!-- Ashborn email signup — copy from components/email-ashborn.html -->
+            <!-- TODO: embed Buttondown Ashborn list form here -->
+            <form
+              action="ACTION_URL"
+              method="post"
+              class="signup-form"
+              aria-label="Get notified when Ashborn CCG launches"
+            >
+              <div class="signup-form__field">
+                <label for="email-ashborn-home" class="signup-form__label">
+                  Get notified at launch
+                </label>
+                <input
+                  id="email-ashborn-home"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  class="signup-form__input"
+                  aria-required="true"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Notify me
+              </button>
+              <p class="signup-form__note">No spam. Unsubscribe any time.</p>
+            </form>
+          </div>
+
+          <a href="/ashborn/" class="ashborn-preview__link">
+            Learn more about Ashborn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 <!-- All page sections go here — added in subsequent prompts -->
 
 <script src="scripts/main.js" defer></script>

@@ -1613,3 +1613,214 @@ body.theme-studio .site-footer__copyright {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50%      { transform: translateX(-50%) translateY(6px); }
 }
+
+/* ==========================================================================
+   Homepage — Studio Intro Section
+   ========================================================================== */
+
+body.theme-studio .studio-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    body.theme-studio .studio-intro__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-7);
+    }
+}
+
+body.theme-studio .studio-intro__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+body.theme-studio .studio-intro__text p {
+    font-size: var(--text-base);
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+}
+
+body.theme-studio .studio-intro__aside {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Homepage — Ashborn Preview Section
+   ========================================================================== */
+
+body.theme-studio .ashborn-preview__header {
+    text-align: center;
+    max-width: var(--max-width-text);
+    margin-inline: auto;
+    margin-bottom: var(--space-6);
+}
+
+body.theme-studio .ashborn-preview__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-raised);
+}
+
+@media (min-width: 768px) {
+    body.theme-studio .ashborn-preview__card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+body.theme-studio .ashborn-preview__card-body {
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+body.theme-studio .ashborn-preview__tag {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    margin: 0;
+}
+
+body.theme-studio .ashborn-preview__card-body h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+body.theme-studio .ashborn-preview__card-body p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+body.theme-studio .ashborn-preview__form-wrap {
+    margin-top: var(--space-2);
+}
+
+body.theme-studio .ashborn-preview__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: var(--space-2);
+    transition: gap var(--transition-fast);
+}
+
+body.theme-studio .ashborn-preview__link:hover {
+    gap: var(--space-2);
+}
+
+/* Placeholder image blocks — studio theme */
+body.theme-studio .placeholder-image {
+    background-color: var(--color-bg-alt);
+    border: 1px dashed var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    width: 100%;
+    text-align: center;
+}
+
+body.theme-studio .placeholder-image--4x5 {
+    aspect-ratio: 4 / 5;
+}
+
+body.theme-studio .placeholder-image--16x9 {
+    aspect-ratio: 16 / 9;
+}
+
+/* Section label — studio theme */
+body.theme-studio .section-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    margin-bottom: var(--space-2);
+}
+
+/* Section heading — studio theme */
+body.theme-studio .section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.15;
+    margin-bottom: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    body.theme-studio .section-heading {
+        font-size: var(--text-4xl);
+    }
+}
+
+/* Section subtext — studio theme */
+body.theme-studio .section-subtext {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    max-width: var(--max-width-text);
+}
+
+/* Email signup form — studio theme */
+body.theme-studio .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: var(--max-width-narrow);
+}
+
+body.theme-studio .signup-form__label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+body.theme-studio .signup-form__input {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+body.theme-studio .signup-form__input:focus {
+    border-color: var(--color-accent-secondary);
+    box-shadow: 0 0 0 3px rgba(184, 150, 12, 0.15);
+}
+
+body.theme-studio .signup-form__note {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    opacity: 0.7;
+}
