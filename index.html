@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1a1714">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <title>Shieldwall Games — Coming Soon</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1714" />
+
+  <title>Shieldwall Games — Worldbuilding Tools & Historical Games</title>
+  <meta name="description" content="Shieldwall Games is an independent studio building Mimir — a structured worldbuilding platform for indie developers, writers, and GMs — and Ashborn, a Viking Age card game." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shieldwall Games" />
+  <meta property="og:description" content="Makers of Mimir, the worldbuilding platform, and Ashborn CCG. Built by indie developers, for indie developers." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk" /> <!-- TODO: confirm live URL -->
+  <meta property="og:image" content="" /> <!-- TODO: add OG image 1200x630px before launch -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shieldwall Games" />
+  <meta name="twitter:description" content="Makers of Mimir, the worldbuilding platform, and Ashborn CCG." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <!-- TODO: generate PNG fallback from SVG before launch -->
+
+  <!-- Theme init — must run before render to prevent flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('swg-theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
-<body>
 
-    <main>
-        <section class="hero section-dark">
-            <div class="container">
-                <p class="site-logo">Shieldwall Games</p>
-                <p class="hero__subtitle">Something is being forged.</p>
-            </div>
-        </section>
-    </main>
+<body class="theme-studio">
 
-    <script src="scripts/main.js" defer></script>
+<!-- All page sections go here — added in subsequent prompts -->
+
+<script src="scripts/main.js" defer></script>
 </body>
 </html>
