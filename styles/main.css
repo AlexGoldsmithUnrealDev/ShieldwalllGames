@@ -166,6 +166,50 @@ table {
 }
 
 /* ==========================================================================
+   4. Studio Theme Tokens
+   Light-first. Dark variant uses warm tones — not cold navy.
+   Scoped to body.theme-studio in both modes.
+   ========================================================================== */
+
+/* --- Studio: light mode (default) --- */
+[data-theme="light"] body.theme-studio {
+    --color-bg:                 #f4edd3;
+    --color-bg-alt:             #e4d9b8;
+    --color-bg-dark:            #1a1714;
+    --color-text-primary:       #2c2c2c;
+    --color-text-secondary:     #6b6b6b;
+    --color-text-inverse:       #f4edd3;
+    --color-accent-primary:     #8b2500;
+    --color-accent-primary-dark: #6a1c00; /* hover state for btn-primary */
+    --color-accent-secondary:   #b8960c;
+    --color-border:             rgba(107, 107, 107, 0.3);
+    --color-shadow:             rgba(44, 28, 12, 0.15);
+    --shadow-subtle:            0 1px 3px var(--color-shadow);
+    --shadow-raised:            0 4px 16px var(--color-shadow);
+    --font-display:             'Cinzel', serif; /* PLACEHOLDER FONT */
+    --font-body:                'EB Garamond', serif; /* PLACEHOLDER FONT */
+}
+
+/* --- Studio: dark mode --- */
+[data-theme="dark"] body.theme-studio {
+    --color-bg:                 #1a1714;
+    --color-bg-alt:             #2e2118;
+    --color-bg-dark:            #0f0d0b;
+    --color-text-primary:       #f4edd3;
+    --color-text-secondary:     #a89880;
+    --color-text-inverse:       #2c2c2c;
+    --color-accent-primary:     #c43500;
+    --color-accent-primary-dark: #9a2900; /* hover state for btn-primary */
+    --color-accent-secondary:   #b8960c;
+    --color-border:             rgba(244, 237, 211, 0.2);
+    --color-shadow:             rgba(0, 0, 0, 0.4);
+    --shadow-subtle:            0 1px 3px var(--color-shadow);
+    --shadow-raised:            0 4px 16px var(--color-shadow);
+    --font-display:             'Cinzel', serif; /* PLACEHOLDER FONT */
+    --font-body:                'EB Garamond', serif; /* PLACEHOLDER FONT */
+}
+
+/* ==========================================================================
    5. Mimir Theme Tokens — Base Palette
    Mimir is dark-first. Light mode is warm parchment with saturated
    accents — NOT an inversion of dark mode.
@@ -359,6 +403,20 @@ body {
 }
 
 /* ==========================================================================
+   Global — .container utility (shared by both themes)
+   Centred, max-width wrapper for page content.
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+}
+
+/* ==========================================================================
    Global — .visually-hidden utility (shared by both themes)
    Hides content visually but keeps it accessible to screen readers.
    ========================================================================== */
@@ -468,16 +526,6 @@ body.theme-studio hr {
 body.theme-studio strong { font-weight: 700; }
 body.theme-studio em { font-style: italic; }
 
-/* --- Studio: .container utility --- */
-body.theme-studio .container {
-    width: 100%;
-    max-width: var(--max-width-content);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--space-3);
-    padding-right: var(--space-3);
-}
-
 /* --- Studio: buttons --- */
 
 body.theme-studio .btn {
@@ -505,7 +553,8 @@ body.theme-studio .btn-primary {
 
 body.theme-studio .btn-primary:hover,
 body.theme-studio .btn-primary:focus-visible {
-    opacity: 0.9;
+    background-color: var(--color-accent-primary-dark);
+    border-color: var(--color-accent-primary-dark);
     box-shadow: var(--shadow-raised);
 }
 
@@ -588,7 +637,7 @@ body.theme-studio .section-dark h3 {
 }
 
 body.theme-studio .section-dark p {
-    color: var(--color-text-secondary);
+    color: var(--color-text-inverse);
 }
 
 body.theme-studio .section-alt {
