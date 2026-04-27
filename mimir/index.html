@@ -40,6 +40,66 @@
 
 <body class="theme-mimir">
 
+  <!-- Top bar: orientation strip linking back to studio site -->
+  <div class="top-bar" role="navigation" aria-label="Return to Shieldwall Games">
+    <div class="top-bar__inner">
+      <a href="/" class="top-bar__back">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Shieldwall Games
+      </a>
+      <!-- Theme toggle mounted here on the right -->
+      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
+    </div>
+  </div>
+
+  <!-- Main Mimir navigation -->
+  <header class="mimir-nav" role="banner">
+    <div class="mimir-nav__inner">
+
+      <a href="/mimir/" class="mimir-nav__wordmark" aria-label="Mimir home">
+        Mimir
+      </a>
+
+      <nav aria-label="Mimir navigation">
+        <ul class="mimir-nav__links" role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <a href="#beta-signup" class="mimir-nav__cta">
+        Join the beta
+      </a>
+
+      <button
+        class="mimir-nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mimir-mobile-drawer"
+        type="button"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mimir-nav__drawer" id="mimir-mobile-drawer" role="navigation" aria-label="Mimir mobile navigation">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#beta-signup">Join the beta</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
   <!-- All sections added in subsequent prompts -->
 
   <!-- Scripts: shared first, then Mimir-specific -->
