@@ -1,0 +1,23 @@
+/*
+ * mimir.css — Mimir product zone styles
+ *
+ * Depends on: styles/main.css (must be loaded first)
+ * Scope: all rules here are scoped to body.theme-mimir
+ *
+ * Contents:
+ *   1. Base layout (container, section base, top bar)
+ *   2. Mimir navigation
+ *   3. Atmospheric backgrounds and section glow overlays
+ *   4. Character art treatment
+ *   5. Screenshot treatment
+ *   6. Annotation motif
+ *   7. Pill CTA buttons
+ *   8. Email signup form
+ *   9. Feature tiles
+ *  10. Pricing cards
+ *  11. Testimonial / community cards
+ *
+ * Do not define CSS custom properties here.
+ * All tokens live in styles/main.css.
+ * Do not add studio component styles here.
+ */
