@@ -82,6 +82,67 @@
   </div>
 </header>
 
+<main id="main-content">
+
+  <!-- ============================================================
+       HERO SECTION — Mimir zone within a studio page
+       Dark atmospheric section using Mimir colour overrides.
+       ============================================================ -->
+  <section
+    class="hero-section"
+    aria-label="Introduction"
+    style="
+      --hero-bg: #0d1117;
+      --hero-glow: rgba(100, 120, 180, 0.25);
+      --hero-accent: #c9a84c;
+      --hero-text: #e8eaf0;
+      --hero-subtext: #8892a4;
+    "
+  >
+    <!-- Atmospheric grain overlay -->
+    <div class="hero-section__grain" aria-hidden="true"></div>
+    <!-- Radial glow -->
+    <div class="hero-section__glow" aria-hidden="true"></div>
+
+    <div class="hero-section__inner container">
+
+      <p class="hero-section__eyebrow">A studio. Two products. One world.</p>
+
+      <h1 class="hero-section__heading">
+        Your world, ready for<br />
+        any AI tool or game engine.
+      </h1>
+
+      <p class="hero-section__subtext">
+        Mimir is the structured worldbuilding platform that turns your lore
+        into living data — feeding your AI workflow, your game engine,
+        and your creative process from a single source of truth.
+      </p>
+
+      <div class="hero-section__actions">
+        <a href="/mimir/" class="hero-section__cta-primary">
+          Explore Mimir
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+        <a href="#about-studio" class="hero-section__cta-secondary">
+          About the studio
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-section__scroll-hint" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+
+  </section>
+
 <!-- All page sections go here — added in subsequent prompts -->
 
 <script src="scripts/main.js" defer></script>

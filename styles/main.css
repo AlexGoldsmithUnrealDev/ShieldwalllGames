@@ -1474,3 +1474,142 @@ body.theme-studio .site-footer__copyright {
     color: var(--color-text-inverse);
     opacity: 0.5;
 }
+
+/* ==========================================================================
+   Homepage Hero Section
+   Dark atmospheric section bridging studio page and Mimir zone.
+   Uses inline CSS variable overrides — not theme-mimir class.
+   ========================================================================== */
+
+.hero-section {
+    position: relative;
+    min-height: 100svh;
+    background-color: var(--hero-bg, #0d1117);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-section__grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-section__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 70% 60% at 50% 40%,
+        var(--hero-glow, rgba(100, 120, 180, 0.2)),
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-section__inner {
+    position: relative;
+    z-index: 1;
+    padding-block: var(--space-9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.hero-section__eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--hero-accent, #c9a84c);
+    margin: 0;
+}
+
+.hero-section__heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--hero-text, #e8eaf0);
+    max-width: 16ch;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .hero-section__heading {
+        font-size: var(--text-5xl);
+    }
+}
+
+.hero-section__subtext {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--hero-subtext, #8892a4);
+    max-width: var(--max-width-text);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.hero-section__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: center;
+    margin-top: var(--space-2);
+}
+
+.hero-section__cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 600;
+    background-color: var(--hero-accent, #c9a84c);
+    color: #0d1117;
+    border-radius: var(--radius-pill);
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.hero-section__cta-primary:hover {
+    opacity: 0.85;
+}
+
+.hero-section__cta-secondary {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--hero-subtext, #8892a4);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: color var(--transition-fast);
+}
+
+.hero-section__cta-secondary:hover {
+    color: var(--hero-text, #e8eaf0);
+}
+
+.hero-section__scroll-hint {
+    position: absolute;
+    bottom: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--hero-subtext, #8892a4);
+    opacity: 0.5;
+    animation: scroll-hint-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(6px); }
+}
