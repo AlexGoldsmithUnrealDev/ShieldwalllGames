@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1a1714">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-    <title>404 — Shieldwall Games</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1714" />
+  <meta http-equiv="refresh" content="10;url=/" />
+
+  <title>404 — Page Not Found — Shieldwall Games</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Theme init — must run before render to prevent flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('swg-theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
-<body>
 
-    <main>
-        <section class="hero section-dark">
-            <div class="container">
-                <h1 class="hero__title">404</h1>
-                <p class="hero__subtitle">Page not found.</p>
-                <a href="index.html" class="hero__subtitle">Return home</a>
-            </div>
-        </section>
-    </main>
+<body class="theme-studio">
 
-    <script src="scripts/main.js" defer></script>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="section section-dark" style="min-height:100svh; display:flex; align-items:center; justify-content:center; text-align:center;">
+      <div class="container">
+        <h1 class="section-heading" style="color:var(--color-text-inverse);">404</h1>
+        <p class="section-subtext" style="color:var(--color-text-inverse); opacity:0.7; margin-inline:auto;">
+          Page not found.
+        </p>
+        <a href="/" style="color:var(--color-accent-secondary); margin-top:var(--space-3); display:inline-block;">
+          Return home
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/main.js" defer></script>
 </body>
 </html>
