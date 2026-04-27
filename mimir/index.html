@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d1117" />
+
+  <title>Mimir — Worldbuilding for Indie Developers, Writers & GMs</title>
+  <meta name="description" content="Mimir turns your world lore into structured markdown data — ready for any AI tool, game engine, or creative workflow. Built by Shieldwall Games." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mimir — Structured Worldbuilding" />
+  <meta property="og:description" content="Your world, ready for any AI tool or game engine. Mimir is the worldbuilding platform built for indie developers, writers, and GMs." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/" /> <!-- TODO: confirm live URL -->
+  <meta property="og:image" content="" /> <!-- TODO: add OG image 1200x630px before launch -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mimir — Structured Worldbuilding" />
+  <meta name="twitter:description" content="Your world, ready for any AI tool or game engine." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+
+  <!-- Styles: shared tokens first, then Mimir components -->
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css" />
+
+  <!-- Theme init — runs before render to prevent flash. Mimir defaults to dark. -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('swg-theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'dark'); /* Mimir default: dark */
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body class="theme-mimir">
+
+  <!-- All sections added in subsequent prompts -->
+
+  <!-- Scripts: shared first, then Mimir-specific -->
+  <script src="../scripts/main.js" defer></script>
+  <script src="scripts/mimir.js" defer></script>
+
+</body>
+</html>
