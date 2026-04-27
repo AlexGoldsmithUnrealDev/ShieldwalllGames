@@ -251,4 +251,48 @@ document.addEventListener('DOMContentLoaded', function () {
      * [data-theme="dark"] .theme-toggle__icon--moon { display: none; }
      */
 
+    /* ------------------------------------------------------------------
+       Studio Navigation — mobile drawer and scroll behaviour
+       Works for both studio and Ashborn pages.
+       ------------------------------------------------------------------ */
+    function initStudioNav() {
+        var header = document.querySelector('.site-header');
+        if (!header) return;
+
+        /* Scroll: add .scrolled class after 80px */
+        var onScroll = function () {
+            header.classList.toggle('scrolled', window.scrollY > 80);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        /* Hamburger toggle */
+        var hamburger = header.querySelector('.site-header__hamburger');
+        var drawer = header.querySelector('.site-header__drawer');
+        if (!hamburger || !drawer) return;
+
+        hamburger.addEventListener('click', function () {
+            var isOpen = drawer.classList.toggle('is-open');
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        /* Close drawer on Escape */
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+                drawer.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.focus();
+            }
+        });
+
+        /* Close drawer when a drawer link is clicked */
+        drawer.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                drawer.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
+    initStudioNav();
+
 });
