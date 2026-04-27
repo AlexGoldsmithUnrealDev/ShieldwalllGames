@@ -107,3 +107,60 @@ table {
         scroll-behavior: auto !important;
     }
 }
+
+/* ==========================================================================
+   3. Base Tokens — Theme-independent
+   These never change between themes or modes.
+   ========================================================================== */
+
+:root {
+    /* --- Spacing scale (base-8) --- */
+    --space-1:  8px;    /* 0.5rem  */
+    --space-2:  16px;   /* 1rem    */
+    --space-3:  24px;   /* 1.5rem  */
+    --space-4:  32px;   /* 2rem    */
+    --space-5:  48px;   /* 3rem    */
+    --space-6:  64px;   /* 4rem    */
+    --space-7:  96px;   /* 6rem    */
+    --space-8:  128px;  /* 8rem    */
+    --space-9:  160px;  /* 10rem   */
+    --space-10: 192px;  /* 12rem   */
+
+    /* --- Typography scale (1.25 modular ratio, base 1rem = 16px) --- */
+    --text-xs:  0.64rem;   /* 10.24px */
+    --text-sm:  0.8rem;    /* 12.8px  */
+    --text-base: 1rem;     /* 16px    */
+    --text-md:  1.25rem;   /* 20px    */
+    --text-lg:  1.563rem;  /* 25px    */
+    --text-xl:  1.953rem;  /* 31.25px */
+    --text-2xl: 2.441rem;  /* 39.06px */
+    --text-3xl: 3.052rem;  /* 48.83px */
+    --text-4xl: 3.815rem;  /* 61.04px */
+    --text-5xl: 4.768rem;  /* 76.29px */
+    --text-6xl: 5.96rem;   /* 95.37px */
+    --text-7xl: 7.451rem;  /* 119.2px */
+
+    /* --- Border radius --- */
+    --radius-xs:   2px;
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   16px;
+    --radius-pill: 9999px;  /* Used for Mimir pill-shaped CTAs */
+
+    /* --- Transitions --- */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 400ms ease;
+
+    /* --- Max widths --- */
+    --max-width-content: 1200px;
+    --max-width-text:    680px;
+    --max-width-narrow:  480px;
+
+    /* --- Z-index scale --- */
+    --z-base:    0;    /* Default stacking context */
+    --z-raised:  10;   /* Cards, elevated elements */
+    --z-overlay: 100;  /* Fixed header, nav overlay */
+    --z-modal:   200;  /* Modal dialogs, mobile nav drawer */
+    --z-toast:   300;  /* Toast notifications, top-level alerts */
+}
