@@ -164,3 +164,47 @@ table {
     --z-modal:   200;  /* Modal dialogs, mobile nav drawer */
     --z-toast:   300;  /* Toast notifications, top-level alerts */
 }
+
+/* ==========================================================================
+   5. Mimir Theme Tokens — Base Palette
+   Mimir is dark-first. Light mode is warm parchment with saturated
+   accents — NOT an inversion of dark mode.
+   ========================================================================== */
+
+/* --- Mimir: dark mode (default) --- */
+[data-theme="dark"] body.theme-mimir {
+    --color-bg:               #0d1117;
+    --color-bg-alt:           #111827;
+    --color-bg-raised:        #1a2332;
+    --color-text-primary:     #e8eaf0;
+    --color-text-secondary:   #8892a4;
+    --color-text-inverse:     #0d1117;
+    --color-accent-primary:   #c9a84c;
+    --color-accent-secondary: #a0aec0;
+    --color-border:           rgba(255, 255, 255, 0.1);
+    --color-shadow:           rgba(0, 0, 0, 0.5);
+    --shadow-subtle:          0 1px 4px var(--color-shadow);
+    --shadow-raised:          0 6px 24px var(--color-shadow);
+    --shadow-glow:            0 0 20px rgba(201, 168, 76, 0.3);
+    --font-display:           'Cormorant Garamond', serif; /* PLACEHOLDER */
+    --font-body:              'Inter', sans-serif; /* PLACEHOLDER */
+}
+
+/* --- Mimir: light mode --- */
+[data-theme="light"] body.theme-mimir {
+    --color-bg:               #faf7f0;
+    --color-bg-alt:           #f0ebe0;
+    --color-bg-raised:        #ffffff;
+    --color-text-primary:     #1a1f2e;
+    --color-text-secondary:   #4a5568;
+    --color-text-inverse:     #faf7f0;
+    --color-accent-primary:   #a07c20;
+    --color-accent-secondary: #2d3748;
+    --color-border:           rgba(26, 31, 46, 0.15);
+    --color-shadow:           rgba(26, 31, 46, 0.12);
+    --shadow-subtle:          0 1px 4px var(--color-shadow);
+    --shadow-raised:          0 6px 24px var(--color-shadow);
+    --shadow-glow:            0 0 20px rgba(160, 124, 32, 0.2);
+    --font-display:           'Cormorant Garamond', serif; /* PLACEHOLDER */
+    --font-body:              'Inter', sans-serif; /* PLACEHOLDER */
+}
