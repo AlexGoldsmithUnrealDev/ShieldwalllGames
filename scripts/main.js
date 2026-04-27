@@ -115,66 +115,47 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 
-    /* ----------------------------------------------------------------------
-       Smooth Scroll for Anchor Links
-       Intercepts clicks on anchor links (href="#...") and scrolls smoothly
-       to the target element. Moves focus to the target for accessibility.
-       ---------------------------------------------------------------------- */
-    function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                var href = this.getAttribute('href');
-                if (!href || href === '#') return;
-
-                var targetId = href.slice(1);
-                var target = document.getElementById(targetId);
-                if (!target) return;
-
-                e.preventDefault();
-
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                /* Move focus to the target for screen reader users */
-                target.setAttribute('tabindex', '-1');
-                target.focus({ preventScroll: true });
-            });
-        });
-    }
-
-    /* ----------------------------------------------------------------------
+    /* ------------------------------------------------------------------
        Scroll Reveal
-       Uses IntersectionObserver to fade-in elements with the .reveal class
-       when they enter the viewport. Each element gains .reveal--visible
-       once it becomes at least 15% visible.
-       ---------------------------------------------------------------------- */
+       Fades elements up into view when they enter the viewport.
+       Apply class .reveal to any element to opt in.
+       ------------------------------------------------------------------ */
     function initScrollReveal() {
-        var revealElements = document.querySelectorAll('.reveal');
-        if (!revealElements.length) return;
-
-        /* Check for IntersectionObserver support (progressive enhancement) */
-        if (!('IntersectionObserver' in window)) {
-            /* If not supported, show everything immediately */
-            revealElements.forEach(function (el) {
-                el.classList.add('reveal--visible');
-            });
-            return;
-        }
+        var elements = document.querySelectorAll('.reveal');
+        if (!elements.length) return;
 
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('reveal--visible');
-                    /* Stop observing once revealed — no need to re-animate */
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.15,
+            threshold: 0.1,
             rootMargin: '0px 0px -40px 0px'
         });
 
-        revealElements.forEach(function (el) {
+        elements.forEach(function (el) {
             observer.observe(el);
+        });
+    }
+
+    /* ------------------------------------------------------------------
+       Smooth Scroll — anchor links
+       Handles href="#..." links across all pages.
+       ------------------------------------------------------------------ */
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                var id = link.getAttribute('href').slice(1);
+                if (!id) return;
+                var target = document.getElementById(id);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, '', '#' + id);
+            });
         });
     }
 

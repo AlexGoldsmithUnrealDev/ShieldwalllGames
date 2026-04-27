@@ -468,6 +468,32 @@ body {
 [data-theme="dark"] .theme-toggle__icon--moon { display: none; }
 
 /* ==========================================================================
+   Global — Scroll reveal animation utility (shared by both themes)
+   ========================================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+}
+
+.reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ==========================================================================
    8. Studio / Ashborn Component Styles — scoped to body.theme-studio
    Mimir components live in mimir/styles/mimir.css, not here.
    All colour values reference semantic tokens (--color-bg, --color-text-primary,
@@ -1174,19 +1200,6 @@ body.theme-studio .footer-bottom {
 body.theme-studio .footer-copyright {
     color: var(--color-text-secondary);
     font-size: var(--text-sm);
-}
-
-/* --- Studio: scroll reveal animation --- */
-
-body.theme-studio .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-body.theme-studio .reveal--visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* ==========================================================================
