@@ -2,4 +2,289 @@
  * ashborn.css — Ashborn zone styles
  * Depends on: styles/main.css (must be loaded first)
  * Scope: all rules scoped to body.theme-studio
+ * These are Ashborn-specific additions — not duplicates of main.css
  */
+
+/* ==========================================================================
+   Studio Top Bar — Ashborn page variant
+   Mirrors Mimir top bar pattern but uses studio tokens.
+   ========================================================================== */
+
+body.theme-studio .top-bar-studio {
+    width: 100%;
+    background-color: var(--color-bg-dark);
+    border-bottom: 1px solid rgba(244, 237, 211, 0.15);
+    padding-block: var(--space-1);
+}
+
+body.theme-studio .top-bar-studio__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body.theme-studio .top-bar-studio__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: rgba(244, 237, 211, 0.5);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color var(--transition-fast);
+}
+
+body.theme-studio .top-bar-studio__back:hover {
+    color: rgba(244, 237, 211, 0.9);
+}
+
+/* ==========================================================================
+   Ashborn Hero
+   Dark atmospheric — warm dark, not cold navy.
+   ========================================================================== */
+
+body.theme-studio .ashborn-hero {
+    position: relative;
+    min-height: 100svh;
+    background-color: var(--color-bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding-block: var(--space-9);
+}
+
+body.theme-studio .ashborn-hero__grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body.theme-studio .ashborn-hero__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 70% 60% at 50% 40%,
+        rgba(139, 37, 0, 0.2),
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+body.theme-studio .ashborn-hero__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+body.theme-studio .ashborn-hero__heading {
+    font-size: var(--text-6xl);
+    color: var(--color-text-inverse);
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    body.theme-studio .ashborn-hero__heading {
+        font-size: var(--text-7xl);
+    }
+}
+
+body.theme-studio .ashborn-hero__subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--color-accent-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+body.theme-studio .ashborn-hero__subtext {
+    color: rgba(244, 237, 211, 0.7);
+    max-width: 52ch;
+}
+
+body.theme-studio .ashborn-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+}
+
+body.theme-studio .ashborn-hero__scroll-hint {
+    position: absolute;
+    bottom: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-accent-secondary);
+    opacity: 0.4;
+    animation: scroll-hint-bounce 2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   About the Game
+   ========================================================================== */
+
+body.theme-studio .ashborn-about__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    body.theme-studio .ashborn-about__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-7);
+    }
+}
+
+body.theme-studio .ashborn-about__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+body.theme-studio .ashborn-about__text p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0;
+}
+
+body.theme-studio .ashborn-about__stats {
+    display: flex;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+    padding-block: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    margin-block: var(--space-2);
+}
+
+body.theme-studio .ashborn-about__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+body.theme-studio .ashborn-about__stat-value {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-accent-primary);
+}
+
+body.theme-studio .ashborn-about__stat-label {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+body.theme-studio .ashborn-about__price-note {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+    margin: 0;
+}
+
+body.theme-studio .ashborn-about__media {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   The World
+   ========================================================================== */
+
+body.theme-studio .ashborn-world__header {
+    text-align: center;
+    max-width: var(--max-width-text);
+    margin-inline: auto;
+    margin-bottom: var(--space-6);
+}
+
+body.theme-studio .ashborn-world__panoramic {
+    aspect-ratio: 16 / 5;
+    margin-bottom: var(--space-6);
+    border-radius: var(--radius-md);
+}
+
+body.theme-studio .ashborn-world__columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+    body.theme-studio .ashborn-world__columns {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6);
+    }
+}
+
+body.theme-studio .ashborn-world__columns h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+}
+
+body.theme-studio .ashborn-world__columns p {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+}
+
+/* ==========================================================================
+   Notify CTA
+   ========================================================================== */
+
+body.theme-studio .ashborn-notify__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+body.theme-studio .ashborn-notify__form {
+    margin-inline: auto;
+    width: 100%;
+}
+
+body.theme-studio .ashborn-notify__mimir-link {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text-inverse);
+    opacity: 0.6;
+    margin-top: var(--space-3);
+}
+
+body.theme-studio .ashborn-notify__mimir-link a {
+    color: var(--color-accent-secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+body.theme-studio .ashborn-notify__mimir-link a:hover {
+    opacity: 0.9;
+}
+
+/* Minimal nav CTA button */
+body.theme-studio .ashborn-nav__cta {
+    font-size: var(--text-sm);
+    padding: 8px 18px;
+}

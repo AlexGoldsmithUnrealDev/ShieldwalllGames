@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1714" />
+
+  <title>Ashborn — A Viking Age Card Game by Shieldwall Games</title>
+  <meta name="description" content="Ashborn CCG is a historically grounded Viking Age collectible card game in development at Shieldwall Games. Sign up to be first to know when it launches." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ashborn — Coming Soon" />
+  <meta property="og:description" content="A Viking Age collectible card game. Built in the same world as Mimir. Coming when it's ready." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/ashborn/" /> <!-- TODO: confirm live URL -->
+  <meta property="og:image" content="" /> <!-- TODO: add OG image 1200x630px before launch -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ashborn — Coming Soon" />
+  <meta name="twitter:description" content="A Viking Age collectible card game by Shieldwall Games." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+
+  <!-- Styles: shared tokens first, then Ashborn overrides -->
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/ashborn.css" />
+
+  <!-- Theme init — studio page defaults to light -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('swg-theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body class="theme-studio">
+
+  <!-- Top bar: orientation strip -->
+  <div class="top-bar-studio" role="navigation" aria-label="Return to Shieldwall Games">
+    <div class="top-bar-studio__inner container">
+      <a href="/" class="top-bar-studio__back">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Shieldwall Games
+      </a>
+      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
+    </div>
+  </div>
+
+  <!-- Minimal nav for coming-soon page -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="/ashborn/" class="site-header__wordmark" aria-label="Ashborn home">
+        Ashborn
+      </a>
+      <div class="site-header__controls">
+        <a href="#notify" class="btn btn-primary ashborn-nav__cta">
+          Get notified
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO — full height, atmospheric, parchment-dark treatment
+         ============================================================ -->
+    <section class="section ashborn-hero" aria-labelledby="ashborn-hero-heading">
+      <div class="ashborn-hero__grain" aria-hidden="true"></div>
+      <div class="ashborn-hero__glow" aria-hidden="true"></div>
+
+      <div class="section__inner container ashborn-hero__inner">
+        <span class="section-label">Coming Soon</span>
+        <h1 class="section-heading ashborn-hero__heading" id="ashborn-hero-heading">
+          Ashborn
+        </h1>
+        <p class="ashborn-hero__subtitle">A Viking Age Collectible Card Game</p>
+        <p class="section-subtext ashborn-hero__subtext">
+          The first game in the Ashborn line. A historically grounded
+          card game set in the age of axes, honour, and cold iron.
+          Built with Mimir. Launching when it's ready.
+        </p>
+        <div class="ashborn-hero__actions">
+          <a href="#notify" class="btn btn-primary">
+            Notify me at launch
+          </a>
+          <a href="/mimir/" class="btn btn-secondary">
+            Explore Mimir first
+          </a>
+        </div>
+      </div>
+
+      <div class="ashborn-hero__scroll-hint" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT THE GAME
+         ============================================================ -->
+    <section class="section section--alt reveal" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="ashborn-about__grid">
+
+          <div class="ashborn-about__text">
+            <span class="section-label">The Game</span>
+            <h2 class="section-heading" id="about-heading">
+              History is the battlefield.
+            </h2>
+            <p>
+              Ashborn CCG is a collectible card game set in the Viking Age —
+              not the mythology, but the history. The raids. The halls.
+              The brutal calculus of war and alliance.
+            </p>
+            <p>
+              Each deck is a warband with its own character.
+              Each match is a saga in miniature — decided by tactics,
+              timing, and the cards fate puts in your hand.
+            </p>
+            <p>
+              Designed for players who want depth without doctrine,
+              and flavour grounded in the real world.
+            </p>
+
+            <div class="ashborn-about__stats">
+              <div class="ashborn-about__stat">
+                <span class="ashborn-about__stat-value">~£30</span>
+                <span class="ashborn-about__stat-label">at launch</span>
+              </div>
+              <div class="ashborn-about__stat">
+                <span class="ashborn-about__stat-value">CCG</span>
+                <span class="ashborn-about__stat-label">card game format</span>
+              </div>
+              <div class="ashborn-about__stat">
+                <span class="ashborn-about__stat-value">Viking Age</span>
+                <span class="ashborn-about__stat-label">historical setting</span>
+              </div>
+            </div>
+            <p class="ashborn-about__price-note">
+              Price subject to change at launch.
+            </p>
+          </div>
+
+          <div class="ashborn-about__media">
+            <div
+              class="placeholder-image placeholder-image--4x5"
+              role="img"
+              aria-label="Ashborn CCG card artwork coming soon"
+            >
+              Card Artwork<br />Coming Soon
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         THE ASHBORN WORLD
+         ============================================================ -->
+    <section class="section reveal" aria-labelledby="world-heading">
+      <div class="container">
+
+        <div class="ashborn-world__header">
+          <span class="section-label">The World</span>
+          <h2 class="section-heading" id="world-heading">
+            One world. Many stories.
+          </h2>
+          <p class="section-subtext">
+            Every Ashborn game is set in the same Viking Age world —
+            the same coastlines, the same halls, the same feuds
+            playing out across different formats.
+          </p>
+        </div>
+
+        <div
+          class="placeholder-image ashborn-world__panoramic"
+          role="img"
+          aria-label="Ashborn world panoramic art coming soon"
+        >
+          Environment Art Coming Soon
+        </div>
+
+        <div class="ashborn-world__columns">
+          <div>
+            <h3>Built on History</h3>
+            <p>
+              Ashborn is not a fantasy setting dressed in Viking clothing.
+              The world draws directly from the historical record —
+              the material culture, the social structures, the violence
+              and the poetry of the early medieval North.
+            </p>
+          </div>
+          <div>
+            <h3>Built with Mimir</h3>
+            <p>
+              The Ashborn world is being built inside Mimir —
+              our own worldbuilding tool. Every character, location,
+              and faction exists as structured data that feeds
+              directly into the game's design.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHAT'S COMING
+         ============================================================ -->
+    <section class="section section--alt reveal" aria-labelledby="coming-heading">
+      <div class="container" style="text-align:center; max-width:640px; margin-inline:auto;">
+        <span class="section-label">Development</span>
+        <h2 class="section-heading" id="coming-heading">In development.</h2>
+        <p class="section-subtext" style="margin-inline:auto;">
+          Ashborn CCG is in active development. We're building it
+          the right way — slowly, carefully, with Mimir doing
+          the heavy lifting on world consistency.
+        </p>
+        <p class="section-subtext" style="margin-inline:auto; margin-top:1rem;">
+          No release date yet. Sign up below and you'll be
+          the first to know when that changes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EMAIL SIGNUP CTA
+         ============================================================ -->
+    <section class="section section-dark reveal" aria-labelledby="notify-heading" id="notify">
+      <div class="container ashborn-notify__inner">
+
+        <div class="divider-ornamental" aria-hidden="true"></div>
+
+        <span class="section-label">Stay Informed</span>
+        <h2 class="section-heading" id="notify-heading">
+          Follow the saga.
+        </h2>
+        <p class="section-subtext">
+          Sign up to be first to know when Ashborn CCG is ready.
+          No spam. No ravens lost to the sea.
+        </p>
+
+        <!-- Ashborn email signup — from components/email-ashborn.html -->
+        <!-- TODO: replace ACTION_URL with Buttondown Ashborn list endpoint -->
+        <form
+          action="ACTION_URL"
+          method="post"
+          class="signup-form ashborn-notify__form"
+          aria-label="Get notified when Ashborn CCG launches"
+        >
+          <div class="signup-form__field">
+            <label for="email-ashborn-page" class="signup-form__label">
+              Your email address
+            </label>
+            <input
+              id="email-ashborn-page"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+              class="signup-form__input"
+              aria-required="true"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Notify me at launch
+          </button>
+          <p class="signup-form__note">
+            No spam. Unsubscribe any time.
+          </p>
+        </form>
+
+        <p class="ashborn-notify__mimir-link">
+          While you wait —
+          <a href="/mimir/">explore Mimir</a>,
+          the worldbuilding tool we're using to build Ashborn.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+
+      <div class="site-footer__grid">
+
+        <div>
+          <a href="/" class="site-footer__wordmark" aria-label="Shieldwall Games home">
+            Shieldwall Games
+          </a>
+          <p class="site-footer__tagline">
+            Building tools and games worth your time.
+          </p>
+          <div class="site-footer__social" aria-label="Social media links">
+            <a href="https://x.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- TODO: confirm social platforms and update URLs -->
+          </div>
+        </div>
+
+        <div>
+          <p class="site-footer__heading">Products</p>
+          <ul class="site-footer__links" role="list">
+            <li><a href="/mimir/">Mimir</a></li>
+            <li><a href="/ashborn/">Ashborn CCG</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__heading">Studio</p>
+          <ul class="site-footer__links" role="list">
+            <li><a href="/">Home</a></li>
+            <!-- TODO: add About and Blog when V2 pages are live -->
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">
+          &copy; 2025 Shieldwall Games Ltd. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+  <script src="scripts/ashborn.js" defer></script>
+
+</body>
+</html>
