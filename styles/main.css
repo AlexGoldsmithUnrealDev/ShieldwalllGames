@@ -434,6 +434,40 @@ body {
 }
 
 /* ==========================================================================
+   Global — Theme toggle button (not theme-scoped)
+   Used on all pages. Icons swap via data-theme on <html>.
+   ========================================================================== */
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--color-accent-secondary);
+    outline-offset: 2px;
+}
+
+/* Show sun in dark mode (click to go light), moon in light mode (click to go dark) */
+.theme-toggle__icon--sun  { display: none; }
+.theme-toggle__icon--moon { display: block; }
+
+[data-theme="dark"] .theme-toggle__icon--sun  { display: block; }
+[data-theme="dark"] .theme-toggle__icon--moon { display: none; }
+
+/* ==========================================================================
    8. Studio / Ashborn Component Styles — scoped to body.theme-studio
    Mimir components live in mimir/styles/mimir.css, not here.
    All colour values reference semantic tokens (--color-bg, --color-text-primary,
