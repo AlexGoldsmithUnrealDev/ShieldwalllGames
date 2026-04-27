@@ -45,4 +45,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    /* ------------------------------------------------------------------
+       FAQ Accordion
+       Toggles aria-expanded and hidden attribute on answer panels.
+       ------------------------------------------------------------------ */
+    function initFaq() {
+        var questions = document.querySelectorAll('.faq-item__question button');
+        questions.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var expanded = btn.getAttribute('aria-expanded') === 'true';
+                var answerId = btn.getAttribute('aria-controls');
+                var answer = document.getElementById(answerId);
+                if (!answer) return;
+
+                btn.setAttribute('aria-expanded', String(!expanded));
+                if (expanded) {
+                    answer.setAttribute('hidden', '');
+                } else {
+                    answer.removeAttribute('hidden');
+                }
+            });
+        });
+    }
+
+    initFaq();
+
 });

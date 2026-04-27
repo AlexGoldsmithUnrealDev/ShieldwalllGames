@@ -1143,3 +1143,66 @@ body.theme-mimir .well-illustration__placeholder span {
     font-size: var(--text-xs);
     opacity: 0.6;
 }
+
+/* ==========================================================================
+   FAQ — accordion list
+   ========================================================================== */
+
+body.theme-mimir .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+body.theme-mimir .faq-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+body.theme-mimir .faq-item__question button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-block: var(--space-4);
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    transition: color var(--transition-fast);
+}
+
+body.theme-mimir .faq-item__question button:hover {
+    color: var(--color-accent-primary);
+}
+
+body.theme-mimir .faq-item__question button::after {
+    content: '+';
+    font-size: var(--text-xl);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+    color: var(--color-accent-primary);
+}
+
+body.theme-mimir .faq-item__question button[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+}
+
+body.theme-mimir .faq-item__answer {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    padding-bottom: var(--space-4);
+    padding-right: var(--space-5);
+}
+
+body.theme-mimir .faq-item__answer[hidden] {
+    display: none;
+}

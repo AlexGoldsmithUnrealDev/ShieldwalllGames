@@ -574,7 +574,228 @@
       </div>
     </section>
 
-  <!-- All sections added in subsequent prompts -->
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="section section--hero reveal" aria-labelledby="faq-heading" id="faq">
+      <div class="section__inner container" style="max-width:720px; margin-inline:auto;">
+
+        <div style="text-align:center; margin-bottom:2.5rem;">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-heading" id="faq-heading">Common questions</h2>
+        </div>
+
+        <dl class="faq-list">
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-1">
+                Is Mimir really free?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-1" hidden>
+              Yes. The Free tier includes the full desktop application and all
+              worldbuilding features. AI features (Ask Mimir, translation, MCP server)
+              work on Free if you bring your own API key from Anthropic, OpenAI,
+              or another provider. The paid tiers include managed AI access so you
+              don't need your own key.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-2">
+                What is an MCP server and why does it matter?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-2" hidden>
+              MCP stands for Model Context Protocol — an open standard that lets
+              AI tools read structured data from external sources. Mimir's MCP server
+              gives Claude, Cursor, and other AI tools direct access to your world
+              data. That means your AI assistant knows your characters, locations,
+              and lore without you having to paste it in every session.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-3">
+                What game engines does Mimir support?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-3" hidden>
+              Because Mimir exports to plain markdown and structured JSON,
+              it works with any engine that can read files — Unreal Engine,
+              Unity, Godot, and others. We are building dedicated integrations
+              for Unreal and Godot as priority targets, with Unity to follow.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-4">
+                Who is Mimir built for?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-4" hidden>
+              Primarily indie game developers who are also worldbuilders — people
+              building original IP and needing their lore to be as useful to their
+              tools as it is to their imagination. Mimir is also built for writers,
+              tabletop GMs, and filmmakers who want structured, AI-ready worldbuilding
+              without sacrificing creative control.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-5">
+                When does Mimir launch?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-5" hidden>
+              Mimir is in active development with a target launch window of
+              approximately 12 months. Beta access will be offered to waitlist
+              members before the public launch. Sign up below to be among the first.
+            </dd>
+          </div>
+
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BETA SIGNUP CTA
+         ============================================================ -->
+    <section class="section section--ask-mimir reveal" aria-labelledby="beta-heading" id="beta-signup">
+      <div class="section__inner container" style="text-align:center; max-width:600px; margin-inline:auto;">
+
+        <span class="section-label">Early Access</span>
+        <h2 class="section-heading" id="beta-heading">
+          Join the beta.
+        </h2>
+        <p class="section-subtext" style="margin-inline:auto; margin-bottom:2rem;">
+          Be among the first to use Mimir. Beta access opens before
+          public launch — waitlist members get in first.
+        </p>
+
+        <!-- Mimir email signup — copy from components/email-mimir.html -->
+        <!-- TODO: replace ACTION_URL with Buttondown Mimir list endpoint -->
+        <form
+          action="ACTION_URL"
+          method="post"
+          class="signup-form"
+          aria-label="Join the Mimir beta waitlist"
+          style="align-items:center; margin-inline:auto;"
+        >
+          <div class="signup-form__field" style="width:100%;">
+            <label for="email-mimir-cta" class="signup-form__label">
+              Your email address
+            </label>
+            <input
+              id="email-mimir-cta"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="you@example.com"
+              class="signup-form__input"
+              aria-required="true"
+              style="width:100%;"
+            />
+          </div>
+
+          <div class="signup-form__field" style="width:100%;">
+            <label for="use-case-cta" class="signup-form__label">
+              What will you use Mimir for? <span aria-label="optional">(optional)</span>
+            </label>
+            <select
+              id="use-case-cta"
+              name="metadata_use_case"
+              class="signup-form__select"
+              style="width:100%;"
+            >
+              <option value="">Select one…</option>
+              <option value="indie-game-dev">Indie game development</option>
+              <option value="novel-writing">Novel writing</option>
+              <option value="tabletop-rpg">Tabletop RPG campaigns</option>
+              <option value="film-screenwriting">Film or screenwriting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-pill" style="width:100%; justify-content:center;">
+            Join the beta waitlist
+          </button>
+          <p class="signup-form__note">
+            No spam. Unsubscribe any time. Double opt-in confirmation will be sent.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: same structure as studio footer, themed by body.theme-mimir -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+
+      <div class="site-footer__grid">
+
+        <div>
+          <a href="/mimir/" class="site-footer__wordmark" aria-label="Mimir home">
+            Mimir
+          </a>
+          <p class="site-footer__tagline">
+            Structured worldbuilding for indie developers, writers, and GMs.
+            Built by Shieldwall Games.
+          </p>
+          <div class="site-footer__social" aria-label="Social media links">
+            <a href="https://x.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- TODO: confirm social platforms and update URLs -->
+          </div>
+        </div>
+
+        <div>
+          <p class="site-footer__heading">Mimir</p>
+          <ul class="site-footer__links" role="list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#beta-signup">Join the beta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__heading">Shieldwall Games</p>
+          <ul class="site-footer__links" role="list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/ashborn/">Ashborn CCG</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">
+          &copy; 2025 Shieldwall Games Ltd. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
 
   <!-- Scripts: shared first, then Mimir-specific -->
   <script src="../scripts/main.js" defer></script>
