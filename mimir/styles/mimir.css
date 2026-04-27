@@ -298,3 +298,77 @@ body.theme-mimir .mimir-nav__drawer a:last-child {
 body.theme-mimir .mimir-nav__drawer a:hover {
     color: var(--color-accent-primary);
 }
+
+/* ==========================================================================
+   3. Atmospheric Backgrounds + Glow Overlays
+   Each Mimir section has a layered atmosphere:
+   - Base: --section-bg from token system
+   - Glow: radial gradient in --section-glow colour
+   - Grain: SVG noise texture overlay (subtle, felt not read)
+   All overlays use ::before and ::after on .section elements.
+   Content sits above via .section__inner z-index.
+   ========================================================================== */
+
+/* Radial glow — centred, uses section glow token */
+body.theme-mimir .section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 80% 60% at 50% 40%,
+        var(--section-glow, rgba(100, 120, 180, 0.15)),
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Grain overlay — same SVG noise technique as main site hero */
+body.theme-mimir .section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+/* Reduce grain in light mode — already light, less needed */
+[data-theme="light"] body.theme-mimir .section::after {
+    opacity: 0.25;
+}
+
+/* Hero section gets a stronger downward vignette */
+body.theme-mimir .section--hero::before {
+    background:
+        radial-gradient(
+            ellipse 60% 50% at 50% 30%,
+            var(--section-glow, rgba(100, 120, 180, 0.25)),
+            transparent 70%
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 60%,
+            rgba(0, 0, 0, 0.4) 100%
+        );
+}
+
+/* Edge glow — for sections where the character art sits at the right edge */
+body.theme-mimir .section--glow-right::before {
+    background: radial-gradient(
+        ellipse 60% 70% at 85% 50%,
+        var(--section-glow, rgba(100, 120, 180, 0.2)),
+        transparent 70%
+    );
+}
+
+/* Edge glow — character art at left edge */
+body.theme-mimir .section--glow-left::before {
+    background: radial-gradient(
+        ellipse 60% 70% at 15% 50%,
+        var(--section-glow, rgba(100, 120, 180, 0.2)),
+        transparent 70%
+    );
+}
