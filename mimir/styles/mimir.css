@@ -372,3 +372,145 @@ body.theme-mimir .section--glow-left::before {
         transparent 70%
     );
 }
+
+/* ==========================================================================
+   4. Character Art Treatment
+   Edge-positioned cutout illustrations with glow halos.
+   Image references are clean swaps — no layout rewrite needed.
+   ========================================================================== */
+
+body.theme-mimir .char-art {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (min-width: 768px) {
+    body.theme-mimir .char-art {
+        width: 40%;
+    }
+}
+
+body.theme-mimir .char-art__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Character images should be PNGs with transparency */
+    filter: drop-shadow(0 0 40px var(--section-glow, rgba(100, 120, 180, 0.4)));
+}
+
+/* Placeholder state — shown until real art is supplied */
+body.theme-mimir .char-art__placeholder {
+    aspect-ratio: 3 / 4;
+    background-color: var(--color-bg-raised);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    text-align: center;
+    padding: var(--space-3);
+}
+
+/* Annotation marker — the small + motif */
+body.theme-mimir .annotation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--section-accent, var(--color-accent-primary));
+    pointer-events: none;
+}
+
+body.theme-mimir .annotation::before {
+    content: '+';
+    font-size: var(--text-lg);
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+body.theme-mimir .annotation__line {
+    width: 32px;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   5. Screenshot Treatment
+   Floating app screenshots with rounded corners, glow, slight tilt.
+   ========================================================================== */
+
+body.theme-mimir .screenshot {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px var(--color-border),
+        0 8px 40px var(--color-shadow),
+        0 0 60px var(--section-glow, rgba(100, 120, 180, 0.2));
+}
+
+body.theme-mimir .screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
+/* Slight tilt variants — apply to .screenshot wrapper */
+body.theme-mimir .screenshot--tilt-right {
+    transform: rotate(1.5deg);
+}
+
+body.theme-mimir .screenshot--tilt-left {
+    transform: rotate(-1.5deg);
+}
+
+/* Placeholder state */
+body.theme-mimir .screenshot__placeholder {
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(
+        135deg,
+        var(--color-bg-alt),
+        var(--color-bg-raised)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+}
+
+/* ==========================================================================
+   6. Annotation Motif
+   Tasteful decorative markers — use sparingly.
+   ========================================================================== */
+
+/* Highlight underline — hand-drawn style */
+body.theme-mimir .highlight {
+    position: relative;
+    display: inline;
+    color: var(--section-accent, var(--color-accent-primary));
+}
+
+body.theme-mimir .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--section-accent, var(--color-accent-primary));
+    opacity: 0.5;
+    border-radius: 1px;
+}
