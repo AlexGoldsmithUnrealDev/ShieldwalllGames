@@ -208,3 +208,137 @@ table {
     --font-display:           'Cormorant Garamond', serif; /* PLACEHOLDER */
     --font-body:              'Inter', sans-serif; /* PLACEHOLDER */
 }
+
+/* ==========================================================================
+   6. Mimir Section Accent Tokens
+   Each Mimir feature section has its own colour wash. Tokens are scoped
+   per section class. Components inside each section use var(--section-accent)
+   etc. rather than hardcoded values.
+   ========================================================================== */
+
+/* --- Section accents: dark mode --- */
+
+[data-theme="dark"] body.theme-mimir .section--hero {
+    --section-bg:          #0d1117;
+    --section-glow:        rgba(100, 120, 180, 0.3);
+    --section-accent:      #c9a84c;
+    --section-accent-text: #c9a84c;
+    --section-cta-bg:      #c9a84c;
+}
+
+[data-theme="dark"] body.theme-mimir .section--engine {
+    --section-bg:          #071a1a;
+    --section-glow:        rgba(0, 200, 200, 0.2);
+    --section-accent:      #00d4d4;
+    --section-accent-text: #00d4d4;
+    --section-cta-bg:      #00b8b8;
+}
+
+[data-theme="dark"] body.theme-mimir .section--schemas {
+    --section-bg:          #1a1000;
+    --section-glow:        rgba(200, 140, 0, 0.2);
+    --section-accent:      #f0a500;
+    --section-accent-text: #f0a500;
+    --section-cta-bg:      #c88a00;
+}
+
+[data-theme="dark"] body.theme-mimir .section--maps {
+    --section-bg:          #071a0f;
+    --section-glow:        rgba(0, 180, 80, 0.2);
+    --section-accent:      #4ade80;
+    --section-accent-text: #4ade80;
+    --section-cta-bg:      #22c55e;
+}
+
+[data-theme="dark"] body.theme-mimir .section--ask-mimir {
+    --section-bg:          #120d1a;
+    --section-glow:        rgba(180, 0, 220, 0.25);
+    --section-accent:      #d946ef;
+    --section-accent-text: #d946ef;
+    --section-cta-bg:      #a21caf;
+}
+
+[data-theme="dark"] body.theme-mimir .section--translator {
+    --section-bg:          #1a080d;
+    --section-glow:        rgba(200, 60, 80, 0.2);
+    --section-accent:      #fb7185;
+    --section-accent-text: #fb7185;
+    --section-cta-bg:      #e11d48;
+}
+
+[data-theme="dark"] body.theme-mimir .section--community {
+    --section-bg:          #10071a;
+    --section-glow:        rgba(160, 60, 220, 0.2);
+    --section-accent:      #e879f9;
+    --section-accent-text: #e879f9;
+    --section-cta-bg:      #c026d3;
+}
+
+/* --- Section accents: light mode (accents darkened for WCAG AA on light bg) --- */
+
+[data-theme="light"] body.theme-mimir .section--hero {
+    --section-bg:          #faf8f0;
+    --section-glow:        rgba(100, 120, 180, 0.08);
+    --section-accent:      #7a6010;
+    --section-accent-text: #7a6010;
+    --section-cta-bg:      #7a6010;
+}
+
+[data-theme="light"] body.theme-mimir .section--engine {
+    --section-bg:          #f0fafa;
+    --section-glow:        rgba(0, 150, 150, 0.08);
+    --section-accent:      #0a7070;
+    --section-accent-text: #0a7070;
+    --section-cta-bg:      #0a7070;
+}
+
+[data-theme="light"] body.theme-mimir .section--schemas {
+    --section-bg:          #fdf6e8;
+    --section-glow:        rgba(160, 100, 0, 0.08);
+    --section-accent:      #8a5c00;
+    --section-accent-text: #8a5c00;
+    --section-cta-bg:      #8a5c00;
+}
+
+[data-theme="light"] body.theme-mimir .section--maps {
+    --section-bg:          #f0faf4;
+    --section-glow:        rgba(0, 130, 50, 0.08);
+    --section-accent:      #166534;
+    --section-accent-text: #166534;
+    --section-cta-bg:      #166534;
+}
+
+[data-theme="light"] body.theme-mimir .section--ask-mimir {
+    --section-bg:          #faf0fc;
+    --section-glow:        rgba(130, 0, 160, 0.08);
+    --section-accent:      #7e22ce;
+    --section-accent-text: #7e22ce;
+    --section-cta-bg:      #7e22ce;
+}
+
+[data-theme="light"] body.theme-mimir .section--translator {
+    --section-bg:          #fdf0f2;
+    --section-glow:        rgba(160, 20, 40, 0.08);
+    --section-accent:      #9f1239;
+    --section-accent-text: #9f1239;
+    --section-cta-bg:      #9f1239;
+}
+
+[data-theme="light"] body.theme-mimir .section--community {
+    --section-bg:          #faf0fd;
+    --section-glow:        rgba(120, 20, 160, 0.08);
+    --section-accent:      #86198f;
+    --section-accent-text: #86198f;
+    --section-cta-bg:      #86198f;
+}
+
+/* ==========================================================================
+   7. Section Token Application
+   Wires --section-bg to the section container background only.
+   Components inside sections inherit the other tokens via var().
+   Do NOT put component styles here — those live in mimir/styles/mimir.css.
+   ========================================================================== */
+
+body.theme-mimir section[class*="section--"] {
+    background-color: var(--section-bg);
+}
