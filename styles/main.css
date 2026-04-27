@@ -190,6 +190,15 @@ table {
     --font-body:                'EB Garamond', serif; /* PLACEHOLDER FONT */
 }
 
+/*
+ * CONTRAST NOTE:
+ * --color-accent-secondary (#b8960c) on --color-bg (#f4edd3) = ~2.85:1
+ * Fails WCAG AA for normal text. Passes for large text (3:1 threshold) only marginally.
+ * Affected: .section-label, eyebrow text on light studio backgrounds.
+ * Recommendation: darken to #8a7209 (~4.5:1) if AA compliance required for small text.
+ * Decision deferred to client — do not change the variable without approval.
+ */
+
 /* --- Studio: dark mode --- */
 [data-theme="dark"] body.theme-studio {
     --color-bg:                 #1a1714;
@@ -431,6 +440,27 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Skip-to-main link — first focusable element on every page */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-3);
+    background-color: var(--color-accent-primary, #8b2500);
+    color: #fff;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body, sans-serif);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    z-index: var(--z-toast);
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: var(--space-3);
 }
 
 /* ==========================================================================
