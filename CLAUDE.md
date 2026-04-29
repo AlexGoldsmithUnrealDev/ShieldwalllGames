@@ -17,12 +17,48 @@ A structured worldbuilding platform for indie game developers, writers, filmmake
 - Mimir ships before any Shieldwall game and will be used internally to develop them
 - Previously called "Lorekeeper" — that name is retired. Never use it.
 
-**Pricing tiers (pre-launch, subject to confirmation):**
-- Free — full desktop app, all worldbuilding features, bring-your-own-API-key for AI
-- Studio — ~£8/month or £72/year — managed AI access
-- Saga — ~£18/month or £180/year — adds session capture (V2 feature)
+**Pricing tiers (locked — use these values everywhere, never the old ones):**
 
-All pricing shown with "subject to change at launch" framing. CTAs are email signup, not purchase buttons.
+Mimir Core (Free):
+- Full worldbuilding tool, local-first, unlimited entries
+- Custom schemas, family trees, story arcs, basic maps, basic calendars
+- Git version history, markdown export, mobile companion (read-only PWA)
+- Translator — pay-as-you-go credits
+- Ask Mimir — pay-as-you-go credits
+- NOT included: engine exports, MCP server, quest/dialogue editor,
+  time-aware maps, advanced features
+
+Mimir Studio — £10/month or £100/year:
+- Everything in Free, plus:
+- All engine exports (Unreal, Unity, Godot, generic JSON)
+- MCP server mode
+- Quest and dialogue graph editor with simulation mode
+- Advanced maps (all phases including time-aware layers)
+- AI features with monthly quotas
+- Async git collaboration (V1.5)
+- Priority support, early access
+
+Mimir Studio Pro — £20/month or £200/year:
+- Everything in Studio, plus:
+- Session capture with audio transcription — 15 hours/month (V2)
+- Higher AI quotas
+- Procedural lore expansion, branching canon (V2)
+- Game data round-tripping with Unreal (V2)
+- Real-time multiplayer cursors, opt-in (V2)
+
+Pay-as-you-go credit packs (for Free tier AI features):
+- £5 = 500 credits
+- £10 = 1,000 credits
+- £20 = 2,000 credits
+- Credits never expire. Carry over to paid subscription if user upgrades.
+
+**Critical rules:**
+- NEVER mention bring-your-own-key (BYOK) anywhere on the site — not as
+  a current or future feature. All AI routes through Mimir's broker.
+- The previous "Saga" tier name is retired. Use "Studio Pro" everywhere.
+- Recommended/featured pricing tier for UI emphasis: Studio (middle tier).
+- All pricing shown with "subject to change before launch" caveat.
+- CTAs are email signup ("Join the beta"), not purchase buttons.
 
 ### Ashborn
 A brand and game line, not a single product. All Ashborn games share the same Viking Age fictional world.
@@ -121,6 +157,19 @@ Mimir section accent colours scoped per section class (.section--hero, --engine,
 - **Atmospheric backgrounds**: darkened per section, subtle CSS particles/haze overlay. Felt, not read.
 - **CTAs**: rounded pill buttons, section accent colour, soft glow halo, icon + label.
 - **Ask Mimir entity (V1)**: static well-with-wisp illustration. Animated blob deferred to V1.1 — do not build animation infrastructure now.
+
+**V1 headline features (for homepage prominence):**
+- Quest and dialogue graph editor — promoted from V1.5 to V1.
+  This is the headline feature for indie game devs.
+  Node-based editing, global variables, conditions, simulation mode,
+  engine exports.
+- Async git-based collaboration — headline V1.5 feature.
+
+**Roadmap page:**
+- Lives at /mimir/roadmap.html
+- Linked from Mimir nav and pricing section
+- Data-driven: mimir/roadmap-data.json rendered by mimir/scripts/roadmap.js
+- Status system: shipped / in-progress / planned / new
 
 ---
 
@@ -263,6 +312,13 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [ ] GitHub Pages enabled in repo settings (Source: GitHub Actions)
 - [ ] Site tested live on GitHub Pages URL
 - [ ] Custom domain configured in GitHub Pages settings
+- [ ] Mimir homepage — eight sections (quest editor section added)
+- [ ] Mimir pricing section — updated to locked pricing
+- [ ] Mimir roadmap page (/mimir/roadmap.html)
+- [ ] Mimir roadmap data (mimir/roadmap-data.json)
+- [ ] Mimir FAQ — updated with six new entries
+- [ ] Footer roadmap links — all pages
+- [ ] Ashborn page — explicit £30 pricing added
 
 ---
 
