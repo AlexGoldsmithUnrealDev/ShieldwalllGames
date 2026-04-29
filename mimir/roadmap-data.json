@@ -1,0 +1,115 @@
+{
+  "lastUpdated": "2025-01-01",
+  "versions": [
+    {
+      "id": "v1",
+      "label": "V1",
+      "title": "Ready for Launch",
+      "status": "in-progress",
+      "pitch": "Join the beta and get immediate access to everything in V1 the moment it launches.",
+      "categories": [
+        {
+          "name": "Worldbuilding Core",
+          "features": [
+            { "id": "f-entry-types", "name": "Entry types and schemas", "desc": "Characters, places, factions, and more — with custom user-defined types for any world.", "status": "in-progress" },
+            { "id": "f-wiki-links", "name": "Wiki-links and backlinks", "desc": "Connect entries with [[wiki-link]] syntax. Backlinks surface automatically.", "status": "in-progress" },
+            { "id": "f-family-trees", "name": "Family trees and relationship webs", "desc": "Visual family trees and relationship maps between any entry types.", "status": "in-progress" },
+            { "id": "f-story-arcs", "name": "Story arcs and narrative tools", "desc": "Track narrative arcs across characters, locations, and events.", "status": "in-progress" },
+            { "id": "f-calendars", "name": "Custom calendars", "desc": "Define custom months, weeks, and eras. Attach events to any calendar date.", "status": "in-progress" },
+            { "id": "f-timeline", "name": "Timeline", "desc": "Single-track linear timeline. Visual overview of your world's history.", "status": "in-progress" },
+            { "id": "f-spoiler-levels", "name": "Per-entry spoiler levels", "desc": "Mark entries with spoiler levels. Filter your world view by what you want to see.", "status": "planned" },
+            { "id": "f-connections-graph", "name": "World connections graph", "desc": "A visual graph of how every entry in your world connects to every other.", "status": "planned" }
+          ]
+        },
+        {
+          "name": "Game Development",
+          "features": [
+            { "id": "f-quest-editor", "name": "Quest and dialogue graph editor", "desc": "Node-based editor for branching quests and conversations. Global variables, conditions, simulation mode, and direct engine export.", "status": "in-progress", "badge": "new" },
+            { "id": "f-engine-exports", "name": "Engine exports", "desc": "Export world data and dialogue graphs directly to Unreal Engine, Unity, and Godot.", "status": "in-progress" },
+            { "id": "f-mcp-server", "name": "MCP server for AI tool integration", "desc": "Connects Mimir to Claude, Cursor, and other AI tools. Your assistant knows your world.", "status": "in-progress" },
+            { "id": "f-basic-maps", "name": "Basic interactive maps", "desc": "Single-layer maps with markers linked to world entries.", "status": "in-progress" },
+            { "id": "f-naming-engine", "name": "Naming consistency engine", "desc": "CLI tool that checks your manuscript or script for naming inconsistencies against your world entries.", "status": "planned" }
+          ]
+        },
+        {
+          "name": "AI Features",
+          "features": [
+            { "id": "f-ask-mimir", "name": "Ask Mimir AI assistant", "desc": "Query your entire world in natural language. Powered by Claude — knows every entry you've written.", "status": "in-progress" },
+            { "id": "f-translator", "name": "Translator for constructed languages", "desc": "Define phonemes, grammar, and vocabulary. Translate any text into your invented language consistently.", "status": "in-progress" }
+          ]
+        },
+        {
+          "name": "Platform",
+          "features": [
+            { "id": "f-git-history", "name": "Git auto-commit and version history", "desc": "Every change is committed automatically. Full version history, branch and merge support.", "status": "in-progress" },
+            { "id": "f-mobile-pwa", "name": "Mobile companion", "desc": "Read-only PWA for iOS and Android. Access your world on any device.", "status": "planned" },
+            { "id": "f-visual-overhaul", "name": "Visual and UX overhaul with biome themes", "desc": "A polished, themeable interface that matches the mood of your world.", "status": "planned" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v1-5",
+      "label": "V1.5",
+      "title": "Major Expansion",
+      "status": "planned",
+      "pitch": "Subscribe to Studio at launch and every V1.5 feature is added to your account automatically — no upgrade fees.",
+      "categories": [
+        {
+          "name": "Collaboration",
+          "features": [
+            { "id": "f-git-collab", "name": "Async git-based collaboration", "desc": "Your team's design pipeline already uses git for code. Mimir uses git for world data. Branch, merge, and resolve conflicts on your world like you would on your codebase.", "status": "planned", "badge": "new" }
+          ]
+        },
+        {
+          "name": "Maps and World",
+          "features": [
+            { "id": "f-maps-full", "name": "Full interactive maps with time-aware layers", "desc": "Maps that show your world at any point in its history. Layer borders, settlements, and events across time.", "status": "planned" },
+            { "id": "f-asset-linking", "name": "Asset reference linking for game projects", "desc": "Link Mimir entries directly to game assets — meshes, textures, audio files — by path or reference.", "status": "planned" },
+            { "id": "f-writing-systems", "name": "Custom writing systems for languages", "desc": "Define custom scripts and writing systems for invented languages. Render text in your world's alphabet.", "status": "planned" }
+          ]
+        },
+        {
+          "name": "Writing and Export",
+          "features": [
+            { "id": "f-manuscript", "name": "Manuscript editor", "desc": "Long-form writing inside Mimir, with direct wiki-link access to your world entries as you write.", "status": "planned" },
+            { "id": "f-localisation", "name": "Localisation workflow", "desc": "Multi-language support for game projects. Manage translations of in-game text alongside your world data.", "status": "planned" },
+            { "id": "f-whiteboard", "name": "Whiteboard and canvas integration", "desc": "A freeform canvas for planning, brainstorming, and visual worldbuilding alongside structured entries.", "status": "planned" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "label": "V2",
+      "title": "Studios and Production Teams",
+      "status": "planned",
+      "pitch": "V2 features are included in Studio Pro. Subscribe to Studio Pro at launch and they're added to your account the moment they ship.",
+      "categories": [
+        {
+          "name": "Session Capture",
+          "features": [
+            { "id": "f-session-capture", "name": "Session capture with audio transcription", "desc": "Record a worldbuilding session, design meeting, or playtest. Mimir transcribes the audio and extracts new world entries automatically.", "status": "planned" },
+            { "id": "f-entry-extraction", "name": "AI-powered entry extraction", "desc": "After session capture, Mimir identifies new characters, places, factions, and events and creates draft entries for review.", "status": "planned" }
+          ]
+        },
+        {
+          "name": "Advanced World Tools",
+          "features": [
+            { "id": "f-procedural-lore", "name": "Procedural lore expansion", "desc": "AI-assisted expansion of thin entries into full lore, with canon enforcement to prevent contradictions.", "status": "planned" },
+            { "id": "f-branching-canon", "name": "Branching canon for multiple endings", "desc": "Maintain separate canonical timelines for games with multiple endings or branching narratives.", "status": "planned" },
+            { "id": "f-round-tripping", "name": "Game data round-tripping with Unreal", "desc": "Push changes made in Unreal back into Mimir automatically. Your world data and game data stay in sync.", "status": "planned" }
+          ]
+        },
+        {
+          "name": "Team Features",
+          "features": [
+            { "id": "f-multiplayer-cursors", "name": "Real-time multiplayer cursors", "desc": "See where your collaborators are working in real time. Opt-in — works alongside async git collaboration.", "status": "planned" },
+            { "id": "f-template-library", "name": "Public template library", "desc": "Share and discover world schemas, calendar templates, and entry type collections from the Mimir community.", "status": "planned" },
+            { "id": "f-engine-sdk", "name": "Engine plugin SDK", "desc": "Build your own Mimir engine integrations. Full SDK with documentation and example plugins.", "status": "planned" }
+          ]
+        }
+      ]
+    }
+  ]
+}
