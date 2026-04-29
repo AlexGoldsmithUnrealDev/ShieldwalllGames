@@ -312,13 +312,13 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [ ] GitHub Pages enabled in repo settings (Source: GitHub Actions)
 - [ ] Site tested live on GitHub Pages URL
 - [ ] Custom domain configured in GitHub Pages settings
-- [ ] Mimir homepage — eight sections (quest editor section added)
-- [ ] Mimir pricing section — updated to locked pricing
-- [ ] Mimir roadmap page (/mimir/roadmap.html)
-- [ ] Mimir roadmap data (mimir/roadmap-data.json)
-- [ ] Mimir FAQ — updated with six new entries
-- [ ] Footer roadmap links — all pages
-- [ ] Ashborn page — explicit £30 pricing added
+- [x] Mimir homepage — eight sections (quest editor section added)
+- [x] Mimir pricing section — updated to locked pricing
+- [x] Mimir roadmap page (/mimir/roadmap.html)
+- [x] Mimir roadmap data (mimir/roadmap-data.json)
+- [x] Mimir FAQ — updated with eight entries
+- [x] Footer roadmap links — all pages
+- [x] Ashborn page — explicit £30 pricing added
 
 ---
 

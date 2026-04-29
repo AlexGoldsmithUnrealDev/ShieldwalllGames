@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1714" />
+
+  <title>Mimir Roadmap — What's Coming</title>
+  <meta name="description" content="See what's planned for Mimir — the structured worldbuilding platform. V1 features, V1.5 expansion, and V2 studio tools." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mimir Roadmap" />
+  <meta property="og:description" content="See what's planned for Mimir — V1, V1.5, and V2 features for worldbuilders and game developers." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/roadmap.html" />
+  <meta property="og:image" content="" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+  <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/roadmap.html" />
+
+  <!-- Styles: shared tokens, Mimir components, roadmap-specific -->
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css" />
+  <link rel="stylesheet" href="styles/roadmap.css" />
+
+  <!-- Theme init — Mimir defaults to dark -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('swg-theme');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemDark ? 'dark' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body class="theme-mimir">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top bar -->
+  <div class="top-bar" role="navigation" aria-label="Return to Shieldwall Games">
+    <div class="top-bar__inner">
+      <a href="../" class="top-bar__back">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Shieldwall Games
+      </a>
+      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
+    </div>
+  </div>
+
+  <!-- Main Mimir navigation -->
+  <header class="mimir-nav" role="banner">
+    <div class="mimir-nav__inner">
+
+      <a href="./" class="mimir-nav__wordmark" aria-label="Mimir home">
+        Mimir
+      </a>
+
+      <nav aria-label="Mimir navigation">
+        <ul class="mimir-nav__links" role="list">
+          <li><a href="./#features">Features</a></li>
+          <li><a href="./#pricing">Pricing</a></li>
+          <li><a href="./#faq">FAQ</a></li>
+          <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
+        </ul>
+      </nav>
+
+      <a href="./#beta-signup" class="mimir-nav__cta">
+        Join the beta
+      </a>
+
+      <button
+        class="mimir-nav__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mimir-mobile-drawer"
+        type="button"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mimir-nav__drawer" id="mimir-mobile-drawer" role="navigation" aria-label="Mimir mobile navigation">
+      <a href="./#features">Features</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="./#faq">FAQ</a>
+      <a href="roadmap.html" aria-current="page">Roadmap</a>
+      <a href="./#beta-signup">Join the beta</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="section section--hero roadmap-hero" aria-labelledby="roadmap-heading">
+      <div class="section__inner container">
+        <span class="section-label">Roadmap</span>
+        <h1 class="section-heading" id="roadmap-heading">
+          What we're building.
+        </h1>
+        <p class="section-subtext">
+          Everything planned for Mimir — from V1 launch features
+          to long-term vision. Subscribe to Studio at launch and
+          every update ships to your account automatically.
+        </p>
+        <p class="roadmap-hero__updated" id="roadmap-last-updated">
+          Loading…
+        </p>
+      </div>
+    </section>
+
+    <!-- Roadmap content — rendered by roadmap.js from roadmap-data.json -->
+    <section class="section section--hero" aria-label="Roadmap details">
+      <div class="section__inner container">
+        <div id="roadmap-content">
+          <p class="roadmap-loading">Loading roadmap…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--ask-mimir reveal" aria-labelledby="roadmap-cta-heading">
+      <div class="section__inner container" style="text-align:center; max-width:600px; margin-inline:auto;">
+        <span class="section-label">Early Access</span>
+        <h2 class="section-heading" id="roadmap-cta-heading">
+          Join the beta.
+        </h2>
+        <p class="section-subtext" style="margin-inline:auto;">
+          Be among the first to use Mimir. Beta access opens
+          before public launch — waitlist members get in first.
+        </p>
+        <a href="./#beta-signup" class="btn-pill" style="margin-top:1rem;">
+          Join the beta waitlist
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+
+      <div class="site-footer__grid">
+
+        <div>
+          <a href="./" class="site-footer__wordmark" aria-label="Mimir home">
+            Mimir
+          </a>
+          <p class="site-footer__tagline">
+            Structured worldbuilding for indie developers, writers, and GMs.
+            Built by Shieldwall Games.
+          </p>
+          <div class="site-footer__social" aria-label="Social media links">
+            <a href="https://x.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="site-footer__heading">Mimir</p>
+          <ul class="site-footer__links" role="list">
+            <li><a href="./#features">Features</a></li>
+            <li><a href="./#pricing">Pricing</a></li>
+            <li><a href="./#faq">FAQ</a></li>
+            <li><a href="./#beta-signup">Join the beta</a></li>
+            <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="site-footer__heading">Shieldwall Games</p>
+          <ul class="site-footer__links" role="list">
+            <li><a href="../">Home</a></li>
+            <li><a href="../ashborn/">Ashborn CCG</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">
+          &copy; 2025 Shieldwall Games Ltd. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts: shared, Mimir, roadmap -->
+  <script src="../scripts/main.js" defer></script>
+  <script src="scripts/mimir.js" defer></script>
+  <script src="scripts/roadmap.js" defer></script>
+
+</body>
+</html>
