@@ -839,73 +839,149 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-1">
-                Is Mimir really free?
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-1">
+                Is Mimir Core really free forever?
               </button>
             </dt>
             <dd class="faq-item__answer" id="faq-1" hidden>
-              Yes. Mimir Core is free forever and includes the full desktop
-              application with all worldbuilding features. AI features
-              (Ask Mimir, translation) are available on the Free tier via
-              pay-as-you-go credit packs. The paid tiers include monthly
-              AI quotas so you don't need to manage credits at all.
+              Yes. Mimir Core is free with no time limit and no
+              credit card required. It includes the complete
+              worldbuilding tool — unlimited entries, custom schemas,
+              maps, timelines, export, and the mobile companion.
+              AI features (Translator and Ask Mimir) are available
+              on the free tier using pay-as-you-go credit packs.
             </dd>
           </div>
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-2">
-                What is an MCP server and why does it matter?
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-2">
+                Why don't you support bring-your-own-API-key?
               </button>
             </dt>
             <dd class="faq-item__answer" id="faq-2" hidden>
-              MCP stands for Model Context Protocol — an open standard that lets
-              AI tools read structured data from external sources. Mimir's MCP server
-              gives Claude, Cursor, and other AI tools direct access to your world
-              data. That means your AI assistant knows your characters, locations,
-              and lore without you having to paste it in every session.
+              Because it doesn't work as a business. If we supported
+              BYOK, anyone with an Anthropic account would get Mimir's
+              AI features for free — which means we couldn't fund
+              development, keep the lights on, or build any of the
+              features on the roadmap. All AI routes through Mimir's
+              broker so we can charge fairly for what we provide and
+              keep improving it. The pay-as-you-go credit packs exist
+              precisely so you can try AI features at low cost before
+              committing to a subscription.
             </dd>
           </div>
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-3">
-                What game engines does Mimir support?
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-3">
+                How do pay-as-you-go credits work?
               </button>
             </dt>
             <dd class="faq-item__answer" id="faq-3" hidden>
-              Because Mimir exports to plain markdown and structured JSON,
-              it works with any engine that can read files — Unreal Engine,
-              Unity, Godot, and others. We are building dedicated integrations
-              for Unreal and Godot as priority targets, with Unity to follow.
+              Credit packs can be purchased at any time — £5 for 500
+              credits, £10 for 1,000, £20 for 2,000. Credits are spent
+              when you use AI features: translations, Ask Mimir queries,
+              and similar. Credits never expire. If you upgrade to a
+              Studio subscription, your remaining credits carry over and
+              are used after your monthly quota runs out.
             </dd>
           </div>
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-4">
-                Who is Mimir built for?
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-4">
+                What happens to my work if I cancel my subscription?
               </button>
             </dt>
             <dd class="faq-item__answer" id="faq-4" hidden>
-              Primarily indie game developers who are also worldbuilders — people
-              building original IP and needing their lore to be as useful to their
-              tools as it is to their imagination. Mimir is also built for writers,
-              tabletop GMs, and filmmakers who want structured, AI-ready worldbuilding
-              without sacrificing creative control.
+              Nothing happens to your world data — it lives as files
+              on your computer and always will. Cancelling removes
+              access to paid features (engine exports, MCP server,
+              quest editor, AI quotas) but never removes your data
+              or locks you out of what you've built. You keep
+              full access to Mimir Core and everything in it.
+              You can re-subscribe at any time.
             </dd>
           </div>
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-5">
-                When does Mimir launch?
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-5">
+                Will prices change after launch?
               </button>
             </dt>
             <dd class="faq-item__answer" id="faq-5" hidden>
-              Mimir is in active development with a target launch window of
-              approximately 12 months. Beta access will be offered to waitlist
-              members before the public launch. Sign up below to be among the first.
+              They might eventually — building and maintaining Mimir
+              has real costs. But we commit to: 30-day notice before
+              any price increase, a minimum 12-month price lock for
+              existing subscribers at the time of any change, and
+              the right to cancel at the original price during that
+              notice period. Early subscribers are protected.
+              We'd rather give you time to decide than spring a
+              surprise renewal.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-6">
+                What if Claude (the AI) has an outage?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-6" hidden>
+              All non-AI features keep working normally —
+              worldbuilding, maps, schemas, exports, the quest editor.
+              For AI features, you can optionally enable OpenAI as a
+              backup provider in your Mimir settings. When enabled,
+              if Anthropic is unavailable, Mimir automatically routes
+              to OpenAI temporarily. You'll see a banner when this
+              happens. If you'd rather wait for Claude to return,
+              just leave failover disabled — AI features will pause
+              gracefully and resume when the service recovers.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-7">
+                Can my team use Mimir together?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-7" hidden>
+              Async git-based collaboration is coming in V1.5 —
+              included in Studio at no extra cost. The approach
+              is built around how game development teams already
+              work: your code lives in git, your world data should
+              too. Mimir's collaboration story is async,
+              conflict-aware, and doesn't require everyone to be
+              online at the same time.
+              <a href="roadmap.html">See the full roadmap</a>
+              for what's coming in V1.5.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false"
+                aria-controls="faq-8">
+                What engines does Mimir export to?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-8" hidden>
+              V1 supports Unreal Engine, Unity, Godot, and a generic
+              structured JSON export that works with any engine that
+              can read files. The quest and dialogue editor exports
+              directly to all three supported engines.
+              Game data round-tripping with Unreal (pushing changes
+              from the engine back into Mimir) is a V2 feature.
             </dd>
           </div>
 
