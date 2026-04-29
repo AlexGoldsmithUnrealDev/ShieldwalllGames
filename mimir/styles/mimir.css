@@ -1206,3 +1206,148 @@ body.theme-mimir .faq-item__answer {
 body.theme-mimir .faq-item__answer[hidden] {
     display: none;
 }
+
+/* ==========================================================================
+   PAYG Credit Blocks — pricing section
+   ========================================================================== */
+
+body.theme-mimir .payg-block {
+    margin-top: var(--space-7);
+    padding: var(--space-5);
+    background-color: var(--color-bg-raised);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+body.theme-mimir .payg-block__heading {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+}
+
+body.theme-mimir .payg-block__subtext {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    max-width: var(--max-width-text);
+    margin-inline: auto;
+    margin-bottom: var(--space-4);
+    line-height: 1.7;
+}
+
+body.theme-mimir .payg-block__packs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    justify-content: center;
+}
+
+body.theme-mimir .payg-pack {
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+body.theme-mimir .payg-pack__price {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-accent-primary);
+}
+
+body.theme-mimir .payg-pack__credits {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+body.theme-mimir .payg-pack__note {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Pricing Commitments — anti-lock-in block
+   ========================================================================== */
+
+body.theme-mimir .pricing-commitments {
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+body.theme-mimir .pricing-commitments__heading {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+}
+
+body.theme-mimir .pricing-commitments__subtext {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    max-width: var(--max-width-text);
+    margin-inline: auto;
+    margin-bottom: var(--space-5);
+    line-height: 1.7;
+}
+
+body.theme-mimir .pricing-commitments__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    text-align: left;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+    body.theme-mimir .pricing-commitments__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+body.theme-mimir .pricing-commitment {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+}
+
+body.theme-mimir .pricing-commitment__icon {
+    color: var(--color-accent-primary);
+    font-size: var(--text-lg);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+body.theme-mimir .pricing-commitment strong {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+}
+
+body.theme-mimir .pricing-commitment p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}

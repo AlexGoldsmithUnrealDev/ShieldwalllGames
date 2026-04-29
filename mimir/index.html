@@ -552,21 +552,26 @@
          PRICING — stable anchor at #pricing
          Do not rename the id — it is referenced externally.
          ============================================================ -->
-    <section class="section section--hero reveal" aria-labelledby="pricing-heading" id="pricing">
+    <section class="section section--hero reveal"
+      aria-labelledby="pricing-heading" id="pricing">
       <div class="section__inner container">
 
-        <div style="text-align:center; max-width:640px; margin-inline:auto; margin-bottom:3rem;">
+        <div style="text-align:center; max-width:680px;
+          margin-inline:auto; margin-bottom:3rem;">
           <span class="section-label">Pricing</span>
           <h2 class="section-heading" id="pricing-heading">
             Honest pricing.<br />No surprises.
           </h2>
           <p class="section-subtext" style="margin-inline:auto;">
-            Mimir is free to use with your own API key.
-            Studio and Saga tiers add managed AI access
-            so you can focus on building, not billing.
+            Mimir Core is free forever. Studio adds everything you need
+            to ship games. Pay-as-you-go credits let you try AI features
+            before committing to a subscription.
           </p>
-          <p style="font-size:0.8rem; color:var(--color-text-secondary); margin-top:0.5rem; opacity:0.7;">
-            All prices subject to change at launch.
+          <p style="font-size:0.8rem; color:var(--color-text-secondary);
+            margin-top:0.75rem; opacity:0.7;">
+            All prices subject to change before launch.
+            Early subscribers are grandfathered at their original price
+            for a minimum of 12 months after any increase.
           </p>
         </div>
 
@@ -574,79 +579,246 @@
 
           <!-- Free tier -->
           <div class="pricing-card">
-            <p class="pricing-card__tier">Free</p>
-            <p class="pricing-card__price">£0<span> / forever</span></p>
+            <div>
+              <p class="pricing-card__tier">Mimir Core</p>
+              <p style="font-size:0.8rem; color:var(--color-text-secondary);
+                margin-top:0.25rem;">
+                The complete worldbuilding tool
+              </p>
+            </div>
+            <p class="pricing-card__price">
+              £0<span> / forever</span>
+            </p>
             <p class="pricing-card__desc">
-              Full desktop app with all worldbuilding features.
-              Bring your own API key for AI features.
+              A full worldbuilding tool you fully own.
+              Your data, your files, yours forever —
+              whether you subscribe or not.
             </p>
             <ul class="pricing-card__features" role="list">
               <li>Unlimited world entries</li>
-              <li>Custom schemas</li>
-              <li>Markdown file export</li>
-              <li>MCP server (bring-your-own-key)</li>
-              <li>Language translator (bring-your-own-key)</li>
-              <li>Ask Mimir (bring-your-own-key)</li>
+              <li>Custom schemas and entry types</li>
+              <li>Family trees and relationship webs</li>
+              <li>Story arcs and narrative tools</li>
+              <li>Basic maps and calendars</li>
+              <li>Git version history</li>
+              <li>Markdown and HTML export</li>
+              <li>Mobile companion (read-only)</li>
+              <li>Translator — pay-as-you-go credits</li>
+              <li>Ask Mimir — pay-as-you-go credits</li>
             </ul>
-            <a href="#beta-signup" class="btn-pill btn-pill--ghost" style="margin-top:auto; text-align:center; justify-content:center;">
+            <a href="#beta-signup"
+              class="btn-pill btn-pill--ghost"
+              style="margin-top:auto; text-align:center;
+                justify-content:center;">
               Join the beta
             </a>
             <p class="pricing-card__note">No credit card required</p>
           </div>
 
-          <!-- Studio tier — featured -->
+          <!-- Studio tier — featured / recommended -->
           <div class="pricing-card pricing-card--featured">
-            <p class="pricing-card__tier">Studio</p>
-            <p class="pricing-card__price">
-              £8<span> / month</span>
-            </p>
-            <p style="font-size:0.75rem; color:var(--color-text-secondary); margin-top:-0.5rem;">
-              or £72 / year — save 25%
-            </p>
+            <div>
+              <p class="pricing-card__tier">Mimir Studio</p>
+              <p style="font-size:0.8rem;
+                color:var(--color-text-secondary);
+                margin-top:0.25rem;">
+                For indie developers shipping games
+              </p>
+            </div>
+            <div>
+              <p class="pricing-card__price">
+                £10<span> / month</span>
+              </p>
+              <p style="font-size:0.75rem;
+                color:var(--color-text-secondary);
+                margin-top:-0.5rem;">
+                or £100/year — save £20
+              </p>
+            </div>
             <p class="pricing-card__desc">
-              Managed AI access — no API key needed.
-              Everything in Free, plus monthly AI allowance included.
+              Everything in Mimir Core, plus all game development
+              features and monthly AI allowance included.
             </p>
             <ul class="pricing-card__features" role="list">
-              <li>Everything in Free</li>
-              <li>Managed AI access — no API key needed</li>
-              <li>Ask Mimir queries included</li>
-              <li>Translation requests included</li>
-              <li>Reasonable monthly limits</li>
+              <li>Everything in Mimir Core</li>
+              <li>Engine exports — Unreal, Unity, Godot</li>
+              <li>MCP server for AI tool integration</li>
+              <li>Quest and dialogue graph editor</li>
+              <li>Advanced maps with time-aware layers</li>
+              <li>AI features — monthly quota included</li>
+              <li>Async git collaboration — V1.5</li>
               <li>Priority support</li>
-            </ul>
-            <a href="#beta-signup" class="btn-pill" style="margin-top:auto; text-align:center; justify-content:center;">
-              Join the beta
-            </a>
-            <p class="pricing-card__note">Subject to change at launch</p>
-          </div>
-
-          <!-- Saga tier -->
-          <div class="pricing-card">
-            <p class="pricing-card__tier">Saga</p>
-            <p class="pricing-card__price">
-              £18<span> / month</span>
-            </p>
-            <p style="font-size:0.75rem; color:var(--color-text-secondary); margin-top:-0.5rem;">
-              or £180 / year — save 17%
-            </p>
-            <p class="pricing-card__desc">
-              Everything in Studio, plus session capture
-              when it arrives in V2.
-            </p>
-            <ul class="pricing-card__features" role="list">
-              <li>Everything in Studio</li>
-              <li>Session capture — V2 feature</li>
-              <li>Audio transcription</li>
-              <li>AI-powered entry extraction</li>
               <li>Early access to new features</li>
             </ul>
-            <a href="#beta-signup" class="btn-pill btn-pill--ghost" style="margin-top:auto; text-align:center; justify-content:center;">
+            <a href="#beta-signup"
+              class="btn-pill"
+              style="margin-top:auto; text-align:center;
+                justify-content:center;">
               Join the beta
             </a>
-            <p class="pricing-card__note">Session capture arrives in V2</p>
+            <p class="pricing-card__note">
+              Subject to change before launch
+            </p>
           </div>
 
+          <!-- Studio Pro tier -->
+          <div class="pricing-card">
+            <div>
+              <p class="pricing-card__tier">Mimir Studio Pro</p>
+              <p style="font-size:0.8rem;
+                color:var(--color-text-secondary);
+                margin-top:0.25rem;">
+                For active production teams
+              </p>
+            </div>
+            <div>
+              <p class="pricing-card__price">
+                £20<span> / month</span>
+              </p>
+              <p style="font-size:0.75rem;
+                color:var(--color-text-secondary);
+                margin-top:-0.5rem;">
+                or £200/year — save £40
+              </p>
+            </div>
+            <p class="pricing-card__desc">
+              Everything in Studio, plus session capture
+              and higher AI quotas for teams in production.
+            </p>
+            <ul class="pricing-card__features" role="list">
+              <li>Everything in Mimir Studio</li>
+              <li>Session capture — 15 hours/month — V2</li>
+              <li>AI-powered entry extraction — V2</li>
+              <li>Higher AI quotas across all features</li>
+              <li>Procedural lore expansion — V2</li>
+              <li>Branching canon support — V2</li>
+              <li>Real-time multiplayer cursors — V2</li>
+            </ul>
+            <a href="#beta-signup"
+              class="btn-pill btn-pill--ghost"
+              style="margin-top:auto; text-align:center;
+                justify-content:center;">
+              Join the beta
+            </a>
+            <p class="pricing-card__note">
+              Session capture arrives in V2
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Pay-as-you-go credits -->
+        <div class="payg-block">
+          <h3 class="payg-block__heading">
+            Try AI features before you subscribe.
+          </h3>
+          <p class="payg-block__subtext">
+            Free tier users can access Translator and Ask Mimir
+            with pay-as-you-go credit packs. Credits never expire
+            and carry over if you upgrade to a paid plan.
+          </p>
+          <div class="payg-block__packs">
+            <div class="payg-pack">
+              <span class="payg-pack__price">£5</span>
+              <span class="payg-pack__credits">500 credits</span>
+              <span class="payg-pack__note">
+                ~2,500 translations
+              </span>
+            </div>
+            <div class="payg-pack">
+              <span class="payg-pack__price">£10</span>
+              <span class="payg-pack__credits">1,000 credits</span>
+              <span class="payg-pack__note">
+                ~800 Sonnet translations
+              </span>
+            </div>
+            <div class="payg-pack">
+              <span class="payg-pack__price">£20</span>
+              <span class="payg-pack__credits">2,000 credits</span>
+              <span class="payg-pack__note">
+                Best value per credit
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anti-lock-in commitments -->
+        <div class="pricing-commitments">
+          <h3 class="pricing-commitments__heading">
+            What we commit to.
+          </h3>
+          <p class="pricing-commitments__subtext">
+            We've seen how other worldbuilding tools treat subscribers
+            when they cancel. We do things differently.
+          </p>
+          <div class="pricing-commitments__grid">
+            <div class="pricing-commitment">
+              <span class="pricing-commitment__icon"
+                aria-hidden="true">✦</span>
+              <div>
+                <strong>Cancel anytime, keep your work forever</strong>
+                <p>
+                  Your world files live on your computer.
+                  Cancelling removes AI features and paid tools —
+                  it never touches your data.
+                </p>
+              </div>
+            </div>
+            <div class="pricing-commitment">
+              <span class="pricing-commitment__icon"
+                aria-hidden="true">✦</span>
+              <div>
+                <strong>14-day no-questions refund</strong>
+                <p>
+                  First-time subscription.
+                  No hoops, no retention flows, no questions.
+                </p>
+              </div>
+            </div>
+            <div class="pricing-commitment">
+              <span class="pricing-commitment__icon"
+                aria-hidden="true">✦</span>
+              <div>
+                <strong>Auto-renewal reminders</strong>
+                <p>
+                  We email you 14 days before any renewal.
+                  If you haven't used Mimir in 60 days,
+                  that email is even harder to miss.
+                </p>
+              </div>
+            </div>
+            <div class="pricing-commitment">
+              <span class="pricing-commitment__icon"
+                aria-hidden="true">✦</span>
+              <div>
+                <strong>Price increases come with notice</strong>
+                <p>
+                  Existing subscribers keep their price for
+                  12 months minimum. 30-day notice before
+                  any increase takes effect.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roadmap CTA -->
+        <div style="text-align:center; margin-top:3rem;">
+          <p class="section-subtext" style="margin-inline:auto;">
+            Subscribe to Studio at launch and get every V1.5 and V2
+            feature added automatically — no upgrade fees,
+            no version unlocks, no surprises.
+          </p>
+          <a href="roadmap.html" class="btn-pill btn-pill--ghost"
+            style="margin-top:1rem; display:inline-flex;">
+            See the full roadmap
+            <svg width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
         </div>
 
       </div>
@@ -672,11 +844,11 @@
               </button>
             </dt>
             <dd class="faq-item__answer" id="faq-1" hidden>
-              Yes. The Free tier includes the full desktop application and all
-              worldbuilding features. AI features (Ask Mimir, translation, MCP server)
-              work on Free if you bring your own API key from Anthropic, OpenAI,
-              or another provider. The paid tiers include managed AI access so you
-              don't need your own key.
+              Yes. Mimir Core is free forever and includes the full desktop
+              application with all worldbuilding features. AI features
+              (Ask Mimir, translation) are available on the Free tier via
+              pay-as-you-go credit packs. The paid tiers include monthly
+              AI quotas so you don't need to manage credits at all.
             </dd>
           </div>
 
