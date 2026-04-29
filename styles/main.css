@@ -295,6 +295,14 @@ table {
     --section-cta-bg:      #c88a00;
 }
 
+[data-theme="dark"] body.theme-mimir .section--quest {
+    --section-bg:          #0a0f1e;
+    --section-glow:        rgba(96, 165, 250, 0.2);
+    --section-accent:      #60a5fa;
+    --section-accent-text: #60a5fa;
+    --section-cta-bg:      #2563eb;
+}
+
 [data-theme="dark"] body.theme-mimir .section--maps {
     --section-bg:          #071a0f;
     --section-glow:        rgba(0, 180, 80, 0.2);
@@ -351,6 +359,14 @@ table {
     --section-accent:      #8a5c00;
     --section-accent-text: #8a5c00;
     --section-cta-bg:      #8a5c00;
+}
+
+[data-theme="light"] body.theme-mimir .section--quest {
+    --section-bg:          #f0f4ff;
+    --section-glow:        rgba(37, 99, 235, 0.08);
+    --section-accent:      #1d4ed8;
+    --section-accent-text: #1d4ed8;
+    --section-cta-bg:      #1d4ed8;
 }
 
 [data-theme="light"] body.theme-mimir .section--maps {
