@@ -89,7 +89,7 @@ To enable GitHub Pages on a new repository:
 - [ ] Create Buttondown account at buttondown.com
 - [ ] Create two lists: Mimir Beta, Ashborn Release
 - [ ] Enable double opt-in on both lists
-- [ ] Configure custom sending domain (shieldwallgames.co.uk) via DNS
+- [ ] Configure custom sending domain (shieldwallgames.co.uk) via DNS — may migrate to .com
 - [ ] Replace ACTION_URL placeholder in index.html, mimir/index.html, ashborn/index.html, components/email-mimir.html, components/email-ashborn.html
 
 ### Brand
@@ -98,10 +98,10 @@ To enable GitHub Pages on a new repository:
 - [ ] Generate PNG favicon from assets/icons/favicon.svg
 
 ### DNS & Domains
-- [ ] Confirm primary domain (shieldwallgames.co.uk)
-- [ ] Configure shieldwallgames.com → 301 → shieldwallgames.co.uk (via registrar)
-- [ ] Configure ashbornsaga.com → 301 → shieldwallgames.co.uk/ashborn/ (via registrar)
-- [ ] Configure ashbornsaga.co.uk → 301 → shieldwallgames.co.uk/ashborn/ (via registrar)
+- [ ] Confirm primary domain (shieldwallgames.com)
+- [ ] Configure shieldwallgames.co.uk → 301 → shieldwallgames.com (via registrar)
+- [ ] Configure ashbornsaga.com → 301 → shieldwallgames.com/ashborn/ (via registrar)
+- [ ] Configure ashbornsaga.co.uk → 301 → shieldwallgames.com/ashborn/ (via registrar)
 - [ ] Update all og:url and canonical tags to live domain
 
 ### GitHub Pages

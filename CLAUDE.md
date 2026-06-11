@@ -65,7 +65,7 @@ A brand and game line, not a single product. All Ashborn games share the same Vi
 
 - **Ashborn CCG** — collectible card game, first product, ~£30 GBP at launch, 1+ year from release
 - The earlier name "Ashborn: Halls of Saga" is retired — do not use it
-- Domains owned: ashbornsaga.com, ashbornsaga.co.uk — both 301-redirect to shieldwallgames.co.uk/ashborn/
+- Domains owned: ashbornsaga.com, ashbornsaga.co.uk — both 301-redirect to shieldwallgames.com/ashborn/
 
 ---
 
@@ -79,9 +79,9 @@ A brand and game line, not a single product. All Ashborn games share the same Vi
 
 ## Domains
 
-- **shieldwallgames.co.uk** — primary domain, canonical URL
-- **shieldwallgames.com** — being acquired, will 301-redirect to .co.uk
-- **ashbornsaga.com / ashbornsaga.co.uk** — both 301-redirect to shieldwallgames.co.uk/ashborn/
+- **shieldwallgames.com** — primary domain, canonical URL
+- **shieldwallgames.co.uk** — owned, will 301-redirect to .com
+- **ashbornsaga.com / ashbornsaga.co.uk** — both 301-redirect to shieldwallgames.com/ashborn/
 
 Note: GitHub Pages does not handle 301 redirects between domains natively. These require DNS-level redirects via registrar settings.
 
@@ -178,7 +178,7 @@ Mimir section accent colours scoped per section class (.section--hero, --engine,
 **Provider:** Buttondown
 - Two lists: Mimir beta interest, Ashborn release interest
 - Double opt-in enabled (GDPR compliance)
-- Custom sending domain via DNS on shieldwallgames.co.uk
+- Custom sending domain via DNS on shieldwallgames.co.uk (email DNS is separate — may change to .com later)
 - Plain HTML form embed — no JS required
 
 Mimir form includes optional question: "What will you use Mimir for?" (Indie game dev / Novel writing / Tabletop RPG / Film or screenwriting / Other)
@@ -195,7 +195,7 @@ Ashborn form: email only.
 - Mobile: hamburger drawer
 
 ### Mimir pages
-- Thin top bar (subdued, low contrast): back-link to shieldwallgames.co.uk
+- Thin top bar (subdued, low contrast): back-link to shieldwallgames.com
 - Main nav: "Mimir" wordmark + Features, Pricing, FAQ, Join Beta
 - Mobile: hamburger drawer
 
@@ -299,14 +299,14 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [ ] Ashborn world panoramic art
 - [ ] Buttondown account created
 - [ ] Buttondown double opt-in enabled on both lists
-- [ ] Custom sending domain configured (shieldwallgames.co.uk DNS)
+- [ ] Custom sending domain configured (shieldwallgames.co.uk DNS — may migrate to .com)
 - [ ] ACTION_URL replaced with real Buttondown endpoints on all three pages
 - [ ] Social media handles confirmed and URLs updated
 - [ ] OG images created (1200×630px — one per page)
 - [ ] PNG favicon generated from assets/icons/favicon.svg
 - [ ] Copyright year confirmed (currently 2025)
 - [ ] Live domain confirmed — update og:url and canonical tags
-- [ ] shieldwallgames.com redirect configured (DNS)
+- [ ] shieldwallgames.co.uk redirect to .com configured (DNS)
 - [ ] ashbornsaga.com redirect configured (DNS)
 - [ ] ashbornsaga.co.uk redirect configured (DNS)
 - [ ] GitHub Pages enabled in repo settings (Source: GitHub Actions)
