@@ -87,3 +87,149 @@
 
 .ab-foot { padding: 28px 0; border-top: 1px solid var(--border); display: flex; align-items: center; font: 12px var(--font-sans); color: var(--fg-3); position: relative; z-index: 3; }
 .ab-foot a { color: var(--fg-3); margin-left: 22px; text-decoration: none; }
+
+
+/* ==========================================================================
+   Responsive — Tablet (max-width: 900px)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    /* Saga grid — stack to single column */
+    .ab-saga-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ab-saga-portrait {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Bands grid — 2 columns on tablet */
+    .ab-bands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Built on History / Built with Mimir 2-col grid */
+    .ab-history-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive — Mobile (max-width: 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Container padding */
+    .ab-wrap {
+        padding: 0 20px;
+    }
+
+    /* Hero title — reduce clamp for small screens */
+    .ab-hero-h1 {
+        font-size: clamp(48px, 11vw, 80px);
+    }
+
+    .ab-hero-h1-sub {
+        font-size: clamp(18px, 3vw, 24px);
+    }
+
+    .ab-hero-tag {
+        font-size: 16px;
+    }
+
+    .ab-hero {
+        padding: 90px 0 60px;
+        min-height: auto;
+    }
+
+    /* Hero CTA buttons — stack on mobile */
+    .ab-hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Hero meta — wrap on mobile */
+    .ab-hero-meta {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* Nav links — hide on mobile (page is short enough to scroll) */
+    .ab-nav-links {
+        display: none;
+    }
+
+    /* Saga section */
+    .ab-saga {
+        padding: 64px 0;
+    }
+
+    .ab-saga-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ab-saga-h2 {
+        font-size: clamp(32px, 7vw, 48px);
+    }
+
+    .ab-saga-p {
+        font-size: 16px;
+    }
+
+    /* Bands grid — 1 column on small mobile */
+    .ab-bands {
+        padding: 64px 0;
+    }
+
+    .ab-bands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ab-bands-head h2 {
+        font-size: clamp(28px, 6vw, 40px);
+    }
+
+    /* Signup input — stack on mobile */
+    .ab-signup-input {
+        flex-direction: column;
+    }
+
+    .ab-signup-input input {
+        width: 100%;
+    }
+
+    .ab-signup-frame {
+        padding: 32px 24px;
+    }
+
+    .ab-signup h3 {
+        font-size: 32px;
+    }
+
+    .ab-signup {
+        padding: 64px 0;
+    }
+
+    /* Footer — stack on mobile */
+    .ab-foot > .ab-wrap {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .ab-foot > .ab-wrap > span:last-child {
+        margin-left: 0;
+    }
+
+    .ab-foot a {
+        margin-left: 0;
+        margin-right: 14px;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,15 +28,6 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/ashborn.css" />
 
-  <!-- Theme init — studio page defaults to light -->
-  <script>
-    (function() {
-      var saved = localStorage.getItem('swg-theme');
-      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = saved || (systemDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
 </head>
 
 <body>
@@ -53,7 +44,6 @@
         <a href="#saga">The Game</a>
         <a href="#warbands">Warbands</a>
         <a href="#notify">Get notified</a>
-        <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
       </div>
     </div>
   </nav>
@@ -188,7 +178,7 @@
           loading="lazy"
         />
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;">
+        <div class="ab-history-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;">
           <div>
             <h3 style="font-family:var(--font-display);font-size:24px;color:#f7f1e3;margin:0 0 12px;">Built on History</h3>
             <p class="ab-saga-p">

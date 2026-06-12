@@ -7,7 +7,7 @@
  *   2. Google Fonts @import
  *   3. CSS reset
  *   4. Base design tokens (:root)
- *   5. Semantic tokens (dark + light)
+ *   5. Semantic tokens (dark only)
  *   6. Element baselines (body, headings, type classes, links)
  *   7. Utility classes (surfaces, grain, rule)
  *   8. Site utilities (container, visually-hidden, skip-link, theme toggle, reveal)
@@ -253,12 +253,11 @@ table {
 }
 
 /* ==========================================================================
-   5. Semantic Tokens — Dark + Light
+   5. Semantic Tokens — Dark (single theme)
    ========================================================================== */
 
-/* --- Dark mode (default) --- */
-:root,
-[data-theme="dark"] {
+/* --- Dark theme (only mode) --- */
+:root {
   --bg-page:        var(--color-ink-800);
   --bg-shell:       var(--color-ink-700);
   --bg-surface:     var(--color-ink-600);
@@ -283,31 +282,6 @@ table {
 
   --selection-bg:   rgba(184, 90, 44, 0.40);
   --selection-fg:   #f7f1e3;
-}
-
-/* --- Light mode --- */
-[data-theme="light"] {
-  --bg-page:        var(--color-vellum-100);
-  --bg-shell:       var(--color-vellum-50);
-  --bg-surface:     #fbf5e3;
-  --bg-surface-2:   var(--color-vellum-200);
-  --bg-overlay:     rgba(247, 241, 227, 0.80);
-
-  --fg-1:           #1c140a;
-  --fg-2:           #4a3a23;
-  --fg-3:           #7a6743;
-  --fg-on-accent:   #f7f1e3;
-  --fg-link:        var(--color-ember-700);
-  --fg-link-hover:  var(--color-ember-600);
-
-  --accent:         var(--color-ember-600);
-  --accent-strong:  var(--color-ember-700);
-  --accent-soft:    rgba(184, 90, 44, 0.12);
-  --accent-frost:   var(--color-frost-500);
-  --accent-gilt:    var(--color-gilt-700);
-
-  --border:         rgba(40, 28, 12, 0.14);
-  --border-strong-c: rgba(40, 28, 12, 0.28);
 }
 
 /* ==========================================================================
@@ -485,8 +459,7 @@ a:hover {
 }
 
 /* ==========================================================================
-   8. Site Utilities — container, visually-hidden, skip-link, theme toggle,
-      scroll reveal
+   8. Site Utilities — container, visually-hidden, skip-link, scroll reveal
    ========================================================================== */
 
 /* --- Container --- */
@@ -529,37 +502,6 @@ a:hover {
 .skip-link:focus {
     top: var(--space-3);
 }
-
-/* --- Theme toggle button --- */
-.theme-toggle {
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-pill);
-    padding: 6px 10px;
-    cursor: pointer;
-    color: var(--fg-2);
-    display: flex;
-    align-items: center;
-    transition: color var(--duration-quick) var(--easing-settle),
-                border-color var(--duration-quick) var(--easing-settle);
-}
-
-.theme-toggle:hover {
-    color: var(--fg-1);
-    border-color: var(--fg-1);
-}
-
-.theme-toggle:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-/* Show sun in dark mode (click to go light), moon in light mode (click to go dark) */
-.theme-toggle__icon--sun  { display: none; }
-.theme-toggle__icon--moon { display: block; }
-
-[data-theme="dark"] .theme-toggle__icon--sun  { display: block; }
-[data-theme="dark"] .theme-toggle__icon--moon { display: none; }
 
 /* --- Scroll reveal animation --- */
 .reveal {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,15 +28,6 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/mimir.css" />
 
-  <!-- Theme init — runs before render to prevent flash. Mimir defaults to dark. -->
-  <script>
-    (function() {
-      var saved = localStorage.getItem('swg-theme');
-      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = saved || (systemDark ? 'dark' : 'dark'); /* Mimir default: dark */
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
 </head>
 
 <body>
@@ -64,7 +55,6 @@
       </div>
       <span class="ms-nav-spacer"></span>
       <div class="ms-nav-cta">
-        <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
         <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
       </div>
     </div>

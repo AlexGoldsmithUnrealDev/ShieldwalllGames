@@ -800,3 +800,129 @@
     padding: 4px 12px;
     margin-bottom: var(--space-2);
 }
+
+
+/* ==========================================================================
+   23. Responsive — Mobile (max-width: 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* Container padding */
+    .ms-wrap {
+        padding: 0 20px;
+    }
+
+    /* Section spacing */
+    .ms-section {
+        padding: 64px 0;
+    }
+
+    /* Navigation — hide desktop links, show hamburger area */
+    .ms-nav-links {
+        display: none;
+    }
+
+    .ms-nav-cta .ms-btn-primary {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    /* Hero — stack to single column */
+    .ms-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        min-height: auto;
+        padding-top: 40px;
+    }
+
+    .ms-hero-title {
+        font-size: clamp(36px, 8vw, 48px);
+    }
+
+    .ms-hero-sub {
+        font-size: 16px;
+    }
+
+    .ms-hero-cta {
+        flex-wrap: wrap;
+    }
+
+    .ms-hero-meta {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .ms-hero-plate {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* Features grid — 1 column on mobile */
+    .ms-features {
+        grid-template-columns: 1fr;
+    }
+
+    .ms-feat-title {
+        font-size: 19px;
+    }
+
+    .ms-feat-body {
+        font-size: 14px;
+    }
+
+    /* How-it-works — stack to single column */
+    .ms-how {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Pricing grid — 1 column on mobile */
+    .ms-pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section headings */
+    .ms-section-h2 {
+        font-size: clamp(26px, 6vw, 36px);
+    }
+
+    .ms-section-sub {
+        font-size: 16px;
+    }
+
+    /* Footer grid — stack to single column */
+    .ms-foot-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ms-foot-base {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .ms-foot-base span:last-child {
+        margin-left: 0;
+    }
+
+    .ms-foot-base a {
+        margin-left: 0;
+        margin-right: 14px;
+    }
+
+    /* PAYG block */
+    .payg-block {
+        padding: var(--space-4);
+    }
+
+    .payg-block__heading {
+        font-size: var(--fs-2xl);
+    }
+
+    /* FAQ question text */
+    .faq-item__question button {
+        font-size: var(--fs-lg);
+    }
+}

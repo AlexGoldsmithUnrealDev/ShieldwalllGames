@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,15 +24,6 @@
   <link rel="stylesheet" href="styles/mimir.css" />
   <link rel="stylesheet" href="styles/roadmap.css" />
 
-  <!-- Theme init — Mimir defaults to dark -->
-  <script>
-    (function() {
-      var saved = localStorage.getItem('swg-theme');
-      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = saved || (systemDark ? 'dark' : 'dark');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
 </head>
 
 <body>
@@ -49,7 +40,6 @@
         </svg>
         Shieldwall Games
       </a>
-      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
     </div>
   </div>
 
