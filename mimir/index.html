@@ -120,7 +120,7 @@
         <!-- 1. Structured Entries -->
         <div class="ms-feature">
           <div class="ms-feat-icon"><img src="../assets/icons/character.png" alt="" /></div>
-          <h3 class="ms-feat-title">Structured Entries</h3>
+          <h3 class="ms-feat-title">Structured entries</h3>
           <p class="ms-feat-body">
             13+ built-in entry types — characters, species, cultures, places,
             factions, artifacts, events, languages, story arcs, quests, dialogues,
@@ -134,7 +134,7 @@
         <!-- 2. Quest & Dialogue Editor -->
         <div class="ms-feature">
           <div class="ms-feat-icon"><img src="../assets/icons/dialogue.png" alt="" /></div>
-          <h3 class="ms-feat-title">Quest & Dialogue Editor</h3>
+          <h3 class="ms-feat-title">Quest & dialogue editor</h3>
           <p class="ms-feat-body">
             A node-based quest and dialogue graph editor built on React Flow.
             8 node types including dialogue lines, branching choices, conditions,
@@ -148,7 +148,7 @@
         <!-- 3. Ask Mimir AI -->
         <div class="ms-feature">
           <div class="ms-feat-icon"><img src="../assets/icons/faction.png" alt="" /></div>
-          <h3 class="ms-feat-title">Ask Mimir AI</h3>
+          <h3 class="ms-feat-title">Ask Mimir</h3>
           <p class="ms-feat-body">
             Ask Mimir is the in-app AI assistant that knows your world.
             Built on a strict-honesty invariant — it answers only from your
@@ -162,20 +162,18 @@
         <!-- 4. Engine Integration -->
         <div class="ms-feature">
           <div class="ms-feat-icon"><img src="../assets/icons/spell.png" alt="" /></div>
-          <h3 class="ms-feat-title">AI & Engine Integration</h3>
+          <h3 class="ms-feat-title">AI & engine integration</h3>
           <p class="ms-feat-body">
             Mimir's MCP server (Model Context Protocol — an open standard for
             connecting AI tools to your data) gives Claude, Cursor, and other
-            AI tools direct access to your world data. Export to Unreal Engine
-            DataTable CSV and generic JSON at V1, with Unity ScriptableObject
-            and Godot Resource exports coming in V1.5.
+            AI tools direct access to your world data. Export world data and dialogue graphs directly to Unreal Engine, Unity, and Godot at launch. Generic JSON export for custom pipelines.
           </p>
         </div>
 
         <!-- 5. Custom Schemas -->
         <div class="ms-feature">
           <div class="ms-feat-icon"><img src="../assets/icons/runemark.png" alt="" /></div>
-          <h3 class="ms-feat-title">Custom Schemas</h3>
+          <h3 class="ms-feat-title">Custom schemas</h3>
           <p class="ms-feat-body">
             No developer skills needed. Create unlimited custom entry types with
             9 field types. Five relationship trees (family, genus, place, culture,
@@ -299,7 +297,6 @@
             <li>Custom schemas with 9 field types</li>
             <li>Five relationship trees (family, genus, place, culture, faction)</li>
             <li>Interactive maps with pin linking</li>
-            <li>Quest and dialogue graph editor</li>
             <li>Custom calendars, timelines, and story arcs</li>
             <li>Wiki-links with autocomplete and backlinks</li>
             <li>Git auto-commit and version history</li>
@@ -339,7 +336,7 @@
           <p style="font-size:12px;color:var(--fg-3);">or £200/year — save £40</p>
           <ul>
             <li>Everything in Mimir Studio</li>
-            <li>Session capture with recording and replay — V2</li>
+            <li>Session capture with audio transcription — 15 hours/month — V2</li>
             <li>Higher AI quotas across all features</li>
             <li>Procedural lore expansion with pattern enforcement — V2</li>
             <li>Branching canon for multiple game endings — V2</li>
@@ -465,7 +462,7 @@
     </section>
 
     <!-- ============================================================
-         FAQ — all 10 entries
+         FAQ — all 9 entries
          ============================================================ -->
     <section class="ms-section ms-wrap" id="faq">
       <div class="ms-section-head" style="text-align:center;">
@@ -494,29 +491,10 @@
           <div class="faq-item">
             <dt class="faq-item__question">
               <button type="button" aria-expanded="false" aria-controls="faq-2">
-                Why don't you support bring-your-own-API-key?
-              </button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-2" hidden>
-              Because it doesn't work as a business. If we supported
-              BYOK, anyone with an Anthropic account would get Mimir's
-              AI features for free — which means we couldn't fund
-              development, keep the lights on, or build any of the
-              features on the roadmap. All AI routes through Mimir's
-              broker so we can charge fairly for what we provide and
-              keep improving it. The pay-as-you-go credit packs exist
-              precisely so you can try AI features at low cost before
-              committing to a subscription.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-3">
                 How do pay-as-you-go credits work?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-3" hidden>
+            <dd class="faq-item__answer" id="faq-2" hidden>
               Credit packs can be purchased at any time — £5 for 500
               credits, £10 for 1,000, £20 for 2,000. Credits are spent
               when you use AI features: translations, Ask Mimir queries,
@@ -528,11 +506,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-4">
+              <button type="button" aria-expanded="false" aria-controls="faq-3">
                 What happens to my work if I cancel my subscription?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-4" hidden>
+            <dd class="faq-item__answer" id="faq-3" hidden>
               Nothing happens to your world data — it lives as files
               on your computer and always will. Cancelling removes
               access to paid features (engine exports, MCP server,
@@ -545,11 +523,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-5">
+              <button type="button" aria-expanded="false" aria-controls="faq-4">
                 Will prices change after launch?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-5" hidden>
+            <dd class="faq-item__answer" id="faq-4" hidden>
               They might eventually — building and maintaining Mimir
               has real costs. But we commit to: 30-day notice before
               any price increase, a minimum 12-month price lock for
@@ -563,11 +541,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-6">
+              <button type="button" aria-expanded="false" aria-controls="faq-5">
                 What if Claude (the AI) has an outage?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-6" hidden>
+            <dd class="faq-item__answer" id="faq-5" hidden>
               All non-AI features keep working normally —
               worldbuilding, maps, schemas, exports, the quest editor.
               For AI features, you can optionally enable OpenAI as a
@@ -582,11 +560,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-7">
+              <button type="button" aria-expanded="false" aria-controls="faq-6">
                 Can my team use Mimir together?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-7" hidden>
+            <dd class="faq-item__answer" id="faq-6" hidden>
               Async git-based collaboration is coming in V1.5 —
               included in Studio at no extra cost. The approach
               is built around how game development teams already
@@ -601,11 +579,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-8">
+              <button type="button" aria-expanded="false" aria-controls="faq-7">
                 What engines does Mimir export to?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-8" hidden>
+            <dd class="faq-item__answer" id="faq-7" hidden>
               V1 supports Unreal Engine, Unity, Godot, and a generic
               structured JSON export that works with any engine that
               can read files. The quest and dialogue editor exports
@@ -617,11 +595,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-9">
+              <button type="button" aria-expanded="false" aria-controls="faq-8">
                 Does Mimir work offline?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-9" hidden>
+            <dd class="faq-item__answer" id="faq-8" hidden>
               Yes. All worldbuilding features work fully offline — your entries,
               schemas, maps, timelines, family trees, and the quest editor all
               run locally on your machine with no internet required. AI features
@@ -633,11 +611,11 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-10">
+              <button type="button" aria-expanded="false" aria-controls="faq-9">
                 Is my world data private?
               </button>
             </dt>
-            <dd class="faq-item__answer" id="faq-10" hidden>
+            <dd class="faq-item__answer" id="faq-9" hidden>
               Your world files live on your computer — we never see them unless
               you use an AI feature. When you use Ask Mimir or the Translator,
               the relevant context is sent to our AI broker (currently Anthropic's

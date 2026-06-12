@@ -1,13 +1,13 @@
 # Shieldwall Games — Web Project
 
-The official websites for Shieldwall Games and its debut title, Ashborn: Halls of Saga.
+The official websites for Shieldwall Games, Mimir, and Ashborn CCG.
 
 ## Pages
 
 | Page | File | Description |
 |------|------|-------------|
 | Shieldwall Games | `index.html` | Company homepage |
-| Ashborn: Halls of Saga | `ashborn.html` | Product landing page |
+| Ashborn CCG | `ashborn/index.html` | Product landing page |
 | 404 | `404.html` | Custom not-found page |
 
 ## Tech Stack
@@ -35,7 +35,7 @@ Then visit `http://localhost:8000`
 ```
 /
 ├── index.html              # Shieldwall Games homepage
-├── ashborn.html            # Ashborn: Halls of Saga landing page
+├── ashborn/                # Ashborn CCG landing page
 ├── 404.html                # Custom 404 page
 ├── styles/
 │   ├── main.css            # Global design system — edit this for brand-wide changes
