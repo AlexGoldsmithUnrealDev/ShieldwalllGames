@@ -121,7 +121,7 @@
             </h1>
             <p class="section-subtext">
               Mimir is the structured worldbuilding platform that connects your lore
-              to your AI tools, your game engine, and your creative process —
+              to your AI tools, your production pipeline, and your creative process —
               from a single source of truth. Now with a full quest and
               dialogue editor built in.
             </p>
@@ -174,6 +174,7 @@
           Mimir is a desktop application for structured worldbuilding.
           Your entries live as plain markdown files — readable by humans,
           ready for AI, and native to any game engine that can read text.
+          Available on Windows, macOS, and Linux.
         </p>
       </div>
     </section>
@@ -186,12 +187,12 @@
         <div class="content-grid">
 
           <div class="content-grid__text">
-            <span class="section-label">MCP Server & Game Engine Integration</span>
+            <span class="section-label">AI Tool Integration (MCP) & Engine Export</span>
             <h2 class="section-heading" id="engine-heading">
               From your world<br />to your engine, instantly.
             </h2>
             <p class="section-subtext">
-              Mimir's MCP server connects your world data directly to
+              Mimir's MCP server (Model Context Protocol — an open standard for connecting AI tools to your data) connects your world data directly to
               Claude, Cursor, and other AI tools — so your assistant
               always knows your lore. Your entries also export as
               structured data ready for Unreal, Unity, or Godot.
@@ -408,6 +409,8 @@
               <li class="feature-tile__body">✦ &nbsp;"What are the major factions in the Northern Reaches?"</li>
               <li class="feature-tile__body">✦ &nbsp;"What does Aldric know about the Ashborn Pact?"</li>
               <li class="feature-tile__body">✦ &nbsp;"Which characters have visited Ironholm?"</li>
+              <li class="feature-tile__body">✦ &nbsp;"Has this character appeared before Season 3?"</li>
+              <li class="feature-tile__body">✦ &nbsp;"What year did the Blackwood dynasty collapse?"</li>
             </ul>
             <a href="#beta-signup" class="btn-pill">
               Notify me at launch
@@ -503,53 +506,13 @@
           </p>
         </div>
 
-        <!-- Placeholder testimonial grid — replace with real testimonials when available -->
-        <div class="testimonial-grid">
-
-          <div class="testimonial-card">
-            <p class="testimonial-card__quote">
-              "Finally a worldbuilding tool that gets out of your way and
-              lets you connect your lore to your actual workflow."
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">A</div>
-              <div>
-                <p class="testimonial-card__name">Placeholder — Beta Tester</p>
-                <p class="testimonial-card__role">Indie Game Developer</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <p class="testimonial-card__quote">
-              "The MCP integration alone is worth it. My AI assistant
-              actually knows my world now."
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">B</div>
-              <div>
-                <p class="testimonial-card__name">Placeholder — Beta Tester</p>
-                <p class="testimonial-card__role">Fantasy Author</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <p class="testimonial-card__quote">
-              "Custom schemas changed everything. My campaign world
-              has its own entry types now — not someone else's template."
-            </p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">C</div>
-              <div>
-                <p class="testimonial-card__name">Placeholder — Beta Tester</p>
-                <p class="testimonial-card__role">Tabletop GM</p>
-              </div>
-            </div>
-          </div>
-
+        <div style="text-align:center; padding:var(--space-5) 0;">
+          <p class="section-subtext" style="margin-inline:auto; font-style:italic;">
+            Mimir is in active development. Real community feedback will appear here
+            when beta testing begins. In the meantime —
+            <a href="#beta-signup">join the waitlist</a> to be among the first.
+          </p>
         </div>
-        <!-- TODO: replace placeholder testimonials with real quotes from beta users -->
 
       </div>
     </section>
@@ -589,7 +552,7 @@
               <p class="pricing-card__tier">Mimir Core</p>
               <p style="font-size:0.8rem; color:var(--color-text-secondary);
                 margin-top:0.25rem;">
-                The complete worldbuilding tool
+                The complete worldbuilding tool — free forever
               </p>
             </div>
             <p class="pricing-card__price">
@@ -628,7 +591,7 @@
               <p style="font-size:0.8rem;
                 color:var(--color-text-secondary);
                 margin-top:0.25rem;">
-                For indie developers shipping games
+                For creators who need the full toolkit
               </p>
             </div>
             <div>
@@ -674,7 +637,7 @@
               <p style="font-size:0.8rem;
                 color:var(--color-text-secondary);
                 margin-top:0.25rem;">
-                For active production teams
+                For teams and studios in production
               </p>
             </div>
             <div>
@@ -728,21 +691,21 @@
               <span class="payg-pack__price">£5</span>
               <span class="payg-pack__credits">500 credits</span>
               <span class="payg-pack__note">
-                ~2,500 translations
+                ~250 Ask Mimir queries or ~2,500 translations
               </span>
             </div>
             <div class="payg-pack">
               <span class="payg-pack__price">£10</span>
               <span class="payg-pack__credits">1,000 credits</span>
               <span class="payg-pack__note">
-                ~800 Sonnet translations
+                ~500 Ask Mimir queries or ~5,000 translations
               </span>
             </div>
             <div class="payg-pack">
               <span class="payg-pack__price">£20</span>
               <span class="payg-pack__credits">2,000 credits</span>
               <span class="payg-pack__note">
-                Best value per credit
+                ~1,000 Ask Mimir queries or ~10,000 translations
               </span>
             </div>
           </div>
@@ -806,6 +769,14 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div style="text-align:center; margin-top:var(--space-5); padding:var(--space-4); border:1px solid var(--color-border); border-radius:var(--radius-lg);">
+          <p class="section-subtext" style="margin-inline:auto;">
+            <strong style="color:var(--color-text-primary);">Need team licensing or enterprise features?</strong><br>
+            We're building volume pricing and admin tools for studios.
+            <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk" style="color:var(--color-accent-primary);">Get in touch</a> to discuss your team's needs.
+          </p>
         </div>
 
         <!-- Roadmap CTA -->
@@ -991,6 +962,40 @@
             </dd>
           </div>
 
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-9">
+                Does Mimir work offline?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-9" hidden>
+              Yes. All worldbuilding features work fully offline — your entries,
+              schemas, maps, timelines, family trees, and the quest editor all
+              run locally on your machine with no internet required. AI features
+              (Ask Mimir, Translator) require a connection since they route
+              through our servers. If you lose connectivity mid-session, everything
+              except AI continues working normally.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt class="faq-item__question">
+              <button type="button" aria-expanded="false" aria-controls="faq-10">
+                Is my world data private?
+              </button>
+            </dt>
+            <dd class="faq-item__answer" id="faq-10" hidden>
+              Your world files live on your computer — we never see them unless
+              you use an AI feature. When you use Ask Mimir or the Translator,
+              the relevant context is sent to our AI broker (currently Anthropic's
+              Claude) to process your request. We do not store, train on, or
+              retain your world data after the request completes. The AI provider's
+              standard data handling policies apply to the brief transit period.
+              If you need stricter guarantees for unreleased IP, contact us to
+              discuss options.
+            </dd>
+          </div>
+
         </dl>
 
       </div>
@@ -1007,8 +1012,8 @@
           Join the beta.
         </h2>
         <p class="section-subtext" style="margin-inline:auto; margin-bottom:2rem;">
-          Be among the first to use Mimir. Beta access opens before
-          public launch — waitlist members get in first.
+          Be among the first to use Mimir. Beta access opens in 2026 —
+          waitlist members get in first.
         </p>
 
         <!-- Mimir email signup — copy from components/email-mimir.html -->
@@ -1051,6 +1056,7 @@
               <option value="indie-game-dev">Indie game development</option>
               <option value="novel-writing">Novel writing</option>
               <option value="tabletop-rpg">Tabletop RPG campaigns</option>
+              <option value="board-game-design">Board game or card game design</option>
               <option value="film-screenwriting">Film or screenwriting</option>
               <option value="other">Other</option>
             </select>
