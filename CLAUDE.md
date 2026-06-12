@@ -304,7 +304,7 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [ ] Social media handles confirmed and URLs updated
 - [ ] OG images created (1200×630px — one per page)
 - [ ] PNG favicon generated from assets/icons/favicon.svg
-- [ ] Copyright year confirmed (currently 2025)
+- [x] Copyright year — now dynamic via inline JS (document.write(new Date().getFullYear()))
 - [ ] Live domain confirmed — update og:url and canonical tags
 - [ ] shieldwallgames.co.uk redirect to .com configured (DNS)
 - [ ] ashbornsaga.com redirect configured (DNS)
