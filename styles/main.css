@@ -823,6 +823,14 @@ body.theme-studio .placeholder-image {
 body.theme-studio .placeholder-image--16x9 { aspect-ratio: 16 / 9; }
 body.theme-studio .placeholder-image--4x5  { aspect-ratio: 4 / 5; }
 
+/* When placeholder-image class is on an img element instead of a div */
+body.theme-studio img.placeholder-image {
+    display: block;
+    object-fit: cover;
+    height: auto;
+    border-radius: var(--radius-md, 0.5rem);
+}
+
 /* --- Studio: section label / eyebrow --- */
 
 body.theme-studio .section-label {
@@ -1823,6 +1831,14 @@ body.theme-studio .placeholder-image--4x5 {
 
 body.theme-studio .placeholder-image--16x9 {
     aspect-ratio: 16 / 9;
+}
+
+/* When placeholder-image class is on an img element instead of a div (ashborn/homepage) */
+body.theme-studio img.placeholder-image {
+    display: block;
+    object-fit: cover;
+    height: auto;
+    border-radius: var(--radius-md, 0.5rem);
 }
 
 /* Section label — studio theme */
