@@ -75,7 +75,7 @@ body.theme-mimir .section-label {
 body.theme-mimir .section-heading {
     font-family: var(--font-display);
     font-size: var(--text-3xl);
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.15;
     color: var(--color-text-primary);
     margin-bottom: var(--space-3);
@@ -173,7 +173,7 @@ body.theme-mimir .mimir-nav__inner {
 body.theme-mimir .mimir-nav__wordmark {
     font-family: var(--font-display);
     font-size: var(--text-xl);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-accent-primary);
     text-decoration: none;
     letter-spacing: 0.05em;
@@ -682,7 +682,7 @@ body.theme-mimir .feature-tile__icon {
 body.theme-mimir .feature-tile__title {
     font-family: var(--font-display);
     font-size: var(--text-lg);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text-primary);
     margin-bottom: var(--space-1);
 }
@@ -751,14 +751,14 @@ body.theme-mimir .pricing-card--featured::before {
 body.theme-mimir .pricing-card__tier {
     font-family: var(--font-display);
     font-size: var(--text-xl);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text-primary);
 }
 
 body.theme-mimir .pricing-card__price {
     font-family: var(--font-display);
     font-size: var(--text-4xl);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--color-accent-primary);
     line-height: 1;
 }
@@ -990,7 +990,7 @@ body.theme-mimir .site-footer__grid {
 body.theme-mimir .site-footer__wordmark {
     font-family: var(--font-display);
     font-size: var(--text-xl);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-accent-primary);
     letter-spacing: 0.05em;
     display: block;
