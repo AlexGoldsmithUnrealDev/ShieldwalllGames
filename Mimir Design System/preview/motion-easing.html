@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Motion — Easing & duration" subtitle="Settle / pull / emerge · slow over snappy" viewport="700x210" -->
+<html lang="en"><head><meta charset="utf-8"/><title>Motion & easing</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>html,body{margin:0;padding:0;background:var(--bg-page);color:var(--fg-1)}
+.f{padding:18px 22px;background:var(--bg-shell);border:1px solid var(--border);border-radius:10px;position:relative;overflow:hidden}
+.f::before{content:"";position:absolute;inset:0;background-image:var(--grain-svg);background-size:220px;opacity:.5;mix-blend-mode:overlay;pointer-events:none}
+.in{position:relative;z-index:1}
+.k{font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3);margin:0 0 12px}
+.row{display:grid;grid-template-columns:120px 1fr 80px;gap:14px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(214,201,168,.07)}
+.row:last-child{border:0}
+.tag{font-family:var(--font-mono);font-size:11.5px;color:var(--fg-2)}
+.track{height:16px;background:rgba(214,201,168,.05);border-radius:999px;position:relative;overflow:hidden}
+.dot{position:absolute;left:0;top:1px;width:14px;height:14px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 1px rgba(184,90,44,.25),0 8px 28px rgba(184,90,44,.18)}
+.r1 .dot{animation:run 2.4s var(--easing-settle) infinite}
+.r2 .dot{animation:run 2.4s var(--easing-pull) infinite}
+.r3 .dot{animation:run 2.4s var(--easing-emerge) infinite}
+@keyframes run{0%{left:0}40%{left:calc(100% - 14px)}60%{left:calc(100% - 14px)}100%{left:0}}
+.dur{font-family:var(--font-mono);font-size:11px;color:var(--fg-3)}
+</style></head>
+<body><div class="f"><div class="in">
+<div class="k">Easing · slow, weighted. Things settle, they don't spring.</div>
+<div class="row r1"><span class="tag">--easing-settle</span><div class="track"><div class="dot"></div></div><span class="dur">240ms</span></div>
+<div class="row r2"><span class="tag">--easing-pull</span><div class="track"><div class="dot"></div></div><span class="dur">420ms</span></div>
+<div class="row r3"><span class="tag">--easing-emerge</span><div class="track"><div class="dot"></div></div><span class="dur">700ms</span></div>
+</div></div></body></html>

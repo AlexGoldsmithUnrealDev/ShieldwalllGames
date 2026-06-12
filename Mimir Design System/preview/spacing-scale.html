@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Spacing — 4px scale" subtitle="–space-1 (4) → –space-10 (128)" viewport="700x380" -->
+<html lang="en"><head><meta charset="utf-8"/><title>Spacing</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>html,body{margin:0;padding:0;background:var(--bg-page);color:var(--fg-1)}
+.f{padding:18px 22px;background:var(--bg-shell);border:1px solid var(--border);border-radius:10px;position:relative;overflow:hidden}
+.f::before{content:"";position:absolute;inset:0;background-image:var(--grain-svg);background-size:220px;opacity:.5;mix-blend-mode:overlay;pointer-events:none}
+.in{position:relative;z-index:1}
+.k{font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3);margin:0 0 12px}
+.row{display:flex;align-items:center;gap:14px;padding:5px 0;border-bottom:1px solid rgba(214,201,168,.07)}
+.row:last-child{border:0}
+.tag{font-family:var(--font-mono);font-size:11px;color:var(--fg-3);width:80px;flex-shrink:0}
+.bar{height:14px;background:var(--accent);border-radius:2px}
+.px{font-family:var(--font-mono);font-size:11px;color:var(--fg-2);margin-left:auto}
+</style></head>
+<body><div class="f"><div class="in">
+<div class="k">Spacing scale · 4px base</div>
+<div class="row"><span class="tag">--space-1</span><span class="bar" style="width:4px"></span><span class="px">4</span></div>
+<div class="row"><span class="tag">--space-2</span><span class="bar" style="width:8px"></span><span class="px">8</span></div>
+<div class="row"><span class="tag">--space-3</span><span class="bar" style="width:12px"></span><span class="px">12</span></div>
+<div class="row"><span class="tag">--space-4</span><span class="bar" style="width:16px"></span><span class="px">16</span></div>
+<div class="row"><span class="tag">--space-5</span><span class="bar" style="width:24px"></span><span class="px">24</span></div>
+<div class="row"><span class="tag">--space-6</span><span class="bar" style="width:32px"></span><span class="px">32</span></div>
+<div class="row"><span class="tag">--space-7</span><span class="bar" style="width:48px"></span><span class="px">48</span></div>
+<div class="row"><span class="tag">--space-8</span><span class="bar" style="width:64px"></span><span class="px">64</span></div>
+<div class="row"><span class="tag">--space-9</span><span class="bar" style="width:96px"></span><span class="px">96</span></div>
+<div class="row"><span class="tag">--space-10</span><span class="bar" style="width:128px"></span><span class="px">128</span></div>
+</div></div></body></html>

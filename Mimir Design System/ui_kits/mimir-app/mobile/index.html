@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Mimir App" name="Mimir mobile" subtitle="Mobile-friendly conversion of the Mimir worldbuilding app" -->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Mimir — Mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="../../../colors_and_type.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap"/>
+<link rel="stylesheet" href="mobile.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  /* The host page outside the canvas — neutral warm background that the
+     design_canvas itself overlays with its grid. */
+  html, body { margin:0; padding:0; height:100%; background:#1c1814; color:#d6c9a8;
+               font-family: 'Inter', system-ui, sans-serif; }
+  #root { height: 100vh; }
+  /* Each iOS frame becomes a DCArtboard, but the IOSDevice draws its own
+     drop-shadow we don't want fighting the artboard. Strip the artboard
+     padding so the device frame can fill its slot edge-to-edge. */
+  .mm-canvas-artboard > .dc-card { padding: 0 !important; background: transparent !important; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- Shared design canvas + iOS frame helpers -->
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="ios-frame.jsx"></script>
+
+<!-- Mimir mobile app -->
+<script type="text/babel" src="mobile-data.jsx"></script>
+<script type="text/babel" src="mobile-canvas.jsx"></script>
+<script type="text/babel" src="MobileLibrary.jsx"></script>
+<script type="text/babel" src="MobileEntry.jsx"></script>
+<script type="text/babel" src="MobileToolsMenu.jsx"></script>
+<script type="text/babel" src="MobileTimeline.jsx"></script>
+<script type="text/babel" src="MobileCalendar.jsx"></script>
+<script type="text/babel" src="MobileValidation.jsx"></script>
+<script type="text/babel" src="MobileSchemas.jsx"></script>
+<script type="text/babel" src="MobileTranslator.jsx"></script>
+<script type="text/babel" src="MobileGraphTools.jsx"></script>
+<script type="text/babel" src="MobileAsk.jsx"></script>
+<script type="text/babel" src="MobileSearchMore.jsx"></script>
+<script type="text/babel" src="MobileApp.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+
+// Each canvas tile is an IOSDevice wrapping an isolated <MobileApp/>.
+// Different `initialView` / `initialEntryId` / `initialTool` props pre-route
+// each phone to a different screen so we can show many screens at once.
+const PHONE_W = 360;
+const PHONE_H = 760;
+
+function Phone({ children }) {
+  return (
+    <IOSDevice width={PHONE_W} height={PHONE_H} dark={true}>
+      {children}
+    </IOSDevice>
+  );
+}
+
+// The screens to show in the canvas. Each becomes a DCArtboard.
+const SECTIONS = [
+  {
+    id: "browse",
+    title: "Browse the library",
+    subtitle: "Read the chapter, swipe through chips, tap a card to open.",
+    screens: [
+      { id:"lib-chars",  label:"01 · Library / Characters", boot:{initialView:"library", initialFilter:"characters"} },
+      { id:"lib-places", label:"02 · Library / Places",     boot:{initialView:"library", initialFilter:"places"} },
+      { id:"lib-runes",  label:"03 · Library / Runes",      boot:{initialView:"library", initialFilter:"runes"} },
+      { id:"search",     label:"04 · Search overlay",       boot:{initialView:"search"} },
+    ],
+  },
+  {
+    id: "read",
+    title: "Open an entry",
+    subtitle: "Full-screen detail · tabs for Read · About · Links · Timeline.",
+    screens: [
+      { id:"ent-sigrun-read",  label:"05 · Entry / Sigrun · Read",     boot:{initialView:"entry", initialEntryId:"sigrun"} },
+      { id:"ent-sigrun-about", label:"06 · Entry / Sigrun · About",    boot:{initialView:"entry", initialEntryId:"sigrun"}, action:"about" },
+      { id:"ent-sigrun-links", label:"07 · Entry / Sigrun · Links",    boot:{initialView:"entry", initialEntryId:"sigrun"}, action:"links" },
+      { id:"ent-caernarfon",   label:"08 · Entry / Caernarfon",        boot:{initialView:"entry", initialEntryId:"caernarfon"} },
+    ],
+  },
+  {
+    id: "tools",
+    title: "The workshop · tools",
+    subtitle: "Mobile-friendly views of every tool · graph tools hand off to desktop.",
+    screens: [
+      { id:"tools-menu",  label:"09 · Tools menu",         boot:{initialView:"tools"} },
+      { id:"timeline",    label:"10 · Timeline (vertical)", boot:{initialView:"tool", initialTool:"timeline"} },
+      { id:"calendar",    label:"11 · Calendar (month)",   boot:{initialView:"tool", initialTool:"calendar"} },
+      { id:"validation",  label:"12 · Validation",          boot:{initialView:"tool", initialTool:"validation"} },
+      { id:"schemas",     label:"13 · Schemas",             boot:{initialView:"tool", initialTool:"schemas"} },
+      { id:"translator",  label:"14 · Translator",          boot:{initialView:"tool", initialTool:"translator"} },
+      { id:"familytree",  label:"15 · Family tree",         boot:{initialView:"tool", initialTool:"tree"} },
+      { id:"connections", label:"16 · Connections (3D)",    boot:{initialView:"tool", initialTool:"relationships"} },
+      { id:"export",      label:"17 · Export to engine",    boot:{initialView:"tool", initialTool:"export"} },
+    ],
+  },
+  {
+    id: "well",
+    title: "Ask Mimir",
+    subtitle: "Full-screen chat · seed thread · past conversations.",
+    screens: [
+      { id:"ask-thread",  label:"18 · Ask · open thread",     boot:{initialView:"ask", initialAskMode:"thread"} },
+      { id:"ask-history", label:"19 · Ask · home + history",  boot:{initialView:"ask", initialAskMode:"history"} },
+      { id:"more",        label:"20 · More · world & app",    boot:{initialView:"more"} },
+    ],
+  },
+];
+
+// After each phone mounts, run an optional post-mount action — e.g. switch
+// the entry view tab. Done by simulating a click on the tab button inside
+// the phone's DOM, which is safer than threading a controller prop down.
+function PhoneSlot({ screen }) {
+  const wrapRef = React.useRef(null);
+  useEffect(() => {
+    if (!screen.action || !wrapRef.current) return;
+    const t = setTimeout(() => {
+      const tabs = wrapRef.current.querySelectorAll('.mm-ev-tab');
+      const target = [...tabs].find(b => b.textContent.toLowerCase().startsWith(screen.action));
+      if (target) target.click();
+    }, 60);
+    return () => clearTimeout(t);
+  }, [screen.action]);
+
+  return (
+    <div ref={wrapRef} style={{ display: 'flex', justifyContent: 'center' }}>
+      <Phone>
+        <MobileApp {...screen.boot}/>
+      </Phone>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <DesignCanvas>
+      {SECTIONS.map(sec => (
+        <DCSection key={sec.id} id={sec.id} title={sec.title} subtitle={sec.subtitle}>
+          {sec.screens.map(scr => (
+            <DCArtboard
+              key={scr.id}
+              id={scr.id}
+              label={scr.label}
+              width={PHONE_W}
+              height={PHONE_H}
+              className="mm-canvas-artboard"
+            >
+              <PhoneSlot screen={scr}/>
+            </DCArtboard>
+          ))}
+        </DCSection>
+      ))}
+    </DesignCanvas>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

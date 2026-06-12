@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Components — Entry card" subtitle="The app's signature row" viewport="700x190" -->
+<html lang="en"><head><meta charset="utf-8"/><title>Entry card</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>html,body{margin:0;padding:0;background:var(--bg-page);color:var(--fg-1)}
+.f{padding:16px;background:var(--bg-shell);border:1px solid var(--border);border-radius:10px}
+.k{font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3);margin:0 0 12px}
+.card{background:var(--bg-surface);border:1px solid var(--border);border-radius:6px;display:flex;gap:14px;padding:14px;position:relative;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.3),0 1px 2px rgba(0,0,0,.2)}
+.card::before{content:"";position:absolute;inset:0;background-image:var(--grain-svg);background-size:220px;opacity:.55;mix-blend-mode:overlay;pointer-events:none}
+.thumb{width:80px;height:80px;flex-shrink:0;border-radius:4px;border:1px solid var(--border);overflow:hidden;background:#14100d;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.95)}
+.body{position:relative;z-index:1;flex:1;min-width:0}
+.eye{font-family:var(--font-sans);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#d99366;display:flex;align-items:center;gap:6px}
+.eye .dot{width:5px;height:5px;border-radius:999px;background:#d99366}
+.t{font-family:var(--font-serif);font-weight:600;font-size:18px;line-height:1.2;margin:4px 0 2px;color:var(--fg-1)}
+.al{font-family:var(--font-serif);font-style:italic;font-size:13px;color:var(--fg-3);margin:0 0 6px}
+.b{font-family:var(--font-sans);font-size:13px;line-height:1.5;color:var(--fg-2);margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.meta{position:relative;z-index:1;margin-top:8px;display:flex;gap:8px;font-family:var(--font-sans);font-size:11px;color:var(--fg-3)}
+.tag{padding:1px 6px;border:1px solid var(--border);border-radius:3px}
+</style></head>
+<body><div class="f">
+<div class="k">Entry card · the app's signature row · plate thumb + serif title + metadata</div>
+<div class="card">
+  <div class="thumb"><img src="../assets/characters/spearmaiden.png" alt=""/></div>
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0">
+    <div class="body">
+      <div class="eye"><span class="dot"></span>Character · Iron Crown</div>
+      <h3 class="t">Sigrun Ulfsdottir</h3>
+      <p class="al">'The Iron-Crown' · 'Wolf of Kernow'</p>
+      <p class="b">Daughter of Ulf, jarl of Caernarfon. She took the oath at fifteen and the crown at twenty-three, after her father fell at the burning of Hellas.</p>
+    </div>
+    <div class="meta"><span class="tag">stub</span><span class="tag">↳ 12 links</span><span class="tag">edited 2 days ago</span></div>
+  </div>
+</div></div></body></html>

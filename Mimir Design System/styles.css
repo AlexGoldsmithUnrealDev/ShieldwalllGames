@@ -1,0 +1,13 @@
+/* =====================================================================
+   Mimir Design System — root stylesheet
+   ---------------------------------------------------------------------
+   Single entry point for consumers. Link THIS file and you get the full
+   token layer (palette, type, spacing, motion, texture) plus the @font-face
+   declarations and element baselines.
+
+   The per-property UI kits (mimir-app, the marketing sites) keep their own
+   scoped component CSS alongside their demos; those are not global and are
+   intentionally NOT imported here.
+   ===================================================================== */
+
+@import url("./colors_and_type.css");

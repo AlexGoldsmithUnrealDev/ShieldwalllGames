@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Components — Fields" subtitle="Labels, inputs, focus, error" viewport="700x270" -->
+<html lang="en"><head><meta charset="utf-8"/><title>Fields</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>html,body{margin:0;padding:0;background:var(--bg-page);color:var(--fg-1)}
+.f{padding:18px 22px;background:var(--bg-shell);border:1px solid var(--border);border-radius:10px;position:relative;overflow:hidden}
+.f::before{content:"";position:absolute;inset:0;background-image:var(--grain-svg);background-size:220px;opacity:.5;mix-blend-mode:overlay;pointer-events:none}
+.in{position:relative;z-index:1}
+.k{font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3);margin:0 0 12px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fl{display:flex;flex-direction:column;gap:5px}
+label{font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--fg-2)}
+input,select,textarea{font-family:var(--font-sans);font-size:14px;color:var(--fg-1);background:var(--bg-surface);border:1px solid var(--border);border-radius:6px;padding:8px 11px;outline:none;transition:border-color 240ms,box-shadow 240ms}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.foc{border-color:var(--accent)!important;box-shadow:0 0 0 3px var(--accent-soft)}
+.help{font-family:var(--font-sans);font-size:11.5px;color:var(--fg-3)}
+.err{color:#d6735c}
+.search{position:relative}
+.search input{padding-left:30px;width:100%}
+.search::before{content:"⌕";position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--fg-3);font-size:14px}
+</style></head>
+<body><div class="f"><div class="in">
+<div class="k">Fields · serif label optional · ember focus · oxblood error</div>
+<div class="row">
+  <div class="fl"><label>Entry name</label><input value="Sigrun Ulfsdottir"/></div>
+  <div class="fl"><label>Aliases</label><input class="foc" value="The Iron-Crown"/></div>
+</div>
+<div class="row">
+  <div class="fl"><label>Type</label><select><option>Character</option><option>Place</option></select></div>
+  <div class="fl"><label>ID</label><input style="font-family:var(--font-mono);font-size:13px" value="char_sigrun_ulfsdottir" disabled/></div>
+</div>
+<div class="row">
+  <div class="fl"><label>Search the library</label><div class="search"><input placeholder="Find a character, place, faction…"/></div></div>
+  <div class="fl"><label>Father</label><input value="Ulf" style="border-color:#7a1f2b;box-shadow:0 0 0 3px rgba(122,31,43,.18)"/><span class="help err">Ulf has no record of Sigrun as a child.</span></div>
+</div>
+</div></div></body></html>

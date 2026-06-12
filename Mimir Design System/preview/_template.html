@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Preview shell — shared</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { background: var(--bg-page); color: var(--fg-1); padding: 16px; }
+  .card-frame {
+    background: var(--bg-shell);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-frame::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: var(--grain-svg); background-size: 220px 220px;
+    opacity: 0.5; mix-blend-mode: overlay; pointer-events: none;
+    border-radius: inherit;
+  }
+  .card-content { position: relative; z-index: 1; }
+</style>
+</head>
+<body><div class="card-frame"><div class="card-content">CARD CONTENT HERE</div></div></body>
+</html>

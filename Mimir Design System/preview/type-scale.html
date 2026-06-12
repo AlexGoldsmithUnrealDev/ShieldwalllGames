@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Type — Scale" subtitle="Modular scale · 12 → 60px" viewport="700x380" -->
+<html lang="en"><head><meta charset="utf-8"/><title>Type scale</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>html,body{margin:0;padding:0;background:var(--bg-page);color:var(--fg-1)}
+.f{padding:14px 22px;background:var(--bg-shell);border:1px solid var(--border);border-radius:10px;position:relative;overflow:hidden}
+.f::before{content:"";position:absolute;inset:0;background-image:var(--grain-svg);background-size:220px;opacity:.5;mix-blend-mode:overlay;pointer-events:none}
+.in{position:relative;z-index:1}
+.row{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid rgba(214,201,168,.08);padding:5px 0}
+.row:last-child{border-bottom:0}
+.t{font-family:var(--font-serif);color:var(--fg-1);line-height:1.05;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag{font-family:var(--font-mono);font-size:11px;color:var(--fg-3);min-width:80px}
+</style></head>
+<body><div class="f"><div class="in">
+<div class="row"><span class="tag">5xl 60</span><span class="t" style="font-size:60px">Halls of Saga</span></div>
+<div class="row"><span class="tag">4xl 44</span><span class="t" style="font-size:44px">A library</span></div>
+<div class="row"><span class="tag">3xl 32</span><span class="t" style="font-size:32px">Section header</span></div>
+<div class="row"><span class="tag">2xl 24</span><span class="t" style="font-size:24px">Card title</span></div>
+<div class="row"><span class="tag">xl  20</span><span class="t" style="font-size:20px">Subhead</span></div>
+<div class="row"><span class="tag">lg  17</span><span class="t" style="font-size:17px;font-family:var(--font-serif)">Longform body — 17 / 1.75</span></div>
+<div class="row"><span class="tag">md  15</span><span class="t" style="font-size:15px;font-family:var(--font-sans)">UI body — 15 / 1.55</span></div>
+<div class="row"><span class="tag">sm  14</span><span class="t" style="font-size:14px;font-family:var(--font-sans)">Dense UI</span></div>
+<div class="row"><span class="tag">xs  13</span><span class="t" style="font-size:13px;font-family:var(--font-sans)">Caption / meta</span></div>
+<div class="row"><span class="tag">2xs 12</span><span class="t" style="font-size:12px;font-family:var(--font-sans);letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3)">Eyebrow / kicker</span></div>
+</div></div></body></html>
