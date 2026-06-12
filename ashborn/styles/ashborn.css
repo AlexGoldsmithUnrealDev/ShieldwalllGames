@@ -219,6 +219,10 @@ body.theme-studio .ashborn-world__panoramic {
     aspect-ratio: 16 / 5;
     margin-bottom: var(--space-6);
     border-radius: var(--radius-md);
+    object-fit: cover;
+    width: 100%;
+    border: none;
+    box-shadow: var(--shadow-raised);
 }
 
 body.theme-studio .ashborn-world__columns {

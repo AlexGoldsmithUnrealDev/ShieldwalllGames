@@ -807,7 +807,7 @@ body.theme-studio .divider-ornamental span {
 
 /* --- Studio: placeholder images --- */
 
-body.theme-studio .placeholder-image {
+body.theme-studio div.placeholder-image {
     width: 100%;
     background-color: var(--color-bg-alt);
     display: flex;
@@ -820,15 +820,29 @@ body.theme-studio .placeholder-image {
     text-transform: uppercase;
 }
 
-body.theme-studio .placeholder-image--16x9 { aspect-ratio: 16 / 9; }
-body.theme-studio .placeholder-image--4x5  { aspect-ratio: 4 / 5; }
+body.theme-studio div.placeholder-image--16x9 { aspect-ratio: 16 / 9; }
+body.theme-studio div.placeholder-image--4x5  { aspect-ratio: 4 / 5; }
 
-/* When placeholder-image class is on an img element instead of a div */
+/* Real images replacing placeholders — full bleed, prominent display */
 body.theme-studio img.placeholder-image {
     display: block;
     object-fit: cover;
-    height: auto;
-    border-radius: var(--radius-md, 0.5rem);
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-raised);
+}
+
+body.theme-studio img.placeholder-image--4x5 {
+    aspect-ratio: 4 / 5;
+    max-height: 600px;
+}
+
+body.theme-studio img.placeholder-image--16x9 {
+    aspect-ratio: 16 / 9;
+    max-height: 400px;
 }
 
 /* --- Studio: section label / eyebrow --- */
@@ -1811,8 +1825,8 @@ body.theme-studio .ashborn-preview__link:hover {
     gap: var(--space-2);
 }
 
-/* Placeholder image blocks — studio theme */
-body.theme-studio .placeholder-image {
+/* Placeholder image blocks — studio theme (divs only, not img tags) */
+body.theme-studio div.placeholder-image {
     background-color: var(--color-bg-alt);
     border: 1px dashed var(--color-border);
     display: flex;
@@ -1825,11 +1839,11 @@ body.theme-studio .placeholder-image {
     text-align: center;
 }
 
-body.theme-studio .placeholder-image--4x5 {
+body.theme-studio div.placeholder-image--4x5 {
     aspect-ratio: 4 / 5;
 }
 
-body.theme-studio .placeholder-image--16x9 {
+body.theme-studio div.placeholder-image--16x9 {
     aspect-ratio: 16 / 9;
 }
 

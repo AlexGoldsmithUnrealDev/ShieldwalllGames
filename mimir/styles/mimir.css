@@ -383,12 +383,12 @@ body.theme-mimir .char-art {
     position: relative;
     flex-shrink: 0;
     width: 100%;
-    max-width: 400px;
+    max-width: 520px;
 }
 
 @media (min-width: 768px) {
     body.theme-mimir .char-art {
-        width: 40%;
+        width: 45%;
     }
 }
 
@@ -396,8 +396,10 @@ body.theme-mimir .char-art__image {
     width: 100%;
     height: auto;
     display: block;
-    /* Character images should be PNGs with transparency */
+    border-radius: var(--radius-lg);
+    /* Character images — glow halo in section accent colour */
     filter: drop-shadow(0 0 40px var(--section-glow, rgba(100, 120, 180, 0.4)));
+    box-shadow: 0 8px 40px var(--color-shadow);
 }
 
 /* Placeholder state — shown until real art is supplied */
