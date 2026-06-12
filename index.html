@@ -37,132 +37,117 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/shieldwall.css" />
 </head>
 
-<body class="theme-studio">
+<body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="sw-page">
 
-<header class="site-header" role="banner">
-  <div class="site-header__inner">
-
-    <a href="./" class="site-header__wordmark" aria-label="Shieldwall Games home">
-      Shieldwall Games
-    </a>
-
-    <nav aria-label="Main navigation">
-      <ul class="site-header__links" role="list">
-        <li><a href="./" aria-current="page">Home</a></li>
-        <li><a href="mimir/">Mimir</a></li>
-        <li><a href="ashborn/">Ashborn</a></li>
-      </ul>
-    </nav>
-
-    <div class="site-header__controls">
-      <!-- Theme toggle injected here by JS -->
-      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
-
-      <button
-        class="site-header__hamburger"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="mobile-drawer"
-        type="button"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-    </div>
-
-  </div>
-
-  <!-- Mobile drawer -->
-  <div class="site-header__drawer" id="mobile-drawer" role="navigation" aria-label="Mobile navigation">
-    <a href="./" aria-current="page">Home</a>
-    <a href="mimir/">Mimir</a>
-    <a href="ashborn/">Ashborn</a>
-  </div>
-</header>
-
-<main id="main-content">
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ============================================================
-       HERO SECTION — Mimir zone within a studio page
-       Dark atmospheric section using Mimir colour overrides.
+       Navigation
        ============================================================ -->
-  <section
-    class="hero-section"
-    aria-label="Introduction"
-    style="
-      --hero-bg: #0d1117;
-      --hero-glow: rgba(100, 120, 180, 0.25);
-      --hero-accent: #c9a84c;
-      --hero-text: #e8eaf0;
-      --hero-subtext: #8892a4;
-    "
-  >
-    <!-- Atmospheric grain overlay -->
-    <div class="hero-section__grain" aria-hidden="true"></div>
-    <!-- Radial glow -->
-    <div class="hero-section__glow" aria-hidden="true"></div>
+  <nav class="sw-nav">
+    <div class="sw-wrap sw-nav-inner">
+      <a class="sw-brand" href="./">Shieldwall Games<small>est. 2024 &middot; Cornwall</small></a>
+      <div class="sw-nav-links">
+        <a href="./">Home</a>
+        <a href="mimir/">Mimir</a>
+        <a href="ashborn/">Ashborn</a>
+      </div>
+      <!-- Theme toggle injected here by JS -->
+      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
+    </div>
+  </nav>
 
-    <div class="hero-section__inner container">
+  <!-- ============================================================
+       Hero
+       ============================================================ -->
+  <header class="sw-hero">
+    <div class="sw-wrap sw-hero-grid">
+      <div>
+        <div class="sw-hero-eye">A studio &middot; Cornwall, UK</div>
 
-      <p class="hero-section__eyebrow">A studio. Two products. One world.</p>
+        <h1 class="sw-hero-h1">Your world, ready for any <em>AI tool</em> or game engine.</h1>
 
-      <h1 class="hero-section__heading">
-        Your world, ready for<br />
-        any AI tool or game engine.
-      </h1>
+        <p class="sw-hero-sub">
+          Mimir is the structured worldbuilding platform that turns your lore
+          into living data — feeding your AI workflow, your production pipeline,
+          and your creative process from a single source of truth.
+        </p>
 
-      <p class="hero-section__subtext">
-        Mimir is the structured worldbuilding platform that turns your lore
-        into living data — feeding your AI workflow, your production pipeline,
-        and your creative process from a single source of truth.
-      </p>
-
-      <div class="hero-section__actions">
-        <a href="mimir/" class="hero-section__cta-primary">
-          Explore Mimir
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </a>
-        <a href="#about-studio" class="hero-section__cta-secondary">
-          About the studio
-        </a>
+        <div class="sw-hero-meta">
+          <div><strong>2 products</strong>Mimir &middot; Ashborn CCG</div>
+          <div><strong>Self-funded</strong>since founding</div>
+          <div><strong>Cornwall, UK</strong>independent studio</div>
+        </div>
       </div>
 
+      <div class="sw-mark">
+        <span class="sw-mark-glyph">&#x2318;</span>
+        <span class="sw-mark-cap">Shieldwall Games</span>
+      </div>
     </div>
+  </header>
 
-    <!-- Scroll indicator -->
-    <div class="hero-section__scroll-hint" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <polyline points="6 9 12 15 18 9"/>
-      </svg>
+  <main id="main-content">
+
+  <!-- ============================================================
+       Products — two project cards
+       ============================================================ -->
+  <section class="sw-section" id="work">
+    <div class="sw-wrap">
+      <div class="sw-section-eye">Our work</div>
+      <h2 class="sw-section-h2">Two products, one set of obsessions.</h2>
+      <div class="sw-projects">
+
+        <!-- Mimir -->
+        <a class="sw-project" href="mimir/">
+          <img src="assets/images/Avalon.png" alt="Landscape from the Mimir worldbuilding platform" loading="lazy" />
+          <div class="sw-proj-body">
+            <div class="sw-proj-eye">Software &middot; worldbuilding platform</div>
+            <h3 class="sw-proj-title">Mimir</h3>
+            <p class="sw-proj-tag">A structured worldbuilding platform for indie devs, writers, and GMs.</p>
+          </div>
+        </a>
+
+        <!-- Ashborn -->
+        <a class="sw-project" href="ashborn/">
+          <img src="assets/images/FireFalls.png" alt="Landscape from the Ashborn game world" loading="lazy" />
+          <div class="sw-proj-body">
+            <div class="sw-proj-eye">Card game &middot; in development &middot; ~&pound;30 at launch</div>
+            <h3 class="sw-proj-title">Ashborn</h3>
+            <p class="sw-proj-tag">A Viking Age collectible card game. One shared world.</p>
+          </div>
+        </a>
+
+      </div>
     </div>
-
   </section>
 
   <!-- ============================================================
-       STUDIO IDENTITY SECTION
-       Transition from Mimir dark zone into studio parchment zone.
+       About / Philosophy
        ============================================================ -->
-  <section
-    id="about-studio"
-    class="section section--studio-intro reveal"
-    aria-label="About Shieldwall Games"
-  >
-    <div class="container">
-      <div class="studio-intro__grid">
-
-        <div class="studio-intro__text">
-          <span class="section-label">The Studio</span>
-          <h2 class="section-heading">Built by makers,<br />for makers.</h2>
+  <section class="sw-section" id="about-studio">
+    <div class="sw-wrap">
+      <div class="sw-section-eye">How we work</div>
+      <h2 class="sw-section-h2">Built by makers, for makers.</h2>
+      <div class="sw-philosophy">
+        <div>
+          <!-- Studio identity character — Huskarl -->
+          <img
+            src="assets/images/Huskarl.png"
+            alt="Viking huskarl warrior representing Shieldwall Games"
+            loading="lazy"
+            style="max-width:260px;border-radius:4px;border:1px solid var(--border);"
+          />
+        </div>
+        <div>
           <p>
-            Shieldwall Games is a small independent studio. We build the tools
+            <strong>Shieldwall Games is a small independent studio.</strong> We build the tools
             we needed and couldn't find — then we share them. Mimir came from
             years of worldbuilding work on our own games. Now it's yours too.
           </p>
@@ -170,99 +155,8 @@
             Our games come from the same place: things we wanted to make,
             built with care, sold honestly. No hype. No filler. Just craft.
           </p>
-          <a href="ashborn/" class="btn btn-secondary">
+          <a href="ashborn/" class="sw-studio-link">
             See what we're making
-          </a>
-        </div>
-
-        <div class="studio-intro__aside">
-          <!-- Studio identity character — Huskarl -->
-          <img
-            src="assets/images/Huskarl.png"
-            alt="Viking huskarl warrior representing Shieldwall Games"
-            class="placeholder-image placeholder-image--4x5"
-            loading="lazy"
-            role="img"
-            aria-label="Viking huskarl warrior representing Shieldwall Games"
-          />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       ASHBORN COMING SOON SECTION
-       Preview of the Ashborn game line with release notification CTA.
-       ============================================================ -->
-  <section
-    class="section section--alt ashborn-preview reveal"
-    aria-label="Ashborn — coming soon"
-  >
-    <div class="container">
-
-      <div class="ashborn-preview__header">
-        <span class="section-label">Coming Soon</span>
-        <h2 class="section-heading">Ashborn</h2>
-        <p class="section-subtext">
-          A Viking Age card game. One shared world. Launching after Mimir —
-          because we're building it with Mimir.
-        </p>
-      </div>
-
-      <div class="ashborn-preview__card">
-        <!-- Ashborn world preview — Alba landscape -->
-        <img
-          src="assets/images/Alba.png"
-          alt="Alba landscape — a vista from the Ashborn game world"
-          class="placeholder-image placeholder-image--16x9"
-          loading="lazy"
-          role="img"
-          aria-label="Alba landscape from the Ashborn game world"
-        />
-
-        <div class="ashborn-preview__card-body">
-          <p class="ashborn-preview__tag">Ashborn CCG &nbsp;·&nbsp; Collectible Card Game &nbsp;·&nbsp; ~£30 at launch</p>
-          <h3>Ashborn CCG</h3>
-          <p>
-            The first game in the Ashborn line. A historically grounded
-            collectible card game set in the Viking Age. Details are being
-            forged — sign up to be first to know when it's ready.
-          </p>
-
-          <div class="ashborn-preview__form-wrap">
-            <!-- Ashborn email signup — copy from components/email-ashborn.html -->
-            <!-- TODO: embed Buttondown Ashborn list form here -->
-            <form
-              action="ACTION_URL"
-              method="post"
-              class="signup-form"
-              aria-label="Get notified when Ashborn CCG launches"
-            >
-              <div class="signup-form__field">
-                <label for="email-ashborn-home" class="signup-form__label">
-                  Get notified at launch
-                </label>
-                <input
-                  id="email-ashborn-home"
-                  name="email"
-                  type="email"
-                  required
-                  autocomplete="email"
-                  placeholder="you@example.com"
-                  class="signup-form__input"
-                  aria-required="true"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">
-                Notify me
-              </button>
-              <p class="signup-form__note">No spam. Unsubscribe any time.</p>
-            </form>
-          </div>
-
-          <a href="ashborn/" class="ashborn-preview__link">
-            Learn more about Ashborn
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"/>
               <polyline points="12 5 19 12 12 19"/>
@@ -270,98 +164,116 @@
           </a>
         </div>
       </div>
-
     </div>
   </section>
 
-</main>
+  <!-- ============================================================
+       Ashborn preview with email signup
+       ============================================================ -->
+  <section class="sw-section" id="ashborn-preview">
+    <div class="sw-wrap">
+      <div class="sw-section-eye">Coming soon</div>
+      <h2 class="sw-section-h2">Ashborn</h2>
+      <p style="font-family:var(--font-serif);font-size:17px;line-height:1.75;color:var(--fg-2);max-width:56ch;margin:0 0 32px;">
+        A Viking Age card game. One shared world. Launching after Mimir —
+        because we're building it with Mimir.
+      </p>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__inner">
-
-      <div class="site-footer__grid">
-
-        <!-- Col 1: wordmark + tagline -->
-        <div>
-          <a href="./" class="site-footer__wordmark" aria-label="Shieldwall Games home">
-            Shieldwall Games
-          </a>
-          <p class="site-footer__tagline">
-            Building tools and games worth your time.
-          </p>
-          <div class="site-footer__social" aria-label="Social media links">
-            <a
-              href="https://x.com/shieldwallgames"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Shieldwall Games on Twitter / X"
-            >
-              <!-- X / Twitter icon -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-            <a
-              href="https://instagram.com/shieldwallgames"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Shieldwall Games on Instagram"
-            >
-              <!-- Instagram icon -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
-            <a
-              href="https://facebook.com/shieldwallgames"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Shieldwall Games on Facebook"
-            >
-              <!-- Facebook icon -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
-            </a>
-            <!-- TODO: confirm which platforms Shieldwall Games uses and update URLs -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+        <!-- Ashborn world preview — Alba landscape -->
+        <div class="sw-project" style="cursor:default;">
+          <img
+            src="assets/images/Alba.png"
+            alt="Alba landscape — a vista from the Ashborn game world"
+            loading="lazy"
+          />
+          <div class="sw-proj-body">
+            <div class="sw-proj-eye">Ashborn CCG &middot; Collectible Card Game &middot; ~&pound;30 at launch</div>
+            <h3 class="sw-proj-title">Ashborn CCG</h3>
+            <p class="sw-proj-tag">The first game in the Ashborn line.</p>
           </div>
         </div>
 
-        <!-- Col 2: Products -->
-        <div>
-          <p class="site-footer__heading">Products</p>
-          <ul class="site-footer__links" role="list">
-            <li><a href="mimir/">Mimir</a></li>
-            <li><a href="mimir/roadmap.html">Mimir Roadmap</a></li>
-            <li><a href="ashborn/">Ashborn CCG</a></li>
-          </ul>
-        </div>
+        <!-- Email signup form -->
+        <div style="padding:32px;background:var(--bg-surface);border:1px solid var(--border);border-radius:6px;position:relative;">
+          <h3 style="font-family:var(--font-serif);font-weight:600;font-size:20px;margin:0 0 8px;">Get notified at launch</h3>
+          <p style="font-family:var(--font-serif);font-size:14px;color:var(--fg-2);margin:0 0 20px;">
+            The first game in the Ashborn line. A historically grounded
+            collectible card game set in the Viking Age. Details are being
+            forged — sign up to be first to know when it's ready.
+          </p>
 
-        <!-- Col 3: Studio -->
-        <div>
-          <p class="site-footer__heading">Studio</p>
-          <ul class="site-footer__links" role="list">
-            <li><a href="./">Home</a></li>
-            <li><a href="ashborn/">Ashborn</a></li>
-            <!-- TODO: add About and Blog links when V2 pages are live -->
-          </ul>
+          <!-- Ashborn email signup — Buttondown -->
+          <!-- TODO: embed Buttondown Ashborn list form here -->
+          <form
+            action="ACTION_URL"
+            method="post"
+            class="signup-form"
+            aria-label="Get notified when Ashborn CCG launches"
+          >
+            <div class="signup-form__field">
+              <label for="email-ashborn-home" class="signup-form__label" style="font:600 13px var(--font-sans);color:var(--fg-2);display:block;margin-bottom:6px;">
+                Email address
+              </label>
+              <input
+                id="email-ashborn-home"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="you@example.com"
+                class="signup-form__input"
+                aria-required="true"
+                style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:4px;background:var(--bg-shell);color:var(--fg-1);font:15px var(--font-sans);margin-bottom:12px;"
+              />
+            </div>
+            <button type="submit" class="sw-cta-btn" style="width:100%;justify-content:center;">
+              Notify me
+            </button>
+            <p style="font:12px var(--font-sans);color:var(--fg-3);margin:10px 0 0;">No spam. Unsubscribe any time.</p>
+          </form>
         </div>
-
       </div>
 
-      <div class="site-footer__bottom">
-        <p class="site-footer__copyright">
-          &copy; 2025 Shieldwall Games Ltd. All rights reserved.
-        </p>
-        <p class="site-footer__copyright">
-          <!-- TODO: confirm copyright year before launch -->
-        </p>
-      </div>
+      <a href="ashborn/" style="display:inline-flex;align-items:center;gap:6px;color:var(--fg-link);text-decoration:none;font:600 14px var(--font-sans);letter-spacing:0.04em;margin-top:24px;">
+        Learn more about Ashborn
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </section>
 
+  </main>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="sw-cta">
+    <div class="sw-wrap">
+      <h2>Talk to us.</h2>
+      <p>Press, partnerships, or hello — alexander.goldsmith@shieldwallgames.co.uk</p>
+      <a class="sw-cta-btn" href="mailto:alexander.goldsmith@shieldwallgames.co.uk">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="sw-footer">
+    <div class="sw-wrap" style="display:flex;align-items:center;width:100%">
+      <span>&copy; 2025 Shieldwall Games Ltd. All rights reserved.</span>
+      <span style="margin-left:auto">
+        <a href="mimir/">Mimir</a>
+        <a href="mimir/roadmap.html">Roadmap</a>
+        <a href="ashborn/">Ashborn</a>
+        <a href="#">Privacy</a>
+      </span>
     </div>
   </footer>
+
+</div>
 
 <script src="scripts/main.js" defer></script>
 </body>

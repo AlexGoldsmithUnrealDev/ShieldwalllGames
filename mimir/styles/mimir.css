@@ -1,1103 +1,414 @@
 /*
- * mimir.css — Mimir product zone styles
+ * mimir.css — Mimir product page styles
  *
- * Depends on: styles/main.css (must be loaded first)
- * Scope: all rules here are scoped to body.theme-mimir
+ * Depends on: ../styles/main.css (must be loaded first for design tokens)
  *
  * Contents:
- *   1. Base layout (container, section base, top bar)
- *   2. Mimir navigation
- *   3. Atmospheric backgrounds and section glow overlays
- *   4. Character art treatment
- *   5. Screenshot treatment
- *   6. Annotation motif
- *   7. Pill CTA buttons
- *   8. Email signup form
- *   9. Feature tiles
- *  10. Pricing cards
- *  11. Testimonial / community cards
- *
- * Do not define CSS custom properties here.
- * All tokens live in styles/main.css.
- * Do not add studio component styles here.
+ *   1. Page shell and grain overlay
+ *   2. Container / wrap
+ *   3. Eyebrow
+ *   4. Navigation
+ *   5. Buttons (primary, secondary, ghost)
+ *   6. Hero
+ *   7. Section headers
+ *   8. Features grid
+ *   9. How-it-works (split layout)
+ *  10. Pricing grid / tiers
+ *  11. Footer
+ *  12. FAQ accordion
+ *  13. PAYG credit blocks
+ *  14. Pricing commitments
+ *  15. Well illustration (Ask Mimir)
+ *  16. Signup form
+ *  17. Content grid
+ *  18. Character art
+ *  19. Screenshot treatment
+ *  20. Annotation motif
+ *  21. Pill CTA buttons
+ *  22. Badge — coming soon
  */
 
+
 /* ==========================================================================
-   1. Base Layout — scoped to body.theme-mimir
+   1. Page Shell + Grain Overlay
    ========================================================================== */
 
-/* Mimir container — mirrors global .container but themed */
-body.theme-mimir .container {
+.ms-page { position: relative; isolation: isolate; }
+.ms-page::before { content: ""; position: fixed; inset: 0; background-image: var(--grain-svg); background-size: 220px; mix-blend-mode: overlay; opacity: 0.5; pointer-events: none; z-index: 1; }
+
+
+/* ==========================================================================
+   2. Container / Wrap
+   ========================================================================== */
+
+.ms-wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 2; }
+
+
+/* ==========================================================================
+   3. Eyebrow
+   ========================================================================== */
+
+.ms-eyebrow { font: 600 11px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-3); }
+
+
+/* ==========================================================================
+   4. Navigation
+   ========================================================================== */
+
+.ms-nav { position: relative; z-index: 10; padding: 22px 0; }
+.ms-nav-inner { display: flex; align-items: center; gap: 28px; }
+.ms-nav-brand { display: flex; align-items: center; gap: 9px; }
+.ms-nav-brand img { width: 30px; height: 30px; }
+.ms-nav-brand-word { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.005em; }
+.ms-nav-links { display: flex; gap: 26px; margin-left: 24px; }
+.ms-nav-links a { color: var(--fg-2); font-size: 14px; text-decoration: none; }
+.ms-nav-links a:hover { color: var(--fg-1); }
+.ms-nav-spacer { flex: 1; }
+.ms-nav-cta { display: flex; align-items: center; gap: 10px; }
+
+
+/* ==========================================================================
+   5. Buttons — primary, secondary, ghost
+   ========================================================================== */
+
+.ms-btn-primary, .ms-btn-secondary, .ms-btn-ghost {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 18px; border-radius: 6px; cursor: pointer;
+  font: 600 14px var(--font-sans); letter-spacing: 0.01em;
+  border: 1px solid; transition: all 240ms var(--easing-settle);
+  text-decoration: none;
+}
+.ms-btn-primary { background: var(--accent); color: var(--fg-on-accent); border-color: rgba(255,240,210,0.06); box-shadow: inset 0 1px 0 rgba(255,240,210,0.12), 0 1px 0 rgba(0,0,0,0.3), 0 6px 18px rgba(184,90,44,0.22); }
+.ms-btn-primary:hover { background: var(--accent-strong); transform: translateY(-1px); }
+.ms-btn-secondary { background: rgba(214,201,168,0.05); color: var(--fg-1); border-color: var(--border); }
+.ms-btn-secondary:hover { background: var(--bg-surface); border-color: var(--border-strong-c); }
+.ms-btn-ghost { background: transparent; color: var(--fg-2); border-color: transparent; }
+.ms-btn-ghost:hover { color: var(--fg-1); }
+
+
+/* ==========================================================================
+   6. Hero
+   ========================================================================== */
+
+.ms-hero { position: relative; padding: 36px 0 96px; overflow: hidden; }
+.ms-hero-bg { position: absolute; inset: -10% 0 0; background-size: cover; background-position: center 30%; filter: saturate(0.65) brightness(0.45); }
+.ms-hero-fade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,16,13,0.55) 0%, rgba(20,16,13,0.4) 30%, rgba(20,16,13,0.92) 95%, rgba(20,16,13,1) 100%), radial-gradient(ellipse at 70% 40%, rgba(184,90,44,0.18) 0%, transparent 60%); }
+.ms-hero::after { content: ""; position: absolute; inset: 0; background-image: var(--grain-svg); background-size: 220px; mix-blend-mode: overlay; opacity: 0.4; pointer-events: none; }
+.ms-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; min-height: 580px; padding-top: 60px; }
+.ms-hero-copy { max-width: 540px; }
+.ms-hero-eyebrow { color: var(--accent); font: 600 12px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 22px; display: flex; align-items: center; gap: 12px; }
+.ms-hero-eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+.ms-hero-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(48px, 6vw, 84px); line-height: 0.95; letter-spacing: 0; color: #f7f1e3; margin: 0 0 22px; text-shadow: 0 4px 32px rgba(0,0,0,0.6); }
+.ms-hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--fg-2); display: block; font-size: 0.6em; line-height: 1.2; margin-top: 14px; letter-spacing: -0.01em; }
+.ms-hero-sub { font-family: var(--font-serif); font-size: 19px; line-height: 1.65; color: var(--fg-2); text-wrap: pretty; margin: 0 0 32px; }
+.ms-hero-cta { display: flex; gap: 12px; align-items: center; }
+.ms-hero-meta { margin-top: 28px; display: flex; gap: 22px; font-size: 12.5px; color: var(--fg-3); }
+.ms-hero-meta strong { color: var(--fg-1); font-family: var(--font-mono); display: block; }
+
+.ms-hero-plate { position: relative; aspect-ratio: 4/5; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-strong-c); box-shadow: var(--shadow-lg); }
+.ms-hero-plate img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.95); }
+.ms-hero-plate::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(20,16,13,0.7) 100%); }
+.ms-hero-plate-cap { position: absolute; left: 18px; bottom: 18px; right: 18px; z-index: 1; font-family: var(--font-serif); font-style: italic; font-size: 13px; color: rgba(247,241,227,0.85); }
+
+
+/* ==========================================================================
+   7. Section Headers
+   ========================================================================== */
+
+.ms-section { padding: 96px 0; position: relative; z-index: 2; }
+.ms-section-head { max-width: 720px; margin-bottom: 48px; }
+.ms-section-h2 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.01em; margin: 12px 0 16px; color: var(--fg-1); }
+.ms-section-h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+.ms-section-sub { font-family: var(--font-serif); font-size: 18px; line-height: 1.65; color: var(--fg-2); margin: 0; max-width: 56ch; text-wrap: pretty; }
+
+
+/* ==========================================================================
+   8. Features Grid
+   ========================================================================== */
+
+.ms-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.ms-feature { background: var(--bg-page); padding: 32px 28px; position: relative; }
+.ms-feature::before { content: ""; position: absolute; inset: 0; background-image: var(--grain-svg); background-size: 220px; mix-blend-mode: overlay; opacity: 0.4; pointer-events: none; }
+.ms-feat-icon { width: 56px; height: 56px; margin-bottom: 18px; position: relative; z-index: 1; }
+.ms-feat-icon img { width: 100%; height: 100%; object-fit: contain; filter: invert() opacity(0.78); }
+.ms-feat-title { font-family: var(--font-serif); font-weight: 600; font-size: 22px; line-height: 1.2; margin: 0 0 8px; position: relative; z-index: 1; }
+.ms-feat-body { font-family: var(--font-serif); font-size: 15px; line-height: 1.6; color: var(--fg-2); margin: 0; position: relative; z-index: 1; text-wrap: pretty; }
+
+
+/* ==========================================================================
+   9. How-it-Works (Split Layout)
+   ========================================================================== */
+
+.ms-how { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
+.ms-how-plate { aspect-ratio: 5/4; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-strong-c); box-shadow: var(--shadow-lg); position: relative; }
+.ms-how-plate img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85); }
+.ms-how-plate::after { content: ""; position: absolute; inset: 0; background-image: var(--grain-svg); background-size: 220px; mix-blend-mode: overlay; opacity: 0.4; }
+.ms-how-list { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+.ms-how-step { counter-increment: step; padding: 18px 0; border-bottom: 1px solid var(--border); display: flex; gap: 18px; }
+.ms-how-step:last-child { border: 0; }
+.ms-how-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 99px; border: 1px solid var(--border-strong-c); display: grid; place-items: center; font-family: var(--font-display); font-size: 16px; color: var(--accent); background: var(--bg-surface); }
+.ms-how-step h4 { font-family: var(--font-serif); font-weight: 600; font-size: 18px; margin: 4px 0 4px; }
+.ms-how-step p { font-family: var(--font-serif); font-size: 15px; line-height: 1.55; color: var(--fg-2); margin: 0; }
+
+
+/* ==========================================================================
+   10. Pricing Grid / Tiers
+   ========================================================================== */
+
+.ms-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ms-tier { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 10px; padding: 28px 26px; position: relative; overflow: hidden; }
+.ms-tier::before { content: ""; position: absolute; inset: 0; background-image: var(--grain-svg); background-size: 220px; mix-blend-mode: overlay; opacity: 0.5; pointer-events: none; }
+.ms-tier > * { position: relative; z-index: 1; }
+.ms-tier.is-featured { background: var(--bg-shell); border-color: rgba(184,90,44,0.4); box-shadow: 0 0 0 1px rgba(184,90,44,0.1), 0 16px 40px rgba(184,90,44,0.12); }
+.ms-tier-name { font-family: var(--font-display); font-size: 28px; margin: 0 0 6px; }
+.ms-tier-price { font-family: var(--font-serif); font-size: 38px; font-weight: 500; margin: 14px 0 6px; color: var(--fg-1); }
+.ms-tier-price small { font-family: var(--font-sans); font-size: 14px; color: var(--fg-3); font-weight: 400; }
+.ms-tier-tag { font-family: var(--font-serif); font-style: italic; font-size: 13.5px; color: var(--fg-2); margin: 0 0 18px; min-height: 38px; }
+.ms-tier ul { list-style: none; padding: 0; margin: 0 0 22px; }
+.ms-tier li { display: flex; gap: 10px; padding: 6px 0; font-size: 14px; color: var(--fg-1); border-top: 1px solid var(--border); }
+.ms-tier li:first-child { border: 0; }
+.ms-tier li::before { content: "\2726"; color: var(--accent); font-size: 11px; padding-top: 2px; }
+
+
+/* ==========================================================================
+   11. Footer
+   ========================================================================== */
+
+.ms-footer { border-top: 1px solid var(--border); padding: 48px 0 36px; position: relative; z-index: 2; }
+.ms-foot-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 40px; }
+.ms-foot-brand { font-family: var(--font-display); font-size: 28px; }
+.ms-foot-tag { font-family: var(--font-serif); font-style: italic; color: var(--fg-2); font-size: 14px; margin: 6px 0 0; }
+.ms-foot-col h5 { font: 600 11px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-3); margin: 0 0 12px; }
+.ms-foot-col a { display: block; padding: 4px 0; color: var(--fg-2); text-decoration: none; font-size: 14px; }
+.ms-foot-col a:hover { color: var(--fg-1); }
+.ms-foot-base { display: flex; align-items: center; padding-top: 32px; margin-top: 36px; border-top: 1px solid var(--border); font-size: 13px; color: var(--fg-3); }
+.ms-foot-base a { color: var(--fg-3); margin-left: 18px; text-decoration: none; }
+.ms-foot-base a:hover { color: var(--fg-1); }
+
+
+/* ==========================================================================
+   12. FAQ Accordion
+   ========================================================================== */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item__question button {
     width: 100%;
-    max-width: var(--max-width-content);
-    margin-inline: auto;
-    padding-inline: var(--space-4);
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-block: var(--space-4);
+    font-family: var(--font-serif);
+    font-size: var(--fs-2xl);
+    font-weight: 400;
+    color: var(--fg-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    transition: color var(--duration-quick) var(--easing-settle);
 }
 
-@media (min-width: 768px) {
-    body.theme-mimir .container {
-        padding-inline: var(--space-5);
-    }
+.faq-item__question button:hover {
+    color: var(--accent);
 }
 
-/* Base section padding for all Mimir sections */
-body.theme-mimir .section {
-    position: relative;
-    padding-block: var(--space-8);
-    overflow: hidden; /* contains atmospheric overlays */
+.faq-item__question button::after {
+    content: '+';
+    font-size: var(--fs-3xl);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform var(--duration-normal) var(--easing-settle);
+    color: var(--accent);
 }
 
-@media (min-width: 768px) {
-    body.theme-mimir .section {
-        padding-block: var(--space-9);
-    }
+.faq-item__question button[aria-expanded="true"]::after {
+    transform: rotate(45deg);
 }
 
-/* Section inner — sits above atmospheric overlays */
-body.theme-mimir .section__inner {
-    position: relative;
-    z-index: var(--z-raised);
+.faq-item__answer {
+    font-family: var(--font-serif);
+    font-size: var(--fs-md);
+    color: var(--fg-2);
+    line-height: 1.75;
+    padding-bottom: var(--space-4);
+    padding-right: var(--space-5);
 }
 
-/* Section label — small caps, accent colour, tracked */
-body.theme-mimir .section-label {
-    display: block;
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--section-accent, var(--color-accent-primary));
+.faq-item__answer[hidden] {
+    display: none;
+}
+
+
+/* ==========================================================================
+   13. PAYG Credit Blocks
+   ========================================================================== */
+
+.payg-block {
+    margin-top: var(--space-7);
+    padding: var(--space-5);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.payg-block__heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xl);
+    font-weight: 400;
+    color: var(--fg-1);
     margin-bottom: var(--space-2);
 }
 
-/* Section heading */
-body.theme-mimir .section-heading {
-    font-family: var(--font-display);
-    font-size: var(--text-3xl);
-    font-weight: 400;
-    line-height: 1.15;
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-3);
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .section-heading {
-        font-size: var(--text-4xl);
-    }
-}
-
-/* Section subtext */
-body.theme-mimir .section-subtext {
-    font-family: var(--font-body);
-    font-size: var(--text-lg);
-    color: var(--color-text-secondary);
+.payg-block__subtext {
+    font-family: var(--font-serif);
+    font-size: var(--fs-md);
+    color: var(--fg-2);
     max-width: var(--max-width-text);
+    margin-inline: auto;
+    margin-bottom: var(--space-4);
     line-height: 1.7;
 }
 
-/* ==========================================================================
-   Top Bar — thin orientation strip
-   Back-link to shieldwallgames.com. Visually subdued, not sticky.
-   ========================================================================== */
-
-body.theme-mimir .top-bar {
-    width: 100%;
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    padding-block: var(--space-1);
-}
-
-body.theme-mimir .top-bar__inner {
-    max-width: var(--max-width-content);
-    margin-inline: auto;
-    padding-inline: var(--space-4);
+.payg-block__packs {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    justify-content: center;
 }
 
-body.theme-mimir .top-bar__back {
-    display: inline-flex;
+.payg-pack {
+    background-color: var(--bg-shell);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: var(--space-1);
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: color var(--transition-fast);
 }
 
-body.theme-mimir .top-bar__back:hover {
-    color: var(--color-text-primary);
-}
-
-body.theme-mimir .top-bar__back svg {
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-}
-
-/* ==========================================================================
-   2. Mimir Navigation
-   Sticky header with Mimir wordmark and section links.
-   Hamburger on mobile. Distinct from studio nav.
-   ========================================================================== */
-
-body.theme-mimir .mimir-nav {
-    position: sticky;
-    top: 0;
-    z-index: var(--z-overlay);
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    transition: background-color var(--transition-base), box-shadow var(--transition-base);
-}
-
-body.theme-mimir .mimir-nav.scrolled {
-    box-shadow: var(--shadow-raised);
-}
-
-body.theme-mimir .mimir-nav__inner {
-    max-width: var(--max-width-content);
-    margin-inline: auto;
-    padding-inline: var(--space-4);
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-}
-
-/* Wordmark */
-body.theme-mimir .mimir-nav__wordmark {
+.payg-pack__price {
     font-family: var(--font-display);
-    font-size: var(--text-xl);
+    font-size: var(--fs-4xl);
     font-weight: 400;
-    color: var(--color-accent-primary);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    flex-shrink: 0;
+    color: var(--accent);
 }
 
-/* Desktop links */
-body.theme-mimir .mimir-nav__links {
-    display: none;
-    list-style: none;
-    align-items: center;
-    gap: var(--space-5);
-    margin: 0;
-    padding: 0;
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .mimir-nav__links {
-        display: flex;
-    }
-}
-
-body.theme-mimir .mimir-nav__links a {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    transition: color var(--transition-fast);
-}
-
-body.theme-mimir .mimir-nav__links a:hover {
-    color: var(--color-text-primary);
-}
-
-/* CTA in nav */
-body.theme-mimir .mimir-nav__cta {
-    display: none;
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
+.payg-pack__credits {
+    font-family: var(--font-serif);
+    font-size: var(--fs-md);
     font-weight: 600;
-    background-color: var(--color-accent-primary);
-    color: var(--color-text-inverse);
-    border: none;
-    border-radius: var(--radius-pill);
-    padding: 8px 20px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: opacity var(--transition-fast);
-    white-space: nowrap;
+    color: var(--fg-1);
 }
 
-body.theme-mimir .mimir-nav__cta:hover {
-    opacity: 0.85;
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .mimir-nav__cta {
-        display: inline-block;
-    }
-}
-
-/* Hamburger toggle */
-body.theme-mimir .mimir-nav__hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    background: none;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    padding: 8px;
-    flex-shrink: 0;
-}
-
-body.theme-mimir .mimir-nav__hamburger span {
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-text-primary);
-    transition: transform var(--transition-base), opacity var(--transition-base);
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .mimir-nav__hamburger {
-        display: none;
-    }
-}
-
-/* Mobile drawer */
-body.theme-mimir .mimir-nav__drawer {
-    display: none;
-    flex-direction: column;
-    gap: var(--space-2);
-    padding: var(--space-3) var(--space-4) var(--space-4);
-    background-color: var(--color-bg-alt);
-    border-top: 1px solid var(--color-border);
-}
-
-body.theme-mimir .mimir-nav__drawer.is-open {
-    display: flex;
-}
-
-body.theme-mimir .mimir-nav__drawer a {
-    font-family: var(--font-body);
-    font-size: var(--text-md);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    padding-block: var(--space-1);
-    border-bottom: 1px solid var(--color-border);
-    transition: color var(--transition-fast);
-}
-
-body.theme-mimir .mimir-nav__drawer a:last-child {
-    border-bottom: none;
-}
-
-body.theme-mimir .mimir-nav__drawer a:hover {
-    color: var(--color-accent-primary);
-}
-
-/* ==========================================================================
-   3. Atmospheric Backgrounds + Glow Overlays
-   Each Mimir section has a layered atmosphere:
-   - Base: --section-bg from token system
-   - Glow: radial gradient in --section-glow colour
-   - Grain: SVG noise texture overlay (subtle, felt not read)
-   All overlays use ::before and ::after on .section elements.
-   Content sits above via .section__inner z-index.
-   ========================================================================== */
-
-/* Radial glow — centred, uses section glow token */
-body.theme-mimir .section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        ellipse 80% 60% at 50% 40%,
-        var(--section-glow, rgba(100, 120, 180, 0.15)),
-        transparent 70%
-    );
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Grain overlay — same SVG noise technique as main site hero */
-body.theme-mimir .section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    background-size: 256px 256px;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.6;
-}
-
-/* Reduce grain in light mode — already light, less needed */
-[data-theme="light"] body.theme-mimir .section::after {
-    opacity: 0.25;
-}
-
-/* Hero section gets a stronger downward vignette */
-body.theme-mimir .section--hero::before {
-    background:
-        radial-gradient(
-            ellipse 60% 50% at 50% 30%,
-            var(--section-glow, rgba(100, 120, 180, 0.25)),
-            transparent 70%
-        ),
-        linear-gradient(
-            to bottom,
-            transparent 60%,
-            rgba(0, 0, 0, 0.4) 100%
-        );
-}
-
-/* Edge glow — for sections where the character art sits at the right edge */
-body.theme-mimir .section--glow-right::before {
-    background: radial-gradient(
-        ellipse 60% 70% at 85% 50%,
-        var(--section-glow, rgba(100, 120, 180, 0.2)),
-        transparent 70%
-    );
-}
-
-/* Edge glow — character art at left edge */
-body.theme-mimir .section--glow-left::before {
-    background: radial-gradient(
-        ellipse 60% 70% at 15% 50%,
-        var(--section-glow, rgba(100, 120, 180, 0.2)),
-        transparent 70%
-    );
-}
-
-/* ==========================================================================
-   4. Character Art Treatment
-   Edge-positioned cutout illustrations with glow halos.
-   Image references are clean swaps — no layout rewrite needed.
-   ========================================================================== */
-
-body.theme-mimir .char-art {
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-    max-width: none;
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .char-art {
-        width: 50%;
-    }
-}
-
-body.theme-mimir .char-art__image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0;
-    border: none;
-    background: none;
-    box-shadow: none;
-    /* Character images — atmospheric glow halo only, no card frame */
-    filter: drop-shadow(0 0 60px var(--section-glow, rgba(100, 120, 180, 0.5)));
-}
-
-/* Placeholder state — shown until real art is supplied */
-body.theme-mimir .char-art__placeholder {
-    aspect-ratio: 3 / 4;
-    background-color: var(--color-bg-raised);
-    border: 1px dashed var(--color-border);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-secondary);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    text-align: center;
-    padding: var(--space-3);
-}
-
-/* Annotation marker — the small + motif */
-body.theme-mimir .annotation {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: var(--space-1);
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: var(--section-accent, var(--color-accent-primary));
-    pointer-events: none;
-}
-
-body.theme-mimir .annotation::before {
-    content: '+';
-    font-size: var(--text-lg);
-    font-weight: 300;
-    line-height: 1;
-    flex-shrink: 0;
-}
-
-body.theme-mimir .annotation__line {
-    width: 32px;
-    height: 1px;
-    background-color: currentColor;
-    opacity: 0.5;
-    flex-shrink: 0;
-}
-
-/* ==========================================================================
-   5. Screenshot Treatment
-   Floating app screenshots with rounded corners, glow, slight tilt.
-   ========================================================================== */
-
-body.theme-mimir .screenshot {
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow:
-        0 0 0 1px var(--color-border),
-        0 8px 40px var(--color-shadow),
-        0 0 60px var(--section-glow, rgba(100, 120, 180, 0.2));
-}
-
-body.theme-mimir .screenshot img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-}
-
-/* Slight tilt variants — apply to .screenshot wrapper */
-body.theme-mimir .screenshot--tilt-right {
-    transform: rotate(1.5deg);
-}
-
-body.theme-mimir .screenshot--tilt-left {
-    transform: rotate(-1.5deg);
-}
-
-/* Placeholder state */
-body.theme-mimir .screenshot__placeholder {
-    aspect-ratio: 16 / 10;
-    background: linear-gradient(
-        135deg,
-        var(--color-bg-alt),
-        var(--color-bg-raised)
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-secondary);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-}
-
-/* ==========================================================================
-   6. Annotation Motif
-   Tasteful decorative markers — use sparingly.
-   ========================================================================== */
-
-/* Highlight underline — hand-drawn style */
-body.theme-mimir .highlight {
-    position: relative;
-    display: inline;
-    color: var(--section-accent, var(--color-accent-primary));
-}
-
-body.theme-mimir .highlight::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--section-accent, var(--color-accent-primary));
-    opacity: 0.5;
-    border-radius: 1px;
-}
-
-/* ==========================================================================
-   7. Pill CTA Buttons
-   Rounded pill, section accent colour, glow halo.
-   ========================================================================== */
-
-body.theme-mimir .btn-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    background-color: var(--section-cta-bg, var(--color-accent-primary));
-    color: var(--color-text-inverse);
-    border: none;
-    border-radius: var(--radius-pill);
-    padding: 14px 28px;
-    cursor: pointer;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    box-shadow: 0 0 20px var(--section-glow, rgba(201, 168, 76, 0.3));
-    transition:
-        opacity var(--transition-fast),
-        box-shadow var(--transition-fast);
-}
-
-body.theme-mimir .btn-pill:hover {
-    opacity: 0.9;
-    box-shadow: 0 0 32px var(--section-glow, rgba(201, 168, 76, 0.5));
-}
-
-body.theme-mimir .btn-pill:focus-visible {
-    outline: 2px solid var(--section-accent, var(--color-accent-primary));
-    outline-offset: 3px;
-}
-
-body.theme-mimir .btn-pill svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-}
-
-/* Ghost variant */
-body.theme-mimir .btn-pill--ghost {
-    background-color: transparent;
-    border: 1px solid var(--section-accent, var(--color-accent-primary));
-    color: var(--section-accent, var(--color-accent-primary));
-    box-shadow: none;
-}
-
-body.theme-mimir .btn-pill--ghost:hover {
-    background-color: var(--section-cta-bg, var(--color-accent-primary));
-    color: var(--color-text-inverse);
-    opacity: 1;
-    box-shadow: 0 0 20px var(--section-glow, rgba(201, 168, 76, 0.3));
-}
-
-/* ==========================================================================
-   8. Email Signup Form
-   ========================================================================== */
-
-body.theme-mimir .signup-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-    width: 100%;
-    max-width: var(--max-width-narrow);
-}
-
-@media (min-width: 520px) {
-    body.theme-mimir .signup-form--inline {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-}
-
-body.theme-mimir .signup-form__label {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-1);
-}
-
-body.theme-mimir .signup-form__input {
-    flex: 1;
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    background-color: var(--color-bg-raised);
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-pill);
-    padding: 12px 20px;
-    outline: none;
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-body.theme-mimir .signup-form__input:focus {
-    border-color: var(--section-accent, var(--color-accent-primary));
-    box-shadow: 0 0 0 3px var(--section-glow, rgba(201, 168, 76, 0.2));
-}
-
-body.theme-mimir .signup-form__input::placeholder {
-    color: var(--color-text-secondary);
-    opacity: 0.7;
-}
-
-body.theme-mimir .signup-form__select {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    background-color: var(--color-bg-raised);
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: 10px 16px;
-    outline: none;
-    cursor: pointer;
-}
-
-body.theme-mimir .signup-form__note {
-    font-size: var(--text-xs);
-    color: var(--color-text-secondary);
+.payg-pack__note {
+    font-family: var(--font-serif);
+    font-size: var(--fs-2xs);
+    color: var(--fg-2);
     opacity: 0.8;
 }
 
+
 /* ==========================================================================
-   9. Feature Tiles
-   Used in the features/key benefits section.
-   Sit on section background — no card bg. Gold top border only.
+   14. Pricing Commitments
    ========================================================================== */
 
-body.theme-mimir .features-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
+.pricing-commitments {
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border);
+    text-align: center;
 }
 
-@media (min-width: 640px) {
-    body.theme-mimir .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    body.theme-mimir .features-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-body.theme-mimir .feature-tile {
-    border-top: 2px solid var(--section-accent, var(--color-accent-primary));
-    padding-top: var(--space-3);
-}
-
-body.theme-mimir .feature-tile__icon {
-    width: 40px;
-    height: 40px;
-    color: var(--section-accent, var(--color-accent-primary));
+.pricing-commitments__heading {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xl);
+    font-weight: 400;
+    color: var(--fg-1);
     margin-bottom: var(--space-2);
 }
 
-body.theme-mimir .feature-tile__title {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 400;
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-1);
+.pricing-commitments__subtext {
+    font-family: var(--font-serif);
+    font-size: var(--fs-md);
+    color: var(--fg-2);
+    max-width: var(--max-width-text);
+    margin-inline: auto;
+    margin-bottom: var(--space-5);
+    line-height: 1.7;
 }
 
-body.theme-mimir .feature-tile__body {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--color-text-secondary);
-    line-height: 1.65;
-}
-
-/* ==========================================================================
-   10. Pricing Cards
-   Three tiers. Middle tier (Studio) is visually elevated.
-   ========================================================================== */
-
-body.theme-mimir .pricing-grid {
+.pricing-commitments__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-4);
-    align-items: start;
+    text-align: left;
+    max-width: 800px;
+    margin-inline: auto;
 }
 
-@media (min-width: 768px) {
-    body.theme-mimir .pricing-grid {
-        grid-template-columns: repeat(3, 1fr);
-        align-items: stretch;
+@media (min-width: 640px) {
+    .pricing-commitments__grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-body.theme-mimir .pricing-card {
-    background-color: var(--color-bg-raised);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-5);
+.pricing-commitment {
     display: flex;
-    flex-direction: column;
     gap: var(--space-3);
-}
-
-/* Elevated middle tier */
-body.theme-mimir .pricing-card--featured {
-    border-color: var(--color-accent-primary);
-    box-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
-    position: relative;
-}
-
-body.theme-mimir .pricing-card--featured::before {
-    content: 'Most Popular';
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-accent-primary);
-    color: var(--color-text-inverse);
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 14px;
-    border-radius: var(--radius-pill);
-    white-space: nowrap;
-}
-
-body.theme-mimir .pricing-card__tier {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 400;
-    color: var(--color-text-primary);
-}
-
-body.theme-mimir .pricing-card__price {
-    font-family: var(--font-display);
-    font-size: var(--text-4xl);
-    font-weight: 400;
-    color: var(--color-accent-primary);
-    line-height: 1;
-}
-
-body.theme-mimir .pricing-card__price span {
-    font-size: var(--text-base);
-    font-weight: 400;
-    color: var(--color-text-secondary);
-}
-
-body.theme-mimir .pricing-card__desc {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-}
-
-body.theme-mimir .pricing-card__features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-    flex: 1;
-}
-
-body.theme-mimir .pricing-card__features li {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
-    display: flex;
-    gap: var(--space-2);
     align-items: flex-start;
 }
 
-body.theme-mimir .pricing-card__features li::before {
-    content: '✓';
-    color: var(--color-accent-primary);
-    font-weight: 700;
+.pricing-commitment__icon {
+    color: var(--accent);
+    font-size: var(--fs-2xl);
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
-body.theme-mimir .pricing-card__note {
-    font-size: var(--text-xs);
-    color: var(--color-text-secondary);
-    opacity: 0.7;
-    text-align: center;
-    margin-top: var(--space-2);
-}
-
-/* ==========================================================================
-   11. Testimonial / Community Cards
-   Glassy translucent treatment on warm rose/violet backgrounds.
-   ========================================================================== */
-
-body.theme-mimir .testimonial-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-}
-
-@media (min-width: 640px) {
-    body.theme-mimir .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    body.theme-mimir .testimonial-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-body.theme-mimir .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-lg);
-    padding: var(--space-4);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-}
-
-[data-theme="light"] body.theme-mimir .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-color: rgba(0, 0, 0, 0.08);
-}
-
-body.theme-mimir .testimonial-card__quote {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--color-text-primary);
-    line-height: 1.7;
-    font-style: italic;
-    flex: 1;
-}
-
-body.theme-mimir .testimonial-card__author {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-}
-
-body.theme-mimir .testimonial-card__avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--section-accent, var(--color-accent-primary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: var(--text-sm);
-    color: var(--color-text-inverse);
-    flex-shrink: 0;
-}
-
-body.theme-mimir .testimonial-card__name {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--color-text-primary);
-}
-
-body.theme-mimir .testimonial-card__role {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: var(--color-text-secondary);
-}
-
-/* ==========================================================================
-   Content Grid — two-column layout used across Mimir sections
-   Text left or right, character art / screenshot opposite side.
-   ========================================================================== */
-
-body.theme-mimir .content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .content-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-7);
-    }
-}
-
-/* Reverse column order on alternate sections */
-body.theme-mimir .content-grid--reversed .content-grid__media {
-    order: -1;
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .content-grid--reversed .content-grid__media {
-        order: 2;
-    }
-    body.theme-mimir .content-grid--reversed .content-grid__text {
-        order: 1;
-    }
-}
-
-body.theme-mimir .content-grid__text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-}
-
-body.theme-mimir .content-grid__media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* Coming soon badge — used on Maps section */
-body.theme-mimir .badge-coming-soon {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-1);
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--section-accent, var(--color-accent-primary));
-    border: 1px solid var(--section-accent, var(--color-accent-primary));
-    border-radius: var(--radius-pill);
-    padding: 4px 12px;
-    margin-bottom: var(--space-2);
-}
-
-/* ==========================================================================
-   Mimir Footer
-   Same HTML structure as studio footer.
-   Scoped to body.theme-mimir — dark navy treatment.
-   ========================================================================== */
-
-body.theme-mimir .site-footer {
-    background-color: var(--color-bg);
-    border-top: 1px solid var(--color-border);
-    padding-block: var(--space-7) var(--space-5);
-}
-
-body.theme-mimir .site-footer__inner {
-    max-width: var(--max-width-content);
-    margin-inline: auto;
-    padding-inline: var(--space-4);
-}
-
-body.theme-mimir .site-footer__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
-    margin-bottom: var(--space-6);
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .site-footer__grid {
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: var(--space-6);
-    }
-}
-
-body.theme-mimir .site-footer__wordmark {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 400;
-    color: var(--color-accent-primary);
-    letter-spacing: 0.05em;
+.pricing-commitment strong {
     display: block;
-    margin-bottom: var(--space-2);
-}
-
-body.theme-mimir .site-footer__tagline {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    max-width: 28ch;
-}
-
-body.theme-mimir .site-footer__heading {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
+    font-family: var(--font-serif);
+    font-size: var(--fs-md);
     font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-accent-primary);
-    margin-bottom: var(--space-3);
+    color: var(--fg-1);
+    margin-bottom: var(--space-1);
 }
 
-body.theme-mimir .site-footer__links {
-    list-style: none;
-    padding: 0;
+.pricing-commitment p {
+    font-family: var(--font-serif);
+    font-size: var(--fs-sm);
+    color: var(--fg-2);
+    line-height: 1.6;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
 }
 
-body.theme-mimir .site-footer__links a {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-body.theme-mimir .site-footer__links a:hover {
-    color: var(--color-accent-primary);
-}
-
-body.theme-mimir .site-footer__social {
-    display: flex;
-    gap: var(--space-3);
-    margin-top: var(--space-3);
-}
-
-body.theme-mimir .site-footer__social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: color var(--transition-fast), border-color var(--transition-fast);
-}
-
-body.theme-mimir .site-footer__social a:hover {
-    color: var(--color-accent-primary);
-    border-color: var(--color-accent-primary);
-}
-
-body.theme-mimir .site-footer__bottom {
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-4);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-    align-items: center;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    body.theme-mimir .site-footer__bottom {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-}
-
-body.theme-mimir .site-footer__copyright {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: var(--color-text-secondary);
-    opacity: 0.6;
-}
 
 /* ==========================================================================
-   Well Illustration — Ask Mimir section
+   15. Well Illustration — Ask Mimir
    V1: styled placeholder. V1.1: animated blob replaces this.
-   Keep this a clean swap — no structural dependencies.
    ========================================================================== */
 
-body.theme-mimir .well-illustration {
+.well-illustration {
     width: 100%;
     max-width: 360px;
     margin-inline: auto;
 }
 
-body.theme-mimir .well-illustration__placeholder {
+.well-illustration__placeholder {
     aspect-ratio: 3 / 4;
     background: radial-gradient(
         ellipse 60% 70% at 50% 60%,
@@ -1117,7 +428,7 @@ body.theme-mimir .well-illustration__placeholder {
     overflow: hidden;
 }
 
-body.theme-mimir .well-illustration__wisp {
+.well-illustration__wisp {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -1136,222 +447,356 @@ body.theme-mimir .well-illustration__wisp {
     50%      { transform: scale(1.2); opacity: 1; }
 }
 
-body.theme-mimir .well-illustration__placeholder p {
+.well-illustration__placeholder p {
     font-family: var(--font-display);
-    font-size: var(--text-base);
-    color: var(--color-text-secondary);
+    font-size: var(--fs-md);
+    color: var(--fg-2);
     margin: 0;
 }
 
-body.theme-mimir .well-illustration__placeholder span {
-    font-size: var(--text-xs);
+.well-illustration__placeholder span {
+    font-size: var(--fs-2xs);
     opacity: 0.6;
 }
 
+
 /* ==========================================================================
-   FAQ — accordion list
+   16. Email Signup Form
    ========================================================================== */
 
-body.theme-mimir .faq-list {
+.signup-form {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    border-top: 1px solid var(--color-border);
-}
-
-body.theme-mimir .faq-item {
-    border-bottom: 1px solid var(--color-border);
-}
-
-body.theme-mimir .faq-item__question button {
+    gap: var(--space-2);
     width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-block: var(--space-4);
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 400;
-    color: var(--color-text-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-3);
-    transition: color var(--transition-fast);
+    max-width: var(--max-width-narrow);
 }
 
-body.theme-mimir .faq-item__question button:hover {
-    color: var(--color-accent-primary);
-}
-
-body.theme-mimir .faq-item__question button::after {
-    content: '+';
-    font-size: var(--text-xl);
-    font-weight: 300;
-    flex-shrink: 0;
-    transition: transform var(--transition-base);
-    color: var(--color-accent-primary);
-}
-
-body.theme-mimir .faq-item__question button[aria-expanded="true"]::after {
-    transform: rotate(45deg);
-}
-
-body.theme-mimir .faq-item__answer {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--color-text-secondary);
-    line-height: 1.75;
-    padding-bottom: var(--space-4);
-    padding-right: var(--space-5);
-}
-
-body.theme-mimir .faq-item__answer[hidden] {
-    display: none;
-}
-
-/* ==========================================================================
-   PAYG Credit Blocks — pricing section
-   ========================================================================== */
-
-body.theme-mimir .payg-block {
-    margin-top: var(--space-7);
-    padding: var(--space-5);
-    background-color: var(--color-bg-raised);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    text-align: center;
-}
-
-body.theme-mimir .payg-block__heading {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 400;
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-2);
-}
-
-body.theme-mimir .payg-block__subtext {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--color-text-secondary);
-    max-width: var(--max-width-text);
-    margin-inline: auto;
-    margin-bottom: var(--space-4);
-    line-height: 1.7;
-}
-
-body.theme-mimir .payg-block__packs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3);
-    justify-content: center;
-}
-
-body.theme-mimir .payg-pack {
-    background-color: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-4);
-    min-width: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-1);
-}
-
-body.theme-mimir .payg-pack__price {
-    font-family: var(--font-display);
-    font-size: var(--text-3xl);
-    font-weight: 400;
-    color: var(--color-accent-primary);
-}
-
-body.theme-mimir .payg-pack__credits {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    font-weight: 600;
-    color: var(--color-text-primary);
-}
-
-body.theme-mimir .payg-pack__note {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    color: var(--color-text-secondary);
-    opacity: 0.8;
-}
-
-/* ==========================================================================
-   Pricing Commitments — anti-lock-in block
-   ========================================================================== */
-
-body.theme-mimir .pricing-commitments {
-    margin-top: var(--space-7);
-    padding-top: var(--space-6);
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-}
-
-body.theme-mimir .pricing-commitments__heading {
-    font-family: var(--font-display);
-    font-size: var(--text-2xl);
-    font-weight: 400;
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-2);
-}
-
-body.theme-mimir .pricing-commitments__subtext {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    color: var(--color-text-secondary);
-    max-width: var(--max-width-text);
-    margin-inline: auto;
-    margin-bottom: var(--space-5);
-    line-height: 1.7;
-}
-
-body.theme-mimir .pricing-commitments__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-    text-align: left;
-    max-width: 800px;
-    margin-inline: auto;
-}
-
-@media (min-width: 640px) {
-    body.theme-mimir .pricing-commitments__grid {
-        grid-template-columns: 1fr 1fr;
+@media (min-width: 520px) {
+    .signup-form--inline {
+        flex-direction: row;
+        align-items: flex-start;
     }
 }
 
-body.theme-mimir .pricing-commitment {
-    display: flex;
-    gap: var(--space-3);
-    align-items: flex-start;
-}
-
-body.theme-mimir .pricing-commitment__icon {
-    color: var(--color-accent-primary);
-    font-size: var(--text-lg);
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-body.theme-mimir .pricing-commitment strong {
-    display: block;
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    font-weight: 600;
-    color: var(--color-text-primary);
+.signup-form__label {
+    font-family: var(--font-serif);
+    font-size: var(--fs-sm);
+    color: var(--fg-2);
     margin-bottom: var(--space-1);
 }
 
-body.theme-mimir .pricing-commitment p {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin: 0;
+.signup-form__input {
+    flex: 1;
+    font-family: var(--font-serif);
+    font-size: var(--fs-md);
+    background-color: var(--bg-surface);
+    color: var(--fg-1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: 12px 20px;
+    outline: none;
+    transition: border-color var(--duration-quick) var(--easing-settle), box-shadow var(--duration-quick) var(--easing-settle);
+}
+
+.signup-form__input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--section-glow, rgba(201, 168, 76, 0.2));
+}
+
+.signup-form__input::placeholder {
+    color: var(--fg-2);
+    opacity: 0.7;
+}
+
+.signup-form__select {
+    font-family: var(--font-serif);
+    font-size: var(--fs-sm);
+    background-color: var(--bg-surface);
+    color: var(--fg-1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 10px 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.signup-form__note {
+    font-size: var(--fs-2xs);
+    color: var(--fg-2);
+    opacity: 0.8;
+}
+
+
+/* ==========================================================================
+   17. Content Grid
+   Two-column layout used across Mimir sections.
+   Text left or right, character art / screenshot opposite side.
+   ========================================================================== */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-7);
+    }
+}
+
+/* Reverse column order on alternate sections */
+.content-grid--reversed .content-grid__media {
+    order: -1;
+}
+
+@media (min-width: 768px) {
+    .content-grid--reversed .content-grid__media {
+        order: 2;
+    }
+    .content-grid--reversed .content-grid__text {
+        order: 1;
+    }
+}
+
+.content-grid__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.content-grid__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* ==========================================================================
+   18. Character Art
+   Edge-positioned cutout illustrations with glow halos.
+   ========================================================================== */
+
+.char-art {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: none;
+}
+
+@media (min-width: 768px) {
+    .char-art {
+        width: 50%;
+    }
+}
+
+.char-art__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    filter: drop-shadow(0 0 60px var(--section-glow, rgba(100, 120, 180, 0.5)));
+}
+
+/* Placeholder state — shown until real art is supplied */
+.char-art__placeholder {
+    aspect-ratio: 3 / 4;
+    background-color: var(--bg-surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg-2);
+    font-family: var(--font-serif);
+    font-size: var(--fs-sm);
+    text-align: center;
+    padding: var(--space-3);
+}
+
+
+/* ==========================================================================
+   19. Screenshot Treatment
+   Floating app screenshots with rounded corners, glow, slight tilt.
+   ========================================================================== */
+
+.screenshot {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px var(--border),
+        0 8px 40px rgba(0, 0, 0, 0.25),
+        0 0 60px var(--section-glow, rgba(100, 120, 180, 0.2));
+}
+
+.screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
+/* Slight tilt variants */
+.screenshot--tilt-right {
+    transform: rotate(1.5deg);
+}
+
+.screenshot--tilt-left {
+    transform: rotate(-1.5deg);
+}
+
+/* Placeholder state */
+.screenshot__placeholder {
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(
+        135deg,
+        var(--bg-shell),
+        var(--bg-surface)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg-2);
+    font-family: var(--font-serif);
+    font-size: var(--fs-sm);
+}
+
+
+/* ==========================================================================
+   20. Annotation Motif
+   Tasteful decorative markers — use sparingly.
+   ========================================================================== */
+
+/* Annotation marker — the small + motif */
+.annotation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-serif);
+    font-size: var(--fs-2xs);
+    color: var(--section-accent, var(--accent));
+    pointer-events: none;
+}
+
+.annotation::before {
+    content: '+';
+    font-size: var(--fs-2xl);
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.annotation__line {
+    width: 32px;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+/* Highlight underline — hand-drawn style */
+.highlight {
+    position: relative;
+    display: inline;
+    color: var(--section-accent, var(--accent));
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--section-accent, var(--accent));
+    opacity: 0.5;
+    border-radius: 1px;
+}
+
+
+/* ==========================================================================
+   21. Pill CTA Buttons
+   Rounded pill, section accent colour, glow halo.
+   ========================================================================== */
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-serif);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    background-color: var(--section-cta-bg, var(--accent));
+    color: var(--fg-on-accent);
+    border: none;
+    border-radius: var(--radius-pill);
+    padding: 14px 28px;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    box-shadow: 0 0 20px var(--section-glow, rgba(201, 168, 76, 0.3));
+    transition:
+        opacity var(--duration-quick) var(--easing-settle),
+        box-shadow var(--duration-quick) var(--easing-settle);
+}
+
+.btn-pill:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 32px var(--section-glow, rgba(201, 168, 76, 0.5));
+}
+
+.btn-pill:focus-visible {
+    outline: 2px solid var(--section-accent, var(--accent));
+    outline-offset: 3px;
+}
+
+.btn-pill svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Ghost variant */
+.btn-pill--ghost {
+    background-color: transparent;
+    border: 1px solid var(--section-accent, var(--accent));
+    color: var(--section-accent, var(--accent));
+    box-shadow: none;
+}
+
+.btn-pill--ghost:hover {
+    background-color: var(--section-cta-bg, var(--accent));
+    color: var(--fg-on-accent);
+    opacity: 1;
+    box-shadow: 0 0 20px var(--section-glow, rgba(201, 168, 76, 0.3));
+}
+
+
+/* ==========================================================================
+   22. Badge — Coming Soon
+   ========================================================================== */
+
+.badge-coming-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-serif);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--section-accent, var(--accent));
+    border: 1px solid var(--section-accent, var(--accent));
+    border-radius: var(--radius-pill);
+    padding: 4px 12px;
+    margin-bottom: var(--space-2);
 }

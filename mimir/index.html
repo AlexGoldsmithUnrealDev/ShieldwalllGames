@@ -39,139 +39,84 @@
   </script>
 </head>
 
-<body class="theme-mimir">
+<body>
 
+<div class="ms-page">
+
+  <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Top bar: orientation strip linking back to studio site -->
-  <div class="top-bar" role="navigation" aria-label="Return to Shieldwall Games">
-    <div class="top-bar__inner">
-      <a href="../" class="top-bar__back">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <line x1="19" y1="12" x2="5" y2="12"/>
-          <polyline points="12 19 5 12 12 5"/>
-        </svg>
-        Shieldwall Games
+  <!-- ============================================================
+       NAV BAR
+       ============================================================ -->
+  <nav class="ms-nav">
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./">
+        <img src="../assets/logos/mimir-mark.png" alt="" />
+        <span class="ms-nav-brand-word">Mimir</span>
       </a>
-      <!-- Theme toggle mounted here on the right -->
-      <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
+      <div class="ms-nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="roadmap.html">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span>
+      <div class="ms-nav-cta">
+        <div class="theme-toggle-mount" aria-label="Toggle colour theme"></div>
+        <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- Main Mimir navigation -->
-  <header class="mimir-nav" role="banner">
-    <div class="mimir-nav__inner">
-
-      <a href="./" class="mimir-nav__wordmark" aria-label="Mimir home">
-        Mimir
-      </a>
-
-      <nav aria-label="Mimir navigation">
-        <ul class="mimir-nav__links" role="list">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="roadmap.html">Roadmap</a></li>
-        </ul>
-      </nav>
-
-      <a href="#beta-signup" class="mimir-nav__cta">
-        Join the beta
-      </a>
-
-      <button
-        class="mimir-nav__hamburger"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="mimir-mobile-drawer"
-        type="button"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-
-    </div>
-
-    <!-- Mobile drawer -->
-    <div class="mimir-nav__drawer" id="mimir-mobile-drawer" role="navigation" aria-label="Mimir mobile navigation">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="#beta-signup">Join the beta</a>
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <header class="ms-hero">
+    <div class="ms-hero-bg" style="background-image: url('../assets/images/Avalon.png')"></div>
+    <div class="ms-hero-fade"></div>
+    <div class="ms-wrap ms-hero-inner">
+      <div class="ms-hero-copy">
+        <div class="ms-hero-eyebrow">Structured Worldbuilding Platform</div>
+        <h1 class="ms-hero-title">
+          Your world, alive in every tool.
+          <em>Local-first markdown. AI assistant. Quest editor. Engine exports.</em>
+        </h1>
+        <p class="ms-hero-sub">
+          Mimir is the structured worldbuilding platform that connects your lore
+          to your AI tools, your production pipeline, and your creative process —
+          from a single source of truth. Local-first markdown files on your machine.
+          Quest and dialogue editor with simulation mode. AI assistant that knows
+          your entire world. Available on Windows, macOS, and Linux.
+        </p>
+        <div class="ms-hero-cta">
+          <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
+          <a class="ms-btn-secondary" href="#pricing">Pricing from £10/month</a>
+        </div>
+        <div class="ms-hero-meta">
+          <div><strong>Local-first</strong>plain markdown on your machine</div>
+          <div><strong>Windows · macOS · Linux</strong>desktop application</div>
+          <div><strong>Free tier</strong>pay-as-you-go AI credits</div>
+        </div>
+      </div>
+      <div class="ms-hero-plate">
+        <img src="../assets/images/KernowKing.png" alt="Kernow King character" />
+        <div class="ms-hero-plate-cap">Character entry from a Mimir library</div>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
 
     <!-- ============================================================
-         HERO SECTION
-         Section accent: navy, silver, pale gold
+         FEATURES SECTION
          ============================================================ -->
-    <section class="section section--hero" aria-labelledby="hero-heading" id="hero">
-      <div class="section__inner container">
-        <div class="content-grid">
-
-          <div class="content-grid__text">
-            <span class="section-label">Structured Worldbuilding</span>
-            <h1 class="section-heading" id="hero-heading">
-              Your world, alive<br />
-              in every tool.
-            </h1>
-            <p class="section-subtext">
-              Mimir is the structured worldbuilding platform that connects your lore
-              to your AI tools, your production pipeline, and your creative process —
-              from a single source of truth. Local-first markdown files on your machine.
-              Quest and dialogue editor with simulation mode. AI assistant that knows
-              your entire world. Available on Windows, macOS, and Linux.
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem;">
-              <a href="#beta-signup" class="btn-pill">
-                Join the beta
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </a>
-              <a href="roadmap.html" class="btn-pill btn-pill--ghost">
-                See the roadmap
-              </a>
-              <a href="#pricing" class="btn-pill btn-pill--ghost">
-                Pricing from £10/month
-              </a>
-            </div>
-          </div>
-
-          <div class="content-grid__media">
-            <!-- Hero character art — Kernow King -->
-            <div class="char-art">
-              <img
-                src="../assets/images/KernowKing.png"
-                alt="Regal Kernow king — Mimir hero character"
-                class="char-art__image"
-                role="img"
-                aria-label="Regal Kernow king character illustration"
-              />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         FEATURES INTRO — anchor for nav
-         Section accent: uses hero colours as neutral intro
-         ============================================================ -->
-    <section class="section section--hero" aria-label="What Mimir does" id="features">
-      <div class="section__inner container" style="text-align:center; max-width: 720px; margin-inline:auto;">
-        <span class="section-label">Everything in one place</span>
-        <h2 class="section-heading">
-          One world. Every tool. Infinite stories.
-        </h2>
-        <p class="section-subtext" style="margin-inline:auto;">
+    <section class="ms-section ms-wrap" id="features">
+      <div class="ms-section-head">
+        <span class="ms-eyebrow">Everything in one place</span>
+        <h2 class="ms-section-h2">One world. Every tool. <em>Infinite</em> stories.</h2>
+        <p class="ms-section-sub">
           Mimir is a desktop application for structured worldbuilding.
           Your entries live as plain markdown files with YAML frontmatter —
           readable in any editor, ready for AI, and native to any game engine.
@@ -180,344 +125,87 @@
           Available on Windows, macOS, and Linux.
         </p>
       </div>
-    </section>
+      <div class="ms-features">
 
-    <!-- ============================================================
-         ENGINE INTEGRATION — teal / cyan
-         ============================================================ -->
-    <section class="section section--engine section--glow-right reveal" aria-labelledby="engine-heading">
-      <div class="section__inner container">
-        <div class="content-grid">
-
-          <div class="content-grid__text">
-            <span class="section-label">AI Tool Integration (MCP) & Engine Export</span>
-            <h2 class="section-heading" id="engine-heading">
-              From your world<br />to your engine, instantly.
-            </h2>
-            <p class="section-subtext">
-              Mimir's MCP server (Model Context Protocol — an open standard for
-              connecting AI tools to your data) gives Claude, Cursor, and other
-              AI tools direct access to your world data. Export to Unreal Engine
-              DataTable CSV and generic JSON at V1, with Unity ScriptableObject
-              and Godot Resource exports coming in V1.5.
-            </p>
-            <a href="#beta-signup" class="btn-pill">
-              Try the demo
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="content-grid__media">
-            <!-- Screenshot placeholder: replace with engine integration screenshot -->
-            <div class="screenshot">
-              <div
-                class="screenshot__placeholder"
-                role="img"
-                aria-label="Engine integration screenshot coming soon"
-              >
-                Screenshot Coming Soon
-              </div>
-            </div>
-            <!-- Annotation markers -->
-            <div class="annotation" style="top:15%; right:0;" aria-hidden="true">
-              <span class="annotation__line"></span>
-              MCP connected
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         CUSTOM SCHEMAS — amber / bronze
-         ============================================================ -->
-    <section class="section section--schemas section--glow-left reveal" aria-labelledby="schemas-heading">
-      <div class="section__inner container">
-        <div class="content-grid content-grid--reversed">
-
-          <div class="content-grid__text">
-            <span class="section-label">Custom Schemas</span>
-            <h2 class="section-heading" id="schemas-heading">
-              Build any world,<br />your way.
-            </h2>
-            <p class="section-subtext">
-              13+ built-in entry types — characters, species, cultures, places,
-              factions, artifacts, events, languages, story arcs, quests, dialogues,
-              maps, and more. Create unlimited custom entry types via the schema editor
-              with 9 field types including text, dates, links, link lists, tags,
-              and relationship lists. No developer skills needed. Form-based editing
-              with focus mode for distraction-free work.
-            </p>
-            <a href="#beta-signup" class="btn-pill">
-              Start building
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="content-grid__media">
-            <!-- Schemas section character art — Hellenic Warlord -->
-            <div class="char-art">
-              <img
-                src="../assets/images/HellenicWarlord.png"
-                alt="Hellenic warlord — representing custom schemas and structured world data"
-                class="char-art__image"
-                loading="lazy"
-                role="img"
-                aria-label="Hellenic warlord character illustration"
-              />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         QUEST & DIALOGUE EDITOR — indigo / steel blue
-         V1 headline feature for indie game developers
-         ============================================================ -->
-    <section class="section section--quest section--glow-right reveal"
-      aria-labelledby="quest-heading">
-      <div class="section__inner container">
-        <div class="content-grid">
-
-          <div class="content-grid__text">
-            <span class="section-label">Quest & Dialogue Editor</span>
-            <h2 class="section-heading" id="quest-heading">
-              Design narratives<br />
-              that ship to your engine.
-            </h2>
-            <p class="section-subtext">
-              A node-based quest and dialogue graph editor built on React Flow.
-              8 node types including dialogue lines, branching choices, conditions,
-              consequences, and subgraph references. A typed variable system with
-              4 scopes (global, per-character, per-faction, per-place). Full
-              simulation mode with step debugger, state inspector, coverage tracking,
-              and replay logging. Direct engine export to Unreal, Unity, and Godot.
-            </p>
-            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.5rem;">
-              <li class="feature-tile__body">✦ &nbsp;8 node types with drag-and-drop visual editing</li>
-              <li class="feature-tile__body">✦ &nbsp;Typed variables — global, per-character, per-faction, per-place</li>
-              <li class="feature-tile__body">✦ &nbsp;Simulation mode with step debugger and coverage tracking</li>
-              <li class="feature-tile__body">✦ &nbsp;Subgraph references (Inkle knots/stitches pattern)</li>
-              <li class="feature-tile__body">✦ &nbsp;Direct export to Unreal, Unity, and Godot</li>
-            </ul>
-            <a href="#beta-signup" class="btn-pill">
-              Join the beta
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="content-grid__media">
-            <!-- Quest editor section character art — Spearmaiden -->
-            <div class="char-art">
-              <img
-                src="../assets/images/Spearmaiden.png"
-                alt="Spearmaiden warrior — representing the quest and dialogue editor"
-                class="char-art__image"
-                loading="lazy"
-                role="img"
-                aria-label="Spearmaiden warrior character illustration"
-              />
-            </div>
-            <div class="annotation"
-              style="top:20%; right:0;"
-              aria-hidden="true">
-              <span class="annotation__line"></span>
-              Sim mode active
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         MAPS — emerald / sage — coming soon
-         ============================================================ -->
-    <section class="section section--maps section--glow-right reveal" aria-labelledby="maps-heading">
-      <div class="section__inner container">
-        <div class="content-grid">
-
-          <div class="content-grid__text">
-            <span class="badge-coming-soon" aria-label="Feature shipped in version 1">V1 — Shipped</span>
-            <h2 class="section-heading" id="maps-heading">
-              Map your world,<br />not just describe it.
-            </h2>
-            <p class="section-subtext">
-              Interactive maps backed by your own images. Click-place pins that
-              link directly to world entries with hover preview and click-to-navigate.
-              9 pin icon types, drag-to-reposition, pan/zoom canvas with minimap.
-              Full backlinks integration — every linked entry shows which maps
-              it appears on. Multi-layer maps with time-aware layers coming in V1.5.
-            </p>
-            <a href="#beta-signup" class="btn-pill">
-              Notify me when ready
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="content-grid__media">
-            <div class="screenshot screenshot--tilt-right">
-              <div
-                class="screenshot__placeholder"
-                role="img"
-                aria-label="Maps feature preview coming soon"
-              >
-                Maps Preview<br />Coming Soon
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         ASK MIMIR — purple / magenta
-         Static well-with-wisp illustration placeholder.
-         Animated blob deferred to V1.1 — do not add animation here.
-         ============================================================ -->
-    <section class="section section--ask-mimir section--glow-left reveal" aria-labelledby="ask-mimir-heading">
-      <div class="section__inner container">
-        <div class="content-grid content-grid--reversed">
-
-          <div class="content-grid__text">
-            <span class="section-label">Ask Mimir — AI Assistant</span>
-            <h2 class="section-heading" id="ask-mimir-heading">
-              Ask your world<br />anything.
-            </h2>
-            <p class="section-subtext">
-              Ask Mimir is the in-app AI assistant that knows your world.
-              Built on a strict-honesty invariant — it answers only from your
-              lorebible content and confesses ignorance with stub-creation
-              suggestions. Three quality tiers (Fast, Quality, Ultimate).
-              Per-entry focused conversations. Prompt caching for token savings.
-              Pay-as-you-go credits on the free tier, monthly quota on Studio.
-            </p>
-            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1rem;">
-              <li class="feature-tile__body">✦ &nbsp;"What are the major factions in the Northern Reaches?"</li>
-              <li class="feature-tile__body">✦ &nbsp;"What does Aldric know about the Ashborn Pact?"</li>
-              <li class="feature-tile__body">✦ &nbsp;"Which characters have visited Ironholm?"</li>
-              <li class="feature-tile__body">✦ &nbsp;"Has this character appeared before Season 3?"</li>
-              <li class="feature-tile__body">✦ &nbsp;"What year did the Blackwood dynasty collapse?"</li>
-            </ul>
-            <a href="#beta-signup" class="btn-pill">
-              Notify me at launch
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="content-grid__media">
-            <!--
-              Well-with-wisp illustration placeholder.
-              V1: static image. V1.1: animated SVG blob entity.
-              Replace this div with <img> when illustration is ready.
-              Do not add animation infrastructure here.
-            -->
-            <div
-              class="well-illustration"
-              role="img"
-              aria-label="Mimir — the well of wisdom. Illustration coming soon."
-            >
-              <div class="well-illustration__placeholder">
-                <div class="well-illustration__wisp" aria-hidden="true"></div>
-                <p>Well of Wisdom<br /><span>Illustration Coming Soon</span></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         TRANSLATOR — wine / coral
-         ============================================================ -->
-    <section class="section section--translator section--glow-right reveal" aria-labelledby="translator-heading">
-      <div class="section__inner container">
-        <div class="content-grid">
-
-          <div class="content-grid__text">
-            <span class="section-label">Language Translator</span>
-            <h2 class="section-heading" id="translator-heading">
-              Bring your invented<br />languages to life.
-            </h2>
-            <p class="section-subtext">
-              A full constructed-language workbench. Define registers, cultural bias,
-              grammar rules, naming conventions, pronoun hierarchy, and vocabulary
-              per language. Translate English text into your invented language —
-              consistently, every time. AI captures new vocabulary automatically.
-              Per-word regenerate controls, pronunciation popover, 500-entry history.
-              Calibration phrases let you set the exact tone. Pay-as-you-go credits
-              on free tier, monthly quota on Studio.
-            </p>
-            <a href="#beta-signup" class="btn-pill">
-              Join the beta
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="content-grid__media">
-            <!-- Translator section character art — Hellenic Fisherman -->
-            <div class="char-art">
-              <img
-                src="../assets/images/HellenicFisherman.png"
-                alt="Hellenic fisherman — representing the language translator feature"
-                class="char-art__image"
-                loading="lazy"
-                role="img"
-                aria-label="Hellenic fisherman character illustration"
-              />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         COMMUNITY — violet / pink
-         ============================================================ -->
-    <section class="section section--community reveal" aria-labelledby="community-heading">
-      <div class="section__inner container">
-
-        <div style="text-align:center; max-width:640px; margin-inline:auto; margin-bottom:3rem;">
-          <span class="section-label">Community</span>
-          <h2 class="section-heading" id="community-heading">
-            Worlds built with Mimir.
-          </h2>
-          <p class="section-subtext" style="margin-inline:auto;">
-            Join a growing community of worldbuilders, game developers,
-            writers, and GMs building with Mimir.
+        <!-- 1. Structured Entries -->
+        <div class="ms-feature">
+          <div class="ms-feat-icon"><img src="../assets/icons/character.png" alt="" /></div>
+          <h3 class="ms-feat-title">Structured Entries</h3>
+          <p class="ms-feat-body">
+            13+ built-in entry types — characters, species, cultures, places,
+            factions, artifacts, events, languages, story arcs, quests, dialogues,
+            maps, and more. Create unlimited custom entry types via the schema editor
+            with 9 field types including text, dates, links, link lists, tags,
+            and relationship lists. Form-based editing with focus mode for
+            distraction-free work.
           </p>
         </div>
 
-        <div style="text-align:center; padding:var(--space-5) 0;">
-          <p class="section-subtext" style="margin-inline:auto; font-style:italic;">
-            Mimir is in active development. Real community feedback will appear here
-            when beta testing begins. In the meantime —
-            <a href="#beta-signup">join the waitlist</a> to be among the first.
+        <!-- 2. Quest & Dialogue Editor -->
+        <div class="ms-feature">
+          <div class="ms-feat-icon"><img src="../assets/icons/dialogue.png" alt="" /></div>
+          <h3 class="ms-feat-title">Quest & Dialogue Editor</h3>
+          <p class="ms-feat-body">
+            A node-based quest and dialogue graph editor built on React Flow.
+            8 node types including dialogue lines, branching choices, conditions,
+            consequences, and subgraph references. A typed variable system with
+            4 scopes (global, per-character, per-faction, per-place). Full
+            simulation mode with step debugger, state inspector, coverage tracking,
+            and replay logging. Direct engine export to Unreal, Unity, and Godot.
+          </p>
+        </div>
+
+        <!-- 3. Ask Mimir AI -->
+        <div class="ms-feature">
+          <div class="ms-feat-icon"><img src="../assets/icons/faction.png" alt="" /></div>
+          <h3 class="ms-feat-title">Ask Mimir AI</h3>
+          <p class="ms-feat-body">
+            Ask Mimir is the in-app AI assistant that knows your world.
+            Built on a strict-honesty invariant — it answers only from your
+            lorebible content and confesses ignorance with stub-creation
+            suggestions. Three quality tiers (Fast, Quality, Ultimate).
+            Per-entry focused conversations. Prompt caching for token savings.
+            Pay-as-you-go credits on the free tier, monthly quota on Studio.
+          </p>
+        </div>
+
+        <!-- 4. Engine Integration -->
+        <div class="ms-feature">
+          <div class="ms-feat-icon"><img src="../assets/icons/spell.png" alt="" /></div>
+          <h3 class="ms-feat-title">AI & Engine Integration</h3>
+          <p class="ms-feat-body">
+            Mimir's MCP server (Model Context Protocol — an open standard for
+            connecting AI tools to your data) gives Claude, Cursor, and other
+            AI tools direct access to your world data. Export to Unreal Engine
+            DataTable CSV and generic JSON at V1, with Unity ScriptableObject
+            and Godot Resource exports coming in V1.5.
+          </p>
+        </div>
+
+        <!-- 5. Custom Schemas -->
+        <div class="ms-feature">
+          <div class="ms-feat-icon"><img src="../assets/icons/runemark.png" alt="" /></div>
+          <h3 class="ms-feat-title">Custom Schemas</h3>
+          <p class="ms-feat-body">
+            No developer skills needed. Create unlimited custom entry types with
+            9 field types. Five relationship trees (family, genus, place, culture,
+            faction). Interactive maps with pin linking. Custom calendars, timelines,
+            and story arcs. Wiki-links with autocomplete and backlinks. Git
+            auto-commit and version history. Naming consistency engine.
+          </p>
+        </div>
+
+        <!-- 6. Translator -->
+        <div class="ms-feature">
+          <div class="ms-feat-icon"><img src="../assets/icons/language.png" alt="" /></div>
+          <h3 class="ms-feat-title">Translator</h3>
+          <p class="ms-feat-body">
+            A full constructed-language workbench. Define registers, cultural bias,
+            grammar rules, naming conventions, pronoun hierarchy, and vocabulary
+            per language. Translate English text into your invented language —
+            consistently, every time. AI captures new vocabulary automatically.
+            Per-word regenerate controls, pronunciation popover, 500-entry history.
+            Calibration phrases let you set the exact tone.
           </p>
         </div>
 
@@ -525,307 +213,281 @@
     </section>
 
     <!-- ============================================================
-         PRICING — stable anchor at #pricing
-         Do not rename the id — it is referenced externally.
+         HOW IT WORKS
          ============================================================ -->
-    <section class="section section--hero reveal"
-      aria-labelledby="pricing-heading" id="pricing">
-      <div class="section__inner container">
-
-        <div style="text-align:center; max-width:680px;
-          margin-inline:auto; margin-bottom:3rem;">
-          <span class="section-label">Pricing</span>
-          <h2 class="section-heading" id="pricing-heading">
-            Honest pricing.<br />No surprises.
-          </h2>
-          <p class="section-subtext" style="margin-inline:auto;">
-            Mimir Core is free forever. Studio adds everything you need
-            to ship games. Pay-as-you-go credits let you try AI features
-            before committing to a subscription.
-          </p>
-          <p style="font-size:0.8rem; color:var(--color-text-secondary);
-            margin-top:0.75rem; opacity:0.7;">
-            All prices subject to change before launch.
-            Early subscribers are grandfathered at their original price
-            for a minimum of 12 months after any increase.
-          </p>
+    <section class="ms-section ms-wrap" id="how">
+      <div class="ms-how">
+        <div class="ms-how-plate">
+          <img src="../assets/images/Kernow.png" alt="" />
         </div>
-
-        <div class="pricing-grid">
-
-          <!-- Free tier -->
-          <div class="pricing-card">
-            <div>
-              <p class="pricing-card__tier">Mimir Core</p>
-              <p style="font-size:0.8rem; color:var(--color-text-secondary);
-                margin-top:0.25rem;">
-                The complete worldbuilding tool — free forever
-              </p>
-            </div>
-            <p class="pricing-card__price">
-              £0<span> / forever</span>
-            </p>
-            <p class="pricing-card__desc">
-              A full worldbuilding tool you fully own.
-              Your data, your files, yours forever —
-              whether you subscribe or not.
-            </p>
-            <ul class="pricing-card__features" role="list">
-              <li>Unlimited world entries — 13+ built-in types</li>
-              <li>Custom schemas with 9 field types</li>
-              <li>Five relationship trees (family, genus, place, culture, faction)</li>
-              <li>Interactive maps with pin linking</li>
-              <li>Quest and dialogue graph editor</li>
-              <li>Custom calendars, timelines, and story arcs</li>
-              <li>Wiki-links with autocomplete and backlinks</li>
-              <li>Git auto-commit and version history</li>
-              <li>Naming consistency engine</li>
-              <li>Markdown and HTML export</li>
-              <li>Translator — pay-as-you-go credits</li>
-              <li>Ask Mimir AI — pay-as-you-go credits</li>
-            </ul>
-            <a href="#beta-signup"
-              class="btn-pill btn-pill--ghost"
-              style="margin-top:auto; text-align:center;
-                justify-content:center;">
-              Join the beta
-            </a>
-            <p class="pricing-card__note">No credit card required</p>
-          </div>
-
-          <!-- Studio tier — featured / recommended -->
-          <div class="pricing-card pricing-card--featured">
-            <div>
-              <p class="pricing-card__tier">Mimir Studio</p>
-              <p style="font-size:0.8rem;
-                color:var(--color-text-secondary);
-                margin-top:0.25rem;">
-                For creators who need the full toolkit
-              </p>
-            </div>
-            <div>
-              <p class="pricing-card__price">
-                £10<span> / month</span>
-              </p>
-              <p style="font-size:0.75rem;
-                color:var(--color-text-secondary);
-                margin-top:-0.5rem;">
-                or £100/year — save £20
-              </p>
-            </div>
-            <p class="pricing-card__desc">
-              Everything in Mimir Core, plus all game development
-              features and monthly AI allowance included.
-            </p>
-            <ul class="pricing-card__features" role="list">
-              <li>Everything in Mimir Core</li>
-              <li>Engine exports — Unreal DataTable CSV, generic JSON</li>
-              <li>MCP server for Claude, Cursor, and other AI tools</li>
-              <li>Simulation mode polish and replay logging</li>
-              <li>Time-aware trees and maps</li>
-              <li>Lore consistency review (5 reviews/month)</li>
-              <li>AI quota: 200 translations, 100 Ask Mimir queries/month</li>
-              <li>Async git collaboration — V1.5</li>
-              <li>Priority support and early access</li>
-            </ul>
-            <a href="#beta-signup"
-              class="btn-pill"
-              style="margin-top:auto; text-align:center;
-                justify-content:center;">
-              Join the beta
-            </a>
-            <p class="pricing-card__note">
-              Subject to change before launch
-            </p>
-          </div>
-
-          <!-- Studio Pro tier -->
-          <div class="pricing-card">
-            <div>
-              <p class="pricing-card__tier">Mimir Studio Pro</p>
-              <p style="font-size:0.8rem;
-                color:var(--color-text-secondary);
-                margin-top:0.25rem;">
-                For teams and studios in production
-              </p>
-            </div>
-            <div>
-              <p class="pricing-card__price">
-                £20<span> / month</span>
-              </p>
-              <p style="font-size:0.75rem;
-                color:var(--color-text-secondary);
-                margin-top:-0.5rem;">
-                or £200/year — save £40
-              </p>
-            </div>
-            <p class="pricing-card__desc">
-              Everything in Studio, plus session capture
-              and higher AI quotas for teams in production.
-            </p>
-            <ul class="pricing-card__features" role="list">
-              <li>Everything in Mimir Studio</li>
-              <li>Session capture with recording and replay — V2</li>
-              <li>Higher AI quotas across all features</li>
-              <li>Procedural lore expansion with pattern enforcement — V2</li>
-              <li>Branching canon for multiple game endings — V2</li>
-              <li>Real-time multiplayer cursors (opt-in) — V2</li>
-            </ul>
-            <a href="#beta-signup"
-              class="btn-pill btn-pill--ghost"
-              style="margin-top:auto; text-align:center;
-                justify-content:center;">
-              Join the beta
-            </a>
-            <p class="pricing-card__note">
-              Session capture arrives in V2
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Pay-as-you-go credits -->
-        <div class="payg-block">
-          <h3 class="payg-block__heading">
-            Try AI features before you subscribe.
-          </h3>
-          <p class="payg-block__subtext">
-            Free tier users can access Translator and Ask Mimir
-            with pay-as-you-go credit packs. Credits never expire
-            and carry over if you upgrade to a paid plan.
-          </p>
-          <div class="payg-block__packs">
-            <div class="payg-pack">
-              <span class="payg-pack__price">£5</span>
-              <span class="payg-pack__credits">500 credits</span>
-              <span class="payg-pack__note">
-                ~250 Ask Mimir queries or ~2,500 translations
-              </span>
-            </div>
-            <div class="payg-pack">
-              <span class="payg-pack__price">£10</span>
-              <span class="payg-pack__credits">1,000 credits</span>
-              <span class="payg-pack__note">
-                ~500 Ask Mimir queries or ~5,000 translations
-              </span>
-            </div>
-            <div class="payg-pack">
-              <span class="payg-pack__price">£20</span>
-              <span class="payg-pack__credits">2,000 credits</span>
-              <span class="payg-pack__note">
-                ~1,000 Ask Mimir queries or ~10,000 translations
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Anti-lock-in commitments -->
-        <div class="pricing-commitments">
-          <h3 class="pricing-commitments__heading">
-            What we commit to.
-          </h3>
-          <p class="pricing-commitments__subtext">
-            We've seen how other worldbuilding tools treat subscribers
-            when they cancel. We do things differently.
-          </p>
-          <div class="pricing-commitments__grid">
-            <div class="pricing-commitment">
-              <span class="pricing-commitment__icon"
-                aria-hidden="true">✦</span>
+        <div>
+          <span class="ms-eyebrow">How it works</span>
+          <h2 class="ms-section-h2">Four steps to a <em>living</em> world.</h2>
+          <ol class="ms-how-list">
+            <li class="ms-how-step">
+              <div class="ms-how-num">i</div>
               <div>
-                <strong>Cancel anytime, keep your work forever</strong>
-                <p>
-                  Your world files live on your computer.
-                  Cancelling removes AI features and paid tools —
-                  it never touches your data.
-                </p>
+                <h4>Pick a folder.</h4>
+                <p>Mimir reads from a folder you choose. No proprietary database, no upload step. Your world lives on your machine as plain markdown files.</p>
               </div>
-            </div>
-            <div class="pricing-commitment">
-              <span class="pricing-commitment__icon"
-                aria-hidden="true">✦</span>
+            </li>
+            <li class="ms-how-step">
+              <div class="ms-how-num">ii</div>
               <div>
-                <strong>14-day no-questions refund</strong>
-                <p>
-                  First-time subscription.
-                  No hoops, no retention flows, no questions.
-                </p>
+                <h4>Write entries.</h4>
+                <p>Use the structured editor or write markdown directly. Either way, the same plain files end up on disk — readable in any editor, ready for AI.</p>
               </div>
-            </div>
-            <div class="pricing-commitment">
-              <span class="pricing-commitment__icon"
-                aria-hidden="true">✦</span>
+            </li>
+            <li class="ms-how-step">
+              <div class="ms-how-num">iii</div>
               <div>
-                <strong>Auto-renewal reminders</strong>
-                <p>
-                  We email you 14 days before any renewal.
-                  If you haven't used Mimir in 60 days,
-                  that email is even harder to miss.
-                </p>
+                <h4>Link everything.</h4>
+                <p>Reference a character, a faction, a place. The links light up the timeline, the family tree, and Ask Mimir.</p>
               </div>
-            </div>
-            <div class="pricing-commitment">
-              <span class="pricing-commitment__icon"
-                aria-hidden="true">✦</span>
+            </li>
+            <li class="ms-how-step">
+              <div class="ms-how-num">iv</div>
               <div>
-                <strong>Price increases come with notice</strong>
-                <p>
-                  Existing subscribers keep their price for
-                  12 months minimum. 30-day notice before
-                  any increase takes effect.
-                </p>
+                <h4>Ship to your engine.</h4>
+                <p>Export to Unreal, Unity, or Godot. Or point Claude Projects, Cursor, or ChatGPT at the folder. Your tools learn your world.</p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
-
-        <div style="text-align:center; margin-top:var(--space-5); padding:var(--space-4); border:1px solid var(--color-border); border-radius:var(--radius-lg);">
-          <p class="section-subtext" style="margin-inline:auto;">
-            <strong style="color:var(--color-text-primary);">Need team licensing or enterprise features?</strong><br>
-            We're building volume pricing and admin tools for studios.
-            <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk" style="color:var(--color-accent-primary);">Get in touch</a> to discuss your team's needs.
-          </p>
-        </div>
-
-        <!-- Roadmap CTA -->
-        <div style="text-align:center; margin-top:3rem;">
-          <p class="section-subtext" style="margin-inline:auto;">
-            Subscribe to Studio at launch and get every V1.5 and V2
-            feature added automatically — no upgrade fees,
-            no version unlocks, no surprises.
-          </p>
-          <a href="roadmap.html" class="btn-pill btn-pill--ghost"
-            style="margin-top:1rem; display:inline-flex;">
-            See the full roadmap
-            <svg width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2"
-              aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </div>
-
       </div>
     </section>
 
     <!-- ============================================================
-         FAQ
+         COMMUNITY
          ============================================================ -->
-    <section class="section section--hero reveal" aria-labelledby="faq-heading" id="faq">
-      <div class="section__inner container" style="max-width:720px; margin-inline:auto;">
+    <section class="ms-section ms-wrap" id="community">
+      <div class="ms-section-head" style="text-align:center;">
+        <span class="ms-eyebrow">Community</span>
+        <h2 class="ms-section-h2">Worlds built with Mimir.</h2>
+        <p class="ms-section-sub" style="margin-inline:auto;">
+          Join a growing community of worldbuilders, game developers,
+          writers, and GMs building with Mimir.
+        </p>
+      </div>
+      <div style="text-align:center; padding:48px 0;">
+        <p class="ms-section-sub" style="margin-inline:auto; font-style:italic;">
+          Mimir is in active development. Real community feedback will appear here
+          when beta testing begins. In the meantime —
+          <a href="#beta-signup">join the waitlist</a> to be among the first.
+        </p>
+      </div>
+    </section>
 
-        <div style="text-align:center; margin-bottom:2.5rem;">
-          <span class="section-label">FAQ</span>
-          <h2 class="section-heading" id="faq-heading">Common questions</h2>
+    <!-- ============================================================
+         PRICING — stable anchor at #pricing — do not rename
+         ============================================================ -->
+    <section class="ms-section ms-wrap" id="pricing">
+      <div class="ms-section-head" style="text-align:center;">
+        <span class="ms-eyebrow">Pricing</span>
+        <h2 class="ms-section-h2">Honest pricing. Your <em>files</em> stay yours.</h2>
+        <p class="ms-section-sub" style="margin-inline:auto;">
+          Mimir Core is free forever. Studio adds everything you need
+          to ship games. Pay-as-you-go credits let you try AI features
+          before committing to a subscription.
+        </p>
+        <p style="font-size:12px;color:var(--fg-3);margin-top:12px;">
+          All prices subject to change before launch.
+          Early subscribers are grandfathered at their original price
+          for a minimum of 12 months after any increase.
+        </p>
+      </div>
+
+      <div class="ms-pricing-grid">
+
+        <!-- Mimir Core — Free -->
+        <div class="ms-tier">
+          <h3 class="ms-tier-name">Mimir Core</h3>
+          <p class="ms-tier-tag">The complete worldbuilding tool — free forever</p>
+          <div class="ms-tier-price">£0<small> / forever</small></div>
+          <ul>
+            <li>Unlimited world entries — 13+ built-in types</li>
+            <li>Custom schemas with 9 field types</li>
+            <li>Five relationship trees (family, genus, place, culture, faction)</li>
+            <li>Interactive maps with pin linking</li>
+            <li>Quest and dialogue graph editor</li>
+            <li>Custom calendars, timelines, and story arcs</li>
+            <li>Wiki-links with autocomplete and backlinks</li>
+            <li>Git auto-commit and version history</li>
+            <li>Naming consistency engine</li>
+            <li>Markdown and HTML export</li>
+            <li>Translator — pay-as-you-go credits</li>
+            <li>Ask Mimir AI — pay-as-you-go credits</li>
+          </ul>
+          <a class="ms-btn-secondary" href="#beta-signup">Join the beta</a>
         </div>
 
+        <!-- Mimir Studio — £10/mo — FEATURED -->
+        <div class="ms-tier is-featured">
+          <h3 class="ms-tier-name">Mimir Studio</h3>
+          <p class="ms-tier-tag">For creators who need the full toolkit</p>
+          <div class="ms-tier-price">£10<small> / month</small></div>
+          <p style="font-size:12px;color:var(--fg-3);">or £100/year — save £20</p>
+          <ul>
+            <li>Everything in Mimir Core</li>
+            <li>Engine exports — Unreal DataTable CSV, generic JSON</li>
+            <li>MCP server for Claude, Cursor, and other AI tools</li>
+            <li>Simulation mode polish and replay logging</li>
+            <li>Time-aware trees and maps</li>
+            <li>Lore consistency review (5 reviews/month)</li>
+            <li>AI quota: 200 translations, 100 Ask Mimir queries/month</li>
+            <li>Async git collaboration — V1.5</li>
+            <li>Priority support and early access</li>
+          </ul>
+          <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
+        </div>
+
+        <!-- Mimir Studio Pro — £20/mo -->
+        <div class="ms-tier">
+          <h3 class="ms-tier-name">Mimir Studio Pro</h3>
+          <p class="ms-tier-tag">For teams and studios in production</p>
+          <div class="ms-tier-price">£20<small> / month</small></div>
+          <p style="font-size:12px;color:var(--fg-3);">or £200/year — save £40</p>
+          <ul>
+            <li>Everything in Mimir Studio</li>
+            <li>Session capture with recording and replay — V2</li>
+            <li>Higher AI quotas across all features</li>
+            <li>Procedural lore expansion with pattern enforcement — V2</li>
+            <li>Branching canon for multiple game endings — V2</li>
+            <li>Real-time multiplayer cursors (opt-in) — V2</li>
+          </ul>
+          <a class="ms-btn-secondary" href="#beta-signup">Join the beta</a>
+        </div>
+
+      </div>
+
+      <!-- Pay-as-you-go credits -->
+      <div class="payg-block">
+        <h3 class="payg-block__heading">
+          Try AI features before you subscribe.
+        </h3>
+        <p class="payg-block__subtext">
+          Free tier users can access Translator and Ask Mimir
+          with pay-as-you-go credit packs. Credits never expire
+          and carry over if you upgrade to a paid plan.
+        </p>
+        <div class="payg-block__packs">
+          <div class="payg-pack">
+            <span class="payg-pack__price">£5</span>
+            <span class="payg-pack__credits">500 credits</span>
+            <span class="payg-pack__note">
+              ~250 Ask Mimir queries or ~2,500 translations
+            </span>
+          </div>
+          <div class="payg-pack">
+            <span class="payg-pack__price">£10</span>
+            <span class="payg-pack__credits">1,000 credits</span>
+            <span class="payg-pack__note">
+              ~500 Ask Mimir queries or ~5,000 translations
+            </span>
+          </div>
+          <div class="payg-pack">
+            <span class="payg-pack__price">£20</span>
+            <span class="payg-pack__credits">2,000 credits</span>
+            <span class="payg-pack__note">
+              ~1,000 Ask Mimir queries or ~10,000 translations
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anti-lock-in commitments -->
+      <div class="pricing-commitments">
+        <h3 class="pricing-commitments__heading">
+          What we commit to.
+        </h3>
+        <p class="pricing-commitments__subtext">
+          We've seen how other worldbuilding tools treat subscribers
+          when they cancel. We do things differently.
+        </p>
+        <div class="pricing-commitments__grid">
+          <div class="pricing-commitment">
+            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>Cancel anytime, keep your work forever</strong>
+              <p>
+                Your world files live on your computer.
+                Cancelling removes AI features and paid tools —
+                it never touches your data.
+              </p>
+            </div>
+          </div>
+          <div class="pricing-commitment">
+            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>14-day no-questions refund</strong>
+              <p>
+                First-time subscription.
+                No hoops, no retention flows, no questions.
+              </p>
+            </div>
+          </div>
+          <div class="pricing-commitment">
+            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>Auto-renewal reminders</strong>
+              <p>
+                We email you 14 days before any renewal.
+                If you haven't used Mimir in 60 days,
+                that email is even harder to miss.
+              </p>
+            </div>
+          </div>
+          <div class="pricing-commitment">
+            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
+            <div>
+              <strong>Price increases come with notice</strong>
+              <p>
+                Existing subscribers keep their price for
+                12 months minimum. 30-day notice before
+                any increase takes effect.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise contact -->
+      <div style="text-align:center; margin-top:48px; padding:32px; border:1px solid var(--border); border-radius:10px;">
+        <p class="ms-section-sub" style="margin-inline:auto;">
+          <strong style="color:var(--fg-1);">Need team licensing or enterprise features?</strong><br>
+          We're building volume pricing and admin tools for studios.
+          <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk" style="color:var(--accent);">Get in touch</a> to discuss your team's needs.
+        </p>
+      </div>
+
+      <!-- Roadmap CTA -->
+      <div style="text-align:center; margin-top:48px;">
+        <p class="ms-section-sub" style="margin-inline:auto;">
+          Subscribe to Studio at launch and get every V1.5 and V2
+          feature added automatically — no upgrade fees,
+          no version unlocks, no surprises.
+        </p>
+        <a href="roadmap.html" class="ms-btn-secondary" style="margin-top:16px; display:inline-flex;">
+          See the full roadmap
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         FAQ — all 10 entries
+         ============================================================ -->
+    <section class="ms-section ms-wrap" id="faq">
+      <div class="ms-section-head" style="text-align:center;">
+        <span class="ms-eyebrow">FAQ</span>
+        <h2 class="ms-section-h2">Common questions</h2>
+      </div>
+      <div style="max-width:720px;margin:0 auto;">
         <dl class="faq-list">
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-1">
+              <button type="button" aria-expanded="false" aria-controls="faq-1">
                 Is Mimir Core really free forever?
               </button>
             </dt>
@@ -841,8 +503,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-2">
+              <button type="button" aria-expanded="false" aria-controls="faq-2">
                 Why don't you support bring-your-own-API-key?
               </button>
             </dt>
@@ -861,8 +522,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-3">
+              <button type="button" aria-expanded="false" aria-controls="faq-3">
                 How do pay-as-you-go credits work?
               </button>
             </dt>
@@ -878,8 +538,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-4">
+              <button type="button" aria-expanded="false" aria-controls="faq-4">
                 What happens to my work if I cancel my subscription?
               </button>
             </dt>
@@ -896,8 +555,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-5">
+              <button type="button" aria-expanded="false" aria-controls="faq-5">
                 Will prices change after launch?
               </button>
             </dt>
@@ -915,8 +573,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-6">
+              <button type="button" aria-expanded="false" aria-controls="faq-6">
                 What if Claude (the AI) has an outage?
               </button>
             </dt>
@@ -935,8 +592,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-7">
+              <button type="button" aria-expanded="false" aria-controls="faq-7">
                 Can my team use Mimir together?
               </button>
             </dt>
@@ -955,8 +611,7 @@
 
           <div class="faq-item">
             <dt class="faq-item__question">
-              <button type="button" aria-expanded="false"
-                aria-controls="faq-8">
+              <button type="button" aria-expanded="false" aria-controls="faq-8">
                 What engines does Mimir export to?
               </button>
             </dt>
@@ -1005,26 +660,23 @@
           </div>
 
         </dl>
-
       </div>
     </section>
 
     <!-- ============================================================
-         BETA SIGNUP CTA
+         BETA SIGNUP
          ============================================================ -->
-    <section class="section section--ask-mimir reveal" aria-labelledby="beta-heading" id="beta-signup">
-      <div class="section__inner container" style="text-align:center; max-width:600px; margin-inline:auto;">
+    <section class="ms-section ms-wrap" id="beta-signup">
+      <div style="text-align:center; max-width:600px; margin-inline:auto;">
 
-        <span class="section-label">Early Access</span>
-        <h2 class="section-heading" id="beta-heading">
-          Join the beta.
-        </h2>
-        <p class="section-subtext" style="margin-inline:auto; margin-bottom:2rem;">
+        <span class="ms-eyebrow">Early Access</span>
+        <h2 class="ms-section-h2" style="text-align:center;">Join the beta.</h2>
+        <p class="ms-section-sub" style="margin-inline:auto; margin-bottom:32px;">
           Be among the first to use Mimir. Beta access opens in 2026 —
           waitlist members get in first.
         </p>
 
-        <!-- Mimir email signup — copy from components/email-mimir.html -->
+        <!-- Mimir email signup -->
         <!-- TODO: replace ACTION_URL with Buttondown Mimir list endpoint -->
         <form
           action="ACTION_URL"
@@ -1060,7 +712,7 @@
               class="signup-form__select"
               style="width:100%;"
             >
-              <option value="">Select one…</option>
+              <option value="">Select one...</option>
               <option value="indie-game-dev">Indie game development</option>
               <option value="novel-writing">Novel writing</option>
               <option value="tabletop-rpg">Tabletop RPG campaigns</option>
@@ -1070,7 +722,7 @@
             </select>
           </div>
 
-          <button type="submit" class="btn-pill" style="width:100%; justify-content:center;">
+          <button type="submit" class="ms-btn-primary" style="width:100%; justify-content:center;">
             Join the beta waitlist
           </button>
           <p class="signup-form__note">
@@ -1083,70 +735,46 @@
 
   </main>
 
-  <!-- Footer: same structure as studio footer, themed by body.theme-mimir -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__inner">
-
-      <div class="site-footer__grid">
-
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="ms-footer">
+    <div class="ms-wrap">
+      <div class="ms-foot-grid">
         <div>
-          <a href="./" class="site-footer__wordmark" aria-label="Mimir home">
-            Mimir
-          </a>
-          <p class="site-footer__tagline">
-            Structured worldbuilding for indie developers, writers, and GMs.
-            Built by Shieldwall Games.
-          </p>
-          <div class="site-footer__social" aria-label="Social media links">
-            <a href="https://x.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-            <a href="https://instagram.com/shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
-            <!-- TODO: confirm social platforms and update URLs -->
-          </div>
+          <div class="ms-foot-brand">Mimir</div>
+          <p class="ms-foot-tag">Structured worldbuilding for indie developers, writers, and GMs.</p>
+          <p style="font-size:13px;color:var(--fg-3);margin:14px 0 0">Made by Shieldwall Games · Cornwall, UK</p>
         </div>
-
-        <div>
-          <p class="site-footer__heading">Mimir</p>
-          <ul class="site-footer__links" role="list">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#beta-signup">Join the beta</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-          </ul>
+        <div class="ms-foot-col">
+          <h5>Mimir</h5>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="#beta-signup">Join the beta</a>
         </div>
-
-        <div>
-          <p class="site-footer__heading">Shieldwall Games</p>
-          <ul class="site-footer__links" role="list">
-            <li><a href="../">Home</a></li>
-            <li><a href="../ashborn/">Ashborn CCG</a></li>
-          </ul>
+        <div class="ms-foot-col">
+          <h5>Shieldwall Games</h5>
+          <a href="../">Home</a>
+          <a href="../ashborn/">Ashborn CCG</a>
         </div>
-
       </div>
-
-      <div class="site-footer__bottom">
-        <p class="site-footer__copyright">
-          &copy; 2025 Shieldwall Games Ltd. All rights reserved.
-        </p>
+      <div class="ms-foot-base">
+        <span>&copy; 2025 Shieldwall Games Ltd.</span>
+        <span style="margin-left:auto">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </span>
       </div>
-
     </div>
   </footer>
 
-  <!-- Scripts: shared first, then Mimir-specific -->
-  <script src="../scripts/main.js" defer></script>
-  <script src="scripts/mimir.js" defer></script>
+</div>
+
+<!-- Scripts: shared first, then Mimir-specific -->
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/mimir.js" defer></script>
 
 </body>
 </html>
