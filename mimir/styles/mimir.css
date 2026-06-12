@@ -1172,7 +1172,7 @@ body.theme-mimir .faq-item__question button {
     padding-block: var(--space-4);
     font-family: var(--font-display);
     font-size: var(--text-lg);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text-primary);
     display: flex;
     justify-content: space-between;
@@ -1227,7 +1227,7 @@ body.theme-mimir .payg-block {
 body.theme-mimir .payg-block__heading {
     font-family: var(--font-display);
     font-size: var(--text-xl);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text-primary);
     margin-bottom: var(--space-2);
 }
@@ -1264,7 +1264,7 @@ body.theme-mimir .payg-pack {
 body.theme-mimir .payg-pack__price {
     font-family: var(--font-display);
     font-size: var(--text-3xl);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--color-accent-primary);
 }
 
@@ -1296,7 +1296,7 @@ body.theme-mimir .pricing-commitments {
 body.theme-mimir .pricing-commitments__heading {
     font-family: var(--font-display);
     font-size: var(--text-2xl);
-    font-weight: 600;
+    font-weight: 400;
     color: var(--color-text-primary);
     margin-bottom: var(--space-2);
 }

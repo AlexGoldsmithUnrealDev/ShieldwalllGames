@@ -180,7 +180,7 @@ body.theme-studio .ashborn-about__stat {
 body.theme-studio .ashborn-about__stat-value {
     font-family: var(--font-display);
     font-size: var(--text-xl);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--color-accent-primary);
 }
 
@@ -241,7 +241,7 @@ body.theme-studio .ashborn-world__columns {
 body.theme-studio .ashborn-world__columns h3 {
     font-family: var(--font-display);
     font-size: var(--text-xl);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--color-text-primary);
     margin-bottom: var(--space-2);
 }
