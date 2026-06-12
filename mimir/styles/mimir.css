@@ -383,12 +383,12 @@ body.theme-mimir .char-art {
     position: relative;
     flex-shrink: 0;
     width: 100%;
-    max-width: 520px;
+    max-width: none;
 }
 
 @media (min-width: 768px) {
     body.theme-mimir .char-art {
-        width: 45%;
+        width: 50%;
     }
 }
 
@@ -396,10 +396,12 @@ body.theme-mimir .char-art__image {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: var(--radius-lg);
-    /* Character images — glow halo in section accent colour */
-    filter: drop-shadow(0 0 40px var(--section-glow, rgba(100, 120, 180, 0.4)));
-    box-shadow: 0 8px 40px var(--color-shadow);
+    border-radius: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    /* Character images — atmospheric glow halo only, no card frame */
+    filter: drop-shadow(0 0 60px var(--section-glow, rgba(100, 120, 180, 0.5)));
 }
 
 /* Placeholder state — shown until real art is supplied */

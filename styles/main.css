@@ -823,26 +823,24 @@ body.theme-studio div.placeholder-image {
 body.theme-studio div.placeholder-image--16x9 { aspect-ratio: 16 / 9; }
 body.theme-studio div.placeholder-image--4x5  { aspect-ratio: 4 / 5; }
 
-/* Real images replacing placeholders — full bleed, prominent display */
+/* Real images replacing placeholders — full bleed, no card frame */
 body.theme-studio img.placeholder-image {
     display: block;
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: auto;
     border: none;
     background: none;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-raised);
+    box-shadow: none;
 }
 
 body.theme-studio img.placeholder-image--4x5 {
     aspect-ratio: 4 / 5;
-    max-height: 600px;
 }
 
 body.theme-studio img.placeholder-image--16x9 {
     aspect-ratio: 16 / 9;
-    max-height: 400px;
 }
 
 /* --- Studio: section label / eyebrow --- */

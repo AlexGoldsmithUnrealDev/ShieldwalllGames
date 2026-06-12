@@ -222,7 +222,7 @@ body.theme-studio .ashborn-world__panoramic {
     object-fit: cover;
     width: 100%;
     border: none;
-    box-shadow: var(--shadow-raised);
+    box-shadow: none;
 }
 
 body.theme-studio .ashborn-world__columns {
