@@ -182,4 +182,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initStudioNav();
 
+    /* ------------------------------------------------------------------
+       Generic Hamburger Drawer
+       Finds any button with class ending in -hamburger and wires it
+       to the nearest sibling drawer element.
+       ------------------------------------------------------------------ */
+    document.querySelectorAll('.sw-hamburger, .ab-hamburger, .ms-hamburger').forEach(function(btn) {
+        var nav = btn.closest('nav') || btn.closest('header');
+        if (!nav) return;
+        var drawer = nav.querySelector('.sw-drawer, .ab-drawer, .ms-drawer');
+        if (!drawer) return;
+
+        btn.addEventListener('click', function() {
+            var isOpen = drawer.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+                drawer.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        drawer.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                drawer.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    });
+
 });
