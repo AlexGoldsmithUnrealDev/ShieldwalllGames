@@ -34,7 +34,7 @@
         {
           "name": "AI Features",
           "features": [
-            { "id": "f-ask-mimir", "name": "Ask Mimir AI assistant", "desc": "Query your entire world in natural language. Powered by Claude, knows every entry you've written.", "status": "in-progress" },
+            { "id": "f-ask-mimir", "name": "Ask Mimir AI assistant", "desc": "Query your entire world in natural language. Powered by Claude; knows every entry you've written.", "status": "in-progress" },
             { "id": "f-translator", "name": "Translator for constructed languages", "desc": "Define phonemes, grammar, and vocabulary. Translate any text into your invented language consistently.", "status": "in-progress" }
           ]
         },
@@ -53,7 +53,7 @@
       "label": "V1.5",
       "title": "Major Expansion",
       "status": "planned",
-      "pitch": "Subscribe to Studio at launch and every V1.5 feature is added to your account automatically, no upgrade fees.",
+      "pitch": "Subscribe to Studio at launch and every V1.5 feature is added to your account automatically. No upgrade fees.",
       "categories": [
         {
           "name": "Collaboration",
@@ -65,7 +65,7 @@
           "name": "Maps and World",
           "features": [
             { "id": "f-maps-full", "name": "Full interactive maps with time-aware layers", "desc": "Maps that show your world at any point in its history. Layer borders, settlements, and events across time.", "status": "planned" },
-            { "id": "f-asset-linking", "name": "Asset reference linking for game projects", "desc": "Link Mimir entries directly to game assets, meshes, textures, audio files, by path or reference.", "status": "planned" },
+            { "id": "f-asset-linking", "name": "Asset reference linking for game projects", "desc": "Link Mimir entries directly to game assets (meshes, textures, audio files) by path or reference.", "status": "planned" },
             { "id": "f-writing-systems", "name": "Custom writing systems for languages", "desc": "Define custom scripts and writing systems for invented languages. Render text in your world's alphabet.", "status": "planned" }
           ]
         },
