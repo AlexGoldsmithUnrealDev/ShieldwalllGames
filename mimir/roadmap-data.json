@@ -11,7 +11,7 @@
         {
           "name": "Worldbuilding Core",
           "features": [
-            { "id": "f-entry-types", "name": "Entry types and schemas", "desc": "Characters, places, factions, and more — with custom user-defined types for any world.", "status": "in-progress" },
+            { "id": "f-entry-types", "name": "Entry types and schemas", "desc": "Characters, places, factions, and more, with custom user-defined types for any world.", "status": "in-progress" },
             { "id": "f-wiki-links", "name": "Wiki-links and backlinks", "desc": "Connect entries with [[wiki-link]] syntax. Backlinks surface automatically.", "status": "in-progress" },
             { "id": "f-family-trees", "name": "Family trees and relationship webs", "desc": "Visual family trees and relationship maps between any entry types.", "status": "in-progress" },
             { "id": "f-story-arcs", "name": "Story arcs and narrative tools", "desc": "Track narrative arcs across characters, locations, and events.", "status": "in-progress" },
@@ -34,7 +34,7 @@
         {
           "name": "AI Features",
           "features": [
-            { "id": "f-ask-mimir", "name": "Ask Mimir AI assistant", "desc": "Query your entire world in natural language. Powered by Claude — knows every entry you've written.", "status": "in-progress" },
+            { "id": "f-ask-mimir", "name": "Ask Mimir AI assistant", "desc": "Query your entire world in natural language. Powered by Claude, knows every entry you've written.", "status": "in-progress" },
             { "id": "f-translator", "name": "Translator for constructed languages", "desc": "Define phonemes, grammar, and vocabulary. Translate any text into your invented language consistently.", "status": "in-progress" }
           ]
         },
@@ -53,7 +53,7 @@
       "label": "V1.5",
       "title": "Major Expansion",
       "status": "planned",
-      "pitch": "Subscribe to Studio at launch and every V1.5 feature is added to your account automatically — no upgrade fees.",
+      "pitch": "Subscribe to Studio at launch and every V1.5 feature is added to your account automatically, no upgrade fees.",
       "categories": [
         {
           "name": "Collaboration",
@@ -65,7 +65,7 @@
           "name": "Maps and World",
           "features": [
             { "id": "f-maps-full", "name": "Full interactive maps with time-aware layers", "desc": "Maps that show your world at any point in its history. Layer borders, settlements, and events across time.", "status": "planned" },
-            { "id": "f-asset-linking", "name": "Asset reference linking for game projects", "desc": "Link Mimir entries directly to game assets — meshes, textures, audio files — by path or reference.", "status": "planned" },
+            { "id": "f-asset-linking", "name": "Asset reference linking for game projects", "desc": "Link Mimir entries directly to game assets, meshes, textures, audio files, by path or reference.", "status": "planned" },
             { "id": "f-writing-systems", "name": "Custom writing systems for languages", "desc": "Define custom scripts and writing systems for invented languages. Render text in your world's alphabet.", "status": "planned" }
           ]
         },
@@ -104,7 +104,7 @@
         {
           "name": "Team Features",
           "features": [
-            { "id": "f-multiplayer-cursors", "name": "Real-time multiplayer cursors", "desc": "See where your collaborators are working in real time. Opt-in — works alongside async git collaboration.", "status": "planned" },
+            { "id": "f-multiplayer-cursors", "name": "Real-time multiplayer cursors", "desc": "See where your collaborators are working in real time. Opt-in, works alongside async git collaboration.", "status": "planned" },
             { "id": "f-template-library", "name": "Public template library", "desc": "Share and discover world schemas, calendar templates, and entry type collections from the Mimir community.", "status": "planned" },
             { "id": "f-engine-sdk", "name": "Engine plugin SDK", "desc": "Build your own Mimir engine integrations. Full SDK with documentation and example plugins.", "status": "planned" }
           ]
