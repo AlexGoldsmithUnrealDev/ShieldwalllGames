@@ -28,6 +28,15 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/shieldwall.css" />
+
+  <!-- MailerLite universal script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2430389');
+  </script>
 </head>
 
 <body>
@@ -199,35 +208,8 @@
             forged. Sign up to be first to know when it's ready.
           </p>
 
-          <!-- Ashborn email signup — Buttondown -->
-          <!-- TODO: embed Buttondown Ashborn list form here -->
-          <form
-            action="ACTION_URL"
-            method="post"
-            class="signup-form"
-            aria-label="Get notified when Ashborn CCG launches"
-          >
-            <div class="signup-form__field">
-              <label for="email-ashborn-home" class="signup-form__label" style="font:600 13px var(--font-sans);color:var(--fg-2);display:block;margin-bottom:6px;">
-                Email address
-              </label>
-              <input
-                id="email-ashborn-home"
-                name="email"
-                type="email"
-                required
-                autocomplete="email"
-                placeholder="you@example.com"
-                class="signup-form__input"
-                aria-required="true"
-                style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:4px;background:var(--bg-shell);color:var(--fg-1);font:15px var(--font-sans);margin-bottom:12px;"
-              />
-            </div>
-            <button type="submit" class="sw-cta-btn" style="width:100%;justify-content:center;">
-              Notify me
-            </button>
-            <p style="font:12px var(--font-sans);color:var(--fg-3);margin:10px 0 0;">No spam. Unsubscribe any time.</p>
-          </form>
+          <!-- Ashborn email signup — MailerLite -->
+          <div class="ml-embedded" data-form="rvVjbn"></div>
         </div>
       </div>
 

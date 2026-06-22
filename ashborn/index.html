@@ -28,6 +28,14 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/ashborn.css" />
 
+  <!-- MailerLite universal script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2430389');
+  </script>
 </head>
 
 <body>
@@ -239,23 +247,8 @@
             Sign up to be first to know when Ashborn CCG is ready.
             No spam. No ravens lost to the sea.
           </p>
-          <!-- TODO: replace ACTION_URL with Buttondown Ashborn list endpoint -->
-          <form
-            class="ab-signup-input"
-            action="ACTION_URL"
-            method="post"
-            aria-label="Get notified when Ashborn CCG launches"
-          >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="you@example.com"
-              aria-required="true"
-            />
-            <button class="ab-btn-solid" type="submit">Notify me</button>
-          </form>
-          <p style="font-size:12px;color:var(--fg-3);margin-top:12px;">No spam. Unsubscribe any time.</p>
+          <!-- Ashborn email signup — MailerLite -->
+          <div class="ml-embedded" data-form="rvVjbn"></div>
           <p style="font-size:14px;color:var(--fg-2);margin-top:20px;">
             While you wait,
             <a href="../mimir/" style="color:var(--accent);">explore Mimir</a>,

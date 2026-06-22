@@ -28,6 +28,14 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/mimir.css" />
 
+  <!-- MailerLite universal script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2430389');
+  </script>
 </head>
 
 <body>
@@ -623,59 +631,8 @@
           waitlist members get in first.
         </p>
 
-        <!-- Mimir email signup -->
-        <!-- TODO: replace ACTION_URL with Buttondown Mimir list endpoint -->
-        <form
-          action="ACTION_URL"
-          method="post"
-          class="signup-form"
-          aria-label="Join the Mimir beta waitlist"
-          style="align-items:center; margin-inline:auto;"
-        >
-          <div class="signup-form__field" style="width:100%;">
-            <label for="email-mimir-cta" class="signup-form__label">
-              Your email address
-            </label>
-            <input
-              id="email-mimir-cta"
-              name="email"
-              type="email"
-              required
-              autocomplete="email"
-              placeholder="you@example.com"
-              class="signup-form__input"
-              aria-required="true"
-              style="width:100%;"
-            />
-          </div>
-
-          <div class="signup-form__field" style="width:100%;">
-            <label for="use-case-cta" class="signup-form__label">
-              What will you use Mimir for? <span aria-label="optional">(optional)</span>
-            </label>
-            <select
-              id="use-case-cta"
-              name="metadata_use_case"
-              class="signup-form__select"
-              style="width:100%;"
-            >
-              <option value="">Select one...</option>
-              <option value="indie-game-dev">Indie game development</option>
-              <option value="novel-writing">Novel writing</option>
-              <option value="tabletop-rpg">Tabletop RPG campaigns</option>
-              <option value="board-game-design">Board game or card game design</option>
-              <option value="film-screenwriting">Film or screenwriting</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <button type="submit" class="ms-btn-primary" style="width:100%; justify-content:center;">
-            Join the beta waitlist
-          </button>
-          <p class="signup-form__note">
-            No spam. Unsubscribe any time. Double opt-in confirmation will be sent.
-          </p>
-        </form>
+        <!-- Mimir email signup — MailerLite -->
+        <div class="ml-embedded" data-form="x3uRLn"></div>
 
       </div>
     </section>
