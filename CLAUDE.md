@@ -134,6 +134,16 @@ Both /mimir/ and /ashborn/ are built for clean future domain extraction:
 
 ---
 
+## Fonts (production)
+
+- **Njord Regular + Alternate** — self-hosted woff2 in assets/fonts/. Display font only (28px+). Used for hero headlines, brand wordmarks, poster headings.
+- **Source Serif 4** — Google Fonts CDN. Workhorse serif for body text, entry titles, longform reading, marketing display.
+- **Inter** — Google Fonts CDN. UI sans-serif for labels, buttons, nav, dense rows.
+- **JetBrains Mono** — Google Fonts CDN. Monospace for IDs, code, frontmatter.
+- These are the final production fonts. No placeholders remain.
+
+---
+
 ## CSS Token Architecture
 
 Dual-scoped pattern:
@@ -175,15 +185,23 @@ Mimir section accent colours scoped per section class (.section--hero, --engine,
 
 ## Email Capture
 
-**Provider:** Buttondown
-- Two lists: Mimir beta interest, Ashborn release interest
-- Double opt-in enabled (GDPR compliance)
-- Custom sending domain via DNS on shieldwallgames.co.uk (email DNS is separate — may change to .com later)
-- Plain HTML form embed — no JS required
+**Provider:** MailerLite (mailerlite.com)
+- Account ID: 2430389
+- Two groups: Mimir Beta Interest, Ashborn Release Notifications
+- Double opt-in enabled on both groups (GDPR compliance)
+- Sending domain: shieldwallgames.co.uk (verified)
+- Embed method: MailerLite universal JS script in `<head>` + `ml-embedded` divs
+- Mimir form: `data-form="x3uRLn"`
+- Ashborn form: `data-form="rvVjbn"`
+- The universal script loads once per page; only include it on pages with signup forms
 
-Mimir form includes optional question: "What will you use Mimir for?" (Indie game dev / Novel writing / Tabletop RPG / Film or screenwriting / Other)
+## Social Media
 
-Ashborn form: email only.
+Confirmed platforms and URLs:
+- Facebook: https://www.facebook.com/share/18PW3HCR6m/
+- Instagram: https://www.instagram.com/shieldwall_games
+- YouTube: https://youtube.com/@shieldwallgames
+- Twitter/X: https://twitter.com/ShieldwallG
 
 ---
 
@@ -208,7 +226,7 @@ Ashborn form: email only.
 ## Technical Rules
 
 - Vanilla HTML, CSS, JS only — no frameworks, no npm, no build step
-- No inline styles — ever
+- No inline styles — ever. All styles must live in the appropriate CSS file (main.css for global, shieldwall.css for homepage, mimir.css for Mimir zone, ashborn.css for Ashborn zone, roadmap.css for roadmap page)
 - CSS custom properties for all colours, spacing, typography
 - Semantic HTML throughout
 - Mobile-first layouts
@@ -227,34 +245,33 @@ Ashborn form: email only.
 /
 ├── index.html
 ├── 404.html
+├── privacy.html
+├── terms.html
+├── CNAME
 ├── styles/
-│   └── main.css
+│   ├── main.css                 # Design system tokens + global baselines
+│   └── shieldwall.css           # Homepage (sw-*) component styles
 ├── scripts/
-│   └── main.js
-├── components/
-│   ├── email-mimir.html
-│   └── email-ashborn.html
+│   └── main.js                  # Shared JS: nav, scroll, reveal, hamburger
 ├── assets/
-│   ├── images/
-│   ├── fonts/
-│   └── icons/
-│       └── favicon.svg
+│   ├── images/                  # Concept art, landscapes, characters
+│   ├── fonts/                   # Njord-Regular.woff2, Njord-Alternate.woff2
+│   ├── icons/                   # Entry-type icons (16 PNGs) + favicon.svg
+│   └── logos/                   # Mimir mark, well-of-wisdom
 ├── mimir/
 │   ├── index.html
+│   ├── roadmap.html
+│   ├── roadmap-data.json
 │   ├── styles/
-│   │   └── mimir.css
-│   ├── scripts/
-│   │   └── mimir.js
-│   └── assets/
-│       └── images/
+│   │   ├── mimir.css            # Mimir page (ms-*) component styles
+│   │   └── roadmap.css          # Roadmap page styles
+│   └── scripts/
+│       ├── mimir.js             # Mimir nav, FAQ accordion
+│       └── roadmap.js           # Roadmap data renderer
 ├── ashborn/
 │   ├── index.html
-│   ├── styles/
-│   │   └── ashborn.css
-│   ├── scripts/
-│   │   └── ashborn.js
-│   └── assets/
-│       └── images/
+│   └── styles/
+│       └── ashborn.css          # Ashborn page (ab-*) component styles
 ├── .github/workflows/deploy.yml
 ├── .gitignore
 ├── README.md
@@ -281,45 +298,46 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [x] mimir.css — Mimir component styles
 - [x] Shared studio navigation (styles + JS)
 - [x] Shared footer (studio and Mimir variants)
-- [x] Buttondown email components
+- [x] MailerLite email signup forms (replaced Buttondown)
 - [x] Homepage (index.html)
 - [x] Mimir product page (mimir/index.html)
 - [x] Ashborn coming-soon page (ashborn/index.html)
 - [x] Custom 404 page
+- [x] Privacy policy and terms pages
 - [x] Scroll reveal and smooth scroll
 - [x] Accessibility audit completed
 - [x] Skip links on all pages
 - [x] Meta tags, OG tags, canonical links
-- [ ] Real fonts (client to supply — replace placeholder Google Fonts)
-- [ ] Character art — 5 illustrations (hero, engine, schemas, ask-mimir, translator)
+- [x] Real fonts (Njord + Source Serif 4 + Inter + JetBrains Mono)
+- [x] Mimir Design System applied (warm ink palette, grain texture, new typography)
+- [x] Copyright year — dynamic via inline JS
+- [x] GitHub Pages enabled (Source: GitHub Actions)
+- [x] Site live and tested on GitHub Pages URL
+- [x] Custom domain configured (shieldwallgames.com)
+- [x] MailerLite forms wired (Mimir: x3uRLn, Ashborn: rvVjbn)
+- [x] Mimir homepage — eight sections (quest editor section added)
+- [x] Mimir pricing section — updated to locked pricing
+- [x] Mimir roadmap page (/mimir/roadmap.html)
+- [x] Mimir roadmap data (mimir/roadmap-data.json)
+- [x] Mimir FAQ — updated with nine entries
+- [x] Footer roadmap links — all pages
+- [x] Ashborn page — explicit £30 pricing added
+- [x] Competitor comparison table on Mimir page
+- [ ] Character art — 5 commissioned illustrations (hero, engine, schemas, ask-mimir, translator)
 - [ ] App screenshots / mockups (engine integration, schemas)
 - [ ] Ask Mimir well-with-wisp illustration (replace placeholder)
 - [ ] Animated Mimir blob entity (deferred — V1.1)
 - [ ] Ashborn CCG card artwork
 - [ ] Ashborn world panoramic art
-- [ ] Buttondown account created
-- [ ] Buttondown double opt-in enabled on both lists
-- [ ] Custom sending domain configured (shieldwallgames.co.uk DNS — may migrate to .com)
-- [ ] ACTION_URL replaced with real Buttondown endpoints on all three pages
-- [ ] Social media handles confirmed and URLs updated
-- [ ] OG images created (1200×630px — one per page)
+- [ ] OG images created (1200×630px — 4 pages)
 - [ ] PNG favicon generated from assets/icons/favicon.svg
-- [x] Copyright year — now dynamic via inline JS (document.write(new Date().getFullYear()))
-- [ ] Live domain confirmed — update og:url and canonical tags
+- [ ] Social links added to all page footers (currently only on roadmap)
+- [ ] Inline styles removed from all pages
+- [ ] Custom sending domain configured (shieldwallgames.co.uk DNS)
 - [ ] shieldwallgames.co.uk redirect to .com configured (DNS)
 - [ ] ashbornsaga.com redirect configured (DNS)
 - [ ] ashbornsaga.co.uk redirect configured (DNS)
-- [ ] GitHub Pages enabled in repo settings (Source: GitHub Actions)
-- [ ] Site tested live on GitHub Pages URL
-- [ ] Custom domain configured in GitHub Pages settings
-- [x] Mimir homepage — eight sections (quest editor section added)
-- [x] Mimir pricing section — updated to locked pricing
-- [x] Mimir roadmap page (/mimir/roadmap.html)
-- [x] Mimir roadmap data (mimir/roadmap-data.json)
-- [x] Mimir FAQ — updated with eight entries
-- [x] Footer roadmap links — all pages
-- [x] Ashborn page — explicit £30 pricing added
 
 ---
 
-*Last updated: V1 build complete. Human owner: Shieldwall Games Ltd.*
+*Last updated: June 2026. MailerLite integration, design system rebuild, social links confirmed. Human owner: Shieldwall Games Ltd.*
