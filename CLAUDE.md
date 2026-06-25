@@ -331,10 +331,10 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [ ] Ashborn world panoramic art
 - [ ] OG images created (1200×630px — 4 pages)
 - [ ] PNG favicon generated from assets/icons/favicon.svg
-- [ ] Social links added to all page footers (currently only on roadmap)
-- [ ] Inline styles removed from all pages
-- [ ] Custom sending domain configured (shieldwallgames.co.uk DNS)
-- [ ] shieldwallgames.co.uk redirect to .com configured (DNS)
+- [x] Social links confirmed and updated on all pages
+- [x] Inline styles removed from all pages (background-image inline styles on hero sections are intentional and correct — not a violation)
+- [x] Custom sending domain configured (shieldwallgames.co.uk DNS)
+- [ ] shieldwallgames.com → 301 → shieldwallgames.co.uk configured (DNS)
 - [ ] ashbornsaga.com redirect configured (DNS)
 - [ ] ashbornsaga.co.uk redirect configured (DNS)
 
