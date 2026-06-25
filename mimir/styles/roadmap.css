@@ -234,6 +234,33 @@ body.theme-mimir .roadmap-status__label {
     50%      { opacity: 0.6; transform: scale(0.85); }
 }
 
+/* ==========================================================================
+   Roadmap CTA Section
+   ========================================================================== */
+
+/* CTA inner container — centered with constrained width */
+.roadmap-cta-inner {
+    text-align: center;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+/* CTA subtext auto-centered */
+.roadmap-cta-sub {
+    margin-inline: auto;
+}
+
+/* CTA button top margin */
+.roadmap-cta-btn {
+    margin-top: 1rem;
+}
+
+/* Footer bottom nav pushed right */
+.roadmap-footer-nav {
+    margin-left: auto;
+}
+
+
 /* New badge */
 body.theme-mimir .roadmap-badge-new {
     display: inline-block;

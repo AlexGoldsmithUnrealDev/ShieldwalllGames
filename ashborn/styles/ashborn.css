@@ -246,3 +246,72 @@
   .ab-nav-links { display: none; }
   .ab-hamburger { display: flex; }
 }
+
+
+/* ==========================================================================
+   Ashborn content modifiers
+   ========================================================================== */
+
+/* Small caveat text in the saga section */
+.ab-saga-caveat {
+    font-size: 13px;
+    color: var(--fg-3);
+    margin-top: 12px;
+}
+
+/* Constrained paragraph width — Ashborn bands intro */
+.ab-bands-intro {
+    max-width: 60ch;
+    margin-bottom: 36px;
+}
+
+/* Panoramic landscape image */
+.ab-panoramic {
+    width: 100%;
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    filter: saturate(0.85) brightness(0.8);
+}
+
+/* History and Mimir 2-column grid */
+.ab-history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+/* History grid section headings */
+.ab-history-h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: #f7f1e3;
+    margin: 0 0 12px;
+}
+
+/* In-development section — centered text */
+.ab-saga--centered {
+    text-align: center;
+}
+
+/* Narrower wrap for development section */
+.ab-wrap--narrow {
+    max-width: 640px;
+}
+
+/* Development section heading size override */
+.ab-saga-h2--dev {
+    font-size: clamp(36px, 4.5vw, 56px);
+}
+
+/* Signup section post-form note */
+.ab-signup-note {
+    font-size: 14px;
+    color: var(--fg-2);
+    margin-top: 20px;
+}
+
+/* Accent-coloured inline link */
+.ab-accent-link {
+    color: var(--accent);
+}

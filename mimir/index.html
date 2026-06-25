@@ -188,7 +188,7 @@
         <span class="ms-eyebrow">How Mimir compares</span>
         <h2 class="ms-section-h2">Built different.</h2>
       </div>
-      <div style="overflow-x:auto;">
+      <div class="ms-compare-scroll">
       <table class="ms-compare-table">
         <thead>
           <tr><th></th><th>Mimir</th><th>World Anvil</th><th>LegendKeeper</th><th>Articy:Draft</th><th>Obsidian</th></tr>
@@ -257,15 +257,15 @@
          PRICING, stable anchor at #pricing, do not rename
          ============================================================ -->
     <section class="ms-section ms-wrap" id="pricing">
-      <div class="ms-section-head" style="text-align:center;">
+      <div class="ms-section-head text-center">
         <span class="ms-eyebrow">Pricing</span>
         <h2 class="ms-section-h2">Honest pricing. Your <em>files</em> stay yours.</h2>
-        <p class="ms-section-sub" style="margin-inline:auto;">
+        <p class="ms-section-sub margin-inline-auto">
           Mimir Core is free forever. Studio adds everything you need
           to ship games. Pay-as-you-go credits let you try AI features
           before committing to a subscription.
         </p>
-        <p style="font-size:12px;color:var(--fg-3);margin-top:12px;">
+        <p class="ms-pricing-caveat">
           All prices subject to change before launch.
           Early subscribers are grandfathered at their original price
           for a minimum of 12 months after any increase.
@@ -300,7 +300,7 @@
           <h3 class="ms-tier-name">Mimir Studio</h3>
           <p class="ms-tier-tag">For creators who need the full toolkit</p>
           <div class="ms-tier-price">£10<small> / month</small></div>
-          <p style="font-size:12px;color:var(--fg-3);">or £100/year (save £20)</p>
+          <p class="ms-tier-annual">or £100/year (save £20)</p>
           <ul>
             <li>Everything in Mimir Core</li>
             <li>Engine exports: Unreal DataTable CSV, generic JSON</li>
@@ -320,7 +320,7 @@
           <h3 class="ms-tier-name">Mimir Studio Pro</h3>
           <p class="ms-tier-tag">For teams and studios in production</p>
           <div class="ms-tier-price">£20<small> / month</small></div>
-          <p style="font-size:12px;color:var(--fg-3);">or £200/year (save £40)</p>
+          <p class="ms-tier-annual">or £200/year (save £40)</p>
           <ul>
             <li>Everything in Mimir Studio</li>
             <li>Session capture with audio transcription, 15 hours/month (V2)</li>
@@ -426,22 +426,22 @@
       </div>
 
       <!-- Enterprise contact -->
-      <div style="text-align:center; margin-top:48px; padding:32px; border:1px solid var(--border); border-radius:10px;">
-        <p class="ms-section-sub" style="margin-inline:auto;">
-          <strong style="color:var(--fg-1);">Need team licensing or enterprise features?</strong><br>
+      <div class="ms-enterprise-box">
+        <p class="ms-section-sub margin-inline-auto">
+          <strong>Need team licensing or enterprise features?</strong><br>
           We're building volume pricing and admin tools for studios.
-          <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk" style="color:var(--accent);">Get in touch</a> to discuss your team's needs.
+          <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">Get in touch</a> to discuss your team's needs.
         </p>
       </div>
 
       <!-- Roadmap CTA -->
-      <div style="text-align:center; margin-top:48px;">
-        <p class="ms-section-sub" style="margin-inline:auto;">
+      <div class="ms-roadmap-cta">
+        <p class="ms-section-sub margin-inline-auto">
           Subscribe to Studio at launch and get every V1.5 and V2
           feature added automatically: no upgrade fees,
           no version unlocks, no surprises.
         </p>
-        <a href="roadmap.html" class="ms-btn-secondary" style="margin-top:16px; display:inline-flex;">
+        <a href="roadmap.html" class="ms-btn-secondary">
           See the full roadmap
         </a>
       </div>
@@ -452,11 +452,11 @@
          FAQ, all 9 entries
          ============================================================ -->
     <section class="ms-section ms-wrap" id="faq">
-      <div class="ms-section-head" style="text-align:center;">
+      <div class="ms-section-head text-center">
         <span class="ms-eyebrow">FAQ</span>
         <h2 class="ms-section-h2">Common questions</h2>
       </div>
-      <div style="max-width:720px;margin:0 auto;">
+      <div class="ms-faq-container">
         <dl class="faq-list">
 
           <div class="faq-item">
@@ -622,11 +622,11 @@
          BETA SIGNUP
          ============================================================ -->
     <section class="ms-section ms-wrap" id="beta-signup">
-      <div style="text-align:center; max-width:600px; margin-inline:auto;">
+      <div class="ms-beta-wrapper">
 
         <span class="ms-eyebrow">Early Access</span>
-        <h2 class="ms-section-h2" style="text-align:center;">Join the beta.</h2>
-        <p class="ms-section-sub" style="margin-inline:auto; margin-bottom:32px;">
+        <h2 class="ms-section-h2 text-center">Join the beta.</h2>
+        <p class="ms-section-sub ms-beta-sub">
           Be among the first to use Mimir. Beta access opens in 2026;
           waitlist members get in first.
         </p>
@@ -648,8 +648,8 @@
         <div>
           <div class="ms-foot-brand">Mimir</div>
           <p class="ms-foot-tag">Structured worldbuilding for indie developers, writers, and GMs.</p>
-          <p style="font-size:13px;color:var(--fg-3);margin:14px 0 0">Made by Shieldwall Games · Kent, UK</p>
-          <div style="display:flex;gap:12px;margin-top:14px;">
+          <p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p>
+          <div class="ms-foot-social">
             <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
             <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
@@ -672,7 +672,7 @@
       </div>
       <div class="ms-foot-base">
         <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span>
-        <span style="margin-left:auto">
+        <span class="footer-nav">
           <a href="../privacy.html">Privacy</a>
           <a href="../terms.html">Terms</a>
         </span>

@@ -125,7 +125,7 @@
             decks and a full rulebook. Expandable with booster packs and standalone
             expansions. Designed for kitchen tables, not tournament halls.
           </p>
-          <p class="ab-saga-p" style="font-size:13px;color:var(--fg-3);margin-top:12px;">
+          <p class="ab-saga-p ab-saga-caveat">
             Price subject to change before launch.
             Pre-order and early access details to follow.
           </p>
@@ -145,7 +145,7 @@
           </div>
         </div>
 
-        <p class="ab-saga-p" style="max-width:60ch;margin-bottom:36px;">
+        <p class="ab-saga-p ab-bands-intro">
           Every Ashborn game is set in the same Viking Age world:
           the same coastlines, the same halls, the same feuds
           playing out across different formats.
@@ -190,13 +190,13 @@
         <img
           src="../assets/images/Mountains.png"
           alt="Mountain landscape panorama from the Ashborn game world"
-          style="width:100%;margin-top:48px;border:1px solid var(--border);filter:saturate(0.85) brightness(0.8);"
+          class="ab-panoramic"
           loading="lazy"
         />
 
-        <div class="ab-history-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;">
+        <div class="ab-history-grid">
           <div>
-            <h3 style="font-family:var(--font-display);font-size:24px;color:#f7f1e3;margin:0 0 12px;">Built on History</h3>
+            <h3 class="ab-history-h3">Built on History</h3>
             <p class="ab-saga-p">
               Ashborn is not a fantasy setting dressed in Viking clothing.
               The world draws directly from the historical record:
@@ -205,7 +205,7 @@
             </p>
           </div>
           <div>
-            <h3 style="font-family:var(--font-display);font-size:24px;color:#f7f1e3;margin:0 0 12px;">Built with Mimir</h3>
+            <h3 class="ab-history-h3">Built with Mimir</h3>
             <p class="ab-saga-p">
               The Ashborn world is being built inside Mimir,
               our own worldbuilding tool. Every character, location,
@@ -220,16 +220,16 @@
     <!-- ============================================================
          IN DEVELOPMENT
          ============================================================ -->
-    <section class="ab-saga" style="text-align:center;">
-      <div class="ab-wrap" style="max-width:640px;">
+    <section class="ab-saga ab-saga--centered">
+      <div class="ab-wrap ab-wrap--narrow">
         <div class="ab-saga-eye">Development</div>
-        <h2 class="ab-saga-h2" style="font-size:clamp(36px,4.5vw,56px);">In development.</h2>
-        <p class="ab-saga-p" style="text-align:center;">
+        <h2 class="ab-saga-h2 ab-saga-h2--dev">In development.</h2>
+        <p class="ab-saga-p text-center">
           Ashborn CCG is in active development. We're building it
           the right way, slowly, carefully, with Mimir doing
           the heavy lifting on world consistency.
         </p>
-        <p class="ab-saga-p" style="text-align:center;">
+        <p class="ab-saga-p text-center">
           No release date yet. Sign up below and you'll be
           the first to know when that changes.
         </p>
@@ -249,9 +249,9 @@
           </p>
           <!-- Ashborn email signup — MailerLite -->
           <div class="ml-embedded" data-form="rvVjbn"></div>
-          <p style="font-size:14px;color:var(--fg-2);margin-top:20px;">
+          <p class="ab-signup-note">
             While you wait,
-            <a href="../mimir/" style="color:var(--accent);">explore Mimir</a>,
+            <a href="../mimir/" class="ab-accent-link">explore Mimir</a>,
             the worldbuilding tool we're using to build Ashborn.
           </p>
         </div>
@@ -262,15 +262,15 @@
 
   <!-- Footer -->
   <footer class="ab-foot">
-    <div class="ab-wrap" style="display:flex;align-items:center;flex-wrap:wrap;gap:16px;width:100%">
+    <div class="ab-wrap footer-row">
       <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
-      <span style="display:flex;gap:12px;align-items:center;">
+      <span class="social-icons">
         <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
         <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
         <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </span>
-      <span style="margin-left:auto">
+      <span class="footer-nav">
         <a href="../mimir/">Mimir</a>
         <a href="../mimir/roadmap.html">Roadmap</a>
         <a href="./">Ashborn</a>

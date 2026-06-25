@@ -547,3 +547,77 @@ a:hover {
         scroll-behavior: auto !important;
     }
 }
+
+/* ==========================================================================
+   10. Shared Layout Utilities
+   Used across multiple pages to replace common inline styles.
+   ========================================================================== */
+
+/* Footer layout — shared flex row for studio, ashborn, and mimir footers */
+.footer-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Social icon row — inline flex with gap */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Footer nav links — pushed to the right */
+.footer-nav {
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .footer-nav {
+        margin-left: 0;
+    }
+}
+
+/* Centered section head modifier */
+.text-center {
+    text-align: center;
+}
+
+/* Auto-center inline margin utility */
+.margin-inline-auto {
+    margin-inline: auto;
+}
+
+/* 404 page — full viewport centered section */
+.error-page {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--color-ink-900);
+}
+
+/* 404 heading — large display number */
+.error-page__code {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 10vw, 120px);
+    color: var(--fg-1);
+    margin: 0;
+}
+
+/* 404 message text */
+.error-page__message {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    color: var(--fg-2);
+    margin: 12px 0 24px;
+}
+
+/* 404 return link */
+.error-page__link {
+    color: var(--fg-link);
+    display: inline-block;
+}

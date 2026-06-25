@@ -147,7 +147,7 @@
             src="assets/images/Huskarl.png"
             alt="Viking huskarl warrior representing Shieldwall Games"
             loading="lazy"
-            style="max-width:260px;border-radius:4px;border:1px solid var(--border);"
+            class="sw-philosophy-img"
           />
         </div>
         <div>
@@ -179,14 +179,14 @@
     <div class="sw-wrap">
       <div class="sw-section-eye">Coming soon</div>
       <h2 class="sw-section-h2">Ashborn</h2>
-      <p style="font-family:var(--font-serif);font-size:17px;line-height:1.75;color:var(--fg-2);max-width:56ch;margin:0 0 32px;">
+      <p class="sw-ashborn-intro">
         A Viking Age card game. One shared world. Launching after Mimir,
         because we're building it with Mimir.
       </p>
 
-      <div class="sw-ashborn-preview" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+      <div class="sw-ashborn-preview">
         <!-- Ashborn world preview — Alba landscape -->
-        <div class="sw-project" style="cursor:default;">
+        <div class="sw-project sw-project--static">
           <img
             src="assets/images/Alba.png"
             alt="Alba landscape, a vista from the Ashborn game world"
@@ -200,9 +200,9 @@
         </div>
 
         <!-- Email signup form -->
-        <div style="padding:32px;background:var(--bg-surface);border:1px solid var(--border);border-radius:6px;position:relative;">
-          <h3 style="font-family:var(--font-serif);font-weight:600;font-size:20px;margin:0 0 8px;">Get notified at launch</h3>
-          <p style="font-family:var(--font-serif);font-size:14px;color:var(--fg-2);margin:0 0 20px;">
+        <div class="sw-ashborn-signup">
+          <h3 class="sw-ashborn-signup__title">Get notified at launch</h3>
+          <p class="sw-ashborn-signup__desc">
             The first game in the Ashborn line. A historically grounded
             collectible card game set in the Viking Age. Details are being
             forged. Sign up to be first to know when it's ready.
@@ -213,7 +213,7 @@
         </div>
       </div>
 
-      <a href="ashborn/" style="display:inline-flex;align-items:center;gap:6px;color:var(--fg-link);text-decoration:none;font:600 14px var(--font-sans);letter-spacing:0.04em;margin-top:24px;">
+      <a href="ashborn/" class="sw-ashborn-link">
         Learn more about Ashborn
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12"/>
@@ -240,15 +240,15 @@
        Footer
        ============================================================ -->
   <footer class="sw-footer">
-    <div class="sw-wrap" style="display:flex;align-items:center;flex-wrap:wrap;gap:16px;width:100%">
+    <div class="sw-wrap footer-row">
       <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
-      <span style="display:flex;gap:12px;align-items:center;">
+      <span class="social-icons">
         <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
         <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
         <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       </span>
-      <span style="margin-left:auto">
+      <span class="footer-nav">
         <a href="mimir/">Mimir</a>
         <a href="mimir/roadmap.html">Roadmap</a>
         <a href="ashborn/">Ashborn</a>
