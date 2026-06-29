@@ -256,8 +256,8 @@ Confirmed platforms and URLs:
 ├── assets/
 │   ├── images/                  # Concept art, landscapes, characters
 │   ├── fonts/                   # Njord-Regular.woff2, Njord-Alternate.woff2
-│   ├── icons/                   # Entry-type icons (16 PNGs) + favicon.svg
-│   └── logos/                   # Mimir mark, well-of-wisdom
+│   ├── icons/                   # Entry-type icons (16 PNGs) + favicon (.ico, -192.png, -512.png)
+│   └── logos/                   # Mimir mark, well-of-wisdom, Shieldwall logo (dark + light)
 ├── mimir/
 │   ├── index.html
 │   ├── roadmap.html
@@ -330,7 +330,7 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [ ] Ashborn CCG card artwork
 - [ ] Ashborn world panoramic art
 - [ ] OG images created (1200×630px — 4 pages)
-- [ ] PNG favicon generated from assets/icons/favicon.svg
+- [x] Favicon updated (favicon.ico, favicon-192.png, favicon-512.png, apple-touch-icon)
 - [x] Social links confirmed and updated on all pages
 - [x] Inline styles removed from all pages (background-image inline styles on hero sections are intentional and correct — not a violation)
 - [x] Custom sending domain configured (shieldwallgames.co.uk DNS)
