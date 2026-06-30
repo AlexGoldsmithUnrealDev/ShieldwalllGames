@@ -65,7 +65,7 @@ A brand and game line, not a single product. All Ashborn games share the same Vi
 
 - **Ashborn CCG** — collectible card game, first product, ~£30 GBP at launch, 1+ year from release
 - The earlier name "Ashborn: Halls of Saga" is retired — do not use it
-- Domains owned: ashbornsaga.com, ashbornsaga.co.uk — both 301-redirect to shieldwallgames.com/ashborn/
+- Domains owned: ashbornsaga.com, ashbornsaga.co.uk — both 301-redirect to shieldwallgames.co.uk/ashborn/
 
 ---
 
@@ -79,9 +79,9 @@ A brand and game line, not a single product. All Ashborn games share the same Vi
 
 ## Domains
 
-- **shieldwallgames.com** — primary domain, canonical URL
-- **shieldwallgames.co.uk** — owned, will 301-redirect to .com
-- **ashbornsaga.com / ashbornsaga.co.uk** — both 301-redirect to shieldwallgames.com/ashborn/
+- **shieldwallgames.co.uk** — primary domain, canonical URL
+- **shieldwallgames.com** — owned, will 301-redirect to .co.uk
+- **ashbornsaga.com / ashbornsaga.co.uk** — both 301-redirect to shieldwallgames.co.uk/ashborn/
 
 Note: GitHub Pages does not handle 301 redirects between domains natively. These require DNS-level redirects via registrar settings.
 
@@ -213,7 +213,7 @@ Confirmed platforms and URLs:
 - Mobile: hamburger drawer
 
 ### Mimir pages
-- Thin top bar (subdued, low contrast): back-link to shieldwallgames.com
+- Thin top bar (subdued, low contrast): back-link to shieldwallgames.co.uk
 - Main nav: "Mimir" wordmark + Features, Pricing, FAQ, Join Beta
 - Mobile: hamburger drawer
 
@@ -313,7 +313,7 @@ Mimir pricing section must have id="pricing" — linkable as /mimir/#pricing. Th
 - [x] Copyright year — dynamic via inline JS
 - [x] GitHub Pages enabled (Source: GitHub Actions)
 - [x] Site live and tested on GitHub Pages URL
-- [x] Custom domain configured (shieldwallgames.com)
+- [x] Custom domain configured (shieldwallgames.co.uk)
 - [x] MailerLite forms wired (Mimir: x3uRLn, Ashborn: rvVjbn)
 - [x] Mimir homepage — eight sections (quest editor section added)
 - [x] Mimir pricing section — updated to locked pricing
