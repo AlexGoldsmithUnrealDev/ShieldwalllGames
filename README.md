@@ -1,121 +1,182 @@
-# Shieldwall Games — Web Project
+# Shieldwall Games Web Project
 
-The official websites for Shieldwall Games, Mimir, and Ashborn CCG.
+The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 
-## Pages
+## Live structure
 
-| Page | File | Description |
-|------|------|-------------|
-| Shieldwall Games | `index.html` | Company homepage |
+| Page | File | Purpose |
+| --- | --- | --- |
+| Shieldwall Games | `index.html` | Studio homepage led by Mimir |
+| Mimir | `mimir/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
+| Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
+| Privacy | `privacy.html` | Website and planned Mimir privacy model |
+| Terms | `terms.html` | Website and planned Mimir commercial terms |
 | 404 | `404.html` | Custom not-found page |
 
-## Tech Stack
+## Tech stack
 
-- Vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no npm
-- Files run directly in any browser — just open index.html
-- Deployed via GitHub Pages
+- Vanilla HTML, CSS, and JavaScript
+- No framework, npm dependency, or build step
+- MailerLite embedded forms for email capture
+- GitHub Actions deployment to GitHub Pages during the pre-launch website phase
+- Canonical domain: `shieldwallgames.co.uk`
 
-## Local Development
+## Local development
 
-No setup required. Open any `.html` file directly in a browser, or use a simple local server:
+Open the files directly or run a simple local server:
 
 ```bash
-# Using Python (built into macOS/Linux)
 python3 -m http.server 8000
-
-# Using Node.js (if installed)
-npx serve .
 ```
 
-Then visit `http://localhost:8000`
+Then visit `http://localhost:8000`.
 
-## Project Structure
+## Project structure
 
-```
+```text
 /
-├── index.html              # Shieldwall Games homepage
-├── ashborn/                # Ashborn CCG landing page
-├── 404.html                # Custom 404 page
+├── index.html
+├── privacy.html
+├── terms.html
+├── 404.html
+├── CNAME
 ├── styles/
-│   ├── main.css            # Global design system — edit this for brand-wide changes
-│   └── ashborn.css         # Ashborn-specific overrides only
+│   ├── main.css
+│   └── shieldwall.css
 ├── scripts/
-│   ├── main.js             # Shared JS — nav, scroll, reveal
-│   └── ashborn.js          # Ashborn-specific interactions
+│   └── main.js
 ├── assets/
-│   ├── images/             # All imagery (WebP preferred)
-│   ├── fonts/              # Self-hosted fonts when supplied
-│   └── icons/              # SVG icons including favicon
-├── .github/
-│   └── workflows/
-│       └── deploy.yml      # GitHub Pages auto-deploy
-├── CLAUDE.md               # AI assistant brief — read before making changes
-└── README.md               # This file
+│   ├── images/
+│   ├── fonts/
+│   ├── icons/
+│   └── logos/
+├── mimir/
+│   ├── index.html
+│   ├── roadmap.html
+│   ├── roadmap-data.json
+│   ├── styles/
+│   │   ├── mimir.css
+│   │   └── roadmap.css
+│   └── scripts/
+│       ├── mimir.js
+│       └── roadmap.js
+├── ashborn/
+│   ├── index.html
+│   └── styles/
+│       └── ashborn.css
+├── .github/workflows/deploy.yml
+├── CLAUDE.md
+└── README.md
 ```
 
-## Design System
+## Mimir commercial source of truth
 
-All colours, spacing, and typography are defined as CSS custom properties in `styles/main.css`. Change a variable there and it updates across both pages.
+The live site currently uses the planned V1 commercial model:
 
-Key variables:
+| Tier | Monthly | Annual |
+| --- | ---: | ---: |
+| Mimir Core | Free | Free |
+| Apprentice | £6.99 | £69.99 |
+| Worldsmith | £14.99 | £149.99 |
+| Loremaster | £24.99 | £249.99 |
 
-- `--font-display` / `--font-body` — placeholder fonts, to be replaced with client-supplied fonts
-- `--color-parchment` / `--color-near-black` — primary background tones
-- `--color-aged-gold` / `--color-deep-red` — accent colours
+Core keeps unlimited local worlds and entries. Paid tiers add advanced workflows, Mimir AI allowance, collaboration, hosting, and scale rather than artificial local content caps.
+
+The deeper canonical commercial specification lives in the Lorekeeper/Mimir application repository at `docs/commercial-model.md`. When pricing or entitlements change there, this website and `CLAUDE.md` must be updated together.
+
+## Current V1 positioning
+
+Mimir V1 is being completed around:
+
+- Local-first structured worldbuilding
+- Trees, timeline, calendar, maps, quests, dialogue, story arcs, validation, history, and accessibility
+- Mimir AI and constructed-language translation
+- General imports and competitor migration
+- Proving Grounds for prototyping conversations, quests, tabletop sessions, board-game systems, and related interactive ideas
+- Collaboration for shared creative work
+- Hosted worlds for player/viewer/participant use cases
+
+MCP connections and direct Unreal, Unity, and Godot integrations are future post-V1 work. Do not advertise them as V1 launch features.
+
+## Mimir AI positioning
+
+Customer-facing language is **Mimir AI**.
+
+Do not ask customers to choose Haiku, Sonnet, Opus, or another provider SKU in website copy. Mimir chooses the underlying processing route internally. Credit consumption is based on the amount/type of work rather than a customer-selected provider model.
+
+Current launch-planning monthly allowances are:
+
+- Core: 25 credits + 100 one-time welcome credits
+- Apprentice: 400 credits
+- Worldsmith: 1,200 credits
+- Loremaster: 3,000 credits
+
+These allowances are still subject to beta workload validation before paid checkout opens.
+
+## Email capture
+
+MailerLite account ID: `2430389`
+
+- Mimir form: `data-form="x3uRLn"`
+- Ashborn form: `data-form="rvVjbn"`
+- Double opt-in is used for marketing lists
+- Sending domain: `shieldwallgames.co.uk`
+
+Do not reintroduce Buttondown instructions.
+
+## Design and implementation rules
+
+- Keep the current design system and visual identity unless explicitly asked to redesign it.
+- Vanilla HTML/CSS/JS only.
+- Keep semantic HTML and WCAG AA accessibility.
+- Prefer shared tokens/components over new one-off patterns.
+- Keep Mimir pricing anchored at `mimir/#pricing`.
+- Keep user data ownership/local-first language precise: local worlds stay on the user's device by default; AI and optional hosted/collaboration services are network features.
+- Do not promise future features as already delivered.
+- Do not expose bring-your-own-key (BYOK) as a customer feature.
+- Do not use the retired product name Lorekeeper in public website copy.
 
 ## Deployment
 
-This site deploys automatically to GitHub Pages on every push to `main`. No manual steps required.
+Every push to `main` triggers the GitHub Pages workflow. GitHub Pages is the current pre-launch website host.
 
-To enable GitHub Pages on a new repository:
+Before Mimir becomes a commercial SaaS/download service, the production website/download/account infrastructure should be reviewed and moved to the intended commercial hosting setup rather than assuming GitHub Pages is the permanent service architecture.
 
-1. Go to **Settings → Pages**
-2. Set **Source** to **GitHub Actions**
-3. Push to `main` — the workflow handles the rest
+## Before public paid launch
 
-## Before Launch Checklist
+- [ ] Finish and validate migration/import workflows
+- [ ] Finish Proving Grounds
+- [ ] Finish collaboration and hosted-world systems
+- [ ] Benchmark Mimir AI workloads and confirm monthly credit allowances
+- [ ] Load-test hosted project/collaborator/storage allowances
+- [ ] Finalise production auth, account ledger, payment, broker, storage, and hosting infrastructure
+- [ ] Update `privacy.html` with the actual production subprocessors and retention details
+- [ ] Update `terms.html` and checkout flow for the consumer/subscription law in force at launch
+- [ ] Confirm refund/cancellation wording and hosted downgrade grace periods
+- [ ] Create final OG images
+- [ ] Verify all beta/launch MailerLite forms and automations
+- [ ] Move installers/download delivery to the intended commercial storage/CDN
+- [ ] Review GitHub Pages replacement for the commercial site
+- [ ] Configure remaining domain redirects
 
-### Content
-- [ ] Supply and integrate custom fonts (replace placeholder Google Fonts in main.css)
-- [ ] Add character art illustrations to mimir/assets/images/ (5 images)
-- [ ] Add app screenshots to mimir/assets/images/
-- [ ] Add Ask Mimir well-with-wisp illustration to mimir/assets/images/
-- [ ] Add Ashborn CCG card artwork to ashborn/assets/images/
-- [ ] Add Ashborn world panoramic art to ashborn/assets/images/
-- [ ] Create OG images — 1200×630px for each page
+## Social media
 
-### Email
-- [ ] Create Buttondown account at buttondown.com
-- [ ] Create two lists: Mimir Beta, Ashborn Release
-- [ ] Enable double opt-in on both lists
-- [ ] Configure custom sending domain (shieldwallgames.co.uk) via DNS — may migrate to .com
-- [ ] Replace ACTION_URL placeholder in index.html, mimir/index.html, ashborn/index.html, components/email-mimir.html, components/email-ashborn.html
+- Facebook: `https://www.facebook.com/share/18PW3HCR6m/`
+- Instagram: `https://www.instagram.com/shieldwall_games`
+- YouTube: `https://youtube.com/@shieldwallgames`
+- Twitter/X: `https://twitter.com/ShieldwallG`
 
-### Brand
-- [ ] Confirm social media platforms and update URLs in footer (all three pages)
-- [ ] Confirm copyright year (currently 2025)
-- [ ] Generate PNG favicon from assets/icons/favicon.svg
+## Working with AI coding assistants
 
-### DNS & Domains
-- [ ] Confirm primary domain (shieldwallgames.com)
-- [ ] Configure shieldwallgames.co.uk → 301 → shieldwallgames.com (via registrar)
-- [ ] Configure ashbornsaga.com → 301 → shieldwallgames.com/ashborn/ (via registrar)
-- [ ] Configure ashbornsaga.co.uk → 301 → shieldwallgames.com/ashborn/ (via registrar)
-- [ ] Update all og:url and canonical tags to live domain
+Read `CLAUDE.md` before making site changes. After any material product/pricing change, check all of:
 
-### GitHub Pages
-- [ ] Go to repo Settings → Pages → set Source to GitHub Actions
-- [ ] Push to main — workflow deploys automatically
-- [ ] Verify live URL in Settings → Pages
-- [ ] (Optional) Add custom domain in Settings → Pages → Custom domain
+- `mimir/index.html`
+- `mimir/roadmap.html`
+- `mimir/roadmap-data.json`
+- `privacy.html`
+- `terms.html`
+- `README.md`
+- `CLAUDE.md`
 
-## Working with Claude Code
-
-This project includes a `CLAUDE.md` file that acts as a persistent brief for AI-assisted development. Claude Code reads this file before every session. Do not delete it.
-
-When asking Claude Code to make changes:
-
-- Reference specific files and section names
-- Check `CLAUDE.md` is still accurate after major changes
-- Keep the Before Launch Checklist in both `CLAUDE.md` and `README.md` in sync
+Do not treat older files inside `Mimir Design System/` as the commercial source of truth. They are retained design/reference material and may contain historical copy.
