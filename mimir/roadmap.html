@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#1a1714" />
 
-  <title>Mimir Roadmap: What's Coming</title>
-  <meta name="description" content="See what's planned for Mimir, the structured worldbuilding platform. V1 features, V1.5 expansion, and V2 studio tools." />
+  <title>Mimir Roadmap: What We're Building</title>
+  <meta name="description" content="See the Mimir roadmap: the V1 launch scope, post-launch refinement, and future AI and game-engine integrations." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mimir Roadmap" />
-  <meta property="og:description" content="See what's planned for Mimir: V1, V1.5, and V2 features for worldbuilders and game developers." />
+  <meta property="og:description" content="V1 first, then feedback and refinement, followed by major AI and game-engine integrations." />
   <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/roadmap.html" />
   <meta property="og:image" content="" />
 
@@ -22,7 +22,6 @@
   <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
   <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/roadmap.html" />
 
-  <!-- Styles: shared tokens, Mimir components, roadmap-specific -->
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/mimir.css" />
   <link rel="stylesheet" href="styles/roadmap.css" />
@@ -43,7 +42,6 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Top bar -->
   <div class="top-bar" role="navigation" aria-label="Return to Shieldwall Games">
     <div class="top-bar__inner">
       <a href="../" class="top-bar__back">
@@ -56,26 +54,22 @@
     </div>
   </div>
 
-  <!-- Main Mimir navigation -->
   <header class="mimir-nav" role="banner">
     <div class="mimir-nav__inner">
 
-      <a href="./" class="mimir-nav__wordmark" aria-label="Mimir home">
-        Mimir
-      </a>
+      <a href="./" class="mimir-nav__wordmark" aria-label="Mimir home">Mimir</a>
 
       <nav aria-label="Mimir navigation">
         <ul class="mimir-nav__links" role="list">
           <li><a href="./#features">Features</a></li>
+          <li><a href="./#for-you">Who it's for</a></li>
           <li><a href="./#pricing">Pricing</a></li>
           <li><a href="./#faq">FAQ</a></li>
           <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
         </ul>
       </nav>
 
-      <a href="./#beta-signup" class="mimir-nav__cta">
-        Join the beta
-      </a>
+      <a href="./#beta-signup" class="mimir-nav__cta">Join the beta</a>
 
       <button
         class="mimir-nav__hamburger"
@@ -91,9 +85,9 @@
 
     </div>
 
-    <!-- Mobile drawer -->
     <div class="mimir-nav__drawer" id="mimir-mobile-drawer" role="navigation" aria-label="Mimir mobile navigation">
       <a href="./#features">Features</a>
+      <a href="./#for-you">Who it's for</a>
       <a href="./#pricing">Pricing</a>
       <a href="./#faq">FAQ</a>
       <a href="roadmap.html" aria-current="page">Roadmap</a>
@@ -103,25 +97,20 @@
 
   <main id="main-content">
 
-    <!-- Hero -->
     <section class="section section--hero roadmap-hero" aria-labelledby="roadmap-heading">
       <div class="section__inner container">
         <span class="section-label">Roadmap</span>
-        <h1 class="section-heading" id="roadmap-heading">
-          What we're building.
-        </h1>
+        <h1 class="section-heading" id="roadmap-heading">What we're building.</h1>
         <p class="section-subtext">
-          Everything planned for Mimir, from V1 launch features
-          to long-term vision. Subscribe to Studio at launch and
-          every update ships to your account automatically.
+          The priority is a complete V1: migration, Proving Grounds, collaboration,
+          and hosting alongside Mimir's existing worldbuilding systems. After launch,
+          Shieldwall will spend several months gathering feedback and refining the
+          product before moving into the next major integration work.
         </p>
-        <p class="roadmap-hero__updated" id="roadmap-last-updated">
-          Loading…
-        </p>
+        <p class="roadmap-hero__updated" id="roadmap-last-updated">Loading…</p>
       </div>
     </section>
 
-    <!-- Roadmap content, rendered by roadmap.js from roadmap-data.json -->
     <section class="section section--hero" aria-label="Roadmap details">
       <div class="section__inner container">
         <div id="roadmap-content">
@@ -130,16 +119,13 @@
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="section section--ask-mimir reveal" aria-labelledby="roadmap-cta-heading">
       <div class="section__inner container roadmap-cta-inner">
-        <span class="section-label">Early Access</span>
-        <h2 class="section-heading" id="roadmap-cta-heading">
-          Join the beta.
-        </h2>
+        <span class="section-label">Early access</span>
+        <h2 class="section-heading" id="roadmap-cta-heading">Join the beta.</h2>
         <p class="section-subtext roadmap-cta-sub">
-          Be among the first to use Mimir. Beta access opens
-          before public launch, waitlist members get in first.
+          Help us test the V1 workflows, identify friction, and decide what deserves
+          attention during the post-launch refinement period.
         </p>
         <a href="./#beta-signup" class="btn-pill roadmap-cta-btn">
           Join the beta waitlist
@@ -148,49 +134,34 @@
             <polyline points="12 5 19 12 12 19"/>
           </svg>
         </a>
-        <!-- Mimir beta signup — MailerLite -->
         <div class="ml-embedded" data-form="x3uRLn"></div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="site-footer__inner">
 
       <div class="site-footer__grid">
-
         <div>
-          <a href="./" class="site-footer__wordmark" aria-label="Mimir home">
-            Mimir
-          </a>
+          <a href="./" class="site-footer__wordmark" aria-label="Mimir home">Mimir</a>
           <p class="site-footer__tagline">
-            Structured worldbuilding for indie developers, writers, and GMs.
+            Local-first worldbuilding for writers, Game Masters, and developers.
             Built by Shieldwall Games.
           </p>
           <div class="site-footer__social" aria-label="Social media links">
             <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
             </a>
             <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
             <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
           </div>
         </div>
@@ -199,6 +170,7 @@
           <p class="site-footer__heading">Mimir</p>
           <ul class="site-footer__links" role="list">
             <li><a href="./#features">Features</a></li>
+            <li><a href="./#for-you">Who it's for</a></li>
             <li><a href="./#pricing">Pricing</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="./#beta-signup">Join the beta</a></li>
@@ -213,13 +185,10 @@
             <li><a href="../ashborn/">Ashborn CCG</a></li>
           </ul>
         </div>
-
       </div>
 
       <div class="site-footer__bottom">
-        <p class="site-footer__copyright">
-          &copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.
-        </p>
+        <p class="site-footer__copyright">&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</p>
         <span class="footer-nav">
           <a href="../privacy.html">Privacy</a>
           <a href="../terms.html">Terms</a>
@@ -229,7 +198,6 @@
     </div>
   </footer>
 
-  <!-- Scripts: shared, Mimir, roadmap -->
   <script src="../scripts/main.js" defer></script>
   <script src="scripts/mimir.js" defer></script>
   <script src="scripts/roadmap.js" defer></script>
