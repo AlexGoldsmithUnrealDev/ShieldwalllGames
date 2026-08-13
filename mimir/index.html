@@ -4,613 +4,154 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#1a1714" />
-
-  <title>Mimir: Worldbuilding for Writers, Game Masters &amp; Developers</title>
-  <meta name="description" content="Mimir is a local-first worldbuilding platform for writers, game masters, and developers. Build, connect, test, collaborate, and understand your world without giving up ownership of your files." />
-
-  <!-- Open Graph -->
+  <title>Mimir: Local-First Worldbuilding for Game Masters, Writers &amp; Developers</title>
+  <meta name="description" content="Build connected worlds with timelines, maps, relationships, grounded Mimir AI, migration, Proving Grounds and collaboration while keeping your core world in local readable files." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mimir: Build a World That Stays Yours" />
-  <meta property="og:description" content="Local-first worldbuilding with visual relationships, Mimir AI, Proving Grounds, migration, collaboration, and hosted player experiences." />
+  <meta property="og:title" content="Mimir: See Your Whole World. Keep It Yours." />
+  <meta property="og:description" content="Local-first worldbuilding for GMs, writers and developers. Build, connect, test and understand your world without giving up ownership of your files." />
   <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/" />
-  <meta property="og:image" content="" /> <!-- TODO: add OG image 1200x630px before launch -->
-
-  <!-- Twitter -->
+  <!-- Add assets/mimir/social/mimir-og-1200x630.jpg when the final logo and real UI capture exist. -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mimir: Build a World That Stays Yours" />
-  <meta name="twitter:description" content="Local-first worldbuilding for writers, game masters, and developers." />
-
-  <!-- Favicon -->
+  <meta name="twitter:title" content="Mimir: See Your Whole World. Keep It Yours." />
+  <meta name="twitter:description" content="Local-first worldbuilding for GMs, writers and developers." />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
   <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
   <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/" />
-
-  <!-- Styles: shared tokens first, then Mimir components -->
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/mimir.css" />
-
-  <!-- MailerLite universal script -->
   <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2430389');
   </script>
 </head>
-
 <body>
-
 <div class="ms-page">
-
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- ============================================================
-       NAV BAR
-       ============================================================ -->
-  <nav class="ms-nav">
+  <nav class="ms-nav" aria-label="Mimir">
     <div class="ms-wrap ms-nav-inner">
-      <a class="ms-nav-brand" href="./">
-        <img src="../assets/logos/mimir-mark.png" alt="" />
-        <span class="ms-nav-brand-word">Mimir</span>
-      </a>
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-nav-brand-word">Mimir</span></a>
       <div class="ms-nav-links">
-        <a href="#features">Features</a>
-        <a href="#for-you">Who it's for</a>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="roadmap.html">Roadmap</a>
+        <a href="#product">Product</a><a href="#mimir-ai">Mimir AI</a><a href="#proving-grounds">Proving Grounds</a><a href="#worldbuilders">For Worldbuilders</a><a href="#pricing">Pricing</a><a href="roadmap.html" data-analytics-event="mimir_roadmap_click">Roadmap</a>
       </div>
       <span class="ms-nav-spacer"></span>
-      <div class="ms-nav-cta">
-        <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
-      </div>
+      <div class="ms-nav-cta"><a class="ms-btn-primary" href="#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a></div>
     </div>
   </nav>
 
-  <!-- ============================================================
-       HERO SECTION
-       ============================================================ -->
   <header class="ms-hero">
-    <div class="ms-hero-bg" style="background-image: url('../assets/images/Avalon.png')"></div>
+    <div class="ms-hero-bg" style="background-image: url('../assets/images/Avalon.png')" role="presentation"></div>
     <div class="ms-hero-fade"></div>
     <div class="ms-wrap ms-hero-inner">
       <div class="ms-hero-copy">
-        <div class="ms-hero-eyebrow">Local-first worldbuilding platform</div>
-        <h1 class="ms-hero-title">
-          Build a world that stays yours.
-          <em>Structure it. See it. Test it. Share it. Ask Mimir about it.</em>
-        </h1>
-        <p class="ms-hero-sub">
-          Mimir turns characters, cultures, places, factions, events, quests,
-          dialogue, languages, and history into one connected world you can
-          actually understand. Your core world lives locally in plain markdown,
-          so your work is never trapped inside our service.
-        </p>
-        <div class="ms-hero-cta">
-          <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
-          <a class="ms-btn-secondary" href="#pricing">Paid plans from £6.99/month</a>
-        </div>
-        <div class="ms-hero-meta">
-          <div><strong>Local-first</strong>unlimited local worlds and entries</div>
-          <div><strong>Mimir Core</strong>free forever</div>
-          <div><strong>One product</strong>for writers, GMs, and developers</div>
-        </div>
+        <div class="ms-hero-eyebrow">Local-first worldbuilding for creators</div>
+        <h1 class="ms-hero-title">See your whole world. <em>Not another wall of text.</em></h1>
+        <p class="ms-hero-sub">Characters, places, cultures, histories, relationships, quests and ideas become one connected world you can see, understand, test and share.</p>
+        <p class="ms-ownership-line">Stored locally in readable files that remain yours.</p>
+        <div class="ms-hero-cta"><a class="ms-btn-primary" href="#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a><a class="ms-btn-secondary" href="#product">See how Mimir works</a></div>
+        <p class="ms-launch-state">Mimir is currently in alpha ahead of its public beta.</p>
       </div>
-      <div class="ms-hero-plate">
-        <img src="../assets/images/KernowKing.png" alt="Kernow King character" />
-        <div class="ms-hero-plate-cap">A character from a world built in Mimir</div>
-      </div>
+      <figure class="ms-media ms-media--hero ms-media--placeholder">
+        <div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Real product view coming next</span><strong>Mimir workspace</strong><span>Entries · relationships · timeline · map</span></div>
+        <figcaption>Reserved for a real Mimir workspace capture. No mock interface has been fabricated.</figcaption>
+      </figure>
     </div>
   </header>
 
   <main id="main-content">
-
-    <!-- ============================================================
-         FEATURES SECTION
-         ============================================================ -->
-    <section class="ms-section ms-wrap" id="features">
-      <div class="ms-section-head">
-        <span class="ms-eyebrow">A world, not a pile of documents</span>
-        <h2 class="ms-section-h2">Build deeply. <em>See</em> the connections.</h2>
-        <p class="ms-section-sub">
-          Mimir combines structured entries, visual world tools, narrative planning,
-          AI-assisted understanding, and interactive prototyping in one application.
-          V1 is being built around a simple idea: your world should become more useful
-          as it grows, not harder to manage.
-        </p>
-      </div>
-      <div class="ms-features">
-
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/character.png" alt="" /></div>
-          <h3 class="ms-feat-title">Structured worldbuilding</h3>
-          <p class="ms-feat-body">
-            Build characters, species, cultures, places, factions, artifacts, events,
-            languages, story arcs, quests, dialogue, and more. Your core data remains
-            readable markdown on your machine.
-          </p>
-        </div>
-
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/runemark.png" alt="" /></div>
-          <h3 class="ms-feat-title">Visualise the world</h3>
-          <p class="ms-feat-body">
-            Follow families, species, cultures, factions, and places through dedicated
-            trees, then use maps, calendars, timelines, backlinks, and relationships
-            to spot connections that walls of text hide.
-          </p>
-        </div>
-
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/faction.png" alt="" /></div>
-          <h3 class="ms-feat-title">Mimir AI</h3>
-          <p class="ms-feat-body">
-            Ask questions about your own lore, translate constructed languages, and
-            review canon for contradictions. Mimir retrieves the relevant world context
-            and chooses the appropriate AI processing automatically.
-          </p>
-        </div>
-
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/dialogue.png" alt="" /></div>
-          <h3 class="ms-feat-title">Proving Grounds</h3>
-          <p class="ms-feat-body">
-            V1 adds a dedicated place to prototype and test conversations, quests,
-            tabletop sessions, board-game systems, and other interactive ideas before
-            committing them to the finished work.
-          </p>
-        </div>
-
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/character.png" alt="" /></div>
-          <h3 class="ms-feat-title">Bring your existing world</h3>
-          <p class="ms-feat-body">
-            Import ordinary files and migrate existing worldbuilding projects instead
-            of starting again. Migration is part of Mimir Core because switching tools
-            should not mean abandoning years of work.
-          </p>
-        </div>
-
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/language.png" alt="" /></div>
-          <h3 class="ms-feat-title">Collaborate and host</h3>
-          <p class="ms-feat-body">
-            V1 collaboration supports writers working together, while hosted worlds let
-            a GM remain the power user and invite players as controlled participants or
-            viewers without forcing the whole group into the same workflow.
-          </p>
-        </div>
-
+    <section class="ms-proof-strip" aria-label="Mimir commitments">
+      <div class="ms-wrap ms-proof-grid">
+        <div class="ms-proof"><strong>Your world stays yours.</strong><span>Readable local files, not a locked service.</span></div>
+        <div class="ms-proof"><strong>Mimir Core is free forever.</strong><span>A useful product, not a timed trial.</span></div>
+        <a class="ms-proof" href="#migration" data-analytics-event="mimir_migration_click"><strong>Bring your existing world.</strong><span>Migration and export remain accessible.</span></a>
+        <a class="ms-proof" href="#collaboration"><strong>One power user. Core participants can join.</strong><span>Invite players without making everyone subscribe.</span></a>
       </div>
     </section>
 
-    <!-- ============================================================
-         PERSONAS
-         ============================================================ -->
-    <section class="ms-section ms-wrap" id="for-you">
-      <div class="ms-section-head">
-        <span class="ms-eyebrow">One Mimir, different ways in</span>
-        <h2 class="ms-section-h2">Built for the way <em>you</em> create.</h2>
-        <p class="ms-section-sub">
-          Mimir does not split writers, Game Masters, and developers into different
-          products. The same connected world can move between writing, play, design,
-          prototyping, and production as your project changes.
-        </p>
-      </div>
-      <div class="ms-features">
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/runemark.png" alt="" /></div>
-          <h3 class="ms-feat-title">For writers</h3>
-          <p class="ms-feat-body">
-            Plan narrative arcs, trace families and cultures, track chronology, keep
-            names and canon consistent, prototype dialogue, and collaborate without
-            giving up ownership of your source files.
-          </p>
-        </div>
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/dialogue.png" alt="" /></div>
-          <h3 class="ms-feat-title">For Game Masters</h3>
-          <p class="ms-feat-body">
-            Build campaigns, hide spoilers, design quests and conversations, test
-            sessions in Proving Grounds, then host the world for players with controlled
-            access and participation.
-          </p>
-        </div>
-        <div class="ms-feature">
-          <div class="ms-feat-icon"><img src="../assets/icons/spell.png" alt="" /></div>
-          <h3 class="ms-feat-title">For game developers</h3>
-          <p class="ms-feat-body">
-            Keep narrative and world data structured, model variables and state, test
-            quest/dialogue logic, and build a canonical source of truth. Direct MCP and
-            game-engine integrations are on the post-V1 roadmap.
-          </p>
+    <section class="ms-section ms-wrap" id="product">
+      <div class="ms-section-head"><span class="ms-eyebrow">Product overview</span><h2 class="ms-section-h2">See Mimir working.</h2><p class="ms-section-sub">A worldbuilding tool should be easier to understand by watching it than by reading a feature list. Follow one connected world through entries, relationships, trees, timeline, map, Mimir AI and Proving Grounds.</p></div>
+      <div class="ms-video-shell ms-media--placeholder" data-analytics-event="mimir_demo_play" aria-describedby="demo-caption"><div class="ms-video-placeholder" aria-hidden="true"><span class="ms-media-kicker">60–90 second product overview</span><strong>Real product recording will appear here</strong><span>Caption and transcript ready</span></div></div>
+      <p class="ms-media-caption" id="demo-caption">Reserved for a recording of the current beta build using one consistent demo world.</p>
+      <div class="ms-demo-steps" aria-label="Planned product overview sequence"><span>01 Create and connect</span><span>02 See the world</span><span>03 Ask and review</span><span>04 Test in Proving Grounds</span></div>
+    </section>
+
+    <section class="ms-section ms-section--band" id="connected-worldbuilding">
+      <div class="ms-wrap ms-split">
+        <div class="ms-copy-block"><span class="ms-eyebrow">Your world is bigger than a pile of notes.</span><h2 class="ms-section-h2">Complex worlds should become clearer as they grow.</h2><p>Pages are useful, but a world is made from the relationships between them. Mimir connects characters, places, cultures, factions, events and stories so you can move from a detail to the wider world around it.</p><p>See the same canon through trees, timelines, maps, backlinks and relationships. Build worlds, not documents.</p></div>
+        <div class="ms-media-grid ms-media-grid--two">
+          <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future capture</span><strong>Tree visualisation</strong></div><figcaption>Family or relationship tree using real world data.</figcaption></figure>
+          <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future composite</span><strong>Timeline + map</strong></div><figcaption>One canon understood chronologically and spatially.</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         HOW IT WORKS
-         ============================================================ -->
-    <section class="ms-section ms-wrap" id="how">
-      <div class="ms-how">
-        <div class="ms-how-plate">
-          <img src="../assets/images/Kernow.png" alt="Fantasy landscape representing a Mimir world" />
+    <section class="ms-section ms-wrap" id="mimir-ai">
+      <div class="ms-split ms-split--reverse">
+        <div class="ms-media-grid ms-media-grid--two">
+          <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Grounded answer</span><strong>Sources visible</strong></div><figcaption>A real answer with the supporting canon shown alongside it.</figcaption></figure>
+          <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Uncertainty</span><strong>Canon does not specify this</strong></div><figcaption>A real refusal to fill an unsupported gap in the world.</figcaption></figure>
         </div>
-        <div>
-          <span class="ms-eyebrow">How it works</span>
-          <h2 class="ms-section-h2">From scattered notes to a <em>living</em> world.</h2>
-          <ol class="ms-how-list">
-            <li class="ms-how-step">
-              <div class="ms-how-num">i</div>
-              <div>
-                <h4>Start fresh or bring your world with you.</h4>
-                <p>Create a local lorebible or import existing material. Competitor migration is designed to remove the biggest barrier to switching tools: starting again.</p>
-              </div>
-            </li>
-            <li class="ms-how-step">
-              <div class="ms-how-num">ii</div>
-              <div>
-                <h4>Structure and connect it.</h4>
-                <p>Write naturally, link entries, build timelines and maps, and let Mimir turn relationships into something you can navigate visually.</p>
-              </div>
-            </li>
-            <li class="ms-how-step">
-              <div class="ms-how-num">iii</div>
-              <div>
-                <h4>Ask, test, and refine.</h4>
-                <p>Ask Mimir what your lore actually says, run consistency reviews, translate languages, and use Proving Grounds to prototype ideas before they become canon.</p>
-              </div>
-            </li>
-            <li class="ms-how-step">
-              <div class="ms-how-num">iv</div>
-              <div>
-                <h4>Share only what you choose.</h4>
-                <p>Collaborate with other creators or host a controlled version of your world for players and participants while your primary creative source remains yours.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
+        <div class="ms-copy-block"><span class="ms-eyebrow">Mimir AI</span><h2 class="ms-section-h2">Ask your world. Get an answer grounded in your world.</h2><p>Mimir is not there to make up your canon for you. It retrieves relevant lore, answers from material you have actually written and should make uncertainty visible rather than filling gaps with confident invention.</p><blockquote class="ms-example"><p><strong>Question:</strong> Who killed King Aldric?</p><p><strong>Mimir:</strong> There is no confirmed killer in your current canon. Three entries implicate House Vael, but none state that they carried out the assassination.</p></blockquote><p class="ms-small-note">This example explains the intended behaviour. It is not presented as a product screenshot.</p></div>
       </div>
     </section>
 
-    <!-- ============================================================
-         PRICING, stable anchor at #pricing, do not rename
-         ============================================================ -->
+    <section class="ms-section ms-section--band" id="consistency-review">
+      <div class="ms-wrap ms-split"><div class="ms-copy-block"><span class="ms-eyebrow">Lore Consistency Review</span><h2 class="ms-section-h2">Find contradictions before your audience does.</h2><p>Run a review across the canon to surface conflicting dates, incompatible relationships, duplicate facts, broken references and other issues that become difficult to spot as a world grows.</p></div><figure class="ms-media ms-media--wide ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future capture</span><strong>Detected inconsistency + implicated entries</strong></div><figcaption>Reserved for a real contradiction with a clear path to review it.</figcaption></figure></div>
+    </section>
+
+    <section class="ms-section ms-wrap" id="proving-grounds">
+      <div class="ms-split ms-split--reverse"><figure class="ms-media ms-media--wide ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future interactive capture</span><strong>Choices · state · results</strong></div><figcaption>Reserved for a working simulation, not an empty setup screen.</figcaption></figure><div class="ms-copy-block"><span class="ms-eyebrow">Proving Grounds</span><h2 class="ms-section-h2">Don't just document your world. Test it.</h2><p>Prototype conversations, quest logic, tabletop sessions, board-game ideas and other interactive scenarios before they become canon. Use the world you have already built as the context for testing what happens next.</p></div></div>
+    </section>
+
+    <section class="ms-section ms-section--band" id="migration">
+      <div class="ms-wrap"><div class="ms-section-head"><span class="ms-eyebrow">Migration is part of Core</span><h2 class="ms-section-h2">Bring your existing world with you.</h2><p class="ms-section-sub"><strong>You don't have to abandon five years of worldbuilding to move to Mimir.</strong> Import ordinary files and supported projects, review what Mimir found before committing the migration, then continue working in a local Mimir world.</p></div><div class="ms-composite" data-analytics-event="mimir_migration_click"><div><span>1</span><strong>Select source</strong><small>Choose ordinary files or a supported project.</small></div><div><span>2</span><strong>Review migration</strong><small>Inspect mapping and warnings before committing.</small></div><div><span>3</span><strong>Open local world</strong><small>Continue in readable Mimir files under your control.</small></div></div><p class="ms-media-caption">Ready for a real three-stage migration composite. Migration remains part of Core because keeping your work is not a premium privilege.</p></div>
+    </section>
+
+    <section class="ms-section ms-wrap" id="collaboration">
+      <div class="ms-split"><div class="ms-copy-block"><span class="ms-eyebrow">Collaboration and hosting</span><h2 class="ms-section-h2">Build together without making everyone a power user.</h2><p>Writers can share a collaborative workspace. Game Masters can host the world while players join as viewers or controlled participants using Mimir Core. Permissions decide what each person can see and change.</p><p>Mimir is not a public social network or a place to meet strangers. It is built for work with the collaborators, friends and players you already know.</p></div><div class="ms-media-grid ms-media-grid--two"><figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Host view</span><strong>GM-only context</strong></div><figcaption>Future power-user capture with private information visible.</figcaption></figure><figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Core participant</span><strong>Controlled player view</strong></div><figcaption>The same world with spoilers and private fields hidden.</figcaption></figure></div></div>
+    </section>
+
+    <section class="ms-section ms-section--band" id="worldbuilders">
+      <div class="ms-wrap"><div class="ms-section-head"><span class="ms-eyebrow">For Worldbuilders</span><h2 class="ms-section-h2">Built for worldbuilders, whatever form the finished world takes.</h2><p class="ms-section-sub">One connected world can move between writing, play, design and production as your project changes.</p></div><div class="ms-audience-grid"><article><span>01</span><h3>Game Masters</h3><p>Build campaigns, hide spoilers, connect factions and histories, test quests and sessions, then host the world for your players.</p></article><article><span>02</span><h3>Writers &amp; screenwriters</h3><p>Track chronology, families, cultures, canon and narrative arcs while keeping the source files under your control.</p></article><article><span>03</span><h3>Game developers &amp; narrative designers</h3><p>Keep world and narrative data structured, test state and dialogue logic, and maintain one canonical source of truth.</p></article></div></div>
+    </section>
+
+    <section class="ms-section ms-wrap" id="ownership">
+      <div class="ms-split ms-split--reverse"><figure class="ms-media ms-media--wide ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future ownership proof</span><strong>Mimir + readable local Markdown</strong></div><figcaption>Reserved for Mimir beside its corresponding local files.</figcaption></figure><div class="ms-copy-block"><span class="ms-eyebrow">Local-first by design</span><h2 class="ms-section-h2">Your world belongs to you.</h2><p>Your core world lives locally in readable files. You can use the local foundation offline. Cancelling or downgrading does not erase the world you created or lock you out of your own files.</p><ul class="ms-check-list"><li>Unlimited local worlds and entries across every tier.</li><li>Migration and export are not premium privileges.</li><li>Local work survives a downgrade.</li></ul><p class="ms-network-note">Network functionality such as Mimir AI, hosted collaboration and hosted worlds necessarily transmits the selected data needed to provide that feature. Production subprocessors and retention details will be published once verified.</p></div></div>
+    </section>
+
     <section class="ms-section ms-wrap" id="pricing">
-      <div class="ms-section-head text-center">
-        <span class="ms-eyebrow">Pricing</span>
-        <h2 class="ms-section-h2">Pay for capability, not permission to keep <em>your</em> world.</h2>
-        <p class="ms-section-sub margin-inline-auto">
-          Every tier includes unlimited local worlds and entries. Paid plans add
-          deeper workflows, larger Mimir AI allowances, collaboration, and hosted scale.
-        </p>
-        <p class="ms-pricing-caveat">
-          Pricing is the planned V1 launch model. Hosted and AI allowances will be
-          validated during beta before paid checkout opens.
-        </p>
-      </div>
-
+      <div class="ms-section-head text-center"><span class="ms-eyebrow">Planned V1 pricing</span><h2 class="ms-section-h2">Pay for capability, not permission to keep <em>your</em> world.</h2><p class="ms-section-sub margin-inline-auto">Every tier includes unlimited local worlds and entries. Paid plans add deeper workflows, larger Mimir AI allowances, collaboration and hosted scale.</p><p class="ms-pricing-caveat">These are the planned V1 prices. Mimir is currently in alpha and paid checkout is not live.</p></div>
       <div class="ms-pricing-grid pricing-commitments__grid">
-
-        <div class="ms-tier">
-          <h3 class="ms-tier-name">Mimir Core</h3>
-          <p class="ms-tier-tag">Build your world</p>
-          <div class="ms-tier-price">£0<small> / forever</small></div>
-          <ul>
-            <li>Unlimited local worlds and entries</li>
-            <li>All standard entry types and editors</li>
-            <li>Trees, timeline, calendar, maps, quests, dialogue, and story arcs</li>
-            <li>Spoilers, validation, naming consistency, Git/history, and accessibility</li>
-            <li>General imports and competitor migration</li>
-            <li>Standard and safe-to-publish export</li>
-            <li>25 Mimir AI credits each month</li>
-            <li>100 one-time welcome credits for a new account</li>
-            <li>Join invited collaborative or hosted experiences</li>
-          </ul>
-          <a class="ms-btn-secondary" href="#beta-signup">Join the beta</a>
-        </div>
-
-        <div class="ms-tier">
-          <h3 class="ms-tier-name">Apprentice</h3>
-          <p class="ms-tier-tag">Develop your world</p>
-          <div class="ms-tier-price">£6.99<small> / month</small></div>
-          <p class="ms-tier-annual">or £69.99/year</p>
-          <ul>
-            <li>Everything in Mimir Core</li>
-            <li>Custom Schema Editor</li>
-            <li>Narrative Planner and advanced tree/filter tools</li>
-            <li>Create and run Proving Grounds locally</li>
-            <li>Small collaborative workspace: 1 hosted world, 2 guest collaborators</li>
-            <li>1GB hosted storage planning allowance</li>
-            <li>400 Mimir AI credits/month</li>
-            <li>Balanced Ask Mimir context: up to 8k retrieved tokens</li>
-          </ul>
-          <a class="ms-btn-secondary" href="#beta-signup">Join the beta</a>
-        </div>
-
-        <div class="ms-tier is-featured">
-          <span class="ms-tier-badge badge-coming-soon">Most popular</span>
-          <h3 class="ms-tier-name">Worldsmith</h3>
-          <p class="ms-tier-tag">Bring your world to life</p>
-          <div class="ms-tier-price">£14.99<small> / month</small></div>
-          <p class="ms-tier-annual">or £149.99/year</p>
-          <ul>
-            <li>Everything in Apprentice</li>
-            <li>Lore Consistency Review and AI Context Bundles</li>
-            <li>Simulation and variables/world-state tools</li>
-            <li>Host live collaborative Proving Grounds</li>
-            <li>5 hosted worlds and 5 guest collaborators per world</li>
-            <li>Up to 50 participants per hosted world</li>
-            <li>10GB hosted storage planning allowance</li>
-            <li>1,200 Mimir AI credits/month</li>
-            <li>Wide Ask Mimir context: up to 16k retrieved tokens</li>
-          </ul>
-          <a class="ms-btn-primary" href="#beta-signup">Join the beta</a>
-        </div>
-
-        <div class="ms-tier">
-          <h3 class="ms-tier-name">Loremaster</h3>
-          <p class="ms-tier-tag">Work at professional scale</p>
-          <div class="ms-tier-price">£24.99<small> / month</small></div>
-          <p class="ms-tier-annual">or £249.99/year</p>
-          <ul>
-            <li>Everything in Worldsmith</li>
-            <li>20 hosted worlds</li>
-            <li>20 guest collaborators per hosted world</li>
-            <li>Up to 200 participants per hosted world</li>
-            <li>50GB hosted storage planning allowance</li>
-            <li>3,000 Mimir AI credits/month</li>
-            <li>Wide Ask Mimir context: up to 16k retrieved tokens</li>
-            <li>Priority support queue</li>
-          </ul>
-          <a class="ms-btn-secondary" href="#beta-signup">Join the beta</a>
-        </div>
-
+        <article class="ms-tier"><h3 class="ms-tier-name">Mimir Core</h3><p class="ms-tier-tag">Build your world</p><div class="ms-tier-price">£0<small> / forever</small></div><ul><li>Unlimited local worlds and entries</li><li>Standard worldbuilding editors and visual tools</li><li>General imports and competitor migration</li><li>Standard and safe-to-publish export</li><li>Core monthly Mimir AI allowance</li><li>Join invited collaborative or hosted experiences</li></ul><a class="ms-btn-secondary" href="#beta-signup" data-tier="Core" data-analytics-event="mimir_tier_cta_click">Join the beta</a></article>
+        <article class="ms-tier"><h3 class="ms-tier-name">Apprentice</h3><p class="ms-tier-tag">Develop your world</p><div class="ms-tier-price">£6.99<small> / month</small></div><p class="ms-tier-annual">or £69.99/year</p><ul><li>Everything in Mimir Core</li><li>Custom Schema Editor</li><li>Narrative Planner and advanced tree/filter tools</li><li>Create and run Proving Grounds locally</li><li>Small collaborative workspace</li><li>Larger Mimir AI allowance</li></ul><a class="ms-btn-secondary" href="#beta-signup" data-tier="Apprentice" data-analytics-event="mimir_tier_cta_click">Join the beta</a></article>
+        <article class="ms-tier is-featured"><span class="ms-tier-badge badge-coming-soon">Most popular</span><h3 class="ms-tier-name">Worldsmith</h3><p class="ms-tier-tag">Bring your world to life</p><div class="ms-tier-price">£14.99<small> / month</small></div><p class="ms-tier-annual">or £149.99/year</p><ul><li>Everything in Apprentice</li><li>Lore Consistency Review and AI Context Bundles</li><li>Simulation and world-state tools</li><li>Live collaborative Proving Grounds hosting</li><li>Hosted participant worlds</li><li>Expanded collaboration and Mimir AI allowance</li></ul><a class="ms-btn-primary" href="#beta-signup" data-tier="Worldsmith" data-analytics-event="mimir_tier_cta_click">Join the beta</a></article>
+        <article class="ms-tier"><h3 class="ms-tier-name">Loremaster</h3><p class="ms-tier-tag">Work at professional scale</p><div class="ms-tier-price">£24.99<small> / month</small></div><p class="ms-tier-annual">or £249.99/year</p><ul><li>Everything in Worldsmith</li><li>More hosted worlds</li><li>More collaborators and participants</li><li>More hosted storage</li><li>Larger Mimir AI allowance</li><li>Priority support queue</li></ul><a class="ms-btn-secondary" href="#beta-signup" data-tier="Loremaster" data-analytics-event="mimir_tier_cta_click">Join the beta</a></article>
       </div>
-
-      <!-- Mimir AI credits -->
-      <div class="payg-block">
-        <h3 class="payg-block__heading">Mimir AI, without a model menu.</h3>
-        <p class="payg-block__subtext">
-          Credits pay for the work Mimir performs, not a particular provider model.
-          Narrow lookups use fewer credits than wide reviews or bulk operations. Mimir
-          chooses the underlying processing route for quality, speed, and cost. Monthly
-          subscription credits reset each billing month; separately purchased top-up
-          credits do not expire and are used after subscription credits.
-        </p>
-      </div>
-
-      <!-- Anti-lock-in commitments -->
-      <div class="pricing-commitments">
-        <h3 class="pricing-commitments__heading">What does not change when you pay less.</h3>
-        <p class="pricing-commitments__subtext">
-          Mimir's commercial model is designed around ownership first. Downgrades may
-          disable premium operations, but they do not erase the world you created.
-        </p>
-        <div class="pricing-commitments__grid">
-          <div class="pricing-commitment">
-            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
-            <div>
-              <strong>Unlimited local worlds and entries</strong>
-              <p>Your own files are not a metered cloud resource, so we do not impose artificial local world or entry caps.</p>
-            </div>
-          </div>
-          <div class="pricing-commitment">
-            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
-            <div>
-              <strong>Migration and export stay accessible</strong>
-              <p>Moving into Mimir and getting your own data back out are not premium privileges.</p>
-            </div>
-          </div>
-          <div class="pricing-commitment">
-            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
-            <div>
-              <strong>Invited participants can use Core</strong>
-              <p>A GM or host can be the power user without requiring every player or viewer to buy the same subscription.</p>
-            </div>
-          </div>
-          <div class="pricing-commitment">
-            <span class="pricing-commitment__icon" aria-hidden="true">✦</span>
-            <div>
-              <strong>Your local work survives a downgrade</strong>
-              <p>Premium-created local content remains stored and readable. Premium creation or hosted operations may pause until the relevant tier is restored.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ms-enterprise-box">
-        <p class="ms-section-sub margin-inline-auto">
-          <strong>Building with a larger professional team?</strong><br>
-          Loremaster is the V1 high-scale plan. Dedicated Studio/business licensing,
-          advanced team administration, onboarding, and SLA support are future options,
-          not hidden requirements for ordinary creators.
-        </p>
-      </div>
-
-      <div class="ms-roadmap-cta">
-        <p class="ms-section-sub margin-inline-auto">
-          After V1 launches, Shieldwall will spend several months gathering feedback and
-          refining the product before the next major integrations. MCP connections and
-          direct Unreal, Unity, and Godot workflows sit on that future roadmap rather
-          than being promised as launch features.
-        </p>
-        <a href="roadmap.html" class="ms-btn-secondary">See the roadmap</a>
-      </div>
-
+      <div class="pricing-commitments"><h3 class="pricing-commitments__heading">What never becomes a premium privilege.</h3><div class="pricing-commitments__grid"><div class="pricing-commitment"><span aria-hidden="true">✦</span><div><strong>Unlimited local worlds and entries</strong><p>Your own files are not a metered cloud resource.</p></div></div><div class="pricing-commitment"><span aria-hidden="true">✦</span><div><strong>Migration and export</strong><p>Moving in and taking your own work out stay accessible.</p></div></div><div class="pricing-commitment"><span aria-hidden="true">✦</span><div><strong>Core participants can join</strong><p>A host can be the power user without requiring every player to subscribe.</p></div></div><div class="pricing-commitment"><span aria-hidden="true">✦</span><div><strong>Local work survives a downgrade</strong><p>Premium operations may pause, but local content is not erased.</p></div></div></div></div>
+      <div class="ms-roadmap-cta"><p class="ms-section-sub margin-inline-auto">MCP connections and direct Unreal, Unity and Godot workflows are future roadmap items, not V1 promises.</p><a href="roadmap.html" class="ms-btn-secondary" data-analytics-event="mimir_roadmap_click">See the roadmap</a></div>
     </section>
 
-    <!-- ============================================================
-         FAQ
-         ============================================================ -->
     <section class="ms-section ms-wrap" id="faq">
-      <div class="ms-section-head text-center">
-        <span class="ms-eyebrow">FAQ</span>
-        <h2 class="ms-section-h2">Common questions</h2>
-      </div>
-      <div class="ms-faq-container">
-        <dl class="faq-list">
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-1">Is Mimir Core really free forever?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-1" hidden>
-              Yes. Core is intended to remain a useful local worldbuilding product with no time limit and no local world or entry caps. Paid plans add advanced workflows, larger Mimir AI allowances, collaboration, and hosted scale rather than charging you to keep your own files.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-2">How do Mimir AI credits work?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-2" hidden>
-              Credits represent Mimir AI work. A narrow factual lookup should use fewer credits than a broad consistency review or large translation. Subscription credits reset each billing month. Purchased top-up credits are kept separately, do not expire, and are used after the subscription allowance.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-3">Which AI model does Mimir use?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-3" hidden>
-              In the production product, you should not need to manage provider model names. Mimir chooses the processing route appropriate to the task. The goal is consistent quality and predictable credit usage even as underlying AI models change over time.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-4">What happens to my work if I cancel or downgrade?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-4" hidden>
-              Your local world data remains yours and stays readable. A downgrade can disable premium creation, AI, collaboration, or hosted operations, but it does not delete your local work. Hosted resources above a lower tier's allowance will use a defined grace/read-only/archive process rather than silent deletion; the exact hosting grace rules will be published before hosted billing opens.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-5">Can I bring an existing world into Mimir?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-5" hidden>
-              Yes. General imports and competitor migration are part of Mimir Core. The migration work is being completed as part of the V1 launch scope because changing tools should not require abandoning years of worldbuilding.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-6">Can a writing team use Mimir together?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-6" hidden>
-              Yes. V1 collaboration is designed for shared creative work. Apprentice provides a small collaborative workspace, while Worldsmith and Loremaster increase hosted project and collaborator capacity. Permissions determine what each invited person can change.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-7">How does the Game Master hosting model work?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-7" hidden>
-              The host can remain the power user while players join as viewers or controlled participants. Worldsmith and Loremaster include participant hosting allowances, and invited players can use Mimir Core rather than each needing the host's paid tier.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-8">Does Mimir work offline?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-8" hidden>
-              The local worldbuilding foundation works from files on your machine. Online services such as Mimir AI, live collaboration, and hosted worlds require a connection. Losing connectivity does not remove access to the local copy of your world.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-9">Is my world data private?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-9" hidden>
-              By default, your world lives locally. Data leaves your device only when you choose a feature that needs a network service, such as Mimir AI or hosted collaboration. AI requests send only the context needed for the operation; hosted worlds store the material you explicitly choose to host. The production privacy policy will list the relevant subprocessors before public launch.
-            </dd>
-          </div>
-
-          <div class="faq-item">
-            <dt class="faq-item__question">
-              <button type="button" aria-expanded="false" aria-controls="faq-10">Will Mimir connect directly to ChatGPT, Claude, Unreal, Unity, or Godot?</button>
-            </dt>
-            <dd class="faq-item__answer" id="faq-10" hidden>
-              That is the direction, but not a V1 launch promise. After V1, Shieldwall plans a period of feedback and refinement before moving into major integrations. MCP connections and direct game-engine workflows are on the future roadmap and will be announced when they are ready.
-            </dd>
-          </div>
-
-        </dl>
-      </div>
+      <div class="ms-section-head text-center"><span class="ms-eyebrow">FAQ</span><h2 class="ms-section-h2">Common questions</h2></div>
+      <div class="ms-faq-container"><dl class="faq-list">
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-1">Who is Mimir for?</button></dt><dd class="faq-item__answer" id="faq-1" hidden>Mimir is for worldbuilders. Game Masters and Dungeon Masters are a major launch audience, alongside writers, screenwriters, narrative designers and game developers. It is one product for connected worlds.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-2">Is Mimir Core really free forever?</button></dt><dd class="faq-item__answer" id="faq-2" hidden>Yes. Core is intended to remain a useful local product with no time limit and no local world or entry caps. Paid plans add advanced workflows, larger Mimir AI allowances, collaboration and hosted scale.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-3">What happens if I cancel or downgrade?</button></dt><dd class="faq-item__answer" id="faq-3" hidden>Your local world data remains yours and stays readable. A downgrade can disable premium creation, AI, collaboration or hosted operations, but it does not delete local work. Exact hosted-resource grace rules will be published before hosted billing opens.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-4">Can I bring an existing world into Mimir?</button></dt><dd class="faq-item__answer" id="faq-4" hidden>Yes. General imports and competitor migration are part of Mimir Core because changing tools should not require abandoning years of worldbuilding.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-5">Does Mimir work offline?</button></dt><dd class="faq-item__answer" id="faq-5" hidden>The local worldbuilding foundation works from files on your machine. Mimir AI, live collaboration and hosted worlds require a connection. Losing connectivity does not remove access to the local copy.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-6">Can players use Mimir without paying?</button></dt><dd class="faq-item__answer" id="faq-6" hidden>Yes. Invited players can use Mimir Core to join appropriate hosted experiences, subject to the host's permissions and capacity.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-7">Is Mimir a social network?</button></dt><dd class="faq-item__answer" id="faq-7" hidden>No. Mimir is not designed for open stranger chat, direct messages or public discovery. Collaboration and hosting are for people you choose to invite.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-8">When are MCP and game-engine integrations coming?</button></dt><dd class="faq-item__answer" id="faq-8" hidden>They are post-V1 roadmap items. Shieldwall plans feedback and refinement after V1 before MCP connections and direct Unreal, Unity and Godot workflows.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="faq-9">How does online data use differ from local work?</button></dt><dd class="faq-item__answer" id="faq-9" hidden>Ordinary local creation and editing use files on your device. Mimir AI, hosted collaboration and hosted worlds necessarily transmit selected data needed to provide them. Verified subprocessors and retention details will be published before public launch.</dd></div>
+      </dl></div>
     </section>
 
-    <!-- ============================================================
-         BETA SIGNUP
-         ============================================================ -->
-    <section class="ms-section ms-wrap" id="beta-signup">
-      <div class="ms-beta-wrapper">
-        <span class="ms-eyebrow">Early access</span>
-        <h2 class="ms-section-h2 text-center">Join the beta.</h2>
-        <p class="ms-section-sub ms-beta-sub">
-          Be among the first to use Mimir, help shape the final V1 balance, and get launch updates from Shieldwall Games.
-        </p>
-        <div class="ml-embedded" data-form="x3uRLn"></div>
-      </div>
-    </section>
-
+    <section class="ms-section ms-wrap" id="beta-signup"><div class="ms-beta-wrapper"><span class="ms-eyebrow">Early access</span><h2 class="ms-section-h2 text-center">Join the beta.</h2><p class="ms-section-sub ms-beta-sub">Be among the first worldbuilders to use Mimir, help Shieldwall find friction before public launch and receive launch updates.</p><div class="ml-embedded" data-form="x3uRLn" data-analytics-event="mimir_beta_signup"></div></div></section>
   </main>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer class="ms-footer">
-    <div class="ms-wrap">
-      <div class="ms-foot-grid">
-        <div>
-          <div class="ms-foot-brand">Mimir</div>
-          <p class="ms-foot-tag">Local-first worldbuilding for writers, Game Masters, and developers.</p>
-          <p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p>
-          <div class="ms-foot-social">
-            <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
-            <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-            <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          </div>
-        </div>
-        <div class="ms-foot-col">
-          <h5>Mimir</h5>
-          <a href="#features">Features</a>
-          <a href="#for-you">Who it's for</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-          <a href="roadmap.html">Roadmap</a>
-          <a href="#beta-signup">Join the beta</a>
-        </div>
-        <div class="ms-foot-col">
-          <h5>Shieldwall Games</h5>
-          <a href="../">Home</a>
-          <a href="../ashborn/">Ashborn CCG</a>
-        </div>
-      </div>
-      <div class="ms-foot-base">
-        <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span>
-        <span class="footer-nav">
-          <a href="../privacy.html">Privacy</a>
-          <a href="../terms.html">Terms</a>
-        </span>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="ms-footer"><div class="ms-wrap"><div class="ms-foot-grid"><div><div class="ms-foot-brand">Mimir</div><p class="ms-foot-tag">Local-first worldbuilding for creators.</p><p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p></div><div class="ms-foot-col"><h5>Mimir</h5><a href="#product">Product</a><a href="#mimir-ai">Mimir AI</a><a href="#proving-grounds">Proving Grounds</a><a href="#worldbuilders">For Worldbuilders</a><a href="#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a href="#beta-signup">Join the beta</a></div><div class="ms-foot-col"><h5>Shieldwall Games</h5><a href="../">Home</a><a href="../ashborn/">Ashborn CCG</a></div></div><div class="ms-foot-base"><span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span><span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></span></div></div></footer>
 </div>
-
-<script src="../scripts/main.js" defer></script>
-<script src="scripts/mimir.js" defer></script>
-
+<script src="../scripts/main.js" defer></script><script src="scripts/mimir.js" defer></script>
 </body>
 </html>

@@ -1054,3 +1054,376 @@
 .ms-section-sub.margin-inline-auto {
     margin-inline: auto;
 }
+
+/* ==========================================================================
+   30. Product-proof architecture
+   Real media can replace placeholder internals without changing page layout.
+   ========================================================================== */
+
+.ms-section--band {
+    background: linear-gradient(180deg, rgba(215, 155, 62, 0.035), rgba(215, 155, 62, 0.012));
+    border-block: 1px solid var(--border);
+}
+
+.ms-split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(36px, 6vw, 88px);
+    align-items: center;
+}
+
+.ms-split--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.ms-copy-block > p {
+    color: var(--fg-2);
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.ms-ownership-line {
+    color: var(--accent);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    margin: 18px 0 0;
+}
+
+.ms-launch-state,
+.ms-small-note,
+.ms-media-caption,
+.ms-media figcaption {
+    color: var(--fg-3);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.ms-media {
+    margin: 0;
+    min-width: 0;
+}
+
+.ms-media-placeholder,
+.ms-video-placeholder {
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(215, 155, 62, .09), transparent 45%),
+        repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.018) 22px 23px),
+        var(--bg-surface);
+    border: 1px solid var(--border-strong-c);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 260px;
+    overflow: hidden;
+    padding: 32px;
+    position: relative;
+    text-align: center;
+}
+
+.ms-media-placeholder::before,
+.ms-video-placeholder::before {
+    border: 1px solid rgba(215, 155, 62, .17);
+    border-radius: 50%;
+    content: "";
+    height: 170px;
+    position: absolute;
+    width: 170px;
+}
+
+.ms-media-placeholder strong,
+.ms-video-placeholder strong {
+    color: var(--fg-1);
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 400;
+    position: relative;
+}
+
+.ms-media-placeholder > span:last-child,
+.ms-video-placeholder > span:last-child {
+    color: var(--fg-3);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.ms-media-kicker {
+    color: var(--accent);
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    margin-bottom: 12px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.ms-media figcaption {
+    padding: 10px 4px 0;
+}
+
+.ms-media--hero .ms-media-placeholder {
+    min-height: 430px;
+}
+
+.ms-media--wide .ms-media-placeholder {
+    aspect-ratio: 16 / 10;
+}
+
+.ms-media-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.ms-media-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ms-media-grid--two .ms-media-placeholder {
+    min-height: 230px;
+}
+
+.ms-video-shell {
+    aspect-ratio: 16 / 8;
+    margin-top: 36px;
+}
+
+.ms-video-placeholder {
+    height: 100%;
+}
+
+.ms-demo-steps,
+.ms-proof-grid,
+.ms-audience-grid,
+.ms-composite {
+    display: grid;
+}
+
+.ms-demo-steps {
+    border-block: 1px solid var(--border);
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 28px;
+}
+
+.ms-demo-steps span {
+    color: var(--fg-2);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 16px;
+    text-align: center;
+}
+
+.ms-proof-strip {
+    background: var(--bg-surface);
+    border-block: 1px solid var(--border-strong-c);
+}
+
+.ms-proof-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ms-proof {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-height: 130px;
+    padding: 28px 24px;
+    text-decoration: none;
+}
+
+.ms-proof + .ms-proof {
+    border-left: 1px solid var(--border);
+}
+
+a.ms-proof:hover {
+    background: rgba(215, 155, 62, .045);
+}
+
+.ms-proof strong {
+    color: var(--fg-1);
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ms-proof span {
+    color: var(--fg-3);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ms-example {
+    background: var(--bg-surface);
+    border-left: 3px solid var(--accent);
+    margin: 26px 0 14px;
+    padding: 18px 22px;
+}
+
+.ms-example p {
+    color: var(--fg-2);
+    font-family: var(--font-serif);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ms-example p + p {
+    margin-top: 12px;
+}
+
+.ms-composite {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 38px;
+}
+
+.ms-composite > div {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    min-height: 190px;
+    padding: 28px;
+}
+
+.ms-composite > div + div {
+    border-left: 0;
+}
+
+.ms-composite span,
+.ms-audience-grid article > span {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+.ms-composite strong {
+    color: var(--fg-1);
+    display: block;
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 38px;
+}
+
+.ms-composite small {
+    color: var(--fg-3);
+    display: block;
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.ms-audience-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 38px;
+}
+
+.ms-audience-grid article {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.ms-audience-grid h3 {
+    color: var(--fg-1);
+    font-family: var(--font-display);
+    font-size: 25px;
+    font-weight: 400;
+    margin: 22px 0 12px;
+}
+
+.ms-audience-grid p,
+.ms-network-note {
+    color: var(--fg-2);
+    font-family: var(--font-serif);
+    line-height: 1.65;
+}
+
+.ms-check-list {
+    color: var(--fg-2);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.ms-network-note {
+    border-top: 1px solid var(--border);
+    font-size: 14px !important;
+    margin-top: 24px;
+    padding-top: 20px;
+}
+
+[data-analytics-event]:focus-visible,
+.ms-media:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+@media (max-width: 980px) {
+    .ms-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ms-proof:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .ms-proof:nth-child(4) {
+        border-top: 1px solid var(--border);
+    }
+
+    .ms-split,
+    .ms-split--reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .ms-audience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .ms-proof-grid,
+    .ms-media-grid--two,
+    .ms-composite,
+    .ms-demo-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .ms-proof + .ms-proof {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .ms-composite > div + div {
+        border-left: 1px solid var(--border);
+        border-top: 0;
+    }
+
+    .ms-media--hero .ms-media-placeholder,
+    .ms-media-placeholder {
+        min-height: 240px;
+    }
+
+    .ms-video-shell {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ms-page *,
+    .ms-page *::before,
+    .ms-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
