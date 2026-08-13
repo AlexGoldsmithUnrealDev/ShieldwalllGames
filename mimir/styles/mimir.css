@@ -381,9 +381,7 @@
 }
 
 .pricing-commitment {
-    display: flex;
-    gap: var(--space-3);
-    align-items: flex-start;
+    display: block;
     min-width: 0;
     padding: clamp(22px, 2.25vw, 30px);
     border: 1px solid var(--border);
