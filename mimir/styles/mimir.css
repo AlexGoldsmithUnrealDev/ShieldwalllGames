@@ -1427,3 +1427,621 @@ a.ms-proof:hover {
         transition-duration: .01ms !important;
     }
 }
+
+/* ==========================================================================
+   31. Descent into the Well
+   Chapter stage, local lighting, progress navigation and motion system.
+   Final artwork is configured in scripts/chapters.js.
+   ========================================================================== */
+
+:root {
+    --active-chapter-accent: #c9a45a;
+    --active-chapter-text: #d9e5ea;
+    --active-chapter-frame: #7a8791;
+    --active-chapter-nav: #c9a45a;
+    --active-chapter-glow: rgba(201, 164, 90, .3);
+    scroll-padding-top: 88px;
+    scroll-snap-type: y proximity;
+}
+
+.ms-well-page {
+    background: #0a1017;
+}
+
+.ms-well-page .ms-page {
+    background: transparent;
+    color: var(--fg-1);
+}
+
+.ms-well-stage {
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    z-index: 0;
+}
+
+.ms-well-layer,
+.ms-well-layer__dark,
+.ms-well-layer__light,
+.ms-well-stage__readability,
+.ms-well-stage__depth {
+    inset: 0;
+    position: absolute;
+}
+
+.ms-well-layer {
+    opacity: 0;
+    transform: scale(1.015);
+    transition:
+        opacity 900ms var(--easing-settle),
+        transform 1400ms var(--easing-settle);
+}
+
+.ms-well-layer.is-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ms-well-layer__dark,
+.ms-well-layer__light {
+    background-position: var(--well-focal-point, 50% 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ms-well-layer__dark {
+    filter: saturate(.82) contrast(1.04);
+}
+
+.ms-well-layer__light {
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 1100ms var(--easing-settle);
+}
+
+.ms-well-layer.is-illuminated .ms-well-layer__light {
+    opacity: .76;
+}
+
+.ms-well-stage__readability {
+    background:
+        linear-gradient(90deg, rgba(7, 10, 14, .66), rgba(7, 10, 14, .40) 46%, rgba(7, 10, 14, .58)),
+        linear-gradient(180deg, rgba(7, 10, 14, .26), rgba(7, 10, 14, .52));
+}
+
+.ms-well-stage__depth {
+    background:
+        radial-gradient(ellipse at 50% 42%, transparent 28%, rgba(0, 0, 0, .24) 74%, rgba(0, 0, 0, .5) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, .32), transparent 15% 85%, rgba(0, 0, 0, .32));
+    box-shadow: inset 0 0 160px rgba(0, 0, 0, .52);
+}
+
+.ms-nav {
+    background: rgba(12, 16, 20, .7);
+    border-bottom: 1px solid color-mix(in srgb, var(--active-chapter-frame) 42%, transparent);
+    position: sticky;
+    top: 0;
+    transition:
+        background 320ms ease,
+        border-color 500ms ease,
+        padding 320ms ease;
+    z-index: 50;
+}
+
+@supports (backdrop-filter: blur(14px)) {
+    .ms-nav,
+    .ms-depth-nav,
+    .ms-media-placeholder,
+    .ms-video-placeholder,
+    .ms-proof,
+    .ms-tier,
+    .ms-audience-grid article,
+    .pricing-commitment,
+    .faq-list,
+    .ms-beta-wrapper {
+        backdrop-filter: blur(14px) saturate(1.04);
+    }
+}
+
+.ms-nav.scrolled {
+    background: rgba(9, 13, 17, .9);
+    padding-block: 12px;
+}
+
+.ms-nav-links a:hover,
+.ms-nav-links a:focus-visible,
+.ms-eyebrow,
+.ms-hero-eyebrow,
+.ms-media-kicker {
+    color: var(--chapter-text-accent, var(--active-chapter-text));
+}
+
+.ms-chapter,
+.ms-chapter-continuation {
+    --accent: var(--chapter-accent, var(--active-chapter-accent));
+    --border: color-mix(in srgb, var(--chapter-frame, var(--active-chapter-frame)) 34%, transparent);
+    --border-strong-c: color-mix(in srgb, var(--chapter-frame, var(--active-chapter-frame)) 68%, transparent);
+    --section-glow: var(--chapter-glow, var(--active-chapter-glow));
+}
+
+.ms-chapter {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    scroll-margin-top: 82px;
+}
+
+.ms-hero.ms-chapter {
+    min-height: calc(100vh - 78px);
+    min-height: calc(100svh - 78px);
+    padding-block: 32px 72px;
+    scroll-snap-align: start;
+}
+
+[data-snap-chapter] {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
+.ms-chapter--long {
+    display: block;
+    min-height: auto;
+    scroll-snap-align: none;
+}
+
+.ms-section--band {
+    background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--chapter-accent, var(--active-chapter-accent)) 5%, rgba(9, 12, 16, .56)),
+        rgba(9, 12, 16, .34)
+    );
+    border-color: color-mix(in srgb, var(--chapter-frame, var(--active-chapter-frame)) 30%, transparent);
+}
+
+.ms-chapter::before,
+.ms-chapter-continuation::before {
+    border: 1px solid color-mix(in srgb, var(--chapter-accent, var(--active-chapter-accent)) 30%, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 44px var(--chapter-glow, var(--active-chapter-glow));
+    content: "";
+    height: 12px;
+    left: clamp(18px, 3.5vw, 64px);
+    opacity: .34;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 700ms ease, box-shadow 700ms ease;
+    width: 12px;
+}
+
+.ms-chapter.is-current-chapter::before,
+.ms-chapter-continuation.is-current-chapter::before {
+    animation: ms-rune-breathe 3.8s ease-in-out infinite;
+    opacity: .9;
+}
+
+.ms-media-placeholder,
+.ms-video-placeholder,
+.ms-tier,
+.ms-audience-grid article,
+.pricing-commitment,
+.faq-list,
+.ms-beta-wrapper {
+    background-color: rgba(13, 17, 22, .72);
+    border-color: color-mix(in srgb, var(--chapter-frame, var(--active-chapter-frame)) 54%, transparent);
+    box-shadow:
+        0 18px 60px rgba(0, 0, 0, .24),
+        0 0 0 1px rgba(255, 255, 255, .015),
+        0 0 44px color-mix(in srgb, var(--chapter-glow, var(--active-chapter-glow)) 58%, transparent);
+}
+
+.ms-media-placeholder,
+.ms-video-placeholder {
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--chapter-accent, var(--active-chapter-accent)) 13%, transparent), transparent 46%),
+        repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.018) 22px 23px),
+        rgba(13, 17, 22, .78);
+    transition:
+        border-color 420ms ease,
+        box-shadow 420ms ease,
+        transform 420ms var(--easing-settle);
+}
+
+.ms-media:hover .ms-media-placeholder,
+.ms-video-shell:hover .ms-video-placeholder {
+    border-color: var(--chapter-frame, var(--active-chapter-frame));
+    box-shadow:
+        0 24px 72px rgba(0, 0, 0, .3),
+        0 0 52px var(--chapter-glow, var(--active-chapter-glow));
+    transform: translateY(-4px);
+}
+
+.ms-media-placeholder::before,
+.ms-video-placeholder::before {
+    border-color: color-mix(in srgb, var(--chapter-accent, var(--active-chapter-accent)) 40%, transparent);
+    box-shadow: 0 0 40px var(--chapter-glow, var(--active-chapter-glow));
+}
+
+.ms-proof-strip {
+    background: rgba(10, 14, 18, .55);
+}
+
+.ms-proof {
+    background: rgba(15, 20, 25, .58);
+}
+
+.ms-proof:hover,
+.ms-audience-grid article:hover,
+.pricing-commitment:hover {
+    border-color: var(--chapter-frame, var(--active-chapter-frame));
+    box-shadow: 0 16px 48px rgba(0, 0, 0, .24), 0 0 34px var(--chapter-glow, var(--active-chapter-glow));
+    transform: translateY(-3px);
+}
+
+.ms-audience-grid article,
+.pricing-commitment {
+    transition: transform 320ms var(--easing-settle), border-color 320ms ease, box-shadow 320ms ease;
+}
+
+.ms-tier {
+    transition: transform 340ms var(--easing-settle), border-color 340ms ease, box-shadow 340ms ease;
+}
+
+.ms-tier:hover {
+    border-color: var(--chapter-frame, var(--active-chapter-frame));
+    transform: translateY(-5px);
+}
+
+.ms-tier.is-featured {
+    border-color: var(--chapter-accent, var(--active-chapter-accent));
+    box-shadow: 0 22px 72px rgba(0, 0, 0, .32), 0 0 54px var(--chapter-glow, var(--active-chapter-glow));
+}
+
+.ms-composite > div {
+    background: rgba(13, 17, 22, .76);
+    border-color: color-mix(in srgb, var(--chapter-frame, var(--active-chapter-frame)) 48%, transparent);
+    position: relative;
+    transition: background 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+}
+
+.ms-composite > div::after {
+    background: var(--chapter-accent, var(--active-chapter-accent));
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    opacity: .3;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms var(--easing-settle), opacity 350ms ease;
+    width: 100%;
+}
+
+.ms-composite.is-revealed > div::after {
+    opacity: .85;
+    transform: scaleX(1);
+}
+
+.ms-composite.is-revealed > div:nth-child(2)::after { transition-delay: 160ms; }
+.ms-composite.is-revealed > div:nth-child(3)::after { transition-delay: 320ms; }
+
+.ms-media-composition {
+    min-width: 0;
+    position: relative;
+}
+
+.ms-media-composition--character {
+    padding-right: clamp(0px, 7vw, 92px);
+}
+
+.ms-character-overlay {
+    bottom: -8%;
+    filter:
+        drop-shadow(0 22px 34px rgba(0, 0, 0, .7))
+        drop-shadow(0 0 28px var(--chapter-glow, var(--active-chapter-glow)));
+    height: 88%;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 20% 82%, transparent 100%);
+    object-fit: cover;
+    object-position: center;
+    opacity: .76;
+    pointer-events: none;
+    position: absolute;
+    right: -13%;
+    transform: translate3d(16px, 20px, 0);
+    transition: opacity 900ms ease, transform 1000ms var(--easing-settle);
+    width: 43%;
+    z-index: 3;
+}
+
+.is-revealed .ms-character-overlay,
+.ms-media-composition:has(.is-revealed) .ms-character-overlay {
+    opacity: .92;
+    transform: translate3d(0, 0, 0);
+}
+
+.ms-depth-nav {
+    align-items: center;
+    background: rgba(10, 14, 18, .46);
+    border: 1px solid color-mix(in srgb, var(--active-chapter-frame) 32%, transparent);
+    border-radius: 999px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 8px;
+    position: fixed;
+    right: clamp(10px, 1.6vw, 28px);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: border-color 500ms ease, background 500ms ease;
+    z-index: 45;
+}
+
+.ms-depth-nav__title {
+    color: var(--fg-3);
+    font: 600 8px var(--font-mono);
+    letter-spacing: .16em;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+}
+
+.ms-depth-nav ol {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ms-depth-nav__link {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    width: 20px;
+}
+
+.ms-depth-nav__marker {
+    border: 1px solid rgba(218, 226, 231, .3);
+    border-radius: 50%;
+    height: 6px;
+    transition: background 320ms ease, border-color 320ms ease, box-shadow 320ms ease, transform 320ms var(--easing-settle);
+    width: 6px;
+}
+
+.ms-depth-nav__link.is-complete .ms-depth-nav__marker {
+    background: color-mix(in srgb, var(--active-chapter-nav) 30%, transparent);
+    border-color: color-mix(in srgb, var(--active-chapter-nav) 48%, transparent);
+}
+
+.ms-depth-nav__link.is-active .ms-depth-nav__marker {
+    background: var(--active-chapter-nav);
+    border-color: var(--active-chapter-nav);
+    box-shadow: 0 0 14px var(--active-chapter-nav), 0 0 28px var(--active-chapter-glow);
+    transform: scale(1.65);
+}
+
+.ms-depth-nav__label {
+    background: rgba(8, 12, 16, .94);
+    border: 1px solid color-mix(in srgb, var(--active-chapter-frame) 44%, transparent);
+    border-radius: 4px;
+    color: var(--fg-1);
+    font: 500 11px var(--font-sans);
+    opacity: 0;
+    padding: 6px 9px;
+    pointer-events: none;
+    position: absolute;
+    right: 28px;
+    transform: translateX(6px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    white-space: nowrap;
+}
+
+.ms-depth-nav__link:hover .ms-depth-nav__label,
+.ms-depth-nav__link:focus-visible .ms-depth-nav__label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ms-depth-nav__link:focus-visible {
+    border-radius: 50%;
+    outline: 2px solid var(--active-chapter-nav);
+    outline-offset: 3px;
+}
+
+.ms-motion-ready .ms-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 720ms var(--easing-settle) var(--reveal-delay, 0ms),
+        transform 720ms var(--easing-settle) var(--reveal-delay, 0ms);
+}
+
+.ms-motion-ready .ms-reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-item__answer {
+    max-height: 32rem;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 360ms var(--easing-settle), opacity 260ms ease, padding 360ms var(--easing-settle);
+}
+
+.faq-item__answer.is-closing {
+    max-height: 0;
+    opacity: 0;
+    padding-bottom: 0;
+}
+
+.ms-footer {
+    background:
+        linear-gradient(180deg, rgba(8, 13, 20, .42), rgba(5, 9, 15, .92)),
+        radial-gradient(ellipse at 50% 100%, rgba(75, 163, 214, .10), transparent 52%);
+    position: relative;
+    z-index: 2;
+}
+
+.ms-footer::before {
+    background: linear-gradient(174deg, transparent 35%, rgba(75, 163, 214, .07) 50%, transparent 66%);
+    content: "";
+    inset: 0;
+    opacity: .6;
+    pointer-events: none;
+    position: absolute;
+}
+
+.ms-chapter-motion--entrance.is-current-chapter .ms-hero-eyebrow::before,
+.ms-chapter-motion--runes.is-current-chapter .ms-media-placeholder::before {
+    box-shadow: 0 0 28px var(--chapter-glow, var(--active-chapter-glow));
+}
+
+.ms-chapter-motion--migration.is-current-chapter .ms-composite > div::after {
+    opacity: .9;
+}
+
+.ms-chapter-motion--water.is-current-chapter .ms-beta-wrapper {
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .38), 0 0 64px var(--chapter-glow, var(--active-chapter-glow));
+}
+
+@keyframes ms-rune-breathe {
+    0%, 100% { box-shadow: 0 0 18px var(--chapter-glow, var(--active-chapter-glow)); transform: translateY(-50%) scale(.92); }
+    50% { box-shadow: 0 0 40px var(--chapter-glow, var(--active-chapter-glow)); transform: translateY(-50%) scale(1.08); }
+}
+
+@media (max-width: 1180px) {
+    .ms-depth-nav {
+        right: 7px;
+    }
+
+    .ms-chapter::before,
+    .ms-chapter-continuation::before {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        scroll-padding-top: 70px;
+    }
+
+    .ms-well-stage__readability {
+        background:
+            linear-gradient(180deg, rgba(7, 10, 14, .44), rgba(7, 10, 14, .67)),
+            linear-gradient(90deg, rgba(7, 10, 14, .58), rgba(7, 10, 14, .36), rgba(7, 10, 14, .58));
+    }
+
+    .ms-chapter {
+        min-height: 100vh;
+        min-height: 100svh;
+        scroll-margin-top: 68px;
+    }
+
+    .ms-chapter--long {
+        min-height: auto;
+    }
+
+    .ms-depth-nav {
+        bottom: 10px;
+        flex-direction: row;
+        gap: 0;
+        left: 50%;
+        padding: 5px 9px;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+    }
+
+    .ms-depth-nav__title,
+    .ms-depth-nav__label {
+        display: none;
+    }
+
+    .ms-depth-nav ol {
+        flex-direction: row;
+        gap: 2px;
+    }
+
+    .ms-depth-nav__link {
+        height: 18px;
+        width: 15px;
+    }
+
+    .ms-depth-nav__marker {
+        height: 4px;
+        width: 4px;
+    }
+
+    .ms-depth-nav__link.is-active .ms-depth-nav__marker {
+        transform: scale(1.45);
+    }
+
+    .ms-media-composition--character {
+        padding-right: 0;
+        padding-bottom: 94px;
+    }
+
+    .ms-character-overlay {
+        bottom: -4%;
+        height: 190px;
+        mask-image: linear-gradient(90deg, transparent, #000 18% 82%, transparent);
+        opacity: .55;
+        right: -4%;
+        width: 180px;
+    }
+
+    .ms-footer {
+        padding-bottom: 54px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ms-depth-nav {
+        display: none;
+    }
+
+    .ms-media-composition--character {
+        padding-bottom: 0;
+    }
+
+    .ms-character-overlay {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        scroll-snap-type: none;
+    }
+
+    .ms-well-layer,
+    .ms-well-layer__light,
+    .ms-media-placeholder,
+    .ms-video-placeholder,
+    .ms-tier,
+    .ms-audience-grid article,
+    .pricing-commitment,
+    .ms-character-overlay,
+    .ms-motion-ready .ms-reveal,
+    .faq-item__answer {
+        animation: none !important;
+        transition-duration: .01ms !important;
+        transform: none !important;
+    }
+
+    .ms-motion-ready .ms-reveal {
+        opacity: 1;
+    }
+
+    .ms-chapter.is-current-chapter::before,
+    .ms-chapter-continuation.is-current-chapter::before {
+        animation: none;
+    }
+}
