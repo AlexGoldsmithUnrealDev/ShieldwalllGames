@@ -1040,3 +1040,17 @@
     margin-top: 14px;
 }
 
+
+/* ==========================================================================
+   29. Centred Content Alignment
+   Keep centred content blocks centred while preserving left-aligned sections.
+   ========================================================================== */
+
+#pricing > .ms-section-head.text-center,
+#faq > .ms-section-head.text-center {
+    margin-inline: auto;
+}
+
+.ms-section-sub.margin-inline-auto {
+    margin-inline: auto;
+}
