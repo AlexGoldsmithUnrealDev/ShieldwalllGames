@@ -39,6 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
        ------------------------------------------------------------------ */
     function initFaq() {
         var questions = document.querySelectorAll('.faq-item__question button');
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        var closeTimers = new WeakMap();
+        var closeHandlers = new WeakMap();
+
+        function cancelPendingClose(answer) {
+            var timer = closeTimers.get(answer);
+            var handler = closeHandlers.get(answer);
+            if (timer) window.clearTimeout(timer);
+            if (handler) answer.removeEventListener('transitionend', handler);
+            closeTimers.delete(answer);
+            closeHandlers.delete(answer);
+        }
+
         questions.forEach(function (btn) {
             btn.addEventListener('click', function () {
                 var expanded = btn.getAttribute('aria-expanded') === 'true';
@@ -48,9 +61,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 btn.setAttribute('aria-expanded', String(!expanded));
                 if (expanded) {
-                    answer.setAttribute('hidden', '');
+                    cancelPendingClose(answer);
+                    if (reduceMotion.matches) {
+                        answer.setAttribute('hidden', '');
+                        return;
+                    }
+
+                    answer.classList.add('is-closing');
+                    var finishClose = function () {
+                        cancelPendingClose(answer);
+                        answer.setAttribute('hidden', '');
+                        answer.classList.remove('is-closing');
+                    };
+                    closeHandlers.set(answer, finishClose);
+                    answer.addEventListener('transitionend', finishClose, { once: true });
+                    closeTimers.set(answer, window.setTimeout(function () {
+                        if (!answer.hasAttribute('hidden')) finishClose();
+                    }, 420));
                 } else {
+                    cancelPendingClose(answer);
                     answer.removeAttribute('hidden');
+                    if (!reduceMotion.matches) {
+                        answer.classList.add('is-closing');
+                        requestAnimationFrame(function () {
+                            answer.classList.remove('is-closing');
+                        });
+                    }
                 }
             });
         });
