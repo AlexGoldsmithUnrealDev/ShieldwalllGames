@@ -58,4 +58,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initFaq();
 
+    /* ------------------------------------------------------------------
+       Analytics-ready interaction hooks
+       No analytics provider is installed here. Events are exposed as
+       CustomEvents and forwarded to dataLayer only when a real analytics
+       implementation has created it.
+       ------------------------------------------------------------------ */
+    function emitMimirEvent(name, detail) {
+        var payload = detail || {};
+        window.dispatchEvent(new CustomEvent('mimir:analytics', {
+            detail: { event: name, parameters: payload }
+        }));
+
+        if (Array.isArray(window.dataLayer)) {
+            window.dataLayer.push(Object.assign({ event: name }, payload));
+        }
+    }
+
+    document.querySelectorAll('[data-analytics-event]').forEach(function (element) {
+        element.addEventListener('click', function () {
+            emitMimirEvent(element.dataset.analyticsEvent, {
+                tier: element.dataset.tier || undefined,
+                label: element.textContent.trim().replace(/\s+/g, ' ').slice(0, 120),
+                href: element.getAttribute('href') || undefined
+            });
+        });
+    });
+
+    var pricing = document.getElementById('pricing');
+    if (pricing && 'IntersectionObserver' in window) {
+        var pricingSeen = false;
+        var pricingObserver = new IntersectionObserver(function (entries) {
+            if (!pricingSeen && entries[0].isIntersecting && entries[0].intersectionRatio >= 0.35) {
+                pricingSeen = true;
+                emitMimirEvent('mimir_pricing_view');
+                pricingObserver.disconnect();
+            }
+        }, { threshold: [0.35] });
+        pricingObserver.observe(pricing);
+    }
+
 });
