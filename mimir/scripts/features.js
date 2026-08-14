@@ -62,7 +62,8 @@
         var input = document.getElementById('feature-query');
         var clear = document.getElementById('feature-search-clear');
         var status = document.getElementById('feature-search-status');
-        if (!form || !input || !clear || !status) return;
+        var noResults = document.getElementById('feature-no-results');
+        if (!form || !input || !clear || !status || !noResults) return;
         form.removeAttribute('hidden');
 
         function filter() {
@@ -78,6 +79,7 @@
                 section.toggleAttribute('hidden', Boolean(query) && !hasMatch);
             });
             clear.toggleAttribute('hidden', !query);
+            noResults.toggleAttribute('hidden', !query || visible > 0);
             status.textContent = query ? (visible + (visible === 1 ? ' feature found.' : ' features found.')) : (featureIndex.size + ' features across eight connected disciplines.');
         }
 
