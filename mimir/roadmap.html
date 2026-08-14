@@ -3,210 +3,775 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1a1714" />
-
+  <meta name="theme-color" content="#101923" />
   <title>Mimir Roadmap: What We're Building</title>
-  <meta name="description" content="See the Mimir roadmap: the V1 launch scope, post-launch refinement, and future AI and game-engine integrations." />
-
-  <!-- Open Graph -->
+  <meta name="description" content="Explore Mimir's path from alpha completion to public beta, refinement, integrations and future possibilities deeper in the Well of Mímir." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mimir Roadmap" />
-  <meta property="og:description" content="V1 first, then feedback and refinement, followed by major AI and game-engine integrations." />
+  <meta property="og:title" content="Mimir Roadmap: What We're Building" />
+  <meta property="og:description" content="A clear, honest view of Mimir's current alpha work, public-beta bridge, post-launch refinement and future direction." />
   <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/roadmap.html" />
-  <!-- Add a verified 1200x630 social image when the final logo and real UI capture exist. -->
-
-  <!-- Favicon -->
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
   <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
   <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/roadmap.html" />
-
   <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="stylesheet" href="styles/mimir.css" />
-  <link rel="stylesheet" href="styles/roadmap.css" />
-
-  <!-- MailerLite universal script -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script',
-    'https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2430389');
-  </script>
-
+  <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
+  <link rel="stylesheet" href="styles/roadmap.css?v=20260814-1" />
 </head>
-
-<body>
-
+<body class="ms-well-page rm-page">
+<div class="ms-page">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <div class="top-bar" role="navigation" aria-label="Return to Shieldwall Games">
-    <div class="top-bar__inner">
-      <a href="../" class="top-bar__back">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <line x1="19" y1="12" x2="5" y2="12"/>
-          <polyline points="12 19 5 12 12 5"/>
-        </svg>
-        Shieldwall Games
-      </a>
+  <div class="ms-well-stage" aria-hidden="true">
+    <div class="ms-well-layer ms-well-layer--a is-active">
+      <div class="ms-well-layer__dark"></div>
+      <div class="ms-well-layer__light"></div>
     </div>
+    <div class="ms-well-layer ms-well-layer--b">
+      <div class="ms-well-layer__dark"></div>
+      <div class="ms-well-layer__light"></div>
+    </div>
+    <div class="ms-well-stage__readability"></div>
+    <div class="ms-well-stage__depth"></div>
   </div>
 
-  <header class="mimir-nav" role="banner">
-    <div class="mimir-nav__inner">
+  <div id="well-chapter-nav"></div>
 
-      <a href="./" class="mimir-nav__wordmark" aria-label="Mimir home">Mimir</a>
+  <nav class="ms-nav rm-nav" aria-label="Mimir">
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home">
+        <img src="../assets/logos/mimir-mark.png" alt="" />
+        <span class="ms-nav-brand-word">Mimir</span>
+      </a>
+      <div class="ms-nav-links">
+        <a href="./#product">Product</a>
+        <a href="./#mimir-ai">Mimir AI</a>
+        <a href="./#proving-grounds">Proving Grounds</a>
+        <a href="./#worldbuilders">For Worldbuilders</a>
+        <a href="./#pricing">Pricing</a>
+        <a href="roadmap.html" aria-current="page">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span>
+      <div class="ms-nav-cta">
+        <a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a>
+      </div>
+      <button class="rm-nav-toggle" type="button" aria-expanded="false" aria-controls="rm-mobile-menu" aria-label="Open Mimir navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="rm-mobile-menu" id="rm-mobile-menu" hidden>
+      <div class="ms-wrap">
+        <a href="./#product">Product</a>
+        <a href="./#mimir-ai">Mimir AI</a>
+        <a href="./#proving-grounds">Proving Grounds</a>
+        <a href="./#worldbuilders">For Worldbuilders</a>
+        <a href="./#pricing">Pricing</a>
+        <a href="roadmap.html" aria-current="page">Roadmap</a>
+        <a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+      </div>
+    </div>
+  </nav>
 
-      <nav aria-label="Mimir navigation">
-        <ul class="mimir-nav__links" role="list">
-          <li><a href="./#product">Product</a></li>
-          <li><a href="./#mimir-ai">Mimir AI</a></li>
-          <li><a href="./#proving-grounds">Proving Grounds</a></li>
-          <li><a href="./#worldbuilders">For Worldbuilders</a></li>
-          <li><a href="./#pricing">Pricing</a></li>
-          <li><a href="./#faq">FAQ</a></li>
-          <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
-        </ul>
+  <header class="rm-hero ms-chapter" id="roadmap-overview" data-chapter="current" data-snap-chapter>
+    <div class="ms-wrap rm-hero-inner">
+      <div class="rm-hero-copy">
+        <span class="ms-eyebrow">Mimir Roadmap</span>
+        <h1>What we're building.</h1>
+        <p class="rm-hero-lead">Mimir's immediate priority is completing and testing the full public-beta product. After launch, development shifts deliberately towards feedback, reliability and refinement before the next major integrations and ecosystem expansion.</p>
+        <div class="rm-hero-meta">
+          <span>Alpha now</span>
+          <span id="roadmap-last-updated">Updated 14 August 2026</span>
+        </div>
+      </div>
+
+      <nav class="rm-journey" aria-label="Roadmap phases">
+        <ol>
+          <li><a class="rm-journey-step" href="#current"><span>01</span><strong>Current</strong><small>Alpha / V1</small></a></li>
+          <li><a class="rm-journey-step" href="#beta"><span>02</span><strong>Beta</strong><small>Commercial release</small></a></li>
+          <li><a class="rm-journey-step" href="#refine"><span>03</span><strong>Refine</strong><small>Listen and harden</small></a></li>
+          <li><a class="rm-journey-step" href="#expand"><span>04</span><strong>Expand</strong><small>Connect the ecosystem</small></a></li>
+          <li><a class="rm-journey-step" href="#horizon"><span>05</span><strong>Horizon</strong><small>Explore possibilities</small></a></li>
+        </ol>
       </nav>
 
-      <a href="./#beta-signup" class="mimir-nav__cta">Join the beta</a>
-
-      <button
-        class="mimir-nav__hamburger"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="mimir-mobile-drawer"
-        type="button"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-
-    </div>
-
-    <div class="mimir-nav__drawer" id="mimir-mobile-drawer" role="navigation" aria-label="Mimir mobile navigation">
-      <a href="./#product">Product</a>
-      <a href="./#mimir-ai">Mimir AI</a>
-      <a href="./#proving-grounds">Proving Grounds</a>
-      <a href="./#worldbuilders">For Worldbuilders</a>
-      <a href="./#pricing">Pricing</a>
-      <a href="./#faq">FAQ</a>
-      <a href="roadmap.html" aria-current="page">Roadmap</a>
-      <a href="./#beta-signup">Join the beta</a>
+      <div class="rm-status-key" aria-labelledby="status-key-title">
+        <span class="ms-eyebrow" id="status-key-title">Status key</span>
+        <ul role="list">
+          <li><span class="rm-status rm-status--available"><i aria-hidden="true"></i>Available in alpha</span></li>
+          <li><span class="rm-status rm-status--testing"><i aria-hidden="true"></i>In testing</span></li>
+          <li><span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span></li>
+          <li><span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span></li>
+          <li><span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span></li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-
-    <section class="section section--hero roadmap-hero" aria-labelledby="roadmap-heading">
-      <div class="section__inner container">
-        <span class="section-label">Roadmap</span>
-        <h1 class="section-heading" id="roadmap-heading">What we're building.</h1>
-        <p class="section-subtext">
-          The priority is a complete V1: migration, Proving Grounds, collaboration,
-          and hosting alongside Mimir's existing worldbuilding systems. After launch,
-          Shieldwall will spend several months gathering feedback and refining the
-          product before moving into the next major integration work.
-        </p>
-        <p class="roadmap-hero__updated" id="roadmap-last-updated">Loading…</p>
-      </div>
-    </section>
-
-    <section class="section section--hero" aria-label="Roadmap details">
-      <div class="section__inner container">
-        <div id="roadmap-content">
-          <p class="roadmap-loading">Loading roadmap…</p>
+    <!-- ROADMAP_STATIC_START -->
+    <!-- Generated from roadmap-data.json. Do not edit this block by hand. -->
+    <section class="rm-phase ms-chapter" id="current" data-chapter="current" data-snap-chapter aria-labelledby="current-heading">
+      <div class="ms-wrap rm-phase-inner">
+        <header class="rm-phase-head">
+          <div class="rm-phase-index" aria-hidden="true">01</div>
+          <div>
+            <span class="ms-eyebrow">Current</span>
+            <h2 id="current-heading">Alpha / V1 Completion</h2>
+            <p>Shieldwall is finishing and testing the complete Mimir public-beta product: the connected local worldbuilding foundation, deeper creative tools, migration, Proving Grounds, collaboration and hosting.</p>
+          </div>
+          <div class="rm-phase-counts" aria-label="Feature status totals"><span><strong>5</strong> available</span><span><strong>2</strong> testing</span><span><strong>6</strong> development</span><span><strong>2</strong> planned</span></div>
+        </header>
+        <p class="rm-phase-milestone"><span aria-hidden="true"></span>The work here leads to a feature-complete public commercial beta, not a small closed test.</p>
+        <div class="rm-feature-field" aria-label="Alpha / V1 Completion features">
+          <div class="rm-route" aria-hidden="true"><span></span></div>
+          <article class="rm-feature rm-feature--available" id="feature-structured-core" data-feature-id="structured-core">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Worldbuilding</span>
+              <span class="rm-feature-badge">Core</span>
+            </div>
+            <h3>Structured worldbuilding core</h3>
+            <span class="rm-status rm-status--available"><i aria-hidden="true"></i>Available in alpha</span>
+            <p>Connected editors for characters, places, cultures, factions, events, languages, quests and more.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="structured-core" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--available" id="feature-relationships" data-feature-id="relationships">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Worldbuilding</span>
+            </div>
+            <h3>Links, backlinks &amp; relationships</h3>
+            <span class="rm-status rm-status--available"><i aria-hidden="true"></i>Available in alpha</span>
+            <p>Connect entries directly and follow those relationships throughout the world.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="relationships" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--available" id="feature-trees" data-feature-id="trees">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Visualisation</span>
+            </div>
+            <h3>Trees &amp; visual structures</h3>
+            <span class="rm-status rm-status--available"><i aria-hidden="true"></i>Available in alpha</span>
+            <p>See family, species, culture, faction and place structures as connected visual systems.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="trees" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--available" id="feature-timeline-calendar" data-feature-id="timeline-calendar">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Visualisation</span>
+            </div>
+            <h3>Timeline &amp; calendar</h3>
+            <span class="rm-status rm-status--available"><i aria-hidden="true"></i>Available in alpha</span>
+            <p>Define an in-world calendar and understand events across the world&#039;s chronology.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="timeline-calendar" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--available" id="feature-validation-history" data-feature-id="validation-history">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Quality</span>
+            </div>
+            <h3>Validation, history &amp; accessibility</h3>
+            <span class="rm-status rm-status--available"><i aria-hidden="true"></i>Available in alpha</span>
+            <p>Catch structural issues, recover earlier work and adapt the interface to different reading needs.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="validation-history" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--development" id="feature-maps" data-feature-id="maps">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Visualisation</span>
+            </div>
+            <h3>Interactive maps</h3>
+            <span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span>
+            <p>Connect locations and entries to geography rather than keeping place trapped in prose.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="maps" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--development" id="feature-narrative-tools" data-feature-id="narrative-tools">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Creative tools</span>
+            </div>
+            <h3>Narrative tools</h3>
+            <span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span>
+            <p>Plan story arcs, quests and dialogue beside the lore they depend on.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="narrative-tools" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--testing" id="feature-mimir-ai" data-feature-id="mimir-ai">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Mimir AI</span>
+            </div>
+            <h3>Mimir AI</h3>
+            <span class="rm-status rm-status--testing"><i aria-hidden="true"></i>In testing</span>
+            <p>Ask questions against relevant world context without treating unsupported invention as canon.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="mimir-ai" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--development" id="feature-lore-review" data-feature-id="lore-review">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Mimir AI</span>
+            </div>
+            <h3>Lore Consistency Review</h3>
+            <span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span>
+            <p>Surface contradictions that deterministic validation cannot understand on its own.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="lore-review" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--testing" id="feature-translator" data-feature-id="translator">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Mimir AI</span>
+            </div>
+            <h3>Constructed-language Translator</h3>
+            <span class="rm-status rm-status--testing"><i aria-hidden="true"></i>In testing</span>
+            <p>Translate against grammar, vocabulary, registers and writing systems defined by the creator.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="translator" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--development" id="feature-imports-migration" data-feature-id="imports-migration">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Migration</span>
+              <span class="rm-feature-badge">Core</span>
+            </div>
+            <h3>General import &amp; competitor migration</h3>
+            <span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span>
+            <p>Bring existing files and projects into a local Mimir world without rebuilding everything by hand.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="imports-migration" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-proving-grounds" data-feature-id="proving-grounds">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Creative tools</span>
+            </div>
+            <h3>Proving Grounds</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Prototype conversations, quests, tabletop sessions and interactive ideas against the same world data.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="proving-grounds" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--development" id="feature-simulation-state" data-feature-id="simulation-state">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Creative tools</span>
+            </div>
+            <h3>Simulation &amp; world-state systems</h3>
+            <span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span>
+            <p>Use variables, conditions and state to test how interactive structures behave.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="simulation-state" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-collaboration-hosting" data-feature-id="collaboration-hosting">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Collaboration</span>
+            </div>
+            <h3>Collaboration &amp; hosted worlds</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Create shared workspaces and controlled player or participant experiences.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="collaboration-hosting" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--development" id="feature-qa-reliability" data-feature-id="qa-reliability">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Quality</span>
+            </div>
+            <h3>Launch QA, reliability &amp; access</h3>
+            <span class="rm-status rm-status--development"><i aria-hidden="true"></i>In development</span>
+            <p>Remove obvious friction and strengthen keyboard, visual, performance and recovery behaviour.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="qa-reliability" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--ask-mimir reveal" aria-labelledby="roadmap-cta-heading">
-      <div class="section__inner container roadmap-cta-inner">
-        <span class="section-label">Early access</span>
-        <h2 class="section-heading" id="roadmap-cta-heading">Join the beta.</h2>
-        <p class="section-subtext roadmap-cta-sub">
-          Be among the first worldbuilders to use Mimir, help Shieldwall find friction
-          before public launch and receive launch updates.
-        </p>
-        <a href="./#beta-signup" class="btn-pill roadmap-cta-btn">
-          Join the beta
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </a>
-        <div class="ml-embedded" data-form="x3uRLn"></div>
+    <section class="rm-phase ms-chapter" id="beta" data-chapter="beta" data-snap-chapter aria-labelledby="beta-heading">
+      <div class="ms-wrap rm-phase-inner">
+        <header class="rm-phase-head">
+          <div class="rm-phase-index" aria-hidden="true">02</div>
+          <div>
+            <span class="ms-eyebrow">Next</span>
+            <h2 id="beta-heading">Public Beta</h2>
+            <p>Public beta is the first real commercial Mimir release: the complete Core and paid-tier suite, production account and commerce infrastructure, public downloads, onboarding and hosted services.</p>
+          </div>
+          <div class="rm-phase-counts" aria-label="Feature status totals"><span><strong>10</strong> planned</span></div>
+        </header>
+        <p class="rm-phase-milestone"><span aria-hidden="true"></span>Alpha now, then a feature-complete public commercial beta, then deliberate growth and stabilisation.</p>
+        <div class="rm-feature-field" aria-label="Public Beta features">
+          <div class="rm-route" aria-hidden="true"><span></span></div>
+          <article class="rm-feature rm-feature--planned" id="feature-complete-suite" data-feature-id="complete-suite">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Launch</span>
+              <span class="rm-feature-badge">Beta bridge</span>
+            </div>
+            <h3>Complete Core + paid-tier suite</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Ship the approved V1 capability progression across Core, Apprentice, Worldsmith and Loremaster.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="complete-suite" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-accounts" data-feature-id="accounts">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Infrastructure</span>
+            </div>
+            <h3>Production accounts &amp; entitlements</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Create the account, tier and ownership foundation needed for commercial use.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="accounts" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-payments" data-feature-id="payments">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Commerce</span>
+            </div>
+            <h3>Subscriptions &amp; payments</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Enable the planned paid tiers through production Stripe subscription handling inside Mimir.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="payments" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-ai-credits" data-feature-id="ai-credits">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Mimir AI</span>
+            </div>
+            <h3>Production Mimir AI credits</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Replace development quota stubs with customer-facing allowances, estimates and reliable accounting.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="ai-credits" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-hosted-infrastructure" data-feature-id="hosted-infrastructure">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Infrastructure</span>
+            </div>
+            <h3>Hosted collaboration infrastructure</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Provide production sync, permissions, storage and realtime services for invited shared worlds.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="hosted-infrastructure" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-download-flow" data-feature-id="download-flow">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Launch</span>
+            </div>
+            <h3>Public download &amp; install flow</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Move from a waitlist to signed, understandable installer delivery for supported desktop platforms.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="download-flow" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-commercial-onboarding" data-feature-id="commercial-onboarding">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Launch</span>
+            </div>
+            <h3>Commercial beta onboarding</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Guide new worldbuilders from installation to their first useful connected world.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="commercial-onboarding" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-beta-migration" data-feature-id="beta-migration">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Migration</span>
+            </div>
+            <h3>Production migration flow</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Ship the reviewed import and migration experience as a dependable Core path.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="beta-migration" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-launch-qa" data-feature-id="launch-qa">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Quality</span>
+            </div>
+            <h3>Launch QA &amp; reliability</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Validate the full suite, packaging, accessibility, hosted allowances and recovery paths.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="launch-qa" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-founder-programme" data-feature-id="founder-programme">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Launch</span>
+              <span class="rm-feature-badge">At beta launch</span>
+            </div>
+            <h3>Founder early-adopter programme</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Recognise accounts created during the first six months of public beta with approved historical benefits.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="founder-programme" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+        </div>
       </div>
     </section>
 
-  </main>
+    <section class="rm-phase ms-chapter" id="refine" data-chapter="refine" data-snap-chapter aria-labelledby="refine-heading">
+      <div class="ms-wrap rm-phase-inner">
+        <header class="rm-phase-head">
+          <div class="rm-phase-index" aria-hidden="true">03</div>
+          <div>
+            <span class="ms-eyebrow">Refine</span>
+            <h2 id="refine-heading">Stabilisation &amp; Community</h2>
+            <p>After beta, Shieldwall deliberately learns from real users. The priority becomes onboarding, migration, reliability, accessibility and the quality of the workflows already shipped before another wave of major features.</p>
+          </div>
+          <div class="rm-phase-counts" aria-label="Feature status totals"><span><strong>10</strong> planned</span></div>
+        </header>
+        <p class="rm-phase-milestone"><span aria-hidden="true"></span>Feedback leads the work here. This phase is not a race to pile on unrelated features.</p>
+        <div class="rm-feature-field" aria-label="Stabilisation &amp; Community features">
+          <div class="rm-route" aria-hidden="true"><span></span></div>
+          <article class="rm-feature rm-feature--planned" id="feature-onboarding-refine" data-feature-id="onboarding-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Product refinement</span>
+            </div>
+            <h3>Onboarding refinement</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Use activation and support evidence to remove friction from the first Mimir sessions.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="onboarding-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-migration-refine" data-feature-id="migration-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Product refinement</span>
+            </div>
+            <h3>Migration refinement</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Improve source coverage, mapping, warnings and review from real migration attempts.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="migration-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-proving-refine" data-feature-id="proving-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Product refinement</span>
+            </div>
+            <h3>Proving Grounds refinement</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Expand the interactive workflows that writers, GMs and designers actually use.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="proving-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-collaboration-refine" data-feature-id="collaboration-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Product refinement</span>
+            </div>
+            <h3>Collaboration &amp; hosting hardening</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Strengthen permissions, sync, conflicts, capacity and participant experience.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="collaboration-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-ai-refine" data-feature-id="ai-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Mimir AI</span>
+            </div>
+            <h3>Mimir AI retrieval &amp; routing</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Improve answer quality, context selection, latency and credit efficiency from measured workloads.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="ai-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-accessibility-refine" data-feature-id="accessibility-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Quality</span>
+            </div>
+            <h3>Accessibility &amp; usability improvement</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Continue keyboard, screen-reader, visual and workflow accessibility work with user feedback.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="accessibility-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-reliability-refine" data-feature-id="reliability-refine">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Quality</span>
+            </div>
+            <h3>Reliability &amp; performance</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Harden local, hosted and AI workflows using telemetry and real failure patterns.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="reliability-refine" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-feedback-led-changes" data-feature-id="feedback-led-changes">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Community</span>
+            </div>
+            <h3>Feedback-led product changes</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Prioritise real pain, retention friction and repeated requests over speculative feature volume.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="feedback-led-changes" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-community-hub" data-feature-id="community-hub">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Community</span>
+              <span class="rm-feature-badge">Not a social network</span>
+            </div>
+            <h3>Community Hub</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>A private account space for voting, feedback, reports, announcements, surveys, challenges and progression.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="community-hub" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-shieldwall-packs" data-feature-id="shieldwall-packs">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Ecosystem</span>
+              <span class="rm-feature-badge">After beta</span>
+            </div>
+            <h3>In-app store &amp; Shieldwall content packs</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Offer optional connected packs inside Mimir when the store, entitlements and launch packs are actually ready.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="shieldwall-packs" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__inner">
+    <section class="rm-phase ms-chapter" id="expand" data-chapter="expand" data-snap-chapter aria-labelledby="expand-heading">
+      <div class="ms-wrap rm-phase-inner">
+        <header class="rm-phase-head">
+          <div class="rm-phase-index" aria-hidden="true">04</div>
+          <div>
+            <span class="ms-eyebrow">Expand</span>
+            <h2 id="expand-heading">Integrations &amp; Ecosystem</h2>
+            <p>Once the core product is stable, Mimir can connect the same canonical world to the wider creative toolchain through controlled AI and game-engine workflows.</p>
+          </div>
+          <div class="rm-phase-counts" aria-label="Feature status totals"><span><strong>6</strong> planned</span></div>
+        </header>
+        <p class="rm-phase-milestone"><span aria-hidden="true"></span>These are planned post-V1 integrations. None are advertised as public-beta features.</p>
+        <div class="rm-feature-field" aria-label="Integrations &amp; Ecosystem features">
+          <div class="rm-route" aria-hidden="true"><span></span></div>
+          <article class="rm-feature rm-feature--planned" id="feature-chatgpt-mcp" data-feature-id="chatgpt-mcp">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">AI integration</span>
+            </div>
+            <h3>ChatGPT MCP</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Let ChatGPT work with a Mimir world through controlled operations.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="chatgpt-mcp" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-claude-mcp" data-feature-id="claude-mcp">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">AI integration</span>
+            </div>
+            <h3>Claude MCP</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Let Claude query and work with the same controlled Mimir source of truth.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="claude-mcp" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-unreal" data-feature-id="unreal">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Game engines</span>
+            </div>
+            <h3>Unreal Engine</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Connect structured Mimir world and narrative data to Unreal workflows.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="unreal" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-unity" data-feature-id="unity">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Game engines</span>
+            </div>
+            <h3>Unity</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Connect Mimir&#039;s canonical world data to Unity projects and narrative systems.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="unity" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-godot" data-feature-id="godot">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Game engines</span>
+            </div>
+            <h3>Godot</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Connect Mimir world data to Godot through a workflow designed for the engine.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="godot" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--planned" id="feature-engine-workflows" data-feature-id="engine-workflows">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Game engines</span>
+            </div>
+            <h3>Advanced engine &amp; data workflows</h3>
+            <span class="rm-status rm-status--planned"><i aria-hidden="true"></i>Planned</span>
+            <p>Explore export, synchronisation and eventual round-tripping between canon and implementation.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="engine-workflows" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <div class="site-footer__grid">
-        <div>
-          <a href="./" class="site-footer__wordmark" aria-label="Mimir home">Mimir</a>
-          <p class="site-footer__tagline">
-            Local-first worldbuilding for creators.
-            Built by Shieldwall Games.
-          </p>
-          <div class="site-footer__social" aria-label="Social media links">
-            <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
+    <section class="rm-phase ms-chapter rm-phase--speculative" id="horizon" data-chapter="horizon" data-snap-chapter aria-labelledby="horizon-heading">
+      <div class="ms-wrap rm-phase-inner">
+        <header class="rm-phase-head">
+          <div class="rm-phase-index" aria-hidden="true">05</div>
+          <div>
+            <span class="ms-eyebrow">Horizon</span>
+            <h2 id="horizon-heading">Future Possibilities</h2>
+            <p>These are directions to explore when real demand justifies them. They are intentionally less certain than the public-beta, refinement and integration work above.</p>
+          </div>
+          <div class="rm-phase-counts" aria-label="Feature status totals"><span><strong>6</strong> future</span></div>
+        </header>
+        <p class="rm-phase-milestone"><span aria-hidden="true"></span>Direction, not a launch promise.</p>
+        <div class="rm-feature-field" aria-label="Future Possibilities features">
+          <div class="rm-route" aria-hidden="true"><span></span></div>
+          <article class="rm-feature rm-feature--future" id="feature-studio-plan" data-feature-id="studio-plan">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Professional</span>
+              <span class="rm-feature-badge">Exploring</span>
+            </div>
+            <h3>Mimir Studio / business plan</h3>
+            <span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span>
+            <p>A possible future plan for organisations with needs beyond ordinary creator subscriptions.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="studio-plan" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--future" id="feature-organisation-admin" data-feature-id="organisation-admin">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Professional</span>
+              <span class="rm-feature-badge">Exploring</span>
+            </div>
+            <h3>Organisation administration</h3>
+            <span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span>
+            <p>Explore organisation-level permissions, account management, auditability and SSO.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="organisation-admin" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--future" id="feature-professional-support" data-feature-id="professional-support">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Professional</span>
+              <span class="rm-feature-badge">Direction</span>
+            </div>
+            <h3>Professional onboarding &amp; support</h3>
+            <span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span>
+            <p>Explore paid onboarding, guaranteed support and deployment services for larger customers.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="professional-support" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--future" id="feature-artist-marketplace" data-feature-id="artist-marketplace">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Ecosystem</span>
+              <span class="rm-feature-badge">Not committed</span>
+            </div>
+            <h3>Third-party artist marketplace</h3>
+            <span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span>
+            <p>Explore a later marketplace for approved artists and human-made replacement art packs.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="artist-marketplace" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--future" id="feature-session-capture" data-feature-id="session-capture">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Creative tools</span>
+              <span class="rm-feature-badge">Exploring</span>
+            </div>
+            <h3>Session capture &amp; extraction</h3>
+            <span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span>
+            <p>Explore turning recorded design or play sessions into reviewable world and narrative updates.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="session-capture" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="rm-feature rm-feature--future" id="feature-further-tools" data-feature-id="further-tools">
+            <div class="rm-feature-rune" aria-hidden="true"><span></span></div>
+            <div class="rm-feature-top">
+              <span class="rm-feature-category">Creative tools</span>
+              <span class="rm-feature-badge">Open direction</span>
+            </div>
+            <h3>Further creative tooling</h3>
+            <span class="rm-status rm-status--future"><i aria-hidden="true"></i>Future</span>
+            <p>Leave room for new worldbuilding workflows demonstrated by real user demand.</p>
+            <button class="rm-feature-open" type="button" data-feature-open="further-tools" hidden>Explore feature <span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ROADMAP_STATIC_END -->
+
+    <section class="rm-beta ms-chapter" id="roadmap-beta-signup" data-chapter="horizon" data-snap-chapter aria-labelledby="roadmap-beta-heading">
+      <div class="ms-wrap">
+        <div class="rm-cta-panel">
+          <span class="ms-eyebrow">Early access</span>
+          <h2 id="roadmap-beta-heading">Help shape the path.</h2>
+          <p>Mimir is currently in alpha. Join the beta to use the product early, help Shieldwall find friction before public launch and receive launch updates.</p>
+          <div class="rm-cta-actions">
+            <a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a>
+            <a class="ms-btn-secondary" href="./">Explore Mimir</a>
           </div>
         </div>
-
-        <div>
-          <p class="site-footer__heading">Mimir</p>
-          <ul class="site-footer__links" role="list">
-            <li><a href="./#product">Product</a></li>
-            <li><a href="./#mimir-ai">Mimir AI</a></li>
-            <li><a href="./#proving-grounds">Proving Grounds</a></li>
-            <li><a href="./#worldbuilders">For Worldbuilders</a></li>
-            <li><a href="./#pricing">Pricing</a></li>
-            <li><a href="./#faq">FAQ</a></li>
-            <li><a href="./#beta-signup">Join the beta</a></li>
-            <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="site-footer__heading">Shieldwall Games</p>
-          <ul class="site-footer__links" role="list">
-            <li><a href="../">Home</a></li>
-            <li><a href="../ashborn/">Ashborn CCG</a></li>
-          </ul>
-        </div>
       </div>
+    </section>
+  </main>
 
-      <div class="site-footer__bottom">
-        <p class="site-footer__copyright">&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</p>
-        <span class="footer-nav">
+  <footer class="ms-footer">
+    <div class="ms-wrap">
+      <div class="ms-foot-grid rm-foot-grid">
+        <div>
+          <a class="rm-foot-brand" href="./" aria-label="Mimir home">
+            <img src="../assets/logos/mimir-mark.png" alt="" />
+            <span class="ms-foot-brand">Mimir</span>
+          </a>
+          <p class="ms-foot-tag">Local-first worldbuilding for creators.</p>
+          <p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p>
+          <div class="rm-socials" aria-label="Verified Shieldwall Games social links">
+            <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
+        </div>
+        <div class="ms-foot-col">
+          <h5>Mimir</h5>
+          <a href="./#product">Product</a>
+          <a href="./#mimir-ai">Mimir AI</a>
+          <a href="./#proving-grounds">Proving Grounds</a>
+          <a href="./#worldbuilders">For Worldbuilders</a>
+          <a href="./#pricing">Pricing</a>
+          <a href="roadmap.html" aria-current="page">Roadmap</a>
+          <a href="./#beta-signup">Join the beta</a>
+        </div>
+        <div class="ms-foot-col">
+          <h5>Shieldwall Games</h5>
+          <a href="../">Shieldwall Games</a>
+          <a href="../ashborn/">Ashborn CCG</a>
           <a href="../privacy.html">Privacy</a>
           <a href="../terms.html">Terms</a>
-        </span>
+        </div>
       </div>
-
+      <div class="ms-foot-base">
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span>
+        <span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></span>
+      </div>
     </div>
   </footer>
+</div>
 
-  <script src="../scripts/main.js" defer></script>
-  <script src="scripts/mimir.js" defer></script>
-  <script src="scripts/roadmap.js" defer></script>
+<dialog class="rm-dialog" id="roadmap-detail" aria-labelledby="roadmap-detail-title">
+  <div class="rm-dialog-shell">
+    <button class="rm-dialog-close" type="button" aria-label="Close feature details">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="rm-dialog-phase" id="roadmap-detail-phase"></div>
+    <h2 id="roadmap-detail-title"></h2>
+    <div id="roadmap-detail-status"></div>
+    <p class="rm-dialog-detail" id="roadmap-detail-copy"></p>
+    <div class="rm-dialog-why">
+      <span class="ms-eyebrow">Why it matters</span>
+      <p id="roadmap-detail-why"></p>
+    </div>
+    <div class="rm-dialog-media" id="roadmap-detail-media" hidden>
+      <span class="ms-eyebrow">Future media slot</span>
+      <p></p>
+    </div>
+    <div class="rm-dialog-related" id="roadmap-detail-related" hidden>
+      <span class="ms-eyebrow">Related features</span>
+      <div></div>
+    </div>
+  </div>
+</dialog>
 
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/roadmap-chapters.js" defer></script>
+<script src="scripts/chapters.js" defer></script>
+<script src="scripts/mimir.js" defer></script>
+<script src="scripts/roadmap.js" defer></script>
 </body>
 </html>
+

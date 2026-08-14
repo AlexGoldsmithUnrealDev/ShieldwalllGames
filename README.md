@@ -60,7 +60,10 @@ Then visit `http://localhost:8000`.
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
-│       └── roadmap.js
+│       ├── chapters.js
+│       ├── roadmap-chapters.js
+│       ├── roadmap.js
+│       └── generate-roadmap.js
 ├── ashborn/
 │   ├── index.html
 │   └── styles/
@@ -84,6 +87,18 @@ The live site currently uses the planned V1 commercial model:
 Core keeps unlimited local worlds and entries. Paid tiers add advanced workflows, Mimir AI allowance, collaboration, hosting, and scale rather than artificial local content caps.
 
 The deeper canonical commercial specification lives in the Lorekeeper/Mimir application repository at `docs/commercial-model.md`. When pricing or entitlements change there, this website and `CLAUDE.md` must be updated together.
+
+### Roadmap authoring
+
+`mimir/roadmap-data.json` is the primary Roadmap content source. After changing
+it, run `node mimir/scripts/generate-roadmap.js` to refresh the semantic HTML
+snapshot in `mimir/roadmap.html`. The snapshot keeps the page useful and
+indexable when JavaScript or JSON loading fails; `roadmap.js` adds only the
+interactive detail layer.
+
+The homepage and Roadmap share the Well stage/controller in
+`mimir/scripts/chapters.js`. Roadmap-only phase artwork and colour configuration
+lives in `mimir/scripts/roadmap-chapters.js`.
 
 ## Current V1 positioning
 

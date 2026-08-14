@@ -239,6 +239,16 @@
         };
     }
 
+    /*
+     * Pages may provide a data-driven chapter configuration before this
+     * shared controller loads. The homepage continues to use the established
+     * defaults above, while supporting pages can reuse the same stage,
+     * observer, navigation, preloading and reduced-motion behaviour.
+     */
+    var ACTIVE_CHAPTERS = Array.isArray(window.MIMIR_WELL_CONFIG) && window.MIMIR_WELL_CONFIG.length
+        ? window.MIMIR_WELL_CONFIG
+        : CHAPTERS;
+
     function initWellChapters() {
         var stage = document.querySelector('.ms-well-stage');
         var layers = stage ? Array.prototype.slice.call(stage.querySelectorAll('.ms-well-layer')) : [];
@@ -253,7 +263,7 @@
 
         if (!stage || layers.length !== 2 || !navMount) return;
 
-        CHAPTERS.forEach(function (chapter, index) {
+        ACTIVE_CHAPTERS.forEach(function (chapter, index) {
             chapter.targets.forEach(function (targetId) {
                 var target = document.getElementById(targetId);
                 if (!target) return;
@@ -277,7 +287,7 @@
         activateChapter(findInitialChapter(), true);
 
         var handleViewportModeChange = function () {
-            if (activeIndex >= 0) applyLayer(layers[activeLayer], CHAPTERS[activeIndex]);
+            if (activeIndex >= 0) applyLayer(layers[activeLayer], ACTIVE_CHAPTERS[activeIndex]);
             preloadAround(activeIndex);
         };
 
@@ -304,7 +314,7 @@
             nav.appendChild(heading);
 
             var list = document.createElement('ol');
-            CHAPTERS.forEach(function (chapter, index) {
+            ACTIVE_CHAPTERS.forEach(function (chapter, index) {
                 var item = document.createElement('li');
                 var link = document.createElement('a');
                 var marker = document.createElement('span');
@@ -366,7 +376,7 @@
 
         function findInitialChapter() {
             var hash = window.location.hash.slice(1);
-            var hashIndex = CHAPTERS.findIndex(function (chapter) {
+            var hashIndex = ACTIVE_CHAPTERS.findIndex(function (chapter) {
                 return chapter.id === hash || chapter.targets.indexOf(hash) !== -1;
             });
             if (hashIndex >= 0) return hashIndex;
@@ -385,9 +395,9 @@
         }
 
         function activateChapter(index, immediate) {
-            if (typeof index !== 'number' || index < 0 || index >= CHAPTERS.length || index === activeIndex) return;
+            if (typeof index !== 'number' || index < 0 || index >= ACTIVE_CHAPTERS.length || index === activeIndex) return;
 
-            var chapter = CHAPTERS[index];
+            var chapter = ACTIVE_CHAPTERS[index];
             activeIndex = index;
             document.documentElement.dataset.activeChapter = chapter.key;
             document.documentElement.style.setProperty('--active-chapter-accent', chapter.accent);
@@ -455,7 +465,7 @@
 
         function preloadAround(index) {
             [index - 1, index, index + 1].forEach(function (chapterIndex) {
-                var chapter = CHAPTERS[chapterIndex];
+                var chapter = ACTIVE_CHAPTERS[chapterIndex];
                 if (!chapter || !chapter.assetReady) return;
                 var paths = mobileMedia.matches
                     ? [chapter.assets.mobileDark, chapter.assets.mobileLight]
@@ -485,7 +495,12 @@
                 '.ms-tier',
                 '.pricing-commitment',
                 '.faq-item',
-                '.ms-beta-wrapper'
+                '.ms-beta-wrapper',
+                '.rm-journey-step',
+                '.rm-phase-head',
+                '.rm-phase-milestone',
+                '.rm-feature',
+                '.rm-cta-panel'
             ];
 
             var elements = Array.prototype.slice.call(document.querySelectorAll(revealGroups.join(',')));
@@ -516,6 +531,6 @@
         }
     }
 
-    window.MIMIR_WELL_CHAPTERS = CHAPTERS;
+    window.MIMIR_WELL_CHAPTERS = ACTIVE_CHAPTERS;
     document.addEventListener('DOMContentLoaded', initWellChapters);
 }());
