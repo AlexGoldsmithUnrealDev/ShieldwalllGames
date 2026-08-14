@@ -1,0 +1,128 @@
+/* Shared Mimir internal-page chrome. Page-specific composition stays separate. */
+
+.mi-page :where(h1, h2, h3, h4, p, span, small, strong, a, button, li) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.mi-nav [aria-current="page"] {
+    color: var(--fg-1);
+    position: relative;
+}
+
+.mi-nav .ms-nav-links [aria-current="page"]::after {
+    background: var(--active-chapter-nav);
+    border-radius: 99px;
+    bottom: -10px;
+    box-shadow: 0 0 12px var(--active-chapter-glow);
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.mi-nav-toggle {
+    align-items: center;
+    background: rgba(255, 255, 255, .025);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--fg-1);
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+    width: 44px;
+}
+
+.mi-nav-toggle span {
+    background: currentColor;
+    display: block;
+    height: 1px;
+    transition: transform 220ms ease, opacity 180ms ease;
+    width: 18px;
+}
+
+.mi-nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.mi-nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.mi-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+.mi-mobile-menu {
+    background: rgba(8, 12, 17, .97);
+    border-top: 1px solid var(--border);
+}
+
+.mi-mobile-menu[hidden] { display: none; }
+
+.mi-mobile-menu .ms-wrap {
+    display: grid;
+    gap: 2px;
+    padding-block: 12px 18px;
+}
+
+.mi-mobile-menu a {
+    border-radius: 7px;
+    color: var(--fg-2);
+    font: 500 14px var(--font-sans);
+    padding: 11px 12px;
+    text-decoration: none;
+}
+
+.mi-mobile-menu a:hover,
+.mi-mobile-menu a:focus-visible,
+.mi-mobile-menu a[aria-current="page"] {
+    background: color-mix(in srgb, var(--active-chapter-accent) 10%, transparent);
+    color: var(--fg-1);
+}
+
+.mi-mobile-menu .ms-btn-primary {
+    color: var(--fg-on-accent);
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.mi-foot-grid {
+    grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(150px, 1fr));
+}
+
+.mi-foot-brand {
+    align-items: center;
+    color: inherit;
+    display: inline-flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.mi-foot-brand img { height: 34px; width: 34px; }
+
+.mi-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 22px;
+}
+
+.mi-socials a {
+    color: var(--fg-3);
+    font: 600 10px var(--font-sans);
+    letter-spacing: .08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mi-socials a:hover,
+.mi-socials a:focus-visible { color: var(--active-chapter-text); }
+
+@media (max-width: 767px) {
+    .mi-nav .ms-nav-links,
+    .mi-nav .ms-nav-cta { display: none; }
+    .mi-nav-toggle { display: flex; }
+    .mi-foot-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mi-nav-toggle span { transition: none !important; }
+}

@@ -8,6 +8,7 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | --- | --- | --- |
 | Shieldwall Games | `index.html` | Studio homepage led by Mimir |
 | Mimir | `mimir/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
+| Mimir features | `mimir/features.html` | Comprehensive, searchable product capabilities |
 | Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
 | Privacy | `privacy.html` | Website and planned Mimir privacy model |
@@ -100,6 +101,18 @@ The homepage and Roadmap share the Well stage/controller in
 `mimir/scripts/chapters.js`. Roadmap-only phase artwork and colour configuration
 lives in `mimir/scripts/roadmap-chapters.js`.
 
+### Features authoring
+
+`mimir/data/features.json` is the Features page presentation dataset. After
+changing it, run `node mimir/scripts/generate-features.js` to regenerate the
+crawlable semantic snapshot in `mimir/features.html`. The browser progressively
+adds search and feature-detail drawers; it never replaces the static content.
+
+`mimir/styles/internal.css` and `mimir/scripts/internal.js` provide shared
+internal-page navigation/footer behaviour used by Features and Roadmap. The
+Features Well configuration is in `mimir/scripts/features-chapters.js`; future
+artwork filenames are documented in `mimir/assets/backgrounds/features/README.md`.
+
 ## Current V1 positioning
 
 Mimir V1 is being completed around:
@@ -187,6 +200,8 @@ Before Mimir becomes a commercial SaaS/download service, the production website/
 Read `CLAUDE.md` before making site changes. After any material product/pricing change, check all of:
 
 - `mimir/index.html`
+- `mimir/features.html`
+- `mimir/data/features.json`
 - `mimir/roadmap.html`
 - `mimir/roadmap-data.json`
 - `privacy.html`

@@ -331,8 +331,10 @@ GitHub Pages should not be treated as the permanent commercial SaaS/download/acc
 Always check these together:
 
 1. `mimir/index.html`
-2. `mimir/roadmap.html`
-3. `mimir/roadmap-data.json`
+2. `mimir/features.html`
+3. `mimir/data/features.json`
+4. `mimir/roadmap.html`
+5. `mimir/roadmap-data.json`
 4. `privacy.html`
 5. `terms.html`
 6. `README.md`

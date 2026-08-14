@@ -1,0 +1,148 @@
+{
+  "lastVerified": "2026-08-14",
+  "tiers": [
+    { "id": "core", "label": "Core", "description": "Substantial local-first worldbuilding foundation." },
+    { "id": "apprentice", "label": "Apprentice+", "description": "Advanced creation, planning and local testing tools." },
+    { "id": "worldsmith", "label": "Worldsmith+", "description": "Deeper AI, simulation and hosted participation." },
+    { "id": "loremaster", "label": "Loremaster", "description": "Higher scale and priority support rather than a separate creative foundation." }
+  ],
+  "statuses": [
+    { "id": "available", "label": "Available in alpha" },
+    { "id": "testing", "label": "In testing" },
+    { "id": "development", "label": "In development" },
+    { "id": "planned", "label": "Planned for public beta" }
+  ],
+  "categories": [
+    {
+      "id": "build",
+      "number": "01",
+      "label": "Build",
+      "title": "Give every idea room to become a world.",
+      "purpose": "Create and structure the world's information without turning creativity into form-filling.",
+      "intro": "Start with a name and a thought. Add fields, links, imagery and structure only when the world needs them.",
+      "features": [
+        { "id": "structured-entries", "name": "Structured world entries", "summary": "Create characters, species, cultures, places, factions, artefacts, events, languages and other connected lore.", "detail": "Mimir gives common world entities purpose-built structure while keeping the minimum required information deliberately small.", "tier": "core", "status": "available", "media": "Character and entry editor", "related": ["flexible-editors", "wiki-links"] },
+        { "id": "flexible-editors", "name": "Flexible entry editors", "summary": "Begin with as little as you know, then deepen an entry as the idea grows.", "detail": "Shared fields such as aliases, worlds, spoilers, tags and images sit alongside type-specific details. Empty optional fields do not become creative homework.", "tier": "core", "status": "available", "related": ["structured-entries", "custom-schemas"] },
+        { "id": "custom-schemas", "name": "Custom Schema Editor", "summary": "Shape additional entry structures around the needs of a particular world.", "detail": "Custom types and fields extend Mimir beyond its standard entities without changing the underlying connected-world model.", "tier": "apprentice", "status": "development", "related": ["flexible-editors", "deterministic-validation"] },
+        { "id": "random-generation", "name": "Random generation", "summary": "Generate a useful starting point from saved filters instead of staring at a blank page.", "detail": "Mimir's generator uses the same structured filters as the Browser so results can be constrained to the kind of prompt or entity you actually need.", "tier": "core", "status": "available", "related": ["browser-search", "structured-entries"] },
+        { "id": "assets-media", "name": "Assets & media", "summary": "Keep images and supporting media connected to the entries that use them.", "detail": "Assets own their file, alt text and licence metadata, making reuse and attribution more deliberate across a world.", "tier": "core", "status": "available", "media": "Assets library", "related": ["hero-images", "safe-publish-export"] },
+        { "id": "hero-images", "name": "Hero images", "summary": "Choose one reusable lead image for an entry, browser card or narrative beat.", "detail": "Hero images are references to managed Assets rather than duplicate uploads. Galleries can coexist with the lead image.", "tier": "core", "status": "available", "media": "Hero image across editor and Browser", "related": ["assets-media", "narrative-planner"] }
+      ]
+    },
+    {
+      "id": "connect",
+      "number": "02",
+      "label": "Connect",
+      "title": "Turn pages into a living system.",
+      "purpose": "Reveal how people, places, cultures, histories and ideas depend on one another.",
+      "intro": "A world is defined by the relationships between its pieces, not merely by the existence of pages.",
+      "features": [
+        { "id": "wiki-links", "name": "Wiki-links", "summary": "Reference another entry naturally while writing and move straight to its context.", "detail": "Wiki-links make connected lore part of the writing flow instead of a separate database-maintenance task.", "tier": "core", "status": "available", "related": ["backlinks", "relationships"] },
+        { "id": "backlinks", "name": "Backlinks", "summary": "See every place that refers back to an entry.", "detail": "Backlinks expose the consequences and context surrounding an entity, including narrative-planning references where supported.", "tier": "core", "status": "available", "media": "Relationships and backlinks", "related": ["wiki-links", "relationships"] },
+        { "id": "relationships", "name": "Relationships & inverse links", "summary": "Model explicit connections in both directions rather than relying on prose alone.", "detail": "A defined relationship can explain how two entities are connected and preserve the inverse meaning from either side.", "tier": "core", "status": "available", "media": "Relationship editor", "related": ["backlinks", "family-tree"] },
+        { "id": "tags-navigation", "name": "Tags & linked navigation", "summary": "Group ideas across entity types and follow connections without losing your place.", "detail": "Tags, worlds and linked entities give multiple ways to move through the same canon depending on the question being asked.", "tier": "core", "status": "available", "related": ["browser-search", "wiki-links"] }
+      ]
+    },
+    {
+      "id": "visualise",
+      "number": "03",
+      "label": "Visualise",
+      "title": "See structures prose cannot hold.",
+      "purpose": "Expose lineage, hierarchy, geography and chronology as visual systems.",
+      "intro": "Mimir does not flatten every connection into one generic graph. Each view is designed around the structure it needs to explain.",
+      "features": [
+        { "id": "family-tree", "name": "Family Tree", "summary": "Trace ancestry, partners and family lines through a focused genealogy view.", "detail": "Family structure is presented as genealogy rather than a generic relationship diagram, with filters for large worlds.", "tier": "core", "status": "available", "media": "Family Tree", "related": ["tree-filtering", "relationships"] },
+        { "id": "genus-tree", "name": "Genus / Species Tree", "summary": "Understand taxonomic branches and how species relate across a world.", "detail": "The genus view supports its own hierarchy and filtering, including habitat and diet dimensions documented by the application.", "tier": "core", "status": "available", "media": "Genus / Species Tree", "related": ["tree-filtering", "structured-entries"] },
+        { "id": "culture-tree", "name": "Culture Tree", "summary": "Explore parent, descendant and related cultural structures.", "detail": "Culture hierarchy can focus on a selected branch or expand to a wider view of the world's cultural structure.", "tier": "core", "status": "available", "media": "Culture Tree", "related": ["tree-filtering", "relationships"] },
+        { "id": "faction-tree", "name": "Faction Tree", "summary": "Arrange members, roles and internal connections as an organisation actually works.", "detail": "Faction trees support free-form member structure, roles and decorative connections rather than forcing every organisation into a strict hierarchy.", "tier": "core", "status": "available", "media": "Faction Tree", "related": ["tree-filtering", "relationships"] },
+        { "id": "place-tree", "name": "Place Tree", "summary": "Move from worlds and regions down through settlements and contained places.", "detail": "The place hierarchy makes containment and scale visible, with focused and wider views for large settings.", "tier": "core", "status": "available", "media": "Place Tree", "related": ["maps", "tree-filtering"] },
+        { "id": "tree-filtering", "name": "Advanced tree filtering", "summary": "Narrow each specialised tree with filters that match its subject.", "detail": "Family, genus, place, culture and faction trees use different relevant filters, and saved filter state keeps complex views manageable.", "tier": "apprentice", "status": "available", "related": ["family-tree", "genus-tree", "place-tree"] },
+        { "id": "timeline", "name": "Timeline", "summary": "Understand events across the world's chronology instead of reconstructing order from pages.", "detail": "Timeline views place connected events against the active calendar and world context.", "tier": "core", "status": "available", "media": "Timeline", "related": ["calendar", "structured-entries"] },
+        { "id": "calendar", "name": "Calendar", "summary": "Define in-world time and use it consistently across events and planning.", "detail": "Calendars provide the chronology that events, timelines and narrative work can share.", "tier": "core", "status": "available", "media": "Calendar", "related": ["timeline", "narrative-planner"] },
+        { "id": "maps", "name": "Interactive maps", "summary": "Connect locations and entries to geography rather than keeping place trapped in prose.", "detail": "Map work is part of the V1 completion path. It is represented here as in development, not as a shipped alpha capability.", "tier": "core", "status": "development", "media": "Map", "related": ["place-tree", "structured-entries"] }
+      ]
+    },
+    {
+      "id": "write",
+      "number": "04",
+      "label": "Write & Plan",
+      "title": "Use the world while shaping what happens in it.",
+      "purpose": "Develop stories, campaigns and interactive narratives beside the lore they depend on.",
+      "intro": "These are narrative and world-use tools inside Mimir's connected platform, not an attempt to turn it into a generic novel-writing app.",
+      "features": [
+        { "id": "story-arcs", "name": "Story Arc editor", "summary": "Structure an arc and connect its people, events and places back to canon.", "detail": "Story arcs are first-class world entries, so planning can remain connected to the wider world instead of becoming an isolated outline.", "tier": "core", "status": "development", "related": ["narrative-planner", "wiki-links"] },
+        { "id": "narrative-planner", "name": "Narrative Planner", "summary": "Arrange visual beats, branches and connected lore across a wider narrative canvas.", "detail": "The planner supports beats, labels, links, status, hero images and wiki-linked writing on a pannable storyboard.", "tier": "apprentice", "status": "development", "media": "Narrative Planner", "related": ["story-arcs", "hero-images", "naming-consistency"] },
+        { "id": "quest-editor", "name": "Quest Editor", "summary": "Design objectives, consequences and connected lore for interactive stories or campaigns.", "detail": "Quest work remains part of the same world model, ready to connect with dialogue and later Proving Grounds testing.", "tier": "core", "status": "development", "media": "Quest Editor", "related": ["proving-grounds", "variables-world-state"] },
+        { "id": "dialogue-editor", "name": "Dialogue Editor", "summary": "Build branching conversations with the characters and context they reference.", "detail": "Dialogue is a connected creative tool rather than a detached script file, and is intended to feed interactive testing.", "tier": "core", "status": "development", "media": "Dialogue Editor", "related": ["proving-grounds", "quest-editor"] },
+        { "id": "spoiler-planning", "name": "Spoiler-aware planning", "summary": "Keep reveals and secret information controlled while using lore in plans.", "detail": "Spoiler metadata follows entries into connected planning and export workflows so different audiences can receive appropriate context.", "tier": "core", "status": "available", "related": ["spoiler-controls", "safe-publish-export"] }
+      ]
+    },
+    {
+      "id": "understand",
+      "number": "05",
+      "label": "Understand",
+      "title": "Find answers. Catch problems. Keep canon grounded.",
+      "purpose": "Retrieve the right information and distinguish structural certainty from language-based review.",
+      "intro": "Search, deterministic validation and AI review work together, but they do not pretend to be the same kind of evidence.",
+      "features": [
+        { "id": "browser-search", "name": "Browser, search & filters", "summary": "Find entries with fuzzy search and combine filters for type, world, spoiler level and tags.", "detail": "The Browser is a working surface for navigating large worlds, not merely a list of recent documents.", "tier": "core", "status": "available", "media": "Main workspace and Browser", "related": ["tags-navigation", "random-generation"] },
+        { "id": "deterministic-validation", "name": "Deterministic validation", "summary": "Catch known structural problems using rules whose results can be explained.", "detail": "Validation checks explicit data constraints and reference integrity. It does not use probabilistic language interpretation.", "tier": "core", "status": "available", "related": ["naming-consistency", "lore-consistency-review"] },
+        { "id": "naming-consistency", "name": "Naming consistency", "summary": "Surface likely naming clashes before they spread through a connected world.", "detail": "Naming checks support deliberate reuse while helping creators notice accidental collisions and confusing near-matches.", "tier": "core", "status": "available", "related": ["deterministic-validation", "narrative-planner"] },
+        { "id": "mimir-ai", "name": "Mimir AI", "summary": "Ask grounded questions using relevant world context without silently declaring inventions canon.", "detail": "Mimir AI is being tested as an assistive layer over creator-owned world data. Canon changes remain under creator control.", "tier": "core", "status": "testing", "media": "Mimir AI", "deepDive": { "label": "Explore Mimir AI", "url": "mimir-ai.html", "enabled": false }, "related": ["ai-context-bundles", "lore-consistency-review"] },
+        { "id": "lore-consistency-review", "name": "Lore Consistency Review", "summary": "Review meaning-level contradictions that deterministic rules cannot understand alone.", "detail": "This planned Worldsmith tool complements deterministic validation by evaluating relevant lore context and returning reviewable findings.", "tier": "worldsmith", "status": "development", "media": "Lore Consistency Review", "related": ["deterministic-validation", "mimir-ai"] },
+        { "id": "ai-context-bundles", "name": "AI Context Bundles", "summary": "Export a selected, spoiler-aware body of world context for work with external AI tools.", "detail": "Saved filters produce one Markdown context bundle with wrapper instructions and a token estimate. This is distinct from public export and future MCP integration.", "tier": "worldsmith", "status": "available", "media": "AI Context Bundle builder", "related": ["mimir-ai", "safe-publish-export"] },
+        { "id": "translator", "name": "Constructed-language Translator", "summary": "Work with a world's own language using its documented vocabulary and rules.", "detail": "The Translator is currently in testing and uses the Core AI-credit path rather than exposing provider or model selection.", "tier": "core", "status": "testing", "media": "Translator", "related": ["structured-entries", "mimir-ai"] }
+      ]
+    },
+    {
+      "id": "test",
+      "number": "06",
+      "label": "Test",
+      "title": "Let the world move before it meets an audience.",
+      "purpose": "Explore dialogue, quests, choices and system behaviour while the work is still easy to change.",
+      "intro": "Proving Grounds and simulation features are on the V1 path, but are not presented as already available in the current alpha.",
+      "features": [
+        { "id": "proving-grounds", "name": "Proving Grounds", "summary": "Run connected narrative and tabletop experiments against the world's own lore.", "detail": "The local Proving Grounds foundation is planned for Apprentice and above, with larger hosted live use planned for Worldsmith.", "tier": "apprentice", "status": "planned", "media": "Proving Grounds", "deepDive": { "label": "Explore Proving Grounds", "url": "proving-grounds.html", "enabled": false }, "related": ["dialogue-testing", "quest-testing", "simulation"] },
+        { "id": "dialogue-testing", "name": "Dialogue testing", "summary": "Step through branching conversations and inspect how choices alter the exchange.", "detail": "Dialogue testing belongs to the Proving Grounds workflow and remains planned rather than claimed as shipped.", "tier": "apprentice", "status": "planned", "related": ["dialogue-editor", "proving-grounds"] },
+        { "id": "quest-testing", "name": "Quest testing", "summary": "Test objectives, outcomes and dependencies before using them in a live story or campaign.", "detail": "Quest testing is planned as part of the connected Proving Grounds workflow.", "tier": "apprentice", "status": "planned", "related": ["quest-editor", "variables-world-state"] },
+        { "id": "variables-world-state", "name": "Variables & world state", "summary": "Represent facts that can change as choices and systems move the world forward.", "detail": "Variables and world-state systems are in development for deeper Worldsmith simulation and testing workflows.", "tier": "worldsmith", "status": "development", "media": "Variables and world-state inspector", "related": ["simulation", "quest-testing"] },
+        { "id": "simulation", "name": "Simulation", "summary": "Explore how connected rules and changing state affect a designed world.", "detail": "Simulation is in development for Worldsmith and is not being advertised as a finished alpha capability.", "tier": "worldsmith", "status": "development", "media": "Simulation view", "related": ["variables-world-state", "proving-grounds"] },
+        { "id": "system-prototyping", "name": "Session & system prototyping", "summary": "Experiment with tabletop sessions, board-game systems and interactive structures in context.", "detail": "This is part of the planned Proving Grounds direction where currently supported by the commercial V1 model.", "tier": "apprentice", "status": "planned", "related": ["proving-grounds", "simulation"] }
+      ]
+    },
+    {
+      "id": "own",
+      "number": "07",
+      "label": "Own & Protect",
+      "title": "Local-first changes what you can rely on.",
+      "purpose": "Keep work readable, recoverable, portable and under creator control.",
+      "intro": "Local-first is not a privacy slogan. It means ordinary files remain accessible, worlds are not locked behind a subscription and history can help recover mistakes.",
+      "features": [
+        { "id": "local-files", "name": "Local readable files", "summary": "Keep the core world on the creator's own machine in readable formats.", "detail": "Mimir's foundation is designed around creator-controlled local files rather than making a hosted account the only way to reach a world.", "tier": "core", "status": "available", "related": ["unlimited-local", "git-history"] },
+        { "id": "unlimited-local", "name": "Unlimited local worlds & entries", "summary": "Create locally without treating a creator's own files as a metered cloud resource.", "detail": "Core remains a substantial free local foundation, including unlimited local worlds and entries.", "tier": "core", "status": "available", "related": ["local-files", "standard-export"] },
+        { "id": "git-history", "name": "Git, history & rollback", "summary": "Review entry history and recover earlier work when an edit goes wrong.", "detail": "Per-entry history and rollback turn local version control into a practical creative safety net.", "tier": "core", "status": "available", "media": "History and rollback", "related": ["local-files", "standard-export"] },
+        { "id": "standard-export", "name": "Standard export", "summary": "Take the world's material out in useful formats without a premium retrieval toll.", "detail": "Export is part of the Core ownership promise and remains available alongside local files.", "tier": "core", "status": "available", "related": ["safe-publish-export", "migration-import"] },
+        { "id": "safe-publish-export", "name": "Safe-to-publish export", "summary": "Prepare a public version that respects spoiler and reveal controls.", "detail": "Safe-to-publish export is distinct from AI Context Bundles: it is for audiences, not for sending a working context package to an AI tool.", "tier": "core", "status": "available", "related": ["spoiler-controls", "ai-context-bundles"] },
+        { "id": "migration-import", "name": "Migration & general import", "summary": "Bring existing work into Mimir without paying extra to regain useful access to it.", "detail": "General import and competitor migration are in development. No named competitor support is promised here until verified.", "tier": "core", "status": "development", "deepDive": { "label": "Explore Migration", "url": "migration.html", "enabled": false }, "related": ["standard-export", "local-files"] },
+        { "id": "accessibility", "name": "Accessibility controls", "summary": "Adapt contrast, typography and reading behaviour to different needs.", "detail": "Mimir documents a dyslexia-first accessibility approach alongside keyboard navigation and reading controls.", "tier": "core", "status": "available", "media": "Accessibility settings", "related": ["focus-mode", "browser-search"] },
+        { "id": "focus-mode", "name": "Focus Mode", "summary": "Reduce interface noise when the work needs sustained attention.", "detail": "Focus Mode is part of the Core accessibility and writing environment rather than a premium productivity lock.", "tier": "core", "status": "available", "media": "Focus Mode", "related": ["accessibility", "flexible-editors"] }
+      ]
+    },
+    {
+      "id": "share",
+      "number": "08",
+      "label": "Share",
+      "title": "Bring people into the world, not into a social feed.",
+      "purpose": "Collaborate, host and reveal the right information to the right people.",
+      "intro": "Mimir distinguishes collaborators who help shape the work from participants or players who experience a controlled view. It is not an open social network.",
+      "features": [
+        { "id": "spoiler-controls", "name": "Spoiler controls", "summary": "Control what different audiences can see without maintaining separate copies of the world.", "detail": "Spoiler level and reveal metadata travel with entries into search, planning, hosting and safe-to-publish export.", "tier": "core", "status": "available", "related": ["safe-publish-export", "participant-views"] },
+        { "id": "collaboration", "name": "Collaboration & permissions", "summary": "Invite trusted collaborators with roles appropriate to the work they are doing.", "detail": "Small collaboration and hosting are planned from Apprentice upward. The public-beta infrastructure is not yet represented as live.", "tier": "apprentice", "status": "planned", "media": "Collaboration and permissions", "deepDive": { "label": "Explore Collaboration & Hosting", "url": "collaboration.html", "enabled": false }, "related": ["participant-views", "hosted-worlds"] },
+        { "id": "hosted-worlds", "name": "Hosted worlds", "summary": "Make selected world access available beyond the local machine when hosting is needed.", "detail": "Hosted collaboration infrastructure is part of the public-beta bridge and remains planned.", "tier": "apprentice", "status": "planned", "related": ["collaboration", "participant-views"] },
+        { "id": "participant-views", "name": "Participant & player views", "summary": "Give players or participants a controlled experience without granting editor access.", "detail": "Worldsmith is planned to add hosted participant worlds. A participant is not the same role as a collaborator.", "tier": "worldsmith", "status": "planned", "media": "GM and participant hosted views", "related": ["spoiler-controls", "hosted-worlds"] },
+        { "id": "core-invitations", "name": "Core invitation access", "summary": "Let invited Core users participate without requiring every player to subscribe.", "detail": "Core is intended to accept invitations while the host supplies the paid capability and hosted scale.", "tier": "core", "status": "planned", "related": ["participant-views", "collaboration"] },
+        { "id": "live-proving", "name": "Live collaborative Proving Grounds", "summary": "Run larger shared experiments with hosted state and participants.", "detail": "Live collaborative Proving Grounds is planned for Worldsmith after the local testing foundation.", "tier": "worldsmith", "status": "planned", "media": "Live Proving Grounds host and player views", "related": ["proving-grounds", "participant-views"] }
+      ]
+    }
+  ]
+}

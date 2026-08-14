@@ -8,43 +8,8 @@
     'use strict';
 
     document.addEventListener('DOMContentLoaded', function () {
-        initMobileNavigation();
         enhanceRoadmap();
     });
-
-    function initMobileNavigation() {
-        var toggle = document.querySelector('.rm-nav-toggle');
-        var menu = document.getElementById('rm-mobile-menu');
-        if (!toggle || !menu) return;
-
-        function closeMenu(returnFocus) {
-            menu.setAttribute('hidden', '');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.setAttribute('aria-label', 'Open Mimir navigation');
-            if (returnFocus) toggle.focus();
-        }
-
-        toggle.addEventListener('click', function () {
-            var willOpen = menu.hasAttribute('hidden');
-            if (willOpen) {
-                menu.removeAttribute('hidden');
-                toggle.setAttribute('aria-expanded', 'true');
-                toggle.setAttribute('aria-label', 'Close Mimir navigation');
-            } else {
-                closeMenu(false);
-            }
-        });
-
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () { closeMenu(false); });
-        });
-
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && !menu.hasAttribute('hidden')) {
-                closeMenu(true);
-            }
-        });
-    }
 
     function enhanceRoadmap() {
         var dialog = document.getElementById('roadmap-detail');

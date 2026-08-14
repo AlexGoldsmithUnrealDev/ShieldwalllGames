@@ -59,3 +59,10 @@ for desktop and 1440 × 2560 for mobile, exported to compressed web formats.
 Keep each dark/lit pair perfectly aligned. Set `assetReady: true` for a phase
 only after all four files exist, then tune its desktop and mobile focal points
 in `roadmap-chapters.js`.
+
+## Features backgrounds
+
+The comprehensive Features page uses the same controller with eight disciplines
+configured in `mimir/scripts/features-chapters.js`. Its 32 future AVIF filenames
+and enablement instructions are documented in
+`mimir/assets/backgrounds/features/README.md`.
