@@ -56,7 +56,7 @@ function featureMarkup(feature, definitions) {
         '            <h3>' + escapeHtml(feature.name) + '</h3>',
         '            ' + statusMarkup(feature.status, definitions),
         '            <p>' + escapeHtml(feature.shortDescription) + '</p>',
-        '            <button class="rm-feature-open" type="button" data-feature-open="' + escapeHtml(feature.id) + '" hidden>Explore feature <span aria-hidden="true">→</span></button>',
+        '            <button class="rm-feature-open" type="button" data-feature-open="' + escapeHtml(feature.id) + '" aria-label="Explore ' + escapeHtml(feature.name) + '" hidden>Explore feature <span aria-hidden="true">→</span></button>',
         '          </article>'
     ].filter(Boolean).join('\n');
 }
