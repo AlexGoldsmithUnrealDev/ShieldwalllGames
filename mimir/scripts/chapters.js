@@ -500,7 +500,15 @@
                 '.rm-phase-head',
                 '.rm-phase-milestone',
                 '.rm-feature',
-                '.rm-cta-panel'
+                '.rm-cta-panel',
+                '.ft-hero-copy',
+                '.ft-orbit',
+                '.ft-search',
+                '.ft-chapter-head',
+                '.ft-chapter-intro',
+                '.ft-media-slot',
+                '.ft-object',
+                '.ft-cta-panel'
             ];
 
             var elements = Array.prototype.slice.call(document.querySelectorAll(revealGroups.join(',')));
