@@ -335,10 +335,10 @@ Always check these together:
 3. `mimir/data/features.json`
 4. `mimir/roadmap.html`
 5. `mimir/roadmap-data.json`
-4. `privacy.html`
-5. `terms.html`
-6. `README.md`
-7. `CLAUDE.md`
+6. `privacy.html`
+7. `terms.html`
+8. `README.md`
+9. `CLAUDE.md`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.
 
