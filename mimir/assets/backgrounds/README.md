@@ -40,3 +40,22 @@ Each chapter expects four AVIF files:
 
 The script only preloads the current chapter and its immediate neighbours. Chapters whose `assetReady` value remains false use the built-in neutral depth gradients and do not request missing files.
 
+## Roadmap backgrounds
+
+The Roadmap uses the same shared Well controller with its own data in
+`mimir/scripts/roadmap-chapters.js`. Final Roadmap artwork belongs in the
+dedicated `mimir/assets/backgrounds/roadmap/` directory and uses five phases:
+
+| Phase | Desktop dark | Desktop lit | Mobile dark | Mobile lit |
+| --- | --- | --- | --- | --- |
+| 01 Current | `01-current-dark.avif` | `01-current-lit.avif` | `01-current-dark-mobile.avif` | `01-current-lit-mobile.avif` |
+| 02 Public beta | `02-beta-dark.avif` | `02-beta-lit.avif` | `02-beta-dark-mobile.avif` | `02-beta-lit-mobile.avif` |
+| 03 Refinement | `03-refinement-dark.avif` | `03-refinement-lit.avif` | `03-refinement-dark-mobile.avif` | `03-refinement-lit-mobile.avif` |
+| 04 Expansion | `04-expansion-dark.avif` | `04-expansion-lit.avif` | `04-expansion-dark-mobile.avif` | `04-expansion-lit-mobile.avif` |
+| 05 Horizon | `05-horizon-dark.avif` | `05-horizon-lit.avif` | `05-horizon-dark-mobile.avif` | `05-horizon-lit-mobile.avif` |
+
+Use the same source-master guidance as the homepage: approximately 3840 × 2400
+for desktop and 1440 × 2560 for mobile, exported to compressed web formats.
+Keep each dark/lit pair perfectly aligned. Set `assetReady: true` for a phase
+only after all four files exist, then tune its desktop and mobile focal points
+in `roadmap-chapters.js`.
