@@ -152,10 +152,18 @@
             mount.removeAttribute('hidden');
         }
 
-        function closeDialog() { if (dialog.open && typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open'); }
+        function restoreFocus() {
+            var target = lastFocused;
+            lastFocused = null;
+            if (target && target.focus) window.setTimeout(function () { target.focus(); }, 0);
+        }
+        function closeDialog() {
+            if (dialog.open && typeof dialog.close === 'function') dialog.close();
+            else { dialog.removeAttribute('open'); restoreFocus(); }
+        }
         if (close) close.addEventListener('click', closeDialog);
         dialog.addEventListener('click', function (event) { if (event.target === dialog) closeDialog(); });
-        dialog.addEventListener('close', function () { if (lastFocused && lastFocused.focus) lastFocused.focus(); lastFocused = null; });
+        dialog.addEventListener('close', restoreFocus);
     }
 
     function makePill(className, text) { var span = document.createElement('span'); span.className = className; span.appendChild(document.createTextNode(text)); return span; }
