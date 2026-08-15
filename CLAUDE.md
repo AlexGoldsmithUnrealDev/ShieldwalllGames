@@ -227,6 +227,7 @@ Potential future items, not launch promises:
 │   ├── features.html           # Comprehensive feature discovery
 │   ├── mimir-ai.html           # Mimir AI deep dive
 │   ├── proving-grounds.html    # Proving Grounds deep dive
+│   ├── migration.html          # Reviewed Migration & Import deep dive
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -237,6 +238,7 @@ Potential future items, not launch promises:
 │   │   ├── features.css
 │   │   ├── mimir-ai.css
 │   │   ├── proving-grounds.css
+│   │   ├── migration.css
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
@@ -248,6 +250,8 @@ Potential future items, not launch promises:
 │       ├── mimir-ai-chapters.js
 │       ├── proving-grounds.js
 │       ├── proving-grounds-chapters.js
+│       ├── migration.js
+│       ├── migration-chapters.js
 │       └── roadmap.js
 ├── ashborn/
 │   ├── index.html
@@ -273,6 +277,20 @@ local Proving Ground foundations. Do not translate internal implementation into
 an "Available in alpha" website claim without an explicit product-release
 decision. Conceptual website demonstrations must remain labelled and separate
 from real product-media slots.
+
+### Migration website status
+
+`mimir/migration.html` is the public deep dive for Core migration/import and is
+labelled `In development`. Verified implementation formats are CSV, XLSX, TXT,
+Markdown and DOCX. Spreadsheet mapping is deterministic; Mimir AI may optionally
+suggest field matches. Prose extraction is AI-assisted, followed by explicit
+creator review before draft entries are created.
+
+Do not name a competitor as supported until a dedicated adapter or a documented
+supported export workflow exists. Do not claim lossless conversion, universal
+relationship or attachment preservation, a dry-run transaction, one-click
+rollback or perfect round-tripping. The source attachment remaining available
+is not the same as a transaction rollback.
 
 ---
 
@@ -344,6 +362,13 @@ Other owned domains may redirect to it.
 
 The current pre-launch site deploys through GitHub Pages on pushes to `main`.
 
+Public crawling is configured in root `robots.txt` and `sitemap.xml`. Keep the
+sitemap limited to real canonical public pages. Structured data must remain
+conservative: no fake ratings, launch dates, checkout Offers or download counts.
+
+Owner-supplied artwork and product-capture requirements are consolidated in
+`mimir/assets/MEDIA_CHECKLIST.md`; do not create fake media to fill those slots.
+
 GitHub Pages should not be treated as the permanent commercial SaaS/download/account infrastructure. Before paid launch, migrate or confirm the intended production hosting/download architecture.
 
 ---
@@ -366,12 +391,13 @@ Always check these together:
 3. `mimir/data/features.json`
 4. `mimir/mimir-ai.html`
 5. `mimir/proving-grounds.html`
-6. `mimir/roadmap.html`
-7. `mimir/roadmap-data.json`
-8. `privacy.html`
-9. `terms.html`
-10. `README.md`
-11. `CLAUDE.md`
+6. `mimir/migration.html`
+7. `mimir/roadmap.html`
+8. `mimir/roadmap-data.json`
+9. `privacy.html`
+10. `terms.html`
+11. `README.md`
+12. `CLAUDE.md`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.
 
