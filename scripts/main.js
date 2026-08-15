@@ -95,6 +95,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var elements = document.querySelectorAll('.reveal');
         if (!elements.length) return;
 
+        if (!('IntersectionObserver' in window)) {
+            elements.forEach(function (el) { el.classList.add('reveal--visible'); });
+            return;
+        }
+
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -124,7 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 var target = document.getElementById(id);
                 if (!target) return;
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
                 history.pushState(null, '', '#' + id);
             });
         });
@@ -196,12 +202,15 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function() {
             var isOpen = drawer.classList.toggle('is-open');
             btn.setAttribute('aria-expanded', String(isOpen));
+            btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
         });
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
                 drawer.classList.remove('is-open');
                 btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+                btn.focus();
             }
         });
 
@@ -209,6 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
             a.addEventListener('click', function() {
                 drawer.classList.remove('is-open');
                 btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
             });
         });
     });
