@@ -621,3 +621,27 @@ a:hover {
     color: var(--fg-link);
     display: inline-block;
 }
+
+.error-page__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    justify-content: center;
+}
+
+.error-page__link:focus-visible {
+    outline: 2px solid var(--fg-link);
+    outline-offset: 5px;
+}
+
+.form-help,
+.form-fallback {
+    color: var(--fg-3);
+    font: 500 12px/1.6 var(--font-sans);
+    margin: 14px auto 0;
+    max-width: 62ch;
+    text-align: center;
+}
+
+.form-help a,
+.form-fallback a { color: var(--fg-link); }
