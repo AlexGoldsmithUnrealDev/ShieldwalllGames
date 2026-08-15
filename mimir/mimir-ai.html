@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171b29" />
+  <title>Mimir AI: Grounded AI for Your World | Mimir</title>
+  <meta name="description" content="Ask questions, review lore, manage context and translate constructed languages using AI grounded in the fictional world you created." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mimir AI: Grounded AI for Your World" />
+  <meta property="og:description" content="Retrieve relevant lore, expose supporting canon, review contradictions and translate constructed languages while the creator remains the authority." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/mimir-ai.html" />
+  <!-- Add an approved Mimir AI social image when real product media is available. -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mimir AI: Grounded AI for Your World" />
+  <meta name="twitter:description" content="Ask questions and review lore with AI grounded in the fictional world you created." />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
+  <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
+  <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/mimir-ai.html" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
+  <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <link rel="stylesheet" href="styles/mimir-ai.css?v=20260815-1" />
+</head>
+<body class="ms-well-page mi-page ai-page">
+<div class="ms-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ms-well-stage" aria-hidden="true">
+    <div class="ms-well-layer ms-well-layer--a is-active"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-layer ms-well-layer--b"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-stage__readability"></div><div class="ms-well-stage__depth"></div>
+  </div>
+  <div id="well-chapter-nav"></div>
+
+  <nav class="ms-nav mi-nav" aria-label="Mimir" data-mi-nav>
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-nav-brand-word">Mimir</span></a>
+      <div class="ms-nav-links">
+        <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html" aria-current="page">Mimir AI</a><a href="./#proving-grounds">Proving Grounds</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span><div class="ms-nav-cta"><a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a></div>
+      <button class="mi-nav-toggle" type="button" aria-expanded="false" aria-controls="mimir-ai-mobile-menu" aria-label="Open Mimir navigation"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mi-mobile-menu" id="mimir-ai-mobile-menu" hidden><div class="ms-wrap">
+      <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html" aria-current="page">Mimir AI</a><a href="./#proving-grounds">Proving Grounds</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+    </div></div>
+  </nav>
+
+  <header class="ai-hero ms-chapter" id="ask" data-chapter="question" data-snap-chapter>
+    <div class="ms-wrap ai-hero-grid">
+      <div class="ai-hero-copy">
+        <span class="ms-eyebrow">Mimir AI</span>
+        <h1>Ask your world.</h1>
+        <p class="ai-lede">Get answers from the world you actually built, without manually collecting notes and pasting them into a separate chatbot every time.</p>
+        <div class="ai-hero-actions"><a class="ms-btn-primary" href="#grounding">See how grounding works</a><a class="ms-btn-secondary" href="features.html#understand">Explore all features</a></div>
+        <p class="ai-release-note"><span class="ai-status ai-status--testing">In testing</span> Mimir AI is an assistive layer over Mimir's local worldbuilding foundation. It does not replace it.</p>
+      </div>
+
+      <section class="ai-comparison ai-concept" aria-labelledby="comparison-title" data-ai-tabs data-default-tab="mimir">
+        <div class="ai-concept-label">Conceptual comparison</div>
+        <div class="ai-comparison-head"><div><span class="ms-eyebrow">Two workflows</span><h2 id="comparison-title">Where does the context come from?</h2></div>
+          <div class="ai-segmented" role="tablist" aria-label="Compare AI workflows">
+            <button type="button" role="tab" id="comparison-generic-tab" aria-controls="comparison-generic" aria-selected="false" data-ai-tab="generic">Generic AI</button>
+            <button type="button" role="tab" id="comparison-mimir-tab" aria-controls="comparison-mimir" aria-selected="true" data-ai-tab="mimir">Mimir AI</button>
+          </div>
+        </div>
+        <div class="ai-comparison-panels">
+          <div class="ai-comparison-panel" id="comparison-generic" role="tabpanel" aria-labelledby="comparison-generic-tab" data-ai-panel="generic">
+            <ol class="ai-manual-flow"><li><span>1</span><strong>Find the notes</strong><small>Decide what might matter.</small></li><li><span>2</span><strong>Copy the context</strong><small>Collect it by hand.</small></li><li><span>3</span><strong>Paste and hope</strong><small>Repeat after the world changes.</small></li></ol>
+          </div>
+          <div class="ai-comparison-panel" id="comparison-mimir" role="tabpanel" aria-labelledby="comparison-mimir-tab" data-ai-panel="mimir">
+            <div class="ai-retrieval-mini" aria-label="Structured world context flows through retrieval into a grounded answer"><div class="ai-note-cloud"><span>House Vael</span><span>Greywatch</span><span>Aldric's decree</span><span>Northern War</span></div><div class="ai-flow-glyph" aria-hidden="true">⌁</div><div class="ai-answer-stone"><small>Relevant canon retrieved</small><strong>Grounded answer</strong><span>Sources remain visible</span></div></div>
+          </div>
+        </div>
+        <p class="ai-concept-note">This is an explanatory website diagram, not a product screenshot or a live AI request.</p>
+      </section>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="ai-chapter ms-chapter ms-chapter--long" id="grounding" data-chapter="grounding" data-snap-chapter aria-labelledby="grounding-title">
+      <div class="ms-wrap ai-chapter-inner">
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">02</span><div><span class="ms-eyebrow">Grounded in your canon</span><h2 id="grounding-title">The answer starts with your world.</h2><p>Mimir retrieves the lore relevant to the task instead of sending a large world's entire lorebible with every question.</p></div></header>
+
+        <div class="ai-grounding-grid">
+          <div class="ai-copy-column"><p>Retrieval can consider the current entry, linked entries, relevant lore found elsewhere in the world and the question being asked. Focused mode keeps the entry you started from in the foreground while still allowing connected material to be found.</p><p>The model is only one part of the feature. Mimir's structure, relationships, retrieval, context selection and citations shape the answer before it reaches you.</p><ul class="ai-rune-list"><li>Current or focused entry</li><li>Connected and retrieved lore</li><li>The current question or operation</li><li>Evidence that can be traced back to entries</li></ul></div>
+
+          <figure class="ai-evidence-demo ai-concept" aria-labelledby="evidence-demo-title">
+            <figcaption><span class="ai-concept-label">Conceptual example</span><strong id="evidence-demo-title">“Why did House Vael abandon Greywatch?”</strong><span>Choose a source to see what it supports.</span></figcaption>
+            <div class="ai-evidence-stage">
+              <div class="ai-source-cluster" aria-label="Retrieved world entries">
+                <button type="button" class="ai-source" data-evidence="vael" aria-pressed="false"><span>House</span><strong>House Vael</strong><small>Faction entry</small></button>
+                <button type="button" class="ai-source" data-evidence="greywatch" aria-pressed="false"><span>Place</span><strong>Greywatch</strong><small>Fortress entry</small></button>
+                <button type="button" class="ai-source" data-evidence="war" aria-pressed="false"><span>Event</span><strong>War of the Three Crowns</strong><small>Timeline entry</small></button>
+                <button type="button" class="ai-source" data-evidence="decree" aria-pressed="false"><span>Document</span><strong>Aldric's decree</strong><small>Artefact entry</small></button>
+              </div>
+              <div class="ai-evidence-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <blockquote class="ai-grounded-answer"><span class="ai-answer-kicker">Grounded answer</span><p><span data-supported-by="war greywatch">Greywatch became impossible to hold after the northern supply road fell.</span> <span data-supported-by="decree vael">Aldric's decree ordered House Vael to preserve its remaining forces rather than defend the fortress.</span> <span class="ai-uncertainty">The current canon does not establish whether the order was welcomed or resisted.</span></p><footer>Evidence: four retrieved world entries</footer></blockquote>
+            </div>
+            <p class="ai-live-explanation" role="status" aria-live="polite" data-evidence-status>Select a source to illuminate its support in the answer.</p>
+          </figure>
+        </div>
+
+        <div class="ai-media-row" aria-label="Future product media">
+          <figure class="ai-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Ask Mimir grounded answer</strong></div><figcaption>Reserved for a real Ask Mimir answer in the current product.</figcaption></figure>
+          <figure class="ai-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Visible sources and evidence</strong></div><figcaption>Reserved for the product's evidence and citation interface.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-chapter ms-chapter ms-chapter--long" id="truth" data-chapter="truth" data-snap-chapter aria-labelledby="truth-title">
+      <div class="ms-wrap ai-chapter-inner">
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">03</span><div><span class="ms-eyebrow">Know what is known</span><h2 id="truth-title">Knowing the answer means knowing when there isn't one.</h2><p>Mimir is designed to distinguish established canon from supported inference and information the world simply does not contain.</p></div></header>
+
+        <div class="ai-truth-layout">
+          <section class="ai-truth-switcher ai-concept" aria-labelledby="truth-example-title" data-ai-tabs data-default-tab="unknown">
+            <div class="ai-concept-label">Conceptual response states</div>
+            <h3 id="truth-example-title">Question: Who killed King Aldric?</h3>
+            <div class="ai-segmented ai-segmented--three" role="tablist" aria-label="Response evidence state">
+              <button type="button" role="tab" id="truth-canon-tab" aria-controls="truth-canon" aria-selected="false" data-ai-tab="canon">Canon</button>
+              <button type="button" role="tab" id="truth-inference-tab" aria-controls="truth-inference" aria-selected="false" data-ai-tab="inference">Inference</button>
+              <button type="button" role="tab" id="truth-unknown-tab" aria-controls="truth-unknown" aria-selected="true" data-ai-tab="unknown">Unknown</button>
+            </div>
+            <div class="ai-truth-responses">
+              <article id="truth-canon" role="tabpanel" aria-labelledby="truth-canon-tab" data-ai-panel="canon"><span class="ai-truth-mark">Canon</span><blockquote>“King Aldric died at Greywatch in 614 AR.”</blockquote><p>This statement is explicitly established in the available world entries.</p></article>
+              <article id="truth-inference" role="tabpanel" aria-labelledby="truth-inference-tab" data-ai-panel="inference"><span class="ai-truth-mark">Inference</span><blockquote>“House Vael may have benefited from Aldric's death, but the current canon does not confirm their involvement.”</blockquote><p>The conclusion is plausible from available material, but it is not a canonical fact.</p></article>
+              <article id="truth-unknown" role="tabpanel" aria-labelledby="truth-unknown-tab" data-ai-panel="unknown"><span class="ai-truth-mark">Unknown</span><blockquote>“The current world does not specify who delivered the killing blow.”</blockquote><p>There is not enough supported material to answer. The honest response is to leave the gap visible.</p></article>
+            </div>
+          </section>
+
+          <aside class="ai-principle"><span class="ms-eyebrow">The honesty invariant</span><h3>No invention when the answer is missing.</h3><p>Factual claims should trace back to the creator's lore. Reasoning should be identified as reasoning. Unsupported gaps should remain gaps.</p><p>This is designed behaviour, not a claim that any generative system is infallible. Evidence and creator review still matter.</p><div class="ai-authority-line"><span aria-hidden="true">◇</span><strong>The creator remains the authority.</strong></div></aside>
+        </div>
+
+        <figure class="ai-media-slot ai-media-slot--wide"><div aria-hidden="true"><span>Real product capture</span><strong>Uncertainty or refusal</strong></div><figcaption>Reserved for a real Mimir response that makes missing information explicit.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="ai-chapter ms-chapter ms-chapter--long" id="review" data-chapter="review" data-snap-chapter aria-labelledby="review-title">
+      <div class="ms-wrap ai-chapter-inner">
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">04</span><div><span class="ms-eyebrow">Lore Consistency Review</span><h2 id="review-title">Find contradictions before your audience does.</h2><p>Review meaning-level contradictions across prose and connected entries, with evidence the creator can judge.</p></div></header>
+
+        <div class="ai-validation-split">
+          <article><span class="ai-method-tag">Rules</span><h3>Deterministic validation</h3><p>Checks structural constraints and reference integrity with explainable rules.</p><ul><li>Broken references</li><li>Required data</li><li>Naming rules</li></ul></article>
+          <article><span class="ai-method-tag">Meaning</span><h3>Lore Consistency Review</h3><p>Looks for contradictions that require understanding prose and connected context.</p><ul><li>Conflicting dates</li><li>Incompatible claims</li><li>Prose versus structured data</li></ul></article>
+        </div>
+
+        <section class="ai-review-demo ai-concept" aria-labelledby="review-demo-title" data-review-demo>
+          <div class="ai-review-intro"><div><span class="ai-concept-label">Conceptual review workflow</span><h3 id="review-demo-title">Two entries. One conflict.</h3></div><button type="button" class="ms-btn-secondary" data-review-run>Reveal review finding</button></div>
+          <div class="ai-review-fragments">
+            <blockquote><span>Lady Elara · character</span><p>“Elara left Edrin in exile in 603 AR and never returned.”</p></blockquote>
+            <div class="ai-conflict-rune" aria-hidden="true">×</div>
+            <blockquote><span>Defence of Edrin · event</span><p>“Elara personally commanded Edrin's defence in 606 AR.”</p></blockquote>
+          </div>
+          <div class="ai-review-finding" data-review-finding>
+            <div><span class="ai-finding-severity">Possible direct contradiction</span><h4>Elara appears in Edrin after an entry says she never returned.</h4><p>Both claims may be intentional, but they cannot be treated as simultaneously literal without further explanation.</p></div>
+            <div class="ai-review-actions" aria-label="Conceptual finding actions"><button type="button" data-review-action="Review entry">Review entry</button><button type="button" data-review-action="Dismiss for now">Dismiss</button><button type="button" data-review-action="Mark intentional">Mark intentional</button></div>
+            <p class="ai-review-status" role="status" aria-live="polite" data-review-status>The finding is ready for the creator to judge.</p>
+          </div>
+          <p class="ai-concept-note">These controls demonstrate the review decision, but do not edit a world from this website.</p>
+        </section>
+
+        <div class="ai-review-footer"><div><span class="ai-status ai-status--development">In development</span><strong>Worldsmith+</strong><p>Lore Consistency Review consumes Mimir AI credits according to the scope of the review.</p></div><figure class="ai-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Lore Consistency Review</strong></div><figcaption>Reserved for a real finding with its affected entries and evidence.</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="ai-chapter ms-chapter ms-chapter--long" id="language-context" data-chapter="language" data-snap-chapter aria-labelledby="language-title">
+      <div class="ms-wrap ai-chapter-inner">
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">05</span><div><span class="ms-eyebrow">Language &amp; context</span><h2 id="language-title">Choose the material. Preserve the rules.</h2><p>Focused context and authored language systems give creators explicit control over advanced AI work.</p></div></header>
+
+        <section class="ai-advanced-system" aria-labelledby="bundles-title">
+          <div class="ai-system-copy"><span class="ai-status ai-status--available">Available in alpha</span><span class="ms-eyebrow">AI Context Bundles · Worldsmith+</span><h3 id="bundles-title">Take a deliberate slice of the world with you.</h3><p>In the current alpha, AI Context Bundles turn a saved, spoiler-aware filter into one readable Markdown file for an external AI tool. They are the explicit export path, separate from Ask Mimir's automatic retrieval.</p><p>A focused bundle keeps unrelated lore out of the task. Choose an era, culture, campaign, region or faction, then retain control over the wrapper instructions and where the file goes.</p></div>
+          <div class="ai-bundle-demo ai-concept" data-ai-tabs data-default-tab="war">
+            <div class="ai-concept-label">Conceptual bundle scopes</div>
+            <div class="ai-segmented ai-segmented--three" role="tablist" aria-label="Choose an example context bundle">
+              <button type="button" role="tab" id="bundle-war-tab" aria-controls="bundle-war" aria-selected="true" data-ai-tab="war">Northern War</button>
+              <button type="button" role="tab" id="bundle-culture-tab" aria-controls="bundle-culture" aria-selected="false" data-ai-tab="culture">Vael culture</button>
+              <button type="button" role="tab" id="bundle-region-tab" aria-controls="bundle-region" aria-selected="false" data-ai-tab="region">Greywatch</button>
+            </div>
+            <div class="ai-bundle-panels">
+              <article id="bundle-war" role="tabpanel" aria-labelledby="bundle-war-tab" data-ai-panel="war"><h4>The Northern War</h4><div class="ai-bundle-contents"><span>Kingdom of Edrin</span><span>House Vael</span><span>Greywatch</span><span>Northern Campaign timeline</span><span>Commander Arlen</span></div><p>Useful for questions about the campaign without including every unrelated era.</p></article>
+              <article id="bundle-culture" role="tabpanel" aria-labelledby="bundle-culture-tab" data-ai-panel="culture"><h4>Vael culture</h4><div class="ai-bundle-contents"><span>House Vael</span><span>Vaelic oaths</span><span>Marriage customs</span><span>Grey banner ritual</span></div><p>Useful for a culture-focused task with its customs and terminology together.</p></article>
+              <article id="bundle-region" role="tabpanel" aria-labelledby="bundle-region-tab" data-ai-panel="region"><h4>Greywatch region</h4><div class="ai-bundle-contents"><span>Greywatch</span><span>Northern road</span><span>Three border villages</span><span>Regional map notes</span></div><p>Useful when a task needs one place and its immediate surroundings.</p></article>
+            </div>
+            <p class="ai-concept-note">Illustrative world names; these are not built-in Mimir content.</p>
+          </div>
+          <figure class="ai-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>AI Context Bundle builder</strong></div><figcaption>Reserved for the current saved-filter, wrapper-instruction and export interface.</figcaption></figure>
+        </section>
+
+        <section class="ai-advanced-system ai-advanced-system--translator" aria-labelledby="translator-title">
+          <div class="ai-system-copy"><span class="ai-status ai-status--testing">In testing</span><span class="ms-eyebrow">Constructed-language Translator · Core</span><h3 id="translator-title">Your language should remember its own rules.</h3><p>The user defines the vocabulary, grammar, registers, cultural bias, calibration phrases and writing system. Mimir applies that authored material to the translation and lets newly coined words be reviewed before they become canonical.</p><p>This is not generic phrase substitution. Register, idiom and accepted vocabulary can shape each result.</p></div>
+          <div class="ai-translator-demo ai-concept" data-ai-tabs data-default-tab="familiar">
+            <div class="ai-concept-label">Illustrative language example</div>
+            <div class="ai-translation-source"><span>English</span><strong>Welcome home, old friend.</strong></div>
+            <div class="ai-segmented ai-segmented--three" role="tablist" aria-label="Choose a translator register">
+              <button type="button" role="tab" id="register-formal-tab" aria-controls="register-formal" aria-selected="false" data-ai-tab="formal">Formal</button>
+              <button type="button" role="tab" id="register-familiar-tab" aria-controls="register-familiar" aria-selected="true" data-ai-tab="familiar">Familiar</button>
+              <button type="button" role="tab" id="register-ceremonial-tab" aria-controls="register-ceremonial" aria-selected="false" data-ai-tab="ceremonial">Ceremonial</button>
+            </div>
+            <div class="ai-translation-results">
+              <article id="register-formal" role="tabpanel" aria-labelledby="register-formal-tab" data-ai-panel="formal"><span>Formal register</span><strong>Va elen thara, vener sael.</strong><small>Respectful distance and full honorific.</small></article>
+              <article id="register-familiar" role="tabpanel" aria-labelledby="register-familiar-tab" data-ai-panel="familiar"><span>Familiar register</span><strong>Ela thar, saelen.</strong><small>Warm, shortened phrasing between equals.</small></article>
+              <article id="register-ceremonial" role="tabpanel" aria-labelledby="register-ceremonial-tab" data-ai-panel="ceremonial"><span>Ceremonial register</span><strong>Thara vae elen, sael en var.</strong><small>Ritual word order for a formal return.</small></article>
+            </div>
+            <p class="ai-concept-note">The fictional outputs are illustrative website copy, not a built-in language or a live translation.</p>
+          </div>
+          <figure class="ai-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Constructed-language Translator</strong></div><figcaption>Reserved for the real language, register and coined-vocabulary workflow.</figcaption></figure>
+        </section>
+      </div>
+    </section>
+
+    <section class="ai-chapter ms-chapter ms-chapter--long" id="control" data-chapter="control" data-snap-chapter aria-labelledby="control-title">
+      <div class="ms-wrap ai-chapter-inner">
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">06</span><div><span class="ms-eyebrow">Your world, your control</span><h2 id="control-title">AI is optional. Ownership isn't.</h2><p>Use Mimir's local worldbuilding foundation without constant AI usage. Ask for higher-level assistance when it is useful.</p></div></header>
+
+        <div class="ai-control-grid">
+          <article class="ai-local-foundation"><span class="ms-eyebrow">Stays useful without AI</span><h3>Build without AI. Ask for help when you want it.</h3><p>World files, entries, relationships, trees, maps, timelines, editors and other local tools remain the product. If the network is unavailable or credits run out, local work does not disappear.</p><div class="ai-local-tools" aria-label="Examples of local Mimir tools"><span>Readable files</span><span>Relationships</span><span>Trees</span><span>Maps</span><span>Timelines</span><span>Editors</span></div></article>
+
+          <article class="ai-data-path"><span class="ms-eyebrow">When data leaves the device</span><h3>Only when an online operation needs it.</h3><div class="ai-data-flow"><div><span>On your device</span><strong>Local world</strong><small>Creating, editing, browsing and mapping do not send Shieldwall a copy merely by being used.</small></div><i aria-hidden="true">→</i><div><span>Deliberate AI action</span><strong>Required instructions + context</strong><small>Sent through Shieldwall's broker to an AI API provider for that operation.</small></div></div><p>Shieldwall does not claim ownership of private worlds or use private world content to train its own public generative-AI model. Final production subprocessors and retention settings will be published before public AI billing opens.</p><a href="../privacy.html">Read the current Privacy Policy</a></article>
+        </div>
+
+        <section class="ai-credit-demo ai-concept" aria-labelledby="credit-title" data-ai-tabs data-default-tab="normal">
+          <div class="ai-credit-head"><div><span class="ai-concept-label">How Mimir AI credits work</span><h3 id="credit-title">Credits reflect the work, not provider tokens.</h3><p>Customers use Mimir AI. Provider selection and routing remain an internal implementation detail.</p></div><div class="ai-segmented ai-segmented--three" role="tablist" aria-label="Choose an example AI workload">
+            <button type="button" role="tab" id="credit-small-tab" aria-controls="credit-small" aria-selected="false" data-ai-tab="small">Small task</button>
+            <button type="button" role="tab" id="credit-normal-tab" aria-controls="credit-normal" aria-selected="true" data-ai-tab="normal">Normal task</button>
+            <button type="button" role="tab" id="credit-large-tab" aria-controls="credit-large" aria-selected="false" data-ai-tab="large">Larger task</button>
+          </div></div>
+          <div class="ai-credit-scale" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="ai-credit-panels">
+            <article id="credit-small" role="tabpanel" aria-labelledby="credit-small-tab" data-ai-panel="small"><span>Narrow lore lookup</span><strong>Lower credit usage</strong><p>A focused factual question needs less context and synthesis.</p></article>
+            <article id="credit-normal" role="tabpanel" aria-labelledby="credit-normal-tab" data-ai-panel="normal"><span>Lore synthesis</span><strong>Standard usage</strong><p>Combining several relevant entries requires more work than a narrow lookup.</p></article>
+            <article id="credit-large" role="tabpanel" aria-labelledby="credit-large-tab" data-ai-panel="large"><span>Wide review or scan</span><strong>Higher usage</strong><p>Broad context and repeated analysis naturally require more work. Materially large operations should show an estimate where practical.</p></article>
+          </div>
+        </section>
+
+        <div class="ai-credit-rules">
+          <article><span aria-hidden="true">↻</span><div><h3>Subscription credits reset monthly.</h3><p>Included credits do not roll over. Final tier allowances remain a pricing-page decision while production workloads are calibrated.</p></div></article>
+          <article><span aria-hidden="true">◇</span><div><h3>Purchased credits persist.</h3><p>Top-up credits do not expire under the current V1 plan and remain after a cancellation or downgrade.</p></div></article>
+          <article><span aria-hidden="true">⌁</span><div><h3>Local work keeps working.</h3><p>If credits are exhausted or Mimir AI cannot connect, AI-backed operations pause; local world data and local tools remain available.</p></div></article>
+        </div>
+
+        <div class="ai-final-cta"><span class="ms-eyebrow">Mimir is a worldbuilding platform</span><h2>Structure first. Intelligence when you need it.</h2><p>Explore every part of the connected workspace, or join the beta and help shape how Mimir AI handles real worlds.</p><div><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a><a class="ms-btn-secondary" href="features.html">Explore all Mimir features</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ms-footer"><div class="ms-wrap">
+    <div class="ms-foot-grid mi-foot-grid">
+      <div><a class="mi-foot-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-foot-brand">Mimir</span></a><p class="ms-foot-tag">Local-first worldbuilding for creators.</p><p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p><div class="mi-socials" aria-label="Verified Shieldwall Games social links"><a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer">X</a></div></div>
+      <div class="ms-foot-col"><h5>Mimir</h5><a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html" aria-current="page">Mimir AI</a><a href="./#proving-grounds">Proving Grounds</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a href="./#beta-signup">Join the beta</a></div>
+      <div class="ms-foot-col"><h5>Shieldwall Games</h5><a href="../">Shieldwall Games</a><a href="../ashborn/">Ashborn CCG</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>
+    </div>
+    <div class="ms-foot-base"><span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span><span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></span></div>
+  </div></footer>
+</div>
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/internal.js?v=20260814-1" defer></script>
+<script src="scripts/mimir-ai-chapters.js?v=20260815-1" defer></script>
+<script src="scripts/chapters.js?v=20260815-1" defer></script>
+<script src="scripts/mimir-ai.js?v=20260815-1" defer></script>
+</body>
+</html>

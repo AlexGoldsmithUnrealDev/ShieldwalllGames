@@ -224,13 +224,26 @@ Potential future items, not launch promises:
 │   └── logos/
 ├── mimir/
 │   ├── index.html              # Mimir landing/pricing/FAQ
+│   ├── features.html           # Comprehensive feature discovery
+│   ├── mimir-ai.html           # Mimir AI deep dive
 │   ├── roadmap.html
 │   ├── roadmap-data.json
+│   ├── data/
+│   │   └── features.json
 │   ├── styles/
 │   │   ├── mimir.css
+│   │   ├── internal.css
+│   │   ├── features.css
+│   │   ├── mimir-ai.css
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
+│       ├── chapters.js
+│       ├── internal.js
+│       ├── features.js
+│       ├── features-chapters.js
+│       ├── mimir-ai.js
+│       ├── mimir-ai-chapters.js
 │       └── roadmap.js
 ├── ashborn/
 │   ├── index.html
@@ -333,12 +346,13 @@ Always check these together:
 1. `mimir/index.html`
 2. `mimir/features.html`
 3. `mimir/data/features.json`
-4. `mimir/roadmap.html`
-5. `mimir/roadmap-data.json`
-6. `privacy.html`
-7. `terms.html`
-8. `README.md`
-9. `CLAUDE.md`
+4. `mimir/mimir-ai.html`
+5. `mimir/roadmap.html`
+6. `mimir/roadmap-data.json`
+7. `privacy.html`
+8. `terms.html`
+9. `README.md`
+10. `CLAUDE.md`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.
 

@@ -508,7 +508,25 @@
                 '.ft-chapter-intro',
                 '.ft-media-slot',
                 '.ft-object',
-                '.ft-cta-panel'
+                '.ft-cta-panel',
+                '.ai-hero-copy',
+                '.ai-comparison',
+                '.ai-chapter-head',
+                '.ai-copy-column',
+                '.ai-evidence-demo',
+                '.ai-media-slot',
+                '.ai-truth-switcher',
+                '.ai-principle',
+                '.ai-validation-split article',
+                '.ai-review-demo',
+                '.ai-system-copy',
+                '.ai-bundle-demo',
+                '.ai-translator-demo',
+                '.ai-local-foundation',
+                '.ai-data-path',
+                '.ai-credit-demo',
+                '.ai-credit-rules article',
+                '.ai-final-cta'
             ];
 
             var elements = Array.prototype.slice.call(document.querySelectorAll(revealGroups.join(',')));

@@ -9,6 +9,7 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | Shieldwall Games | `index.html` | Studio homepage led by Mimir |
 | Mimir | `mimir/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
 | Mimir features | `mimir/features.html` | Comprehensive, searchable product capabilities |
+| Mimir AI | `mimir/mimir-ai.html` | Grounding, evidence, consistency, context, translation and control |
 | Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
 | Privacy | `privacy.html` | Website and planned Mimir privacy model |
@@ -54,14 +55,27 @@ Then visit `http://localhost:8000`.
 │   └── logos/
 ├── mimir/
 │   ├── index.html
+│   ├── features.html
+│   ├── mimir-ai.html
 │   ├── roadmap.html
 │   ├── roadmap-data.json
+│   ├── data/
+│   │   └── features.json
 │   ├── styles/
 │   │   ├── mimir.css
+│   │   ├── internal.css
+│   │   ├── features.css
+│   │   ├── mimir-ai.css
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
 │       ├── chapters.js
+│       ├── internal.js
+│       ├── features-chapters.js
+│       ├── features.js
+│       ├── generate-features.js
+│       ├── mimir-ai-chapters.js
+│       ├── mimir-ai.js
 │       ├── roadmap-chapters.js
 │       ├── roadmap.js
 │       └── generate-roadmap.js
@@ -109,9 +123,23 @@ crawlable semantic snapshot in `mimir/features.html`. The browser progressively
 adds search and feature-detail drawers; it never replaces the static content.
 
 `mimir/styles/internal.css` and `mimir/scripts/internal.js` provide shared
-internal-page navigation/footer behaviour used by Features and Roadmap. The
-Features Well configuration is in `mimir/scripts/features-chapters.js`; future
-artwork filenames are documented in `mimir/assets/backgrounds/features/README.md`.
+internal-page navigation/footer behaviour used by Features, Mimir AI and
+Roadmap. The Features and Mimir AI Well configurations remain page-specific in
+`features-chapters.js` and `mimir-ai-chapters.js`, while the stage, observer,
+adjacent preloading and depth navigation stay shared in `chapters.js`. Future
+artwork filenames are documented in each page's background README.
+
+### Mimir AI page
+
+`mimir/mimir-ai.html` is semantic and useful without JavaScript. Its conceptual
+examples are progressively enhanced by `mimir/scripts/mimir-ai.js`; real product
+screenshots remain separate labelled media slots. Do not turn conceptual website
+diagrams into claims that a live product call is taking place.
+
+The page uses current application guides for Ask Mimir, Lore Consistency Review,
+AI Context Bundles, Translator and account/credit behaviour. In particular, the
+current alpha's AI Context Bundles are a saved-filter export for external AI
+tools, while Ask Mimir uses retrieval and focused-entry context internally.
 
 ## Current V1 positioning
 
