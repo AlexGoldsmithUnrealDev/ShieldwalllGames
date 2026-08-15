@@ -10,6 +10,7 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | Mimir | `mimir/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
 | Mimir features | `mimir/features.html` | Comprehensive, searchable product capabilities |
 | Mimir AI | `mimir/mimir-ai.html` | Grounding, evidence, consistency, context, translation and control |
+| Proving Grounds | `mimir/proving-grounds.html` | Dialogue, quest, state, session and simulation deep dive |
 | Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
 | Privacy | `privacy.html` | Website and planned Mimir privacy model |
@@ -57,6 +58,7 @@ Then visit `http://localhost:8000`.
 │   ├── index.html
 │   ├── features.html
 │   ├── mimir-ai.html
+│   ├── proving-grounds.html
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -66,6 +68,7 @@ Then visit `http://localhost:8000`.
 │   │   ├── internal.css
 │   │   ├── features.css
 │   │   ├── mimir-ai.css
+│   │   ├── proving-grounds.css
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
@@ -76,6 +79,8 @@ Then visit `http://localhost:8000`.
 │       ├── generate-features.js
 │       ├── mimir-ai-chapters.js
 │       ├── mimir-ai.js
+│       ├── proving-grounds-chapters.js
+│       ├── proving-grounds.js
 │       ├── roadmap-chapters.js
 │       ├── roadmap.js
 │       └── generate-roadmap.js
@@ -140,6 +145,19 @@ The page uses current application guides for Ask Mimir, Lore Consistency Review,
 AI Context Bundles, Translator and account/credit behaviour. In particular, the
 current alpha's AI Context Bundles are a saved-filter export for external AI
 tools, while Ask Mimir uses retrieval and focused-entry context internally.
+
+### Proving Grounds page
+
+`mimir/proving-grounds.html` explains the planned public-beta testing workflow
+through progressively enhanced conceptual demonstrations. It keeps experiment
+results separate from canon, distinguishes Proving Grounds, world state and
+simulation, and labels public availability conservatively even where internal
+application foundations already exist.
+
+The page reuses the shared Well controller and internal navigation/footer. Its
+lighting and future artwork configuration lives in
+`proving-grounds-chapters.js`; exact art requirements are documented in
+`mimir/assets/backgrounds/proving-grounds/README.md`.
 
 ## Current V1 positioning
 

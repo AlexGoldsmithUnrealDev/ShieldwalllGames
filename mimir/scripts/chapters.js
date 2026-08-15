@@ -526,7 +526,24 @@
                 '.ai-data-path',
                 '.ai-credit-demo',
                 '.ai-credit-rules article',
-                '.ai-final-cta'
+                '.ai-final-cta',
+                '.pg-hero-copy',
+                '.pg-canon-demo',
+                '.pg-chapter-head',
+                '.pg-copy-column',
+                '.pg-dialogue-demo',
+                '.pg-media-slot',
+                '.pg-quest-demo',
+                '.pg-quest-copy',
+                '.pg-state-copy',
+                '.pg-state-demo',
+                '.pg-scenario-demo',
+                '.pg-system-definitions article',
+                '.pg-development-note',
+                '.pg-decision-demo',
+                '.pg-authority-panel',
+                '.pg-hosting-note',
+                '.pg-final-cta'
             ];
 
             var elements = Array.prototype.slice.call(document.querySelectorAll(revealGroups.join(',')));

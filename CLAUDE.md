@@ -226,6 +226,7 @@ Potential future items, not launch promises:
 │   ├── index.html              # Mimir landing/pricing/FAQ
 │   ├── features.html           # Comprehensive feature discovery
 │   ├── mimir-ai.html           # Mimir AI deep dive
+│   ├── proving-grounds.html    # Proving Grounds deep dive
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -235,6 +236,7 @@ Potential future items, not launch promises:
 │   │   ├── internal.css
 │   │   ├── features.css
 │   │   ├── mimir-ai.css
+│   │   ├── proving-grounds.css
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
@@ -244,6 +246,8 @@ Potential future items, not launch promises:
 │       ├── features-chapters.js
 │       ├── mimir-ai.js
 │       ├── mimir-ai-chapters.js
+│       ├── proving-grounds.js
+│       ├── proving-grounds-chapters.js
 │       └── roadmap.js
 ├── ashborn/
 │   ├── index.html
@@ -255,6 +259,20 @@ Potential future items, not launch promises:
 ```
 
 Stable pricing anchor: `/mimir/#pricing`. Do not rename `id="pricing"`.
+
+### Proving Grounds website status
+
+`mimir/proving-grounds.html` is the public deep dive for Mimir's testing and
+prototyping discipline. The complete customer-facing Proving Grounds experience,
+Dialogue testing, Quest testing and live collaborative use remain labelled
+"Planned for public beta". Variables/world-state and Simulation remain labelled
+"In development" until the public product status is deliberately changed.
+
+The application repository contains substantial Quest/Dialogue simulation and
+local Proving Ground foundations. Do not translate internal implementation into
+an "Available in alpha" website claim without an explicit product-release
+decision. Conceptual website demonstrations must remain labelled and separate
+from real product-media slots.
 
 ---
 
@@ -347,12 +365,13 @@ Always check these together:
 2. `mimir/features.html`
 3. `mimir/data/features.json`
 4. `mimir/mimir-ai.html`
-5. `mimir/roadmap.html`
-6. `mimir/roadmap-data.json`
-7. `privacy.html`
-8. `terms.html`
-9. `README.md`
-10. `CLAUDE.md`
+5. `mimir/proving-grounds.html`
+6. `mimir/roadmap.html`
+7. `mimir/roadmap-data.json`
+8. `privacy.html`
+9. `terms.html`
+10. `README.md`
+11. `CLAUDE.md`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.
 
@@ -379,4 +398,4 @@ Older reference files under `Mimir Design System/` are retained historical/desig
 
 ---
 
-*Last updated: 10 August 2026. Human owner: Shieldwall Games Ltd.*
+*Last updated: 15 August 2026. Human owner: Shieldwall Games Ltd.*

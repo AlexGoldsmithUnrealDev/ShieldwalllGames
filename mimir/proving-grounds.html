@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17162a" />
+  <title>Proving Grounds: Test Worlds, Quests &amp; Dialogue | Mimir</title>
+  <meta name="description" content="Test dialogue, quests, changing world state and tabletop or narrative scenarios against the connected world you built in Mimir." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Proving Grounds: Test Worlds, Quests &amp; Dialogue | Mimir" />
+  <meta property="og:description" content="Build the world in Mimir, test what happens inside it, then decide what belongs in canon." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/proving-grounds.html" />
+  <!-- Add an approved Proving Grounds social image when real product media is available. -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Proving Grounds: Test Worlds, Quests &amp; Dialogue | Mimir" />
+  <meta name="twitter:description" content="Experiment with dialogue, quests and world state without silently changing canon." />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
+  <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
+  <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/proving-grounds.html" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
+  <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <link rel="stylesheet" href="styles/proving-grounds.css?v=20260815-1" />
+</head>
+<body class="ms-well-page mi-page pg-page">
+<div class="ms-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ms-well-stage" aria-hidden="true">
+    <div class="ms-well-layer ms-well-layer--a is-active"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-layer ms-well-layer--b"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-stage__readability"></div><div class="ms-well-stage__depth"></div>
+  </div>
+  <div id="well-chapter-nav"></div>
+
+  <nav class="ms-nav mi-nav" aria-label="Mimir" data-mi-nav>
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-nav-brand-word">Mimir</span></a>
+      <div class="ms-nav-links">
+        <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html" aria-current="page">Proving Grounds</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span><div class="ms-nav-cta"><a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a></div>
+      <button class="mi-nav-toggle" type="button" aria-expanded="false" aria-controls="proving-grounds-mobile-menu" aria-label="Open Mimir navigation"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mi-mobile-menu" id="proving-grounds-mobile-menu" hidden><div class="ms-wrap">
+      <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html" aria-current="page">Proving Grounds</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+    </div></div>
+  </nav>
+
+  <header class="pg-hero ms-chapter" id="experiment" data-chapter="experiment" data-snap-chapter>
+    <div class="ms-wrap pg-hero-grid">
+      <div class="pg-hero-copy">
+        <span class="ms-eyebrow">Proving Grounds</span>
+        <h1>Test before canon.</h1>
+        <p class="pg-lede">Build the world in Mimir. Test what happens inside it before deciding what becomes canon.</p>
+        <div class="pg-hero-actions"><a class="ms-btn-primary" href="#conversations">Enter the Proving Grounds</a><a class="ms-btn-secondary" href="features.html#test">Explore all testing features</a></div>
+        <p class="pg-release-note"><span class="pg-status pg-status--planned">Planned for public beta</span> The complete Proving Grounds experience is V1 scope, not an available alpha entitlement.</p>
+      </div>
+
+      <section class="pg-canon-demo pg-concept" aria-labelledby="canon-demo-title" data-pg-canon-demo>
+        <div class="pg-concept-label">Conceptual demonstration</div>
+        <div class="pg-demo-head"><div><span class="ms-eyebrow">One-way boundary</span><h2 id="canon-demo-title">Experiment without rewriting the world.</h2></div><button type="button" class="ms-btn-secondary" data-pg-run hidden>Run scenario</button></div>
+        <ol class="pg-canon-flow" aria-label="Canon to creator decision flow">
+          <li data-pg-flow-step="canon"><span>01</span><strong>World canon</strong><small>Greywatch is sealed. House Vael is hostile.</small></li>
+          <li data-pg-flow-step="test"><span>02</span><strong>Test state</strong><small>A temporary scenario uses those facts.</small></li>
+          <li data-pg-flow-step="result"><span>03</span><strong>Experimental result</strong><small>The envoy finds a forgotten northern passage.</small></li>
+          <li data-pg-flow-step="decision"><span>04</span><strong>Creator decision</strong><small>Revise, discard or deliberately adopt the idea.</small></li>
+        </ol>
+        <div class="pg-result-boundary" data-pg-result>
+          <span>Experimental result</span><strong>Not canon unless the creator chooses to make it so.</strong>
+        </div>
+        <p class="pg-concept-note">This website example explains the boundary. It is not a product screenshot or a live simulation.</p>
+      </section>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="pg-chapter ms-chapter ms-chapter--long" id="conversations" data-chapter="conversation" data-snap-chapter aria-labelledby="conversations-title">
+      <div class="ms-wrap pg-chapter-inner">
+        <header class="pg-chapter-head"><span class="pg-chapter-number" aria-hidden="true">02</span><div><span class="ms-eyebrow">Conversations</span><h2 id="conversations-title">Hear the conversation before the audience does.</h2><p>Explore branching dialogue in the context of the characters and world it belongs to, while every result remains a draft experiment.</p></div></header>
+
+        <div class="pg-conversation-grid">
+          <div class="pg-copy-column"><span class="pg-status pg-status--planned">Planned for public beta</span><span class="pg-tier">Apprentice+</span><p>Dialogue testing is intended to help Game Masters prepare difficult NPC exchanges, writers explore alternative responses and narrative designers inspect branches before anyone encounters them in a finished work.</p><p>Mimir's authored Dialogue graphs support speakers, choices and condition-gated branches. The public Proving Grounds workflow will bring that structure into a clearer testing experience.</p><ul class="pg-rune-list"><li>Try a different response</li><li>Inspect the branch it opens</li><li>Keep experiments separate from canon</li></ul></div>
+
+          <section class="pg-dialogue-demo pg-concept" aria-labelledby="dialogue-demo-title" data-pg-tabs data-default-tab="duty">
+            <div class="pg-concept-label">Conceptual branching conversation</div>
+            <div class="pg-dialogue-context"><span>Scene context</span><strong>Commander Arlen guards Greywatch's sealed gate.</strong><small>Known state: House Vael is hostile · northern road fallen</small></div>
+            <div class="pg-dialogue-line"><span>Commander Arlen</span><blockquote id="dialogue-demo-title">“No one enters while Vael banners stand beyond the ridge.”</blockquote></div>
+            <div class="pg-choice-list" role="tablist" aria-label="Choose a reply">
+              <button type="button" role="tab" id="reply-duty-tab" aria-controls="reply-duty" aria-selected="true" data-pg-tab="duty">Invoke his duty</button>
+              <button type="button" role="tab" id="reply-secret-tab" aria-controls="reply-secret" aria-selected="false" data-pg-tab="secret">Share the hidden route</button>
+              <button type="button" role="tab" id="reply-threat-tab" aria-controls="reply-threat" aria-selected="false" data-pg-tab="threat">Threaten the gate</button>
+            </div>
+            <div class="pg-dialogue-outcomes">
+              <article id="reply-duty" role="tabpanel" aria-labelledby="reply-duty-tab" data-pg-panel="duty"><span>Relationship considered</span><strong>Arlen respects the crown, but refuses.</strong><p>The branch stays closed while the hostile-faction condition remains true.</p></article>
+              <article id="reply-secret" role="tabpanel" aria-labelledby="reply-secret-tab" data-pg-panel="secret"><span>Known information considered</span><strong>Arlen agrees to send one scout.</strong><p>The conversation opens a cautious route because the envoy knows about the old passage.</p></article>
+              <article id="reply-threat" role="tabpanel" aria-labelledby="reply-threat-tab" data-pg-panel="threat"><span>World state considered</span><strong>The gate is barred and the warning bell sounds.</strong><p>The hostile path ends the exchange and creates a possible consequence to test.</p></article>
+            </div>
+            <p class="pg-concept-note">Illustrative dialogue. It does not represent a live Proving Grounds session or built-in Mimir world.</p>
+          </section>
+        </div>
+
+        <figure class="pg-media-slot pg-media-slot--wide"><div aria-hidden="true"><span>Real product capture</span><strong>Dialogue graph and test run</strong></div><figcaption>Reserved for the real Dialogue editor and its testing surface.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="pg-chapter ms-chapter ms-chapter--long" id="quests" data-chapter="choices" data-snap-chapter aria-labelledby="quests-title">
+      <div class="ms-wrap pg-chapter-inner">
+        <header class="pg-chapter-head"><span class="pg-chapter-number" aria-hidden="true">03</span><div><span class="ms-eyebrow">Quests &amp; choices</span><h2 id="quests-title">Find the broken branch before your players do.</h2><p>Test objectives, prerequisites, choices, consequences, failure paths and alternative outcomes while changes are still cheap.</p></div></header>
+
+        <div class="pg-quest-layout">
+          <section class="pg-quest-demo pg-concept" aria-labelledby="quest-demo-title" data-pg-quest-demo>
+            <div class="pg-concept-label">Conceptual quest-condition tester</div>
+            <div class="pg-quest-title"><span>Quest</span><h3 id="quest-demo-title">Reach Greywatch</h3><p>Change the conditions to see which branch remains possible.</p></div>
+            <fieldset class="pg-condition-controls"><legend>Scenario conditions</legend>
+              <label><input type="checkbox" data-pg-condition="gate" checked /><span><strong>Gate open</strong><small>The main approach is usable.</small></span></label>
+              <label><input type="checkbox" data-pg-condition="commander" checked /><span><strong>Commander alive</strong><small>Arlen can authorise entry.</small></span></label>
+              <label><input type="checkbox" data-pg-condition="allied" /><span><strong>House Vael allied</strong><small>The siege condition is removed.</small></span></label>
+            </fieldset>
+            <div class="pg-quest-path" aria-label="Quest branch result">
+              <div><span>Start</span><strong>Reach the outer wall</strong></div><i aria-hidden="true">→</i><div data-pg-quest-branch><span>Available branch</span><strong>Request entry from Commander Arlen</strong><small>The gate is open and its commander can respond.</small></div><i aria-hidden="true">→</i><div><span>Outcome</span><strong data-pg-quest-outcome>Enter under guard</strong></div>
+            </div>
+            <p class="pg-live-status" role="status" aria-live="polite" data-pg-quest-status>The main-gate route is currently available.</p>
+          </section>
+
+          <aside class="pg-quest-copy"><span class="pg-status pg-status--planned">Planned for public beta</span><span class="pg-tier">Apprentice+</span><h3>Describe the logic. Then challenge it.</h3><p>Mimir's Quest graphs can represent start and end points, choices, conditions, consequences, dialogue, quest markers and referenced subgraphs. Testing is intended to expose missing connections and unexpected routes before a live story or campaign depends on them.</p><p>It cannot predict every real player. It gives the creator a structured way to probe the logic they authored.</p><div class="pg-audience-notes"><span><strong>Game Masters</strong>Check unintended quest states.</span><span><strong>Writers</strong>Explore consequences without committing them.</span><span><strong>Narrative designers</strong>Step through interactive logic.</span></div></aside>
+        </div>
+
+        <figure class="pg-media-slot pg-media-slot--wide"><div aria-hidden="true"><span>Real product capture</span><strong>Quest graph, conditions and simulation</strong></div><figcaption>Reserved for a real Quest graph with a meaningful branch and result.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="pg-chapter ms-chapter ms-chapter--long" id="world-state" data-chapter="state" data-snap-chapter aria-labelledby="state-title">
+      <div class="ms-wrap pg-chapter-inner">
+        <header class="pg-chapter-head"><span class="pg-chapter-number" aria-hidden="true">04</span><div><span class="ms-eyebrow">World state</span><h2 id="state-title">Choices matter when the world remembers them.</h2><p>Variables and conditions describe the facts that can change during a test, so later branches can respond to what happened earlier.</p></div></header>
+
+        <div class="pg-state-grid">
+          <div class="pg-state-copy"><span class="pg-status pg-status--development">In development</span><span class="pg-tier">Worldsmith+</span><p>World state is different from permanent canon. During a test it can hold a temporary value such as an open gate, an alliance, a living commander or a fallen road, then let the next part of the experiment react.</p><p>Mimir's authored variable system supports typed global and scoped values. The full public workflow remains under development, and this demonstration deliberately uses simple on/off states.</p></div>
+
+          <section class="pg-state-demo pg-concept" aria-labelledby="state-demo-title" data-pg-state-demo>
+            <div class="pg-concept-label">Conceptual state board</div>
+            <h3 id="state-demo-title">Change the world. Watch the consequence.</h3>
+            <div class="pg-state-board">
+              <label><span><strong>Greywatch gate</strong><small>Access</small></span><input type="checkbox" data-pg-state="gate" checked /><i aria-hidden="true"></i><b data-pg-state-label="gate">Open</b></label>
+              <label><span><strong>House Vael</strong><small>Relationship</small></span><input type="checkbox" data-pg-state="vael" /><i aria-hidden="true"></i><b data-pg-state-label="vael">Hostile</b></label>
+              <label><span><strong>Commander Arlen</strong><small>Character state</small></span><input type="checkbox" data-pg-state="arlen" checked /><i aria-hidden="true"></i><b data-pg-state-label="arlen">Alive</b></label>
+              <label><span><strong>Northern road</strong><small>Route state</small></span><input type="checkbox" data-pg-state="road" /><i aria-hidden="true"></i><b data-pg-state-label="road">Fallen</b></label>
+            </div>
+            <div class="pg-state-result"><span>Current consequence</span><strong data-pg-state-result>The envoy enters under guard, but Greywatch remains isolated.</strong><p data-pg-state-reason>Arlen is alive and the gate is open. The road is still fallen and House Vael remains hostile.</p></div>
+            <p class="pg-concept-note">This is an explanatory model of changing state, not the actual Mimir interface.</p>
+          </section>
+        </div>
+
+        <figure class="pg-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Variables and world-state inspector</strong></div><figcaption>Reserved for the real variable declarations, simulation preset and live state inspector.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="pg-chapter ms-chapter ms-chapter--long" id="simulation" data-chapter="simulation" data-snap-chapter aria-labelledby="simulation-title">
+      <div class="ms-wrap pg-chapter-inner">
+        <header class="pg-chapter-head"><span class="pg-chapter-number" aria-hidden="true">05</span><div><span class="ms-eyebrow">Sessions, systems &amp; simulation</span><h2 id="simulation-title">Test more than a single branch.</h2><p>Use the same connected world to prototype a conversation, inspect a quest, explore a session or challenge a lightweight system idea.</p></div></header>
+
+        <section class="pg-scenario-demo pg-concept" aria-labelledby="scenario-title" data-pg-tabs data-default-tab="session">
+          <div class="pg-scenario-head"><div><span class="pg-concept-label">Choose a testing lens</span><h3 id="scenario-title">One world. Different experiments.</h3></div><div class="pg-segmented" role="tablist" aria-label="Choose a scenario type">
+            <button type="button" role="tab" id="scenario-conversation-tab" aria-controls="scenario-conversation" aria-selected="false" data-pg-tab="conversation">Conversation</button>
+            <button type="button" role="tab" id="scenario-quest-tab" aria-controls="scenario-quest" aria-selected="false" data-pg-tab="quest">Quest</button>
+            <button type="button" role="tab" id="scenario-session-tab" aria-controls="scenario-session" aria-selected="true" data-pg-tab="session">Tabletop session</button>
+            <button type="button" role="tab" id="scenario-system-tab" aria-controls="scenario-system" aria-selected="false" data-pg-tab="system">System prototype</button>
+          </div></div>
+          <div class="pg-scenario-panels">
+            <article id="scenario-conversation" role="tabpanel" aria-labelledby="scenario-conversation-tab" data-pg-panel="conversation"><span>Focus</span><h4>Character response and branching dialogue</h4><p>Try alternative lines, choices and condition-gated responses against established character and world context.</p><div><b>Uses</b><em>Dialogue graph</em><em>Speakers</em><em>Choices</em></div></article>
+            <article id="scenario-quest" role="tabpanel" aria-labelledby="scenario-quest-tab" data-pg-panel="quest"><span>Focus</span><h4>Objectives, branches and consequences</h4><p>Walk a quest graph, inspect changing variables and find unreachable or incomplete routes.</p><div><b>Uses</b><em>Quest graph</em><em>Conditions</em><em>State</em></div></article>
+            <article id="scenario-session" role="tabpanel" aria-labelledby="scenario-session-tab" data-pg-panel="session"><span>Focus</span><h4>Rules-aware play and session rehearsal</h4><p>Select governing Rule entries, take a role and explore a persistent local session with AI-controlled seats where appropriate.</p><div><b>Uses</b><em>Authored rules</em><em>Roles</em><em>Visible app-rolled dice</em></div></article>
+            <article id="scenario-system" role="tabpanel" aria-labelledby="scenario-system-tab" data-pg-panel="system"><span>Focus</span><h4>Lightweight scenario and rules experimentation</h4><p>Probe how defined rules, choices and state interact without claiming to replace a game engine or real playtesting.</p><div><b>Uses</b><em>Rule entries</em><em>Scenario state</em><em>Observed outcomes</em></div></article>
+          </div>
+          <p class="pg-concept-note">The selector explains intended testing modes. It is not a promise that every mode has the same implementation or release status.</p>
+        </section>
+
+        <div class="pg-system-definitions">
+          <article><span>Proving Grounds</span><h3>The testing environment</h3><p>Where the creator runs an experiment using the world they built.</p></article>
+          <article><span>World state</span><h3>The facts that can change</h3><p>Variables, relationships and conditions that shape the current test.</p></article>
+          <article><span>Simulation</span><h3>The system processing change</h3><p>Stepping through authored logic, state and outcomes so behaviour can be inspected.</p></article>
+        </div>
+
+        <div class="pg-development-note"><div><span class="pg-status pg-status--development">In development</span><h3>A real foundation, still being brought to public-beta quality.</h3><p>Current product work includes local persistent sessions, selected governing Rule entries, human and AI-controlled seats, transcripts, visible app-rolled dice, Quest and Dialogue simulation, state inspection and replay export. The complete customer-facing Proving Grounds experience remains planned for public beta.</p></div><div class="pg-media-pair"><figure class="pg-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Proving Grounds session</strong></div><figcaption>Reserved for a meaningful setup and active-session capture.</figcaption></figure><figure class="pg-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Simulation results</strong></div><figcaption>Reserved for state, coverage, path and replay evidence.</figcaption></figure></div></div>
+      </div>
+    </section>
+
+    <section class="pg-chapter ms-chapter ms-chapter--long" id="creator" data-chapter="decision" data-snap-chapter aria-labelledby="creator-title">
+      <div class="ms-wrap pg-chapter-inner">
+        <header class="pg-chapter-head"><span class="pg-chapter-number" aria-hidden="true">06</span><div><span class="ms-eyebrow">The creator decides</span><h2 id="creator-title">An experiment can inform the world without taking control of it.</h2><p>Run the test, inspect what happened and learn from it. The creator decides whether to revise the world, discard the result or deliberately carry an idea forward.</p></div></header>
+
+        <div class="pg-decision-grid">
+          <section class="pg-decision-demo pg-concept" aria-labelledby="decision-demo-title" data-pg-decision-demo>
+            <div class="pg-concept-label">Conceptual creator judgement</div>
+            <div class="pg-decision-result"><span>Experimental result</span><h3 id="decision-demo-title">The forgotten passage makes the siege too easy to bypass.</h3><p>This result reveals something useful about the scenario. It has not changed the world's source of truth.</p></div>
+            <div class="pg-decision-path" aria-label="Possible creator decisions">
+              <button type="button" data-pg-decision="Revise the scenario" hidden><span>Revise</span><strong>Change the passage or its cost</strong></button>
+              <button type="button" data-pg-decision="Discard the result" hidden><span>Discard</span><strong>Keep the existing canon untouched</strong></button>
+              <button type="button" data-pg-decision="Explore deliberate adoption" hidden><span>Adopt deliberately</span><strong>Consider writing the idea into canon</strong></button>
+            </div>
+            <p class="pg-live-status" role="status" aria-live="polite" data-pg-decision-status>No decision has been made. The result remains an experiment.</p>
+            <p class="pg-concept-note">These are explanatory choices, not a claim that Mimir currently has a one-click “accept into canon” workflow.</p>
+          </section>
+
+          <aside class="pg-authority-panel"><span class="ms-eyebrow">Creator authority</span><h3>The tool can reveal a possibility. It cannot decide what your world should be.</h3><div class="pg-authority-flow"><span>Run test</span><i aria-hidden="true">→</i><span>Inspect result</span><i aria-hidden="true">→</i><span>Learn</span><i aria-hidden="true">→</i><span>Choose</span></div><p>Proving Grounds complements real playtesting and creative judgement. It does not perfectly predict players, guarantee balance or automatically modify canon.</p></aside>
+        </div>
+
+        <div class="pg-hosting-note"><div><span class="pg-status pg-status--planned">Planned for public beta</span><h3>Local experiments first. Hosted participation when the test needs people.</h3></div><div><p><strong>Apprentice+</strong> is planned to create and run Proving Grounds locally.</p><p><strong>Worldsmith+</strong> is planned to host live collaborative Proving Grounds. Invited Core users can participate within the host's allowance.</p></div></div>
+
+        <div class="pg-final-cta"><span class="ms-eyebrow">Put the world into motion</span><h2>Build it. Test it. Decide what survives.</h2><p>Explore every Mimir capability or join the beta and help shape the complete Proving Grounds workflow.</p><div><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a><a class="ms-btn-secondary" href="features.html">Explore all Mimir features</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ms-footer"><div class="ms-wrap">
+    <div class="ms-foot-grid mi-foot-grid">
+      <div><a class="mi-foot-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-foot-brand">Mimir</span></a><p class="ms-foot-tag">Local-first worldbuilding for creators.</p><p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p><div class="mi-socials" aria-label="Verified Shieldwall Games social links"><a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer">X</a></div></div>
+      <div class="ms-foot-col"><h5>Mimir</h5><a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html" aria-current="page">Proving Grounds</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a href="./#beta-signup">Join the beta</a></div>
+      <div class="ms-foot-col"><h5>Shieldwall Games</h5><a href="../">Shieldwall Games</a><a href="../ashborn/">Ashborn CCG</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>
+    </div>
+    <div class="ms-foot-base"><span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span><span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></span></div>
+  </div></footer>
+</div>
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/internal.js?v=20260814-1" defer></script>
+<script src="scripts/proving-grounds-chapters.js?v=20260815-1" defer></script>
+<script src="scripts/chapters.js?v=20260815-2" defer></script>
+<script src="scripts/proving-grounds.js?v=20260815-1" defer></script>
+</body>
+</html>
