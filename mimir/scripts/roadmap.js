@@ -104,6 +104,7 @@
 
             renderMedia(feature);
             renderRelated(feature);
+            renderDeepDive(feature);
 
             if (typeof dialog.showModal === 'function') {
                 if (!dialog.open) dialog.showModal();
@@ -157,6 +158,22 @@
                 });
                 list.appendChild(button);
             });
+            mount.removeAttribute('hidden');
+        }
+
+        function renderDeepDive(feature) {
+            var mount = document.getElementById('roadmap-detail-deep-dive');
+            if (!mount) return;
+            mount.textContent = '';
+            if (!feature.deepDive || !feature.deepDive.enabled) {
+                mount.setAttribute('hidden', '');
+                return;
+            }
+            var link = document.createElement('a');
+            link.className = 'ms-btn-secondary';
+            link.href = feature.deepDive.url;
+            link.textContent = feature.deepDive.label;
+            mount.appendChild(link);
             mount.removeAttribute('hidden');
         }
 
