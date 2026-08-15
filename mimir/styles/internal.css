@@ -116,10 +116,13 @@
 .mi-socials a:hover,
 .mi-socials a:focus-visible { color: var(--active-chapter-text); }
 
-@media (max-width: 767px) {
+@media (max-width: 1240px) {
     .mi-nav .ms-nav-links,
     .mi-nav .ms-nav-cta { display: none; }
     .mi-nav-toggle { display: flex; }
+}
+
+@media (max-width: 767px) {
     .mi-foot-grid { grid-template-columns: 1fr; }
 }
 

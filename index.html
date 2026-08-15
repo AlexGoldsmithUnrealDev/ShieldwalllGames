@@ -12,8 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Shieldwall Games" />
   <meta property="og:description" content="Makers of Mimir, a local-first worldbuilding platform, and Ashborn CCG." />
-  <meta property="og:url" content="https://shieldwallgames.co.uk" />
-  <meta property="og:image" content="" /> <!-- TODO: add OG image 1200x630px before launch -->
+  <meta property="og:url" content="https://shieldwallgames.co.uk/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -25,7 +24,34 @@
   <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/favicon-512.png" />
   <link rel="icon" href="assets/icons/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/icons/favicon-192.png" />
-  <link rel="canonical" href="https://shieldwallgames.co.uk" />
+  <link rel="canonical" href="https://shieldwallgames.co.uk/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shieldwallgames.co.uk/#organization",
+        "name": "Shieldwall Games Ltd",
+        "url": "https://shieldwallgames.co.uk/",
+        "sameAs": [
+          "https://twitter.com/ShieldwallG",
+          "https://www.instagram.com/shieldwall_games",
+          "https://youtube.com/@shieldwallgames",
+          "https://www.facebook.com/share/18PW3HCR6m/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shieldwallgames.co.uk/#website",
+        "url": "https://shieldwallgames.co.uk/",
+        "name": "Shieldwall Games",
+        "publisher": { "@id": "https://shieldwallgames.co.uk/#organization" }
+      }
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/shieldwall.css" />
@@ -54,7 +80,7 @@
         <a href="mimir/">Mimir</a>
         <a href="ashborn/">Ashborn</a>
       </div>
-      <button class="sw-hamburger" aria-label="Open menu" aria-expanded="false" type="button">
+      <button class="sw-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sw-drawer" type="button">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -190,6 +216,8 @@
             forged. Sign up to be first to know when it's ready.
           </p>
           <div class="ml-embedded" data-form="rvVjbn"></div>
+          <noscript><p class="form-fallback">JavaScript is required to load the signup form. You can instead email <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">alexander.goldsmith@shieldwallgames.co.uk</a>.</p></noscript>
+          <p class="form-help">If the form is blocked by a browser extension, email <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">alexander.goldsmith@shieldwallgames.co.uk</a>.</p>
         </div>
       </div>
 

@@ -163,7 +163,8 @@
           "category": "Migration",
           "badge": "Core",
           "relatedFeatures": ["structured-core", "beta-migration", "migration-refine"],
-          "mediaSlot": "Import, review and result composite"
+          "mediaSlot": "Import, review and result composite",
+          "deepDive": { "label": "Explore Migration", "url": "migration.html", "enabled": true }
         },
         {
           "id": "proving-grounds",
@@ -307,7 +308,8 @@
           "status": "planned",
           "category": "Migration",
           "relatedFeatures": ["imports-migration", "commercial-onboarding", "migration-refine"],
-          "mediaSlot": "Final migration composite"
+          "mediaSlot": "Final migration composite",
+          "deepDive": { "label": "Explore Migration", "url": "migration.html#commit", "enabled": true }
         },
         {
           "id": "launch-qa",
@@ -363,7 +365,8 @@
           "status": "planned",
           "category": "Product refinement",
           "relatedFeatures": ["imports-migration", "beta-migration", "feedback-led-changes"],
-          "mediaSlot": null
+          "mediaSlot": null,
+          "deepDive": { "label": "Explore Migration", "url": "migration.html#review", "enabled": true }
         },
         {
           "id": "proving-refine",
@@ -625,4 +628,3 @@
     }
   ]
 }
-

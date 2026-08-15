@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171a20" />
+  <title>Mimir Migration: Bring Your Existing World With You</title>
+  <meta name="description" content="Bring existing worldbuilding into Mimir through reviewed spreadsheet and document import workflows, while keeping control of what becomes part of your world." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mimir Migration: Bring Your Existing World With You" />
+  <meta property="og:description" content="Bring the work. Review the mapping. Keep control of the result." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/migration.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mimir Migration: Bring Your Existing World With You" />
+  <meta name="twitter:description" content="Reviewed import workflows for moving existing worldbuilding into Mimir." />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
+  <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
+  <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/migration.html" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
+  <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <link rel="stylesheet" href="styles/migration.css?v=20260815-1" />
+</head>
+<body class="ms-well-page mi-page mg-page">
+<div class="ms-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="ms-well-stage" aria-hidden="true">
+    <div class="ms-well-layer ms-well-layer--a is-active"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-layer ms-well-layer--b"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-stage__readability"></div><div class="ms-well-stage__depth"></div>
+  </div>
+  <div id="well-chapter-nav"></div>
+
+  <nav class="ms-nav mi-nav" aria-label="Mimir" data-mi-nav>
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-nav-brand-word">Mimir</span></a>
+      <div class="ms-nav-links">
+        <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="migration.html" aria-current="page">Migration</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span><div class="ms-nav-cta"><a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a></div>
+      <button class="mi-nav-toggle" type="button" aria-expanded="false" aria-controls="migration-mobile-menu" aria-label="Open Mimir navigation"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mi-mobile-menu" id="migration-mobile-menu" hidden><div class="ms-wrap">
+      <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="migration.html" aria-current="page">Migration</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+    </div></div>
+  </nav>
+
+  <header class="mg-hero ms-chapter" id="existing-world" data-chapter="existing" data-snap-chapter>
+    <div class="ms-wrap mg-hero-grid">
+      <div class="mg-hero-copy">
+        <span class="ms-eyebrow">Migration &amp; Import</span>
+        <h1>Your world should outlive the tool you built it in.</h1>
+        <p class="mg-lede">Bring the work. Review the mapping. Keep control of the result.</p>
+        <div class="mg-hero-actions"><a class="ms-btn-primary" href="#understand">See how migration works</a><a class="ms-btn-secondary" href="features.html#own-protect">Explore ownership features</a></div>
+        <p class="mg-release-note"><span class="mg-status">In development</span><span class="mg-tier">Core</span> General import and competitor migration are part of the public-beta completion path, not an available alpha workflow.</p>
+      </div>
+
+      <section class="mg-source-demo mg-concept" aria-labelledby="source-demo-title" data-mg-tabs data-default-tab="csv">
+        <div class="mg-concept-label">Conceptual source selector</div>
+        <h2 id="source-demo-title">Start with the material you already have.</h2>
+        <div class="mg-source-tabs" role="tablist" aria-label="Choose an import source">
+          <button type="button" role="tab" id="source-csv-tab" aria-controls="source-csv" aria-selected="true" data-mg-tab="csv">CSV</button>
+          <button type="button" role="tab" id="source-xlsx-tab" aria-controls="source-xlsx" aria-selected="false" data-mg-tab="xlsx">XLSX</button>
+          <button type="button" role="tab" id="source-text-tab" aria-controls="source-text" aria-selected="false" data-mg-tab="text">TXT / Markdown</button>
+          <button type="button" role="tab" id="source-docx-tab" aria-controls="source-docx" aria-selected="false" data-mg-tab="docx">DOCX</button>
+        </div>
+        <div class="mg-source-panels">
+          <article id="source-csv" role="tabpanel" aria-labelledby="source-csv-tab" data-mg-panel="csv"><span>Spreadsheet</span><strong>Columns become candidate fields. Rows become candidate entries.</strong><p>You choose the entry type, name column and field mapping before creating draft entries.</p></article>
+          <article id="source-xlsx" role="tabpanel" aria-labelledby="source-xlsx-tab" data-mg-panel="xlsx"><span>Workbook</span><strong>Worksheet data enters the same reviewed mapping flow.</strong><p>The current implementation reads spreadsheet rows and columns, then leaves the conversion choices with you.</p></article>
+          <article id="source-text" role="tabpanel" aria-labelledby="source-text-tab" data-mg-panel="text"><span>Plain document</span><strong>Text can be proposed as structured entries.</strong><p>AI-assisted extraction suggests entries from the selected prose. You review, rename, re-type or remove every proposal before anything is created.</p></article>
+          <article id="source-docx" role="tabpanel" aria-labelledby="source-docx-tab" data-mg-panel="docx"><span>Word document</span><strong>Readable document text becomes reviewable proposals.</strong><p>The original attachment remains stored while extracted suggestions are handled as draft material.</p></article>
+        </div>
+        <p class="mg-concept-note">Verified current implementation formats. This is an explanatory website model, not the Mimir interface.</p>
+      </section>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="mg-chapter ms-chapter ms-chapter--long" id="understand" data-chapter="understand" data-snap-chapter aria-labelledby="understand-title">
+      <div class="ms-wrap mg-chapter-inner">
+        <header class="mg-chapter-head"><span class="mg-chapter-number" aria-hidden="true">02</span><div><span class="ms-eyebrow">Understand the source</span><h2 id="understand-title">Migration is interpretation, not copy and paste.</h2><p>Mimir needs to understand what incoming information represents before it can become useful structured worldbuilding.</p></div></header>
+        <div class="mg-two-column">
+          <section class="mg-recognition-demo mg-concept" aria-labelledby="recognition-title" data-mg-recognition>
+            <div class="mg-concept-label">Incoming structure → interpreted structure</div>
+            <h3 id="recognition-title">See what is recognised, suggested and left to you.</h3>
+            <div class="mg-recognition-controls" role="group" aria-label="Inspect an incoming data type">
+              <button type="button" aria-pressed="true" data-mg-recognition-key="columns">Spreadsheet columns</button>
+              <button type="button" aria-pressed="false" data-mg-recognition-key="prose">Document prose</button>
+              <button type="button" aria-pressed="false" data-mg-recognition-key="unsupported">Complex fields</button>
+            </div>
+            <div class="mg-recognition-result" aria-live="polite"><span data-mg-recognition-state>Recognised automatically</span><strong data-mg-recognition-title>Column names and row values</strong><p data-mg-recognition-copy>Mimir can read the table structure. You still select the target entry type, name column and field mapping.</p></div>
+          </section>
+          <div class="mg-copy-panel"><span class="mg-status">In development</span><span class="mg-tier">Core</span><h3>Automation proposes. The creator decides.</h3><p>Spreadsheet conversion itself is deterministic. An optional Mimir AI step can suggest matches between source columns and your existing fields, but it does not create entries or silently choose your canon.</p><p>For prose documents, AI-assisted extraction proposes named and described entities. Every proposal remains reviewable and becomes a follow-up draft only after confirmation.</p><ul><li>Recognised: file type, columns, rows and readable prose</li><li>Suggested: optional column matches or prose entry proposals</li><li>User-selected: entry type, name, mappings and which proposals survive</li><li>Not silently converted: unsupported or unmapped values</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-chapter ms-chapter ms-chapter--long" id="mapping" data-chapter="mapping" data-snap-chapter aria-labelledby="mapping-title">
+      <div class="ms-wrap mg-chapter-inner">
+        <header class="mg-chapter-head"><span class="mg-chapter-number" aria-hidden="true">03</span><div><span class="ms-eyebrow">Map the world</span><h2 id="mapping-title">Decide where the information belongs.</h2><p>Choose how a source column becomes a Mimir field, then inspect the draft result before creating entries.</p></div></header>
+        <section class="mg-mapping-demo mg-concept" aria-labelledby="mapping-demo-title" data-mg-mapping>
+          <div class="mg-concept-label">Conceptual spreadsheet mapping</div>
+          <div class="mg-mapping-layout">
+            <div><h3 id="mapping-demo-title">Source: characters.csv</h3><p>Target entry type: <strong>Character</strong></p><div class="mg-mapping-rows">
+              <label><span><strong>Name</strong><small>“Elara Voss”</small></span><select data-mg-map="name"><option value="name">Entry name</option><option value="summary">Summary</option><option value="skip">Do not import</option></select></label>
+              <label><span><strong>Age</strong><small>“34”</small></span><select data-mg-map="age"><option value="number">Age · Number</option><option value="summary">Summary</option><option value="skip">Do not import</option></select></label>
+              <label><span><strong>Tags</strong><small>“commander, exile”</small></span><select data-mg-map="tags"><option value="tags">Tags</option><option value="summary">Summary</option><option value="skip">Do not import</option></select></label>
+            </div></div>
+            <div class="mg-entry-preview"><span>Draft preview</span><h4 data-mg-preview-name>Elara Voss</h4><dl><div data-mg-preview-age><dt>Age</dt><dd>34</dd></div><div data-mg-preview-tags><dt>Tags</dt><dd>commander · exile</dd></div><div data-mg-preview-summary hidden><dt>Summary</dt><dd data-mg-preview-summary-value></dd></div></dl><small>Needs follow-up · not confirmed canon</small></div>
+          </div>
+          <p class="mg-concept-note">This example reflects the verified spreadsheet conversion model. Relationship lists and image-asset fields are not claimed as safe spreadsheet-text mappings.</p>
+        </section>
+        <figure class="mg-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Spreadsheet field mapping</strong></div><figcaption>Reserved for the current CSV/XLSX mapping panel with a meaningful reviewed conversion.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="mg-chapter ms-chapter ms-chapter--long" id="review" data-chapter="review" data-snap-chapter aria-labelledby="review-title">
+      <div class="ms-wrap mg-chapter-inner">
+        <header class="mg-chapter-head"><span class="mg-chapter-number" aria-hidden="true">04</span><div><span class="ms-eyebrow">Review before you commit</span><h2 id="review-title">The uncertain parts should stay visible.</h2><p>Review concrete conversion limits and choices before they become draft entries. Mimir should not hide uncertainty behind a reassuring progress bar.</p></div></header>
+        <section class="mg-review-demo mg-concept" aria-labelledby="review-demo-title" data-mg-tabs data-default-tab="blank-name">
+          <div class="mg-review-list" role="tablist" aria-label="Inspect import review conditions">
+            <button type="button" role="tab" id="warning-blank-tab" aria-controls="warning-blank" aria-selected="true" data-mg-tab="blank-name"><span>Skipped row</span><strong>Missing entry name</strong></button>
+            <button type="button" role="tab" id="warning-duplicate-tab" aria-controls="warning-duplicate" aria-selected="false" data-mg-tab="duplicate"><span>Protected existing work</span><strong>Duplicate name</strong></button>
+            <button type="button" role="tab" id="warning-field-tab" aria-controls="warning-field" aria-selected="false" data-mg-tab="unsupported-field"><span>Not mapped</span><strong>Complex field</strong></button>
+            <button type="button" role="tab" id="warning-proposal-tab" aria-controls="warning-proposal" aria-selected="false" data-mg-tab="proposal"><span>Creator review</span><strong>Prose suggestion</strong></button>
+          </div>
+          <div class="mg-review-detail">
+            <h3 id="review-demo-title">Inspect what happened and why.</h3>
+            <article id="warning-blank" role="tabpanel" aria-labelledby="warning-blank-tab" data-mg-panel="blank-name"><span>What was found</span><h4>A spreadsheet row has no usable name.</h4><p><strong>Why it matters:</strong> Mimir needs a name to create an identifiable entry.</p><p><strong>Verified behaviour:</strong> The row is skipped rather than becoming an unnamed entry.</p></article>
+            <article id="warning-duplicate" role="tabpanel" aria-labelledby="warning-duplicate-tab" data-mg-panel="duplicate"><span>What was found</span><h4>An imported name already exists.</h4><p><strong>Why it matters:</strong> importing should not overwrite existing material.</p><p><strong>Verified behaviour:</strong> a unique identifier is generated for the new draft.</p></article>
+            <article id="warning-field" role="tabpanel" aria-labelledby="warning-field-tab" data-mg-panel="unsupported-field"><span>What was found</span><h4>A text column targets an image or relationship-list field.</h4><p><strong>Why it matters:</strong> plain spreadsheet text cannot safely recreate those structures.</p><p><strong>Verified behaviour:</strong> those field types are skipped by the current converter rather than guessed.</p></article>
+            <article id="warning-proposal" role="tabpanel" aria-labelledby="warning-proposal-tab" data-mg-panel="proposal"><span>What was found</span><h4>AI-assisted prose extraction proposed an entry.</h4><p><strong>Why it matters:</strong> extraction is lossy and a suggestion is not canon.</p><p><strong>Your control:</strong> rename, re-type or remove the proposal before creating draft entries.</p></article>
+          </div>
+          <p class="mg-concept-note">This inspector explains verified conditions and safeguards. It is not a claim that the product currently presents this exact warning interface.</p>
+        </section>
+        <figure class="mg-media-slot"><div aria-hidden="true"><span>Real product capture</span><strong>Prose extraction review</strong></div><figcaption>Reserved for real AI-assisted proposals being renamed, re-typed or omitted before draft creation.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="mg-chapter ms-chapter ms-chapter--long" id="commit" data-chapter="commit" data-snap-chapter aria-labelledby="commit-title">
+      <div class="ms-wrap mg-chapter-inner">
+        <header class="mg-chapter-head"><span class="mg-chapter-number" aria-hidden="true">05</span><div><span class="ms-eyebrow">See the result before you trust it</span><h2 id="commit-title">Nothing is created until you choose to create it.</h2><p>The current flows separate reading and review from the explicit action that creates draft entries.</p></div></header>
+        <section class="mg-flow-demo mg-concept" aria-labelledby="flow-title" data-mg-flow>
+          <div class="mg-concept-label">Verified workflow boundary</div>
+          <h3 id="flow-title">Follow the information from source to draft.</h3>
+          <ol class="mg-flow-steps">
+            <li class="is-active"><span>01</span><strong>Source</strong><small>Keep the original attachment</small></li>
+            <li><span>02</span><strong>Read</strong><small>Parse rows or extract text</small></li>
+            <li><span>03</span><strong>Map</strong><small>Choose fields or inspect proposals</small></li>
+            <li><span>04</span><strong>Review</strong><small>Edit, omit or confirm</small></li>
+            <li><span>05</span><strong>Create drafts</strong><small>Explicit final action</small></li>
+          </ol>
+          <button class="ms-btn-secondary" type="button" data-mg-flow-next hidden>Advance example</button>
+          <p class="mg-flow-status" role="status" aria-live="polite" data-mg-flow-status>The original source is present. No Mimir entries have been created.</p>
+          <div class="mg-boundary-note"><strong>What this does not claim</strong><p>This is not a promise of a universal dry-run transaction, one-click rollback or perfect recreation of another tool. After import, Mimir's normal local files and history/recovery systems apply to the entries you created.</p></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="mg-chapter ms-chapter ms-chapter--long" id="ownership" data-chapter="ownership" data-snap-chapter aria-labelledby="ownership-title">
+      <div class="ms-wrap mg-chapter-inner">
+        <header class="mg-chapter-head"><span class="mg-chapter-number" aria-hidden="true">06</span><div><span class="ms-eyebrow">Your world is still yours</span><h2 id="ownership-title">Move into Mimir without moving into another lock-in.</h2><p>Once imported entries become part of a Mimir world, they use the same local-first foundation as work created there from the beginning.</p></div></header>
+        <div class="mg-ownership-grid">
+          <section class="mg-result-demo mg-concept" aria-labelledby="result-title" data-mg-result>
+            <div class="mg-concept-label">Resulting-world comparison</div><h3 id="result-title">The format changes. Your control does not.</h3>
+            <div class="mg-result-toggle" role="group" aria-label="Compare source and Mimir result"><button type="button" aria-pressed="true" data-mg-result-view="source">Original source</button><button type="button" aria-pressed="false" data-mg-result-view="mimir">Mimir world</button></div>
+            <div class="mg-result-card" data-mg-result-card><span>Stored attachment</span><strong>characters.csv</strong><p>Your source remains available as the reference material used for the reviewed conversion.</p></div>
+          </section>
+          <div class="mg-ownership-copy"><span class="mg-tier">Core</span><h3>Ordinary import is not a premium toll.</h3><p>General import and competitor migration belong to Mimir Core. Local worlds and entries remain readable local files, and downgrading does not erase or lock away that local work.</p><div class="mg-outcomes"><article><span>Keep editing</span><p>Imported drafts become ordinary connected entries you can refine.</p></article><article><span>Keep history</span><p>Use Mimir's normal Git-backed history and recovery after the entries exist.</p></article><article><span>Export again</span><p>Standard and safe-to-publish export preserve the principle that your material can leave with you.</p></article></div></div>
+        </div>
+        <div class="mg-final-cta"><span class="ms-eyebrow">Bring the world</span><h2>Review the mapping. Keep the result.</h2><p>Explore the wider local-first platform or join the beta and help shape the complete migration workflow.</p><div><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a><a class="ms-btn-secondary" href="features.html">Explore all Mimir features</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ms-footer"><div class="ms-wrap">
+    <div class="ms-foot-grid mi-foot-grid">
+      <div><a class="mi-foot-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-mark.png" alt="" /><span class="ms-foot-brand">Mimir</span></a><p class="ms-foot-tag">Local-first worldbuilding for creators.</p><p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p><div class="mi-socials" aria-label="Verified Shieldwall Games social links"><a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer">X</a></div></div>
+      <div class="ms-foot-col"><h2>Mimir</h2><a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="migration.html" aria-current="page">Migration</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a href="./#beta-signup">Join the beta</a></div>
+      <div class="ms-foot-col"><h2>Shieldwall Games</h2><a href="../">Shieldwall Games</a><a href="../ashborn/">Ashborn CCG</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>
+    </div>
+    <div class="ms-foot-base"><span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span><span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></span></div>
+  </div></footer>
+</div>
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/internal.js?v=20260814-1" defer></script>
+<script src="scripts/migration-chapters.js?v=20260815-1" defer></script>
+<script src="scripts/chapters.js?v=20260815-2" defer></script>
+<script src="scripts/migration.js?v=20260815-1" defer></script>
+</body>
+</html>
