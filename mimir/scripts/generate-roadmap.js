@@ -57,6 +57,7 @@ function featureMarkup(feature, definitions) {
         '            ' + statusMarkup(feature.status, definitions),
         '            <p>' + escapeHtml(feature.shortDescription) + '</p>',
         '            <button class="rm-feature-open" type="button" data-feature-open="' + escapeHtml(feature.id) + '" aria-label="Explore ' + escapeHtml(feature.name) + '" hidden>Explore feature <span aria-hidden="true">→</span></button>',
+        feature.deepDive && feature.deepDive.enabled ? '            <a class="rm-feature-deep-dive" href="' + escapeHtml(feature.deepDive.url) + '">' + escapeHtml(feature.deepDive.label) + ' <span aria-hidden="true">→</span></a>' : '',
         '          </article>'
     ].filter(Boolean).join('\n');
 }
