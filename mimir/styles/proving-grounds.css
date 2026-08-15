@@ -146,7 +146,7 @@
 .pg-canon-flow {
     display: grid;
     gap: 13px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     list-style: none;
     margin: 34px 0 0;
     padding: 0;
@@ -171,6 +171,8 @@
     top: calc(50% - 14px);
     z-index: 2;
 }
+
+.pg-canon-flow li:nth-child(2)::after { display: none; }
 
 .pg-canon-flow span { color: var(--active-chapter-text); display: block; font: 700 10px var(--font-sans); letter-spacing: .1em; }
 .pg-canon-flow strong { color: var(--fg-1); display: block; font: 500 20px/1.15 var(--font-display); margin: 28px 0 10px; }
@@ -412,8 +414,6 @@ html.pg-enhanced [data-pg-panel][hidden] { display: none; }
     .pg-decision-grid { grid-template-columns: 1fr; }
     .pg-hero-copy { max-width: 820px; }
     .pg-quest-copy { max-width: none; }
-    .pg-canon-flow { grid-template-columns: repeat(2,minmax(0,1fr)); }
-    .pg-canon-flow li:nth-child(2)::after { display: none; }
     .pg-development-note { align-items: start; }
 }
 
