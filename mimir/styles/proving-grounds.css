@@ -400,8 +400,8 @@
 .pg-final-cta p { color: var(--fg-2); font-size: clamp(18px,1.8vw,24px); line-height: 1.6; margin: 26px auto 0; max-width: 790px; }
 .pg-final-cta > div { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 32px; }
 
-html.pg-enhanced [data-pg-run],
-html.pg-enhanced [data-pg-decision] { display: inline-flex; }
+html.pg-enhanced [data-pg-run] { display: inline-flex; }
+html.pg-enhanced [data-pg-decision] { display: flex; flex-direction: column; }
 
 html.pg-enhanced [data-pg-panel][hidden] { display: none; }
 
