@@ -11,6 +11,7 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | Mimir features | `mimir/features.html` | Comprehensive, searchable product capabilities |
 | Mimir AI | `mimir/mimir-ai.html` | Grounding, evidence, consistency, context, translation and control |
 | Proving Grounds | `mimir/proving-grounds.html` | Dialogue, quest, state, session and simulation deep dive |
+| Migration | `mimir/migration.html` | Reviewed spreadsheet/document import and local ownership deep dive |
 | Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
 | Privacy | `privacy.html` | Website and planned Mimir privacy model |
@@ -43,6 +44,8 @@ Then visit `http://localhost:8000`.
 ├── privacy.html
 ├── terms.html
 ├── 404.html
+├── robots.txt
+├── sitemap.xml
 ├── CNAME
 ├── styles/
 │   ├── main.css
@@ -59,6 +62,7 @@ Then visit `http://localhost:8000`.
 │   ├── features.html
 │   ├── mimir-ai.html
 │   ├── proving-grounds.html
+│   ├── migration.html
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -69,6 +73,7 @@ Then visit `http://localhost:8000`.
 │   │   ├── features.css
 │   │   ├── mimir-ai.css
 │   │   ├── proving-grounds.css
+│   │   ├── migration.css
 │   │   └── roadmap.css
 │   └── scripts/
 │       ├── mimir.js
@@ -81,6 +86,8 @@ Then visit `http://localhost:8000`.
 │       ├── mimir-ai.js
 │       ├── proving-grounds-chapters.js
 │       ├── proving-grounds.js
+│       ├── migration-chapters.js
+│       ├── migration.js
 │       ├── roadmap-chapters.js
 │       ├── roadmap.js
 │       └── generate-roadmap.js
@@ -158,6 +165,29 @@ The page reuses the shared Well controller and internal navigation/footer. Its
 lighting and future artwork configuration lives in
 `proving-grounds-chapters.js`; exact art requirements are documented in
 `mimir/assets/backgrounds/proving-grounds/README.md`.
+
+### Migration page
+
+`mimir/migration.html` is the Core, `In development` deep dive for reviewed
+import and migration. Verified current implementation formats are CSV, XLSX,
+TXT, Markdown and DOCX. Spreadsheet conversion is deterministic, with optional
+AI mapping suggestions; prose extraction is AI-assisted and creator-reviewed.
+Do not name a competitor or promise relationship/asset conversion, universal
+dry-run transactions or import rollback until the application implements and
+documents those behaviours.
+
+The page uses the shared Well controller and internal navigation/footer. Its
+configuration is in `migration-chapters.js`, and exact background files are in
+`mimir/assets/backgrounds/migration/README.md`.
+
+### Crawling, metadata and media
+
+`robots.txt` allows public crawling and declares the root `sitemap.xml`.
+Conservative Organization/WebSite structured data lives on the Shieldwall
+homepage; Mimir has SoftwareApplication data without checkout offers or ratings.
+
+The consolidated owner-supplied background, screenshot, video and social-image
+handoff is `mimir/assets/MEDIA_CHECKLIST.md`.
 
 ## Current V1 positioning
 
