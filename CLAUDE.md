@@ -240,6 +240,8 @@ Potential future items, not launch promises:
 │   ├── migration.html          # Reviewed Migration & Import deep dive
 │   ├── roadmap.html
 │   ├── roadmap-data.json
+│   ├── releases/
+│   │   └── latest.json
 │   ├── data/
 │   │   └── features.json
 │   ├── styles/

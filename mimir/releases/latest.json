@@ -1,0 +1,10 @@
+{
+  "$comment": "Mimir application update manifest. The installed app fetches this over HTTPS to learn whether a newer version exists; it never downloads or executes anything from here — when an update is available the app only opens downloadPageUrl in the customer's browser. 'available: false' is the honest current state: no public Mimir installer is published yet, so no in-app update prompt is shown. To announce a release: bump latestVersion (semver), set publishedAt, set available to true once the download page really serves installers. Never point downloadPageUrl anywhere but this site.",
+  "schemaVersion": 1,
+  "channel": "beta",
+  "latestVersion": "0.9.0",
+  "publishedAt": "2026-08-31",
+  "available": false,
+  "downloadPageUrl": "https://shieldwallgames.co.uk/mimir/",
+  "releaseNotesUrl": "https://shieldwallgames.co.uk/mimir/roadmap.html"
+}

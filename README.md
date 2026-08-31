@@ -79,6 +79,8 @@ dead Privacy/Terms/Support links.
 │   ├── migration.html
 │   ├── roadmap.html
 │   ├── roadmap-data.json
+│   ├── releases/
+│   │   └── latest.json
 │   ├── data/
 │   │   └── features.json
 │   ├── styles/
