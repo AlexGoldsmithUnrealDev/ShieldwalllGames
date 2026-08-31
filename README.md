@@ -14,8 +14,9 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | Migration | `mimir/migration.html` | Reviewed spreadsheet/document import and local ownership deep dive |
 | Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
-| Privacy | `privacy.html` | Website and planned Mimir privacy model |
-| Terms | `terms.html` | Website and planned Mimir commercial terms |
+| Privacy | `privacy.html` | Website and Mimir privacy policy (current systems and processors) |
+| Terms | `terms.html` | Website and Mimir terms: accounts, subscriptions, Credits, Content Packs, AI |
+| Support | `support.html` | Beta support routes: billing, refunds, deletion, data, security |
 | 404 | `404.html` | Custom not-found page |
 
 ## Tech stack
@@ -43,6 +44,7 @@ Then visit `http://localhost:8000`.
 ├── index.html
 ├── privacy.html
 ├── terms.html
+├── support.html
 ├── 404.html
 ├── robots.txt
 ├── sitemap.xml
@@ -255,7 +257,7 @@ Before Mimir becomes a commercial SaaS/download service, the production website/
 - [ ] Benchmark Mimir AI workloads and confirm monthly credit allowances
 - [ ] Load-test hosted project/collaborator/storage allowances
 - [ ] Finalise production auth, account ledger, payment, broker, storage, and hosting infrastructure
-- [ ] Update `privacy.html` with the actual production subprocessors and retention details
+- [x] Update `privacy.html` with the actual subprocessors and retention criteria (kept current as processors change)
 - [ ] Update `terms.html` and checkout flow for the consumer/subscription law in force at launch
 - [ ] Confirm refund/cancellation wording and hosted downgrade grace periods
 - [ ] Create final OG images

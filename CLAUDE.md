@@ -211,6 +211,7 @@ Potential future items, not launch promises:
 ├── index.html                  # Shieldwall homepage
 ├── privacy.html
 ├── terms.html
+├── support.html
 ├── 404.html
 ├── styles/
 │   ├── main.css
@@ -346,7 +347,7 @@ Accurate distinction:
 - Optional collaboration/hosting necessarily stores or synchronises the data the user chooses to host.
 - Account/subscription services process account, entitlement, credit, usage, and security metadata.
 
-Production processors are not yet finalised. `privacy.html` should be updated with the actual account/payment/hosting/AI subprocessors before public paid launch.
+`privacy.html` names the processors actually in use (Supabase, Stripe, Cloudflare, Anthropic, MailerLite, GitHub Pages, plus the transactional-email delivery service once activated). When a processor changes, `privacy.html` is updated first.
 
 Do not make legal promises about future cancellation/refund mechanics that have not been approved. Statutory consumer rights always take precedence over website wording.
 
