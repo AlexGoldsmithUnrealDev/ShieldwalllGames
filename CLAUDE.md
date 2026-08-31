@@ -45,12 +45,20 @@ This website must remain aligned with that specification.
 
 | Tier | Monthly | Annual | Position |
 | --- | ---: | ---: | --- |
-| **Mimir Core** | **Free** | **Free** | Build your world |
-| **Apprentice** | **£6.99** | **£69.99** | Develop your world |
-| **Worldsmith** | **£14.99** | **£149.99** | Bring your world to life |
-| **Loremaster** | **£24.99** | **£249.99** | Work at professional scale |
+| **CORE** | **Free** | **Free** | Build your world |
+| **APPRENTICE+** | **£6.99** | **£69.99** | Develop your world |
+| **WORLDSMITH+** | **£14.99** | **£149.99** | Bring your world to life |
+| **LOREMASTER** | **£24.99** | **£249.99** | Work at professional scale |
 
-**Worldsmith** is the featured/Most Popular plan.
+The canonical customer-facing tier names are CORE, APPRENTICE+,
+WORLDSMITH+ and LOREMASTER (matching the app and the legal pages);
+machine identifiers such as `data-tier` values stay lowercase
+(`core`, `apprentice`, `worldsmith`, `loremaster`) and never carry
+the `+`. Do not reintroduce the retired title-case spellings
+("Mimir Core", "Apprentice", "Worldsmith", "Loremaster") in
+customer-facing copy.
+
+**WORLDSMITH+** is the featured/Most Popular plan.
 
 ### Commercial rules
 
@@ -66,7 +74,7 @@ This website must remain aligned with that specification.
 
 ### Planned V1 feature progression
 
-**Core** includes the standard local worldbuilding foundation:
+**CORE** includes the standard local worldbuilding foundation:
 
 - Unlimited local worlds and entries
 - Standard entry types/editors
@@ -83,7 +91,7 @@ This website must remain aligned with that specification.
 - Mimir AI and Translator within the Core credit allowance
 - Ability to join invited collaborative/hosted experiences
 
-**Apprentice** adds:
+**APPRENTICE+** adds:
 
 - Custom Schema Editor
 - Narrative Planner
@@ -92,7 +100,7 @@ This website must remain aligned with that specification.
 - Small collaboration/hosting allowance
 - Larger Mimir AI allowance
 
-**Worldsmith** adds:
+**WORLDSMITH+** adds:
 
 - AI Context Bundles
 - Lore Consistency Review
@@ -103,7 +111,7 @@ This website must remain aligned with that specification.
 - Larger collaboration/hosting allowance
 - Larger Mimir AI allowance
 
-**Loremaster** primarily increases scale:
+**LOREMASTER** primarily increases scale:
 
 - More hosted worlds
 - More collaborators
@@ -116,7 +124,7 @@ This website must remain aligned with that specification.
 
 These are beta planning values and may be tuned before paid checkout opens.
 
-| Allowance | Core | Apprentice | Worldsmith | Loremaster |
+| Allowance | CORE | APPRENTICE+ | WORLDSMITH+ | LOREMASTER |
 | --- | ---: | ---: | ---: | ---: |
 | Monthly Mimir AI credits | 25 | 400 | 1,200 | 3,000 |
 | One-time welcome credits | 100 | Account-level | Account-level | Account-level |
@@ -217,7 +225,8 @@ Potential future items, not launch promises:
 │   ├── main.css
 │   └── shieldwall.css
 ├── scripts/
-│   └── main.js
+│   ├── main.js
+│   └── validate-content.js
 ├── assets/
 │   ├── images/
 │   ├── fonts/

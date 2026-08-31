@@ -37,6 +37,17 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
+Before committing content changes, run the product-truth check:
+
+```bash
+node scripts/validate-content.js
+```
+
+It fails on retired tier spellings (anything but CORE, APPRENTICE+,
+WORLDSMITH+, LOREMASTER), a marketing/Terms disagreement about the
+current alpha/beta phase, stale "checkout is not live" wording, and
+dead Privacy/Terms/Support links.
+
 ## Project structure
 
 ```text
@@ -53,7 +64,8 @@ Then visit `http://localhost:8000`.
 │   ├── main.css
 │   └── shieldwall.css
 ├── scripts/
-│   └── main.js
+│   ├── main.js
+│   └── validate-content.js
 ├── assets/
 │   ├── images/
 │   ├── fonts/
@@ -108,10 +120,10 @@ The live site currently uses the planned V1 commercial model:
 
 | Tier | Monthly | Annual |
 | --- | ---: | ---: |
-| Mimir Core | Free | Free |
-| Apprentice | £6.99 | £69.99 |
-| Worldsmith | £14.99 | £149.99 |
-| Loremaster | £24.99 | £249.99 |
+| CORE | Free | Free |
+| APPRENTICE+ | £6.99 | £69.99 |
+| WORLDSMITH+ | £14.99 | £149.99 |
+| LOREMASTER | £24.99 | £249.99 |
 
 Core keeps unlimited local worlds and entries. Paid tiers add advanced workflows, Mimir AI allowance, collaboration, hosting, and scale rather than artificial local content caps.
 
@@ -213,10 +225,10 @@ Do not ask customers to choose Haiku, Sonnet, Opus, or another provider SKU in w
 
 Current launch-planning monthly allowances are:
 
-- Core: 25 credits + 100 one-time welcome credits
-- Apprentice: 400 credits
-- Worldsmith: 1,200 credits
-- Loremaster: 3,000 credits
+- CORE: 25 credits + 100 one-time welcome credits
+- APPRENTICE+: 400 credits
+- WORLDSMITH+: 1,200 credits
+- LOREMASTER: 3,000 credits
 
 These allowances are still subject to beta workload validation before paid checkout opens.
 
