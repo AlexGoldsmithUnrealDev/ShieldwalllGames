@@ -57,14 +57,14 @@
     <div class="sw-wrap sw-wrap--narrow">
 
       <h1 class="sw-section-h2">Privacy Policy</h1>
-      <p class="sw-legal-date">Last updated: August 2026</p>
+      <p class="sw-legal-date">Last updated: October 2026</p>
 
       <p>
         This policy explains what data Shieldwall Games Ltd collects,
         how we use it, and what your rights are. Mimir is still in
-        development, so this policy distinguishes the website and beta
-        systems that exist today from online account, AI, collaboration,
-        and hosting services that will be finalised before public launch.
+        development, but account, AI, collaboration, and hosted features
+        are being introduced during beta. This policy covers those
+        systems as they are made available.
       </p>
 
       <h2>The local-first principle</h2>
@@ -88,9 +88,9 @@
         that form.
       </p>
       <p>
-        <strong>Account and subscription data.</strong> When Mimir account
-        services launch, Shieldwall will need to process information such
-        as account identifiers, authentication records, subscription tier,
+        <strong>Account and subscription data.</strong> When you create or
+        use a Mimir account, Shieldwall processes information such as
+        account identifiers, authentication records, subscription tier,
         credit balances, purchase entitlements, AI usage records, and
         security/session metadata needed to run the service.
       </p>
@@ -106,6 +106,23 @@
         feature, Mimir sends the instructions and world context needed to
         perform that specific operation through Shieldwall's broker to an
         AI API provider.
+      </p>
+      <p>
+        <strong>Discord integration data.</strong> If you connect Discord
+        to Mimir, we may process the Discord user ID, username or display
+        name, profile or avatar information where supplied, friend or
+        relationship information, presence, lobby or call participation,
+        and other limited Discord Social SDK data needed to provide the
+        feature you choose to use.
+      </p>
+      <p>
+        <strong>Session Capture data.</strong> If Session Capture is
+        explicitly enabled, Mimir may receive participant-specific voice
+        audio from Discord and process it locally on the host device for
+        transcription. Raw audio is not sent to Shieldwall by default and
+        is discarded after local transcription by default. The resulting
+        transcript may contain participant names, speech, timestamps, and
+        session context.
       </p>
       <p>
         <strong>Basic web analytics and server logs.</strong> We may
@@ -149,6 +166,32 @@
         to its API service.
       </p>
 
+      <h2>Discord integration and Session Capture</h2>
+      <p>
+        Discord voice and Session Capture are separate features. Ordinary
+        Discord-powered voice is not transcribed merely because a call is
+        active. Session Capture must be explicitly started, and Mimir is
+        designed to make that state clear to participants.
+      </p>
+      <p>
+        Session Capture transcription is performed locally using Mimir's
+        on-device speech-to-text system. Raw voice audio is discarded by
+        default after it has been processed. The transcript remains local
+        unless you deliberately use an online feature that needs it.
+      </p>
+      <p>
+        If you choose <strong>Analyse with Mimir</strong>, the transcript
+        or the relevant selected context is sent through Shieldwall's Mimir
+        AI service so that a summary and suggested new or changed entries
+        can be produced. Those suggestions are presented for review and do
+        not automatically change your world.
+      </p>
+      <p>
+        Mimir's Discord integration is not available to users under 13.
+        Users must also meet any higher age or other eligibility requirement
+        that applies to their Discord account.
+      </p>
+
       <h2>Collaboration and hosted worlds</h2>
       <p>
         Hosting is optional. If you use it, Shieldwall must retain the
@@ -172,6 +215,13 @@
         <a href="https://www.mailerlite.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">MailerLite's privacy policy</a>.
       </p>
       <p>
+        <strong>Discord.</strong> If you connect Discord to Mimir, Discord
+        provides the account, social, presence, lobby, and voice
+        infrastructure used by those features and may process information
+        under its own privacy terms. You can read
+        <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Discord's privacy policy</a>.
+      </p>
+      <p>
         <strong>GitHub Pages.</strong> The current public website is hosted
         on GitHub Pages. GitHub may process server logs such as IP
         addresses. You can read
@@ -179,18 +229,19 @@
       </p>
       <p>
         <strong>Production account, hosting, payment, and AI providers.</strong>
-        Mimir's final production infrastructure is still being completed.
-        Before paid checkout and hosted services open, this policy will be
-        updated to identify the subprocessors actually used for account
-        data, payments, hosted storage/realtime services, and Mimir AI.
+        Mimir uses or may use specialist providers for account data,
+        payments, hosted storage or realtime services, and Mimir AI. We
+        select and configure those services under the applicable
+        data-processing terms and will update this policy where a material
+        provider change affects how personal data is handled.
       </p>
 
       <h2>Payments</h2>
       <p>
         Shieldwall does not intend to store full payment-card details
-        itself. Paid subscriptions and purchases will be processed through
-        the payment and commerce providers identified in this policy and at
-        checkout when those services go live.
+        itself. Paid subscriptions and purchases are processed through the
+        payment and commerce providers identified at checkout and, where
+        appropriate, in this policy.
       </p>
 
       <h2>Cookies and local storage</h2>
@@ -200,6 +251,21 @@
         interface state. Third-party embedded services, including mailing
         forms, may set their own technically necessary storage according to
         their policies.
+      </p>
+
+      <h2>Discord data retention and deletion</h2>
+      <p>
+        Discord-derived personal data is retained only for as long as it
+        is needed to provide the connected feature, maintain security, or
+        meet a legal obligation. Disconnecting Discord removes the stored
+        connection credentials from Mimir. Session transcripts are treated
+        as Mimir content and remain under the user's control unless they
+        have deliberately been placed in a hosted feature.
+      </p>
+      <p>
+        You can contact Shieldwall to request deletion of Discord-derived
+        personal data that Shieldwall holds, subject to any lawful reason
+        that requires a limited record to be retained.
       </p>
 
       <h2>Your rights</h2>
@@ -226,10 +292,10 @@
 
       <h2>Changes to this policy</h2>
       <p>
-        We will update this policy as the production account, payment,
-        hosted collaboration, and AI infrastructure is finalised. Material
-        changes will be reflected in the "last updated" date and any
-        additional notice required by law.
+        We will update this policy as Mimir's account, payment, hosted
+        collaboration, AI, Discord, and other online services change.
+        Material changes will be reflected in the "last updated" date and
+        any additional notice required by law.
       </p>
 
       <h2>Contact</h2>
