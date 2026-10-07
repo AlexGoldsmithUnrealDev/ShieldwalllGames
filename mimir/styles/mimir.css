@@ -545,6 +545,11 @@
     cursor: pointer;
 }
 
+.signup-form__select:focus-visible {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(184, 90, 44, 0.25);
+}
+
 .signup-form__note {
     font-size: var(--fs-2xs);
     color: var(--fg-2);

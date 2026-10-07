@@ -115,7 +115,7 @@ table {
   --color-ink-600: #322b22;
   --color-ink-500: #423a2e;
   --color-ink-400: #5a4f3f;
-  --color-ink-300: #7a6c58;
+  --color-ink-300: #8c7d66;
   --color-ink-200: #a89878;
   --color-ink-100: #d6c9a8;
 
@@ -501,6 +501,12 @@ a:hover {
 
 .skip-link:focus {
     top: var(--space-3);
+}
+
+/* --- Global focus indicator --- */
+:where(a, button, select, [tabindex]):focus-visible {
+    outline: 2px solid var(--fg-link, var(--accent));
+    outline-offset: 3px;
 }
 
 /* --- Scroll reveal animation --- */
