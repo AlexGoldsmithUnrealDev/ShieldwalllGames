@@ -5,6 +5,16 @@
  */
 
 /* ==========================================================================
+   Roadmap Nav Logo Images
+   ========================================================================== */
+
+.mimir-nav__wordmark { display: flex; align-items: center; gap: 9px; }
+.mimir-nav__mark-img { height: 30px; width: auto; }
+.mimir-nav__wordmark-img { height: 22px; width: auto; }
+.site-footer__wordmark { display: inline-block; }
+.site-footer__wordmark-img { height: 24px; width: auto; }
+
+/* ==========================================================================
    Roadmap Hero
    ========================================================================== */
 

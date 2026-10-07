@@ -257,7 +257,7 @@ Confirmed platforms and URLs:
 │   ├── images/                  # Concept art, landscapes, characters
 │   ├── fonts/                   # Njord-Regular.woff2, Njord-Alternate.woff2
 │   ├── icons/                   # Entry-type icons (16 PNGs) + favicon (.ico, -192.png, -512.png)
-│   └── logos/                   # Mimir mark, well-of-wisdom, Shieldwall logo (dark + light)
+│   └── logos/                   # Mimir logos (well-mark, runic wordmark, full lockup), Shieldwall logo (dark + light)
 ├── mimir/
 │   ├── index.html
 │   ├── roadmap.html
