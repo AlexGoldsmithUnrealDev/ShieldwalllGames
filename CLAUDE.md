@@ -81,6 +81,7 @@ This website must remain aligned with that specification.
 - Standard and safe-to-publish export
 - General imports and competitor migration
 - Mimir AI and Translator within the Core credit allowance
+- AI Context Export (local Markdown bundle for external AI tools, no credits)
 - Ability to join invited collaborative/hosted experiences
 
 **Apprentice** adds:
@@ -88,26 +89,25 @@ This website must remain aligned with that specification.
 - Custom Schema Editor
 - Narrative Planner
 - Advanced tree/filter tools
-- Local Proving Grounds creation
+- Campaign hosting (up to 8 participants)
 - Small collaboration/hosting allowance
 - Larger Mimir AI allowance
 
 **Worldsmith** adds:
 
-- AI Context Bundles
 - Lore Consistency Review
 - Simulation
 - Variables/world-state tooling
-- Hosted participant/player worlds
-- Live collaborative Proving Grounds hosting
+- Hosted participant/player worlds (up to 50 participants)
 - Larger collaboration/hosting allowance
 - Larger Mimir AI allowance
 
 **Loremaster** primarily increases scale:
 
+- Proving Grounds (planned)
 - More hosted worlds
 - More collaborators
-- More participants
+- More participants (up to 200)
 - More hosted storage
 - Larger Mimir AI allowance
 - Priority support queue
@@ -123,7 +123,7 @@ These are beta planning values and may be tuned before paid checkout opens.
 | Ask Mimir retrieval context | 4k | 8k | 16k | 16k |
 | Hosted worlds owned | 0 | 1 | 5 | 20 |
 | Guest collaborators/world | Host allowance | 2 | 5 | 20 |
-| Participants/world | - | - | 50 | 200 |
+| Participants/world | - | 8 per Campaign | 50 | 200 |
 | Hosted storage | - | 1GB | 10GB | 50GB |
 
 ---
@@ -271,10 +271,9 @@ Stable pricing anchor: `/mimir/#pricing`. Do not rename `id="pricing"`.
 ### Proving Grounds website status
 
 `mimir/proving-grounds.html` is the public deep dive for Mimir's testing and
-prototyping discipline. The complete customer-facing Proving Grounds experience,
-Dialogue testing, Quest testing and live collaborative use remain labelled
-"Planned for public beta". Variables/world-state and Simulation remain labelled
-"In development" until the public product status is deliberately changed.
+prototyping discipline. All Proving Grounds actions (creating, running,
+hosting, and joining) require Loremaster under the current commercial
+specification. The complete experience is labelled "Planned for public beta".
 
 The application repository contains substantial Quest/Dialogue simulation and
 local Proving Ground foundations. Do not translate internal implementation into
