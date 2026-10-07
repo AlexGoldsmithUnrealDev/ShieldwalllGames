@@ -61,7 +61,7 @@
 .ms-nav-brand img { height: 38px; width: auto; }
 .ms-nav-wordmark-img { height: 28px !important; }
 .ms-nav-brand-word { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.005em; }
-.ms-nav-links { display: flex; gap: 26px; margin-left: 24px; }
+.ms-nav-links { display: flex; gap: 24px; margin-left: 24px; white-space: nowrap; }
 .ms-nav-links a { color: var(--fg-2); font-size: 14px; text-decoration: none; }
 .ms-nav-links a:hover { color: var(--fg-1); }
 .ms-nav-spacer { flex: 1; }
