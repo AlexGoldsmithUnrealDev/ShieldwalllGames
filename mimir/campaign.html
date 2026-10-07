@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
   <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <link rel="stylesheet" href="styles/campaign.css?v=20261007-1" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -106,17 +107,17 @@
     </div></div>
   </nav>
 
-  <header class="ms-section ms-chapter" id="campaign-hero" data-chapter="campaign" data-snap-chapter>
+  <header class="cp-hero ms-chapter" id="campaign-hero" data-chapter="campaign" data-snap-chapter>
     <div class="ms-wrap">
       <span class="ms-eyebrow">Campaign</span>
-      <h1 class="ms-section-h2" style="font-size:clamp(48px, 6vw, 84px); line-height:.96; letter-spacing:-.03em; margin:12px 0 0;">Prepare it. Reveal it. Run it.</h1>
-      <p class="ms-section-sub" style="max-width:690px; margin:28px 0 0;">Campaign turns your connected Mimir world into a controlled experience for your players. Prepare scenes, reveal what you choose, and let your table focus on the story.</p>
-      <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:34px;">
+      <h1 class="ms-section-h2 cp-hero-h1">Prepare it. Reveal it. Run it.</h1>
+      <p class="ms-section-sub cp-lede">Campaign turns your connected Mimir world into a controlled experience for your players. Prepare scenes, reveal what you choose, and let your table focus on the story.</p>
+      <div class="cp-hero-actions">
         <a class="ms-btn-primary" href="#preparation">See how preparation works</a>
         <a class="ms-btn-secondary" href="features.html">Explore all features</a>
       </div>
-      <p style="color:var(--fg-3); font:500 13px/1.6 var(--font-sans); margin:20px 0 0; display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
-        <span style="display:inline-flex; align-items:center; border:1px solid currentColor; border-radius:99px; font:700 10px/1 var(--font-sans); letter-spacing:.1em; text-transform:uppercase; padding:5px 12px;">Planned for public beta</span>
+      <p class="cp-release-note">
+        <span class="cp-status">Planned for public beta</span>
         Campaign is V1 scope. The complete campaign management experience is not an available alpha entitlement.
       </p>
     </div>
@@ -142,10 +143,10 @@
             <li>Private by default until explicitly published</li>
           </ul>
         </div>
-        <figure class="ms-media-placeholder" style="aspect-ratio:4/3; border-radius:10px; border:1px solid var(--border-strong-c); display:grid; place-items:center; padding:32px; text-align:center;">
+        <figure class="ms-media-placeholder cp-media-slot">
           <div>
-            <span style="display:block; font:600 10px var(--font-sans); letter-spacing:.14em; text-transform:uppercase; color:var(--fg-3); margin-bottom:8px;">Real product capture</span>
-            <strong style="color:var(--fg-2); font:500 15px/1.5 var(--font-sans);">Scene preparation workspace</strong>
+            <span class="cp-media-kicker">Real product capture</span>
+            <strong class="cp-media-title">Scene preparation workspace</strong>
           </div>
           <figcaption class="visually-hidden">Reserved for a real screenshot of the campaign scene preparation interface.</figcaption>
         </figure>
@@ -165,10 +166,10 @@
           <p>Players see only what the GM has explicitly published. When the GM revokes visibility, a stale page cannot access material after permissions change. The security model means that hidden is structurally absent, not visually suppressed.</p>
           <p>This is a deliberate design decision. Campaign management tools that rely on display rules leave information accessible to anyone willing to open a browser inspector. Mimir treats GM control as a data boundary, not a styling choice.</p>
         </div>
-        <figure class="ms-media-placeholder" style="aspect-ratio:4/3; border-radius:10px; border:1px solid var(--border-strong-c); display:grid; place-items:center; padding:32px; text-align:center;">
+        <figure class="ms-media-placeholder cp-media-slot">
           <div>
-            <span style="display:block; font:600 10px var(--font-sans); letter-spacing:.14em; text-transform:uppercase; color:var(--fg-3); margin-bottom:8px;">Real product capture</span>
-            <strong style="color:var(--fg-2); font:500 15px/1.5 var(--font-sans);">Visibility controls and publish flow</strong>
+            <span class="cp-media-kicker">Real product capture</span>
+            <strong class="cp-media-title">Visibility controls and publish flow</strong>
           </div>
           <figcaption class="visually-hidden">Reserved for a real screenshot of the campaign visibility and publish controls.</figcaption>
         </figure>
@@ -194,10 +195,10 @@
             <li>Co-GM delegation for operational support</li>
           </ul>
         </div>
-        <figure class="ms-media-placeholder" style="aspect-ratio:4/3; border-radius:10px; border:1px solid var(--border-strong-c); display:grid; place-items:center; padding:32px; text-align:center;">
+        <figure class="ms-media-placeholder cp-media-slot">
           <div>
-            <span style="display:block; font:600 10px var(--font-sans); letter-spacing:.14em; text-transform:uppercase; color:var(--fg-3); margin-bottom:8px;">Real product capture</span>
-            <strong style="color:var(--fg-2); font:500 15px/1.5 var(--font-sans);">Player companion view</strong>
+            <span class="cp-media-kicker">Real product capture</span>
+            <strong class="cp-media-title">Player companion view</strong>
           </div>
           <figcaption class="visually-hidden">Reserved for a real screenshot of the player-facing campaign companion.</figcaption>
         </figure>
@@ -215,19 +216,19 @@
         <div class="ms-copy-block">
           <p>The GM who creates and hosts the campaign carries the subscription. Players use Mimir Core and are invited into the hosted experience at no additional cost to them. This keeps the barrier to joining a campaign as low as possible.</p>
           <p>Participant allowances scale with the host's subscription tier. A small group works within Apprentice. Larger tables and communities have room at Worldsmith and Loremaster.</p>
-          <div style="display:grid; gap:1px; border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-top:28px;">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border);">
-              <div style="background:var(--bg-page); padding:18px 20px;"><span style="display:block; font:600 10px var(--font-sans); letter-spacing:.12em; text-transform:uppercase; color:var(--fg-3); margin-bottom:4px;">Apprentice</span><strong style="color:var(--fg-1); font:500 15px/1.4 var(--font-sans);">Small group hosting</strong><p style="color:var(--fg-3); font:400 13px/1.5 var(--font-sans); margin:6px 0 0;">Up to 2 guest collaborators per world</p></div>
-              <div style="background:var(--bg-page); padding:18px 20px;"><span style="display:block; font:600 10px var(--font-sans); letter-spacing:.12em; text-transform:uppercase; color:var(--fg-3); margin-bottom:4px;">Worldsmith</span><strong style="color:var(--fg-1); font:500 15px/1.4 var(--font-sans);">Up to 50 participants</strong><p style="color:var(--fg-3); font:400 13px/1.5 var(--font-sans); margin:6px 0 0;">5 hosted worlds, 5 collaborators per world</p></div>
+          <div class="cp-tier-grid">
+            <div class="cp-tier-row">
+              <div class="cp-tier-cell"><span class="cp-tier-label">Apprentice</span><strong class="cp-tier-value">Small group hosting</strong><p class="cp-tier-note">Up to 2 guest collaborators per world</p></div>
+              <div class="cp-tier-cell"><span class="cp-tier-label">Worldsmith</span><strong class="cp-tier-value">Up to 50 participants</strong><p class="cp-tier-note">5 hosted worlds, 5 collaborators per world</p></div>
             </div>
-            <div style="background:var(--bg-page); padding:18px 20px; border-top:1px solid var(--border);"><span style="display:block; font:600 10px var(--font-sans); letter-spacing:.12em; text-transform:uppercase; color:var(--fg-3); margin-bottom:4px;">Loremaster</span><strong style="color:var(--fg-1); font:500 15px/1.4 var(--font-sans);">Up to 200 participants</strong><p style="color:var(--fg-3); font:400 13px/1.5 var(--font-sans); margin:6px 0 0;">20 hosted worlds, 20 collaborators per world</p></div>
+            <div class="cp-tier-cell cp-tier-full"><span class="cp-tier-label">Loremaster</span><strong class="cp-tier-value">Up to 200 participants</strong><p class="cp-tier-note">20 hosted worlds, 20 collaborators per world</p></div>
           </div>
-          <p style="color:var(--fg-3); font:400 13px/1.5 var(--font-sans); margin:14px 0 0;">These are beta planning allowances and may be adjusted before paid checkout opens. See <a href="./#pricing" style="color:var(--fg-2);">Pricing</a> for current tier details.</p>
+          <p class="cp-caveat">These are beta planning allowances and may be adjusted before paid checkout opens. See <a href="./#pricing">Pricing</a> for current tier details.</p>
         </div>
-        <figure class="ms-media-placeholder" style="aspect-ratio:4/3; border-radius:10px; border:1px solid var(--border-strong-c); display:grid; place-items:center; padding:32px; text-align:center;">
+        <figure class="ms-media-placeholder cp-media-slot">
           <div>
-            <span style="display:block; font:600 10px var(--font-sans); letter-spacing:.14em; text-transform:uppercase; color:var(--fg-3); margin-bottom:8px;">Real product capture</span>
-            <strong style="color:var(--fg-2); font:500 15px/1.5 var(--font-sans);">Campaign invitation and participant management</strong>
+            <span class="cp-media-kicker">Real product capture</span>
+            <strong class="cp-media-title">Campaign invitation and participant management</strong>
           </div>
           <figcaption class="visually-hidden">Reserved for a real screenshot of campaign participant management.</figcaption>
         </figure>
@@ -249,11 +250,11 @@
 
     <!-- Final CTA -->
     <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="campaign-cta" data-chapter="cta">
-      <div style="text-align:center; max-width:680px; margin:0 auto;">
+      <div class="cp-final-cta">
         <span class="ms-eyebrow">Campaign management for Game Masters</span>
-        <h2 class="ms-section-h2" style="text-align:center;">Build the world. Run the campaign.</h2>
-        <p class="ms-section-sub" style="text-align:center; margin:16px auto 0;">Explore every Mimir capability or join the beta and help shape the complete campaign workflow.</p>
-        <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:26px;">
+        <h2 class="ms-section-h2">Build the world. Run the campaign.</h2>
+        <p class="ms-section-sub">Explore every Mimir capability or join the beta and help shape the complete campaign workflow.</p>
+        <div class="cp-cta-actions">
           <a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
           <a class="ms-btn-secondary" href="features.html">Explore all Mimir features</a>
         </div>

@@ -65,6 +65,7 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
   <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <link rel="stylesheet" href="styles/collaboration.css?v=20261007-1" />
 </head>
 <body class="ms-well-page mi-page">
 <div class="ms-page">
@@ -97,8 +98,8 @@
         <span class="ms-eyebrow">Writers' Room</span>
         <h1>Build worlds together.</h1>
         <p class="ms-section-h2">Writers' Room is Mimir's collaborative worldbuilding workspace. Multiple creators work on the same world while the owner retains control over what becomes canon.</p>
-        <p><span class="ms-eyebrow" style="display:inline-block;font-size:.75rem;padding:.25em .75em;border:1px solid rgba(255,255,255,.15);border-radius:6px;margin-top:.75rem;">Planned for public beta</span></p>
-        <p style="color:var(--fg-3);font-size:.875rem;margin-top:.5rem;">V1 scope. The complete Writers' Room experience requires current hosted-acceptance confirmation and is not an available alpha entitlement.</p>
+        <p><span class="ms-eyebrow co-status-badge">Planned for public beta</span></p>
+        <p class="co-status-note">V1 scope. The complete Writers' Room experience requires current hosted-acceptance confirmation and is not an available alpha entitlement.</p>
       </div>
     </div>
   </header>
@@ -131,26 +132,26 @@
         <div class="ms-copy-block">
           <p>Every collaborator gets one of five roles. Each role has specific capabilities, and an Admin can manage substantial hosted work but does not automatically gain permission to write the owner's local files.</p>
         </div>
-        <div style="display:grid;gap:1rem;margin-top:2rem;">
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <strong style="color:var(--fg-1);font-size:1rem;">Owner</strong>
-            <p style="color:var(--fg-2);font-size:.9rem;margin-top:.35rem;">Full authority over the world. Publishes the canonical baseline, accepts or rejects contributor changes, manages roles and controls what becomes canon.</p>
+        <div class="co-card-grid">
+          <article class="co-card">
+            <strong class="co-card__title">Owner</strong>
+            <p class="co-card__desc">Full authority over the world. Publishes the canonical baseline, accepts or rejects contributor changes, manages roles and controls what becomes canon.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <strong style="color:var(--fg-1);font-size:1rem;">Admin</strong>
-            <p style="color:var(--fg-2);font-size:.9rem;margin-top:.35rem;">Manages hosted content and collaborators on behalf of the owner. Can organise, edit and moderate the hosted copy without inheriting local-file write access.</p>
+          <article class="co-card">
+            <strong class="co-card__title">Admin</strong>
+            <p class="co-card__desc">Manages hosted content and collaborators on behalf of the owner. Can organise, edit and moderate the hosted copy without inheriting local-file write access.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <strong style="color:var(--fg-1);font-size:1rem;">Editor</strong>
-            <p style="color:var(--fg-2);font-size:.9rem;margin-top:.35rem;">Creates and edits entries on the hosted copy. Changes remain proposals until the owner or an Admin accepts them.</p>
+          <article class="co-card">
+            <strong class="co-card__title">Editor</strong>
+            <p class="co-card__desc">Creates and edits entries on the hosted copy. Changes remain proposals until the owner or an Admin accepts them.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <strong style="color:var(--fg-1);font-size:1rem;">Commenter</strong>
-            <p style="color:var(--fg-2);font-size:.9rem;margin-top:.35rem;">Reviews and comments on existing entries. Useful for feedback and discussion without direct editing capability.</p>
+          <article class="co-card">
+            <strong class="co-card__title">Commenter</strong>
+            <p class="co-card__desc">Reviews and comments on existing entries. Useful for feedback and discussion without direct editing capability.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <strong style="color:var(--fg-1);font-size:1rem;">Viewer</strong>
-            <p style="color:var(--fg-2);font-size:.9rem;margin-top:.35rem;">Read-only access to the hosted world. Can browse entries and follow the world's structure without modifying anything.</p>
+          <article class="co-card">
+            <strong class="co-card__title">Viewer</strong>
+            <p class="co-card__desc">Read-only access to the hosted world. Can browse entries and follow the world's structure without modifying anything.</p>
           </article>
         </div>
       </div>
@@ -163,26 +164,26 @@
         <div class="ms-copy-block">
           <p>Contributors work on the hosted version. Their changes are proposals until the owner accepts them. The separation between hosted work and the owner's local canon means nobody can accidentally overwrite years of worldbuilding.</p>
         </div>
-        <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;list-style:none;padding:0;">
-          <li style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">01</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1rem;margin-top:.5rem;">Publish a canonical baseline</strong>
-            <small style="display:block;color:var(--fg-3);font-size:.85rem;margin-top:.35rem;">The owner shares a snapshot of the world for collaborators to work from.</small>
+        <ol class="co-step-grid">
+          <li class="co-step">
+            <span class="co-step__number">01</span>
+            <strong class="co-step__title">Publish a canonical baseline</strong>
+            <small class="co-step__desc">The owner shares a snapshot of the world for collaborators to work from.</small>
           </li>
-          <li style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">02</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1rem;margin-top:.5rem;">Contributors work on the hosted copy</strong>
-            <small style="display:block;color:var(--fg-3);font-size:.85rem;margin-top:.35rem;">Editors draft entries, refine descriptions and build on the shared material.</small>
+          <li class="co-step">
+            <span class="co-step__number">02</span>
+            <strong class="co-step__title">Contributors work on the hosted copy</strong>
+            <small class="co-step__desc">Editors draft entries, refine descriptions and build on the shared material.</small>
           </li>
-          <li style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">03</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1rem;margin-top:.5rem;">Changes are proposed for review</strong>
-            <small style="display:block;color:var(--fg-3);font-size:.85rem;margin-top:.35rem;">Contributor work stays visible as proposals, not silent overwrites.</small>
+          <li class="co-step">
+            <span class="co-step__number">03</span>
+            <strong class="co-step__title">Changes are proposed for review</strong>
+            <small class="co-step__desc">Contributor work stays visible as proposals, not silent overwrites.</small>
           </li>
-          <li style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">04</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1rem;margin-top:.5rem;">Owner accepts, revises or rejects</strong>
-            <small style="display:block;color:var(--fg-3);font-size:.85rem;margin-top:.35rem;">The owner reconciles contributor work into their local canon on their own terms.</small>
+          <li class="co-step">
+            <span class="co-step__number">04</span>
+            <strong class="co-step__title">Owner accepts, revises or rejects</strong>
+            <small class="co-step__desc">The owner reconciles contributor work into their local canon on their own terms.</small>
           </li>
         </ol>
       </div>
@@ -197,29 +198,29 @@
             <p>Collaboration hosting begins at Apprentice. Free Core users can accept invitations to join someone else's hosted world within the host's allowance. No separate collaboration product or add-on is required.</p>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;">
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">Core</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1.1rem;margin-top:.5rem;">Free</strong>
-            <p style="color:var(--fg-2);font-size:.875rem;margin-top:.5rem;">Accept invitations to join a paid user's hosted world. Contribute within the host's allowance.</p>
+        <div class="co-tier-grid">
+          <article class="co-tier-card">
+            <span class="co-tier-label">Core</span>
+            <strong class="co-tier-value">Free</strong>
+            <p class="co-tier-desc">Accept invitations to join a paid user's hosted world. Contribute within the host's allowance.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">Apprentice</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1.1rem;margin-top:.5rem;">2 guest collaborators per world</strong>
-            <p style="color:var(--fg-2);font-size:.875rem;margin-top:.5rem;">Host a collaborative world and invite a writing partner or co-creator.</p>
+          <article class="co-tier-card">
+            <span class="co-tier-label">Apprentice</span>
+            <strong class="co-tier-value">2 guest collaborators per world</strong>
+            <p class="co-tier-desc">Host a collaborative world and invite a writing partner or co-creator.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">Worldsmith</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1.1rem;margin-top:.5rem;">5 guest collaborators per world</strong>
-            <p style="color:var(--fg-2);font-size:.875rem;margin-top:.5rem;">Work with a small creative team across multiple hosted worlds.</p>
+          <article class="co-tier-card">
+            <span class="co-tier-label">Worldsmith</span>
+            <strong class="co-tier-value">5 guest collaborators per world</strong>
+            <p class="co-tier-desc">Work with a small creative team across multiple hosted worlds.</p>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <span style="color:var(--fg-3);font:600 .75rem var(--font-sans);letter-spacing:.06em;text-transform:uppercase;">Loremaster</span>
-            <strong style="display:block;color:var(--fg-1);font-size:1.1rem;margin-top:.5rem;">20 guest collaborators per world</strong>
-            <p style="color:var(--fg-2);font-size:.875rem;margin-top:.5rem;">Coordinate a full creative team at professional scale.</p>
+          <article class="co-tier-card">
+            <span class="co-tier-label">Loremaster</span>
+            <strong class="co-tier-value">20 guest collaborators per world</strong>
+            <p class="co-tier-desc">Coordinate a full creative team at professional scale.</p>
           </article>
         </div>
-        <p style="color:var(--fg-3);font-size:.8125rem;margin-top:1.25rem;">Guest collaborator count includes outstanding invitations. Allowances are beta planning values and may be adjusted before paid checkout opens.</p>
+        <p class="co-footnote">Guest collaborator count includes outstanding invitations. Allowances are beta planning values and may be adjusted before paid checkout opens.</p>
       </div>
     </section>
 
@@ -230,23 +231,23 @@
         <div class="ms-copy-block">
           <p>Writers' Room is where creators build together. Campaign is where the GM presents a controlled experience to players, audiences or participants. They share platform services &mdash; hosting, permissions, the same underlying world &mdash; but they serve different workflows with different permission models.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;">
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1.75rem;">
-            <strong style="color:var(--fg-1);font-size:1.05rem;display:block;margin-bottom:.75rem;">Writers' Room</strong>
-            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;">
-              <li style="color:var(--fg-2);font-size:.875rem;">Creators collaborate on the world itself</li>
-              <li style="color:var(--fg-2);font-size:.875rem;">Editors propose changes to entries and lore</li>
-              <li style="color:var(--fg-2);font-size:.875rem;">The owner decides what becomes canon</li>
-              <li style="color:var(--fg-2);font-size:.875rem;">The goal is a better, more complete world</li>
+        <div class="co-comparison-grid">
+          <article class="co-comparison-card">
+            <strong class="co-comparison-title">Writers' Room</strong>
+            <ul class="co-comparison-list">
+              <li>Creators collaborate on the world itself</li>
+              <li>Editors propose changes to entries and lore</li>
+              <li>The owner decides what becomes canon</li>
+              <li>The goal is a better, more complete world</li>
             </ul>
           </article>
-          <article style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1.75rem;">
-            <strong style="color:var(--fg-1);font-size:1.05rem;display:block;margin-bottom:.75rem;">Campaign</strong>
-            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:.5rem;">
-              <li style="color:var(--fg-2);font-size:.875rem;">The GM presents the world to players</li>
-              <li style="color:var(--fg-2);font-size:.875rem;">Participants experience a controlled view</li>
-              <li style="color:var(--fg-2);font-size:.875rem;">Spoiler control and selective visibility</li>
-              <li style="color:var(--fg-2);font-size:.875rem;">The goal is a guided narrative experience</li>
+          <article class="co-comparison-card">
+            <strong class="co-comparison-title">Campaign</strong>
+            <ul class="co-comparison-list">
+              <li>The GM presents the world to players</li>
+              <li>Participants experience a controlled view</li>
+              <li>Spoiler control and selective visibility</li>
+              <li>The goal is a guided narrative experience</li>
             </ul>
           </article>
         </div>
@@ -257,30 +258,21 @@
     <section class="ms-chapter ms-section" id="faq" data-chapter="faq" data-snap-chapter aria-labelledby="faq-title">
       <div class="ms-wrap">
         <header><span class="ms-eyebrow">Questions</span><h2 class="ms-section-h2" id="faq-title">Frequently asked questions</h2></header>
-        <dl style="display:grid;gap:1.25rem;margin-top:1.5rem;">
-          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <dt style="color:var(--fg-1);font:600 1rem/1.4 var(--font-sans);">Can free users collaborate?</dt>
-            <dd style="color:var(--fg-2);font-size:.9rem;margin-top:.5rem;margin-left:0;">Yes. Core users can accept invitations to join a paid user's hosted world and contribute within the host's allowance. Hosting a collaborative world yourself requires Apprentice or above.</dd>
-          </div>
-          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <dt style="color:var(--fg-1);font:600 1rem/1.4 var(--font-sans);">Can a contributor overwrite my world?</dt>
-            <dd style="color:var(--fg-2);font-size:.9rem;margin-top:.5rem;margin-left:0;">No. The owner's local copy is the canonical version. Contributors work on the hosted copy and their changes remain proposals until the owner explicitly accepts them. Publishing and reconciliation are deliberate owner actions.</dd>
-          </div>
-          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;">
-            <dt style="color:var(--fg-1);font:600 1rem/1.4 var(--font-sans);">What is the difference between Campaign and Writers' Room?</dt>
-            <dd style="color:var(--fg-2);font-size:.9rem;margin-top:.5rem;margin-left:0;">Writers' Room is where creators build together. Campaign is where the GM presents a controlled experience to players, audiences or participants. They share platform services but serve different workflows with different permission models.</dd>
-          </div>
-        </dl>
+        <div class="ms-faq-container"><dl class="faq-list">
+          <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-1">Can free users collaborate?</button></dt><dd class="faq-item__answer" id="collab-faq-1" hidden>Yes. Core users can accept invitations to join a paid user's hosted world and contribute within the host's allowance. Hosting a collaborative world yourself requires Apprentice or above.</dd></div>
+          <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-2">Can a contributor overwrite my world?</button></dt><dd class="faq-item__answer" id="collab-faq-2" hidden>No. The owner's local copy is the canonical version. Contributors work on the hosted copy and their changes remain proposals until the owner explicitly accepts them. Publishing and reconciliation are deliberate owner actions.</dd></div>
+          <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-3">What is the difference between Campaign and Writers' Room?</button></dt><dd class="faq-item__answer" id="collab-faq-3" hidden>Writers' Room is where creators build together. Campaign is where the GM presents a controlled experience to players, audiences or participants. They share platform services but serve different workflows with different permission models.</dd></div>
+        </dl></div>
       </div>
     </section>
 
     <!-- Final CTA -->
     <section class="ms-chapter ms-section" id="cta" aria-labelledby="cta-title">
-      <div class="ms-wrap" style="text-align:center;padding-block:4rem 5rem;">
+      <div class="ms-wrap co-cta-wrap">
         <span class="ms-eyebrow">Build together</span>
         <h2 class="ms-section-h2" id="cta-title">Create together. Keep control.</h2>
-        <p style="color:var(--fg-2);font-size:1.05rem;max-width:36rem;margin:1rem auto 2rem;">Explore how Mimir brings creators together without sacrificing the owner's authority over their world.</p>
-        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <p class="co-cta-desc">Explore how Mimir brings creators together without sacrificing the owner's authority over their world.</p>
+        <div class="co-cta-actions">
           <a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a>
           <a class="ms-btn-secondary" href="features.html">Explore features</a>
         </div>
