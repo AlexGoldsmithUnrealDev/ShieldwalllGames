@@ -227,6 +227,8 @@ Potential future items, not launch promises:
 │   ├── features.html           # Comprehensive feature discovery
 │   ├── mimir-ai.html           # Mimir AI deep dive
 │   ├── proving-grounds.html    # Proving Grounds deep dive
+│   ├── campaign.html           # Campaign management for GMs
+│   ├── collaboration.html      # Writers' Room and collaboration
 │   ├── migration.html          # Reviewed Migration & Import deep dive
 │   ├── roadmap.html
 │   ├── roadmap-data.json
@@ -238,6 +240,8 @@ Potential future items, not launch promises:
 │   │   ├── features.css
 │   │   ├── mimir-ai.css
 │   │   ├── proving-grounds.css
+│   │   ├── campaign.css
+│   │   ├── collaboration.css
 │   │   ├── migration.css
 │   │   └── roadmap.css
 │   └── scripts/
@@ -291,6 +295,27 @@ supported export workflow exists. Do not claim lossless conversion, universal
 relationship or attachment preservation, a dry-run transaction, one-click
 rollback or perfect round-tripping. The source attachment remaining available
 is not the same as a transaction rollback.
+
+### Campaign website status
+
+`mimir/campaign.html` is the public deep dive for GM-facing campaign
+management: preparation, controlled reveals, player access and the
+host-funded access model. The complete Campaign experience is labelled
+"Planned for public beta" and is V1 scope.
+
+The application repository contains substantial Campaign implementation.
+Do not translate internal implementation into an "Available in alpha"
+website claim without an explicit product-release decision.
+
+### Collaboration website status
+
+`mimir/collaboration.html` is the public deep dive for the Writers' Room
+collaborative worldbuilding system: canon authority, roles, the
+propose/review/accept workflow and tier allowances. The complete Writers'
+Room experience is labelled "Planned for public beta" and is V1 scope.
+
+Hosted acceptance confirmation is required before presenting Writers' Room
+as publicly available. The owner's local copy is always canonical.
 
 ---
 
@@ -391,13 +416,15 @@ Always check these together:
 3. `mimir/data/features.json`
 4. `mimir/mimir-ai.html`
 5. `mimir/proving-grounds.html`
-6. `mimir/migration.html`
-7. `mimir/roadmap.html`
-8. `mimir/roadmap-data.json`
-9. `privacy.html`
-10. `terms.html`
-11. `README.md`
-12. `CLAUDE.md`
+6. `mimir/campaign.html`
+7. `mimir/collaboration.html`
+8. `mimir/migration.html`
+9. `mimir/roadmap.html`
+10. `mimir/roadmap-data.json`
+11. `privacy.html`
+12. `terms.html`
+13. `README.md`
+14. `CLAUDE.md`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.
 
@@ -424,4 +451,4 @@ Older reference files under `Mimir Design System/` are retained historical/desig
 
 ---
 
-*Last updated: 15 August 2026. Human owner: Shieldwall Games Ltd.*
+*Last updated: 7 October 2026. Campaign and Collaboration pages added. SEO/AEO audit applied. Human owner: Shieldwall Games Ltd.*
