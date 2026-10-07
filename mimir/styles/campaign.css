@@ -48,6 +48,25 @@
     padding: 5px 12px;
 }
 
+/* Content blocks */
+.cp-content-block {
+    max-width: 720px;
+    margin-top: 24px;
+}
+
+.cp-content-block > p {
+    color: var(--fg-2);
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0 0 16px;
+}
+
+.cp-media-figure {
+    margin: 32px 0 0;
+    max-width: 680px;
+}
+
 /* Media placeholders */
 .cp-media-slot {
     aspect-ratio: 4/3;
