@@ -96,7 +96,8 @@
     text-decoration: none;
 }
 
-.mi-foot-brand img { height: 34px; width: 34px; }
+.mi-foot-brand img { height: 34px; width: auto; }
+.mi-foot-brand img:first-child { width: 34px; }
 
 .mi-socials {
     display: flex;
