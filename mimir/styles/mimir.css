@@ -58,7 +58,8 @@
 .ms-nav { position: relative; z-index: 10; padding: 22px 0; }
 .ms-nav-inner { display: flex; align-items: center; gap: 28px; }
 .ms-nav-brand { display: flex; align-items: center; gap: 9px; }
-.ms-nav-brand img { width: 30px; height: 30px; }
+.ms-nav-brand img { height: 30px; width: auto; }
+.ms-nav-wordmark-img { height: 22px !important; }
 .ms-nav-brand-word { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.005em; }
 .ms-nav-links { display: flex; gap: 26px; margin-left: 24px; }
 .ms-nav-links a { color: var(--fg-2); font-size: 14px; text-decoration: none; }
@@ -177,6 +178,7 @@
 .ms-footer { border-top: 1px solid var(--border); padding: 48px 0 36px; position: relative; z-index: 2; }
 .ms-foot-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 40px; }
 .ms-foot-brand { font-family: var(--font-display); font-size: 28px; }
+.ms-foot-wordmark-img { height: 24px; width: auto; }
 .ms-foot-tag { font-family: var(--font-serif); font-style: italic; color: var(--fg-2); font-size: 14px; margin: 6px 0 0; }
 .ms-foot-col h5,
 .ms-foot-col h2 { font: 600 11px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-3); margin: 0 0 12px; }
