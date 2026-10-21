@@ -115,6 +115,8 @@
 .mg-media-slot span { color: var(--active-chapter-text); font: 700 9px var(--font-sans); letter-spacing: .14em; text-transform: uppercase; }
 .mg-media-slot strong { color: var(--fg-1); font: 500 clamp(28px, 4vw, 52px) var(--font-display); }
 .mg-media-slot figcaption { border-top: 1px solid rgba(215,196,148,.12); color: var(--fg-3); font: 500 11px/1.6 var(--font-sans); padding: 14px 18px; }
+.mg-media-slot picture { display: block; }
+.mg-media-slot picture img { display: block; width: 100%; height: auto; border-radius: 18px; }
 
 .mg-result-card { background: rgba(5,7,10,.54); border: 1px solid rgba(215,196,148,.14); border-radius: 17px; min-height: 230px; padding: 28px; }
 .mg-result-card strong { color: var(--fg-1); display: block; font: 500 34px var(--font-display); margin: 18px 0 14px; }

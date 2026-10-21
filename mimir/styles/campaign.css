@@ -64,7 +64,16 @@
 
 .cp-media-figure {
     margin: 32px 0 0;
-    max-width: 680px;
+    max-width: 900px;
+}
+
+.cp-media-figure picture { display: block; }
+.cp-media-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .04);
 }
 
 /* Media placeholders */

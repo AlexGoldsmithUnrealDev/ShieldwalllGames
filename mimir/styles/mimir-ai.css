@@ -267,6 +267,8 @@ html.ai-enhanced [data-review-run] { display: inline-flex; }
 .ai-media-slot > div span { color: var(--active-chapter-text); font: 700 9px var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
 .ai-media-slot > div strong { color: var(--fg-1); font: 500 clamp(22px, 2vw, 34px)/1.1 var(--font-display); margin-top: 12px; }
 .ai-media-slot figcaption { color: var(--fg-3); font: 500 11px/1.55 var(--font-sans); padding: 12px 10px 0; }
+.ai-media-slot picture { display: block; }
+.ai-media-slot picture img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .04); }
 .ai-media-slot--wide { margin-top: 58px; }
 .ai-media-slot--wide > div { aspect-ratio: 21 / 6; }
 

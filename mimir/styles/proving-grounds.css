@@ -300,6 +300,8 @@
 .pg-media-slot > div span { color: var(--active-chapter-text); font: 700 9px var(--font-sans); letter-spacing: .13em; text-transform: uppercase; }
 .pg-media-slot > div strong { color: var(--fg-1); font: 500 clamp(22px, 2vw, 34px)/1.1 var(--font-display); margin-top: 12px; }
 .pg-media-slot figcaption { color: var(--fg-3); font: 500 11px/1.55 var(--font-sans); padding: 12px 10px 0; }
+.pg-media-slot picture { display: block; }
+.pg-media-slot picture img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .04); }
 .pg-media-slot--wide { width: 100%; }
 .pg-media-slot--wide > div { aspect-ratio: 21 / 6; }
 
