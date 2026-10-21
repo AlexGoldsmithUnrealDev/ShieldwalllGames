@@ -166,9 +166,12 @@
         <div class="ms-hero-cta"><a class="ms-btn-primary" href="#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a><a class="ms-btn-secondary" href="#product">See how Mimir works</a></div>
         <p class="ms-launch-state">Mimir is currently in alpha ahead of its public beta.</p>
       </div>
-      <figure class="ms-media ms-media--hero ms-media--placeholder">
-        <div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Real product view coming next</span><strong>Mimir workspace</strong><span>Entries · relationships · timeline · map</span></div>
-        <figcaption>Reserved for a real Mimir workspace capture. No mock interface has been fabricated.</figcaption>
+      <figure class="ms-media ms-media--hero">
+        <picture>
+          <source srcset="assets/captures/homepage/hero-workspace.avif" type="image/avif">
+          <img src="assets/captures/homepage/hero-workspace.webp" alt="The Mimir workspace showing a Norse mythology world: a grid of illustrated entries for characters, quests, dialogues, maps and events, with type filters along the top." width="1600" height="1000">
+        </picture>
+        <figcaption>The Mimir workspace with a Norse mythology demo world.</figcaption>
       </figure>
     </div>
   </header>
@@ -185,8 +188,14 @@
 
     <section class="ms-section ms-wrap ms-chapter" id="product" data-chapter="product" data-snap-chapter>
       <div class="ms-section-head"><span class="ms-eyebrow">Product overview</span><h2 class="ms-section-h2">See Mimir working.</h2><p class="ms-section-sub">Worldbuilding software should be easier to understand by watching it than by reading a feature list. Follow one connected world through entries, relationships, trees, timeline, map, Mimir AI and Proving Grounds.</p></div>
-      <div class="ms-video-shell ms-media--placeholder" data-analytics-event="mimir_demo_play" aria-describedby="demo-caption"><div class="ms-video-placeholder" aria-hidden="true"><span class="ms-media-kicker">60–90 second product overview</span><strong>Real product recording will appear here</strong><span>Caption and transcript ready</span></div></div>
-      <p class="ms-media-caption" id="demo-caption">Reserved for a recording of the current beta build using one consistent demo world.</p>
+      <div class="ms-video-shell" data-analytics-event="mimir_demo_play" aria-describedby="demo-caption">
+        <video controls preload="none" poster="assets/captures/homepage/video-poster.webp" width="1600" height="800">
+          <source src="assets/video/core-workflow.webm" type="video/webm">
+          <source src="assets/video/core-workflow.mp4" type="video/mp4">
+          <track kind="captions" src="assets/video/core-workflow.en.vtt" srclang="en" label="English" default>
+        </video>
+      </div>
+      <p class="ms-media-caption" id="demo-caption">A walkthrough of the core Mimir workflow using one consistent demo world.</p>
       <div class="ms-demo-steps" aria-label="Planned product overview sequence"><span>01 Create and connect</span><span>02 See the world</span><span>03 Ask and review</span><span>04 Test in Proving Grounds (planned)</span></div>
     </section>
 
@@ -195,8 +204,26 @@
         <div class="ms-copy-block"><span class="ms-eyebrow">Your world is bigger than a pile of notes.</span><h2 class="ms-section-h2">Complex worlds should become clearer as they grow.</h2><p>Pages are useful, but a world is made from the relationships between them. Mimir connects characters, places, cultures, factions, events and stories so you can move from a detail to the wider world around it.</p><p>See the same canon through trees, timelines, maps, backlinks and relationships. Build worlds, not documents.</p></div>
         <div class="ms-media-composition">
           <div class="ms-media-grid ms-media-grid--two">
-            <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future capture</span><strong>Tree visualisation</strong></div><figcaption>Family or relationship tree using real world data.</figcaption></figure>
-            <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Future composite</span><strong>Timeline + map</strong></div><figcaption>One canon understood chronologically and spatially.</figcaption></figure>
+            <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
+              <picture>
+                <source srcset="assets/captures/homepage/family-tree.avif" type="image/avif">
+                <img src="assets/captures/homepage/family-tree.webp" loading="lazy" alt="Mimir's family tree for Odin, showing his spouse Frigg, their children and Baldr's son Forseti." width="1600" height="1000">
+              </picture>
+              <figcaption>Family tree using real world data.</figcaption>
+            </figure>
+            <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
+              <div class="ms-media-grid ms-media-grid--two">
+                <picture>
+                  <source srcset="assets/captures/homepage/timeline.avif" type="image/avif">
+                  <img src="assets/captures/homepage/timeline.webp" loading="lazy" alt="Mimir's timeline at era zoom, with dated events along a line from year 1 to year 1001 of the Mythic Age." width="1600" height="1000">
+                </picture>
+                <picture>
+                  <source srcset="assets/captures/homepage/map.avif" type="image/avif">
+                  <img src="assets/captures/homepage/map.webp" loading="lazy" alt="An illustrated map of the Nine Realms around the world-tree Yggdrasil, open in Mimir with location pins." width="1600" height="1000">
+                </picture>
+              </div>
+              <figcaption>One canon understood chronologically and spatially.</figcaption>
+            </figure>
           </div>
         </div>
       </div>
