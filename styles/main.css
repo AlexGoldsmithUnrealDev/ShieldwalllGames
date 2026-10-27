@@ -651,3 +651,93 @@ a:hover {
 
 .form-help a,
 .form-fallback a { color: var(--fg-link); }
+
+/* --- Cookie consent (scripts/consent.js) --- */
+.cookie-banner {
+    background: rgba(20, 16, 13, .97);
+    border-top: 1px solid rgba(214, 201, 168, .22);
+    bottom: 0;
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, .4);
+    left: 0;
+    padding: 16px 20px calc(16px + env(safe-area-inset-bottom, 0px));
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+}
+
+.cookie-banner[hidden] { display: none; }
+
+.cookie-banner__inner {
+    align-items: center;
+    display: flex;
+    gap: 16px 32px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.cookie-banner__text {
+    color: var(--color-ink-100);
+    flex: 1 1 auto;
+    font: 400 14px/1.55 var(--font-sans);
+    margin: 0;
+    max-width: 68ch;
+}
+
+.cookie-banner__text a { color: var(--fg-link); white-space: nowrap; }
+
+.cookie-banner__actions {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+}
+
+/* Both choices share one style so neither is favoured. */
+.consent-btn {
+    background: var(--color-vellum-100);
+    border: 1px solid var(--color-vellum-100);
+    border-radius: var(--radius-md);
+    color: var(--color-ink-900);
+    cursor: pointer;
+    font: 600 14px/1 var(--font-sans);
+    min-height: 44px;
+    min-width: 128px;
+    padding: 0 20px;
+}
+
+.consent-btn:hover { background: #fff; border-color: #fff; }
+
+.consent-btn:focus-visible {
+    outline: 2px solid var(--fg-link);
+    outline-offset: 3px;
+}
+
+.consent-placeholder {
+    align-items: center;
+    border: 1px dashed rgba(214, 201, 168, .3);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 8px auto 0;
+    max-width: 520px;
+    padding: 22px 24px;
+    text-align: center;
+}
+
+.consent-placeholder p {
+    color: var(--color-ink-200);
+    font: 400 14px/1.55 var(--font-sans);
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .cookie-banner__inner {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .cookie-banner__actions .consent-btn {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}

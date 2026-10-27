@@ -357,6 +357,15 @@ Provider: **MailerLite**.
 
 Do not reintroduce Buttondown.
 
+## Cookie consent
+
+- `scripts/consent.js` and the "Cookie consent" block in `styles/main.css` run the banner on every page. Include `consent.js` (deferred) before `</body>` on any new page.
+- The banner has two equal buttons only: **Reject all** and **Accept all**, with one short sentence and a "Cookie notice" link to `/privacy.html#cookies`. The owner rejected a "Choose" layer and per-category copy as cluttered. Do not add them back.
+- Every page footer carries `<a href="#" data-cookie-settings>Cookie settings</a>` to reopen the banner.
+- Optional scripts are held as `<script type="text/plain" data-consent="forms|analytics">`. Keep MailerLite's full loader snippet in one held script; splitting it breaks `ml()`.
+- Each MailerLite form sits in `<div data-consent-placeholder="forms">`. If the visitor rejects, it shows "Allow and show the form", which enables forms only.
+- The choice is kept in `localStorage` (`sw-consent`) for 12 months. Bump `VERSION` in `consent.js` when the optional purposes change.
+
 ---
 
 ## Privacy and legal-copy rules
