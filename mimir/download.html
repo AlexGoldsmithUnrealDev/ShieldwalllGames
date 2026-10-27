@@ -1,0 +1,206 @@
+<!--
+  TESTER PAGE — currently noindex, shared by URL only.
+  At public launch: remove the noindex meta, add to sitemap.xml,
+  and point the "Join the beta" nav buttons here.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17162a" />
+  <meta name="robots" content="noindex" />
+  <title>Download Mimir</title>
+  <meta name="description" content="Download Mimir for Windows. Local-first worldbuilding for Game Masters, writers and developers." />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
+  <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
+  <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <style>
+    .dl-page { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    .dl-hero { padding: clamp(100px, 14vh, 160px) 0 48px; }
+    .dl-hero h1 { font: 400 clamp(42px, 5.5vw, 72px)/1 var(--font-display); letter-spacing: -.02em; margin: 0; }
+    .dl-hero p { color: var(--fg-2); font: 400 17px/1.65 var(--font-serif); max-width: 540px; margin: 20px 0 0; }
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--accent); color: var(--fg-on-accent);
+      font: 600 16px/1 var(--font-sans); text-decoration: none;
+      padding: 16px 32px; border-radius: 99px; margin-top: 32px;
+      transition: filter 180ms ease;
+    }
+    .dl-btn:hover { filter: brightness(1.1); }
+    .dl-btn svg { flex-shrink: 0; }
+    .dl-meta { color: var(--fg-3); font: 400 13px/1.6 var(--font-sans); margin-top: 12px; }
+    .dl-section { padding: 40px 0; border-top: 1px solid var(--border); }
+    .dl-section h2 { font: 400 clamp(24px, 3vw, 32px)/1.15 var(--font-display); margin: 0 0 20px; }
+    .dl-steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+    .dl-steps > li {
+      counter-increment: step;
+      padding: 16px 0; border-bottom: 1px solid var(--border);
+      font: 400 15px/1.7 var(--font-serif); color: var(--fg-2);
+    }
+    .dl-steps > li:last-child { border-bottom: none; }
+    .dl-steps > li::before {
+      content: counter(step);
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(255,255,255,.06); border: 1px solid var(--border);
+      color: var(--fg-3); font: 600 12px/1 var(--font-sans);
+      margin-right: 12px; vertical-align: middle;
+    }
+    .dl-steps strong { color: var(--fg-1); font-weight: 600; }
+    .dl-steps code {
+      font-family: var(--font-mono); font-size: 13px;
+      background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 4px;
+      color: var(--fg-1); word-break: break-all;
+    }
+    .dl-sub { margin: 8px 0 0 40px; padding: 0; list-style: none; }
+    .dl-sub li { padding: 4px 0; font-size: 14px; color: var(--fg-3); }
+    .dl-sub li::before { content: ""; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--fg-3); margin-right: 10px; vertical-align: middle; }
+    .dl-warning {
+      background: rgba(184, 90, 44, .1); border: 1px solid rgba(184, 90, 44, .25);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font: 500 14px/1.6 var(--font-sans); color: var(--fg-1);
+    }
+    .dl-warning strong { color: var(--accent); }
+    .dl-screenshot-placeholder {
+      background: rgba(255,255,255,.03); border: 1px dashed var(--border);
+      border-radius: 10px; padding: 32px; margin: 16px 0;
+      text-align: center; color: var(--fg-3); font: 500 12px/1.5 var(--font-sans);
+    }
+    .dl-footer-cta { padding: 48px 0 32px; text-align: center; }
+    .dl-footer-cta p { color: var(--fg-3); font: 400 14px/1.6 var(--font-sans); margin-top: 12px; }
+  </style>
+</head>
+<body class="ms-well-page mi-page">
+<div class="ms-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ms-well-stage" aria-hidden="true">
+    <div class="ms-well-layer ms-well-layer--a is-active"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-layer ms-well-layer--b"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-stage__readability"></div><div class="ms-well-stage__depth"></div>
+  </div>
+
+  <nav class="ms-nav mi-nav" aria-label="Mimir" data-mi-nav>
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-well-mark.webp" alt="" /><img src="../assets/logos/mimir-wordmark.webp" alt="Mimir" class="ms-nav-wordmark-img" /></a>
+      <div class="ms-nav-links">
+        <a href="./#product">Product</a><a href="features.html">Features</a><a href="campaign.html">Campaign</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span><div class="ms-nav-cta"><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a></div>
+      <button class="mi-nav-toggle" type="button" aria-expanded="false" aria-controls="download-mobile-menu" aria-label="Open Mimir navigation"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mi-mobile-menu" id="download-mobile-menu" hidden><div class="ms-wrap">
+      <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="campaign.html">Campaign</a><a href="collaboration.html">Collaboration</a><a href="migration.html">Migration</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+    </div></div>
+  </nav>
+
+  <main id="main-content">
+    <div class="dl-page">
+
+      <header class="dl-hero">
+        <h1>Download Mimir</h1>
+        <p>Local-first worldbuilding for Game Masters, writers and developers. Your world lives on your machine as plain files you control.</p>
+        <a class="dl-btn" href="https://pub-d7c1306e2fa048b5a9c0614b4c3ca224.r2.dev/Mimir-Setup.exe" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows
+        </a>
+        <p class="dl-meta">Windows 10 or 11, 64-bit. About 150 MB. Mac support is coming later.</p>
+      </header>
+
+      <section class="dl-section" id="browser-warning">
+        <h2>Your browser may warn you</h2>
+        <p style="color:var(--fg-2); font:400 15px/1.7 var(--font-serif)">Mimir is new software and not yet widely downloaded, so your browser may show a warning. This is normal.</p>
+        <ol class="dl-steps">
+          <li><strong>Edge:</strong> click the three dots <code>...</code> next to the download, then <strong>Keep</strong>, then <strong>Show more</strong>, then <strong>Keep anyway</strong>.</li>
+          <li><strong>Chrome:</strong> click <strong>Keep</strong>.</li>
+        </ol>
+      </section>
+
+      <section class="dl-section" id="install">
+        <h2>Install</h2>
+        <ol class="dl-steps">
+          <li>Open <strong>Mimir-Setup.exe</strong>.</li>
+          <li>
+            A blue <strong>"Windows protected your PC"</strong> box may appear.
+            Click <strong>More info</strong>, then <strong>Run anyway</strong>.
+            <div class="dl-screenshot-placeholder">Screenshot placeholder: Windows SmartScreen dialog. Alex will supply this.</div>
+          </li>
+          <li>Mimir installs by itself and opens when it is ready.</li>
+        </ol>
+      </section>
+
+      <section class="dl-section" id="first-launch">
+        <h2>First launch</h2>
+        <ol class="dl-steps">
+          <li>Read the licence and click <strong>I accept</strong>.</li>
+          <li>Sign up with your email address.</li>
+          <li>Tell Alex the email you used so he can add your tester plan.</li>
+        </ol>
+      </section>
+
+      <section class="dl-section" id="test-payments">
+        <h2>Test payments</h2>
+        <div class="dl-warning">
+          <strong>This is a test server.</strong> No real money is ever taken.
+        </div>
+        <p style="color:var(--fg-2); font:400 15px/1.7 var(--font-serif)">Most testers get a free tester plan from Alex. If he asks you to try a purchase, use this test card:</p>
+        <ol class="dl-steps">
+          <li>Card number: <code>4242 4242 4242 4242</code></li>
+          <li>Expiry: any future date, e.g. <code>12/34</code></li>
+          <li>CVC: any three digits, e.g. <code>123</code></li>
+          <li>Postcode: anything</li>
+        </ol>
+        <div class="dl-warning">
+          <strong>Never type a real card number.</strong> This is a test environment.
+        </div>
+      </section>
+
+      <section class="dl-section" id="backups">
+        <h2>Back up your worlds</h2>
+        <p style="color:var(--fg-2); font:400 15px/1.7 var(--font-serif)">Your worlds are plain files in the folder you chose when you created them. Copy that folder somewhere safe now and then. That is all you need to do.</p>
+      </section>
+
+      <section class="dl-section" id="updates">
+        <h2>Updates</h2>
+        <p style="color:var(--fg-2); font:400 15px/1.7 var(--font-serif)">Mimir checks for updates every hour. When one is ready, <strong>"Update ready · Restart"</strong> appears in the top-right corner. Click it to update, or the update installs automatically the next time you close Mimir.</p>
+      </section>
+
+      <section class="dl-section" id="bugs">
+        <h2>Report a bug</h2>
+        <ol class="dl-steps">
+          <li>In Mimir, open <strong>Community</strong>, then <strong>Feedback</strong>.</li>
+          <li>Say what you did, what you expected, and what happened.</li>
+          <li>A screenshot helps. Press <code>Windows + Shift + S</code> to take one.</li>
+          <li>If Alex asks for the log file, it is at: <code>%APPDATA%\Mimir\logs\mimir.log</code></li>
+        </ol>
+      </section>
+
+      <div class="dl-footer-cta">
+        <a class="dl-btn" href="https://pub-d7c1306e2fa048b5a9c0614b4c3ca224.r2.dev/Mimir-Setup.exe" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows
+        </a>
+        <p>Windows 10 or 11, 64-bit. About 150 MB.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="ms-footer"><div class="ms-wrap">
+    <div class="ms-foot-grid mi-foot-grid">
+      <div><a class="mi-foot-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-well-mark.webp" alt="" /><img src="../assets/logos/mimir-wordmark.webp" alt="Mimir" class="ms-foot-wordmark-img" /></a><p class="ms-foot-tag">Local-first worldbuilding for creators.</p><p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p><div class="mi-socials" aria-label="Verified Shieldwall Games social links"><a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer">X</a></div></div>
+      <div class="ms-foot-col"><h2>Mimir</h2><a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="campaign.html">Campaign</a><a href="collaboration.html">Collaboration</a><a href="migration.html">Migration</a><a href="./#worldbuilders">For Worldbuilders</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a href="./#beta-signup">Join the beta</a></div>
+      <div class="ms-foot-col"><h2>Shieldwall Games</h2><a href="../">Shieldwall Games</a><a href="../ashborn/">Ashborn CCG</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>
+    </div>
+    <div class="ms-foot-base"><span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span><span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></span></div>
+  </div></footer>
+</div>
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/internal.js?v=20260814-1" defer></script>
+</body>
+</html>
