@@ -192,5 +192,115 @@
 <script src="scripts/migration-chapters.js?v=20260815-1" defer></script>
 <script src="scripts/chapters.js?v=20260815-2" defer></script>
 <script src="scripts/migration.js?v=20260815-1" defer></script>
+<!-- Cookie banner (spec: docs/website/cookie-banner.md) -->
+<style>
+.swc{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:640px;margin:0 auto;
+  background:#1d1814;color:#f2ead9;border:1px solid rgba(214,201,168,.25);border-radius:10px;
+  padding:18px 20px;font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.swc[hidden]{display:none}
+.swc h2{font-size:17px;margin:0 0 8px}
+.swc p{margin:0 0 12px}
+.swc a{color:#e3a06f}
+.swc-row{display:flex;flex-wrap:wrap;gap:10px}
+.swc button{flex:1 1 140px;padding:10px 14px;border-radius:6px;border:1px solid rgba(214,201,168,.35);
+  background:#2a231d;color:#f2ead9;font:600 14px system-ui,sans-serif;cursor:pointer}
+.swc button.swc-main{background:#b85a2c;border-color:#b85a2c;color:#fff}
+.swc button:focus-visible,.swc input:focus-visible{outline:2px solid #e3a06f;outline-offset:2px}
+.swc-choose{margin:4px 0 14px;display:grid;gap:10px}
+.swc-choose label{display:flex;gap:10px;align-items:flex-start}
+.swc-choose small{display:block;opacity:.8}
+.swc-ph{padding:12px;border:1px dashed rgba(128,128,128,.5);border-radius:8px}
+</style>
+<div class="swc" id="swc" role="dialog" aria-modal="false" aria-labelledby="swc-title" hidden>
+  <h2 id="swc-title">Cookies on shieldwallgames.co.uk</h2>
+  <p>We use a few cookies to run our sign-up forms and, with your permission, to understand how the site is used so we can improve it and Mimir. We never sell your data. You can change your mind at any time with Cookie settings at the bottom of every page. <a href="/privacy.html#cookies">Cookie notice</a></p>
+  <div class="swc-choose" id="swc-choose" hidden>
+    <label><input type="checkbox" checked disabled> <span><strong>Necessary</strong><small>Remembers your cookie choice. Always on.</small></span></label>
+    <label><input type="checkbox" id="swc-forms"> <span><strong>Sign-up forms</strong><small>Lets our mailing-list forms (run by MailerLite) work.</small></span></label>
+    <label><input type="checkbox" id="swc-analytics"> <span><strong>Analytics</strong><small>Counts visits and which pages are read, so we can improve the site and Mimir.</small></span></label>
+  </div>
+  <div class="swc-row" id="swc-first">
+    <button type="button" class="swc-main" data-swc="all">Accept all</button>
+    <button type="button" class="swc-main" data-swc="none">Reject all</button>
+    <button type="button" data-swc="choose">Choose…</button>
+  </div>
+  <div class="swc-row" id="swc-save" hidden>
+    <button type="button" class="swc-main" data-swc="save">Save my choices</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'sw-consent';
+  var CONSENT_VERSION = 1;
+  var MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
+  var banner = document.getElementById('swc');
+  function read() {
+    try {
+      var c = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (!c || c.v !== CONSENT_VERSION || Date.now() - c.at > MAX_AGE_MS) return null;
+      return c;
+    } catch (e) { return null; }
+  }
+  function write(forms, analytics) {
+    var c = { v: CONSENT_VERSION, at: Date.now(), forms: !!forms, analytics: !!analytics };
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    return c;
+  }
+  function activate(c) {
+    var held = document.querySelectorAll('script[type="text/plain"][data-consent]');
+    for (var i = 0; i < held.length; i++) {
+      var el = held[i];
+      if (!c[el.getAttribute('data-consent')] || el.hasAttribute('data-swc-done')) continue;
+      el.setAttribute('data-swc-done', '');
+      var s = document.createElement('script');
+      if (el.getAttribute('data-src')) { s.src = el.getAttribute('data-src'); s.async = true; }
+      else { s.text = el.text; }
+      el.parentNode.insertBefore(s, el.nextSibling);
+    }
+    var ph = document.querySelectorAll('[data-consent-placeholder]');
+    for (var j = 0; j < ph.length; j++) {
+      var on = !!c[ph[j].getAttribute('data-consent-placeholder')];
+      var note = ph[j].querySelector('.swc-ph');
+      if (on && note) note.remove();
+      if (!on && !note) {
+        var d = document.createElement('div');
+        d.className = 'swc-ph';
+        d.innerHTML = 'Our sign-up form is run by MailerLite and uses cookies. <button type="button">Show the form</button>';
+        d.querySelector('button').addEventListener('click', function () {
+          var cur = read() || { forms: false, analytics: false };
+          apply(write(true, cur.analytics));
+        });
+        ph[j].insertBefore(d, ph[j].firstChild);
+      }
+    }
+  }
+  function apply(c) { banner.hidden = true; activate(c); }
+  function open() {
+    var c = read() || { forms: false, analytics: false };
+    document.getElementById('swc-forms').checked = c.forms;
+    document.getElementById('swc-analytics').checked = c.analytics;
+    banner.hidden = false;
+    banner.querySelector('button').focus();
+  }
+  banner.addEventListener('click', function (e) {
+    var what = e.target && e.target.getAttribute('data-swc');
+    if (what === 'all') apply(write(true, true));
+    else if (what === 'none') apply(write(false, false));
+    else if (what === 'choose') {
+      document.getElementById('swc-choose').hidden = false;
+      document.getElementById('swc-first').hidden = true;
+      document.getElementById('swc-save').hidden = false;
+    } else if (what === 'save') {
+      apply(write(document.getElementById('swc-forms').checked, document.getElementById('swc-analytics').checked));
+    }
+  });
+  document.addEventListener('click', function (e) {
+    var t = e.target && e.target.closest && e.target.closest('[data-cookie-settings]');
+    if (t) { e.preventDefault(); open(); }
+  });
+  var saved = read();
+  if (saved) activate(saved); else { activate({ forms: false, analytics: false }); open(); }
+})();
+</script>
 </body>
 </html>
