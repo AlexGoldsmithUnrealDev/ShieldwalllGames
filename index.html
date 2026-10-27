@@ -56,12 +56,9 @@
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/shieldwall.css" />
 
-  <!-- MailerLite universal script -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  <!-- MailerLite universal script (consent-gated) -->
+  <script type="text/plain" data-consent="forms" data-src="https://assets.mailerlite.com/js/universal.js"></script>
+  <script type="text/plain" data-consent="forms">
     ml('account', '2430389');
   </script>
 </head>
@@ -215,7 +212,7 @@
             collectible card game set in the Viking Age. Details are being
             forged. Sign up to be first to know when it's ready.
           </p>
-          <div class="ml-embedded" data-form="rvVjbn"></div>
+          <div data-consent-placeholder="forms"><div class="ml-embedded" data-form="rvVjbn"></div></div>
           <noscript><p class="form-fallback">JavaScript is required to load the signup form. You can instead email <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">alexander.goldsmith@shieldwallgames.co.uk</a>.</p></noscript>
           <p class="form-help">If the form is blocked by a browser extension, email <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">alexander.goldsmith@shieldwallgames.co.uk</a>.</p>
         </div>
