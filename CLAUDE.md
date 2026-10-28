@@ -402,6 +402,17 @@ conservative: no fake ratings, launch dates, checkout Offers or download counts.
 Owner-supplied artwork and product-capture requirements are consolidated in
 `mimir/assets/MEDIA_CHECKLIST.md`; do not create fake media to fill those slots.
 
+Current product captures and the overview video (`mimir/assets/captures/`,
+`mimir/assets/video/`) are real screens from a development build using the
+Nine Realms demo world. No AI answers are shown, because none were generated
+live. Captions for planned or in-development features say "development build",
+never "available in alpha". Social preview images live in `mimir/assets/og/`.
+
+Features page media and pop-up images come from the `image`, `imageAlt` and
+`mediaCaption` fields in `mimir/data/features.json`. After editing them, run
+`node mimir/scripts/generate-features.js` to rebuild the static block in
+`features.html`.
+
 GitHub Pages should not be treated as the permanent commercial SaaS/download/account infrastructure. Before paid launch, migrate or confirm the intended production hosting/download architecture.
 
 ---
@@ -459,4 +470,4 @@ Older reference files under `Mimir Design System/` are retained historical/desig
 
 ---
 
-*Last updated: 7 October 2026. Campaign and Collaboration pages added. SEO/AEO audit applied. Human owner: Shieldwall Games Ltd.*
+*Last updated: 28 October 2026. Product captures, overview video and social images added across the Mimir pages. Human owner: Shieldwall Games Ltd.*

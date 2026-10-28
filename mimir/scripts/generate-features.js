@@ -31,18 +31,36 @@ function featureMarkup(feature, tiers, statuses, index) {
     ].join('\n');
 }
 
+/* Pixel size of a WebP capture, so the page can reserve its space. */
+function webpSize(file) {
+    var b = fs.readFileSync(file);
+    var chunk = b.toString('ascii', 12, 16);
+    if (chunk === 'VP8X') return [1 + b.readUIntLE(24, 3), 1 + b.readUIntLE(27, 3)];
+    if (chunk === 'VP8 ') return [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
+    if (chunk === 'VP8L') {
+        var bits = b.readUInt32LE(21);
+        return [(bits & 0x3fff) + 1, ((bits >> 14) & 0x3fff) + 1];
+    }
+    throw new Error('Unrecognised WebP: ' + file);
+}
+
 function mediaMarkup(category) {
     var media = [];
+    var labels = [];
     category.features.forEach(function (feature) {
-        if (feature.media && media.indexOf(feature.media) === -1) media.push(feature.media);
+        if (feature.media && feature.image && labels.indexOf(feature.media) === -1) {
+            labels.push(feature.media);
+            media.push(feature);
+        }
     });
     var limit = category.id === 'visualise' ? 3 : (category.id === 'understand' ? 2 : 1);
     media = media.slice(0, limit);
     if (!media.length) return '';
     return [
-        '        <div class="ft-media-cluster ft-media-cluster--' + esc(category.id) + '" aria-label="Planned product media">',
-        media.map(function (label, index) {
-            return '          <figure class="ft-media-slot' + (index === 0 ? ' ft-media-slot--primary' : '') + '"><div aria-hidden="true"><span>Product capture</span><strong>' + esc(label) + '</strong></div><figcaption>' + esc(label) + ' screenshot slot</figcaption></figure>';
+        '        <div class="ft-media-cluster ft-media-cluster--' + esc(category.id) + '" aria-label="Product captures">',
+        media.map(function (feature, index) {
+            var size = webpSize(path.join(mimirDir, feature.image + '.webp'));
+            return '          <figure class="ft-media-slot' + (index === 0 ? ' ft-media-slot--primary' : '') + '"><picture><source type="image/avif" srcset="' + esc(feature.image) + '.avif" /><img src="' + esc(feature.image) + '.webp" alt="' + esc(feature.imageAlt) + '" width="' + size[0] + '" height="' + size[1] + '" loading="lazy" /></picture><figcaption>' + esc(feature.mediaCaption || feature.media) + '</figcaption></figure>';
         }).join('\n'),
         '        </div>'
     ].join('\n');

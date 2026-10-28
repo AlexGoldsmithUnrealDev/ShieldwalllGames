@@ -123,8 +123,16 @@
             var dot = document.createElement('i'); dot.setAttribute('aria-hidden', 'true'); state.insertBefore(dot, state.firstChild); meta.appendChild(state);
 
             var media = document.getElementById('feature-detail-media');
-            if (feature.media) { media.querySelector('p').textContent = feature.media + '. This slot is ready for a real product screenshot or video; no interface has been fabricated.'; media.removeAttribute('hidden'); }
-            else media.setAttribute('hidden', '');
+            if (feature.image) {
+                media.querySelector('source').setAttribute('srcset', feature.image + '.avif');
+                var shot = media.querySelector('img');
+                shot.src = feature.image + '.webp';
+                shot.alt = feature.imageAlt || '';
+                media.querySelector('figcaption').textContent = feature.mediaCaption || feature.media || '';
+                media.removeAttribute('hidden');
+            } else {
+                media.setAttribute('hidden', '');
+            }
 
             renderRelated(feature);
             renderDeepDive(feature);

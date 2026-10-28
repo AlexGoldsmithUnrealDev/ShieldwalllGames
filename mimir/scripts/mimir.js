@@ -121,6 +121,46 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    /* ------------------------------------------------------------------
+       Product galleries
+       Without JavaScript every capture is shown in sequence. With it, the
+       tab list appears and one large capture is shown at a time.
+       ------------------------------------------------------------------ */
+    document.querySelectorAll('[data-ms-gallery]').forEach(function (gallery) {
+        var tabList = gallery.querySelector('[role="tablist"]');
+        var tabs = Array.prototype.slice.call(gallery.querySelectorAll('[role="tab"]'));
+        var panels = Array.prototype.slice.call(gallery.querySelectorAll('[role="tabpanel"]'));
+        if (!tabList || !tabs.length || tabs.length !== panels.length) return;
+
+        function select(index, focus) {
+            tabs.forEach(function (tab, i) {
+                var active = i === index;
+                tab.setAttribute('aria-selected', String(active));
+                tab.tabIndex = active ? 0 : -1;
+                panels[i].hidden = !active;
+                if (active && focus) tab.focus();
+            });
+        }
+
+        tabs.forEach(function (tab, index) {
+            tab.addEventListener('click', function () { select(index, false); });
+            tab.addEventListener('keydown', function (event) {
+                var next = null;
+                if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+                if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+                if (event.key === 'Home') next = 0;
+                if (event.key === 'End') next = tabs.length - 1;
+                if (next === null) return;
+                event.preventDefault();
+                select(next, true);
+            });
+        });
+
+        tabList.hidden = false;
+        gallery.classList.add('is-enhanced');
+        select(0, false);
+    });
+
     var pricing = document.getElementById('pricing');
     if (pricing && 'IntersectionObserver' in window) {
         var pricingSeen = false;

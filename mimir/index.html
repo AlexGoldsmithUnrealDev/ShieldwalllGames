@@ -10,8 +10,13 @@
   <meta property="og:title" content="Mimir: See Your Whole World. Keep It Yours." />
   <meta property="og:description" content="Local-first worldbuilding for GMs, writers and developers. Build, connect, test and understand your world without giving up ownership of your files." />
   <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/" />
+  <meta property="og:image" content="https://shieldwallgames.co.uk/mimir/assets/og/mimir.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Mimir library for the Nine Realms demo world, with Óðinn's entry opened" />
   <!-- Add assets/mimir/social/mimir-og-1200x630.jpg when the final logo and real UI capture exist. -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://shieldwallgames.co.uk/mimir/assets/og/mimir.jpg" />
   <meta name="twitter:title" content="Mimir: See Your Whole World. Keep It Yours." />
   <meta name="twitter:description" content="Local-first worldbuilding for GMs, writers and developers." />
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
@@ -172,10 +177,10 @@
       </div>
       <figure class="ms-media ms-media--hero">
         <picture>
-          <source srcset="assets/captures/homepage/hero-workspace.avif" type="image/avif">
-          <img src="assets/captures/homepage/hero-workspace.webp" alt="The Mimir workspace showing a Norse mythology world: a grid of illustrated entries for characters, quests, dialogues, maps and events, with type filters along the top." width="1600" height="1000">
+          <source srcset="assets/captures/homepage/hero-library-entry.avif" type="image/avif">
+          <img src="assets/captures/homepage/hero-library-entry.webp" alt="The Mimir library for a Norse mythology world: a grid of illustrated entries with type filters. Óðinn's card is highlighted and his character entry is shown enlarged in front of the grid." width="2400" height="1500">
         </picture>
-        <figcaption>The Mimir workspace with a Norse mythology demo world.</figcaption>
+        <figcaption>Every entry in one library, with one opened up: Óðinn from the Nine Realms demo world.</figcaption>
       </figure>
     </div>
   </header>
@@ -193,72 +198,116 @@
     <section class="ms-section ms-wrap ms-chapter" id="product" data-chapter="product" data-snap-chapter>
       <div class="ms-section-head"><span class="ms-eyebrow">Product overview</span><h2 class="ms-section-h2">See Mimir working.</h2><p class="ms-section-sub">Worldbuilding software should be easier to understand by watching it than by reading a feature list. Follow one connected world through entries, relationships, trees, timeline, map, Mimir AI and Proving Grounds.</p></div>
       <div class="ms-video-shell" data-analytics-event="mimir_demo_play" aria-describedby="demo-caption">
-        <video controls preload="none" poster="assets/captures/homepage/video-poster.webp" width="1600" height="800">
+        <video controls preload="none" poster="assets/captures/homepage/video-poster.webp" width="1600" height="1000">
           <source src="assets/video/core-workflow.webm" type="video/webm">
           <source src="assets/video/core-workflow.mp4" type="video/mp4">
           <track kind="captions" src="assets/video/core-workflow.en.vtt" srclang="en" label="English" default>
         </video>
       </div>
-      <p class="ms-media-caption" id="demo-caption">A walkthrough of the core Mimir workflow using one consistent demo world.</p>
-      <div class="ms-demo-steps" aria-label="Planned product overview sequence"><span>01 Create and connect</span><span>02 See the world</span><span>03 Ask and review</span><span>04 Test in Proving Grounds (planned)</span></div>
+      <p class="ms-media-caption" id="demo-caption">A 90-second walkthrough of a development build with the Nine Realms demo world: library, entries, family tree, map, timeline, story planning, a quest test, campaign permissions, Ask Mimir and history. Some of what it shows is still in development or planned for public beta. Captions are included.</p>
+      <div class="ms-demo-steps" aria-label="Product overview sequence"><span>01 Library and entries</span><span>02 Trees, maps and timeline</span><span>03 Plans, quests and campaigns</span><span>04 Ask Mimir and history</span></div>
     </section>
 
     <section class="ms-section ms-section--band ms-chapter" id="connected-worldbuilding" data-chapter="connected" data-snap-chapter>
-      <div class="ms-wrap ms-split">
-        <div class="ms-copy-block"><span class="ms-eyebrow">Your world is bigger than a pile of notes.</span><h2 class="ms-section-h2">Complex worlds should become clearer as they grow.</h2><p>Pages are useful, but a world is made from the relationships between them. Mimir connects characters, places, cultures, factions, events and stories so you can move from a detail to the wider world around it.</p><p>See the same canon through trees, timelines, maps, backlinks and relationships. Build worlds, not documents.</p></div>
-        <div class="ms-media-composition">
-          <div class="ms-media-grid ms-media-grid--two">
-            <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
-              <picture>
-                <source srcset="assets/captures/homepage/family-tree.avif" type="image/avif">
-                <img src="assets/captures/homepage/family-tree.webp" loading="lazy" alt="Mimir's family tree for Odin, showing his spouse Frigg, their children and Baldr's son Forseti." width="1600" height="1000">
-              </picture>
-              <figcaption>Family tree using real world data.</figcaption>
-            </figure>
-            <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
-              <div class="ms-media-grid ms-media-grid--two">
-                <picture>
-                  <source srcset="assets/captures/homepage/timeline.avif" type="image/avif">
-                  <img src="assets/captures/homepage/timeline.webp" loading="lazy" alt="Mimir's timeline at era zoom, with dated events along a line from year 1 to year 1001 of the Mythic Age." width="1600" height="1000">
-                </picture>
-                <picture>
-                  <source srcset="assets/captures/homepage/map.avif" type="image/avif">
-                  <img src="assets/captures/homepage/map.webp" loading="lazy" alt="An illustrated map of the Nine Realms around the world-tree Yggdrasil, open in Mimir with location pins." width="1600" height="1000">
-                </picture>
-              </div>
-              <figcaption>One canon understood chronologically and spatially.</figcaption>
-            </figure>
-          </div>
+      <div class="ms-wrap">
+        <div class="ms-copy-block ms-stack-head"><span class="ms-eyebrow">Your world is bigger than a pile of notes.</span><h2 class="ms-section-h2">Complex worlds should become clearer as they grow.</h2><p>Pages are useful, but a world is made from the relationships between them. Mimir connects characters, places, cultures, factions, events and stories so you can move from a detail to the wider world around it.</p><p>See the same canon through trees, timelines, maps, backlinks and relationships. Build worlds, not documents.</p></div>
+        <div class="ms-gallery" data-ms-gallery>
+        <div class="ms-gallery-tabs" role="tablist" aria-label="Ways to see the Nine Realms" hidden>
+          <button type="button" role="tab" id="see-tab-family" aria-controls="see-panel-family">Family tree</button>
+          <button type="button" role="tab" id="see-tab-timeline" aria-controls="see-panel-timeline">Timeline</button>
+          <button type="button" role="tab" id="see-tab-map" aria-controls="see-panel-map">Map</button>
+          <button type="button" role="tab" id="see-tab-culture" aria-controls="see-panel-culture">Culture tree</button>
         </div>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="see-panel-family" aria-labelledby="see-tab-family" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/family-tree.avif" type="image/avif">
+            <img src="assets/captures/homepage/family-tree.webp" loading="lazy" alt="Mimir's family tree for Óðinn and Frigg, with their children Víðarr, Baldr, Þórr and Höðr, the spouses Nanna and Sif, and Baldr's son Forseti." width="2000" height="1322">
+          </picture>
+          <figcaption>Óðinn's family, drawn from the relationships recorded on each character entry.</figcaption>
+        </figure>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="see-panel-timeline" aria-labelledby="see-tab-timeline" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/timeline.avif" type="image/avif">
+            <img src="assets/captures/homepage/timeline.webp" loading="lazy" alt="Mimir's timeline of the Mythic Age, with events plotted from year 1 to year 1001 and a card open for Surtr's Burning, the fire that ends the old order." width="2000" height="687">
+          </picture>
+          <figcaption>The timeline across the whole Mythic Age, with one event opened.</figcaption>
+        </figure>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="see-panel-map" aria-labelledby="see-tab-map" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/map.avif" type="image/avif">
+            <img src="assets/captures/homepage/map.webp" loading="lazy" alt="An illustrated map of the Nine Realms around the world-tree Yggdrasil, open in Mimir with the Jötunheim pin selected and its linked place entry shown beside the map." width="2000" height="1214">
+          </picture>
+          <figcaption>Map pins link straight to the entries they mark.</figcaption>
+        </figure>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="see-panel-culture" aria-labelledby="see-tab-culture" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/culture-tree.avif" type="image/avif">
+            <img src="assets/captures/homepage/culture-tree.webp" loading="lazy" alt="Mimir's culture tree: Proto-Norse at the root, branching into the Æsir, Jötnar and Vanir, with the Berserkers, Skalds and Álfar below them." width="2000" height="1373">
+          </picture>
+          <figcaption>Cultures and the traditions that descend from them.</figcaption>
+        </figure>
+      </div>
       </div>
     </section>
 
     <section class="ms-section ms-wrap ms-chapter" id="mimir-ai" data-chapter="wisdom" data-snap-chapter>
-      <div class="ms-split ms-split--reverse">
-        <div class="ms-media-grid ms-media-grid--two">
-          <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Grounded answer</span><strong>Sources visible</strong></div><figcaption>A real answer with the supporting canon shown alongside it.</figcaption></figure>
-          <figure class="ms-media ms-media--placeholder" data-analytics-event="mimir_feature_proof_open"><div class="ms-media-placeholder" aria-hidden="true"><span class="ms-media-kicker">Uncertainty</span><strong>Canon does not specify this</strong></div><figcaption>A real refusal to fill an unsupported gap in the world.</figcaption></figure>
+      <div class="ms-split">
+        <div class="ms-copy-block"><span class="ms-eyebrow">Mimir AI</span><h2 class="ms-section-h2">Ask your world. Get an answer grounded in your world.</h2><p>Mimir is not there to make up your canon for you. It retrieves relevant lore, answers from material you have actually written and should make uncertainty visible rather than filling gaps with confident invention. Think of it as lore management that reads before it speaks.</p><a class="ms-btn-secondary" href="mimir-ai.html">Explore Mimir AI</a></div>
+        <div class="ms-copy-block"><blockquote class="ms-example"><p><strong>Question:</strong> Who killed King Aldric?</p><p><strong>Mimir:</strong> There is no confirmed killer in your current canon. Three entries implicate House Vael, but none state that they carried out the assassination.</p></blockquote><p class="ms-small-note">This example explains the intended behaviour. It is not presented as a product screenshot.</p></div>
+      </div>
+      <div class="ms-gallery" data-ms-gallery>
+        <div class="ms-gallery-tabs" role="tablist" aria-label="Mimir AI in the app" hidden>
+          <button type="button" role="tab" id="ai-tab-checks" aria-controls="ai-panel-checks">What Mimir checks</button>
+          <button type="button" role="tab" id="ai-tab-filter" aria-controls="ai-panel-filter">Choose the evidence</button>
         </div>
-        <div class="ms-copy-block"><span class="ms-eyebrow">Mimir AI</span><h2 class="ms-section-h2">Ask your world. Get an answer grounded in your world.</h2><p>Mimir is not there to make up your canon for you. It retrieves relevant lore, answers from material you have actually written and should make uncertainty visible rather than filling gaps with confident invention. Think of it as lore management that reads before it speaks.</p><blockquote class="ms-example"><p><strong>Question:</strong> Who killed King Aldric?</p><p><strong>Mimir:</strong> There is no confirmed killer in your current canon. Three entries implicate House Vael, but none state that they carried out the assassination.</p></blockquote><p class="ms-small-note">This example explains the intended behaviour. It is not presented as a product screenshot.</p><a class="ms-btn-secondary" href="mimir-ai.html">Explore Mimir AI</a></div>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="ai-panel-checks" aria-labelledby="ai-tab-checks" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/ai-what-mimir-checks.avif" type="image/avif">
+            <img src="assets/captures/homepage/ai-what-mimir-checks.webp" loading="lazy" alt="The What Mimir checks panel in Ask Mimir: a note that these are the limits of what the AI reads, a reading-depth control, pinned entries Fenrir, Týr and Gleipnir, and the line that Mimir never uses outside knowledge to fill a gap." width="1640" height="1340">
+          </picture>
+          <figcaption>Before Mimir answers, you can see and set exactly what it reads. It works only from entries in your world.</figcaption>
+        </figure>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="ai-panel-filter" aria-labelledby="ai-tab-filter" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/ai-filter-matches.avif" type="image/avif">
+            <img src="assets/captures/homepage/ai-filter-matches.webp" loading="lazy" alt="Ask Mimir holding its answer to the question 'Who bound Fenrir, and what did it cost?' while it lists the 23 matching entries. Several unrelated matches have been struck out before proceeding." width="1960" height="2000">
+          </picture>
+          <figcaption>Mimir shows the entries that match your question and lets you remove the irrelevant ones before it answers.</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="ms-section ms-section--band ms-chapter-continuation" id="consistency-review" data-chapter="wisdom">
-      <div class="ms-wrap ms-split"><div class="ms-copy-block"><span class="ms-eyebrow">Lore Consistency Review</span><h2 class="ms-section-h2">Find contradictions before your audience does.</h2><p>Run a review across the canon to surface conflicting dates, incompatible relationships, duplicate facts, broken references and other issues that become difficult to spot as a world grows.</p></div><figure class="ms-media ms-media--wide" data-analytics-event="mimir_feature_proof_open">
-              <picture>
-                <source srcset="assets/captures/homepage/loremaster-laws.avif" type="image/avif">
-                <img src="assets/captures/homepage/loremaster-laws.webp" loading="lazy" alt="Mimir's Loremaster screen listing the world's laws, ready to read the world for broken laws and contradictions." width="1600" height="1000">
-              </picture>
-              <figcaption>The Loremaster laws screen, ready to review the world for contradictions.</figcaption></figure></div>
+      <div class="ms-wrap"><div class="ms-copy-block ms-stack-head"><span class="ms-eyebrow">Lore Consistency Review</span><h2 class="ms-section-h2">Find contradictions before your audience does.</h2><p>Run a review across the canon to surface conflicting dates, incompatible relationships, duplicate facts, broken references and other issues that become difficult to spot as a world grows.</p></div><figure class="ms-media ms-media--stage" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/loremaster-laws.avif" type="image/avif">
+            <img src="assets/captures/homepage/loremaster-laws.webp" loading="lazy" alt="The laws of the Nine Realms in Mimir's Loremaster: the Law of Hospitality, the Binding of Oaths, the Law of Wyrd and others, each showing how many entries it governs, with six marked as strained." width="2400" height="1275">
+          </picture>
+          <figcaption>The laws you set for your world. The Loremaster reads the canon against them when you ask.</figcaption></figure></div>
     </section>
 
     <section class="ms-section ms-wrap ms-chapter" id="proving-grounds" data-chapter="proving" data-snap-chapter>
-      <div class="ms-split ms-split--reverse"><figure class="ms-media ms-media--wide" data-analytics-event="mimir_feature_proof_open">
-              <picture>
-                <source srcset="assets/captures/homepage/proving-grounds-result-planned.avif" type="image/avif">
-                <img src="assets/captures/homepage/proving-grounds-result-planned.webp" loading="lazy" alt="(Planned) A quest graph test run in Mimir that reached the outcome 'The wolf is bound; Tyr is one-handed', with step controls and path coverage." width="1600" height="1000">
-              </picture>
-              <figcaption>A Proving Grounds test run reaching one possible outcome.</figcaption></figure><div class="ms-copy-block"><span class="ms-eyebrow">Proving Grounds</span><h2 class="ms-section-h2">Don't just document your world. Test it.</h2><p>Prototype conversations, quest logic, tabletop sessions, board-game ideas and other interactive scenarios before they become canon. Use the world you have already built as the context for testing what happens next.</p><a class="ms-btn-secondary" href="proving-grounds.html">Explore Proving Grounds</a></div></div>
+      <div class="ms-copy-block ms-stack-head"><span class="ms-eyebrow">Proving Grounds</span><h2 class="ms-section-h2">Don't just document your world. Test it.</h2><p>Prototype conversations, quest logic, tabletop sessions, board-game ideas and other interactive scenarios before they become canon. Use the world you have already built as the context for testing what happens next.</p><p class="ms-small-note">The complete Proving Grounds experience is planned for public beta. These captures show the quest testing it builds on.</p><a class="ms-btn-secondary" href="proving-grounds.html">Explore Proving Grounds</a></div>
+      <div class="ms-gallery" data-ms-gallery>
+        <div class="ms-gallery-tabs" role="tablist" aria-label="Proving Grounds foundations" hidden>
+          <button type="button" role="tab" id="pg-tab-test" aria-controls="pg-panel-test">Quest test run</button>
+          <button type="button" role="tab" id="pg-tab-outcome" aria-controls="pg-panel-outcome">Outcome and coverage</button>
+        </div>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="pg-panel-test" aria-labelledby="pg-tab-test" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/pg-quest-test.avif" type="image/avif">
+            <img src="assets/captures/homepage/pg-quest-test.webp" loading="lazy" alt="A test run of the quest The Binding of Fenrir in Mimir. The path taken so far is highlighted on the quest graph, and the run is paused at the choice 'Fenrir will not be bound unless a god lays a hand in his mouth', with both options offered." width="2400" height="1184">
+          </picture>
+          <figcaption>A quest test run in a development build, paused at a choice with the path so far highlighted.</figcaption>
+        </figure>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="pg-panel-outcome" aria-labelledby="pg-tab-outcome" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/pg-quest-outcome.avif" type="image/avif">
+            <img src="assets/captures/homepage/pg-quest-outcome.webp" loading="lazy" alt="The same test run finished: Simulation ended, outcome 'The wolf is bound; Týr is one-handed', with coverage of 10 of 13 nodes and the three unreached nodes listed." width="2400" height="596">
+          </picture>
+          <figcaption>The finished run reports its outcome and which parts of the quest it never reached.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="ms-section ms-section--band ms-chapter" id="migration" data-chapter="migration" data-snap-chapter>
@@ -266,22 +315,27 @@
     </section>
 
     <section class="ms-section ms-wrap ms-chapter" id="collaboration" data-chapter="collaboration" data-snap-chapter>
-      <div class="ms-split"><div class="ms-copy-block"><span class="ms-eyebrow">Collaboration and hosting</span><h2 class="ms-section-h2">Build together without making everyone a power user.</h2><p>Writers can share a collaborative workspace. Game Masters can host the world while players join as viewers or controlled participants using Mimir Core. Permissions decide what each person can see and change.</p><p>Mimir is not a public social network or a place to meet strangers. It is built for work with the collaborators, friends and players you already know.</p></div><div class="ms-media-grid ms-media-grid--two">
-            <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
-              <picture>
-                <source srcset="assets/captures/homepage/collab-gm-who-sees-what.avif" type="image/avif">
-                <img src="assets/captures/homepage/collab-gm-who-sees-what.webp" loading="lazy" alt="The game master's 'Who sees what' screen in a Mimir campaign, showing which entries each player or group has been granted." width="1600" height="1000">
-              </picture>
-              <figcaption>The GM's view with private information and permission controls visible.</figcaption>
-            </figure>
-            <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
-              <picture>
-                <source srcset="assets/captures/homepage/collab-player-view.avif" type="image/avif">
-                <img src="assets/captures/homepage/collab-player-view.webp" loading="lazy" alt="A preview of what one player can see: two shared entries, while a GM-only list shows everything withheld from her." width="1600" height="1000">
-              </picture>
-              <figcaption>The same world with spoilers and private fields hidden for a player.</figcaption>
-            </figure>
-          </div></div>
+      <div class="ms-copy-block ms-stack-head"><span class="ms-eyebrow">Collaboration and hosting</span><h2 class="ms-section-h2">Build together without making everyone a power user.</h2><p>Writers can share a collaborative workspace. Game Masters can host the world while players join as viewers or controlled participants using Mimir Core. Permissions decide what each person can see and change.</p><p>Mimir is not a public social network or a place to meet strangers. It is built for work with the collaborators, friends and players you already know.</p><p class="ms-small-note">Campaigns, collaboration and hosting are planned for public beta. These captures are from a development build.</p></div>
+      <div class="ms-gallery" data-ms-gallery>
+        <div class="ms-gallery-tabs" role="tablist" aria-label="Campaign views" hidden>
+          <button type="button" role="tab" id="collab-tab-gm" aria-controls="collab-panel-gm">GM: who sees what</button>
+          <button type="button" role="tab" id="collab-tab-player" aria-controls="collab-panel-player">Player preview</button>
+        </div>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="collab-panel-gm" aria-labelledby="collab-tab-gm" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/collab-gm-who-sees-what.avif" type="image/avif">
+            <img src="assets/captures/homepage/collab-gm-who-sees-what.webp" loading="lazy" alt="The game master's Who sees what screen in a Mimir campaign. The world's entries are listed on the left, and each audience (the party, the Shield-wall, the Seers and individual players) shows exactly what it has been given, such as Fenrir and Gleipnir to view." width="2400" height="1370">
+          </picture>
+          <figcaption>The GM decides what each player and group can know.</figcaption>
+        </figure>
+        <figure class="ms-media ms-gallery-panel" role="tabpanel" id="collab-panel-player" aria-labelledby="collab-tab-player" data-analytics-event="mimir_feature_proof_open">
+          <picture>
+            <source srcset="assets/captures/homepage/collab-player-view.avif" type="image/avif">
+            <img src="assets/captures/homepage/collab-player-view.webp" loading="lazy" alt="A preview of what the player Sunniva can see: two entries, Gleipnir and Fenrir, under What I know, while a GM-only list below shows everything withheld from her." width="2400" height="973">
+          </picture>
+          <figcaption>The same world as one player sees it, with everything else withheld.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="ms-section ms-section--band ms-chapter" id="worldbuilders" data-chapter="worldbuilders" data-snap-chapter>
@@ -289,12 +343,14 @@
     </section>
 
     <section class="ms-section ms-wrap ms-chapter" id="ownership" data-chapter="ownership" data-snap-chapter>
-      <div class="ms-split ms-split--reverse"><figure class="ms-media ms-media--wide" data-analytics-event="mimir_feature_proof_open">
-              <picture>
-                <source srcset="assets/captures/homepage/ownership-app-beside-files.avif" type="image/avif">
-                <img src="assets/captures/homepage/ownership-app-beside-files.webp" loading="lazy" alt="Mimir open on an entry, beside a terminal showing the world folder and the plain markdown file behind that entry." width="1600" height="1000">
-              </picture>
-              <figcaption>Mimir beside its corresponding local files.</figcaption></figure><div class="ms-copy-block"><span class="ms-eyebrow">Local-first by design</span><h2 class="ms-section-h2">Your world belongs to you.</h2><p>Your core world lives locally in readable files. You can use the local foundation offline. Cancelling or downgrading does not erase the world you created or lock you out of your own files.</p><ul class="ms-check-list"><li>Unlimited local worlds and entries across every tier.</li><li>Migration and export are not premium privileges.</li><li>Local work survives a downgrade.</li></ul><p class="ms-network-note">Network functionality such as Mimir AI, hosted collaboration and hosted worlds necessarily transmits the selected data needed to provide that feature. Production subprocessors and retention details will be published once verified.</p></div></div>
+      <div class="ms-split"><div class="ms-copy-block"><span class="ms-eyebrow">Local-first by design</span><h2 class="ms-section-h2">Your world belongs to you.</h2><p>Your core world lives locally in readable files. You can use the local foundation offline. Cancelling or downgrading does not erase the world you created or lock you out of your own files.</p></div><div class="ms-copy-block"><ul class="ms-check-list"><li>Unlimited local worlds and entries across every tier.</li><li>Migration and export are not premium privileges.</li><li>Local work survives a downgrade.</li></ul><p class="ms-network-note">Network functionality such as Mimir AI, hosted collaboration and hosted worlds necessarily transmits the selected data needed to provide that feature. Production subprocessors and retention details will be published once verified.</p></div></div>
+      <figure class="ms-media ms-media--stage ms-stage-after-split" data-analytics-event="mimir_feature_proof_open">
+        <picture>
+          <source srcset="assets/captures/homepage/ownership-app-beside-files.avif" type="image/avif">
+          <img src="assets/captures/homepage/ownership-app-beside-files.webp" loading="lazy" alt="Óðinn's entry open in Mimir, beside the plain markdown file behind it, characters/odin.md, which holds the same name, aliases and relationships as readable frontmatter." width="2400" height="1132">
+        </picture>
+        <figcaption>The entry in Mimir, and the ordinary markdown file in your world folder that it is made from.</figcaption>
+      </figure>
     </section>
 
     <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="pricing" data-chapter="pricing">

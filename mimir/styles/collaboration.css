@@ -183,3 +183,15 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.co-media-row {
+  align-items: start;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 40px;
+}
+
+@media (max-width: 760px) {
+  .co-media-row { grid-template-columns: 1fr; }
+}

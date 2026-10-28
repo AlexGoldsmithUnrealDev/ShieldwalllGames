@@ -1241,7 +1241,6 @@
 }
 
 .ms-video-shell {
-    aspect-ratio: 16 / 8;
     margin-top: 36px;
 }
 
@@ -1472,9 +1471,6 @@ a.ms-proof:hover {
         min-height: 240px;
     }
 
-    .ms-video-shell {
-        aspect-ratio: 4 / 3;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2195,4 +2191,101 @@ a.ms-proof:hover {
     .ms-chapter-continuation.is-current-chapter::before {
         animation: none;
     }
+}
+
+/* ==========================================================================
+   Stacked chapters and product galleries
+   A chapter that holds a heading plus wide media stacks vertically, so
+   product captures can use the full content width and stay legible.
+   ========================================================================== */
+.ms-chapter.ms-wrap {
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ms-chapter > .ms-wrap {
+    width: 100%;
+}
+
+.ms-stack-head {
+    margin-bottom: 32px;
+    max-width: 760px;
+}
+
+.ms-stack-head .ms-section-h2 {
+    margin-bottom: 18px;
+}
+
+.ms-gallery-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.ms-gallery-tabs [role="tab"] {
+    background: transparent;
+    border: 1px solid var(--border-strong-c);
+    border-radius: 999px;
+    color: var(--fg-2);
+    cursor: pointer;
+    font: 600 13px/1 var(--font-sans);
+    padding: 10px 16px;
+    transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.ms-gallery-tabs [role="tab"]:hover {
+    border-color: var(--accent);
+    color: var(--fg-1);
+}
+
+.ms-gallery-tabs [role="tab"][aria-selected="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #14100d;
+}
+
+.ms-gallery-tabs [role="tab"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.ms-gallery-panel + .ms-gallery-panel {
+    margin-top: 28px;
+}
+
+.ms-gallery.is-enhanced .ms-gallery-panel + .ms-gallery-panel {
+    margin-top: 0;
+}
+
+.ms-media--stage picture img,
+.ms-gallery-panel picture img {
+    margin: 0 auto;
+    max-height: min(74vh, 780px);
+    object-fit: contain;
+    width: auto;
+    max-width: 100%;
+}
+
+.ms-media--stage figcaption,
+.ms-gallery-panel figcaption {
+    font-size: 13px;
+    margin: 0 auto;
+    max-width: 760px;
+    text-align: center;
+}
+
+.ms-video-shell video {
+    background: #0b0907;
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .04);
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.ms-split + .ms-gallery,
+.ms-stage-after-split {
+    margin-top: 44px;
 }
