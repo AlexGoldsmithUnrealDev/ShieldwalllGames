@@ -46,7 +46,7 @@
     margin: 0;
 }
 
-.ai-hero h1 { font-size: clamp(72px, 8vw, 138px); text-wrap: balance; }
+.ai-hero h1 { font-size: clamp(64px, 6.6vw, 112px); text-wrap: balance; }
 
 .ai-lede {
     color: var(--fg-2);
@@ -318,7 +318,7 @@ html.ai-enhanced [data-review-run] { display: inline-flex; }
 .ai-advanced-system + .ai-advanced-system { border-top: 1px solid rgba(167,200,232,.15); padding-top: clamp(72px, 10vh, 120px); }
 .ai-system-copy { padding: clamp(10px, 2vw, 30px); }
 .ai-system-copy .ms-eyebrow { display: block; margin-top: 18px; }
-.ai-system-copy h3 { color: var(--fg-1); font: 500 clamp(40px, 4vw, 64px)/1.03 var(--font-display); margin: 12px 0 24px; }
+.ai-system-copy h3 { color: var(--fg-1); font: 500 clamp(34px, 3.4vw, 56px)/1.05 var(--font-display); margin: 12px 0 24px; }
 .ai-system-copy p { color: var(--fg-2); font-size: 16px; line-height: 1.75; }
 .ai-advanced-system .ai-media-slot { grid-column: 1 / -1; margin-inline: auto; width: min(100%, 980px); }
 .ai-bundle-panels,
@@ -408,7 +408,7 @@ html.ai-enhanced [data-review-finding][hidden] { display: none; }
     .ai-flow-glyph { text-align: center; transform: rotate(90deg); }
     .ai-chapter { min-height: auto; padding: 92px 0; }
     .ai-chapter-head { gap: 18px; grid-template-columns: 42px minmax(0, 1fr); margin-bottom: 54px; }
-    .ai-chapter-head h2 { font-size: clamp(47px, 14vw, 68px); }
+    .ai-chapter-head h2 { font-size: clamp(32px, 10.5vw, 68px); }
     .ai-chapter-head p { font-size: 17px; }
     .ai-evidence-stage { grid-template-columns: 1fr; }
     .ai-source-cluster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -449,3 +449,14 @@ html.ai-enhanced [data-review-finding][hidden] { display: none; }
 }
 .ai-media-slot--wide picture img { margin: 0 auto; max-width: min(100%, 820px); }
 .ai-media-slot--wide figcaption { margin: 0 auto; max-width: 820px; text-align: center; }
+
+.ai-segmented--three button { overflow-wrap: break-word; }
+
+@media (max-width: 900px) {
+    .ai-review-footer { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1100px) {
+    .ai-credit-head { align-items: stretch; flex-direction: column; }
+    .ai-credit-head .ai-segmented { width: min(100%, 520px); }
+}

@@ -41,10 +41,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Can free users collaborate?",
+        "name": "Who can join a Writers' Room?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Core users can accept invitations to join a paid user's hosted world and contribute within the host's allowance. Hosting a collaborative world yourself requires Apprentice or above."
+          "text": "Everyone in a Writers' Room needs Worldsmith or above, to create a room or to join one. This is different from a Campaign, where players and Co-GMs join free. Your local copy of the world always stays yours."
         }
       },
       {
@@ -103,7 +103,7 @@
         <h1>Build worlds together.</h1>
         <p class="ms-section-h2">Writers' Room is Mimir's collaborative worldbuilding workspace. Multiple creators work on the same world while the owner retains control over what becomes canon.</p>
         <p><span class="ms-eyebrow co-status-badge">Planned for public beta</span></p>
-        <p class="co-status-note">V1 scope. The complete Writers' Room experience requires current hosted-acceptance confirmation and is not an available alpha entitlement.</p>
+        <p class="co-status-note">V1 scope, on Worldsmith and above. The complete Writers' Room is not yet available in the alpha.</p>
       </div>
     </div>
   </header>
@@ -121,7 +121,7 @@
             <ul class="ms-check-list">
               <li>Local copy remains canonical</li>
               <li>Hosted changes require explicit acceptance</li>
-              <li>Contributors propose &mdash; the owner decides</li>
+              <li>Contributors propose. The owner decides.</li>
               <li>Publishing and reconciliation are owner actions</li>
             </ul>
           </div>
@@ -150,15 +150,15 @@
           </article>
           <article class="co-card">
             <strong class="co-card__title">Admin</strong>
-            <p class="co-card__desc">Manages hosted content and collaborators on behalf of the owner. Can organise, edit and moderate the hosted copy without inheriting local-file write access.</p>
+            <p class="co-card__desc">Manages hosted content and collaborators for the owner, and can review changes in the hosted world. An Admin can never write to the owner's local files or accept changes into canon.</p>
           </article>
           <article class="co-card">
             <strong class="co-card__title">Editor</strong>
-            <p class="co-card__desc">Creates and edits entries on the hosted copy. Changes remain proposals until the owner or an Admin accepts them.</p>
+            <p class="co-card__desc">Creates and edits entries on the hosted copy. An Admin or the owner can review those changes in the hosted world, but only the owner can accept them into the local canon.</p>
           </article>
           <article class="co-card">
             <strong class="co-card__title">Commenter</strong>
-            <p class="co-card__desc">Reviews and comments on existing entries. Useful for feedback and discussion without direct editing capability.</p>
+            <p class="co-card__desc">Can read the hosted world and suggest changes without editing it directly.</p>
           </article>
           <article class="co-card">
             <strong class="co-card__title">Viewer</strong>
@@ -197,6 +197,7 @@
             <small class="co-step__desc">The owner reconciles contributor work into their local canon on their own terms.</small>
           </li>
         </ol>
+        <p class="co-footnote">The owner sees every proposed change in one place and can accept everything that is safe in one go.</p>
       </div>
     </section>
 
@@ -206,32 +207,27 @@
         <header><span class="ms-eyebrow">Scale</span><h2 class="ms-section-h2" id="allowances-title">From a writing partner to a full creative team.</h2></header>
         <div class="ms-split">
           <div class="ms-copy-block">
-            <p>Collaboration hosting begins at Apprentice. Free Core users can accept invitations to join someone else's hosted world within the host's allowance. No separate collaboration product or add-on is required.</p>
+            <p>The Writers' Room starts at Worldsmith, and every collaborator needs their own Worldsmith plan. No separate collaboration product or add-on is required.</p>
           </div>
         </div>
         <div class="co-tier-grid">
           <article class="co-tier-card">
-            <span class="co-tier-label">Core</span>
-            <strong class="co-tier-value">Free</strong>
-            <p class="co-tier-desc">Accept invitations to join a paid user's hosted world. Contribute within the host's allowance.</p>
-          </article>
-          <article class="co-tier-card">
-            <span class="co-tier-label">Apprentice</span>
-            <strong class="co-tier-value">2 guest collaborators per world</strong>
-            <p class="co-tier-desc">Host a collaborative world and invite a writing partner or co-creator.</p>
+            <span class="co-tier-label">Core and Apprentice</span>
+            <strong class="co-tier-value">Not included</strong>
+            <p class="co-tier-desc">Upgrade to Worldsmith to create or join a Writers' Room. Campaigns are separate: players join those free.</p>
           </article>
           <article class="co-tier-card">
             <span class="co-tier-label">Worldsmith</span>
-            <strong class="co-tier-value">5 guest collaborators per world</strong>
-            <p class="co-tier-desc">Work with a small creative team across multiple hosted worlds.</p>
+            <strong class="co-tier-value">Up to 5 hosted worlds</strong>
+            <p class="co-tier-desc">5 guest collaborators per world, each with their own Worldsmith plan.</p>
           </article>
           <article class="co-tier-card">
             <span class="co-tier-label">Loremaster</span>
-            <strong class="co-tier-value">20 guest collaborators per world</strong>
-            <p class="co-tier-desc">Coordinate a full creative team at professional scale.</p>
+            <strong class="co-tier-value">Up to 20 hosted worlds</strong>
+            <p class="co-tier-desc">20 guest collaborators per world, each with Worldsmith or above.</p>
           </article>
         </div>
-        <p class="co-footnote">Guest collaborator count includes outstanding invitations. Allowances are beta planning values and may be adjusted before paid checkout opens.</p>
+        <p class="co-footnote">Guest collaborator count includes outstanding invitations. If a host's plan drops below Worldsmith, the whole room becomes read-only for everyone until it is Worldsmith again. A collaborator below Worldsmith becomes read-only in every room and keeps their place. Nothing is deleted, everyone can still open, read and export, and local files stay fully editable. Allowances are planning values and may change before paid checkout opens.</p>
       </div>
     </section>
 
@@ -240,7 +236,7 @@
       <div class="ms-wrap">
         <header><span class="ms-eyebrow">Two surfaces, different purposes</span><h2 class="ms-section-h2" id="surfaces-title">Collaboration is creation. Campaign is presentation.</h2></header>
         <div class="ms-copy-block">
-          <p>Writers' Room is where creators build together. Campaign is where the GM presents a controlled experience to players, audiences or participants. They share platform services &mdash; hosting, permissions, the same underlying world &mdash; but they serve different workflows with different permission models.</p>
+          <p>Writers' Room is where creators build together. Campaign is where the GM presents a controlled experience to players, audiences or participants. They share platform services (hosting, permissions and the same underlying world), but they serve different workflows with different permission models.</p>
         </div>
         <div class="co-comparison-grid">
           <article class="co-comparison-card">
@@ -268,7 +264,7 @@
               <source srcset="assets/captures/collaboration/writers-room-invite.avif" type="image/avif">
               <img src="assets/captures/collaboration/writers-room-invite.webp" loading="lazy" alt="Joining a Writers' Room in Mimir: paste the invitation code the world's owner sent, with notes that the code alone decides which room you join and that nobody's world is copied to your computer." width="1786" height="868">
             </picture>
-            <figcaption>Writers' Room: joining someone else's world with the invitation code they sent.</figcaption>
+            <figcaption>Writers' Room: joining someone else's world with the invitation code they sent. Every writer in the room needs Worldsmith.</figcaption>
           </figure>
           <figure class="ms-media" data-analytics-event="mimir_feature_proof_open">
             <picture>
@@ -287,7 +283,7 @@
       <div class="ms-wrap">
         <header><span class="ms-eyebrow">Questions</span><h2 class="ms-section-h2" id="faq-title">Frequently asked questions</h2></header>
         <div class="ms-faq-container"><dl class="faq-list">
-          <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-1">Can free users collaborate?</button></dt><dd class="faq-item__answer" id="collab-faq-1" hidden>Yes. Core users can accept invitations to join a paid user's hosted world and contribute within the host's allowance. Hosting a collaborative world yourself requires Apprentice or above.</dd></div>
+          <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-1">Who can join a Writers' Room?</button></dt><dd class="faq-item__answer" id="collab-faq-1" hidden>Everyone in a Writers' Room needs Worldsmith or above, to create a room or to join one. This is different from a Campaign, where players and Co-GMs join free. Your local copy of the world always stays yours.</dd></div>
           <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-2">Can a contributor overwrite my world?</button></dt><dd class="faq-item__answer" id="collab-faq-2" hidden>No. The owner's local copy is the canonical version. Contributors work on the hosted copy and their changes remain proposals until the owner explicitly accepts them. Publishing and reconciliation are deliberate owner actions.</dd></div>
           <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="collab-faq-3">What is the difference between Campaign and Writers' Room?</button></dt><dd class="faq-item__answer" id="collab-faq-3" hidden>Writers' Room is where creators build together. Campaign is where the GM presents a controlled experience to players, audiences or participants. They share platform services but serve different workflows with different permission models.</dd></div>
         </dl></div>
@@ -322,6 +318,7 @@
 <script src="scripts/mimir.js" defer></script>
 <script src="scripts/internal.js?v=20260814-1" defer></script>
 <script src="scripts/chapters.js?v=20260815-2" defer></script>
+<script src="../scripts/zoom.js" defer></script>
 <script src="../scripts/consent.js" defer></script>
 </body>
 </html>

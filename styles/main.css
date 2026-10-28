@@ -741,3 +741,113 @@ a:hover {
         min-width: 0;
     }
 }
+
+/* ==========================================================================
+   Screenshot zoom (scripts/zoom.js)
+   ========================================================================== */
+figure.is-zoomable { position: relative; }
+figure.is-zoomable picture img { cursor: zoom-in; }
+
+.zoom-trigger {
+    background: rgba(12, 10, 8, .82);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 999px;
+    color: #f2ead8;
+    cursor: pointer;
+    display: block;
+    font: 600 12px/1 var(--font-sans, system-ui, sans-serif);
+    margin: 10px auto 0;
+    padding: 8px 14px;
+}
+
+.zoom-trigger:hover { border-color: rgba(255, 255, 255, .45); }
+.zoom-trigger:focus-visible { outline: 2px solid #d79b3e; outline-offset: 3px; }
+
+.zoom-dialog {
+    background: #0b0907;
+    border: 0;
+    color: #f2ead8;
+    height: 100dvh;
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    padding: 0;
+    width: 100vw;
+}
+
+.zoom-dialog::backdrop { background: rgba(0, 0, 0, .85); }
+
+.zoom-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.zoom-dialog__bar {
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+
+.zoom-dialog__caption {
+    color: #cfc4ae;
+    font: 13px/1.45 var(--font-sans, system-ui, sans-serif);
+    margin: 0;
+}
+
+.zoom-dialog__close {
+    background: #f2ead8;
+    border: 0;
+    border-radius: 999px;
+    color: #14100d;
+    cursor: pointer;
+    flex: none;
+    font: 700 13px/1 var(--font-sans, system-ui, sans-serif);
+    padding: 10px 18px;
+}
+
+.zoom-dialog__close:focus-visible { outline: 2px solid #d79b3e; outline-offset: 3px; }
+
+.zoom-dialog__stage {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    min-height: 0;
+    overflow: auto;
+    padding: 16px;
+}
+
+.zoom-dialog__stage img {
+    display: block;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
+}
+
+/* On a phone, show the capture wide enough to read and let the viewer pan it. */
+@media (max-width: 760px) {
+    .zoom-dialog__stage {
+        align-items: flex-start;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    dialog.zoom-dialog .zoom-dialog__stage img {
+        max-height: none;
+        max-width: none;
+        min-width: 100%;
+        flex: none;
+        width: 1100px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .zoom-dialog[open] { animation: zoom-dialog-in 180ms ease-out; }
+}
+
+@keyframes zoom-dialog-in { from { opacity: 0; } to { opacity: 1; } }

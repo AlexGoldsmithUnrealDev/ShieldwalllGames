@@ -87,10 +87,10 @@
   <main id="main-content">
     <section class="ai-chapter ms-chapter ms-chapter--long" id="grounding" data-chapter="grounding" data-snap-chapter aria-labelledby="grounding-title">
       <div class="ms-wrap ai-chapter-inner">
-        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">02</span><div><span class="ms-eyebrow">Grounded in your canon</span><h2 id="grounding-title">The answer starts with your world.</h2><p>Mimir retrieves the lore relevant to the task instead of sending a large world's entire lorebible with every question.</p></div></header>
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">02</span><div><span class="ms-eyebrow">Grounded in your canon</span><h2 id="grounding-title">The answer starts with your world.</h2><p>Mimir finds the lore relevant to the task instead of sending your whole world with every question.</p></div></header>
 
         <div class="ai-grounding-grid">
-          <div class="ai-copy-column"><p>Retrieval can consider the current entry, linked entries, relevant lore found elsewhere in the world and the question being asked. Focused mode keeps the entry you started from in the foreground while still allowing connected material to be found.</p><p>The model is only one part of the feature. Mimir's structure, relationships, retrieval, context selection and citations shape the answer before it reaches you.</p><ul class="ai-rune-list"><li>Current or focused entry</li><li>Connected and retrieved lore</li><li>The current question or operation</li><li>Evidence that can be traced back to entries</li></ul></div>
+          <div class="ai-copy-column"><p>Retrieval can consider the current entry, linked entries, relevant lore found elsewhere in the world and the question being asked. Focused mode keeps the entry you started from in the foreground while still allowing connected material to be found.</p><p>The model is only one part of the feature. Mimir's structure, relationships, retrieval, context selection and citations shape the answer before it reaches you.</p><ul class="ai-rune-list"><li>Current or focused entry</li><li>Connected and retrieved lore</li><li>The current question or operation</li><li>Evidence that can be traced back to entries</li></ul><p><strong>Make a quick entry from your own lore.</strong> Ask Mimir can also draft a minor character, item or place, or turn text you paste into an entry, using only what your world already holds. If something is missing, it tells you what to add first. Nothing is saved until you say yes. (In development, with credits on every plan.)</p></div>
 
           <figure class="ai-evidence-demo ai-concept" aria-labelledby="evidence-demo-title">
             <figcaption><span class="ai-concept-label">Conceptual example</span><strong id="evidence-demo-title">“Why did House Vael abandon Greywatch?”</strong><span>Choose a source to see what it supports.</span></figcaption>
@@ -153,7 +153,7 @@
 
     <section class="ai-chapter ms-chapter ms-chapter--long" id="review" data-chapter="review" data-snap-chapter aria-labelledby="review-title">
       <div class="ms-wrap ai-chapter-inner">
-        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">04</span><div><span class="ms-eyebrow">Lore Consistency Review</span><h2 id="review-title">Find contradictions before your audience does.</h2><p>Review meaning-level contradictions across prose and connected entries, with evidence the creator can judge.</p></div></header>
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">04</span><div><span class="ms-eyebrow">Lore Consistency Review · Worldsmith+</span><h2 id="review-title">Find contradictions before your audience does.</h2><p>Review meaning-level contradictions across prose and connected entries, with evidence the creator can judge. It also checks the Rule entries in your world against each other and against the entries they govern.</p></div></header>
 
         <div class="ai-validation-split">
           <article><span class="ai-method-tag">Rules</span><h3>Deterministic validation</h3><p>Checks structural constraints and reference integrity with explainable rules.</p><ul><li>Broken references</li><li>Required data</li><li>Naming rules</li></ul></article>
@@ -187,7 +187,7 @@
         <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">05</span><div><span class="ms-eyebrow">Language &amp; context</span><h2 id="language-title">Choose the material. Preserve the rules.</h2><p>Focused context and authored language systems give creators explicit control over advanced AI work.</p></div></header>
 
         <section class="ai-advanced-system" aria-labelledby="bundles-title">
-          <div class="ai-system-copy"><span class="ai-status ai-status--available">Available in alpha</span><span class="ms-eyebrow">AI Context Bundles · Core</span><h3 id="bundles-title">Take a deliberate slice of the world with you.</h3><p>In the current alpha, AI Context Bundles turn a saved, spoiler-aware filter into one readable Markdown file for an external AI tool. They are the explicit export path, separate from Ask Mimir's automatic retrieval.</p><p>A focused bundle keeps unrelated lore out of the task. Choose an era, culture, campaign, region or faction, then retain control over the wrapper instructions and where the file goes.</p></div>
+          <div class="ai-system-copy"><span class="ai-status ai-status--available">Available in alpha</span><span class="ms-eyebrow">World briefs · Core</span><h3 id="bundles-title">Take a deliberate slice of the world with you.</h3><p>A World brief turns all your entries, or a saved filter, into one readable Markdown file for another AI tool, at the spoiler level you choose. It is built on your computer and costs no credits. It is separate from what Ask Mimir reads.</p><p>A focused bundle keeps unrelated lore out of the task. Choose an era, culture, campaign, region or faction, then retain control over the wrapper instructions and where the file goes.</p></div>
           <div class="ai-bundle-demo ai-concept" data-ai-tabs data-default-tab="war">
             <div class="ai-concept-label">Conceptual bundle scopes</div>
             <div class="ai-segmented ai-segmented--three" role="tablist" aria-label="Choose an example context bundle">
@@ -209,7 +209,7 @@
         </section>
 
         <section class="ai-advanced-system ai-advanced-system--translator" aria-labelledby="translator-title">
-          <div class="ai-system-copy"><span class="ai-status ai-status--testing">In testing</span><span class="ms-eyebrow">Constructed-language (conlang) Translator · Core</span><h3 id="translator-title">Your language should remember its own rules.</h3><p>The user defines the vocabulary, grammar, registers, cultural bias, calibration phrases and writing system. Mimir applies that authored material to the translation and lets newly coined words be reviewed before they become canonical.</p><p>This is not generic phrase substitution. Register, idiom and accepted vocabulary can shape each result.</p></div>
+          <div class="ai-system-copy"><span class="ai-status ai-status--testing">In testing</span><span class="ms-eyebrow">Translator · every plan, with credits</span><h3 id="translator-title">Your language should remember its own rules.</h3><p>The user defines the vocabulary, grammar, registers, cultural bias, calibration phrases and writing system. Mimir applies that material to the translation. Any word it has to invent is added to your vocabulary and listed under the translation, so you can regenerate or reject it. Words you keep are never swapped for a synonym.</p><p>This is not generic phrase substitution. Register, idiom and accepted vocabulary can shape each result.</p></div>
           <div class="ai-translator-demo ai-concept" data-ai-tabs data-default-tab="familiar">
             <div class="ai-concept-label">Illustrative language example</div>
             <div class="ai-translation-source"><span>English</span><strong>Welcome home, old friend.</strong></div>
@@ -235,7 +235,7 @@
 
     <section class="ai-chapter ms-chapter ms-chapter--long" id="control" data-chapter="control" data-snap-chapter aria-labelledby="control-title">
       <div class="ms-wrap ai-chapter-inner">
-        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">06</span><div><span class="ms-eyebrow">Your world, your control</span><h2 id="control-title">AI is optional. Ownership isn't.</h2><p>Use Mimir's local worldbuilding foundation without constant AI usage. Ask for higher-level assistance when it is useful.</p></div></header>
+        <header class="ai-chapter-head"><span class="ai-chapter-number" aria-hidden="true">06</span><div><span class="ms-eyebrow">Your world, your control</span><h2 id="control-title">AI is optional. Ownership isn't.</h2><p>Use Mimir's local worldbuilding foundation without constant AI usage. Ask for higher-level assistance when it is useful.</p><p>Higher plans let Mimir read more of your world for one question: Core reads up to about 4,000 tokens of relevant material, Apprentice 8,000, and Worldsmith and Loremaster 16,000. This is how much Mimir considers at once, never a limit on the size of your world.</p></div></header>
 
         <div class="ai-control-grid">
           <article class="ai-local-foundation"><span class="ms-eyebrow">Stays useful without AI</span><h3>Build without AI. Ask for help when you want it.</h3><p>World files, entries, relationships, trees, maps, timelines, editors and other local tools remain the product. If the network is unavailable or credits run out, local work does not disappear.</p><div class="ai-local-tools" aria-label="Examples of local Mimir tools"><span>Readable files</span><span>Relationships</span><span>Trees</span><span>Maps</span><span>Timelines</span><span>Editors</span></div></article>
@@ -258,8 +258,8 @@
         </section>
 
         <div class="ai-credit-rules">
-          <article><span aria-hidden="true">↻</span><div><h3>Subscription credits reset monthly.</h3><p>Included credits do not roll over. Final tier allowances remain a pricing-page decision while production workloads are calibrated.</p></div></article>
-          <article><span aria-hidden="true">◇</span><div><h3>Purchased credits persist.</h3><p>Top-up credits do not expire under the current V1 plan and remain after a cancellation or downgrade.</p></div></article>
+          <article><span aria-hidden="true">↻</span><div><h3>Every account starts with 200 credits.</h3><p>The welcome grant is given once. Paid plans then add a monthly allowance that resets each month and does not roll over: 400 on Apprentice, 1,200 on Worldsmith and 3,000 on Loremaster. These are planning figures and may change before checkout opens.</p></div></article>
+          <article><span aria-hidden="true">◇</span><div><h3>Bought credits never expire.</h3><p>Credit bundles (500 for £4.99, 1,500 for £12.99, 4,000 for £29.99) stay on your account after a cancellation or downgrade. Monthly credits are used first.</p></div></article>
           <article><span aria-hidden="true">⌁</span><div><h3>Local work keeps working.</h3><p>If credits are exhausted or Mimir AI cannot connect, AI-backed operations pause; local world data and local tools remain available.</p></div></article>
         </div>
 
@@ -282,6 +282,7 @@
 <script src="scripts/mimir-ai-chapters.js?v=20260815-1" defer></script>
 <script src="scripts/chapters.js?v=20260815-1" defer></script>
 <script src="scripts/mimir-ai.js?v=20260815-1" defer></script>
+<script src="../scripts/zoom.js" defer></script>
 <script src="../scripts/consent.js" defer></script>
 </body>
 </html>

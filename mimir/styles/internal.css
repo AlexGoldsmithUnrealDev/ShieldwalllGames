@@ -5,6 +5,11 @@
     overflow-wrap: anywhere;
 }
 
+/* Headings wrap between words; only an unbreakable word may be split. */
+.mi-page :where(h1, h2, h3, h4) {
+    overflow-wrap: break-word;
+}
+
 .mi-nav [aria-current="page"] {
     color: var(--fg-1);
     position: relative;
@@ -129,4 +134,9 @@
 
 @media (prefers-reduced-motion: reduce) {
     .mi-nav-toggle span { transition: none !important; }
+}
+
+/* Safety net on narrow phones: a word too long for the screen wraps instead of widening the page. */
+@media (max-width: 480px) {
+    .mi-page :where(h1, h2, h3, h4) { overflow-wrap: anywhere; }
 }

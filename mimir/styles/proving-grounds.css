@@ -49,7 +49,7 @@
     margin: 0;
 }
 
-.pg-hero h1 { font-size: clamp(70px, 7.8vw, 134px); text-wrap: balance; }
+.pg-hero h1 { font-size: clamp(64px, 6.4vw, 110px); text-wrap: balance; }
 
 .pg-lede {
     color: var(--fg-2);
@@ -334,7 +334,7 @@
 .pg-live-status { color: var(--active-chapter-text); font: 500 12px/1.5 var(--font-sans); margin: 18px 0 0; min-height: 20px; }
 
 .pg-quest-copy { background: linear-gradient(180deg, rgba(27,28,52,.78), rgba(11,13,27,.72)); border-bottom: 1px solid rgba(201,196,240,.16); border-top: 1px solid rgba(201,196,240,.16); padding: clamp(30px, 4vw, 50px); }
-.pg-quest-copy h3 { color: var(--fg-1); font: 500 clamp(32px, 3vw, 48px)/1.06 var(--font-display); margin: 20px 0; }
+.pg-quest-copy h3 { color: var(--fg-1); font: 500 clamp(28px, 2.4vw, 38px)/1.08 var(--font-display); margin: 20px 0; }
 .pg-quest-copy > p { color: var(--fg-2); font-size: 15px; line-height: 1.7; }
 .pg-audience-notes { display: grid; gap: 8px; margin-top: 26px; }
 .pg-audience-notes span { border-left: 1px solid var(--active-chapter-frame); color: var(--fg-3); display: grid; font: 500 11px/1.5 var(--font-sans); gap: 3px; padding: 8px 0 8px 14px; }
@@ -427,7 +427,7 @@ html.pg-enhanced [data-pg-panel][hidden] { display: none; }
     .pg-chapter { min-height: auto; padding: 88px 0; }
     .pg-chapter-head { gap: 18px; grid-template-columns: 44px minmax(0,1fr); margin-bottom: 50px; }
     .pg-chapter-number { font-size: 10px; }
-    .pg-chapter-head h2 { font-size: clamp(43px,13vw,66px); }
+    .pg-chapter-head h2 { font-size: clamp(32px,10.5vw,66px); }
     .pg-chapter-head p { font-size: 18px; }
     .pg-concept { border-radius: 18px; padding: 22px; }
     .pg-demo-head,
@@ -472,4 +472,13 @@ html.pg-enhanced [data-pg-panel][hidden] { display: none; }
     .pg-page *,
     .pg-page *::before,
     .pg-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+/* The foundation note reads as a heading block, then its captures at a readable width. */
+.pg-development-note { align-items: start; grid-template-columns: 1fr; }
+.pg-development-note > div:first-child { max-width: 760px; }
+.pg-development-note .pg-media-pair { display: grid; gap: 28px; grid-template-columns: 1fr; margin-inline: auto; width: min(100%, 1000px); }
+
+@media (max-width: 900px) {
+    .pg-system-definitions { grid-template-columns: 1fr; }
 }

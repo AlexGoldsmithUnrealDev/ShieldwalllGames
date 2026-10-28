@@ -18,6 +18,28 @@ var htmlPath = path.join(mimirDir, 'roadmap.html');
 var START = '    <!-- ROADMAP_STATIC_START -->';
 var END = '    <!-- ROADMAP_STATIC_END -->';
 
+/* Soft hyphens for long words in card titles, so narrow cards break at a syllable, not mid-letter. */
+var HYPHENATE = {
+    accessibility: 'acces-sibility', administration: 'admin-istration', collaboration: 'collab-oration',
+    commercial: 'com-mercial', competitor: 'com-petitor', consistency: 'consis-tency', constructed: 'con-structed',
+    entitlements: 'entitle-ments', extraction: 'ex-traction', improvement: 'improve-ment',
+    infrastructure: 'infra-structure', interactive: 'inter-active', language: 'lan-guage', marketplace: 'market-place',
+    onboarding: 'on-boarding', organisation: 'organ-isation', performance: 'per-formance', production: 'pro-duction',
+    professional: 'profes-sional', refinement: 'refine-ment', relationships: 'relation-ships', reliability: 'relia-bility',
+    shieldwall: 'shield-wall', simulation: 'simu-lation', structured: 'struc-tured', structures: 'struc-tures',
+    subscriptions: 'sub-scriptions', translator: 'trans-lator', validation: 'vali-dation', workflows: 'work-flows',
+    worldbuilding: 'world-building'
+};
+
+function hyphenateTitle(value) {
+    return String(value).replace(/[A-Za-z]+/g, function (word) {
+        var rule = HYPHENATE[word.toLowerCase()];
+        if (!rule) return word;
+        var out = rule.replace('-', '\u00ad');
+        return word.charAt(0) === word.charAt(0).toUpperCase() ? out.charAt(0).toUpperCase() + out.slice(1) : out;
+    });
+}
+
 function escapeHtml(value) {
     return String(value == null ? '' : value)
         .replace(/&/g, '&amp;')
@@ -53,7 +75,7 @@ function featureMarkup(feature, definitions) {
         '              <span class="rm-feature-category">' + escapeHtml(feature.category) + '</span>',
         badge ? '              ' + badge : '',
         '            </div>',
-        '            <h3>' + escapeHtml(feature.name) + '</h3>',
+        '            <h3>' + hyphenateTitle(escapeHtml(feature.name)) + '</h3>',
         '            ' + statusMarkup(feature.status, definitions),
         '            <p>' + escapeHtml(feature.shortDescription) + '</p>',
         '            <button class="rm-feature-open" type="button" data-feature-open="' + escapeHtml(feature.id) + '" aria-label="Explore ' + escapeHtml(feature.name) + '" hidden>Explore feature <span aria-hidden="true">→</span></button>',

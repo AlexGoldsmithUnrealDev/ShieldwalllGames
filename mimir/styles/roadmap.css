@@ -18,6 +18,11 @@
     overflow-wrap: anywhere;
 }
 
+/* Headings break between words; long card titles carry soft hyphens. */
+.rm-page :where(h1, h2, h3) {
+    overflow-wrap: break-word;
+}
+
 /* Top-level journey */
 
 .rm-hero {
@@ -743,10 +748,21 @@
 }
 
 .rm-dialog-media {
-    background: rgba(255, 255, 255, .018);
-    border: 1px dashed color-mix(in srgb, var(--dialog-accent, #668FB5) 36%, transparent);
+    margin-inline: 0;
+}
+
+.rm-dialog-media img {
     border-radius: 12px;
-    padding: 22px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 255, 255, .04);
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.rm-dialog-media figcaption {
+    color: var(--fg-3);
+    font: 500 12px/1.5 var(--font-sans);
+    padding-top: 10px;
 }
 
 .rm-dialog-related > div {

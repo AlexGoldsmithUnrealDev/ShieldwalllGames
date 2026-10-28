@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-14",
+  "lastUpdated": "2026-10-28",
   "statusDefinitions": [
     {
       "id": "available",
@@ -39,7 +39,7 @@
       "navLabel": "Current",
       "eyebrow": "Current",
       "title": "Alpha / V1 Completion",
-      "summary": "Shieldwall is finishing and testing the complete Mimir public-beta product: the connected local worldbuilding foundation, deeper creative tools, migration, Proving Grounds, collaboration and hosting.",
+      "summary": "Shieldwall is finishing and testing the complete Mimir public-beta product: the connected local worldbuilding foundation, migration from other tools, Mimir AI, Campaigns, the Writers' Room, Proving Grounds, Export to Engine and the Mimir phone app with desktop and phone sync.",
       "milestone": "The work here leads to a feature-complete public commercial beta, not a small closed test.",
       "features": [
         {
@@ -52,18 +52,18 @@
           "category": "Worldbuilding",
           "badge": "Core",
           "relatedFeatures": ["relationships", "trees", "narrative-tools"],
-          "mediaSlot": "Current alpha editor capture"
+          "image": "assets/captures/features/build-entry-odin", "imageAlt": "Óðinn's character entry in Mimir, with structured fields, class paths and stats.", "mediaCaption": "A character entry in a development build."
         },
         {
           "id": "relationships",
           "name": "Links, backlinks & relationships",
           "shortDescription": "Connect entries directly and follow those relationships throughout the world.",
-          "detail": "Wiki-links, backlinks and maintained inverse relationships already connect world entries instead of leaving them as isolated pages.",
+          "detail": "Links, backlinks and typed relationships already connect world entries instead of leaving them as isolated pages.",
           "whyItMatters": "The value of a world lives in the connections between its people, places, histories and ideas.",
           "status": "available",
           "category": "Worldbuilding",
           "relatedFeatures": ["structured-core", "trees", "mimir-ai"],
-          "mediaSlot": "Relationship and backlinks capture"
+          "image": "assets/captures/features/connect-appears-in", "imageAlt": "The Appears in section of Fenrir's entry, listing every entry that mentions him with the passage that does.", "mediaCaption": "Backlinks with context."
         },
         {
           "id": "trees",
@@ -74,7 +74,7 @@
           "status": "available",
           "category": "Visualisation",
           "relatedFeatures": ["relationships", "timeline-calendar", "maps"],
-          "mediaSlot": "Current tree capture"
+          "image": "assets/captures/features/visualise-family-tree", "imageAlt": "The family tree for Óðinn and Frigg and their descendants.", "mediaCaption": "A family tree drawn from the relationships on each entry."
         },
         {
           "id": "timeline-calendar",
@@ -85,119 +85,152 @@
           "status": "available",
           "category": "Visualisation",
           "relatedFeatures": ["trees", "maps", "validation-history"],
-          "mediaSlot": "Current timeline capture"
+          "image": "assets/captures/homepage/timeline", "imageAlt": "The timeline of the Mythic Age with the event Surtr's Burning opened.", "mediaCaption": "The timeline across a world's own calendar."
         },
         {
           "id": "validation-history",
           "name": "Validation, history & accessibility",
           "shortDescription": "Catch structural issues, recover earlier work and adapt the interface to different reading needs.",
-          "detail": "Validation warnings, Git-backed history and rollback, keyboard support and dyslexia-first accessibility controls are present in the alpha foundation and continue to be refined.",
+          "detail": "Validation warnings, saved-version history, keyboard support and dyslexia-first accessibility controls are present in the alpha foundation and continue to be refined.",
           "whyItMatters": "A serious creative tool should help protect the work and remain usable for the people creating it.",
           "status": "available",
           "category": "Quality",
           "relatedFeatures": ["timeline-calendar", "qa-reliability", "lore-review"],
-          "mediaSlot": "Validation and history capture"
+          "image": "assets/captures/features/history-version-restore", "imageAlt": "An earlier version of an entry opened from its history, with a Restore this version button.", "mediaCaption": "Any past version of an entry can be opened and restored."
         },
         {
           "id": "maps",
           "name": "Interactive maps",
           "shortDescription": "Connect locations and entries to geography rather than keeping place trapped in prose.",
-          "detail": "Maps are part of the V1 Core scope and are being completed alongside the other connected visual tools.",
+          "detail": "Maps are Core: your own picture with pins that link to the entries they mark.",
           "whyItMatters": "Spatial context helps creators understand travel, borders, influence and the physical consequences of world events.",
           "status": "development",
           "category": "Visualisation",
           "relatedFeatures": ["trees", "timeline-calendar", "relationships"],
-          "mediaSlot": "Map capture when ready"
+          "image": "assets/captures/homepage/map", "imageAlt": "The Nine Realms map with the Jötunheim pin selected and its linked entry shown.", "mediaCaption": "Map pins link back to the entries they mark."
         },
         {
           "id": "narrative-tools",
           "name": "Narrative tools",
           "shortDescription": "Plan story arcs, quests and dialogue beside the lore they depend on.",
-          "detail": "Story Arc, Quest and Dialogue editors are part of the complete V1 product, with Narrative Planner and deeper workflows progressing through the paid tiers.",
+          "detail": "Story Arc, Quest and Dialogue editors and the Narrative Planner are all part of Core.",
           "whyItMatters": "Narrative work stays connected to canon instead of becoming a second disconnected planning system.",
           "status": "development",
           "category": "Creative tools",
           "relatedFeatures": ["structured-core", "proving-grounds", "simulation-state"],
-          "mediaSlot": "Quest and dialogue capture"
+          "image": "assets/captures/features/narrative-planner", "imageAlt": "A story planned as six illustrated beats joined by labelled edges in the Narrative Planner.", "mediaCaption": "The Narrative Planner in a development build."
         },
         {
           "id": "mimir-ai",
           "name": "Mimir AI",
           "shortDescription": "Ask questions against relevant world context without treating unsupported invention as canon.",
-          "detail": "The development build contains Mimir AI workflows. Production work is focused on grounded retrieval, uncertainty, routing and a customer-facing credit system rather than provider-model selection.",
+          "detail": "The development build contains Mimir AI workflows. Production work is focused on grounded retrieval, uncertainty, routing and a customer-facing credit system rather than provider-model selection. V1 also adds Ask Mimir creating entries from your own lore, and from pasted text.",
           "whyItMatters": "Creators can understand a large world faster while keeping the distinction between written canon and inference visible.",
           "status": "testing",
           "category": "Mimir AI",
           "relatedFeatures": ["relationships", "lore-review", "translator"],
-          "mediaSlot": "Grounded answer and source capture"
+          "image": "assets/captures/mimir-ai/what-mimir-checks", "imageAlt": "Ask Mimir's What Mimir checks panel, showing the limits of what the AI reads and the pinned entries.", "mediaCaption": "Ask Mimir shows exactly which entries it reads."
         },
         {
           "id": "lore-review",
           "name": "Lore Consistency Review",
           "shortDescription": "Surface contradictions that deterministic validation cannot understand on its own.",
-          "detail": "Lore Consistency Review is being built as a deeper Worldsmith workflow for conflicting dates, relationships and facts across connected canon.",
+          "detail": "Lore Consistency Review and rules contradiction checks are Worldsmith workflows that find conflicting dates, relationships and facts across connected canon, with evidence for each finding.",
           "whyItMatters": "Contradictions become harder to spot as a world grows and can undermine stories, campaigns and production.",
           "status": "development",
           "category": "Mimir AI",
           "relatedFeatures": ["mimir-ai", "validation-history", "timeline-calendar"],
-          "mediaSlot": "Detected contradiction capture"
+          "image": "assets/captures/homepage/loremaster-laws", "imageAlt": "The laws of the Nine Realms in the Loremaster, each with the number of entries it governs.", "mediaCaption": "The laws a review checks the canon against."
         },
         {
           "id": "translator",
           "name": "Constructed-language Translator",
           "shortDescription": "Translate against grammar, vocabulary, registers and writing systems defined by the creator.",
-          "detail": "Translator is included across the planned V1 tiers within each tier's Mimir AI credit allowance. Current implementation remains under validation for the public beta.",
+          "detail": "Translator is on every plan and uses Mimir Credits: the welcome grant, a paid plan's monthly allowance, or credit bundles. Current implementation remains under validation for the public beta.",
           "whyItMatters": "A constructed language stays consistent with its authored rules instead of becoming disconnected flavour text.",
           "status": "testing",
           "category": "Mimir AI",
           "relatedFeatures": ["mimir-ai", "structured-core"],
-          "mediaSlot": "Current Translator capture"
+          "image": "assets/captures/mimir-ai/conlang-vocabulary", "imageAlt": "The vocabulary list of a constructed language in Mimir.", "mediaCaption": "A constructed language's vocabulary."
         },
         {
           "id": "imports-migration",
           "name": "General import & competitor migration",
           "shortDescription": "Bring existing files and projects into a local Mimir world without rebuilding everything by hand.",
-          "detail": "Ordinary import and competitor migration are being completed as Core capabilities. The production flow will let users review mappings and warnings before committing the migration.",
+          "detail": "Importing spreadsheets and documents and moving from Obsidian, Notion and World Anvil are Core features, with a review of every entry before anything is written. The World Anvil importer has been tested with sample exports.",
           "whyItMatters": "Changing tools should not require abandoning years of worldbuilding or paying for permission to keep it.",
           "status": "development",
           "category": "Migration",
           "badge": "Core",
           "relatedFeatures": ["structured-core", "beta-migration", "migration-refine"],
-          "mediaSlot": "Import, review and result composite",
+          "image": "assets/captures/migration/csv-mapping", "imageAlt": "Turning a spreadsheet into entries: each column matched to a field before anything is created.", "mediaCaption": "Spreadsheet mapping before any entry is created.",
           "deepDive": { "label": "Explore Migration", "url": "migration.html", "enabled": true }
         },
         {
           "id": "proving-grounds",
           "name": "Proving Grounds",
-          "shortDescription": "Prototype conversations, quests, tabletop sessions and interactive ideas against the same world data.",
-          "detail": "Proving Grounds is approved V1 scope and is planned for the feature-complete public beta. It is not presented as available in the current alpha.",
+          "shortDescription": "Play your world against its own rules, with Mimir AI as the referee.",
+          "detail": "Proving Grounds is AI-refereed play against your world's Rule entries, including live hosted sessions. Every action, including creating, running, hosting and joining, needs Loremaster. It is planned for the feature-complete public beta.",
           "whyItMatters": "Worldbuilders can test what happens next without separating experimentation from their canonical source material.",
           "status": "planned",
           "category": "Creative tools",
           "relatedFeatures": ["narrative-tools", "simulation-state", "proving-refine"],
-          "mediaSlot": "Interactive choices, state and results"
+          "image": "assets/captures/proving-grounds/sim-setup-planned", "imageAlt": "The Proving Grounds session setup screen in a development build.", "mediaCaption": "Setting up a Proving Ground in a development build."
         },
         {
           "id": "simulation-state",
           "name": "Simulation & world-state systems",
           "shortDescription": "Use variables, conditions and state to test how interactive structures behave.",
-          "detail": "Simulation and world-state tooling are being developed for the Worldsmith tier and deeper Proving Grounds workflows.",
+          "detail": "Simulation and world-state variables are part of Core: step through quests and dialogue and watch what changes.",
           "whyItMatters": "Creators can explore consequences before committing an idea to canon or production.",
           "status": "development",
           "category": "Creative tools",
           "relatedFeatures": ["proving-grounds", "narrative-tools", "engine-workflows"],
-          "mediaSlot": "World-state and simulation capture"
+          "image": "assets/captures/proving-grounds/quest-test-outcome", "imageAlt": "A finished simulation reporting its outcome and which nodes it never reached.", "mediaCaption": "A finished run with its outcome and coverage."
+        },
+        {
+          "id": "engine-export",
+          "name": "Export to Engine",
+          "shortDescription": "Export your world as JSON files for Unreal, Unity and Godot.",
+          "detail": "On Worldsmith and above. It runs on your computer and writes one JSON file per entry type, shaped for Unreal's DataTable import, Unity and Godot 4. It is a one-way export. Live engine integration, round-tripping and native engine formats come later.",
+          "whyItMatters": "Game developers can take canon straight into a project without retyping it.",
+          "status": "development",
+          "category": "Integrations",
+          "badge": "From Worldsmith",
+          "relatedFeatures": ["narrative-tools", "engine-workflows", "unreal"]
         },
         {
           "id": "collaboration-hosting",
-          "name": "Collaboration & hosted worlds",
-          "shortDescription": "Create shared workspaces and controlled player or participant experiences.",
-          "detail": "Collaboration, hosted worlds and live hosted Proving Grounds are approved V1 scope but remain planned for the public-beta product. Core users will be able to accept invitations within the host's allowance.",
-          "whyItMatters": "One power user can build and host without requiring every collaborator or player to subscribe.",
+          "name": "Campaigns & player views",
+          "shortDescription": "Prepare sessions, control reveals and give players and Co-GMs a view of only what they should see.",
+          "detail": "Campaigns are approved V1 scope and planned for the public beta. GM tools include an encounter tracker, a GM screen and the campaign's own in-world date. Apprentice hosts one Campaign; Worldsmith and Loremaster host several. Players and Co-GMs join free on Core.",
+          "whyItMatters": "A GM can host the table without every player needing to subscribe.",
           "status": "planned",
           "category": "Collaboration",
-          "relatedFeatures": ["hosted-infrastructure", "collaboration-refine", "proving-grounds"],
-          "mediaSlot": "Host and participant comparison"
+          "badge": "From Apprentice",
+          "relatedFeatures": ["writers-room", "hosted-infrastructure", "collaboration-refine"],
+          "image": "assets/captures/features/campaign-audiences", "imageAlt": "A campaign's Who sees what screen, showing what each group and player can view or edit.", "mediaCaption": "Campaign permissions in a development build."
+        },
+        {
+          "id": "writers-room",
+          "name": "Writers' Room",
+          "shortDescription": "Build one world together, with collaborators proposing changes and the owner deciding what becomes canon.",
+          "detail": "The Writers' Room is approved V1 scope and planned for the public beta. Creating or joining one needs Worldsmith, and every collaborator needs their own plan. The owner's local copy is canon, and only the owner accepts changes into it.",
+          "whyItMatters": "Co-authors can shape a shared world without losing track of what is canon.",
+          "status": "planned",
+          "category": "Collaboration",
+          "badge": "From Worldsmith",
+          "relatedFeatures": ["collaboration-hosting", "hosted-infrastructure", "collaboration-refine"]
+        },
+        {
+          "id": "phone-app",
+          "name": "Mimir phone app & sync",
+          "shortDescription": "Read and edit your worlds on your phone, and keep them in step with your computer.",
+          "detail": "The phone app is V1. Some power-user screens stay on the desktop. Desktop and phone sync is included from Apprentice.",
+          "whyItMatters": "Ideas arrive away from the desk.",
+          "status": "development",
+          "category": "Platform",
+          "relatedFeatures": ["structured-core", "validation-history"]
         },
         {
           "id": "qa-reliability",
@@ -207,8 +240,7 @@
           "whyItMatters": "Public beta must be a usable commercial release rather than a feature list held together by caveats.",
           "status": "development",
           "category": "Quality",
-          "relatedFeatures": ["validation-history", "launch-qa", "reliability-refine"],
-          "mediaSlot": null
+          "relatedFeatures": ["validation-history", "launch-qa", "reliability-refine"]
         }
       ]
     },
@@ -230,19 +262,17 @@
           "status": "planned",
           "category": "Launch",
           "badge": "Beta bridge",
-          "relatedFeatures": ["structured-core", "accounts", "launch-qa"],
-          "mediaSlot": "Release overview capture"
+          "relatedFeatures": ["structured-core", "accounts", "launch-qa"]
         },
         {
           "id": "accounts",
           "name": "Production accounts & entitlements",
           "shortDescription": "Create the account, tier and ownership foundation needed for commercial use.",
-          "detail": "Production authentication, account records and entitlements are required to manage tiers, credits, owned packs and hosted access with minimal retained customer data.",
+          "detail": "Sign-in and accounts are built and in testing. Public beta needs the production account service to manage tiers, credits, owned packs and hosted access with minimal retained customer data.",
           "whyItMatters": "The application needs a reliable record of what each customer can use without compromising local ownership.",
-          "status": "planned",
+          "status": "development",
           "category": "Infrastructure",
-          "relatedFeatures": ["payments", "ai-credits", "hosted-infrastructure"],
-          "mediaSlot": null
+          "relatedFeatures": ["payments", "ai-credits", "hosted-infrastructure"]
         },
         {
           "id": "payments",
@@ -252,30 +282,27 @@
           "whyItMatters": "Commercial availability requires clear, trustworthy billing without changing ownership of local work.",
           "status": "planned",
           "category": "Commerce",
-          "relatedFeatures": ["accounts", "ai-credits", "founder-programme"],
-          "mediaSlot": null
+          "relatedFeatures": ["accounts", "ai-credits", "founder-programme"]
         },
         {
           "id": "ai-credits",
           "name": "Production Mimir AI credits",
           "shortDescription": "Replace development quota stubs with customer-facing allowances, estimates and reliable accounting.",
-          "detail": "Mimir will route processing internally. Public beta requires production credit balances, monthly resets, top-up handling and protection from charges caused by Shieldwall-side failures.",
+          "detail": "Mimir will route processing internally. Public beta requires production credit balances, monthly resets, top-up handling and protection from charges caused by Shieldwall-side failures. Every account gets a one-time 200-credit welcome grant. Core has no monthly allowance, and paid plans add 400, 1,200 or 3,000 credits a month. Credit bundles of 500 for £4.99, 1,500 for £12.99 and 4,000 for £29.99 never expire. These are planning figures and may change before checkout opens.",
           "whyItMatters": "Users need to understand and control AI usage without learning provider pricing or model menus.",
           "status": "planned",
           "category": "Mimir AI",
-          "relatedFeatures": ["mimir-ai", "accounts", "payments"],
-          "mediaSlot": "Credit estimate and balance capture"
+          "relatedFeatures": ["mimir-ai", "accounts", "payments"]
         },
         {
           "id": "hosted-infrastructure",
           "name": "Hosted collaboration infrastructure",
           "shortDescription": "Provide production sync, permissions, storage and realtime services for invited shared worlds.",
-          "detail": "The public beta requires the infrastructure behind collaborative workspaces, hosted participant worlds and live Proving Grounds, with limits applying only to Shieldwall-hosted resources.",
+          "detail": "The public beta requires the infrastructure behind hosted Campaigns, Writers' Rooms and live Proving Grounds, with limits applying only to Shieldwall-hosted resources.",
           "whyItMatters": "Shared experiences must be dependable without placing artificial limits on local worlds.",
           "status": "planned",
           "category": "Infrastructure",
-          "relatedFeatures": ["collaboration-hosting", "accounts", "collaboration-refine"],
-          "mediaSlot": "Permissions and hosted-world capture"
+          "relatedFeatures": ["collaboration-hosting", "accounts", "collaboration-refine"]
         },
         {
           "id": "download-flow",
@@ -285,8 +312,7 @@
           "whyItMatters": "A commercial beta must be directly usable rather than accessible only through a mailing list.",
           "status": "planned",
           "category": "Launch",
-          "relatedFeatures": ["commercial-onboarding", "launch-qa", "complete-suite"],
-          "mediaSlot": null
+          "relatedFeatures": ["commercial-onboarding", "launch-qa", "complete-suite"]
         },
         {
           "id": "commercial-onboarding",
@@ -296,8 +322,7 @@
           "whyItMatters": "The first session should demonstrate Mimir's value before complexity becomes friction.",
           "status": "planned",
           "category": "Launch",
-          "relatedFeatures": ["download-flow", "beta-migration", "onboarding-refine"],
-          "mediaSlot": "First-run onboarding capture"
+          "relatedFeatures": ["download-flow", "beta-migration", "onboarding-refine"]
         },
         {
           "id": "beta-migration",
@@ -308,7 +333,6 @@
           "status": "planned",
           "category": "Migration",
           "relatedFeatures": ["imports-migration", "commercial-onboarding", "migration-refine"],
-          "mediaSlot": "Final migration composite",
           "deepDive": { "label": "Explore Migration", "url": "migration.html#commit", "enabled": true }
         },
         {
@@ -319,20 +343,29 @@
           "whyItMatters": "The public beta is a genuine release and must earn confidence across both local and online workflows.",
           "status": "planned",
           "category": "Quality",
-          "relatedFeatures": ["qa-reliability", "complete-suite", "reliability-refine"],
-          "mediaSlot": null
+          "relatedFeatures": ["qa-reliability", "complete-suite", "reliability-refine"]
         },
         {
           "id": "founder-programme",
           "name": "Founder early-adopter programme",
           "shortDescription": "Recognise accounts created during the first six months of public beta with approved historical benefits.",
-          "detail": "The programme is approved for public beta launch, not active during alpha. It includes a permanent Founder badge and extra Core AI credits, with separate Founding Member content-pack benefits after the retained-paid condition.",
+          "detail": "Every account created in the first six months of the public beta, paying or not, keeps for life: a Founder badge, 25% extra credits on every credit bundle, 5% extra monthly credits on any paid plan, and 10% off Shieldwall content packs and collections. It is applied automatically. Plan prices are never discounted.",
           "whyItMatters": "It recognises early customers without inventing fake urgency or permanently discounting subscriptions.",
           "status": "planned",
           "category": "Launch",
           "badge": "At beta launch",
-          "relatedFeatures": ["payments", "accounts", "shieldwall-packs"],
-          "mediaSlot": "Final approved badge artwork"
+          "relatedFeatures": ["payments", "accounts", "shieldwall-packs"]
+        },
+        {
+          "id": "shieldwall-packs",
+          "name": "In-app store & Shieldwall content packs",
+          "shortDescription": "Offer optional connected packs inside Mimir's Marketplace from the public beta launch.",
+          "detail": "Shieldwall content packs and collections are sold in Mimir's Marketplace at launch, from £4.99, with collections 20% off the packs you do not already own. Game-system templates are free and built in. Only Shieldwall sells packs at launch.",
+          "whyItMatters": "Optional packs can save preparation time while keeping blank-world creation a first-class path.",
+          "status": "planned",
+          "category": "Ecosystem",
+          "badge": "At beta launch",
+          "relatedFeatures": ["community-hub", "founder-programme", "artist-marketplace"]
         }
       ]
     },
@@ -353,8 +386,7 @@
           "whyItMatters": "A powerful product only helps when people can reach its value quickly and confidently.",
           "status": "planned",
           "category": "Product refinement",
-          "relatedFeatures": ["commercial-onboarding", "feedback-led-changes"],
-          "mediaSlot": null
+          "relatedFeatures": ["commercial-onboarding", "feedback-led-changes"]
         },
         {
           "id": "migration-refine",
@@ -365,7 +397,6 @@
           "status": "planned",
           "category": "Product refinement",
           "relatedFeatures": ["imports-migration", "beta-migration", "feedback-led-changes"],
-          "mediaSlot": null,
           "deepDive": { "label": "Explore Migration", "url": "migration.html#review", "enabled": true }
         },
         {
@@ -376,8 +407,7 @@
           "whyItMatters": "The strongest version of Proving Grounds should be shaped by use rather than assumption.",
           "status": "planned",
           "category": "Product refinement",
-          "relatedFeatures": ["proving-grounds", "feedback-led-changes", "simulation-state"],
-          "mediaSlot": null
+          "relatedFeatures": ["proving-grounds", "feedback-led-changes", "simulation-state"]
         },
         {
           "id": "collaboration-refine",
@@ -387,8 +417,7 @@
           "whyItMatters": "Creative teams and Game Masters need predictable shared access, especially when private information and spoilers are involved.",
           "status": "planned",
           "category": "Product refinement",
-          "relatedFeatures": ["collaboration-hosting", "hosted-infrastructure", "feedback-led-changes"],
-          "mediaSlot": null
+          "relatedFeatures": ["collaboration-hosting", "hosted-infrastructure", "feedback-led-changes"]
         },
         {
           "id": "ai-refine",
@@ -398,8 +427,7 @@
           "whyItMatters": "Grounded answers depend as much on finding the right canon as on the model producing the response.",
           "status": "planned",
           "category": "Mimir AI",
-          "relatedFeatures": ["mimir-ai", "ai-credits", "feedback-led-changes"],
-          "mediaSlot": null
+          "relatedFeatures": ["mimir-ai", "ai-credits", "feedback-led-changes"]
         },
         {
           "id": "accessibility-refine",
@@ -409,8 +437,7 @@
           "whyItMatters": "Worldbuilding should remain usable across different reading, motor and sensory needs.",
           "status": "planned",
           "category": "Quality",
-          "relatedFeatures": ["validation-history", "reliability-refine", "feedback-led-changes"],
-          "mediaSlot": null
+          "relatedFeatures": ["validation-history", "reliability-refine", "feedback-led-changes"]
         },
         {
           "id": "reliability-refine",
@@ -420,8 +447,7 @@
           "whyItMatters": "Creative trust grows when the tool is quiet, fast and dependable.",
           "status": "planned",
           "category": "Quality",
-          "relatedFeatures": ["launch-qa", "collaboration-refine", "ai-refine"],
-          "mediaSlot": null
+          "relatedFeatures": ["launch-qa", "collaboration-refine", "ai-refine"]
         },
         {
           "id": "feedback-led-changes",
@@ -431,32 +457,18 @@
           "whyItMatters": "The roadmap should respond to worldbuilders rather than reward the appearance of constant novelty.",
           "status": "planned",
           "category": "Community",
-          "relatedFeatures": ["community-hub", "onboarding-refine", "reliability-refine"],
-          "mediaSlot": null
+          "relatedFeatures": ["community-hub", "onboarding-refine", "reliability-refine"]
         },
         {
           "id": "community-hub",
           "name": "Community Hub",
-          "shortDescription": "A private account space for voting, feedback, reports, announcements, surveys, challenges and progression.",
-          "detail": "The planned Hub includes feature and pack voting, feedback, bug reports, announcements, surveys, previews, challenges, profiles, achievements, badges and Worldbuilder Score. Competition remains private to friends and collaborators. There is no stranger discovery, open public messaging, public feed or public world-sharing network.",
+          "shortDescription": "A private account space for voting, feedback, reports, announcements and surveys.",
+          "detail": "The planned Hub includes feature and pack voting, feedback, bug reports, announcements, surveys, previews, profiles and badges. One vote each, whatever your plan. Conversation stays on Discord. There is no stranger discovery, open messaging, public feed or public world sharing.",
           "whyItMatters": "Worldbuilders can help shape Mimir and discover useful product workflows without turning Mimir into a social network.",
           "status": "planned",
           "category": "Community",
           "badge": "Not a social network",
-          "relatedFeatures": ["feedback-led-changes", "shieldwall-packs"],
-          "mediaSlot": "Community Hub capture when implemented"
-        },
-        {
-          "id": "shieldwall-packs",
-          "name": "In-app store & Shieldwall content packs",
-          "shortDescription": "Offer optional connected packs inside Mimir when the store, entitlements and launch packs are actually ready.",
-          "detail": "Normal Mimir commerce is intended to happen inside the application. Shieldwall packs are connected worldbuilding material, not isolated text dumps, and are separate from any later third-party marketplace. No pack prices are committed here.",
-          "whyItMatters": "Optional packs can save preparation time while keeping blank-world creation a first-class path.",
-          "status": "planned",
-          "category": "Ecosystem",
-          "badge": "After beta",
-          "relatedFeatures": ["community-hub", "founder-programme", "artist-marketplace"],
-          "mediaSlot": "Real pack and store captures when ready"
+          "relatedFeatures": ["feedback-led-changes", "shieldwall-packs"]
         }
       ]
     },
@@ -467,62 +479,57 @@
       "eyebrow": "Expand",
       "title": "Integrations & Ecosystem",
       "summary": "Once the core product is stable, Mimir can connect the same canonical world to the wider creative toolchain through controlled AI and game-engine workflows.",
-      "milestone": "These are planned post-V1 integrations. None are advertised as public-beta features.",
+      "milestone": "Live engine and AI-tool connections, beyond the V1 file export. None are public-beta features.",
       "features": [
         {
           "id": "chatgpt-mcp",
           "name": "ChatGPT MCP",
           "shortDescription": "Let ChatGPT work with a Mimir world through controlled operations.",
-          "detail": "A future MCP connection may allow approved read and, where appropriate, write workflows against the creator's canonical Mimir world.",
+          "detail": "A future MCP connection may allow approved read and, where appropriate, write workflows against the creator's canonical Mimir world. Later, with no release date set.",
           "whyItMatters": "Creators would not need to repeatedly paste and maintain separate world context.",
           "status": "planned",
           "category": "AI integration",
-          "relatedFeatures": ["claude-mcp", "mimir-ai", "engine-workflows"],
-          "mediaSlot": null
+          "relatedFeatures": ["claude-mcp", "mimir-ai", "engine-workflows"]
         },
         {
           "id": "claude-mcp",
           "name": "Claude MCP",
           "shortDescription": "Let Claude query and work with the same controlled Mimir source of truth.",
-          "detail": "A future MCP connection may expose carefully controlled world operations without changing Mimir's local-first ownership principles.",
+          "detail": "A future MCP connection may expose carefully controlled world operations without changing Mimir's local-first ownership principles. Later, with no release date set.",
           "whyItMatters": "The same canon can support different creative tools without duplicating or drifting context.",
           "status": "planned",
           "category": "AI integration",
-          "relatedFeatures": ["chatgpt-mcp", "mimir-ai", "engine-workflows"],
-          "mediaSlot": null
+          "relatedFeatures": ["chatgpt-mcp", "mimir-ai", "engine-workflows"]
         },
         {
           "id": "unreal",
           "name": "Unreal Engine",
           "shortDescription": "Connect structured Mimir world and narrative data to Unreal workflows.",
-          "detail": "The planned Unreal integration follows V1 refinement and will be defined against real production needs rather than presented as a launch entitlement.",
+          "detail": "A live connection to Unreal Engine, beyond the V1 JSON export, defined against real production needs.",
           "whyItMatters": "A canonical world can inform implementation without requiring a second manually maintained data source.",
           "status": "planned",
           "category": "Game engines",
-          "relatedFeatures": ["unity", "godot", "engine-workflows"],
-          "mediaSlot": null
+          "relatedFeatures": ["unity", "godot", "engine-workflows"]
         },
         {
           "id": "unity",
           "name": "Unity",
           "shortDescription": "Connect Mimir's canonical world data to Unity projects and narrative systems.",
-          "detail": "The planned Unity integration is post-V1 work and remains dependent on the stable core product and validated engine workflows.",
+          "detail": "A live connection to Unity, beyond the V1 JSON export, defined against real production needs.",
           "whyItMatters": "Narrative and world data can move closer to the systems that use it in production.",
           "status": "planned",
           "category": "Game engines",
-          "relatedFeatures": ["unreal", "godot", "engine-workflows"],
-          "mediaSlot": null
+          "relatedFeatures": ["unreal", "godot", "engine-workflows"]
         },
         {
           "id": "godot",
           "name": "Godot",
           "shortDescription": "Connect Mimir world data to Godot through a workflow designed for the engine.",
-          "detail": "The planned Godot integration is post-V1 work and will be prioritised after refinement of the public-beta product.",
+          "detail": "A live connection to Godot, beyond the V1 JSON export, defined against real production needs.",
           "whyItMatters": "The canonical world should be useful across different production stacks.",
           "status": "planned",
           "category": "Game engines",
-          "relatedFeatures": ["unreal", "unity", "engine-workflows"],
-          "mediaSlot": null
+          "relatedFeatures": ["unreal", "unity", "engine-workflows"]
         },
         {
           "id": "engine-workflows",
@@ -532,8 +539,7 @@
           "whyItMatters": "The long-term value is one dependable source of truth rather than a growing collection of brittle copies.",
           "status": "planned",
           "category": "Game engines",
-          "relatedFeatures": ["unreal", "unity", "godot"],
-          "mediaSlot": null
+          "relatedFeatures": ["unreal", "unity", "godot"]
         }
       ]
     },
@@ -556,7 +562,6 @@
           "category": "Professional",
           "badge": "Exploring",
           "relatedFeatures": ["organisation-admin", "professional-support"],
-          "mediaSlot": null,
           "isSpeculative": true
         },
         {
@@ -569,7 +574,6 @@
           "category": "Professional",
           "badge": "Exploring",
           "relatedFeatures": ["studio-plan", "professional-support"],
-          "mediaSlot": null,
           "isSpeculative": true
         },
         {
@@ -582,7 +586,6 @@
           "category": "Professional",
           "badge": "Direction",
           "relatedFeatures": ["studio-plan", "organisation-admin"],
-          "mediaSlot": null,
           "isSpeculative": true
         },
         {
@@ -595,7 +598,6 @@
           "category": "Ecosystem",
           "badge": "Not committed",
           "relatedFeatures": ["shieldwall-packs"],
-          "mediaSlot": null,
           "isSpeculative": true
         },
         {
@@ -608,7 +610,6 @@
           "category": "Creative tools",
           "badge": "Exploring",
           "relatedFeatures": ["proving-grounds", "further-tools"],
-          "mediaSlot": null,
           "isSpeculative": true
         },
         {
@@ -621,7 +622,6 @@
           "category": "Creative tools",
           "badge": "Open direction",
           "relatedFeatures": ["session-capture", "feedback-led-changes"],
-          "mediaSlot": null,
           "isSpeculative": true
         }
       ]

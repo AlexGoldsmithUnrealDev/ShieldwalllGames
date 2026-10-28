@@ -124,9 +124,12 @@
         function renderMedia(feature) {
             var mount = document.getElementById('roadmap-detail-media');
             if (!mount) return;
-            var copy = mount.querySelector('p');
-            if (feature.mediaSlot) {
-                if (copy) copy.textContent = feature.mediaSlot + '. No screenshot or video has been fabricated.';
+            if (feature.image) {
+                mount.querySelector('source').setAttribute('srcset', feature.image + '.avif');
+                var shot = mount.querySelector('img');
+                shot.src = feature.image + '.webp';
+                shot.alt = feature.imageAlt || '';
+                mount.querySelector('figcaption').textContent = feature.mediaCaption || '';
                 mount.removeAttribute('hidden');
             } else {
                 mount.setAttribute('hidden', '');

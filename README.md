@@ -10,13 +10,17 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | Mimir | `mimir/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
 | Mimir features | `mimir/features.html` | Comprehensive, searchable product capabilities |
 | Mimir AI | `mimir/mimir-ai.html` | Grounding, evidence, consistency, context, translation and control |
-| Proving Grounds | `mimir/proving-grounds.html` | Dialogue, quest, state, session and simulation deep dive |
+| Proving Grounds | `mimir/proving-grounds.html` | AI-refereed play against a world's Rule entries (Loremaster, planned for public beta) |
+| Campaign | `mimir/campaign.html` | GM campaign management, controlled reveals and player access deep dive |
+| Collaboration | `mimir/collaboration.html` | Writers' Room collaborative worldbuilding deep dive |
 | Migration | `mimir/migration.html` | Reviewed spreadsheet/document import and local ownership deep dive |
+| Mimir download | `mimir/download.html` | Tester download page (`noindex`, not in the sitemap) |
 | Mimir roadmap | `mimir/roadmap.html` | Data-driven public roadmap |
 | Ashborn CCG | `ashborn/index.html` | Product landing page |
 | Privacy | `privacy.html` | Website and planned Mimir privacy model |
 | Terms | `terms.html` | Website and planned Mimir commercial terms |
-| 404 | `404.html` | Custom not-found page |
+| 404 | `404.html` | Custom not-found page (root-relative links, so it works at any path) |
+| Download redirect | `download.html` | Redirects to `mimir/download.html`, because the app links to `/download.html` (`noindex`, not in the sitemap) |
 
 ## Tech stack
 
@@ -44,6 +48,7 @@ Then visit `http://localhost:8000`.
 ├── privacy.html
 ├── terms.html
 ├── 404.html
+├── download.html               # Redirect to mimir/download.html
 ├── robots.txt
 ├── sitemap.xml
 ├── CNAME
@@ -51,7 +56,8 @@ Then visit `http://localhost:8000`.
 │   ├── main.css
 │   └── shieldwall.css
 ├── scripts/
-│   └── main.js
+│   ├── main.js
+│   └── consent.js
 ├── assets/
 │   ├── images/
 │   ├── fonts/
@@ -62,7 +68,10 @@ Then visit `http://localhost:8000`.
 │   ├── features.html
 │   ├── mimir-ai.html
 │   ├── proving-grounds.html
+│   ├── campaign.html
+│   ├── collaboration.html
 │   ├── migration.html
+│   ├── download.html           # Tester page, noindex
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -73,6 +82,8 @@ Then visit `http://localhost:8000`.
 │   │   ├── features.css
 │   │   ├── mimir-ai.css
 │   │   ├── proving-grounds.css
+│   │   ├── campaign.css
+│   │   ├── collaboration.css
 │   │   ├── migration.css
 │   │   └── roadmap.css
 │   └── scripts/
@@ -111,9 +122,16 @@ The live site currently uses the planned V1 commercial model:
 | Worldsmith | £14.99 | £149.99 |
 | Loremaster | £24.99 | £249.99 |
 
-Core keeps unlimited local worlds and entries. Paid tiers add advanced workflows, Mimir AI allowance, collaboration, hosting, and scale rather than artificial local content caps.
+Worldsmith is the featured "Most Popular" plan. Every tier keeps unlimited local worlds and entries. Paid tiers add a monthly Mimir AI allowance, sync, hosting, collaboration and scale rather than artificial local content caps.
 
-The deeper canonical commercial specification lives in the Lorekeeper/Mimir application repository at `docs/commercial-model.md`. When pricing or entitlements change there, this website and `CLAUDE.md` must be updated together.
+- **Mimir Core:** the full local toolset, including the Entry type editor, Narrative Planner, advanced tree and filter tools, Simulation and world-state variables. Imports and competitor migration. Mimir AI and Translator using credits. Join a hosted Campaign free as a player or Co-GM.
+- **Apprentice:** 400 Mimir AI credits a month. Desktop and phone sync. Host one Campaign (8 people including the GM, 1 GB, 1 live table).
+- **Worldsmith:** 1,200 credits a month. Lore Consistency Review. Export to Engine. Writers' Room, which needs Worldsmith both to create and to join (5 hosted worlds, 5 guest collaborators each). Host several Campaigns (20 people, 3 GB, 2 live tables).
+- **Loremaster:** 3,000 credits a month. Proving Grounds (create, run, host and join). Host several Campaigns (50 people, 10 GB, 5 live tables). 20 hosted worlds, 20 guest collaborators each. Priority support.
+
+**Founder programme.** Every account created in the first six months of public beta, paying or not, becomes a founder automatically. Founders get a Founder badge, 25% extra credits on every bundle, 5% extra monthly credits on any paid plan and 10% off Shieldwall packs and collections. Plan prices are never discounted. Give no dates on the site.
+
+The deeper canonical commercial specification lives in the Mimir application repository at `docs/commercial-model.md`. When pricing or entitlements change there, this website and `CLAUDE.md` must be updated together.
 
 ### Roadmap authoring
 
@@ -149,8 +167,8 @@ screenshots remain separate labelled media slots. Do not turn conceptual website
 diagrams into claims that a live product call is taking place.
 
 The page uses current application guides for Ask Mimir, Lore Consistency Review,
-AI Context Bundles, Translator and account/credit behaviour. In particular, the
-current alpha's AI Context Bundles are a saved-filter export for external AI
+World briefs, Translator and account/credit behaviour. In particular, the
+current World briefs are a saved-filter export for external AI
 tools, while Ask Mimir uses retrieval and focused-entry context internally.
 
 ### Proving Grounds page
@@ -172,9 +190,10 @@ lighting and future artwork configuration lives in
 import and migration. Verified current implementation formats are CSV, XLSX,
 TXT, Markdown and DOCX. Spreadsheet conversion is deterministic, with optional
 AI mapping suggestions; prose extraction is AI-assisted and creator-reviewed.
-Do not name a competitor or promise relationship/asset conversion, universal
-dry-run transactions or import rollback until the application implements and
-documents those behaviours.
+The app has dedicated importers for Obsidian, Notion and World Anvil
+(`docs/specs/importer.md` in the application repository, built 13 Oct 2026).
+Name them, but say World Anvil has only been tested with sample exports. Still
+do not promise lossless conversion, dry runs or one-click rollback.
 
 The page uses the shared Well controller and internal navigation/footer. Its
 configuration is in `migration-chapters.js`, and exact background files are in
@@ -196,12 +215,15 @@ Mimir V1 is being completed around:
 - Local-first structured worldbuilding
 - Trees, timeline, calendar, maps, quests, dialogue, story arcs, validation, history, and accessibility
 - Mimir AI and constructed-language translation
-- General imports and competitor migration
-- Proving Grounds for prototyping conversations, quests, tabletop sessions, board-game systems, and related interactive ideas
-- Collaboration for shared creative work
-- Hosted worlds for player/viewer/participant use cases
+- General imports and competitor migration (Obsidian, Notion and World Anvil)
+- Simulation: stepping through quest and dialogue graphs with world-state variables (Core, in development)
+- Proving Grounds: AI-refereed play against the world's Rule entries (Loremaster, planned for public beta)
+- Writers' Room collaboration for shared creative work (Worldsmith)
+- Hosted Campaigns for players and Co-GMs (Apprentice and above to host)
+- Export to Engine: one-way JSON files shaped for Unreal's DataTable import, Unity and Godot 4, written on the user's computer (Worldsmith and above, in development)
+- Mimir phone app (in development). Desktop and phone sync needs Apprentice or above. Do not state a tier for the phone app itself, and do not claim the whole desktop app runs on a phone.
 
-MCP connections and direct Unreal, Unity, and Godot integrations are future post-V1 work. Do not advertise them as V1 launch features.
+Live engine integrations, round-tripping and native engine asset formats are later work. MCP connections (ChatGPT, Claude) are later too, with no release date set. Do not advertise them as V1 launch features.
 
 ## Mimir AI positioning
 
@@ -209,14 +231,13 @@ Customer-facing language is **Mimir AI**.
 
 Do not ask customers to choose Haiku, Sonnet, Opus, or another provider SKU in website copy. Mimir chooses the underlying processing route internally. Credit consumption is based on the amount/type of work rather than a customer-selected provider model.
 
-Current launch-planning monthly allowances are:
+Current launch-planning credits are:
 
-- Core: 25 credits + 100 one-time welcome credits
-- Apprentice: 400 credits
-- Worldsmith: 1,200 credits
-- Loremaster: 3,000 credits
+- Every account: 200 one-time welcome credits
+- Monthly: Core 0, Apprentice 400, Worldsmith 1,200, Loremaster 3,000
+- Credit bundles: 500 for £4.99, 1,500 for £12.99, 4,000 for £29.99. Bundle credits never expire.
 
-These allowances are still subject to beta workload validation before paid checkout opens.
+These are planning figures. They may change before paid checkout opens, after beta workload validation.
 
 ## Email capture
 
@@ -239,7 +260,7 @@ Do not reintroduce Buttondown instructions.
 - Keep user data ownership/local-first language precise: local worlds stay on the user's device by default; AI and optional hosted/collaboration services are network features.
 - Do not promise future features as already delivered.
 - Do not expose bring-your-own-key (BYOK) as a customer feature.
-- Do not use the retired product name Lorekeeper in public website copy.
+- Do not use the retired internal product name in public website copy (see `CLAUDE.md`).
 
 ## Deployment
 

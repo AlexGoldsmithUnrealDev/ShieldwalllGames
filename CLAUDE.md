@@ -59,72 +59,85 @@ This website must remain aligned with that specification.
 - Do not paywall accessibility, basic data integrity, ordinary migration/import, or export of the user's own local data.
 - Paid tiers add increasingly powerful workflows, AI allowance, collaboration, hosting, and scale.
 - Only Shieldwall-hosted resources should carry capacity limits.
-- Free/Core users may accept invitations to paid users' hosted/collaborative experiences within the host's allowance.
+- Free/Core users may join a paid user's hosted **Campaign** as a player or Co-GM within the host's allowance.
+- The **Writers' Room** needs Worldsmith to create **and to join**: every collaborator needs their own Worldsmith plan. Core and Apprentice cannot join.
+- Proving Grounds needs Loremaster for every action, including joining.
 - Downgrading must not delete local work.
 - Do not market a separate Writer, GM, or Developer edition. Those are audience/persona routes into the same product.
 - Do not advertise a Studio/business plan as a current V1 consumer plan. A future business plan may be created only when real professional demand justifies it.
 
 ### Planned V1 feature progression
 
-**Core** includes the standard local worldbuilding foundation:
+Ladder set 27 October 2026 (`docs/commercial-model.md` in the app repo). It supersedes the 7 October web brief on tiers, credits and allowances.
+
+**Core** includes the full local toolset:
 
 - Unlimited local worlds and entries
-- Standard entry types/editors
-- Browser, search, tags, backlinks, wiki-links
-- Family, genus/species, culture, faction, and place trees
-- Timeline, calendar, and maps
-- Quest, Dialogue, and Story Arc editors
-- Spoilers
-- Validation and naming consistency
-- Git/history/rollback
-- Accessibility
-- Standard and safe-to-publish export
-- General imports and competitor migration
-- Mimir AI and Translator within the Core credit allowance
-- AI Context Export (local Markdown bundle for external AI tools, no credits)
-- Ability to join invited collaborative/hosted experiences
+- Standard entry types/editors and the **Entry type editor** (formerly "Custom Schema Editor")
+- Browser, search, tags, backlinks, links
+- Family, genus/species, culture, faction and place trees, with advanced tree filters
+- Timeline, calendar and maps
+- Quest, Dialogue and Story Arc editors, and the **Narrative Planner**
+- **Simulation** and world-state variables (stepping through quest and dialogue graphs)
+- Spoilers, validation and naming consistency
+- History (saved versions; Git under the hood) and the Bin
+- Accessibility and local voice dictation
+- Standard, safe-to-publish and JSON export
+- General imports and competitor migration (dedicated Obsidian, Notion and World Anvil importers)
+- Mimir AI (including creating entries) and the Translator, paid for with credits: a one-time 200-credit welcome grant, then credit bundles or a paid plan. Core has **no monthly allowance**.
+- **World brief** (local Markdown bundle for other AI tools, no credits)
+- Game-system templates: Default and D&D 5e (SRD 5.2), free and built in. Never say "Pathfinder" in public copy.
+- Joining an invited hosted Campaign as player or Co-GM
 
 **Apprentice** adds:
 
-- Custom Schema Editor
-- Narrative Planner
-- Advanced tree/filter tools
-- Campaign hosting (up to 8 participants)
-- Small collaboration/hosting allowance
-- Larger Mimir AI allowance
+- 400 Mimir AI credits a month; 8k retrieval context
+- Desktop and phone sync
+- Host one Campaign: 8 people including the GM, 1 GB, 1 live table
 
-**Worldsmith** adds:
+**Worldsmith** (Most Popular) adds:
 
-- Lore Consistency Review
-- Simulation
-- Variables/world-state tooling
-- Hosted participant/player worlds (up to 50 participants)
-- Larger collaboration/hosting allowance
-- Larger Mimir AI allowance
+- 1,200 credits a month; 16k context
+- Lore Consistency Review and rules contradiction analysis
+- Writers' Room create and join (5 hosted worlds, 5 guest collaborators each; every guest needs Worldsmith)
+- Export to Engine: one-way JSON files for Unreal, Unity and Godot, run locally (folder and JSON export stay on every tier)
+- Several Campaigns: 20 people, 3 GB, 2 live tables
 
-**Loremaster** primarily increases scale:
+**Loremaster** adds:
 
-- Proving Grounds (planned)
-- More hosted worlds
-- More collaborators
-- More participants (up to 200)
-- More hosted storage
-- Larger Mimir AI allowance
-- Priority support queue
+- 3,000 credits a month; 16k context
+- Proving Grounds (AI-refereed play against the world's Rule entries; create, run, host, join)
+- Several Campaigns: 50 people, 10 GB, 5 live tables
+- 20 hosted worlds, 20 guest collaborators each
+- Priority support queue (aim one working day; not an SLA)
 
 ### Current planning allowances
 
-These are beta planning values and may be tuned before paid checkout opens.
+Planning values that may change before paid checkout opens. Note: until the app's credit change ships, its servers still grant 25 monthly Core credits and a 100-credit welcome. The website states the decided model.
 
 | Allowance | Core | Apprentice | Worldsmith | Loremaster |
 | --- | ---: | ---: | ---: | ---: |
-| Monthly Mimir AI credits | 25 | 400 | 1,200 | 3,000 |
-| One-time welcome credits | 100 | Account-level | Account-level | Account-level |
+| Monthly Mimir AI credits | 0 | 400 | 1,200 | 3,000 |
+| One-time welcome credits | 200 | 200 | 200 | 200 (once per account) |
 | Ask Mimir retrieval context | 4k | 8k | 16k | 16k |
-| Hosted worlds owned | 0 | 1 | 5 | 20 |
-| Guest collaborators/world | Host allowance | 2 | 5 | 20 |
-| Participants/world | - | 8 per Campaign | 50 | 200 |
-| Hosted storage | - | 1GB | 10GB | 50GB |
+| Hosted Campaigns | - | 1 | Several | Several |
+| People per Campaign (incl. GM) | - | 8 | 20 | 50 |
+| Campaign storage | - | 1GB | 3GB | 10GB |
+| Live tables at once | - | 1 | 2 | 5 |
+| Writers' Room hosted worlds | 0 | 0 | 5 | 20 |
+| Guest collaborators per world | - | - | 5 | 20 |
+
+### Credits, founders and packs
+
+- Credit bundles: 500 for £4.99, 1,500 for £12.99, 4,000 for £29.99. Bought credits never expire; monthly credits are used first.
+- Founder programme: every account created in the first six months of the public beta, paying or not, keeps for life a Founder badge, 25% extra credits on every bundle, 5% extra monthly credits on any paid plan, and 10% off Shieldwall packs and collections. Automatic, not codes. Plan prices are never discounted. No start date has been set, so give no dates.
+- Content packs are sold in the in-app Marketplace from public beta launch, from £4.99; collections are 20% off packs you don't already own.
+
+### Downgrade and read-only rules
+
+- Local data is never deleted. Bought credits stay on the account.
+- Hosted resources above a new plan's allowance go to a grace, read-only or archive flow, never silent deletion.
+- Writers' Room: if the host is below Worldsmith, the whole room is read-only for everyone. A guest below Worldsmith is read-only in every room and keeps their place. Everyone can still open, read and export.
 
 ---
 
@@ -162,8 +175,11 @@ Finish the complete launch platform, including:
 - Existing structured worldbuilding systems
 - General imports and competitor migration
 - Proving Grounds
-- Collaboration
+- Campaigns (with GM session tools: encounter tracker, GM screen, in-world date, quests) and the Writers' Room
 - Hosted worlds/player participation
+- Export to Engine (one-way JSON file export, Worldsmith)
+- The Mimir phone app and desktop/phone sync (sync from Apprentice)
+- Ask Mimir creating entries; content packs and Marketplace
 
 ### Post-V1 refinement period
 
@@ -182,14 +198,15 @@ After V1 launches, Shieldwall deliberately spends several months gathering real 
 
 Only after V1 refinement:
 
+- Live Unreal Engine, Unity and Godot integration
+- Native engine asset formats and advanced engine round-tripping
+
+Later, with no release date set:
+
 - ChatGPT MCP integration
 - Claude MCP integration
-- Unreal Engine integration
-- Unity integration
-- Godot integration
-- advanced engine round-tripping
 
-**Critical:** MCP and game-engine integrations are future features. Do not describe them as available at V1 launch.
+**Critical:** the V1 Export to Engine is a one-way JSON file export on Worldsmith. Do not describe live engine integration, round-tripping or MCP as available at V1.
 
 ### Future professional expansion
 
@@ -275,6 +292,9 @@ prototyping discipline. All Proving Grounds actions (creating, running,
 hosting, and joining) require Loremaster under the current commercial
 specification. The complete experience is labelled "Planned for public beta".
 
+Quest and dialogue **Simulation** is Core and is not Proving Grounds. Proving
+Grounds is AI-refereed play against the world's Rule entries.
+
 The application repository contains substantial Quest/Dialogue simulation and
 local Proving Ground foundations. Do not translate internal implementation into
 an "Available in alpha" website claim without an explicit product-release
@@ -289,8 +309,10 @@ Markdown and DOCX. Spreadsheet mapping is deterministic; Mimir AI may optionally
 suggest field matches. Prose extraction is AI-assisted, followed by explicit
 creator review before draft entries are created.
 
-Do not name a competitor as supported until a dedicated adapter or a documented
-supported export workflow exists. Do not claim lossless conversion, universal
+Dedicated Obsidian, Notion and World Anvil importers are built (no AI, no
+credits, offline) and may be named. Wherever World Anvil is named, say it has
+been tested with sample exports. Do not name any other competitor as supported
+until a dedicated adapter or a documented supported export workflow exists. Do not claim lossless conversion, universal
 relationship or attachment preservation, a dry-run transaction, one-click
 rollback or perfect round-tripping. The source attachment remaining available
 is not the same as a transaction rollback.
@@ -314,7 +336,9 @@ propose/review/accept workflow and tier allowances. The complete Writers'
 Room experience is labelled "Planned for public beta" and is V1 scope.
 
 Hosted acceptance confirmation is required before presenting Writers' Room
-as publicly available. The owner's local copy is always canonical.
+as publicly available. The owner's local copy is always canonical. The Writers'
+Room is Worldsmith for everyone in it; only the owner accepts changes into
+canon, and Admins can review in the hosted world.
 
 ---
 
@@ -413,6 +437,22 @@ Features page media and pop-up images come from the `image`, `imageAlt` and
 `node mimir/scripts/generate-features.js` to rebuild the static block in
 `features.html`.
 
+The deploy workflow assembles a public copy of the site and excludes working
+files: `CLAUDE.md`, every `*.md`, `*.docx`, `Mimir Design System/`, `.github/`
+and `mimir/scripts/generate-*.js` are not served. Root `download.html`
+redirects to `/mimir/download.html` because the app links to the root path.
+The app also links to `/support.html`, `/refunds.html`, `/eula.html` and
+`/subprocessors.html`. Their drafts live in the app repo (`docs/website/`,
+`docs/legal/`) and await legal review before publishing.
+
+Roadmap cards come from `mimir/roadmap-data.json`. Run
+`node mimir/scripts/generate-roadmap.js` after editing it; the generator adds
+soft hyphens to long title words.
+
+Current UI words (see `docs/specs/plain-english-pass.md` in the app repo):
+Entry type editor, World brief, History / saved versions, links, file name, the
+Bin, "your world" (never "lorebible").
+
 GitHub Pages should not be treated as the permanent commercial SaaS/download/account infrastructure. Before paid launch, migrate or confirm the intended production hosting/download architecture.
 
 ---
@@ -444,6 +484,8 @@ Always check these together:
 12. `terms.html`
 13. `README.md`
 14. `CLAUDE.md`
+15. `mimir/download.html` and root `download.html`
+16. `sitemap.xml`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.
 
@@ -470,4 +512,4 @@ Older reference files under `Mimir Design System/` are retained historical/desig
 
 ---
 
-*Last updated: 28 October 2026. Product captures, overview video and social images added across the Mimir pages. Human owner: Shieldwall Games Ltd.*
+*Last updated: 28 October 2026. Aligned with the 27 October 2026 commercial ladder; product captures, overview video and social images added; deploy now excludes working files. Human owner: Shieldwall Games Ltd.*
