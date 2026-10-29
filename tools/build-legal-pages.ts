@@ -21,6 +21,9 @@ const COMMON: Fix[] = [
   [/ ?\[\[LEGAL:[^\]]*\]\]/g, ''],
   ['not your whole lorebible', 'not your whole world'],
   ['answers from your own lorebible', 'answers from your own world'],
+  [/\*\*shieldwallgames\.co\.uk\/subprocessors\.html\*\*/g, '[our Subprocessors page](https://shieldwallgames.co.uk/subprocessors.html)'],
+  [/\*\*shieldwallgames\.co\.uk\/refunds\.html\*\*/g, '[our Refund Policy](https://shieldwallgames.co.uk/refunds.html)'],
+  ['The full policy is at shieldwallgames.co.uk/refunds.html.', 'The full policy is in our [Refund Policy](https://shieldwallgames.co.uk/refunds.html).'],
 ];
 
 const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixes: Fix[]; append?: string }> = [
@@ -36,7 +39,7 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
       ['European Union (Germany) [[CONFIRM region chosen]]', 'European Union (Germany)'],
       ['| Google Workspace | Our support inbox | [[CONFIRM]] |', '| Google Workspace | Our support inbox | United States and other countries |'],
       ['[[CONFIRM: suggest 2 years after the last message]]', '2 years after the last message.'],
-      ['See our cookie notice.', 'See the [Cookie Notice](#cookies) below.'],
+      ['See our cookie notice.', 'See the [Cookie Notice](https://shieldwallgames.co.uk/privacy.html#cookies) below.'],
     ],
     append: 'docs/legal/cookie-notice.md',
   },

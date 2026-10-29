@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-10-28",
+  "lastUpdated": "2026-10-29",
   "statusDefinitions": [
     {
       "id": "available",
-      "label": "Available in alpha",
+      "label": "Available",
       "shortLabel": "Available",
-      "description": "Usable in the current alpha build, with further refinement still expected."
+      "description": "Built into Mimir and ready to use, with further refinement still expected."
     },
     {
       "id": "testing",
@@ -23,7 +23,7 @@
       "id": "planned",
       "label": "Planned",
       "shortLabel": "Planned",
-      "description": "Approved direction, but not available in the current alpha."
+      "description": "Approved direction, not yet available."
     },
     {
       "id": "future",
@@ -38,21 +38,21 @@
       "number": "01",
       "navLabel": "Current",
       "eyebrow": "Current",
-      "title": "Alpha / V1 Completion",
-      "summary": "Shieldwall is finishing and testing the complete Mimir public-beta product: the connected local worldbuilding foundation, migration from other tools, Mimir AI, Campaigns, the Writers' Room, Proving Grounds, Export to Engine and the Mimir phone app with desktop and phone sync.",
-      "milestone": "The work here leads to a feature-complete public commercial beta, not a small closed test.",
+      "title": "Built for launch",
+      "summary": "The complete Mimir public-beta product is built: the connected local worldbuilding foundation, migration from other tools, Mimir AI, Campaigns, the Writers' Room, Proving Grounds, Export to Engine and the Mimir phone app with desktop and phone sync. Final launch QA continues.",
+      "milestone": "This is the feature-complete product the public beta opens with, not a small closed test.",
       "features": [
         {
           "id": "structured-core",
           "name": "Structured worldbuilding core",
           "shortDescription": "Connected editors for characters, places, cultures, factions, events, languages, quests and more.",
-          "detail": "Mimir already provides the local foundation for authoring structured entries in readable files. V1 work continues to bring the full editor set and connected workflows to launch quality.",
+          "detail": "Mimir provides the local foundation for authoring structured entries in readable files, with the full editor set and connected workflows.",
           "whyItMatters": "A structured source of truth lets the same canon power browsing, visualisation, validation, AI and interactive testing.",
           "status": "available",
           "category": "Worldbuilding",
           "badge": "Core",
           "relatedFeatures": ["relationships", "trees", "narrative-tools"],
-          "image": "assets/captures/features/build-entry-odin", "imageAlt": "Óðinn's character entry in Mimir, with structured fields, class paths and stats.", "mediaCaption": "A character entry in a development build."
+          "image": "assets/captures/features/build-entry-odin", "imageAlt": "Óðinn's character entry in Mimir, with structured fields, class paths and stats.", "mediaCaption": "A character entry in Mimir."
         },
         {
           "id": "relationships",
@@ -69,7 +69,7 @@
           "id": "trees",
           "name": "Trees & visual structures",
           "shortDescription": "See family, species, culture, faction and place structures as connected visual systems.",
-          "detail": "Tree tooling is already part of the alpha foundation, with V1 expanding the range and finish of the visual structures used across the world.",
+          "detail": "Family, species, culture, faction and place trees are built, with advanced tree filters on every plan.",
           "whyItMatters": "Visual structures reveal patterns and gaps that are difficult to spot in prose alone.",
           "status": "available",
           "category": "Visualisation",
@@ -80,7 +80,7 @@
           "id": "timeline-calendar",
           "name": "Timeline & calendar",
           "shortDescription": "Define an in-world calendar and understand events across the world's chronology.",
-          "detail": "The alpha includes timeline and calendar foundations, including custom world chronology. V1 work continues around breadth, polish and connected navigation.",
+          "detail": "Mimir includes the timeline and calendars, including custom world chronology and more than one calendar per world.",
           "whyItMatters": "Chronology keeps ages, reigns, journeys, conflicts and narrative arcs internally coherent.",
           "status": "available",
           "category": "Visualisation",
@@ -91,7 +91,7 @@
           "id": "validation-history",
           "name": "Validation, history & accessibility",
           "shortDescription": "Catch structural issues, recover earlier work and adapt the interface to different reading needs.",
-          "detail": "Validation warnings, saved-version history, keyboard support and dyslexia-first accessibility controls are present in the alpha foundation and continue to be refined.",
+          "detail": "Validation warnings, saved-version history, keyboard support and dyslexia-first accessibility controls are built and continue to be refined.",
           "whyItMatters": "A serious creative tool should help protect the work and remain usable for the people creating it.",
           "status": "available",
           "category": "Quality",
@@ -104,7 +104,7 @@
           "shortDescription": "Connect locations and entries to geography rather than keeping place trapped in prose.",
           "detail": "Maps are Core: your own picture with pins that link to the entries they mark.",
           "whyItMatters": "Spatial context helps creators understand travel, borders, influence and the physical consequences of world events.",
-          "status": "development",
+          "status": "available",
           "category": "Visualisation",
           "relatedFeatures": ["trees", "timeline-calendar", "relationships"],
           "image": "assets/captures/homepage/map", "imageAlt": "The Nine Realms map with the Jötunheim pin selected and its linked entry shown.", "mediaCaption": "Map pins link back to the entries they mark."
@@ -115,18 +115,18 @@
           "shortDescription": "Plan story arcs, quests and dialogue beside the lore they depend on.",
           "detail": "Story Arc, Quest and Dialogue editors and the Narrative Planner are all part of Core.",
           "whyItMatters": "Narrative work stays connected to canon instead of becoming a second disconnected planning system.",
-          "status": "development",
+          "status": "available",
           "category": "Creative tools",
           "relatedFeatures": ["structured-core", "proving-grounds", "simulation-state"],
-          "image": "assets/captures/features/narrative-planner", "imageAlt": "A story planned as six illustrated beats joined by labelled edges in the Narrative Planner.", "mediaCaption": "The Narrative Planner in a development build."
+          "image": "assets/captures/features/narrative-planner", "imageAlt": "A story planned as six illustrated beats joined by labelled edges in the Narrative Planner.", "mediaCaption": "The Narrative Planner in Mimir."
         },
         {
           "id": "mimir-ai",
           "name": "Mimir AI",
           "shortDescription": "Ask questions against relevant world context without treating unsupported invention as canon.",
-          "detail": "The development build contains Mimir AI workflows. Production work is focused on grounded retrieval, uncertainty, routing and a customer-facing credit system rather than provider-model selection. V1 also adds Ask Mimir creating entries from your own lore, and from pasted text.",
+          "detail": "Mimir AI answers from your own world, with grounded retrieval, visible uncertainty and a customer-facing credit system rather than provider-model selection. Mimir chooses the processing route internally. Ask Mimir can also create a minor character, item or place from your own lore.",
           "whyItMatters": "Creators can understand a large world faster while keeping the distinction between written canon and inference visible.",
-          "status": "testing",
+          "status": "available",
           "category": "Mimir AI",
           "relatedFeatures": ["relationships", "lore-review", "translator"],
           "image": "assets/captures/mimir-ai/what-mimir-checks", "imageAlt": "Ask Mimir's What Mimir checks panel, showing the limits of what the AI reads and the pinned entries.", "mediaCaption": "Ask Mimir shows exactly which entries it reads."
@@ -137,7 +137,7 @@
           "shortDescription": "Surface contradictions that deterministic validation cannot understand on its own.",
           "detail": "Lore Consistency Review and rules contradiction checks are Worldsmith workflows that find conflicting dates, relationships and facts across connected canon, with evidence for each finding.",
           "whyItMatters": "Contradictions become harder to spot as a world grows and can undermine stories, campaigns and production.",
-          "status": "development",
+          "status": "available",
           "category": "Mimir AI",
           "relatedFeatures": ["mimir-ai", "validation-history", "timeline-calendar"],
           "image": "assets/captures/homepage/loremaster-laws", "imageAlt": "The laws of the Nine Realms in the Loremaster, each with the number of entries it governs.", "mediaCaption": "The laws a review checks the canon against."
@@ -146,9 +146,9 @@
           "id": "translator",
           "name": "Constructed-language Translator",
           "shortDescription": "Translate against grammar, vocabulary, registers and writing systems defined by the creator.",
-          "detail": "Translator is on every plan and uses Mimir Credits: the welcome grant, a paid plan's monthly allowance, or credit bundles. Current implementation remains under validation for the public beta.",
+          "detail": "Translator is on every plan and uses Mimir Credits: the welcome grant, a paid plan's monthly allowance, or credit bundles.",
           "whyItMatters": "A constructed language stays consistent with its authored rules instead of becoming disconnected flavour text.",
-          "status": "testing",
+          "status": "available",
           "category": "Mimir AI",
           "relatedFeatures": ["mimir-ai", "structured-core"],
           "image": "assets/captures/mimir-ai/conlang-vocabulary", "imageAlt": "The vocabulary list of a constructed language in Mimir.", "mediaCaption": "A constructed language's vocabulary."
@@ -159,7 +159,7 @@
           "shortDescription": "Bring existing files and projects into a local Mimir world without rebuilding everything by hand.",
           "detail": "Importing spreadsheets and documents and moving from Obsidian, Notion and World Anvil are Core features, with a review of every entry before anything is written. The World Anvil importer has been tested with sample exports.",
           "whyItMatters": "Changing tools should not require abandoning years of worldbuilding or paying for permission to keep it.",
-          "status": "development",
+          "status": "available",
           "category": "Migration",
           "badge": "Core",
           "relatedFeatures": ["structured-core", "beta-migration", "migration-refine"],
@@ -170,12 +170,12 @@
           "id": "proving-grounds",
           "name": "Proving Grounds",
           "shortDescription": "Play your world against its own rules, with Mimir AI as the referee.",
-          "detail": "Proving Grounds is AI-refereed play against your world's Rule entries, including live hosted sessions. Every action, including creating, running, hosting and joining, needs Loremaster. It is planned for the feature-complete public beta.",
+          "detail": "Proving Grounds is AI-refereed play against your world's Rule entries, with a board of pieces and areas, AI players in empty seats and live hosted tables. Every action, including creating, running, hosting and joining, needs Loremaster.",
           "whyItMatters": "Worldbuilders can test what happens next without separating experimentation from their canonical source material.",
-          "status": "planned",
+          "status": "available",
           "category": "Creative tools",
           "relatedFeatures": ["narrative-tools", "simulation-state", "proving-refine"],
-          "image": "assets/captures/proving-grounds/sim-setup-planned", "imageAlt": "The Proving Grounds session setup screen in a development build.", "mediaCaption": "Setting up a Proving Ground in a development build."
+          "image": "assets/captures/proving-grounds/sim-setup-planned", "imageAlt": "The Proving Grounds session setup screen in Mimir.", "mediaCaption": "Setting up a Proving Ground in Mimir."
         },
         {
           "id": "simulation-state",
@@ -183,7 +183,7 @@
           "shortDescription": "Use variables, conditions and state to test how interactive structures behave.",
           "detail": "Simulation and world-state variables are part of Core: step through quests and dialogue and watch what changes.",
           "whyItMatters": "Creators can explore consequences before committing an idea to canon or production.",
-          "status": "development",
+          "status": "available",
           "category": "Creative tools",
           "relatedFeatures": ["proving-grounds", "narrative-tools", "engine-workflows"],
           "image": "assets/captures/proving-grounds/quest-test-outcome", "imageAlt": "A finished simulation reporting its outcome and which nodes it never reached.", "mediaCaption": "A finished run with its outcome and coverage."
@@ -194,7 +194,7 @@
           "shortDescription": "Export your world as JSON files for Unreal, Unity and Godot.",
           "detail": "On Worldsmith and above. It runs on your computer and writes one JSON file per entry type, shaped for Unreal's DataTable import, Unity and Godot 4. It is a one-way export. Live engine integration, round-tripping and native engine formats come later.",
           "whyItMatters": "Game developers can take canon straight into a project without retyping it.",
-          "status": "development",
+          "status": "available",
           "category": "Integrations",
           "badge": "From Worldsmith",
           "relatedFeatures": ["narrative-tools", "engine-workflows", "unreal"]
@@ -203,21 +203,21 @@
           "id": "collaboration-hosting",
           "name": "Campaigns & player views",
           "shortDescription": "Prepare sessions, control reveals and give players and Co-GMs a view of only what they should see.",
-          "detail": "Campaigns are approved V1 scope and planned for the public beta. GM tools include an encounter tracker, a GM screen and the campaign's own in-world date. Apprentice hosts one Campaign; Worldsmith and Loremaster host several. Players and Co-GMs join free on Core.",
+          "detail": "A GM prepares scenes, controls reveals and runs the table from their own world. GM tools include an encounter tracker, a GM screen and the campaign's own in-world date. Apprentice hosts one Campaign; Worldsmith and Loremaster host several. Players and Co-GMs join free on Core.",
           "whyItMatters": "A GM can host the table without every player needing to subscribe.",
-          "status": "planned",
+          "status": "available",
           "category": "Collaboration",
           "badge": "From Apprentice",
           "relatedFeatures": ["writers-room", "hosted-infrastructure", "collaboration-refine"],
-          "image": "assets/captures/features/campaign-audiences", "imageAlt": "A campaign's Who sees what screen, showing what each group and player can view or edit.", "mediaCaption": "Campaign permissions in a development build."
+          "image": "assets/captures/features/campaign-audiences", "imageAlt": "A campaign's Who sees what screen, showing what each group and player can view or edit.", "mediaCaption": "Campaign permissions in Mimir."
         },
         {
           "id": "writers-room",
           "name": "Writers' Room",
           "shortDescription": "Build one world together, with collaborators proposing changes and the owner deciding what becomes canon.",
-          "detail": "The Writers' Room is approved V1 scope and planned for the public beta. Creating or joining one needs Worldsmith, and every collaborator needs their own plan. The owner's local copy is canon, and only the owner accepts changes into it.",
+          "detail": "Creating or joining a Writers' Room needs Worldsmith, and every collaborator needs their own plan. The owner's local copy is canon, and only the owner accepts changes into it.",
           "whyItMatters": "Co-authors can shape a shared world without losing track of what is canon.",
-          "status": "planned",
+          "status": "available",
           "category": "Collaboration",
           "badge": "From Worldsmith",
           "relatedFeatures": ["collaboration-hosting", "hosted-infrastructure", "collaboration-refine"]
@@ -226,9 +226,9 @@
           "id": "phone-app",
           "name": "Mimir phone app & sync",
           "shortDescription": "Read and edit your worlds on your phone, and keep them in step with your computer.",
-          "detail": "The phone app is V1. Some power-user screens stay on the desktop. Desktop and phone sync is included from Apprentice.",
+          "detail": "The Mimir phone app reads and edits your worlds. Some power-user screens stay on the desktop. Desktop and phone sync is included from Apprentice.",
           "whyItMatters": "Ideas arrive away from the desk.",
-          "status": "development",
+          "status": "available",
           "category": "Platform",
           "relatedFeatures": ["structured-core", "validation-history"]
         },
@@ -236,11 +236,22 @@
           "id": "qa-reliability",
           "name": "Launch QA, reliability & access",
           "shortDescription": "Remove obvious friction and strengthen keyboard, visual, performance and recovery behaviour.",
-          "detail": "The alpha period includes focused bug removal, accessibility checks, packaging, reliability work and validation of the complete launch suite.",
+          "detail": "Before the public beta, Shieldwall is focused on bug removal, accessibility checks, packaging, reliability work and validation of the complete launch suite.",
           "whyItMatters": "Public beta must be a usable commercial release rather than a feature list held together by caveats.",
           "status": "development",
           "category": "Quality",
           "relatedFeatures": ["validation-history", "launch-qa", "reliability-refine"]
+        },
+        {
+          "id": "community-hub",
+          "name": "Community Hub",
+          "shortDescription": "A private account space for voting, feedback, reports, announcements and surveys.",
+          "detail": "The Hub in Mimir has feature and pack voting, feedback and bug reports, announcements, weekly challenges, achievements, profiles and badges. One vote each, whatever your plan. Conversation stays on Discord. There is no stranger discovery, open messaging, public feed or public world sharing.",
+          "whyItMatters": "Worldbuilders can help shape Mimir and discover useful product workflows without turning Mimir into a social network.",
+          "status": "available",
+          "category": "Community",
+          "badge": "Not a social network",
+          "relatedFeatures": ["feedback-led-changes", "shieldwall-packs"]
         }
       ]
     },
@@ -251,13 +262,13 @@
       "eyebrow": "Next",
       "title": "Public Beta",
       "summary": "Public beta is the first real commercial Mimir release: the complete Core and paid-tier suite, production account and commerce infrastructure, public downloads, onboarding and hosted services.",
-      "milestone": "Alpha now, then a feature-complete public commercial beta, then deliberate growth and stabilisation.",
+      "milestone": "A feature-complete public commercial beta, then deliberate growth and stabilisation.",
       "features": [
         {
           "id": "complete-suite",
           "name": "Complete Core + paid-tier suite",
           "shortDescription": "Ship the approved V1 capability progression across Core, Apprentice, Worldsmith and Loremaster.",
-          "detail": "The public beta opens when the planned V1 feature suite is coherent enough to offer as a real product, with Core remaining permanently useful and paid tiers adding capability and hosted scale.",
+          "detail": "The V1 feature suite is built. The public beta offers it as a real product, with Core remaining permanently useful and paid tiers adding capability and hosted scale.",
           "whyItMatters": "Beta users need to evaluate the genuine product and commercial model, not a narrow teaser build.",
           "status": "planned",
           "category": "Launch",
@@ -266,11 +277,11 @@
         },
         {
           "id": "accounts",
-          "name": "Production accounts & entitlements",
-          "shortDescription": "Create the account, tier and ownership foundation needed for commercial use.",
-          "detail": "Sign-in and accounts are built and in testing. Public beta needs the production account service to manage tiers, credits, owned packs and hosted access with minimal retained customer data.",
+          "name": "Accounts & entitlements",
+          "shortDescription": "The account, plan and ownership foundation for commercial use.",
+          "detail": "Sign-in and accounts are built. Your account records your plan, credits, owned packs and hosted access, with minimal retained customer data.",
           "whyItMatters": "The application needs a reliable record of what each customer can use without compromising local ownership.",
-          "status": "development",
+          "status": "available",
           "category": "Infrastructure",
           "relatedFeatures": ["payments", "ai-credits", "hosted-infrastructure"]
         },
@@ -278,7 +289,7 @@
           "id": "payments",
           "name": "Subscriptions & payments",
           "shortDescription": "Enable the planned paid tiers through production Stripe subscription handling inside Mimir.",
-          "detail": "Paid checkout is not live during alpha. Public beta requires subscriptions, billing state and cancellation or downgrade handling aligned with the approved tier model.",
+          "detail": "Subscriptions, billing and plan changes are built into Mimir. Paid checkout opens with the public beta, aligned with the approved tier model.",
           "whyItMatters": "Commercial availability requires clear, trustworthy billing without changing ownership of local work.",
           "status": "planned",
           "category": "Commerce",
@@ -286,21 +297,21 @@
         },
         {
           "id": "ai-credits",
-          "name": "Production Mimir AI credits",
-          "shortDescription": "Replace development quota stubs with customer-facing allowances, estimates and reliable accounting.",
-          "detail": "Mimir will route processing internally. Public beta requires production credit balances, monthly resets, top-up handling and protection from charges caused by Shieldwall-side failures. Every account gets a one-time 200-credit welcome grant. Core has no monthly allowance, and paid plans add 400, 1,200 or 3,000 credits a month. Credit bundles of 500 for £4.99, 1,500 for £12.99 and 4,000 for £29.99 never expire. These are planning figures and may change before checkout opens.",
+          "name": "Mimir AI credits",
+          "shortDescription": "Customer-facing allowances, estimates and reliable accounting.",
+          "detail": "Mimir routes processing internally. Credit balances, estimates, monthly resets and protection from charges caused by Shieldwall-side failures are built. Every account gets a one-time 200-credit welcome grant. Core has no monthly allowance, and paid plans add 400, 1,200 or 3,000 credits a month. Credit bundles of 500 for £4.99, 1,500 for £12.99 and 4,000 for £29.99 never expire, and go on sale with the public beta. These are planning figures and may change before checkout opens.",
           "whyItMatters": "Users need to understand and control AI usage without learning provider pricing or model menus.",
-          "status": "planned",
+          "status": "available",
           "category": "Mimir AI",
           "relatedFeatures": ["mimir-ai", "accounts", "payments"]
         },
         {
           "id": "hosted-infrastructure",
           "name": "Hosted collaboration infrastructure",
-          "shortDescription": "Provide production sync, permissions, storage and realtime services for invited shared worlds.",
-          "detail": "The public beta requires the infrastructure behind hosted Campaigns, Writers' Rooms and live Proving Grounds, with limits applying only to Shieldwall-hosted resources.",
+          "shortDescription": "Sync, permissions, storage and live services for invited shared worlds.",
+          "detail": "The services behind hosted Campaigns, Writers' Rooms and live Proving Grounds are built, with limits applying only to Shieldwall-hosted resources.",
           "whyItMatters": "Shared experiences must be dependable without placing artificial limits on local worlds.",
-          "status": "planned",
+          "status": "available",
           "category": "Infrastructure",
           "relatedFeatures": ["collaboration-hosting", "accounts", "collaboration-refine"]
         },
@@ -308,9 +319,9 @@
           "id": "download-flow",
           "name": "Public download & install flow",
           "shortDescription": "Move from a waitlist to signed, understandable installer delivery for supported desktop platforms.",
-          "detail": "At public beta the primary website action changes from Join the beta to Download Mimir, with release information, requirements and appropriate installer delivery.",
+          "detail": "The Windows installer and background updates are being finished. At public beta the primary website action changes from Join the beta to Download Mimir, with release information and requirements.",
           "whyItMatters": "A commercial beta must be directly usable rather than accessible only through a mailing list.",
-          "status": "planned",
+          "status": "development",
           "category": "Launch",
           "relatedFeatures": ["commercial-onboarding", "launch-qa", "complete-suite"]
         },
@@ -326,11 +337,11 @@
         },
         {
           "id": "beta-migration",
-          "name": "Production migration flow",
-          "shortDescription": "Ship the reviewed import and migration experience as a dependable Core path.",
-          "detail": "Public beta migration must support real source projects, clear mapping review, warnings and a safe local result rather than an opaque one-click promise.",
+          "name": "Reviewed migration flow",
+          "shortDescription": "The reviewed import and migration experience as a dependable Core path.",
+          "detail": "Migration is built with clear mapping review, warnings and a safe local result rather than an opaque one-click promise.",
           "whyItMatters": "The ability to bring established work is central to Mimir's launch proposition.",
-          "status": "planned",
+          "status": "available",
           "category": "Migration",
           "relatedFeatures": ["imports-migration", "commercial-onboarding", "migration-refine"],
           "deepDive": { "label": "Explore Migration", "url": "migration.html#commit", "enabled": true }
@@ -360,9 +371,9 @@
           "id": "shieldwall-packs",
           "name": "In-app store & Shieldwall content packs",
           "shortDescription": "Offer optional connected packs inside Mimir's Marketplace from the public beta launch.",
-          "detail": "Shieldwall content packs and collections are sold in Mimir's Marketplace at launch, from £4.99, with collections 20% off the packs you do not already own. Game-system templates are free and built in. Only Shieldwall sells packs at launch.",
+          "detail": "Mimir's Marketplace is built into the app. Shieldwall content packs and collections go on sale there with the public beta, from £4.99, with collections 20% off the packs you do not already own. Game-system templates are free and built in. Only Shieldwall sells packs at launch.",
           "whyItMatters": "Optional packs can save preparation time while keeping blank-world creation a first-class path.",
-          "status": "planned",
+          "status": "available",
           "category": "Ecosystem",
           "badge": "At beta launch",
           "relatedFeatures": ["community-hub", "founder-programme", "artist-marketplace"]
@@ -458,17 +469,6 @@
           "status": "planned",
           "category": "Community",
           "relatedFeatures": ["community-hub", "onboarding-refine", "reliability-refine"]
-        },
-        {
-          "id": "community-hub",
-          "name": "Community Hub",
-          "shortDescription": "A private account space for voting, feedback, reports, announcements and surveys.",
-          "detail": "The planned Hub includes feature and pack voting, feedback, bug reports, announcements, surveys, previews, profiles and badges. One vote each, whatever your plan. Conversation stays on Discord. There is no stranger discovery, open messaging, public feed or public world sharing.",
-          "whyItMatters": "Worldbuilders can help shape Mimir and discover useful product workflows without turning Mimir into a social network.",
-          "status": "planned",
-          "category": "Community",
-          "badge": "Not a social network",
-          "relatedFeatures": ["feedback-led-changes", "shieldwall-packs"]
         }
       ]
     },

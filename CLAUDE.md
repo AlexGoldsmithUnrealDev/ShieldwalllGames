@@ -297,7 +297,7 @@ Stable pricing anchor: `/mimir/#pricing`. Do not rename `id="pricing"`.
 `mimir/proving-grounds.html` is the public deep dive for Mimir's testing and
 prototyping discipline. All Proving Grounds actions (creating, running,
 hosting, and joining) require Loremaster under the current commercial
-specification. The complete experience is labelled "Planned for public beta".
+specification. It is built (`docs/specs/proving-ground.md`) and labelled "Available".
 
 Quest and dialogue **Simulation** is Core and is not Proving Grounds. Proving
 Grounds is AI-refereed play against the world's Rule entries.
@@ -310,7 +310,7 @@ product-media slots.
 ### Migration website status
 
 `mimir/migration.html` is the public deep dive for Core migration/import and is
-labelled `In development`. Verified implementation formats are CSV, XLSX, TXT,
+labelled "Available" (the importer and the Obsidian, Notion and World Anvil migrations are built). Verified implementation formats are CSV, XLSX, TXT,
 Markdown and DOCX. Spreadsheet mapping is deterministic; Mimir AI may optionally
 suggest field matches. Prose extraction is AI-assisted, followed by explicit
 creator review before draft entries are created.
@@ -327,8 +327,8 @@ is not the same as a transaction rollback.
 
 `mimir/campaign.html` is the public deep dive for GM-facing campaign
 management: preparation, controlled reveals, player access and the
-host-funded access model. The complete Campaign experience is labelled
-"Planned for public beta" and is V1 scope.
+host-funded access model. Campaign, hosting and the GM session tools are built
+and labelled "Available".
 
 Label the built parts of Campaign as available.
 
@@ -336,11 +336,8 @@ Label the built parts of Campaign as available.
 
 `mimir/collaboration.html` is the public deep dive for the Writers' Room
 collaborative worldbuilding system: canon authority, roles, the
-propose/review/accept workflow and tier allowances. The complete Writers'
-Room experience is labelled "Planned for public beta" and is V1 scope.
-
-Hosted acceptance confirmation is required before presenting Writers' Room
-as publicly available. The owner's local copy is always canonical. The Writers'
+propose/review/accept workflow and tier allowances. It is built and labelled
+"Available". The owner's local copy is always canonical. The Writers'
 Room is Worldsmith for everyone in it; only the owner accepts changes into
 canon, and Admins can review in the hosted world.
 

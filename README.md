@@ -10,7 +10,7 @@ The public website for Shieldwall Games Ltd, Mimir, and Ashborn CCG.
 | Mimir | `mimir/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
 | Mimir features | `mimir/features.html` | Comprehensive, searchable product capabilities |
 | Mimir AI | `mimir/mimir-ai.html` | Grounding, evidence, consistency, context, translation and control |
-| Proving Grounds | `mimir/proving-grounds.html` | AI-refereed play against a world's Rule entries (Loremaster, planned for public beta) |
+| Proving Grounds | `mimir/proving-grounds.html` | AI-refereed play against a world's Rule entries (Loremaster) |
 | Campaign | `mimir/campaign.html` | GM campaign management, controlled reveals and player access deep dive |
 | Collaboration | `mimir/collaboration.html` | Writers' Room collaborative worldbuilding deep dive |
 | Migration | `mimir/migration.html` | Reviewed spreadsheet/document import and local ownership deep dive |
@@ -113,7 +113,7 @@ Then visit `http://localhost:8000`.
 
 ## Mimir commercial source of truth
 
-The live site currently uses the planned V1 commercial model:
+The live site currently uses the V1 commercial model:
 
 | Tier | Monthly | Annual |
 | --- | ---: | ---: |
@@ -173,11 +173,15 @@ tools, while Ask Mimir uses retrieval and focused-entry context internally.
 
 ### Proving Grounds page
 
-`mimir/proving-grounds.html` explains the planned public-beta testing workflow
-through progressively enhanced conceptual demonstrations. It keeps experiment
-results separate from canon, distinguishes Proving Grounds, world state and
-simulation, and labels public availability conservatively even where internal
-application foundations already exist.
+`mimir/proving-grounds.html` explains the testing workflow through
+progressively enhanced conceptual demonstrations. It keeps experiment results
+separate from canon and distinguishes Proving Grounds, world state and
+simulation. Built features are labelled Available; conceptual demonstrations
+stay labelled and separate from real product captures.
+
+Status labels follow the owner's rule: if a feature is built in the app, it is
+labelled Available. Do not mention alpha in public copy. Keep a not-yet-available
+label only for work the application repository records as not built.
 
 The page reuses the shared Well controller and internal navigation/footer. Its
 lighting and future artwork configuration lives in
@@ -186,7 +190,7 @@ lighting and future artwork configuration lives in
 
 ### Migration page
 
-`mimir/migration.html` is the Core, `In development` deep dive for reviewed
+`mimir/migration.html` is the Core, `Available` deep dive for reviewed
 import and migration. Verified current implementation formats are CSV, XLSX,
 TXT, Markdown and DOCX. Spreadsheet conversion is deterministic, with optional
 AI mapping suggestions; prose extraction is AI-assisted and creator-reviewed.
@@ -210,18 +214,18 @@ handoff is `mimir/assets/MEDIA_CHECKLIST.md`.
 
 ## Current V1 positioning
 
-Mimir V1 is being completed around:
+Mimir V1 is built around:
 
 - Local-first structured worldbuilding
 - Trees, timeline, calendar, maps, quests, dialogue, story arcs, validation, history, and accessibility
 - Mimir AI and constructed-language translation
 - General imports and competitor migration (Obsidian, Notion and World Anvil)
-- Simulation: stepping through quest and dialogue graphs with world-state variables (Core, in development)
-- Proving Grounds: AI-refereed play against the world's Rule entries (Loremaster, planned for public beta)
+- Simulation: stepping through quest and dialogue graphs with world-state variables (Core)
+- Proving Grounds: AI-refereed play against the world's Rule entries (Loremaster)
 - Writers' Room collaboration for shared creative work (Worldsmith)
 - Hosted Campaigns for players and Co-GMs (Apprentice and above to host)
-- Export to Engine: one-way JSON files shaped for Unreal's DataTable import, Unity and Godot 4, written on the user's computer (Worldsmith and above, in development)
-- Mimir phone app (in development). Desktop and phone sync needs Apprentice or above. Do not state a tier for the phone app itself, and do not claim the whole desktop app runs on a phone.
+- Export to Engine: one-way JSON files shaped for Unreal's DataTable import, Unity and Godot 4, written on the user's computer (Worldsmith and above)
+- Mimir phone app. Desktop and phone sync needs Apprentice or above. Do not state a tier for the phone app itself, and do not claim the whole desktop app runs on a phone.
 
 Live engine integrations, round-tripping and native engine asset formats are later work. MCP connections (ChatGPT, Claude) are later too, with no release date set. Do not advertise them as V1 launch features.
 
