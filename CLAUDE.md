@@ -2,6 +2,13 @@
 
 ## Read this first
 
+**Owner decisions, 29 October 2026 (these override anything below that disagrees):**
+
+- **Built means available.** If a feature is built in the app, label it "Available". Do not keep "In development" or "In testing" on a built feature. Only features the app's sources say are not built keep a not-yet-available label.
+- **No "alpha" in public copy.** Mimir launches in public beta very soon. Do not describe the product as being in alpha.
+- **Legal pages are published** without solicitor review, because review is not affordable until Mimir earns. Keep them in step with the app repo's drafts and the app's code.
+- **Credits and allowances: the app's code is the source of truth.**
+
 This file is the persistent working brief for the Shieldwall Games website. Read it before changing public copy, pricing, roadmap content, or site structure.
 
 If this file conflicts with an explicit new instruction from the human owner, follow the new instruction and update this file so the conflict does not recur.
@@ -113,7 +120,7 @@ Ladder set 27 October 2026 (`docs/commercial-model.md` in the app repo). It supe
 
 ### Current planning allowances
 
-Planning values that may change before paid checkout opens. Note: until the app's credit change ships, its servers still grant 25 monthly Core credits and a 100-credit welcome. The website states the decided model.
+These figures are what the app's code grants (`workers/commerce/creditPeriods.mts`, `founderPricing.mts`, `src/campaign/campaignHostingAllowance.ts`, `src/collab/membershipPosture.ts`, `src/routes/marketplace/marketplacePricing.ts`). **The app's code is the source of truth for credits and allowances**; if a doc disagrees with the code, follow the code.
 
 | Allowance | Core | Apprentice | Worldsmith | Loremaster |
 | --- | ---: | ---: | ---: | ---: |
@@ -296,10 +303,9 @@ Quest and dialogue **Simulation** is Core and is not Proving Grounds. Proving
 Grounds is AI-refereed play against the world's Rule entries.
 
 The application repository contains substantial Quest/Dialogue simulation and
-local Proving Ground foundations. Do not translate internal implementation into
-an "Available in alpha" website claim without an explicit product-release
-decision. Conceptual website demonstrations must remain labelled and separate
-from real product-media slots.
+local Proving Ground foundations. Label whatever is built as available.
+Conceptual website demonstrations must remain labelled and separate from real
+product-media slots.
 
 ### Migration website status
 
@@ -324,9 +330,7 @@ management: preparation, controlled reveals, player access and the
 host-funded access model. The complete Campaign experience is labelled
 "Planned for public beta" and is V1 scope.
 
-The application repository contains substantial Campaign implementation.
-Do not translate internal implementation into an "Available in alpha"
-website claim without an explicit product-release decision.
+Label the built parts of Campaign as available.
 
 ### Collaboration website status
 
@@ -405,7 +409,7 @@ Accurate distinction:
 
 Production processors are not yet finalised. `privacy.html` should be updated with the actual account/payment/hosting/AI subprocessors before public paid launch.
 
-Do not make legal promises about future cancellation/refund mechanics that have not been approved. Statutory consumer rights always take precedence over website wording.
+The refund, renewal-reminder and failed-payment commitments in the published Terms and Refund Policy are approved by the owner (`docs/commercial-model.md`, "Billing commitments"). Do not add other promises that have not been approved. Statutory consumer rights always take precedence over website wording.
 
 The UK subscription-contract regime is changing. Terms and checkout must be re-reviewed against the law actually in force when paid subscriptions open.
 
@@ -429,8 +433,8 @@ Owner-supplied artwork and product-capture requirements are consolidated in
 Current product captures and the overview video (`mimir/assets/captures/`,
 `mimir/assets/video/`) are real screens from a development build using the
 Nine Realms demo world. No AI answers are shown, because none were generated
-live. Captions for planned or in-development features say "development build",
-never "available in alpha". Social preview images live in `mimir/assets/og/`.
+live. Captions describe what is shown; only features that are not built say
+"in development". Social preview images live in `mimir/assets/og/`.
 
 Features page media and pop-up images come from the `image`, `imageAlt` and
 `mediaCaption` fields in `mimir/data/features.json`. After editing them, run
@@ -438,12 +442,18 @@ Features page media and pop-up images come from the `image`, `imageAlt` and
 `features.html`.
 
 The deploy workflow assembles a public copy of the site and excludes working
-files: `CLAUDE.md`, every `*.md`, `*.docx`, `Mimir Design System/`, `.github/`
-and `mimir/scripts/generate-*.js` are not served. Root `download.html`
+files: `CLAUDE.md`, every `*.md`, `*.docx`, `Mimir Design System/`, `.github/`,
+`tools/` and `mimir/scripts/generate-*.js` are not served. Root `download.html`
 redirects to `/mimir/download.html` because the app links to the root path.
 The app also links to `/support.html`, `/refunds.html`, `/eula.html` and
-`/subprocessors.html`. Their drafts live in the app repo (`docs/website/`,
-`docs/legal/`) and await legal review before publishing.
+`/subprocessors.html`. These, `privacy.html` and `terms.html` are published from
+the app repo's drafts (`docs/legal/*.md`, `docs/website/support.md`, with the
+cookie notice as the `#cookies` section of the privacy page). Rebuild them with
+`tools/build-legal-pages.ts` (run with the app repo's `npx tsx`), which fills company number 12655497 and the registered
+office from Companies House, remove the DRAFT line and `[[...]]` notes, and
+follow the app's code where a draft disagrees (for example the 7-day offline
+lease in `electron/api/accountEntitlementRuntime.ts`). No ICO registration was
+found for the company, so no ICO number is shown.
 
 Roadmap cards come from `mimir/roadmap-data.json`. Run
 `node mimir/scripts/generate-roadmap.js` after editing it; the generator adds

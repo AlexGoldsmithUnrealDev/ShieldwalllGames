@@ -39,6 +39,7 @@ jobs:
           rm -rf .git .github .gitignore "Mimir Design System"
           find . -name '*.md' -delete
           find . -name '*.docx' -delete
+          rm -rf tools
           rm -f mimir/scripts/generate-*.js
           test -f index.html && test -f CNAME && test -f mimir/index.html && test -f mimir/data/features.json && test -f mimir/roadmap-data.json
           ! test -e CLAUDE.md
