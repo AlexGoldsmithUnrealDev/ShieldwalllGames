@@ -2314,3 +2314,12 @@ a.ms-proof:hover {
 
 .ms-pricing-notes p { margin: 0; }
 .ms-pricing-notes strong { color: var(--fg-1); }
+
+.ms-audience-link {
+    color: var(--accent);
+    display: inline-block;
+    font: 600 13px/1.4 var(--font-sans);
+    margin-top: 14px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

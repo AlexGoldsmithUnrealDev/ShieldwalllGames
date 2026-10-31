@@ -1,0 +1,57 @@
+# Shieldwall Games and Mimir
+
+> Shieldwall Games Ltd is a small independent studio in Kent, UK (company number 12655497). Its first product, Mimir, is a local-first worldbuilding platform for Game Masters, writers and game developers. Mimir keeps a fictional world as connected entries stored as ordinary Markdown files on the user's own computer, and adds visual tools, story planning, quest simulation, campaign hosting, collaboration and an AI assistant that answers only from the user's own world. Mimir's public beta opens soon.
+
+## What Mimir is
+
+- A worldbuilding app: characters, places, cultures, factions, species, events, items, spells, languages and custom entry types, all linked to each other.
+- Visual tools: family, culture, faction, species and place trees; a timeline and calendar built on the world's own calendar; maps with pins that open the entries they mark; relationship graphs; backlinks.
+- Story and game design tools: Story Arc, Quest and Dialogue editors, the Narrative Planner, and Simulation for stepping through quests and dialogue with world-state variables.
+- Campaign tools for tabletop RPG Game Masters: prepare scenes from the world, control what each player or group can see, an encounter tracker, a GM screen, the in-world date and quests. Players and Co-GMs join free.
+- Writers' Room: several writers build one world together; collaborators propose changes and the owner accepts what becomes canon.
+- Mimir AI: Ask Mimir answers questions from the user's own entries only and shows which entries it read. Lore Consistency Review finds contradictions between prose and structured details. A Translator works with the world's own constructed languages. AI use is paid for with credits.
+- Proving Grounds: AI-refereed play against the Rule entries in the user's world.
+- Migration: dedicated importers for Obsidian vaults, Notion Markdown and CSV exports, and World Anvil world exports (tested with sample exports), plus CSV, XLSX, TXT, Markdown and DOCX import. Free on every plan.
+- Export: Markdown, JSON and safe-to-publish exports on every plan; Export to Engine writes one-way JSON files for Unreal, Unity and Godot on Worldsmith and above.
+- A Mimir phone app, with desktop and phone sync from Apprentice.
+- Works offline once signed in. Mimir AI, sync and hosting need a connection.
+
+## Plans (GBP)
+
+- Mimir Core: free for good. Unlimited local worlds and entries and the full local toolset. 200 Mimir AI welcome credits once, then credit bundles. Can join a hosted Campaign as a player or Co-GM.
+- Apprentice: £6.99 a month or £69.99 a year. 400 Mimir AI credits a month, desktop and phone sync, host one Campaign (8 people including the GM, 1 GB, 1 live table).
+- Worldsmith (most popular): £14.99 a month or £149.99 a year. 1,200 credits a month, Lore Consistency Review and rules contradiction checks, Writers' Room (5 hosted worlds, 5 guest collaborators each; every writer needs Worldsmith), Export to Engine, several Campaigns of up to 20 people.
+- Loremaster: £24.99 a month or £249.99 a year. 3,000 credits a month, Proving Grounds, several Campaigns of up to 50 people, 20 hosted worlds with 20 guest collaborators each, priority support.
+- Credit bundles: 500 credits for £4.99, 1,500 for £12.99, 4,000 for £29.99. Bought credits never expire.
+- 14-day no-questions refund on first subscriptions, content packs, collections and credit bundles.
+
+## Not yet available
+
+- MCP connections for ChatGPT and Claude: later, no release date set.
+- Live Unreal, Unity and Godot integration and round-tripping: after V1 (the V1 export is one-way JSON files).
+- A Studio or business plan: not offered.
+
+## Main pages
+
+- [Mimir overview, pricing and FAQ](https://shieldwallgames.co.uk/mimir/)
+- [All features](https://shieldwallgames.co.uk/mimir/features.html)
+- [Mimir for Game Masters](https://shieldwallgames.co.uk/mimir/for-game-masters.html)
+- [Mimir for writers](https://shieldwallgames.co.uk/mimir/for-writers.html)
+- [Move from Obsidian, Notion or World Anvil](https://shieldwallgames.co.uk/mimir/move-to-mimir.html)
+- [Campaign](https://shieldwallgames.co.uk/mimir/campaign.html)
+- [Writers' Room and collaboration](https://shieldwallgames.co.uk/mimir/collaboration.html)
+- [Mimir AI](https://shieldwallgames.co.uk/mimir/mimir-ai.html)
+- [Proving Grounds](https://shieldwallgames.co.uk/mimir/proving-grounds.html)
+- [Migration and import](https://shieldwallgames.co.uk/mimir/migration.html)
+- [Roadmap](https://shieldwallgames.co.uk/mimir/roadmap.html)
+- [Join the beta](https://shieldwallgames.co.uk/mimir/#beta-signup)
+
+## Company and policies
+
+- [Shieldwall Games](https://shieldwallgames.co.uk/)
+- [Ashborn, a Viking Age card game in development](https://shieldwallgames.co.uk/ashborn/)
+- [Support](https://shieldwallgames.co.uk/support.html)
+- [Privacy Policy](https://shieldwallgames.co.uk/privacy.html)
+- [Terms of Service](https://shieldwallgames.co.uk/terms.html)
+- [Refund Policy](https://shieldwallgames.co.uk/refunds.html)
+- Contact: info@shieldwallgames.co.uk

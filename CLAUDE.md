@@ -233,6 +233,7 @@ Potential future items, not launch promises:
 ```text
 /
 ├── index.html                  # Shieldwall homepage
+├── llms.txt                    # Plain-text summary for AI search crawlers
 ├── privacy.html
 ├── terms.html
 ├── 404.html
@@ -254,6 +255,9 @@ Potential future items, not launch promises:
 │   ├── campaign.html           # Campaign management for GMs
 │   ├── collaboration.html      # Writers' Room and collaboration
 │   ├── migration.html          # Reviewed Migration & Import deep dive
+│   ├── for-game-masters.html   # Use-case guide: campaign manager for GMs
+│   ├── for-writers.html        # Use-case guide: worldbuilding for writers
+│   ├── move-to-mimir.html      # Use-case guide: moving from Obsidian, Notion, World Anvil
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -451,6 +455,15 @@ office from Companies House, remove the DRAFT line and `[[...]]` notes, and
 follow the app's code where a draft disagrees (for example the 7-day offline
 lease in `electron/api/accountEntitlementRuntime.ts`). No ICO registration was
 found for the company, so no ICO number is shown.
+
+Search and AI visibility: every page must be visible to people too. Never add
+pages, text or instructions that only crawlers can see (cloaking breaks
+Google's spam policies). `llms.txt` at the root is a plain-text summary of
+Mimir, its plans and its main pages; update it with any commercial or
+feature change. The use-case guides (`mimir/for-game-masters.html`,
+`for-writers.html`, `move-to-mimir.html`) answer one search question each,
+answer first, with FAQ structured data; they are linked from every Mimir
+footer and the homepage audience cards.
 
 Roadmap cards come from `mimir/roadmap-data.json`. Run
 `node mimir/scripts/generate-roadmap.js` after editing it; the generator adds
