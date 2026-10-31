@@ -37,6 +37,7 @@
 - [All features](https://shieldwallgames.co.uk/mimir/features.html)
 - [Mimir for Game Masters](https://shieldwallgames.co.uk/mimir/for-game-masters.html)
 - [Mimir for writers](https://shieldwallgames.co.uk/mimir/for-writers.html)
+- [Mimir for game developers](https://shieldwallgames.co.uk/mimir/for-developers.html)
 - [Move from Obsidian, Notion or World Anvil](https://shieldwallgames.co.uk/mimir/move-to-mimir.html)
 - [Campaign](https://shieldwallgames.co.uk/mimir/campaign.html)
 - [Writers' Room and collaboration](https://shieldwallgames.co.uk/mimir/collaboration.html)

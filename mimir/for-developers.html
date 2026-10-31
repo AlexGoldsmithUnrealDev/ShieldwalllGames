@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17162a" />
+  <title>Narrative Design Tool for Game Developers: Quests, Dialogue, Export to Engine | Mimir</title>
+  <meta name="description" content="Mimir is a narrative design and worldbuilding tool for game developers: branching quests and dialogue, typed world-state variables, step-through simulation, and JSON export for Unreal, Unity and Godot." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Narrative Design Tool for Game Developers: Quests, Dialogue, Export to Engine | Mimir" />
+  <meta property="og:description" content="Mimir is a narrative design and worldbuilding tool for game developers: branching quests and dialogue, typed world-state variables, step-through simulation, and JSON export for Unreal, Unity and Godot." />
+  <meta property="og:url" content="https://shieldwallgames.co.uk/mimir/for-developers.html" />
+  <meta property="og:image" content="https://shieldwallgames.co.uk/mimir/assets/og/proving-grounds.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="A quest test run in Mimir paused at a choice" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://shieldwallgames.co.uk/mimir/assets/og/proving-grounds.jpg" />
+  <meta name="twitter:title" content="Narrative Design Tool for Game Developers: Quests, Dialogue, Export to Engine | Mimir" />
+  <meta name="twitter:description" content="Mimir is a narrative design and worldbuilding tool for game developers: branching quests and dialogue, typed world-state variables, step-through simulation, and JSON export for Unreal, Unity and Godot." />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
+  <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../assets/icons/favicon-192.png" />
+  <link rel="canonical" href="https://shieldwallgames.co.uk/mimir/for-developers.html" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="styles/mimir.css?v=20260814-2" />
+  <link rel="stylesheet" href="styles/internal.css?v=20260815-1" />
+  <link rel="stylesheet" href="styles/campaign.css?v=20261007-1" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Shieldwall Games",
+      "item": "https://shieldwallgames.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mimir",
+      "item": "https://shieldwallgames.co.uk/mimir/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "For game developers",
+      "item": "https://shieldwallgames.co.uk/mimir/for-developers.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Mimir export to Unreal, Unity or Godot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Export to Engine writes one JSON file per entry type, shaped for Unreal DataTable import, Unity's JsonUtility and Godot 4. It runs locally and is on Worldsmith and above. It is a one-way export, not a live connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I test branching dialogue without the game engine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Simulation steps through quest and dialogue graphs, lets you choose at each branch, shows variables changing and reports which nodes were never reached. It is free on every plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Mimir a replacement for my engine's dialogue system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Mimir is where you design, test and keep the canon for quests, dialogue and lore. You bring the results into your engine with Export to Engine or plain JSON."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mimir connect live to my engine or to AI tools over MCP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Live engine integrations, round-tripping and MCP connections for AI tools are later roadmap items with no release date. Today the route into an engine is the file export."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is my data stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a folder you choose on your own computer, as readable Markdown and YAML files that work well with version control. Mimir also keeps its own history of saved versions."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="ms-well-page mi-page">
+<div class="ms-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="ms-well-stage" aria-hidden="true">
+    <div class="ms-well-layer ms-well-layer--a is-active"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-layer ms-well-layer--b"><div class="ms-well-layer__dark"></div><div class="ms-well-layer__light"></div></div>
+    <div class="ms-well-stage__readability"></div><div class="ms-well-stage__depth"></div>
+  </div>
+  <div id="well-chapter-nav"></div>
+
+  <nav class="ms-nav mi-nav" aria-label="Mimir" data-mi-nav>
+    <div class="ms-wrap ms-nav-inner">
+      <a class="ms-nav-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-well-mark.webp" alt="" /><img src="../assets/logos/mimir-wordmark.webp" alt="Mimir" class="ms-nav-wordmark-img" /></a>
+      <div class="ms-nav-links">
+        <a href="./#product">Product</a><a href="features.html">Features</a><a href="campaign.html">Campaign</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a>
+      </div>
+      <span class="ms-nav-spacer"></span><div class="ms-nav-cta"><a class="ms-btn-primary" href="./#beta-signup" data-analytics-event="mimir_beta_signup_intent">Join the beta</a></div>
+      <button class="mi-nav-toggle" type="button" aria-expanded="false" aria-controls="for-developers-mobile-menu" aria-label="Open Mimir navigation"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mi-mobile-menu" id="for-developers-mobile-menu" hidden><div class="ms-wrap">
+      <a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="campaign.html">Campaign</a><a href="collaboration.html">Collaboration</a><a href="migration.html">Migration</a><a href="for-game-masters.html">For Game Masters</a><a href="for-writers.html">For writers</a><a href="for-developers.html">For game developers</a><a href="move-to-mimir.html">Move to Mimir</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+    </div></div>
+  </nav>
+
+  <header class="cp-hero ms-chapter" id="guide-hero" data-chapter="hero" data-snap-chapter>
+    <div class="ms-wrap">
+      <span class="ms-eyebrow">For game developers</span>
+      <h1 class="ms-section-h2 cp-hero-h1">Design the lore and the logic in one place.</h1>
+      <p class="ms-section-sub cp-lede">Mimir is a worldbuilding and narrative design tool for game developers. Build branching quests and dialogue on top of your world, test them with typed world-state variables before they reach the engine, and export your canon as JSON files for Unreal, Unity or Godot.</p>
+      <div class="cp-hero-actions">
+        <a class="ms-btn-primary" href="proving-grounds.html">See quest and dialogue testing</a>
+        <a class="ms-btn-secondary" href="./#pricing">See plans and prices</a>
+      </div>
+      <p class="cp-release-note"><span class="cp-status">Available</span> Quests, dialogue, variables and Simulation are free on Mimir Core. Export to Engine is on Worldsmith and above.</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="dev-graphs" data-chapter="connected" aria-labelledby="dev-graphs-title">
+      <span class="ms-eyebrow">Quests and dialogue</span>
+      <h2 class="ms-section-h2" id="dev-graphs-title">Branching narrative, built on your canon.</h2>
+      <p class="ms-section-sub">Quest and Dialogue editors are node graphs: start and end points, lines, choices, conditions, consequences and quest markers. Speakers, items and places link to the real entries in your world.</p>
+      <div class="cp-content-block">
+        <p>Because the narrative lives next to the lore, a renamed character or a changed fact is one entry, not a search through scripts. Story arcs and the Narrative Planner sit alongside for the bigger shape.</p>
+        <ul class="ms-check-list">
+          <li>Quest graphs with objectives, choices, conditions and consequences</li>
+          <li>Dialogue graphs with speakers, choices and condition-gated branches</li>
+          <li>Story Arcs and the Narrative Planner for structure</li>
+          <li>Your own entry types and fields in the Entry type editor</li>
+        </ul>
+      </div>
+      <figure class="ms-media cp-media-figure"><picture>
+        <source type="image/avif" srcset="assets/captures/proving-grounds/quest-branch-graph.avif" />
+        <img src="assets/captures/proving-grounds/quest-branch-graph.webp" alt="The quest graph for The Binding of Fenrir: a choice branches into Týr pledging his hand or the gods letting the wolf go, each continuing to its own outcome." width="2400" height="577" loading="lazy" />
+      </picture><figcaption>A quest graph with a meaningful branch and two outcomes.</figcaption></figure>
+    </section>
+
+    <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="dev-state" data-chapter="wisdom" aria-labelledby="dev-state-title">
+      <span class="ms-eyebrow">World state</span>
+      <h2 class="ms-section-h2" id="dev-state-title">Typed variables your graphs read and change.</h2>
+      <div class="cp-content-block">
+        <p>Declare the facts that can change: true or false, numbers, text, choices, lists, sets, entry references and relationship snapshots, for the whole world or per character, faction or place. Conditions read them, consequences change them, and dialogue text can show them.</p>
+        <p>Variables are declared up front in one readable file in your world folder, so the state model is something you design, not something inferred from scattered scripts.</p>
+      </div>
+      <figure class="ms-media cp-media-figure"><picture>
+        <source type="image/avif" srcset="assets/captures/proving-grounds/variables-list.avif" />
+        <img src="assets/captures/proving-grounds/variables-list.webp" alt="The Variables screen in Mimir listing typed, scoped game-state declarations such as fenrir_bound and gleipnir_forged, each a global boolean with a default." width="2060" height="750" loading="lazy" />
+      </picture><figcaption>Typed, scoped variables used by quests, dialogue and Simulation.</figcaption></figure>
+    </section>
+
+    <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="dev-sim" data-chapter="proving" aria-labelledby="dev-sim-title">
+      <span class="ms-eyebrow">Simulation</span>
+      <h2 class="ms-section-h2" id="dev-sim-title">Find the broken branch before the build does.</h2>
+      <div class="cp-content-block">
+        <p>Simulation runs a quest or dialogue graph without a game engine. Step forward and back, choose at each branch, and watch variables and relationships change in the inspector. Start from a fresh state or a saved preset.</p>
+        <p>When a run ends, Mimir shows the outcome and every node the run never reached. Export the run as a JSON replay to share it or test against later. Simulation is part of Core, on every plan.</p>
+      </div>
+      <figure class="ms-media cp-media-figure"><picture>
+        <source type="image/avif" srcset="assets/captures/proving-grounds/dialogue-test-choice.avif" />
+        <img src="assets/captures/proving-grounds/dialogue-test-choice.webp" alt="A dialogue test run in Mimir paused where the player chooses between two replies, with the path so far highlighted on the graph." width="2400" height="1200" loading="lazy" />
+      </picture><figcaption>A dialogue run paused at the player&#x27;s choice.</figcaption></figure>
+    </section>
+
+    <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="dev-export" data-chapter="pricing" aria-labelledby="dev-export-title">
+      <span class="ms-eyebrow">Export to Engine</span>
+      <h2 class="ms-section-h2" id="dev-export-title">Take your canon into the engine.</h2>
+      <div class="cp-content-block">
+        <p>Export to Engine writes one JSON file per entry type, shaped for Unreal's DataTable import, for Unity's JsonUtility and for Godot 4. It runs on your computer and respects your spoiler threshold. It is a one-way file export, not a live connection.</p>
+        <p>Plain Markdown and JSON export are on every plan. Export to Engine is on Worldsmith (£14.99 a month) and above. Live engine integrations and round-tripping are later roadmap items.</p>
+        <ul class="ms-check-list">
+          <li>Unreal: JSON ready for DataTable import</li>
+          <li>Unity: JSON readable by JsonUtility</li>
+          <li>Godot: JSON ready for Godot 4</li>
+          <li>Plain JSON and Markdown on every plan</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="dev-faq" data-chapter="faq" aria-labelledby="dev-faq-title">
+      <span class="ms-eyebrow">Questions</span>
+      <h2 class="ms-section-h2" id="dev-faq-title">Frequently asked questions</h2>
+      <div class="ms-faq-container"><dl class="faq-list">
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="dev-faq-1">Can Mimir export to Unreal, Unity or Godot?</button></dt><dd class="faq-item__answer" id="dev-faq-1" hidden>Yes. Export to Engine writes one JSON file per entry type, shaped for Unreal DataTable import, Unity&#x27;s JsonUtility and Godot 4. It runs locally and is on Worldsmith and above. It is a one-way export, not a live connection.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="dev-faq-2">Can I test branching dialogue without the game engine?</button></dt><dd class="faq-item__answer" id="dev-faq-2" hidden>Yes. Simulation steps through quest and dialogue graphs, lets you choose at each branch, shows variables changing and reports which nodes were never reached. It is free on every plan.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="dev-faq-3">Is Mimir a replacement for my engine&#x27;s dialogue system?</button></dt><dd class="faq-item__answer" id="dev-faq-3" hidden>No. Mimir is where you design, test and keep the canon for quests, dialogue and lore. You bring the results into your engine with Export to Engine or plain JSON.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="dev-faq-4">Does Mimir connect live to my engine or to AI tools over MCP?</button></dt><dd class="faq-item__answer" id="dev-faq-4" hidden>Not yet. Live engine integrations, round-tripping and MCP connections for AI tools are later roadmap items with no release date. Today the route into an engine is the file export.</dd></div>
+        <div class="faq-item"><dt class="faq-item__question"><button type="button" aria-expanded="false" aria-controls="dev-faq-5">Where is my data stored?</button></dt><dd class="faq-item__answer" id="dev-faq-5" hidden>In a folder you choose on your own computer, as readable Markdown and YAML files that work well with version control. Mimir also keeps its own history of saved versions.</dd></div>
+      </dl></div>
+    </section>
+
+    <section class="ms-section ms-wrap ms-chapter ms-chapter--long" id="dev-cta" data-chapter="bottom">
+      <div class="cp-final-cta">
+        <span class="ms-eyebrow">For game developers</span>
+        <h2 class="ms-section-h2">Design it, test it, ship it.</h2>
+        <p class="ms-section-sub">Mimir's public beta opens soon. Join the beta to be among the first in, or read more about the tools on this page.</p>
+        <div class="cp-cta-actions">
+          <a class="ms-btn-primary" href="./#beta-signup">Join the beta</a>
+          <a class="ms-btn-secondary" href="proving-grounds.html">Explore quest and dialogue testing</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ms-footer"><div class="ms-wrap">
+    <div class="ms-foot-grid mi-foot-grid">
+      <div><a class="mi-foot-brand" href="./" aria-label="Mimir home"><img src="../assets/logos/mimir-well-mark.webp" alt="" /><img src="../assets/logos/mimir-wordmark.webp" alt="Mimir" class="ms-foot-wordmark-img" /></a><p class="ms-foot-tag">Local-first worldbuilding for creators.</p><p class="ms-foot-attribution">Made by Shieldwall Games · Kent, UK</p><div class="mi-socials" aria-label="Verified Shieldwall Games social links"><a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer">X</a></div></div>
+      <div class="ms-foot-col"><h2>Mimir</h2><a href="./#product">Product</a><a href="features.html">Features</a><a href="mimir-ai.html">Mimir AI</a><a href="proving-grounds.html">Proving Grounds</a><a href="campaign.html">Campaign</a><a href="collaboration.html">Collaboration</a><a href="migration.html">Migration</a><a href="for-game-masters.html">For Game Masters</a><a href="for-writers.html">For writers</a><a href="for-developers.html" aria-current="page">For game developers</a><a href="move-to-mimir.html">Move to Mimir</a><a href="./#pricing">Pricing</a><a href="roadmap.html">Roadmap</a><a href="./#beta-signup">Join the beta</a></div>
+      <div class="ms-foot-col"><h2>Shieldwall Games</h2><a href="../">Shieldwall Games</a><a href="../ashborn/">Ashborn CCG</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>
+    </div>
+    <div class="ms-foot-base"><span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd.</span><span class="footer-nav"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../refunds.html">Refunds</a><a href="../support.html">Support</a><a href="#" data-cookie-settings>Cookie settings</a></span></div>
+  </div></footer>
+</div>
+<script src="../scripts/main.js" defer></script>
+<script src="scripts/mimir.js" defer></script>
+<script src="scripts/internal.js?v=20260814-1" defer></script>
+<script src="scripts/chapters.js?v=20260815-2" defer></script>
+<script src="../scripts/zoom.js" defer></script>
+<script src="../scripts/consent.js" defer></script>
+</body>
+</html>

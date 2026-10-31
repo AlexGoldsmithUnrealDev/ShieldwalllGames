@@ -257,6 +257,7 @@ Potential future items, not launch promises:
 │   ├── migration.html          # Reviewed Migration & Import deep dive
 │   ├── for-game-masters.html   # Use-case guide: campaign manager for GMs
 │   ├── for-writers.html        # Use-case guide: worldbuilding for writers
+│   ├── for-developers.html     # Use-case guide: narrative design for game developers
 │   ├── move-to-mimir.html      # Use-case guide: moving from Obsidian, Notion, World Anvil
 │   ├── roadmap.html
 │   ├── roadmap-data.json
@@ -461,7 +462,7 @@ pages, text or instructions that only crawlers can see (cloaking breaks
 Google's spam policies). `llms.txt` at the root is a plain-text summary of
 Mimir, its plans and its main pages; update it with any commercial or
 feature change. The use-case guides (`mimir/for-game-masters.html`,
-`for-writers.html`, `move-to-mimir.html`) answer one search question each,
+`for-writers.html`, `for-developers.html`, `move-to-mimir.html`) answer one search question each,
 answer first, with FAQ structured data; they are linked from every Mimir
 footer and the homepage audience cards.
 
