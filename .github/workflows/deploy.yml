@@ -40,8 +40,8 @@ jobs:
           find . -name '*.md' -delete
           find . -name '*.docx' -delete
           rm -rf tools
-          rm -f mimir/scripts/generate-*.js
-          test -f index.html && test -f CNAME && test -f mimir/index.html && test -f mimir/data/features.json && test -f mimir/roadmap-data.json
+          rm -f vitus/scripts/generate-*.js
+          test -f index.html && test -f CNAME && test -f vitus/index.html && test -f vitus/data/features.json && test -f vitus/roadmap-data.json
           ! test -e CLAUDE.md
 
       - name: Upload artifact

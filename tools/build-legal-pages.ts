@@ -1,4 +1,4 @@
-// Builds the website's legal and support pages from the Mimir app repo's drafts
+// Builds the website's legal and support pages from the Vitus app repo's drafts
 // (docs/legal/*.md, docs/website/support.md). Reads the app repo, never writes to it.
 //   cd <app repo> && npx tsx <website>/tools/build-legal-pages.ts
 // Set MIMIR_APP_REPO and SITE_DIR if the checkouts are not at the default paths.
@@ -29,10 +29,10 @@ const COMMON: Fix[] = [
 const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixes: Fix[]; append?: string }> = [
   {
     src: 'docs/legal/privacy-policy.md', out: 'privacy.html', title: 'Privacy Policy',
-    desc: 'How Shieldwall Games handles your data in the Mimir app, your Mimir account and our website.',
+    desc: 'How Shieldwall Games handles your data in the Vitus app, your Vitus account and our website.',
     fixes: [
       [' ICO registration number: [[ICO REGISTRATION NUMBER]].', ''],
-      ['your account, Mimir AI, the Marketplace, collaboration, hosted Campaigns or Proving Grounds.', 'your account, Mimir AI, the Marketplace, desktop and phone sync, collaboration, hosted Campaigns or Proving Grounds.'],
+      ['your account, Vitus AI, the Marketplace, collaboration, hosted Campaigns or Proving Grounds.', 'your account, Vitus AI, the Marketplace, desktop and phone sync, collaboration, hosted Campaigns or Proving Grounds.'],
       ['### 2.4 Collaboration, hosted Campaigns and Proving Grounds\n\nIf you choose to host or join a shared world, the content, the member list, roles and changes needed for it are stored online. Your other worlds stay local.',
         '### 2.4 Sync, collaboration, hosted Campaigns and Proving Grounds\n\nIf you choose to host or join a shared world, the content, the member list, roles and changes needed for it are stored online. If you turn on desktop and phone sync, the worlds you sync are kept with your account so your devices can exchange changes. Your other worlds stay local.'],
       ['Global network; [[CONFIRM]]', 'Global network'],
@@ -45,37 +45,37 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
   },
   {
     src: 'docs/legal/terms-of-service.md', out: 'terms.html', title: 'Terms of Service',
-    desc: 'The terms for the Mimir app, your Mimir account, Mimir\'s online services and purchases from Shieldwall Games.',
+    desc: 'The terms for the Vitus app, your Vitus account, Vitus\'s online services and purchases from Shieldwall Games.',
     fixes: [
-      ['While you are offline, the paid features your plan includes keep working for as long as you stay offline. When you reconnect, Mimir checks your plan again, and any change to it, such as a cancelled subscription, then takes effect.',
-        'While you are offline, the paid features your plan includes keep working for up to 7 days from the last time Mimir checked your plan. Connect once within those 7 days to keep them working. When you reconnect, Mimir checks your plan again, and any change to it, such as a cancelled subscription, then takes effect.'],
-      ['unlimited local worlds and entries, standard tools, import, export, and a monthly Mimir AI allowance.',
-        'unlimited local worlds and entries, the full local toolset, import and export. Every account gets 200 Mimir AI welcome credits once; paid plans add a monthly allowance, and credit bundles can be bought on any plan.'],
+      ['While you are offline, the paid features your plan includes keep working for as long as you stay offline. When you reconnect, Vitus checks your plan again, and any change to it, such as a cancelled subscription, then takes effect.',
+        'While you are offline, the paid features your plan includes keep working for up to 7 days from the last time Vitus checked your plan. Connect once within those 7 days to keep them working. When you reconnect, Vitus checks your plan again, and any change to it, such as a cancelled subscription, then takes effect.'],
+      ['unlimited local worlds and entries, standard tools, import, export, and a monthly Vitus AI allowance.',
+        'unlimited local worlds and entries, the full local toolset, import and export. Every account gets 200 Vitus AI welcome credits once; paid plans add a monthly allowance, and credit bundles can be bought on any plan.'],
       ['a Founder badge, 35% extra CORE monthly AI credits, and 10% off Shieldwall content packs and collections.',
-        'a Founder badge, 25% extra credits on every Mimir AI credit bundle, 5% extra monthly credits on any paid plan, and 10% off Shieldwall content packs and collections. The perks are applied automatically.'],
+        'a Founder badge, 25% extra credits on every Vitus AI credit bundle, 5% extra monthly credits on any paid plan, and 10% off Shieldwall content packs and collections. The perks are applied automatically.'],
     ],
   },
   {
     src: 'docs/legal/subprocessors.md', out: 'subprocessors.html', title: 'Subprocessors',
-    desc: 'The providers Shieldwall Games uses to run Mimir, what each handles and where.',
+    desc: 'The providers Shieldwall Games uses to run Vitus, what each handles and where.',
     fixes: [
       ['European Union (Germany) [[CONFIRM region]]', 'European Union (Germany)'],
       ['| When you email us | [[CONFIRM]] |', '| When you email us | United States and other countries |'],
       [/ \[\[CONFIRM\]\]/g, ''],
     ],
   },
-  { src: 'docs/legal/refund-policy.md', out: 'refunds.html', title: 'Refund Policy', desc: 'Our 14-day, no-questions refund promise for Mimir plans, content packs, collections and credit bundles.', fixes: [] },
+  { src: 'docs/legal/refund-policy.md', out: 'refunds.html', title: 'Refund Policy', desc: 'Our 14-day, no-questions refund promise for Vitus plans, content packs, collections and credit bundles.', fixes: [] },
   {
-    src: 'docs/legal/eula.md', out: 'eula.html', title: 'Licence (EULA)', desc: 'The end-user licence agreement for the Mimir desktop application.',
+    src: 'docs/legal/eula.md', out: 'eula.html', title: 'Licence (EULA)', desc: 'The end-user licence agreement for the Vitus desktop application.',
     fixes: [['[[VERSION / DATE]]', '1.0, ' + DATE]],
   },
   {
-    src: 'docs/website/support.md', out: 'support.html', title: 'Mimir support', desc: 'How to reach Shieldwall Games for Mimir help, billing, refunds and account questions.',
+    src: 'docs/website/support.md', out: 'support.html', title: 'Vitus support', desc: 'How to reach Shieldwall Games for Vitus help, billing, refunds and account questions.',
     fixes: [
       [' [[Remove this answer once the Windows installer is code-signed (lane 16).]]', ''],
-      ['including your plan\'s paid features, for as long as you stay offline. Mimir checks your plan again when you reconnect.',
-        'including your plan\'s paid features for up to 7 days from the last time Mimir checked your plan. Connect once within those 7 days to keep paid features working.'],
-      ['https://shieldwallgames.co.uk/download.html', 'https://shieldwallgames.co.uk/mimir/download.html'],
+      ['including your plan\'s paid features, for as long as you stay offline. Vitus checks your plan again when you reconnect.',
+        'including your plan\'s paid features for up to 7 days from the last time Vitus checked your plan. Connect once within those 7 days to keep paid features working.'],
+      ['https://shieldwallgames.co.uk/download.html', 'https://shieldwallgames.co.uk/vitus/download.html'],
     ],
   },
 ];
@@ -83,7 +83,7 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
 const COOKIE_FIXES: Fix[] = [
   [/^# Cookie Notice\n\n\*\*Last updated:\*\*[^\n]*\n/m, '## Cookie Notice {#cookies}\n'],
   [' [[CONFIRM: list MailerLite\'s cookies after the check in README "Before publishing", step 4.]]', ' See MailerLite\'s own cookie policy for the details.'],
-  [/^## (The website|The Mimir app|The service emails we send)$/gm, '### $1'],
+  [/^## (The website|The Vitus app|The service emails we send)$/gm, '### $1'],
 ];
 
 function apply(text: string, fixes: Fix[]): string {
@@ -140,7 +140,7 @@ function shell(title: string, desc: string, out: string, body: string): string {
       <a class="sw-brand" href="./">Shieldwall Games<small>est. 2020 &middot; Kent</small></a>
       <div class="sw-nav-links">
         <a href="./">Home</a>
-        <a href="mimir/">Mimir</a>
+        <a href="vitus/">Vitus</a>
         <a href="ashborn/">Ashborn</a>
       </div>
       <button class="sw-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sw-drawer" type="button">
@@ -149,7 +149,7 @@ function shell(title: string, desc: string, out: string, body: string): string {
     </div>
     <div class="sw-drawer" id="sw-drawer">
       <a href="./">Home</a>
-      <a href="mimir/">Mimir</a>
+      <a href="vitus/">Vitus</a>
       <a href="ashborn/">Ashborn</a>
     </div>
   </nav>
@@ -168,7 +168,7 @@ ${body}
     <div class="sw-wrap sw-footer-simple">
       <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
       <span class="footer-nav">
-        <a href="mimir/">Mimir</a>
+        <a href="vitus/">Vitus</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>

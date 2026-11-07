@@ -3,7 +3,7 @@
  *
  * Studio site layout and component styles using the sw-* class namespace.
  * All tokens (colours, type, spacing) come from main.css.
- * This file is homepage-specific — do not import on Mimir or Ashborn pages.
+ * This file is homepage-specific — do not import on Vitus or Ashborn pages.
  */
 
 /* ==========================================================================

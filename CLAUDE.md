@@ -5,8 +5,8 @@
 **Owner decisions, 29 October 2026 (these override anything below that disagrees):**
 
 - **Built means available.** If a feature is built in the app, label it "Available". Do not keep "In development" or "In testing" on a built feature. Only features the app's sources say are not built keep a not-yet-available label.
-- **No "alpha" in public copy.** Mimir launches in public beta very soon. Do not describe the product as being in alpha.
-- **Legal pages are published** without solicitor review, because review is not affordable until Mimir earns. Keep them in step with the app repo's drafts and the app's code.
+- **No "alpha" in public copy.** Vitus launches in public beta very soon. Do not describe the product as being in alpha.
+- **Legal pages are published** without solicitor review, because review is not affordable until Vitus earns. Keep them in step with the app repo's drafts and the app's code.
 - **Credits and allowances: the app's code is the source of truth.**
 
 This file is the persistent working brief for the Shieldwall Games website. Read it before changing public copy, pricing, roadmap content, or site structure.
@@ -19,15 +19,15 @@ If this file conflicts with an explicit new instruction from the human owner, fo
 
 **Shieldwall Games Ltd** is a small independent studio based in Kent, UK.
 
-### Mimir
+### Vitus
 
-Mimir is a local-first worldbuilding platform for writers, Game Masters, game developers, and other creators working with complex fictional worlds.
+Vitus is a local-first worldbuilding platform for writers, Game Masters, game developers, and other creators working with complex fictional worlds.
 
 Public product positioning:
 
 - Build structured worlds rather than disconnected notes.
 - Visualise relationships through dedicated trees, maps, calendars, timelines, backlinks, and linked entries.
-- Use Mimir AI to understand and review the user's own lore.
+- Use Vitus AI to understand and review the user's own lore.
 - Prototype interactive ideas in Proving Grounds.
 - Import existing work and migrate from other worldbuilding tools.
 - Collaborate with other creators.
@@ -38,13 +38,13 @@ The retired internal/product name **Lorekeeper** must not appear in public websi
 
 ### Ashborn
 
-Ashborn is Shieldwall's Viking Age game line. Ashborn CCG is the first planned game in that line and launches after Mimir.
+Ashborn is Shieldwall's Viking Age game line. Ashborn CCG is the first planned game in that line and launches after Vitus.
 
 ---
 
-## Canonical Mimir commercial model
+## Canonical Vitus commercial model
 
-The deeper commercial source of truth lives in the Mimir application repository at `docs/commercial-model.md`.
+The deeper commercial source of truth lives in the Vitus application repository at `docs/commercial-model.md`.
 
 This website must remain aligned with that specification.
 
@@ -52,7 +52,7 @@ This website must remain aligned with that specification.
 
 | Tier | Monthly | Annual | Position |
 | --- | ---: | ---: | --- |
-| **Mimir Core** | **Free** | **Free** | Build your world |
+| **Vitus Core** | **Free** | **Free** | Build your world |
 | **Apprentice** | **£6.99** | **£69.99** | Develop your world |
 | **Worldsmith** | **£14.99** | **£149.99** | Bring your world to life |
 | **Loremaster** | **£24.99** | **£249.99** | Work at professional scale |
@@ -91,14 +91,14 @@ Ladder set 27 October 2026 (`docs/commercial-model.md` in the app repo). It supe
 - Accessibility and local voice dictation
 - Standard, safe-to-publish and JSON export
 - General imports and competitor migration (dedicated Obsidian, Notion and World Anvil importers)
-- Mimir AI (including creating entries) and the Translator, paid for with credits: a one-time 200-credit welcome grant, then credit bundles or a paid plan. Core has **no monthly allowance**.
+- Vitus AI (including creating entries) and the Translator, paid for with credits: a one-time 200-credit welcome grant, then credit bundles or a paid plan. Core has **no monthly allowance**.
 - **World brief** (local Markdown bundle for other AI tools, no credits)
 - Game-system templates: Default and D&D 5e (SRD 5.2), free and built in. Never say "Pathfinder" in public copy.
 - Joining an invited hosted Campaign as player or Co-GM
 
 **Apprentice** adds:
 
-- 400 Mimir AI credits a month; 8k retrieval context
+- 400 Vitus AI credits a month; 8k retrieval context
 - Desktop and phone sync
 - Host one Campaign: 8 people including the GM, 1 GB, 1 live table
 
@@ -124,9 +124,9 @@ These figures are what the app's code grants (`workers/commerce/creditPeriods.mt
 
 | Allowance | Core | Apprentice | Worldsmith | Loremaster |
 | --- | ---: | ---: | ---: | ---: |
-| Monthly Mimir AI credits | 0 | 400 | 1,200 | 3,000 |
+| Monthly Vitus AI credits | 0 | 400 | 1,200 | 3,000 |
 | One-time welcome credits | 200 | 200 | 200 | 200 (once per account) |
-| Ask Mimir retrieval context | 4k | 8k | 16k | 16k |
+| Ask Vitus retrieval context | 4k | 8k | 16k | 16k |
 | Hosted Campaigns | - | 1 | Several | Several |
 | People per Campaign (incl. GM) | - | 8 | 20 | 50 |
 | Campaign storage | - | 1GB | 3GB | 10GB |
@@ -148,15 +148,15 @@ These figures are what the app's code grants (`workers/commerce/creditPeriods.mt
 
 ---
 
-## Mimir AI positioning
+## Vitus AI positioning
 
-Customer-facing product name: **Mimir AI**.
+Customer-facing product name: **Vitus AI**.
 
 Do not make the website teach customers to choose Haiku, Sonnet, Opus, or another provider model.
 
 Production philosophy:
 
-- Mimir chooses the underlying model/processing route internally.
+- Vitus chooses the underlying model/processing route internally.
 - Simple mechanical/background tasks should use the cheapest validated route that does not reduce quality.
 - Normal user-facing lore answers should use a high-quality model baseline.
 - Credit consumption is based on the amount/type of work performed, not a provider-model surcharge.
@@ -185,8 +185,8 @@ Finish the complete launch platform, including:
 - Campaigns (with GM session tools: encounter tracker, GM screen, in-world date, quests) and the Writers' Room
 - Hosted worlds/player participation
 - Export to Engine (one-way JSON file export, Worldsmith)
-- The Mimir phone app and desktop/phone sync (sync from Apprentice)
-- Ask Mimir creating entries; content packs and Marketplace
+- The Vitus phone app and desktop/phone sync (sync from Apprentice)
+- Ask Vitus creating entries; content packs and Marketplace
 
 ### Post-V1 refinement period
 
@@ -219,7 +219,7 @@ Later, with no release date set:
 
 Potential future items, not launch promises:
 
-- Mimir Studio/business plan
+- Vitus Studio/business plan
 - organisation/team administration
 - enterprise SSO
 - professional onboarding
@@ -247,10 +247,10 @@ Potential future items, not launch promises:
 │   ├── fonts/
 │   ├── icons/
 │   └── logos/
-├── mimir/
-│   ├── index.html              # Mimir landing/pricing/FAQ
+├── vitus/
+│   ├── index.html              # Vitus landing/pricing/FAQ
 │   ├── features.html           # Comprehensive feature discovery
-│   ├── mimir-ai.html           # Mimir AI deep dive
+│   ├── vitus-ai.html           # Vitus AI deep dive
 │   ├── proving-grounds.html    # Proving Grounds deep dive
 │   ├── campaign.html           # Campaign management for GMs
 │   ├── collaboration.html      # Writers' Room and collaboration
@@ -258,7 +258,7 @@ Potential future items, not launch promises:
 │   ├── for-game-masters.html   # Use-case guide: campaign manager for GMs
 │   ├── for-writers.html        # Use-case guide: worldbuilding for writers
 │   ├── for-developers.html     # Use-case guide: narrative design for game developers
-│   ├── move-to-mimir.html      # Use-case guide: moving from Obsidian, Notion, World Anvil
+│   ├── move-to-vitus.html      # Use-case guide: moving from Obsidian, Notion, World Anvil
 │   ├── roadmap.html
 │   ├── roadmap-data.json
 │   ├── data/
@@ -295,11 +295,11 @@ Potential future items, not launch promises:
 └── CLAUDE.md
 ```
 
-Stable pricing anchor: `/mimir/#pricing`. Do not rename `id="pricing"`.
+Stable pricing anchor: `/vitus/#pricing`. Do not rename `id="pricing"`.
 
 ### Proving Grounds website status
 
-`mimir/proving-grounds.html` is the public deep dive for Mimir's testing and
+`vitus/proving-grounds.html` is the public deep dive for Vitus's testing and
 prototyping discipline. All Proving Grounds actions (creating, running,
 hosting, and joining) require Loremaster under the current commercial
 specification. It is built (`docs/specs/proving-ground.md`) and labelled "Available".
@@ -314,9 +314,9 @@ product-media slots.
 
 ### Migration website status
 
-`mimir/migration.html` is the public deep dive for Core migration/import and is
+`vitus/migration.html` is the public deep dive for Core migration/import and is
 labelled "Available" (the importer and the Obsidian, Notion and World Anvil migrations are built). Verified implementation formats are CSV, XLSX, TXT,
-Markdown and DOCX. Spreadsheet mapping is deterministic; Mimir AI may optionally
+Markdown and DOCX. Spreadsheet mapping is deterministic; Vitus AI may optionally
 suggest field matches. Prose extraction is AI-assisted, followed by explicit
 creator review before draft entries are created.
 
@@ -330,7 +330,7 @@ is not the same as a transaction rollback.
 
 ### Campaign website status
 
-`mimir/campaign.html` is the public deep dive for GM-facing campaign
+`vitus/campaign.html` is the public deep dive for GM-facing campaign
 management: preparation, controlled reveals, player access and the
 host-funded access model. Campaign, hosting and the GM session tools are built
 and labelled "Available".
@@ -339,7 +339,7 @@ Label the built parts of Campaign as available.
 
 ### Collaboration website status
 
-`mimir/collaboration.html` is the public deep dive for the Writers' Room
+`vitus/collaboration.html` is the public deep dive for the Writers' Room
 collaborative worldbuilding system: canon authority, roles, the
 propose/review/accept workflow and tier allowances. It is built and labelled
 "Available". The owner's local copy is always canonical. The Writers'
@@ -381,7 +381,7 @@ Do not reintroduce placeholder-font tasks.
 Provider: **MailerLite**.
 
 - Account ID: `2430389`
-- Mimir form: `data-form="x3uRLn"`
+- Vitus form: `data-form="x3uRLn"`
 - Ashborn form: `data-form="rvVjbn"`
 - Sending domain: `shieldwallgames.co.uk`
 
@@ -400,12 +400,12 @@ Do not reintroduce Buttondown.
 
 ## Privacy and legal-copy rules
 
-Mimir is local-first, but the website must not claim Shieldwall can never receive world data.
+Vitus is local-first, but the website must not claim Shieldwall can never receive world data.
 
 Accurate distinction:
 
 - Ordinary local creation/editing stays on the user's device.
-- Mimir AI sends relevant context through an online broker/API provider.
+- Vitus AI sends relevant context through an online broker/API provider.
 - Optional collaboration/hosting necessarily stores or synchronises the data the user chooses to host.
 - Account/subscription services process account, entitlement, credit, usage, and security metadata.
 
@@ -430,23 +430,23 @@ sitemap limited to real canonical public pages. Structured data must remain
 conservative: no fake ratings, launch dates, checkout Offers or download counts.
 
 Owner-supplied artwork and product-capture requirements are consolidated in
-`mimir/assets/MEDIA_CHECKLIST.md`; do not create fake media to fill those slots.
+`vitus/assets/MEDIA_CHECKLIST.md`; do not create fake media to fill those slots.
 
-Current product captures and the overview video (`mimir/assets/captures/`,
-`mimir/assets/video/`) are real screens from a development build using the
+Current product captures and the overview video (`vitus/assets/captures/`,
+`vitus/assets/video/`) are real screens from a development build using the
 Nine Realms demo world. No AI answers are shown, because none were generated
 live. Captions describe what is shown; only features that are not built say
-"in development". Social preview images live in `mimir/assets/og/`.
+"in development". Social preview images live in `vitus/assets/og/`.
 
 Features page media and pop-up images come from the `image`, `imageAlt` and
-`mediaCaption` fields in `mimir/data/features.json`. After editing them, run
-`node mimir/scripts/generate-features.js` to rebuild the static block in
+`mediaCaption` fields in `vitus/data/features.json`. After editing them, run
+`node vitus/scripts/generate-features.js` to rebuild the static block in
 `features.html`.
 
 The deploy workflow assembles a public copy of the site and excludes working
 files: `CLAUDE.md`, every `*.md`, `*.docx`, `Mimir Design System/`, `.github/`,
-`tools/` and `mimir/scripts/generate-*.js` are not served. Root `download.html`
-redirects to `/mimir/download.html` because the app links to the root path.
+`tools/` and `vitus/scripts/generate-*.js` are not served. Root `download.html`
+redirects to `/vitus/download.html` because the app links to the root path.
 The app also links to `/support.html`, `/refunds.html`, `/eula.html` and
 `/subprocessors.html`. These, `privacy.html` and `terms.html` are published from
 the app repo's drafts (`docs/legal/*.md`, `docs/website/support.md`, with the
@@ -460,14 +460,14 @@ found for the company, so no ICO number is shown.
 Search and AI visibility: every page must be visible to people too. Never add
 pages, text or instructions that only crawlers can see (cloaking breaks
 Google's spam policies). `llms.txt` at the root is a plain-text summary of
-Mimir, its plans and its main pages; update it with any commercial or
-feature change. The use-case guides (`mimir/for-game-masters.html`,
-`for-writers.html`, `for-developers.html`, `move-to-mimir.html`) answer one search question each,
-answer first, with FAQ structured data; they are linked from every Mimir
+Vitus, its plans and its main pages; update it with any commercial or
+feature change. The use-case guides (`vitus/for-game-masters.html`,
+`for-writers.html`, `for-developers.html`, `move-to-vitus.html`) answer one search question each,
+answer first, with FAQ structured data; they are linked from every Vitus
 footer and the homepage audience cards.
 
-Roadmap cards come from `mimir/roadmap-data.json`. Run
-`node mimir/scripts/generate-roadmap.js` after editing it; the generator adds
+Roadmap cards come from `vitus/roadmap-data.json`. Run
+`node vitus/scripts/generate-roadmap.js` after editing it; the generator adds
 soft hyphens to long title words.
 
 Current UI words (see `docs/specs/plain-english-pass.md` in the app repo):
@@ -487,25 +487,25 @@ GitHub Pages should not be treated as the permanent commercial SaaS/download/acc
 
 ---
 
-## Files to review after any material Mimir commercial change
+## Files to review after any material Vitus commercial change
 
 Always check these together:
 
-1. `mimir/index.html`
-2. `mimir/features.html`
-3. `mimir/data/features.json`
-4. `mimir/mimir-ai.html`
-5. `mimir/proving-grounds.html`
-6. `mimir/campaign.html`
-7. `mimir/collaboration.html`
-8. `mimir/migration.html`
-9. `mimir/roadmap.html`
-10. `mimir/roadmap-data.json`
+1. `vitus/index.html`
+2. `vitus/features.html`
+3. `vitus/data/features.json`
+4. `vitus/vitus-ai.html`
+5. `vitus/proving-grounds.html`
+6. `vitus/campaign.html`
+7. `vitus/collaboration.html`
+8. `vitus/migration.html`
+9. `vitus/roadmap.html`
+10. `vitus/roadmap-data.json`
 11. `privacy.html`
 12. `terms.html`
 13. `README.md`
 14. `CLAUDE.md`
-15. `mimir/download.html` and root `download.html`
+15. `vitus/download.html` and root `download.html`
 16. `sitemap.xml`
 
 Older reference files under `Mimir Design System/` are retained historical/design material. They may contain obsolete commercial copy and must not override the live files or this brief.

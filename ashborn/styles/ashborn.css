@@ -111,7 +111,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Built on History / Built with Mimir 2-col grid */
+    /* Built on History / Built with Vitus 2-col grid */
     .ab-history-grid {
         grid-template-columns: 1fr !important;
         gap: 32px !important;
@@ -273,7 +273,7 @@
     filter: saturate(0.85) brightness(0.8);
 }
 
-/* History and Mimir 2-column grid */
+/* History and Vitus 2-column grid */
 .ab-history-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
