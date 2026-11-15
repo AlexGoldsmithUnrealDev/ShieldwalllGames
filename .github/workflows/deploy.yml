@@ -27,8 +27,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Publish only the website. Working notes (CLAUDE.md, README files) and
-      # build tools stay in the repository but are not served.
+      # Publish only the website. Working notes (CLAUDE.md, README files),
+      # design handovers (docs/) and build tools stay in the repository but
+      # are not served.
       - name: Assemble public site
         run: |
           SITE="$RUNNER_TEMP/site"
@@ -38,9 +39,10 @@ jobs:
           rm -rf .git .github .gitignore
           find . -name '*.md' -delete
           find . -name '*.docx' -delete
-          rm -rf tools
+          rm -rf tools docs
           test -f index.html && test -f CNAME && test -f vitus/index.html && test -f ashborn/index.html
           ! test -e CLAUDE.md
+          ! test -e docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
