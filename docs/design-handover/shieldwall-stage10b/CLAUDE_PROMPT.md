@@ -1,3 +1,13 @@
+# ⚠ SUPERSEDED — DO NOT IMPLEMENT THIS SHIELDWALL-ONLY BRIEF
+
+**The current user instruction requires implementation of BOTH the complete Vitus product website AND the approved Shieldwall Games studio website.** This older handover is preserved as history but its **Shieldwall-only scope and Vitus “archive-only” restrictions are WRONG**. Use the current binding handover instead:
+
+**[START HERE — COMPLETE VITUS + SHIELDWALL IMPLEMENTATION](../2026-11-vitus-shieldwall-complete/START_HERE.md)**
+
+The original approved Vitus and Shieldwall HTML mock-ups now exist as standalone files in that folder. Do not redeploy based on the older brief.
+
+---
+
 # Claude — Implement the approved Shieldwall Games Stage 10B redesign
 
 This is a **visual rebuild of Shieldwall Games**, not a copy-and-screenshot refresh. **Only Shieldwall is in scope. Do not change Vitus's approved website design.**
