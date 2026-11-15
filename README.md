@@ -26,17 +26,23 @@ back here.
 
 ## Homepage
 
-The homepage follows the approved Stage 10B landscape-led design:
+The homepage is built from the approved Stage 10B prototype in
+`docs/design-handover/shieldwall-stage10b/01_APPROVED_DESIGN/` (read the
+handover's `README.md` first). Treat that prototype as the visual source of truth:
 
-- every section sits on full-bleed landscape artwork with soft top and bottom fades;
-- the hero has a slow drift and mist layer, sections reveal on scroll, and backgrounds
-  have a gentle scroll-linked parallax where the browser supports it;
-- all decorative motion runs only with `prefers-reduced-motion: no-preference`;
-- sections: hero, studio, Vitus, roadmap, future worlds, newsletter.
+- one page with anchored sections in the prototype's order: hero, studio, Vitus,
+  roadmap, future, newsletter, footer;
+- every section sits on full-bleed landscape artwork under the prototype's gradient
+  overlays, with glass panels, amber and frost accents;
+- motion is the prototype's: sections rise into view on scroll, nav links underline
+  on hover, buttons lift. With `prefers-reduced-motion: reduce` everything shows at once.
 
-Styles are in `styles/home.css` (loaded after `styles/main.css`). The legal pages
-and 404 use the same header, footer and colours: `home.css` plus `shieldwall.css`
-for the legal text.
+Styles are in `styles/studio.css`, a scoped port of the prototype's CSS (same
+tokens, class names and breakpoints), loaded after `styles/main.css`. Njord has
+no lowercase letters, so headings render in capitals.
+
+The legal pages and 404 are not part of the approved design and keep their existing
+layout: `styles/home.css` plus `shieldwall.css` for the legal text.
 
 Artwork is served as responsive AVIF/WebP from `assets/images/landscapes/`
 (640, 1024 and 1600 px wide). The original PNGs stay in `assets/images/`. To swap
@@ -44,6 +50,8 @@ in new artwork, regenerate the same file names (see "Replacing artwork" below).
 
 The Vitus screenshot on the homepage is `assets/images/vitus/vitus-home-grid-*`,
 cropped from a real capture of the app (the entry grid only, with no app chrome).
+The studio panel uses `assets/images/landscapes/studio-panel-*` (a square crop of
+`Kernow.png`).
 
 ## Tech stack
 
@@ -73,7 +81,8 @@ Then visit `http://localhost:8000`.
 ├── robots.txt  sitemap.xml  CNAME
 ├── styles/
 │   ├── main.css                # Fonts, reset, tokens, skip link, reveal, cookie banner
-│   ├── home.css                # Homepage, legal and 404 layout (Stage 10B)
+│   ├── studio.css              # Homepage (approved Stage 10B design)
+│   ├── home.css                # Legal pages and 404 layout
 │   └── shieldwall.css          # Legal text styles (sw-legal)
 ├── scripts/
 │   ├── main.js                 # Menu toggle, scroll reveal
@@ -88,6 +97,7 @@ Then visit `http://localhost:8000`.
 │   ├── index.html
 │   └── styles/ashborn.css
 ├── vitus/  mimir/              # Redirect stubs only
+├── docs/design-handover/       # Approved design handovers (not published)
 ├── tools/build-legal-pages.ts  # Rebuilds the legal pages from the app repo's drafts
 ├── .github/workflows/deploy.yml
 ├── CLAUDE.md
@@ -97,7 +107,8 @@ Then visit `http://localhost:8000`.
 ## Replacing artwork
 
 Each homepage section uses one landscape (`hero`, `studio`, `vitus`, `roadmap`,
-`future`, `newsletter`) plus `huskarl` for the studio card. Export the new art at
+`future`, `newsletter`) plus `studio-panel` for the studio card (square, 560 and
+880 px). Export the new art at
 least 1600 px wide, then write `<name>-640/1024/1600` in both `.avif` and `.webp`
 to `assets/images/landscapes/`. Keep the subject near the centre: the images are
 cropped with `object-fit: cover`.
@@ -122,8 +133,10 @@ MailerLite account ID: `2430389`
 - Double opt-in is used for marketing lists
 - Sending domain: `shieldwallgames.co.uk`
 
-The homepage newsletter section embeds both forms. There is no single studio-wide
-list yet; if one is created in MailerLite, it can replace the two forms.
+The homepage newsletter box has a "Choose a list" switch (Vitus updates / Ashborn
+news) that shows one real embedded form at a time. There is no single studio-wide
+list yet; if one is created in MailerLite, it can replace the switch. The forms'
+own wording and header images are set in the MailerLite dashboard.
 
 ## Cookie consent and analytics
 
@@ -135,7 +148,7 @@ but no analytics provider is installed.
 ## Deployment
 
 Every push to `main` triggers the GitHub Pages workflow. It publishes a copy of the
-site without `*.md`, `*.docx`, `.github/` and `tools/`.
+site without `*.md`, `*.docx`, `.github/`, `tools/` and `docs/`.
 
 Before paid launch, review whether GitHub Pages remains the right host.
 

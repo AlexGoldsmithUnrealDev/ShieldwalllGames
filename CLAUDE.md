@@ -69,7 +69,8 @@ Never describe live engine integration, round-tripping, MCP or BYOK as available
 ├── robots.txt sitemap.xml CNAME
 ├── styles/
 │   ├── main.css                # Fonts, reset, tokens, skip link, reveal, cookie banner
-│   ├── home.css                # Homepage + legal + 404 layout
+│   ├── studio.css              # Homepage (approved Stage 10B prototype, ported)
+│   ├── home.css                # Legal + 404 layout
 │   └── shieldwall.css          # Legal text styles (sw-legal)
 ├── scripts/
 │   ├── main.js
@@ -84,6 +85,7 @@ Never describe live engine integration, round-tripping, MCP or BYOK as available
 │   ├── index.html
 │   └── styles/ashborn.css
 ├── vitus/ mimir/               # Redirect stubs only (noindex)
+├── docs/design-handover/       # Approved design handovers (not published)
 ├── tools/build-legal-pages.ts
 ├── .github/workflows/deploy.yml
 ├── README.md
@@ -103,13 +105,20 @@ it. Keep the stubs; the deploy check expects `vitus/index.html`.
 
 ## Design rules (Stage 10B, approved)
 
+- **The approved prototype is the source of truth for the homepage:**
+  `docs/design-handover/shieldwall-stage10b/01_APPROVED_DESIGN/Shieldwall_Games_Stage10B_Alive_Landscape_Mockup.html`
+  plus the briefs beside it. Match its composition, section order, tokens and
+  interactions; do not reskin an older layout. Only the studio homepage has an
+  approved design; the legal pages and 404 keep their existing layout. Files under
+  the handover's `90_ARCHIVE_ONLY/` are history, not work items.
+- `styles/studio.css` is the scoped port of the prototype's CSS (`body.s10`).
 - Landscape-led storytelling: full-bleed artwork behind each section, softened with
   layered fades; immersive dark styling; studio-first positioning; a simple
   roadmap; newsletter placement; "One world, many games".
 - It must feel alive, imaginative and distinctly Shieldwall, not corporate and not
   like another Vitus website. Do not turn it into a product catalogue.
-- Motion is subtle and decorative, and only runs with
-  `prefers-reduced-motion: no-preference`.
+- Motion is the prototype's: scroll reveals (24px rise, 0.8s), nav underline on
+  hover, button lift. Everything shows at once with `prefers-reduced-motion: reduce`.
 - Vanilla HTML/CSS/JS, no framework, no build step. Semantic HTML, WCAG AA,
   keyboard access, mobile layouts.
 - Use the repository's Shieldwall logo (`assets/logos/shieldwall-logo-*.png`, mark
@@ -128,8 +137,10 @@ it. Keep the stubs; the deploy check expects `vitus/index.html`.
 
 Provider: **MailerLite**. Account ID `2430389`. Vitus form `data-form="x3uRLn"`,
 Ashborn form `data-form="rvVjbn"`. Sending domain `shieldwallgames.co.uk`. Do not
-reintroduce Buttondown. The homepage embeds both forms; there is no studio-wide
-list yet.
+reintroduce Buttondown. The homepage newsletter box switches between the two real
+forms ("Choose a list"); there is no studio-wide list yet. The forms' wording is set
+in the MailerLite dashboard (the Vitus form still needed its old-name copy updated
+as of 15 November 2026).
 
 ## Cookie consent
 
@@ -169,7 +180,7 @@ so no ICO number is shown. Do not add promises the owner has not approved.
 - Studio: **shieldwallgames.co.uk** (this repo, `CNAME`).
 - Vitus: **brothervitus.co.uk**, with brothervitus.com redirecting at DNS (VitusSite repo).
 - GitHub Pages deploys on pushes to `main`. The workflow publishes a copy without
-  `*.md`, `*.docx`, `.github/` and `tools/`.
+  `*.md`, `*.docx`, `.github/`, `tools/` and `docs/`.
 - `robots.txt` and `sitemap.xml` list only real canonical studio pages (root,
   `ashborn/`, legal pages). Redirect stubs are not in the sitemap.
 - Structured data stays conservative: no fake ratings, launch dates or offers.
