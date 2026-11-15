@@ -6,7 +6,7 @@ import * as fs from 'node:fs';
 
 const APP = process.env.MIMIR_APP_REPO ?? '/home/user/lorekeeper';
 const SITE = process.env.SITE_DIR ?? '/home/user/ShieldwalllGames';
-const DATE = process.env.LEGAL_DATE ?? '29 October 2026';
+const DATE = process.env.LEGAL_DATE ?? '15 November 2026';
 const COMPANY_NUMBER = '12655497';
 const OFFICE = '17 Chichester Road, Sandgate, Folkestone, Kent, CT20 3BN, United Kingdom';
 
@@ -23,6 +23,7 @@ const COMMON: Fix[] = [
   ['answers from your own lorebible', 'answers from your own world'],
   [/\*\*shieldwallgames\.co\.uk\/subprocessors\.html\*\*/g, '[our Subprocessors page](https://shieldwallgames.co.uk/subprocessors.html)'],
   [/\*\*shieldwallgames\.co\.uk\/refunds\.html\*\*/g, '[our Refund Policy](https://shieldwallgames.co.uk/refunds.html)'],
+  [/^Vitus was previously called [^\n]*\n\n?/m, ''],
   ['The full policy is at shieldwallgames.co.uk/refunds.html.', 'The full policy is in our [Refund Policy](https://shieldwallgames.co.uk/refunds.html).'],
 ];
 
@@ -32,6 +33,8 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
     desc: 'How Shieldwall Games handles your data in the Vitus app, your Vitus account and our website.',
     fixes: [
       [' ICO registration number: [[ICO REGISTRATION NUMBER]].', ''],
+      ['Our website is hosted by GitHub Pages.', 'Our websites, shieldwallgames.co.uk and brothervitus.co.uk, are hosted by GitHub Pages.'],
+      ['| GitHub | Our website (GitHub Pages) |', '| GitHub | Our websites (GitHub Pages) |'],
       ['your account, Vitus AI, the Marketplace, collaboration, hosted Campaigns or Proving Grounds.', 'your account, Vitus AI, the Marketplace, desktop and phone sync, collaboration, hosted Campaigns or Proving Grounds.'],
       ['### 2.4 Collaboration, hosted Campaigns and Proving Grounds\n\nIf you choose to host or join a shared world, the content, the member list, roles and changes needed for it are stored online. Your other worlds stay local.',
         '### 2.4 Sync, collaboration, hosted Campaigns and Proving Grounds\n\nIf you choose to host or join a shared world, the content, the member list, roles and changes needed for it are stored online. If you turn on desktop and phone sync, the worlds you sync are kept with your account so your devices can exchange changes. Your other worlds stay local.'],
@@ -60,6 +63,7 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
     desc: 'The providers Shieldwall Games uses to run Vitus, what each handles and where.',
     fixes: [
       ['European Union (Germany) [[CONFIRM region]]', 'European Union (Germany)'],
+      ['| Our website | IP address in server logs | When you visit shieldwallgames.co.uk |', '| Our websites | IP address in server logs | When you visit shieldwallgames.co.uk or brothervitus.co.uk |'],
       ['| When you email us | [[CONFIRM]] |', '| When you email us | United States and other countries |'],
       [/ \[\[CONFIRM\]\]/g, ''],
     ],
@@ -75,12 +79,13 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
       [' [[Remove this answer once the Windows installer is code-signed (lane 16).]]', ''],
       ['including your plan\'s paid features, for as long as you stay offline. Vitus checks your plan again when you reconnect.',
         'including your plan\'s paid features for up to 7 days from the last time Vitus checked your plan. Connect once within those 7 days to keep paid features working.'],
-      ['https://shieldwallgames.co.uk/download.html', 'https://shieldwallgames.co.uk/vitus/download.html'],
+      ['https://shieldwallgames.co.uk/download.html', 'https://brothervitus.co.uk/download.html'],
     ],
   },
 ];
 
 const COOKIE_FIXES: Fix[] = [
+  ['Our website, shieldwallgames.co.uk, is hosted on GitHub Pages.', 'Our websites, shieldwallgames.co.uk and brothervitus.co.uk (the Vitus site), are hosted on GitHub Pages.'],
   [/^# Cookie Notice\n\n\*\*Last updated:\*\*[^\n]*\n/m, '## Cookie Notice {#cookies}\n'],
   [' [[CONFIRM: list MailerLite\'s cookies after the check in README "Before publishing", step 4.]]', ' See MailerLite\'s own cookie policy for the details.'],
   [/^## (The website|The Vitus app|The service emails we send)$/gm, '### $1'],
@@ -98,23 +103,82 @@ function apply(text: string, fixes: Fix[]): string {
   return text;
 }
 
+
+// Site header, footer and artwork band, matching the Stage 10B homepage (index.html).
+const SITE_HEADER = `<header class="hm-header">
+  <nav class="hm-wrap hm-nav" aria-label="Main">
+    <a class="hm-brand" href="./" aria-label="Shieldwall Games home">
+      <img class="hm-brand__mark" src="assets/logos/shieldwall-mark-light-96.webp" width="48" height="48" alt="" />
+      <span class="hm-brand__text">
+        <span class="hm-brand__name">Shieldwall Games</span>
+        <span class="hm-brand__tag">One world &middot; many games</span>
+      </span>
+    </a>
+    <div class="hm-nav__links">
+      <a href="./#studio">Studio</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="./#roadmap">Roadmap</a>
+      <a href="./#newsletter" class="hm-nav__cta">Newsletter</a>
+    </div>
+    <button class="sw-hamburger hm-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hm-drawer" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sw-drawer hm-drawer" id="hm-drawer">
+      <a href="./">Home</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="./#roadmap">Roadmap</a>
+      <a href="./#newsletter">Newsletter</a>
+    </div>
+  </nav>
+</header>`;
+
+const PAGE_SCENE = `<div class="hm-scene hm-scene--page" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/newsletter-640.avif 640w, assets/images/landscapes/newsletter-1024.avif 1024w, assets/images/landscapes/newsletter-1600.avif 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/newsletter-1600.webp" alt="" width="1600" height="900" decoding="async" />
+      </picture>
+    </div>`;
+
+const SITE_FOOTER = `<footer class="hm-footer">
+  <div class="hm-wrap hm-footer__bottom hm-footer__bottom--solo">
+    <p>&copy; <span data-year>2026</span> Shieldwall Games Ltd &middot; Registered in England and Wales, company number 12655497 &middot; Kent, UK</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refunds.html">Refunds</a>
+      <a href="subprocessors.html">Subprocessors</a>
+      <a href="eula.html">Licence</a>
+      <a href="#" data-cookie-settings>Cookie settings</a>
+    </nav>
+  </div>
+</footer>
+<script>document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>`;
+
 function shell(title: string, desc: string, out: string, body: string): string {
   const url = 'https://shieldwallgames.co.uk/' + out;
   const full = `${title} | Shieldwall Games`;
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1a1714" />
+  <meta name="theme-color" content="#0c0f13" />
 
   <title>${full}</title>
   <meta name="description" content="${desc}" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shieldwall Games" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="${full}" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:url" content="${url}" />
+  <meta property="og:image" content="https://shieldwallgames.co.uk/assets/og/shieldwall.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="${full}" />
   <meta name="twitter:description" content="${desc}" />
@@ -127,60 +191,27 @@ function shell(title: string, desc: string, out: string, body: string): string {
 
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/shieldwall.css" />
+  <link rel="stylesheet" href="styles/home.css" />
 </head>
 
-<body>
+<body class="hm hm-sub">
 
-<div class="sw-page">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+${SITE_HEADER}
 
-  <nav class="sw-nav">
-    <div class="sw-wrap sw-nav-inner">
-      <a class="sw-brand" href="./">Shieldwall Games<small>est. 2020 &middot; Kent</small></a>
-      <div class="sw-nav-links">
-        <a href="./">Home</a>
-        <a href="vitus/">Vitus</a>
-        <a href="ashborn/">Ashborn</a>
-      </div>
-      <button class="sw-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sw-drawer" type="button">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="sw-drawer" id="sw-drawer">
-      <a href="./">Home</a>
-      <a href="vitus/">Vitus</a>
-      <a href="ashborn/">Ashborn</a>
-    </div>
-  </nav>
+<main id="main-content">
 
-  <main id="main-content">
-
-  <section class="sw-section">
-    <div class="sw-wrap sw-wrap--narrow sw-legal">
+  <section class="hm-page">
+    ${PAGE_SCENE}
+    <div class="hm-wrap hm-wrap--narrow sw-legal">
 ${body}
     </div>
   </section>
 
-  </main>
+</main>
 
-  <footer class="sw-footer">
-    <div class="sw-wrap sw-footer-simple">
-      <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
-      <span class="footer-nav">
-        <a href="vitus/">Vitus</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="refunds.html">Refunds</a>
-        <a href="subprocessors.html">Subprocessors</a>
-        <a href="eula.html">Licence</a>
-        <a href="#" data-cookie-settings>Cookie settings</a>
-      </span>
-    </div>
-  </footer>
-
-</div>
+${SITE_FOOTER}
 
 <script src="scripts/main.js" defer></script>
 <script src="scripts/consent.js" defer></script>

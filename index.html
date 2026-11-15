@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1a1714" />
+  <meta name="theme-color" content="#0c0f13" />
 
-  <title>Shieldwall Games: Vitus Worldbuilding &amp; Ashborn</title>
-  <meta name="description" content="Shieldwall Games builds Vitus, a local-first worldbuilding platform for writers, GMs and developers, and Ashborn, a Viking Age card game." />
+  <title>Shieldwall Games: One world, many games</title>
+  <meta name="description" content="Shieldwall Games is an independent studio in Kent, UK. We make Vitus, a local-first worldbuilding platform, and Ashborn, a line of Viking Age games. One world, many games." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Shieldwall Games" />
-  <meta property="og:description" content="Makers of Vitus, a local-first worldbuilding platform, and Ashborn CCG." />
+  <meta property="og:site_name" content="Shieldwall Games" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Shieldwall Games: One world, many games" />
+  <meta property="og:description" content="An independent studio in Kent, UK, making Vitus, the worldbuilding platform, and Ashborn, a line of Viking Age games." />
   <meta property="og:url" content="https://shieldwallgames.co.uk/" />
+  <meta property="og:image" content="https://shieldwallgames.co.uk/assets/og/shieldwall.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Shieldwall Games shield over a misty northern landscape." />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shieldwall Games" />
-  <meta name="twitter:description" content="Makers of Vitus, the worldbuilding platform, and Ashborn CCG." />
+  <meta name="twitter:site" content="@ShieldwallG" />
+  <meta name="twitter:title" content="Shieldwall Games: One world, many games" />
+  <meta name="twitter:description" content="An independent studio in Kent, UK, making Vitus and the Ashborn games." />
+  <meta name="twitter:image" content="https://shieldwallgames.co.uk/assets/og/shieldwall.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192.png" />
@@ -34,7 +42,16 @@
         "@type": "Organization",
         "@id": "https://shieldwallgames.co.uk/#organization",
         "name": "Shieldwall Games Ltd",
+        "alternateName": "Shieldwall Games",
         "url": "https://shieldwallgames.co.uk/",
+        "logo": "https://shieldwallgames.co.uk/assets/logos/shieldwall-logo-light.png",
+        "email": "info@shieldwallgames.co.uk",
+        "slogan": "One world, many games.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Kent",
+          "addressCountry": "GB"
+        },
         "sameAs": [
           "https://twitter.com/ShieldwallG",
           "https://www.instagram.com/shieldwall_games",
@@ -47,14 +64,19 @@
         "@id": "https://shieldwallgames.co.uk/#website",
         "url": "https://shieldwallgames.co.uk/",
         "name": "Shieldwall Games",
+        "inLanguage": "en-GB",
         "publisher": { "@id": "https://shieldwallgames.co.uk/#organization" }
       }
     ]
   }
   </script>
 
+  <link rel="preload" as="image" type="image/avif"
+        imagesrcset="assets/images/landscapes/hero-640.avif 640w, assets/images/landscapes/hero-1024.avif 1024w, assets/images/landscapes/hero-1600.avif 1600w"
+        imagesizes="100vw" fetchpriority="high" />
   <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet" href="styles/shieldwall.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 
   <!-- MailerLite loader: held until the visitor allows optional cookies (scripts/consent.js) -->
   <script type="text/plain" data-consent="forms">
@@ -66,205 +88,393 @@
   </script>
 </head>
 
-<body>
+<body class="hm">
 
-<div class="sw-page">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <nav class="sw-nav">
-    <div class="sw-wrap sw-nav-inner">
-      <a class="sw-brand" href="./">Shieldwall Games<small>est. 2020 &middot; Kent</small></a>
-      <div class="sw-nav-links">
-        <a href="./">Home</a>
-        <a href="vitus/">Vitus</a>
-        <a href="ashborn/">Ashborn</a>
-      </div>
-      <button class="sw-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sw-drawer" type="button">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="sw-drawer" id="sw-drawer">
-      <a href="./">Home</a>
-      <a href="vitus/">Vitus</a>
+<header class="hm-header">
+  <nav class="hm-wrap hm-nav" aria-label="Main">
+    <a class="hm-brand" href="./" aria-label="Shieldwall Games home">
+      <img class="hm-brand__mark" src="assets/logos/shieldwall-mark-light-96.webp" width="48" height="48" alt="" />
+      <span class="hm-brand__text">
+        <span class="hm-brand__name">Shieldwall Games</span>
+        <span class="hm-brand__tag">One world &middot; many games</span>
+      </span>
+    </a>
+    <div class="hm-nav__links">
+      <a href="#studio">Studio</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
       <a href="ashborn/">Ashborn</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#newsletter" class="hm-nav__cta">Newsletter</a>
+    </div>
+    <button class="sw-hamburger hm-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hm-drawer" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sw-drawer hm-drawer" id="hm-drawer">
+      <a href="#studio">Studio</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#future">Future worlds</a>
+      <a href="#newsletter">Newsletter</a>
     </div>
   </nav>
+</header>
 
-  <header class="sw-hero">
-    <div class="sw-wrap sw-hero-grid">
-      <div>
-        <div class="sw-hero-eye">A studio &middot; Kent, UK</div>
+<main id="main-content">
 
-        <h1 class="sw-hero-h1">Build worlds that are easier to <em>understand</em>, test, and share.</h1>
+  <!-- Hero -->
+  <section class="hm-hero" id="top" aria-labelledby="hero-title">
+    <div class="hm-scene hm-scene--hero" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/hero-640.avif 640w, assets/images/landscapes/hero-1024.avif 1024w, assets/images/landscapes/hero-1600.avif 1600w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/images/landscapes/hero-640.webp 640w, assets/images/landscapes/hero-1024.webp 1024w, assets/images/landscapes/hero-1600.webp 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/hero-1600.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async" />
+      </picture>
+      <div class="hm-mist"></div>
+    </div>
 
-        <p class="sw-hero-sub">
-          Vitus is our local-first worldbuilding platform for Game Masters, writers,
-          and developers. It turns scattered lore into a connected world of entries,
-          relationships, timelines, maps, narrative tools, Vitus AI, and interactive
-          prototypes while keeping the core source files in your hands.
+    <div class="hm-wrap hm-hero__grid">
+      <div class="hm-hero__copy">
+        <p class="hm-eyebrow">Independent studio &middot; Kent, UK</p>
+        <h1 id="hero-title" class="hm-hero__title">One world.<br /><em>Many games.</em></h1>
+        <p class="hm-lede">
+          Shieldwall Games makes worlds, the tools to shape them and the games that grow
+          from them. We are releasing our worldbuilding platform, Vitus, first, so you can
+          start telling your own stories while ours are on the way.
         </p>
-
-        <div class="sw-hero-meta">
-          <div><strong>2 products</strong>Vitus &middot; Ashborn CCG</div>
-          <div><strong>Self-funded</strong>independent development</div>
-          <div><strong>Kent, UK</strong>Shieldwall Games Ltd</div>
+        <div class="hm-actions">
+          <a class="hm-btn hm-btn--primary" href="https://brothervitus.co.uk/">Discover Vitus</a>
+          <a class="hm-btn hm-btn--ghost" href="#roadmap">See the road ahead</a>
         </div>
       </div>
 
-      <div class="sw-mark">
-        <span class="sw-mark-glyph">&#x2318;</span>
-        <span class="sw-mark-cap">Shieldwall Games</span>
+      <div class="hm-hero__side">
+        <figure class="hm-glass hm-quote">
+          <p class="hm-small-caps">What we believe</p>
+          <blockquote>
+            <p>Creativity should never be held back.</p>
+          </blockquote>
+          <figcaption>That is why our tools come before our games.</figcaption>
+        </figure>
+        <div class="hm-glass hm-now">
+          <p class="hm-small-caps">Happening now</p>
+          <p><strong>The Vitus public beta opens soon.</strong> Ashborn CCG is in development alongside it.</p>
+        </div>
       </div>
     </div>
-  </header>
 
-  <main id="main-content">
+    <a class="hm-scroll-cue" href="#studio"><span class="visually-hidden">Scroll to </span>The studio</a>
+  </section>
 
-  <section class="sw-section" id="work">
-    <div class="sw-wrap">
-      <div class="sw-section-eye">Our work</div>
-      <h2 class="sw-section-h2">Two products, one set of obsessions.</h2>
-      <div class="sw-projects">
+  <!-- Studio -->
+  <section class="hm-section" id="studio" aria-labelledby="studio-title">
+    <div class="hm-scene" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/studio-640.avif 640w, assets/images/landscapes/studio-1024.avif 1024w, assets/images/landscapes/studio-1600.avif 1600w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/images/landscapes/studio-640.webp 640w, assets/images/landscapes/studio-1024.webp 1024w, assets/images/landscapes/studio-1600.webp 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/studio-1600.webp" alt="" width="1600" height="900" loading="lazy" decoding="async" />
+      </picture>
+    </div>
 
-        <a class="sw-project" href="vitus/">
-          <img src="assets/images/Avalon.png" alt="Landscape from the Vitus worldbuilding platform" loading="lazy" />
-          <div class="sw-proj-body">
-            <div class="sw-proj-eye">Software &middot; local-first worldbuilding platform</div>
-            <h3 class="sw-proj-title">Vitus</h3>
-            <p class="sw-proj-tag">A worldbuilding app to build, connect, test, understand, and share complex worlds without surrendering ownership of the source files.</p>
-          </div>
-        </a>
+    <div class="hm-wrap">
+      <div class="hm-head reveal">
+        <div>
+          <p class="hm-eyebrow">The studio</p>
+          <h2 id="studio-title" class="hm-h2">Tools first.<br />Worlds always.</h2>
+        </div>
+        <p>
+          We are a small, independent studio in Kent. We make worldbuilding tools and games
+          that share one creative vision, and we take the long view with all of them.
+        </p>
+      </div>
 
-        <a class="sw-project" href="ashborn/">
-          <img src="assets/images/FireFalls.png" alt="Landscape from the Ashborn game world" loading="lazy" />
-          <div class="sw-proj-body">
-            <div class="sw-proj-eye">Card game &middot; in development &middot; ~&pound;30 at launch</div>
-            <h3 class="sw-proj-title">Ashborn</h3>
-            <p class="sw-proj-tag">A Viking Age collectible card game. One shared world.</p>
-          </div>
-        </a>
-
+      <div class="hm-story reveal">
+        <div class="hm-panel">
+          <p>
+            <strong>We started by building the tool we needed.</strong> Keeping a world consistent
+            across years of lore, characters, maps and timelines is hard, and nothing we tried
+            kept up with our own games. So we built Vitus, and we are putting it in your hands
+            before anything else.
+          </p>
+          <p>
+            Every Shieldwall release stands on its own, with its own rules and its own way to
+            play. They all grow from the same imagination: Vitus is where worlds are written,
+            and Ashborn is where you will first be able to play in ours.
+          </p>
+          <ul class="hm-badges" role="list">
+            <li>Your work stays yours</li>
+            <li>Depth that earns its place</li>
+            <li>Self-funded and independent</li>
+            <li>Made in Kent, UK</li>
+          </ul>
+        </div>
+        <figure class="hm-art">
+          <picture>
+            <source type="image/avif" srcset="assets/images/landscapes/huskarl-480.avif 480w, assets/images/landscapes/huskarl-720.avif 720w" sizes="(max-width: 980px) 90vw, 420px" />
+            <source type="image/webp" srcset="assets/images/landscapes/huskarl-480.webp 480w, assets/images/landscapes/huskarl-720.webp 720w" sizes="(max-width: 980px) 90vw, 420px" />
+            <img src="assets/images/landscapes/huskarl-720.webp" alt="A Viking huskarl in mail and fur, holding a round shield and spear." width="720" height="921" loading="lazy" decoding="async" />
+          </picture>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="sw-section" id="about-studio">
-    <div class="sw-wrap">
-      <div class="sw-section-eye">How we work</div>
-      <h2 class="sw-section-h2">Built by makers, for makers.</h2>
-      <div class="sw-philosophy">
+  <!-- Vitus -->
+  <section class="hm-section" id="vitus" aria-labelledby="vitus-title">
+    <div class="hm-scene hm-scene--dark" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/vitus-640.avif 640w, assets/images/landscapes/vitus-1024.avif 1024w, assets/images/landscapes/vitus-1600.avif 1600w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/images/landscapes/vitus-640.webp 640w, assets/images/landscapes/vitus-1024.webp 1024w, assets/images/landscapes/vitus-1600.webp 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/vitus-1600.webp" alt="" width="1600" height="900" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+
+    <div class="hm-wrap">
+      <div class="hm-head reveal">
         <div>
-          <img
-            src="assets/images/Huskarl.png"
-            alt="Viking huskarl warrior representing Shieldwall Games"
-            loading="lazy"
-            class="sw-philosophy-img"
-          />
+          <p class="hm-eyebrow">Our first release</p>
+          <h2 id="vitus-title" class="hm-h2">Vitus opens the gate.</h2>
         </div>
-        <div>
-          <p>
-            <strong>Shieldwall Games is a small independent studio.</strong> We build the tools
-            we needed and couldn't find, then we share them. Vitus came from the problem
-            of keeping large fictional worlds coherent while building our own games.
+        <p>
+          Vitus is a local-first worldbuilding platform for writers, Game Masters and game
+          developers. It now has a home of its own at
+          <a href="https://brothervitus.co.uk/">brothervitus.co.uk</a>.
+        </p>
+      </div>
+
+      <div class="hm-vitus reveal">
+        <figure class="hm-shot">
+          <picture>
+            <source type="image/avif" srcset="assets/images/vitus/vitus-home-grid-800.avif 800w, assets/images/vitus/vitus-home-grid-1200.avif 1200w" sizes="(max-width: 980px) 92vw, 640px" />
+            <source type="image/webp" srcset="assets/images/vitus/vitus-home-grid-800.webp 800w, assets/images/vitus/vitus-home-grid-1200.webp 1200w" sizes="(max-width: 980px) 92vw, 640px" />
+            <img src="assets/images/vitus/vitus-home-grid-1200.webp" alt="Vitus's home screen showing a Norse demo world as a grid of illustrated entries, including the quest The Binding of Fenrir, dialogues such as Þórr and the Ferryman, and events." width="1200" height="890" loading="lazy" decoding="async" />
+          </picture>
+          <figcaption>Vitus's home screen with the Nine Realms demo world, captured from the app.</figcaption>
+        </figure>
+
+        <div class="hm-panel">
+          <ul class="hm-points" role="list">
+            <li><strong>Build</strong> your world as connected entries, kept as ordinary Markdown files on your own computer.</li>
+            <li><strong>See it</strong> through family and culture trees, maps, calendars and timelines.</li>
+            <li><strong>Plan</strong> story arcs, quests and dialogue, and step through them before your players do.</li>
+            <li><strong>Share it</strong> by hosting campaigns, writing with others in the Writers&rsquo; Room and asking Vitus AI about your own lore.</li>
+          </ul>
+          <p class="hm-panel__note">
+            The free Core plan is yours to keep, with unlimited local worlds and entries.
+            The public beta opens soon and runs for around six months, then Vitus 1.0 is
+            targeted for 2027.
           </p>
-          <p>
-            We care about ownership, useful depth, and tools that earn their place in a
-            creator's workflow. Vitus keeps local work local by default, while optional
-            AI, collaboration, and hosting are there when the project actually needs them.
-          </p>
-          <a href="vitus/" class="sw-studio-link">
-            Explore Vitus
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
+          <div class="hm-actions">
+            <a class="hm-btn hm-btn--primary" href="https://brothervitus.co.uk/">Visit brothervitus.co.uk</a>
+            <a class="hm-btn hm-btn--ghost" href="https://brothervitus.co.uk/features.html">See every feature</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sw-section" id="ashborn-preview">
-    <div class="sw-wrap">
-      <div class="sw-section-eye">In development</div>
-      <h2 class="sw-section-h2">Ashborn</h2>
-      <p class="sw-ashborn-intro">
-        A Viking Age card game. One shared world. Launching after Vitus,
-        because we're building it with Vitus.
-      </p>
+  <!-- Roadmap -->
+  <section class="hm-section" id="roadmap" aria-labelledby="roadmap-title">
+    <div class="hm-scene" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/roadmap-640.avif 640w, assets/images/landscapes/roadmap-1024.avif 1024w, assets/images/landscapes/roadmap-1600.avif 1600w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/images/landscapes/roadmap-640.webp 640w, assets/images/landscapes/roadmap-1024.webp 1024w, assets/images/landscapes/roadmap-1600.webp 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/roadmap-1600.webp" alt="" width="1600" height="900" loading="lazy" decoding="async" />
+      </picture>
+    </div>
 
-      <div class="sw-ashborn-preview">
-        <div class="sw-project sw-project--static">
-          <img
-            src="assets/images/Alba.png"
-            alt="Alba landscape, a vista from the Ashborn game world"
-            loading="lazy"
-          />
-          <div class="sw-proj-body">
-            <div class="sw-proj-eye">Ashborn CCG &middot; Collectible Card Game &middot; ~&pound;30 at launch</div>
-            <h3 class="sw-proj-title">Ashborn CCG</h3>
-            <p class="sw-proj-tag">The first game in the Ashborn line.</p>
-          </div>
+    <div class="hm-wrap">
+      <div class="hm-head reveal">
+        <div>
+          <p class="hm-eyebrow">Roadmap</p>
+          <h2 id="roadmap-title" class="hm-h2">The road ahead.</h2>
         </div>
+        <p>
+          Three releases, in order. The dates are targets rather than promises, and we will
+          share more as each one firms up.
+        </p>
+      </div>
 
-        <div class="sw-ashborn-signup">
-          <h3 class="sw-ashborn-signup__title">Get notified at launch</h3>
-          <p class="sw-ashborn-signup__desc">
-            The first game in the Ashborn line. A historically grounded
-            collectible card game set in the Viking Age. Details are being
-            forged. Sign up to be first to know when it's ready.
+      <ol class="hm-timeline" role="list">
+        <li class="hm-milestone reveal">
+          <p class="hm-milestone__when">Beta soon<br />1.0 in 2027</p>
+          <div class="hm-milestone__body">
+            <h3>Vitus</h3>
+            <p>
+              Vitus comes first. The public beta opens soon and runs for around six months
+              while we listen, refine and fix. Vitus 1.0 is targeted for 2027.
+            </p>
+            <p class="hm-tag">Our first release</p>
+          </div>
+        </li>
+        <li class="hm-milestone reveal">
+          <p class="hm-milestone__when">Late 2027</p>
+          <div class="hm-milestone__body">
+            <h3>Ashborn CCG</h3>
+            <p>
+              A historically grounded Viking Age collectible card game, in development
+              alongside Vitus and built with it. We are aiming to launch it in late 2027.
+              <a href="ashborn/">More about Ashborn</a>
+            </p>
+            <p class="hm-tag">Our first game</p>
+          </div>
+        </li>
+        <li class="hm-milestone reveal">
+          <p class="hm-milestone__when">After<br />Ashborn CCG</p>
+          <div class="hm-milestone__body">
+            <h3>Ashborn &mdash; Saga&rsquo;s Tavern</h3>
+            <p>
+              A standalone RPG simulator built around the Game Master, with major Vitus
+              integration. The GM sets the scenarios and encounters and keeps full control
+              of the session, so your world and your table&rsquo;s roleplay drive the story.
+            </p>
+            <p class="hm-tag">No date set yet</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Future worlds -->
+  <section class="hm-section" id="future" aria-labelledby="future-title">
+    <div class="hm-scene hm-scene--dark" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/future-640.avif 640w, assets/images/landscapes/future-1024.avif 1024w, assets/images/landscapes/future-1600.avif 1600w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/images/landscapes/future-640.webp 640w, assets/images/landscapes/future-1024.webp 1024w, assets/images/landscapes/future-1600.webp 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/future-1600.webp" alt="" width="1600" height="900" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+
+    <div class="hm-wrap">
+      <div class="hm-head reveal">
+        <div>
+          <p class="hm-eyebrow">Future worlds</p>
+          <h2 id="future-title" class="hm-h2">Stories still to tell.</h2>
+        </div>
+        <p>
+          Beyond these three releases, the worlds keep growing. We would rather show you
+          the shape of what is coming than pretend any of it is finished.
+        </p>
+      </div>
+
+      <ul class="hm-cards" role="list">
+        <li class="hm-card reveal">
+          <p class="hm-small-caps">Narrative plans</p>
+          <h3>Two trilogies</h3>
+          <p>
+            At least two narrative trilogies are planned for our future games. They are a
+            long way off, and we will say more when there is something real to show.
           </p>
+        </li>
+        <li class="hm-card reveal">
+          <p class="hm-small-caps">Shared vision</p>
+          <h3>One world, many games</h3>
+          <p>
+            Each game has its own rules and its own way to play. Together they grow from
+            one creative vision, so the more you play, the more of the world you will know.
+          </p>
+        </li>
+        <li class="hm-card reveal">
+          <p class="hm-small-caps">Your stories first</p>
+          <h3>No waiting room</h3>
+          <p>
+            You should not have to wait for our stories to tell your own. From the day the
+            beta opens, Vitus is there for your worlds, your campaigns and your ideas.
+          </p>
+        </li>
+      </ul>
+
+      <div class="hm-vision reveal">
+        <p class="hm-vision__title">Creativity should never be held back.</p>
+        <p>
+          It is the belief behind everything we make. We release our tools before our games
+          so that writers, Game Masters and developers can build, test and tell their own
+          stories while ours are still on the way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="hm-section hm-section--last" id="newsletter" aria-labelledby="newsletter-title">
+    <div class="hm-scene" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/newsletter-640.avif 640w, assets/images/landscapes/newsletter-1024.avif 1024w, assets/images/landscapes/newsletter-1600.avif 1600w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/images/landscapes/newsletter-640.webp 640w, assets/images/landscapes/newsletter-1024.webp 1024w, assets/images/landscapes/newsletter-1600.webp 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/newsletter-1600.webp" alt="" width="1600" height="900" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+
+    <div class="hm-wrap">
+      <div class="hm-head reveal">
+        <div>
+          <p class="hm-eyebrow">Newsletter</p>
+          <h2 id="newsletter-title" class="hm-h2">Join the road ahead.</h2>
+        </div>
+        <p>
+          Occasional, honest updates from the studio. No clutter and no hard sell, and you
+          can unsubscribe whenever you like. Pick the news you want.
+        </p>
+      </div>
+
+      <div class="hm-signups reveal">
+        <div class="hm-signup">
+          <p class="hm-small-caps">Vitus</p>
+          <h3>Follow Vitus to 1.0</h3>
+          <p>News when the public beta opens, what changes along the way and the road to Vitus 1.0.</p>
+          <div data-consent-placeholder="forms"><div class="ml-embedded" data-form="x3uRLn"></div></div>
+        </div>
+        <div class="hm-signup">
+          <p class="hm-small-caps">Ashborn</p>
+          <h3>Hear about Ashborn first</h3>
+          <p>First looks at Ashborn CCG, launch news and early word on Saga&rsquo;s Tavern.</p>
           <div data-consent-placeholder="forms"><div class="ml-embedded" data-form="rvVjbn"></div></div>
-          <noscript><p class="form-fallback">JavaScript is required to load the signup form. You can instead email <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">alexander.goldsmith@shieldwallgames.co.uk</a>.</p></noscript>
-          <p class="form-help">If the form is blocked by a browser extension, email <a href="mailto:alexander.goldsmith@shieldwallgames.co.uk">alexander.goldsmith@shieldwallgames.co.uk</a>.</p>
         </div>
       </div>
-
-      <a href="ashborn/" class="sw-ashborn-link">
-        Learn more about Ashborn
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <line x1="5" y1="12" x2="19" y2="12"/>
-          <polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </a>
+      <noscript><p class="hm-form-help">JavaScript is needed to load the sign-up forms. You can email <a href="mailto:info@shieldwallgames.co.uk">info@shieldwallgames.co.uk</a> instead.</p></noscript>
+      <p class="hm-form-help">
+        If a form does not appear, a browser extension may be blocking it. Email
+        <a href="mailto:info@shieldwallgames.co.uk">info@shieldwallgames.co.uk</a> and we will add you.
+        Press, partnerships or just hello: the same address reaches us.
+      </p>
     </div>
   </section>
 
-  <section class="sw-cta">
-    <div class="sw-wrap">
-      <h2>Talk to us.</h2>
-      <p>Press, partnerships, or just hello: alexander.goldsmith@shieldwallgames.co.uk</p>
-      <a class="sw-cta-btn" href="mailto:alexander.goldsmith@shieldwallgames.co.uk">Get in touch</a>
-    </div>
-  </section>
+</main>
 
-  </main>
-
-  <footer class="sw-footer">
-    <div class="sw-wrap footer-row">
-      <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
-      <span class="social-icons">
-        <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-        <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+<footer class="hm-footer">
+  <div class="hm-wrap hm-footer__top">
+    <a class="hm-brand" href="./" aria-label="Shieldwall Games home">
+      <img class="hm-brand__mark" src="assets/logos/shieldwall-mark-light-96.webp" width="40" height="40" alt="" loading="lazy" />
+      <span class="hm-brand__text">
+        <span class="hm-brand__name">Shieldwall Games</span>
+        <span class="hm-brand__tag">One world &middot; many games</span>
       </span>
-      <span class="footer-nav">
-        <a href="vitus/">Vitus</a>
-        <a href="vitus/roadmap.html">Roadmap</a>
-        <a href="ashborn/">Ashborn</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="refunds.html">Refunds</a>
-        <a href="support.html">Support</a>
-        <a href="#" data-cookie-settings>Cookie settings</a>
-      </span>
-    </div>
-  </footer>
+    </a>
+    <span class="social-icons">
+      <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://youtube.com/@shieldwallgames" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <a href="https://www.facebook.com/share/18PW3HCR6m/" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    </span>
+  </div>
+  <div class="hm-wrap hm-footer__bottom">
+    <p>&copy; <span data-year>2026</span> Shieldwall Games Ltd &middot; Registered in England and Wales, company number 12655497 &middot; Kent, UK</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refunds.html">Refunds</a>
+      <a href="#" data-cookie-settings>Cookie settings</a>
+    </nav>
+  </div>
+</footer>
 
-</div>
-
+<script>document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 <script src="scripts/main.js" defer></script>
 <script src="scripts/consent.js" defer></script>
 </body>

@@ -1,7 +1,7 @@
 /*
  * main.css — Shieldwall Games
  *
- * Global shared stylesheet for all pages (homepage, mimir, ashborn).
+ * Global shared stylesheet for all pages (homepage, Ashborn, legal pages).
  * Contains ONLY:
  *   1. @font-face declarations (Njord)
  *   2. Google Fonts @import
@@ -14,7 +14,6 @@
  *   9. Smooth scroll media query
  *
  * Page-specific styles live in their own files:
- *   - vitus/styles/mimir.css
  *   - ashborn/styles/ashborn.css
  */
 
@@ -559,7 +558,7 @@ a:hover {
    Used across multiple pages to replace common inline styles.
    ========================================================================== */
 
-/* Footer layout — shared flex row for studio, ashborn, and mimir footers */
+/* Footer layout — shared flex row for studio and Ashborn footers */
 .footer-row {
     display: flex;
     align-items: center;

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1a1714" />
-  <title>404: Page Not Found | Shieldwall Games</title>
+  <meta name="theme-color" content="#0c0f13" />
+  <title>Page not found | Shieldwall Games</title>
   <meta name="description" content="The requested Shieldwall Games page could not be found." />
   <meta name="robots" content="noindex,follow" />
 
@@ -16,42 +16,78 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/home.css" />
 </head>
 
-<body>
+<body class="hm hm-sub">
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <main id="main-content">
-    <section class="error-page">
-      <div class="container">
-        <h1 class="error-page__code">404</h1>
-        <p class="error-page__message">
-          Page not found.
-        </p>
-        <nav class="error-page__links" aria-label="Useful destinations">
-          <a href="/" class="error-page__link">Shieldwall home</a>
-          <a href="/vitus/" class="error-page__link">Explore Vitus</a>
-          <a href="/ashborn/" class="error-page__link">Explore Ashborn</a>
-        </nav>
-      </div>
-    </section>
-  </main>
-
-  <footer class="sw-footer">
-    <div class="sw-wrap sw-footer-simple">
-      <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
-      <span class="footer-nav">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-        <a href="/refunds.html">Refunds</a>
-        <a href="/support.html">Support</a>
-        <a href="#" data-cookie-settings>Cookie settings</a>
+<header class="hm-header">
+  <nav class="hm-wrap hm-nav" aria-label="Main">
+    <a class="hm-brand" href="/" aria-label="Shieldwall Games home">
+      <img class="hm-brand__mark" src="/assets/logos/shieldwall-mark-light-96.webp" width="48" height="48" alt="" />
+      <span class="hm-brand__text">
+        <span class="hm-brand__name">Shieldwall Games</span>
+        <span class="hm-brand__tag">One world &middot; many games</span>
       </span>
+    </a>
+    <div class="hm-nav__links">
+      <a href="/#studio">Studio</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="/ashborn/">Ashborn</a>
+      <a href="/#roadmap">Roadmap</a>
+      <a href="/#newsletter" class="hm-nav__cta">Newsletter</a>
     </div>
-  </footer>
+    <button class="sw-hamburger hm-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hm-drawer" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sw-drawer hm-drawer" id="hm-drawer">
+      <a href="/">Home</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="/ashborn/">Ashborn</a>
+      <a href="/#roadmap">Roadmap</a>
+      <a href="/#newsletter">Newsletter</a>
+    </div>
+  </nav>
+</header>
 
-  <script src="/scripts/main.js" defer></script>
+<main id="main-content">
+  <section class="hm-404">
+    <div class="hm-scene hm-scene--dark" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="/assets/images/landscapes/future-640.avif 640w, /assets/images/landscapes/future-1024.avif 1024w, /assets/images/landscapes/future-1600.avif 1600w" sizes="100vw" />
+        <img src="/assets/images/landscapes/future-1600.webp" alt="" width="1600" height="900" decoding="async" />
+      </picture>
+    </div>
+    <div class="hm-wrap">
+      <p class="hm-404__code">404</p>
+      <h1>This path leads nowhere.</h1>
+      <p>The page you were looking for is not here. It may have moved, or the link may be mistyped.</p>
+      <div class="hm-actions">
+        <a href="/" class="hm-btn hm-btn--primary">Shieldwall home</a>
+        <a href="https://brothervitus.co.uk/" class="hm-btn hm-btn--ghost">Explore Vitus</a>
+        <a href="/ashborn/" class="hm-btn hm-btn--ghost">Explore Ashborn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="hm-footer">
+  <div class="hm-wrap hm-footer__bottom hm-footer__bottom--solo">
+    <p>&copy; <span data-year>2026</span> Shieldwall Games Ltd &middot; Kent, UK</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/refunds.html">Refunds</a>
+      <a href="#" data-cookie-settings>Cookie settings</a>
+    </nav>
+  </div>
+</footer>
+
+<script>document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+<script src="/scripts/main.js" defer></script>
 <script src="/scripts/consent.js" defer></script>
 </body>
 </html>

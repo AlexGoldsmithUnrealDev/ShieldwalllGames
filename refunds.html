@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1a1714" />
+  <meta name="theme-color" content="#0c0f13" />
 
   <title>Refund Policy | Shieldwall Games</title>
   <meta name="description" content="Our 14-day, no-questions refund promise for Vitus plans, content packs, collections and credit bundles." />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shieldwall Games" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="Refund Policy | Shieldwall Games" />
   <meta property="og:description" content="Our 14-day, no-questions refund promise for Vitus plans, content packs, collections and credit bundles." />
   <meta property="og:url" content="https://shieldwallgames.co.uk/refunds.html" />
+  <meta property="og:image" content="https://shieldwallgames.co.uk/assets/og/shieldwall.jpg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Refund Policy | Shieldwall Games" />
   <meta name="twitter:description" content="Our 14-day, no-questions refund promise for Vitus plans, content packs, collections and credit bundles." />
@@ -24,39 +27,54 @@
 
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/shieldwall.css" />
+  <link rel="stylesheet" href="styles/home.css" />
 </head>
 
-<body>
+<body class="hm hm-sub">
 
-<div class="sw-page">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <nav class="sw-nav">
-    <div class="sw-wrap sw-nav-inner">
-      <a class="sw-brand" href="./">Shieldwall Games<small>est. 2020 &middot; Kent</small></a>
-      <div class="sw-nav-links">
-        <a href="./">Home</a>
-        <a href="vitus/">Vitus</a>
-        <a href="ashborn/">Ashborn</a>
-      </div>
-      <button class="sw-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sw-drawer" type="button">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="sw-drawer" id="sw-drawer">
-      <a href="./">Home</a>
-      <a href="vitus/">Vitus</a>
+<header class="hm-header">
+  <nav class="hm-wrap hm-nav" aria-label="Main">
+    <a class="hm-brand" href="./" aria-label="Shieldwall Games home">
+      <img class="hm-brand__mark" src="assets/logos/shieldwall-mark-light-96.webp" width="48" height="48" alt="" />
+      <span class="hm-brand__text">
+        <span class="hm-brand__name">Shieldwall Games</span>
+        <span class="hm-brand__tag">One world &middot; many games</span>
+      </span>
+    </a>
+    <div class="hm-nav__links">
+      <a href="./#studio">Studio</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
       <a href="ashborn/">Ashborn</a>
+      <a href="./#roadmap">Roadmap</a>
+      <a href="./#newsletter" class="hm-nav__cta">Newsletter</a>
+    </div>
+    <button class="sw-hamburger hm-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="hm-drawer" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sw-drawer hm-drawer" id="hm-drawer">
+      <a href="./">Home</a>
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="./#roadmap">Roadmap</a>
+      <a href="./#newsletter">Newsletter</a>
     </div>
   </nav>
+</header>
 
-  <main id="main-content">
+<main id="main-content">
 
-  <section class="sw-section">
-    <div class="sw-wrap sw-wrap--narrow sw-legal">
+  <section class="hm-page">
+    <div class="hm-scene hm-scene--page" aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="assets/images/landscapes/newsletter-640.avif 640w, assets/images/landscapes/newsletter-1024.avif 1024w, assets/images/landscapes/newsletter-1600.avif 1600w" sizes="100vw" />
+        <img src="assets/images/landscapes/newsletter-1600.webp" alt="" width="1600" height="900" decoding="async" />
+      </picture>
+    </div>
+    <div class="hm-wrap hm-wrap--narrow sw-legal">
 <h1 class="sw-section-h2">Refund Policy</h1>
-<p class="sw-legal-date">Last updated: 29 October 2026</p>
+<p class="sw-legal-date">Last updated: 15 November 2026</p>
 <h2>Our promise: 14 days, no questions</h2>
 <p>If you change your mind, we refund you <strong>in full</strong> within <strong>14 days</strong> of buying:</p>
 <ul><li>your <strong>first</strong> subscription to a Vitus paid plan (APPRENTICE+, WORLDSMITH+ or LOREMASTER);</li><li>a <strong>content pack</strong>;</li><li>a <strong>collection</strong> of packs;</li><li>a <strong>Vitus AI credit bundle</strong> (for credits you have not used; see below).</li></ul>
@@ -77,25 +95,25 @@
     </div>
   </section>
 
-  </main>
+</main>
 
-  <footer class="sw-footer">
-    <div class="sw-wrap sw-footer-simple">
-      <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
-      <span class="footer-nav">
-        <a href="vitus/">Vitus</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="refunds.html">Refunds</a>
-        <a href="subprocessors.html">Subprocessors</a>
-        <a href="eula.html">Licence</a>
-        <a href="#" data-cookie-settings>Cookie settings</a>
-      </span>
-    </div>
-  </footer>
-
-</div>
+<footer class="hm-footer">
+  <div class="hm-wrap hm-footer__bottom hm-footer__bottom--solo">
+    <p>&copy; <span data-year>2026</span> Shieldwall Games Ltd &middot; Registered in England and Wales, company number 12655497 &middot; Kent, UK</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="https://brothervitus.co.uk/">Vitus</a>
+      <a href="ashborn/">Ashborn</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refunds.html">Refunds</a>
+      <a href="subprocessors.html">Subprocessors</a>
+      <a href="eula.html">Licence</a>
+      <a href="#" data-cookie-settings>Cookie settings</a>
+    </nav>
+  </div>
+</footer>
+<script>document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 
 <script src="scripts/main.js" defer></script>
 <script src="scripts/consent.js" defer></script>

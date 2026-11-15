@@ -1,38 +1,59 @@
 # Shieldwall Games Web Project
 
-The public website for Shieldwall Games Ltd, Vitus, and Ashborn CCG.
+The studio website for Shieldwall Games Ltd at **shieldwallgames.co.uk**: the
+studio homepage, the Ashborn page, the legal and support pages, and redirects for
+the old Vitus URLs.
+
+Vitus has its own website at **brothervitus.co.uk** (`.com` redirects to it),
+built from the separate `VitusSite` repository. Link to it; do not copy its pages
+back here.
 
 ## Live structure
 
 | Page | File | Purpose |
 | --- | --- | --- |
-| Shieldwall Games | `index.html` | Studio homepage led by Vitus |
-| Vitus | `vitus/index.html` | Product, V1 scope, pricing, FAQ, beta signup |
-| Vitus features | `vitus/features.html` | Comprehensive, searchable product capabilities |
-| Vitus AI | `vitus/vitus-ai.html` | Grounding, evidence, consistency, context, translation and control |
-| Proving Grounds | `vitus/proving-grounds.html` | AI-refereed play against a world's Rule entries (Loremaster) |
-| Campaign | `vitus/campaign.html` | GM campaign management, controlled reveals and player access deep dive |
-| Collaboration | `vitus/collaboration.html` | Writers' Room collaborative worldbuilding deep dive |
-| Migration | `vitus/migration.html` | Reviewed spreadsheet/document import and local ownership deep dive |
-| Vitus download | `vitus/download.html` | Tester download page (`noindex`, not in the sitemap) |
-| Vitus roadmap | `vitus/roadmap.html` | Data-driven public roadmap |
-| Ashborn CCG | `ashborn/index.html` | Product landing page |
-| Privacy | `privacy.html` | Website and planned Vitus privacy model |
-| Terms | `terms.html` | Website and planned Vitus commercial terms |
-| 404 | `404.html` | Custom not-found page (root-relative links, so it works at any path) |
-| Download redirect | `download.html` | Redirects to `vitus/download.html`, because the app links to `/download.html` (`noindex`, not in the sitemap) |
+| Shieldwall Games | `index.html` | Studio homepage (Stage 10B, "One world, many games") |
+| Ashborn CCG | `ashborn/index.html` | Ashborn game landing page and sign-up |
+| Privacy | `privacy.html` | Privacy policy, with the cookie notice at `#cookies` |
+| Terms | `terms.html` | Terms of service |
+| Refunds | `refunds.html` | Refund policy |
+| Licence | `eula.html` | Vitus end-user licence |
+| Subprocessors | `subprocessors.html` | Who processes data for us |
+| Support | `support.html` | Vitus support page |
+| 404 | `404.html` | Not-found page (root-relative links, so it works at any path) |
+| Download redirect | `download.html` | Redirects to `https://brothervitus.co.uk/download.html`, because the app links to `/download.html` |
+| Old Vitus URLs | `vitus/*.html`, `mimir/*.html` | Redirect-only stubs to the matching page on brothervitus.co.uk (`noindex`) |
+
+## Homepage
+
+The homepage follows the approved Stage 10B landscape-led design:
+
+- every section sits on full-bleed landscape artwork with soft top and bottom fades;
+- the hero has a slow drift and mist layer, sections reveal on scroll, and backgrounds
+  have a gentle scroll-linked parallax where the browser supports it;
+- all decorative motion runs only with `prefers-reduced-motion: no-preference`;
+- sections: hero, studio, Vitus, roadmap, future worlds, newsletter.
+
+Styles are in `styles/home.css` (loaded after `styles/main.css`). The legal pages
+and 404 use the same header, footer and colours: `home.css` plus `shieldwall.css`
+for the legal text.
+
+Artwork is served as responsive AVIF/WebP from `assets/images/landscapes/`
+(640, 1024 and 1600 px wide). The original PNGs stay in `assets/images/`. To swap
+in new artwork, regenerate the same file names (see "Replacing artwork" below).
+
+The Vitus screenshot on the homepage is `assets/images/vitus/vitus-home-grid-*`,
+cropped from a real capture of the app (the entry grid only, with no app chrome).
 
 ## Tech stack
 
-- Vanilla HTML, CSS, and JavaScript
-- No framework, npm dependency, or build step
-- MailerLite embedded forms for email capture
-- GitHub Actions deployment to GitHub Pages during the pre-launch website phase
+- Vanilla HTML, CSS and JavaScript
+- No framework, npm dependency or build step
+- MailerLite embedded forms, loaded only after consent
+- GitHub Actions deployment to GitHub Pages
 - Canonical domain: `shieldwallgames.co.uk`
 
 ## Local development
-
-Open the files directly or run a simple local server:
 
 ```bash
 python3 -m http.server 8000
@@ -44,204 +65,53 @@ Then visit `http://localhost:8000`.
 
 ```text
 /
-├── index.html
-├── privacy.html
-├── terms.html
+├── index.html                  # Studio homepage
+├── llms.txt                    # Plain-text studio summary for AI search
+├── privacy.html  terms.html  refunds.html  eula.html  subprocessors.html  support.html
 ├── 404.html
-├── download.html               # Redirect to vitus/download.html
-├── robots.txt
-├── sitemap.xml
-├── CNAME
+├── download.html               # Redirect to brothervitus.co.uk/download.html
+├── robots.txt  sitemap.xml  CNAME
 ├── styles/
-│   ├── main.css
-│   └── shieldwall.css
+│   ├── main.css                # Fonts, reset, tokens, skip link, reveal, cookie banner
+│   ├── home.css                # Homepage, legal and 404 layout (Stage 10B)
+│   └── shieldwall.css          # Legal text styles (sw-legal)
 ├── scripts/
-│   ├── main.js
-│   └── consent.js
+│   ├── main.js                 # Menu toggle, scroll reveal
+│   └── consent.js              # Cookie banner and consent gating
 ├── assets/
-│   ├── images/
-│   ├── fonts/
-│   ├── icons/
-│   └── logos/
-├── vitus/
-│   ├── index.html
-│   ├── features.html
-│   ├── vitus-ai.html
-│   ├── proving-grounds.html
-│   ├── campaign.html
-│   ├── collaboration.html
-│   ├── migration.html
-│   ├── download.html           # Tester page, noindex
-│   ├── roadmap.html
-│   ├── roadmap-data.json
-│   ├── data/
-│   │   └── features.json
-│   ├── styles/
-│   │   ├── mimir.css
-│   │   ├── internal.css
-│   │   ├── features.css
-│   │   ├── mimir-ai.css
-│   │   ├── proving-grounds.css
-│   │   ├── campaign.css
-│   │   ├── collaboration.css
-│   │   ├── migration.css
-│   │   └── roadmap.css
-│   └── scripts/
-│       ├── mimir.js
-│       ├── chapters.js
-│       ├── internal.js
-│       ├── features-chapters.js
-│       ├── features.js
-│       ├── generate-features.js
-│       ├── mimir-ai-chapters.js
-│       ├── mimir-ai.js
-│       ├── proving-grounds-chapters.js
-│       ├── proving-grounds.js
-│       ├── migration-chapters.js
-│       ├── migration.js
-│       ├── roadmap-chapters.js
-│       ├── roadmap.js
-│       └── generate-roadmap.js
+│   ├── images/                 # Original artwork (PNG)
+│   │   ├── landscapes/         # Responsive AVIF/WebP crops used by the homepage
+│   │   └── vitus/              # Homepage Vitus screenshot
+│   ├── og/shieldwall.jpg       # Social preview image
+│   ├── fonts/  icons/  logos/
 ├── ashborn/
 │   ├── index.html
-│   └── styles/
-│       └── ashborn.css
+│   └── styles/ashborn.css
+├── vitus/  mimir/              # Redirect stubs only
+├── tools/build-legal-pages.ts  # Rebuilds the legal pages from the app repo's drafts
 ├── .github/workflows/deploy.yml
 ├── CLAUDE.md
 └── README.md
 ```
 
-## Vitus commercial source of truth
+## Replacing artwork
 
-The live site currently uses the V1 commercial model:
+Each homepage section uses one landscape (`hero`, `studio`, `vitus`, `roadmap`,
+`future`, `newsletter`) plus `huskarl` for the studio card. Export the new art at
+least 1600 px wide, then write `<name>-640/1024/1600` in both `.avif` and `.webp`
+to `assets/images/landscapes/`. Keep the subject near the centre: the images are
+cropped with `object-fit: cover`.
 
-| Tier | Monthly | Annual |
-| --- | ---: | ---: |
-| Vitus Core | Free | Free |
-| Apprentice | £6.99 | £69.99 |
-| Worldsmith | £14.99 | £149.99 |
-| Loremaster | £24.99 | £249.99 |
+## Legal pages
 
-Worldsmith is the featured "Most Popular" plan. Every tier keeps unlimited local worlds and entries. Paid tiers add a monthly Vitus AI allowance, sync, hosting, collaboration and scale rather than artificial local content caps.
+The legal pages are published from the Vitus app repository's drafts
+(`docs/legal/*.md`, `docs/website/support.md`). Rebuild them from the app repo:
 
-- **Vitus Core:** the full local toolset, including the Entry type editor, Narrative Planner, advanced tree and filter tools, Simulation and world-state variables. Imports and competitor migration. Vitus AI and Translator using credits. Join a hosted Campaign free as a player or Co-GM.
-- **Apprentice:** 400 Vitus AI credits a month. Desktop and phone sync. Host one Campaign (8 people including the GM, 1 GB, 1 live table).
-- **Worldsmith:** 1,200 credits a month. Lore Consistency Review. Export to Engine. Writers' Room, which needs Worldsmith both to create and to join (5 hosted worlds, 5 guest collaborators each). Host several Campaigns (20 people, 3 GB, 2 live tables).
-- **Loremaster:** 3,000 credits a month. Proving Grounds (create, run, host and join). Host several Campaigns (50 people, 10 GB, 5 live tables). 20 hosted worlds, 20 guest collaborators each. Priority support.
+```bash
+LEGAL_DATE='15 November 2026' npx tsx /path/to/ShieldwalllGames/tools/build-legal-pages.ts
+```
 
-**Founder programme.** Every account created in the first six months of public beta, paying or not, becomes a founder automatically. Founders get a Founder badge, 25% extra credits on every bundle, 5% extra monthly credits on any paid plan and 10% off Shieldwall packs and collections. Plan prices are never discounted. Give no dates on the site.
-
-The deeper canonical commercial specification lives in the Vitus application repository at `docs/commercial-model.md`. When pricing or entitlements change there, this website and `CLAUDE.md` must be updated together.
-
-### Roadmap authoring
-
-`vitus/roadmap-data.json` is the primary Roadmap content source. After changing
-it, run `node vitus/scripts/generate-roadmap.js` to refresh the semantic HTML
-snapshot in `vitus/roadmap.html`. The snapshot keeps the page useful and
-indexable when JavaScript or JSON loading fails; `roadmap.js` adds only the
-interactive detail layer.
-
-The homepage and Roadmap share the Well stage/controller in
-`vitus/scripts/chapters.js`. Roadmap-only phase artwork and colour configuration
-lives in `vitus/scripts/roadmap-chapters.js`.
-
-### Features authoring
-
-`vitus/data/features.json` is the Features page presentation dataset. After
-changing it, run `node vitus/scripts/generate-features.js` to regenerate the
-crawlable semantic snapshot in `vitus/features.html`. The browser progressively
-adds search and feature-detail drawers; it never replaces the static content.
-
-`vitus/styles/internal.css` and `vitus/scripts/internal.js` provide shared
-internal-page navigation/footer behaviour used by Features, Vitus AI and
-Roadmap. The Features and Vitus AI Well configurations remain page-specific in
-`features-chapters.js` and `mimir-ai-chapters.js`, while the stage, observer,
-adjacent preloading and depth navigation stay shared in `chapters.js`. Future
-artwork filenames are documented in each page's background README.
-
-### Vitus AI page
-
-`vitus/vitus-ai.html` is semantic and useful without JavaScript. Its conceptual
-examples are progressively enhanced by `vitus/scripts/mimir-ai.js`; real product
-screenshots remain separate labelled media slots. Do not turn conceptual website
-diagrams into claims that a live product call is taking place.
-
-The page uses current application guides for Ask Vitus, Lore Consistency Review,
-World briefs, Translator and account/credit behaviour. In particular, the
-current World briefs are a saved-filter export for external AI
-tools, while Ask Vitus uses retrieval and focused-entry context internally.
-
-### Proving Grounds page
-
-`vitus/proving-grounds.html` explains the testing workflow through
-progressively enhanced conceptual demonstrations. It keeps experiment results
-separate from canon and distinguishes Proving Grounds, world state and
-simulation. Built features are labelled Available; conceptual demonstrations
-stay labelled and separate from real product captures.
-
-Status labels follow the owner's rule: if a feature is built in the app, it is
-labelled Available. Do not mention alpha in public copy. Keep a not-yet-available
-label only for work the application repository records as not built.
-
-The page reuses the shared Well controller and internal navigation/footer. Its
-lighting and future artwork configuration lives in
-`proving-grounds-chapters.js`; exact art requirements are documented in
-`vitus/assets/backgrounds/proving-grounds/README.md`.
-
-### Migration page
-
-`vitus/migration.html` is the Core, `Available` deep dive for reviewed
-import and migration. Verified current implementation formats are CSV, XLSX,
-TXT, Markdown and DOCX. Spreadsheet conversion is deterministic, with optional
-AI mapping suggestions; prose extraction is AI-assisted and creator-reviewed.
-The app has dedicated importers for Obsidian, Notion and World Anvil
-(`docs/specs/importer.md` in the application repository, built 13 Oct 2026).
-Name them, but say World Anvil has only been tested with sample exports. Still
-do not promise lossless conversion, dry runs or one-click rollback.
-
-The page uses the shared Well controller and internal navigation/footer. Its
-configuration is in `migration-chapters.js`, and exact background files are in
-`vitus/assets/backgrounds/migration/README.md`.
-
-### Crawling, metadata and media
-
-`robots.txt` allows public crawling and declares the root `sitemap.xml`.
-Conservative Organization/WebSite structured data lives on the Shieldwall
-homepage; Vitus has SoftwareApplication data without checkout offers or ratings.
-
-The consolidated owner-supplied background, screenshot, video and social-image
-handoff is `vitus/assets/MEDIA_CHECKLIST.md`.
-
-## Current V1 positioning
-
-Vitus V1 is built around:
-
-- Local-first structured worldbuilding
-- Trees, timeline, calendar, maps, quests, dialogue, story arcs, validation, history, and accessibility
-- Vitus AI and constructed-language translation
-- General imports and competitor migration (Obsidian, Notion and World Anvil)
-- Simulation: stepping through quest and dialogue graphs with world-state variables (Core)
-- Proving Grounds: AI-refereed play against the world's Rule entries (Loremaster)
-- Writers' Room collaboration for shared creative work (Worldsmith)
-- Hosted Campaigns for players and Co-GMs (Apprentice and above to host)
-- Export to Engine: one-way JSON files shaped for Unreal's DataTable import, Unity and Godot 4, written on the user's computer (Worldsmith and above)
-- Vitus phone app. Desktop and phone sync needs Apprentice or above. Do not state a tier for the phone app itself, and do not claim the whole desktop app runs on a phone.
-
-Live engine integrations, round-tripping and native engine asset formats are later work. MCP connections (ChatGPT, Claude) are later too, with no release date set. Do not advertise them as V1 launch features.
-
-## Vitus AI positioning
-
-Customer-facing language is **Vitus AI**.
-
-Do not ask customers to choose Haiku, Sonnet, Opus, or another provider SKU in website copy. Vitus chooses the underlying processing route internally. Credit consumption is based on the amount/type of work rather than a customer-selected provider model.
-
-Current launch-planning credits are:
-
-- Every account: 200 one-time welcome credits
-- Monthly: Core 0, Apprentice 400, Worldsmith 1,200, Loremaster 3,000
-- Credit bundles: 500 for £4.99, 1,500 for £12.99, 4,000 for £29.99. Bundle credits never expire.
-
-These are planning figures. They may change before paid checkout opens, after beta workload validation.
+The page template, header and footer live in that script.
 
 ## Email capture
 
@@ -252,42 +122,22 @@ MailerLite account ID: `2430389`
 - Double opt-in is used for marketing lists
 - Sending domain: `shieldwallgames.co.uk`
 
-Do not reintroduce Buttondown instructions.
+The homepage newsletter section embeds both forms. There is no single studio-wide
+list yet; if one is created in MailerLite, it can replace the two forms.
 
-## Design and implementation rules
+## Cookie consent and analytics
 
-- Keep the current design system and visual identity unless explicitly asked to redesign it.
-- Vanilla HTML/CSS/JS only.
-- Keep semantic HTML and WCAG AA accessibility.
-- Prefer shared tokens/components over new one-off patterns.
-- Keep Vitus pricing anchored at `vitus/#pricing`.
-- Keep user data ownership/local-first language precise: local worlds stay on the user's device by default; AI and optional hosted/collaboration services are network features.
-- Do not promise future features as already delivered.
-- Do not expose bring-your-own-key (BYOK) as a customer feature.
-- Do not use the retired internal product name in public website copy (see `CLAUDE.md`).
+`scripts/consent.js` runs the banner (Reject all / Accept all) on every page.
+Optional scripts are held as `<script type="text/plain" data-consent="…">` and
+forms sit in `data-consent-placeholder="forms"`. The "analytics" category exists
+but no analytics provider is installed.
 
 ## Deployment
 
-Every push to `main` triggers the GitHub Pages workflow. GitHub Pages is the current pre-launch website host.
+Every push to `main` triggers the GitHub Pages workflow. It publishes a copy of the
+site without `*.md`, `*.docx`, `.github/` and `tools/`.
 
-Before Vitus becomes a commercial SaaS/download service, the production website/download/account infrastructure should be reviewed and moved to the intended commercial hosting setup rather than assuming GitHub Pages is the permanent service architecture.
-
-## Before public paid launch
-
-- [ ] Finish and validate migration/import workflows
-- [ ] Finish Proving Grounds
-- [ ] Finish collaboration and hosted-world systems
-- [ ] Benchmark Vitus AI workloads and confirm monthly credit allowances
-- [ ] Load-test hosted project/collaborator/storage allowances
-- [ ] Finalise production auth, account ledger, payment, broker, storage, and hosting infrastructure
-- [ ] Update `privacy.html` with the actual production subprocessors and retention details
-- [ ] Update `terms.html` and checkout flow for the consumer/subscription law in force at launch
-- [ ] Confirm refund/cancellation wording and hosted downgrade grace periods
-- [ ] Create final OG images
-- [ ] Verify all beta/launch MailerLite forms and automations
-- [ ] Move installers/download delivery to the intended commercial storage/CDN
-- [ ] Review GitHub Pages replacement for the commercial site
-- [ ] Configure remaining domain redirects
+Before paid launch, review whether GitHub Pages remains the right host.
 
 ## Social media
 
@@ -298,16 +148,4 @@ Before Vitus becomes a commercial SaaS/download service, the production website/
 
 ## Working with AI coding assistants
 
-Read `CLAUDE.md` before making site changes. After any material product/pricing change, check all of:
-
-- `vitus/index.html`
-- `vitus/features.html`
-- `vitus/data/features.json`
-- `vitus/roadmap.html`
-- `vitus/roadmap-data.json`
-- `privacy.html`
-- `terms.html`
-- `README.md`
-- `CLAUDE.md`
-
-Do not treat older files inside `Mimir Design System/` as the commercial source of truth. They are retained design/reference material and may contain historical copy.
+Read `CLAUDE.md` before making site changes.

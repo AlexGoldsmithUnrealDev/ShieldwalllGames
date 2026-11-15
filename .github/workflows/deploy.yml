@@ -27,21 +27,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Publish only the website. Working notes (CLAUDE.md, README files,
-      # MEDIA_CHECKLIST.md), the design-system archive, the .docx brief and
-      # build scripts stay in the repository but are not served.
+      # Publish only the website. Working notes (CLAUDE.md, README files) and
+      # build tools stay in the repository but are not served.
       - name: Assemble public site
         run: |
           SITE="$RUNNER_TEMP/site"
           mkdir -p "$SITE"
           cp -a . "$SITE/"
           cd "$SITE"
-          rm -rf .git .github .gitignore "Mimir Design System"
+          rm -rf .git .github .gitignore
           find . -name '*.md' -delete
           find . -name '*.docx' -delete
           rm -rf tools
-          rm -f vitus/scripts/generate-*.js
-          test -f index.html && test -f CNAME && test -f vitus/index.html && test -f vitus/data/features.json && test -f vitus/roadmap-data.json
+          test -f index.html && test -f CNAME && test -f vitus/index.html && test -f ashborn/index.html
           ! test -e CLAUDE.md
 
       - name: Upload artifact
