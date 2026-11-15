@@ -171,8 +171,10 @@ with `tools/build-legal-pages.ts`, run with the app repo's `npx tsx`. The script
 holds the page template, fills company number 12655497 and the registered office,
 removes DRAFT lines and `[[...]]` notes, and applies fixes where the app's code
 disagrees with a draft. Both websites (shieldwallgames.co.uk and
-brothervitus.co.uk) are named as GitHub Pages sites. No ICO registration was found,
-so no ICO number is shown. Do not add promises the owner has not approved.
+brothervitus.co.uk) are named as GitHub Pages sites. Shieldwall registered with the ICO
+on 15 November 2026. Add the registration number (it starts with Z) to the privacy
+page once the owner supplies it; never publish the ICO security number or contact
+reference. Do not add promises the owner has not approved.
 
 ---
 
