@@ -11,7 +11,8 @@ rebuild Vitus pages here; link to brothervitus.co.uk.
 **Owner decisions (these override anything below that disagrees):**
 
 - **Built means available.** If a feature is built in the app, label it "Available".
-- **No "alpha" in public copy.** Vitus launches in public beta very soon.
+- **No "alpha" in public copy.** Vitus is in **open beta** (owner decision, 15 November
+  2026). Public copy says "open beta"; the legal pages' "public Beta" means the same.
 - **Legal pages are published** without solicitor review. Keep them in step with the
   app repo's drafts and the app's code.
 - **Credits and allowances: the app's code is the source of truth.**
@@ -32,7 +33,7 @@ held back**, which is why the studio releases its tools before its games.
 
 ### Studio roadmap (targets, not guarantees)
 
-1. **Vitus**: public beta opens soon and runs for around six months; Vitus 1.0 is
+1. **Vitus**: the open beta is live and runs for around six months; Vitus 1.0 is
    targeted for 2027.
 2. **Ashborn CCG**: a historically grounded Viking Age collectible card game, in
    development alongside Vitus and built with it. Targeting late 2027.
