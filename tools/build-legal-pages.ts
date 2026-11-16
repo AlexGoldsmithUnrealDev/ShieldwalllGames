@@ -9,6 +9,8 @@ const SITE = process.env.SITE_DIR ?? '/home/user/ShieldwalllGames';
 const DATE = process.env.LEGAL_DATE ?? '15 November 2026';
 const COMPANY_NUMBER = '12655497';
 const OFFICE = '17 Chichester Road, Sandgate, Folkestone, Kent, CT20 3BN, United Kingdom';
+// ICO data protection register reference (public). Never publish the ICO security number.
+const ICO_REGISTRATION = 'ZC303122';
 
 type Fix = [string | RegExp, string];
 
@@ -18,6 +20,7 @@ const COMMON: Fix[] = [
   ['[[DATE OF PUBLICATION]]', DATE],
   ['[[COMPANY NUMBER]]', COMPANY_NUMBER],
   ['[[REGISTERED OFFICE ADDRESS]]', OFFICE],
+  ['[[ICO REGISTRATION NUMBER]]', ICO_REGISTRATION],
   [/ ?\[\[LEGAL:[^\]]*\]\]/g, ''],
   ['not your whole lorebible', 'not your whole world'],
   ['answers from your own lorebible', 'answers from your own world'],
@@ -32,7 +35,6 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
     src: 'docs/legal/privacy-policy.md', out: 'privacy.html', title: 'Privacy Policy',
     desc: 'How Shieldwall Games handles your data in the Vitus app, your Vitus account and our website.',
     fixes: [
-      [' ICO registration number: [[ICO REGISTRATION NUMBER]].', ''],
       ['Our website is hosted by GitHub Pages.', 'Our websites, shieldwallgames.co.uk and brothervitus.co.uk, are hosted by GitHub Pages.'],
       ['| GitHub | Our website (GitHub Pages) |', '| GitHub | Our websites (GitHub Pages) |'],
       ['your account, Vitus AI, the Marketplace, collaboration, hosted Campaigns or Proving Grounds.', 'your account, Vitus AI, the Marketplace, desktop and phone sync, collaboration, hosted Campaigns or Proving Grounds.'],
