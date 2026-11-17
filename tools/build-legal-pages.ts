@@ -35,6 +35,9 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
     src: 'docs/legal/privacy-policy.md', out: 'privacy.html', title: 'Privacy Policy',
     desc: 'How Shieldwall Games handles your data in the Vitus app, your Vitus account and our website.',
     fixes: [
+      // The company is the controller in law; the owner asked to be named as the responsible person (17 Nov 2026).
+      ['is the data controller. ICO registration number', 'is the data controller, and Alex Goldsmith is the person responsible for data protection. ICO registration number'],
+      [`**Last updated:** ${DATE}`, '**Last updated:** 17 November 2026'],
       ['Our website is hosted by GitHub Pages.', 'Our websites, shieldwallgames.co.uk and brothervitus.co.uk, are hosted by GitHub Pages.'],
       ['| GitHub | Our website (GitHub Pages) |', '| GitHub | Our websites (GitHub Pages) |'],
       ['your account, Vitus AI, the Marketplace, collaboration, hosted Campaigns or Proving Grounds.', 'your account, Vitus AI, the Marketplace, desktop and phone sync, collaboration, hosted Campaigns or Proving Grounds.'],
