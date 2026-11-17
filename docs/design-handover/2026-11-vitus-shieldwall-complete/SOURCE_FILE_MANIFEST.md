@@ -33,6 +33,5 @@ These are preserved because they belong to the design journey, NOT because their
 - Current Vitus logos: get from current repo/user-approved updated logo assets, not old generic placeholder.
 - Stage10B approved mock retains **artwork slots**. Use existing landscape art temporarily; user will provide final landscapes.
 - Exact current product screenshots: obtain/verify from the actual Vitus application or captures, not mock UI.
-- Prior corrected ZIP (in `../shieldwall-stage10b/archive_parts/`) is only a secondary backup. Its **Shieldwall-only implementation instruction is obsolete** and MUST NOT be used.
 
 The older stage experiments are not instructions to recreate their rejected layouts. The approved files above are the implementable design authorities.

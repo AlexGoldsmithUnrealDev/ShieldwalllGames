@@ -27,8 +27,8 @@ back here.
 ## Homepage
 
 The homepage is built from the approved Stage 10B prototype in
-`docs/design-handover/shieldwall-stage10b/01_APPROVED_DESIGN/` (read the
-handover's `README.md` first). Treat that prototype as the visual source of truth:
+`docs/design-handover/2026-11-vitus-shieldwall-complete/02_SHIELDWALL_APPROVED/` (with
+`SHIELDWALL_SECTION_SPEC.md`). Treat that prototype as the visual source of truth:
 
 - one page with anchored sections in the prototype's order: hero, studio, Vitus,
   roadmap, future, newsletter, footer;
@@ -45,13 +45,14 @@ The legal pages and 404 are not part of the approved design and keep their exist
 layout: `styles/home.css` plus `shieldwall.css` for the legal text.
 
 Artwork is served as responsive AVIF/WebP from `assets/images/landscapes/`
-(640, 1024 and 1600 px wide). The original PNGs stay in `assets/images/`. To swap
+(640, 1024 and 1600 px wide). The PNG masters are not kept in this repository
+(they were removed on 17 November 2026 and remain in git history). To swap
 in new artwork, regenerate the same file names (see "Replacing artwork" below).
 
 The Vitus screenshot on the homepage is `assets/images/vitus/vitus-home-grid-*`,
 cropped from a real capture of the app (the entry grid only, with no app chrome).
-The studio panel uses `assets/images/landscapes/studio-panel-*` (a square crop of
-`Kernow.png`).
+The studio panel uses `assets/images/landscapes/studio-panel-*` (a square crop of the
+Kernow artwork).
 
 ## Tech stack
 
@@ -88,7 +89,7 @@ Then visit `http://localhost:8000`.
 │   ├── main.js                 # Menu toggle, scroll reveal
 │   └── consent.js              # Cookie banner and consent gating
 ├── assets/
-│   ├── images/                 # Original artwork (PNG)
+│   ├── images/                 # Web images only (landscapes/, vitus/)
 │   │   ├── landscapes/         # Responsive AVIF/WebP crops used by the homepage
 │   │   └── vitus/              # Homepage Vitus screenshot
 │   ├── og/shieldwall.jpg       # Social preview image

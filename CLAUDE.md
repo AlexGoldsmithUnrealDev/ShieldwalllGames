@@ -77,7 +77,7 @@ Never describe live engine integration, round-tripping, MCP or BYOK as available
 │   ├── main.js
 │   └── consent.js
 ├── assets/
-│   ├── images/                 # Original artwork PNGs
+│   ├── images/                 # Web images only (no PNG masters)
 │   │   ├── landscapes/         # Responsive AVIF/WebP crops for the homepage
 │   │   └── vitus/              # Homepage Vitus screenshot (real capture, cropped)
 │   ├── og/shieldwall.jpg
@@ -107,11 +107,11 @@ it. Keep the stubs; the deploy check expects `vitus/index.html`.
 ## Design rules (Stage 10B, approved)
 
 - **The approved prototype is the source of truth for the homepage:**
-  `docs/design-handover/shieldwall-stage10b/01_APPROVED_DESIGN/Shieldwall_Games_Stage10B_Alive_Landscape_Mockup.html`
-  plus the briefs beside it. Match its composition, section order, tokens and
+  `docs/design-handover/2026-11-vitus-shieldwall-complete/02_SHIELDWALL_APPROVED/Shieldwall_Games_Stage10B_Alive_Landscape_Mockup.html`
+  plus `SHIELDWALL_SECTION_SPEC.md` beside it. Match its composition, section order, tokens and
   interactions; do not reskin an older layout. Only the studio homepage has an
-  approved design; the legal pages and 404 keep their existing layout. Files under
-  the handover's `90_ARCHIVE_ONLY/` are history, not work items.
+  approved design; the legal pages and 404 keep their existing layout. The handover is
+  implemented and live; it stays as the visual reference only.
 - `styles/studio.css` is the scoped port of the prototype's CSS (`body.s10`).
 - Landscape-led storytelling: full-bleed artwork behind each section, softened with
   layered fades; immersive dark styling; studio-first positioning; a simple

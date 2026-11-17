@@ -1,7 +1,13 @@
-# Active design handover: BOTH Vitus + Shieldwall Games
+# Design handover (reference only)
 
-The **current user-approved two-website implementation specification** is:
+The approved two-website redesign in [`2026-11-vitus-shieldwall-complete/`](2026-11-vitus-shieldwall-complete/START_HERE.md)
+was implemented and went live in November 2026:
 
-[**START HERE — Complete Vitus & Shieldwall redesign**](2026-11-vitus-shieldwall-complete/START_HERE.md)
+- **Shieldwall Games** (this repository): the Stage 10B homepage, from
+  `02_SHIELDWALL_APPROVED/` and `SHIELDWALL_SECTION_SPEC.md`.
+- **Vitus** (the VitusSite repository, brothervitus.co.uk): the Stage 06 homepage and
+  Stage 08/08A/09 pages, from `01_VITUS_APPROVED/`.
 
-This includes the entire Vitus multi-page product site and the separate Shieldwall Stage10B homepage, with **all original mock-ups as standalone repository files**, decision log, route matrices, integrations and visual QA. The older folder `shieldwall-stage10b` is obsolete as an implementation brief; its Shieldwall-only directive is wrong.
+Keep these files as the visual reference. They are not a to-do list: owner decisions
+made since (in each repository's `CLAUDE.md`) take precedence over them. This folder is
+not published.
