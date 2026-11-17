@@ -1,7 +1,7 @@
 # FINAL DESIGN HANDOVER — BUILD BOTH VITUS AND SHIELDWALL GAMES
 **Approved design source of truth | 15 November 2026**
 
-> **Status, 17 November 2026: implemented and live on both sites. Keep as the visual reference; later owner decisions in each repository's `CLAUDE.md` take precedence.**
+> **Status, 17 November 2026: implemented and live on both sites. Keep as the visual reference; later owner decisions in each repository's `CLAUDE.md` take precedence. The Vitus prototypes (`01_VITUS_APPROVED/`) and `VITUS_PAGE_AND_FEATURE_MATRIX.md` now live in the VitusSite repository under `docs/design-handover/`.**
 >
 > **THIS IS THE CURRENT, TWO-SITE HANDOVER. IMPLEMENT BOTH WEBSITES.** The earlier folder `docs/design-handover/shieldwall-stage10b/` and its `CLAUDE_PROMPT.md` were incomplete and **are superseded**. Their Shieldwall-only scope and “Vitus archive-only / do not implement” instructions are **void**. Do not follow them.
 
