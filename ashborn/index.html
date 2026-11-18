@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.mailerlite.com https://groot.mailerlite.com https://static.mailerlite.com https://assets.mlcdn.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://assets.mailerlite.com https://assets.mlcdn.com https://fonts.mailerlite.com; font-src 'self' https://fonts.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://storage.mlcdn.com https://assets.mlcdn.com https://assets.mailerlite.com; media-src 'self'; connect-src 'self' https://assets.mailerlite.com https://groot.mailerlite.com https://connect.mailerlite.com; frame-src https://www.google.com https://assets.mailerlite.com; form-action 'self' https://assets.mailerlite.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#1a1714" />
 
@@ -31,13 +33,7 @@
   <link rel="stylesheet" href="styles/ashborn.css" />
 
   <!-- MailerLite loader: held until the visitor allows optional cookies (../scripts/consent.js) -->
-  <script type="text/plain" data-consent="forms">
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2430389');
-  </script>
+  <script type="text/plain" data-consent="forms" data-src="/scripts/mailerlite.js"></script>
 </head>
 
 <body>
@@ -267,7 +263,7 @@
   <!-- Footer -->
   <footer class="ab-foot">
     <div class="ab-wrap footer-row">
-      <span>&copy; <script>document.write(new Date().getFullYear())</script> Shieldwall Games Ltd. All rights reserved.</span>
+      <span>&copy; <span data-year>2026</span> Shieldwall Games Ltd. All rights reserved.</span>
       <span class="social-icons">
         <a href="https://twitter.com/ShieldwallG" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
         <a href="https://www.instagram.com/shieldwall_games" target="_blank" rel="noopener noreferrer" aria-label="Shieldwall Games on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>

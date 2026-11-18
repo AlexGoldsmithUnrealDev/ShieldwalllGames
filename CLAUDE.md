@@ -178,6 +178,22 @@ or the ICO:000… contact references. Do not add promises the owner has not appr
 
 ---
 
+## Security (audit 18 November 2026)
+
+- **Content Security Policy** as a `<meta http-equiv>` tag first in `<head>` (GitHub Pages
+  cannot send headers), plus `<meta name="referrer" content="strict-origin-when-cross-origin">`.
+  Pages with a MailerLite form (`index.html`, `ashborn/index.html`) allow `'unsafe-inline'`
+  scripts because MailerLite's form injects its own; every other page allows only this
+  site's files and MailerLite's hosts. The legal pages get it from `tools/build-legal-pages.ts`.
+  Redirect stubs have no policy (no content). New third-party hosts must be added to the policy.
+- **No inline JavaScript.** Page behaviour lives in `scripts/main.js`; the MailerLite loader is
+  `scripts/mailerlite.js`, held by `<script type="text/plain" data-consent="forms" data-src>`.
+- **Fonts are self-hosted** (`assets/fonts/`, latin and latin-ext only, declared in
+  `styles/main.css`). Never load Google Fonts or other third-party files before consent: before
+  consent the site makes no requests to other servers.
+- The deploy workflow pins each action to a commit SHA and checks out without persisted
+  credentials. Keep it that way when updating an action.
+
 ## Domains and deployment
 
 - Studio: **shieldwallgames.co.uk** (this repo, `CNAME`).

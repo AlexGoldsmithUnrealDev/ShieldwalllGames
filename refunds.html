@@ -2,6 +2,8 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://assets.mailerlite.com https://groot.mailerlite.com https://static.mailerlite.com https://assets.mlcdn.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://assets.mailerlite.com https://assets.mlcdn.com https://fonts.mailerlite.com; font-src 'self' https://fonts.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://storage.mlcdn.com https://assets.mlcdn.com https://assets.mailerlite.com; media-src 'self'; connect-src 'self' https://assets.mailerlite.com https://groot.mailerlite.com https://connect.mailerlite.com; frame-src https://www.google.com https://assets.mailerlite.com; form-action 'self' https://assets.mailerlite.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0c0f13" />
 
@@ -113,7 +115,6 @@
     </nav>
   </div>
 </footer>
-<script>document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 
 <script src="scripts/main.js" defer></script>
 <script src="scripts/consent.js" defer></script>

@@ -224,3 +224,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+/* ----------------------------------------------------------------------
+   Page helpers (moved out of inline scripts so the Content Security Policy
+   can forbid inline JavaScript)
+   ---------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+    /* MailerLite's form header image has no alt text; it is decorative */
+    var newsletter = document.getElementById('newsletter');
+    if (newsletter) {
+        new MutationObserver(function () {
+            newsletter.querySelectorAll('.ml-form-embedHeader img:not([alt])').forEach(function (img) { img.alt = ''; });
+        }).observe(newsletter, { childList: true, subtree: true });
+    }
+
+    /* Newsletter: choose which real MailerLite list to show */
+    document.querySelectorAll('.list-choice button').forEach(function (btn, _, all) {
+        btn.addEventListener('click', function () {
+            all.forEach(function (b) {
+                var on = b === btn;
+                b.setAttribute('aria-pressed', String(on));
+                document.getElementById(b.getAttribute('data-list')).hidden = !on;
+            });
+        });
+    });
+});

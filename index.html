@@ -2,6 +2,8 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.mailerlite.com https://groot.mailerlite.com https://static.mailerlite.com https://assets.mlcdn.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://assets.mailerlite.com https://assets.mlcdn.com https://fonts.mailerlite.com; font-src 'self' https://fonts.mailerlite.com https://assets.mlcdn.com; img-src 'self' data: https://storage.mlcdn.com https://assets.mlcdn.com https://assets.mailerlite.com; media-src 'self'; connect-src 'self' https://assets.mailerlite.com https://groot.mailerlite.com https://connect.mailerlite.com; frame-src https://www.google.com https://assets.mailerlite.com; form-action 'self' https://assets.mailerlite.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0c0f13" />
 
@@ -80,13 +82,7 @@
   <noscript><style>.s10 .reveal{opacity:1;transform:none}</style></noscript>
 
   <!-- MailerLite loader: held until the visitor allows optional cookies (scripts/consent.js) -->
-  <script type="text/plain" data-consent="forms">
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2430389');
-  </script>
+  <script type="text/plain" data-consent="forms" data-src="/scripts/mailerlite.js"></script>
 </head>
 
 <body class="s10">
@@ -409,23 +405,6 @@
     </footer>
   </div>
 
-  <script>
-    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
-    /* MailerLite's form header image has no alt text; it is decorative */
-    new MutationObserver(function () {
-      document.querySelectorAll('.ml-form-embedHeader img:not([alt])').forEach(function (img) { img.alt = ''; });
-    }).observe(document.getElementById('newsletter'), { childList: true, subtree: true });
-    /* Newsletter: choose which real MailerLite list to show */
-    document.querySelectorAll('.list-choice button').forEach(function (btn, _, all) {
-      btn.addEventListener('click', function () {
-        all.forEach(function (b) {
-          var on = b === btn;
-          b.setAttribute('aria-pressed', String(on));
-          document.getElementById(b.getAttribute('data-list')).hidden = !on;
-        });
-      });
-    });
-  </script>
   <script src="scripts/main.js" defer></script>
   <script src="scripts/consent.js" defer></script>
 </body>
