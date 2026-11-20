@@ -6,7 +6,7 @@
 
 - Vitus: in open beta now (Windows), planned to run for around six months, with Vitus 1.0 targeted for 2027.
 - Ashborn CCG: in development alongside Vitus, targeting late 2027.
-- Ashborn — Saga's Tavern: a standalone, GM-led RPG simulator with substantial Vitus integration, following Ashborn CCG. No release date has been set.
+- Ashborn: Saga’s Tavern, a standalone, GM-led RPG simulator with substantial Vitus integration, following Ashborn CCG. No release date has been set.
 - At least two narrative trilogies are planned for future games. The studio is releasing its tools first so people can tell their own stories in the meantime.
 
 ## Vitus

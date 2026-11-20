@@ -24,6 +24,7 @@ const COMMON: Fix[] = [
   [/ ?\[\[LEGAL:[^\]]*\]\]/g, ''],
   ['not your whole lorebible', 'not your whole world'],
   ['answers from your own lorebible', 'answers from your own world'],
+  [/Shield Wall Games/g, 'Shieldwall Games'],
   [/\*\*shieldwallgames\.co\.uk\/subprocessors\.html\*\*/g, '[our Subprocessors page](https://shieldwallgames.co.uk/subprocessors.html)'],
   [/\*\*shieldwallgames\.co\.uk\/refunds\.html\*\*/g, '[our Refund Policy](https://shieldwallgames.co.uk/refunds.html)'],
   [/^Vitus was previously called [^\n]*\n\n?/m, ''],
@@ -37,12 +38,11 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
     fixes: [
       // The company is the controller in law; the owner asked to be named as the responsible person (17 Nov 2026).
       ['is the data controller. ICO registration number', 'is the data controller, and Alex Goldsmith is the person responsible for data protection. ICO registration number'],
-      [`**Last updated:** ${DATE}`, '**Last updated:** 17 November 2026'],
+      // Rebuilt from the current drafts on 20 Nov 2026: picture generation (OpenAI) is on hold and removed.
+      [`**Last updated:** ${DATE}`, '**Last updated:** 20 November 2026'],
       ['Our website is hosted by GitHub Pages.', 'Our websites, shieldwallgames.co.uk and brothervitus.co.uk, are hosted by GitHub Pages.'],
       ['| GitHub | Our website (GitHub Pages) |', '| GitHub | Our websites (GitHub Pages) |'],
-      ['your account, Vitus AI, the Marketplace, collaboration, hosted Campaigns or Proving Grounds.', 'your account, Vitus AI, the Marketplace, desktop and phone sync, collaboration, hosted Campaigns or Proving Grounds.'],
-      ['### 2.4 Collaboration, hosted Campaigns and Proving Grounds\n\nIf you choose to host or join a shared world, the content, the member list, roles and changes needed for it are stored online. Your other worlds stay local.',
-        '### 2.4 Sync, collaboration, hosted Campaigns and Proving Grounds\n\nIf you choose to host or join a shared world, the content, the member list, roles and changes needed for it are stored online. If you turn on desktop and phone sync, the worlds you sync are kept with your account so your devices can exchange changes. Your other worlds stay local.'],
+      // Desktop and phone sync: the drafts cover it themselves now (section 2.12), so no fix is needed here.
       ['Global network; [[CONFIRM]]', 'Global network'],
       ['European Union (Germany) [[CONFIRM region chosen]]', 'European Union (Germany)'],
       ['| Google Workspace | Our support inbox | [[CONFIRM]] |', '| Google Workspace | Our support inbox | United States and other countries |'],
@@ -67,6 +67,7 @@ const PAGES: Array<{ src: string; out: string; title: string; desc: string; fixe
     src: 'docs/legal/subprocessors.md', out: 'subprocessors.html', title: 'Subprocessors',
     desc: 'The providers Shieldwall Games uses to run Vitus, what each handles and where.',
     fixes: [
+      [`**Last updated:** ${DATE}`, '**Last updated:** 20 November 2026'],
       ['European Union (Germany) [[CONFIRM region]]', 'European Union (Germany)'],
       ['| Our website | IP address in server logs | When you visit shieldwallgames.co.uk |', '| Our websites | IP address in server logs | When you visit shieldwallgames.co.uk or brothervitus.co.uk |'],
       ['| When you email us | [[CONFIRM]] |', '| When you email us | United States and other countries |'],
@@ -246,6 +247,8 @@ for (const page of PAGES) {
   const left = md.match(/\[\[[^\]]*\]\]/g);
   if (left) throw new Error(`${page.out}: placeholders left: ${left.join(', ')}`);
   let html = markdownToHtml(md);
+  // Wide tables scroll sideways on phones; tabindex lets keyboard users scroll them too (WCAG 2.1.1).
+  html = html.replace(/<table>/g, '<table tabindex="0">');
   html = html.replace(/<h1>/, '<h1 class="sw-section-h2">');
   html = html.replace(/<p><strong>(Last updated|Version):<\/strong> ([^<]*)<\/p>/, '<p class="sw-legal-date">$1: $2</p>');
   html = html.replace(/<h2>Cookie Notice \{#cookies\}<\/h2>/, '<h2 id="cookies">Cookie Notice</h2>');

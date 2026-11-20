@@ -19,6 +19,8 @@ rebuild Vitus pages here; link to brothervitus.co.uk.
 - **Never use the retired names "Mimir" or "Lorekeeper"** anywhere public. The
   product is "Vitus"; the Vitus website is brothervitus.co.uk.
 - **Do not deploy or merge** without the owner's approval.
+- **The third game's title is "Ashborn: Saga’s Tavern"**, with a colon, never a dash (20 November 2026).
+- **No OpenAI in the legal pages.** Picture generation is on hold, so Vitus AI runs on Anthropic only (20 November 2026).
 
 If this file conflicts with a new explicit instruction from the owner, follow the
 instruction and update this file.
@@ -37,7 +39,7 @@ held back**, which is why the studio releases its tools before its games.
    targeted for 2027.
 2. **Ashborn CCG**: a historically grounded Viking Age collectible card game, in
    development alongside Vitus and built with it. Targeting late 2027.
-3. **Ashborn — Saga's Tavern**: a standalone, GM-led RPG simulator with major Vitus
+3. **Ashborn: Saga’s Tavern**, a standalone, GM-led RPG simulator with major Vitus
    integration. Follows Ashborn CCG. No date set.
 
 At least two narrative trilogies are planned for future games. Say no more than
